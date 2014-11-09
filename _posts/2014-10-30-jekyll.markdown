@@ -8,4 +8,4 @@ published: true
 
 Aussi incroyable que cela puisse paraître, il est possible d'héberger un site **gratuitement** sur Github.
 
-Pour cela, il faut... Un compte Github, 
+Pour cela, il faut... Un compte Github
