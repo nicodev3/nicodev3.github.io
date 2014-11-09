@@ -1,0 +1,38 @@
+%list-style {
+	line-height : 2em;
+	list-style: none;
+	margin-left: 35px;
+	color: darken($rose, 20);
+	font-weight: 500;
+}
+
+.competences {
+	@extend %list-style;
+	li {
+		&:before {
+			content: '\2661';
+			color: lighten($rose, 10);
+		}
+	}
+
+}
+
+.outils {
+	@extend %list-style;
+	li {
+		&:before {
+			content: "\2692";
+			color: darken($rose, 10);
+		}
+	}	
+}
+
+.prestations {
+	@extend %list-style;
+	li {
+		&:before {
+			content: "\2713";
+			color: darken($rose, 20);
+		}
+	}
+}

@@ -1,0 +1,69 @@
+---
+layout: default
+title: 
+h1: Nicolas Devaux, développeur Web
+---
+    <div class="conteneur-haut">
+        <article class="content-left">
+            <p>Je suis un développeur Web atypique formé au départ en autodidacte puis à l'Université.</p>
+            <p>J'ai derrière moi une longue formation universitaire en Sciences Humaines, suis diplômé d'un bac+5 en psychologie et possède un diplôme d'&Eacute;tat de psychomotricien. <i>Atypique</i>, vous disais-je...</p>
+            <p>Aujourd'hui, je suis également titulaire d'une Licence Professionnelle Activités et Techniques de Communication mention développeur web des systèmes d'information et multimédia.</p>
+            <p>Cela ne veut rien dire pour vous ? Nous somme d'accord. Alors en bref...</p>
+        </article>
+        
+        <div class="content-right">
+            <h2>Derniers articles du blog</h2>
+            <ul class="post-list">
+                {% for post in site.posts %}
+                <li>
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+                    <h2>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </h2>
+                </li>
+                {% endfor %}
+            </ul>
+            <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        </div>
+        <div class="cv">
+            <section class="compe">
+                <h2>Compétences</h2>
+                <ul class="competences">
+                    <li> HTML5</li>
+                    <li> CSS3</li>
+                    <li> PHP/MySQL</li>
+                    <li> Javascript</li>
+                    <li> Photoshop/Illustrator</li>
+                </ul>
+            </section>
+            
+            <section class="tools">
+                <h2>Frameworks</h2>
+                <ul class="outils">
+                    <li> Laravel (PHP)</li>
+                    <li> SASS (CSS)</li>
+                    <li> Perch CMS</li>
+                    <li> Wordpress</li>
+                    <li> Jekyll...</li>
+                </ul>
+            </section>
+
+            <section class="presta">
+               <h2>Prestations</h2>
+            <ul class="prestations">
+                <li> Sites statiques ou dynamiques</li>
+                <li> Création, refonte, optimisation</li>
+                <li> Référencement naturel</li>
+                <li> Responsive Webdesign</li>
+                <li> Rédaction de contenus</li>
+            </ul> 
+            </section>
+        </div>
+            
+        </div>
+    </div>
+
+    <div class="conteneur-portfolio">
+        <h2>Portfolio</h2>
+    </div>

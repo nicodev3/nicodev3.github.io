@@ -1,0 +1,29 @@
+# Site settings
+title: nicodev3
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Nicolas Devaux est développeur Web front-end. Création, optimisation, refonte de sites internet, responsive design, optimisation SEO
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: nicodevaux
+github_username:  nicodev3
+
+# Build settings
+markdown: kramdown
+# Exclude directories and/or files from the conversion.
+exclude: [node_modules]
+
+#defaults:
+#  -
+#    scope:
+#      path: "" # an empty string here means all files in the project
+#    values:
+#      layout: "default"
+
+#defaults:
+#  -
+#    scope:
+#      path: "" # an empty string here means all files in the project
+#      type: "posts" ou pages, drafts
+#    values:
+#      layout: "default"

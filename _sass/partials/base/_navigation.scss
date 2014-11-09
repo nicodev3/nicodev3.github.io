@@ -1,0 +1,77 @@
+// ==========================================================================
+// Navigation
+// ==========================================================================
+.site-nav {
+  position         : absolute;
+  top              : 9px;
+  right            : 30px;
+  border           : 1px solid $grey-color-light;
+  border-radius    : 5px;
+  text-align       : right;
+
+  &:hover .trigger {
+    display        : block;
+    padding-bottom : 5px;
+  }
+  @include breakpoint($small) {
+    position : relative;
+    top      : 12px;
+    float    : right;
+    border   : none;
+  }
+}
+
+.trigger {
+  clear   : both;
+  display : none;
+  @include breakpoint($small) {
+    a {
+      display : inline-block;
+    }
+    display : block;
+  }
+}
+
+.menu-icon {
+  display     : block;
+  float       : right;
+  width       : 36px;
+  height      : 26px;
+  line-height : 0;
+  padding-top : 10px;
+  text-align  : center;
+
+  > svg {
+    width  : 18px;
+    height : 15px;
+
+    path {
+      fill : $grey-color-dark;
+    }
+  }
+  @include breakpoint($small) {
+    display : none;
+  }
+}
+
+.page-link {
+  display : block;
+  padding : 5px 10px;
+  color: $blanc;
+  &:hover {
+    color: $blanc;
+    opacity: 0.8;
+  }
+  @include breakpoint($small) {
+    padding     : 5px 5px;
+    line-height : $lh-p;
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+      margin-left : 20px;
+    }
+  }
+}
+
+// ==========================================================================
+// FIN Navigation
+// ==========================================================================
