@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Votre site sur Github avec Jekyll
-date: {}
+title:  "Votre site sur Github avec Jekyll"
+date:   2014-10-27 20:37:52
 categories: jekyll
-published: true
 ---
 
 Aussi incroyable que cela puisse paraître, il est possible d'héberger un site **gratuitement** sur Github.
