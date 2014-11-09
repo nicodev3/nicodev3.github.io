@@ -1,30 +1,11 @@
 ---
 layout: post
-title:  "Votre site sur Github avec Jekyll"
-date:   2014-10-27 20:37:52
+title: Votre site sur Github avec Jekyll
+date: {}
 categories: jekyll
+published: true
 ---
+
 Aussi incroyable que cela puisse paraître, il est possible d'héberger un site **gratuitement** sur Github.
 
 Pour cela, il faut... Un compte Github, 
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-{% highlight css %}
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-h1 {color:blue;}
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
