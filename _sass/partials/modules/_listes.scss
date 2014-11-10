@@ -1,7 +1,6 @@
 %list-style {
 	line-height : 2em;
 	list-style: none;
-	margin-left: 35px;
 	color: darken($rose, 20);
 	font-weight: 500;
 }
@@ -14,7 +13,6 @@
 			color: lighten($rose, 10);
 		}
 	}
-
 }
 
 .outils {
@@ -24,7 +22,12 @@
 			content: "\2692";
 			color: darken($rose, 10);
 		}
-	}	
+	}
+	@include breakpoint($small) {
+		padding-left: 0;
+		width: 150px;
+		margin: 0 auto;
+	}
 }
 
 .prestations {
@@ -34,5 +37,10 @@
 			content: "\2713";
 			color: darken($rose, 20);
 		}
+	}
+}
+@include breakpoint($small) {
+	.competences, .prestations {
+		margin-left: em(68px);
 	}
 }

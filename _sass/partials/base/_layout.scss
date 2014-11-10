@@ -68,7 +68,6 @@
 // ==========================================================================
 
 .cv {
-  
   padding-top: 1em;
   padding-bottom: 1em;
   border-top: $rose-clair solid 1px;
@@ -76,40 +75,48 @@
   @include break;
   @include container(100%);
   @include pad(2%);
+  width: em(315px);
+  margin: 0 auto;
   @include breakpoint($small) {
-    height: em(310px);
+    height: auto;
+    width: 100%;
     padding-top: 2em;
   }
+  h2 {
+    width: 150px;
+    margin: 0 auto;
+  }
 }
-
-@include breakpoint($small) {
-  %h2 {
+.compe, .tools, .presta {
+  width: 95%;
+}
+%h2 {
     width: 60%; 
-    text-align: center;
-    margin:0 auto;
     border-bottom: 1px dashed #f2f3f4;
+    text-align: center;
+    margin: 0 auto;
     color:$vert;
     padding-top: em(12px);
     line-height: em(44px);
   }
-  .presta {
-    h2 {
-      @extend %h2;
-    }
-    @include span(4);
+.presta h2, .compe h2, .tools h2 {
+  @extend %h2;
+}
+.presta {
+  @include breakpoint($small) { @include span(6); }
+  @include breakpoint($medium) { @include span(4); }
+}
+.compe {
+  @include breakpoint($small) { @include span(6); }
+  @include breakpoint($medium) { @include span(4); }
+}
+.tools {
+  @include breakpoint($small) { 
+    @include break;
+    width: auto;
+    margin: 0 auto;
   }
-  .compe {
-    h2 {
-      @extend %h2;
-    }
-    @include span(4);
-  }
-  .tools {
-    h2 {
-      @extend %h2;
-    }
-    @include span(4);
-  }
+  @include breakpoint($medium) { @include span(4); clear: none;}
 }
 
 // ==========================================================================
