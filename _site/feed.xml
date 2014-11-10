@@ -6,29 +6,15 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 09 Nov 2014 21:49:56 +0100</pubDate>
-    <lastBuildDate>Sun, 09 Nov 2014 21:49:56 +0100</lastBuildDate>
+    <pubDate>Mon, 10 Nov 2014 22:52:49 +0100</pubDate>
+    <lastBuildDate>Mon, 10 Nov 2014 22:52:49 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Votre site sur Github avec Jekyll</title>
         <description>&lt;p&gt;Aussi incroyable que cela puisse paraître, il est possible d’héberger un site &lt;strong&gt;gratuitement&lt;/strong&gt; sur Github.&lt;/p&gt;
 
-&lt;p&gt;Pour cela, il faut… Un compte Github, &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;grey-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;       &lt;span class=&quot;nf&quot;&gt;#828282&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;grey-color-light&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;lighten&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;($&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;grey-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;grey-color-dark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;darken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;($&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;grey-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%);&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Pour cela, il faut… Un compte Github&lt;/p&gt;
 </description>
         <pubDate>Mon, 27 Oct 2014 21:37:52 +0100</pubDate>
         <link>http://yourdomain.com/jekyll/2014/10/27/jekyll.html</link>
