@@ -2,7 +2,3 @@ _site/*
 .sass-cache
 .idea
 node_modules
-_site/css/main.css
-_site/css/main.css.map
-_site/feed.xml
-_site/index.html
