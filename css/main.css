@@ -1112,92 +1112,122 @@ blockquote > :last-child {
 }
 
 /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.site-nav {
-  position: absolute;
-  top: 9px;
-  right: 30px;
-  border: 1px solid #e8e8e8;
-  border-radius: 5px;
-  text-align: right;
-}
-/* line 12, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.site-nav:hover .trigger {
-  display: block;
-  padding-bottom: 5px;
-}
-@media (min-width: 47.938em) {
-  /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-  .site-nav {
-    position: relative;
-    top: 12px;
-    float: right;
-    border: none;
-  }
+.canvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* line 24, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.trigger {
-  clear: both;
+/* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+input {
   display: none;
 }
-@media (min-width: 47.938em) {
-  /* line 24, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-  .trigger {
-    display: block;
-  }
-  /* line 28, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-  .trigger a {
-    display: inline-block;
-  }
+
+/* line 15, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+input:checked ~ .off-canvas {
+  right: 0;
 }
 
-/* line 35, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.menu-icon {
-  display: block;
+/* line 19, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+input:checked + label {
+  margin-right: 15em;
+}
+
+/* line 23, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+input:checked ~ .content {
+  margin-left: -15em;
+}
+
+/* line 27, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+.open {
+  color: #F3F3F3;
+  font-size: 1.1em;
+  margin-top: 18px;
+  width: 23.72881%;
   float: right;
-  width: 36px;
-  height: 26px;
-  line-height: 0;
-  padding-top: 10px;
-  text-align: center;
-}
-/* line 44, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.menu-icon > svg {
-  width: 18px;
-  height: 15px;
-}
-/* line 48, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.menu-icon > svg path {
-  fill: #424242;
+  -webkit-transition: margin-right .3s ease;
+          transition: margin-right .3s ease;
 }
 @media (min-width: 47.938em) {
-  /* line 35, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-  .menu-icon {
+  /* line 27, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+  .open {
     display: none;
   }
 }
 
-/* line 57, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.page-link {
-  display: block;
-  padding: 5px 10px;
-  color: #F3F3F3;
-}
-/* line 61, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-.page-link:hover {
-  color: #F3F3F3;
-  opacity: 0.8;
+/* line 38, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+.off-canvas {
+  position: absolute;
+  top: -6px;
+  right: -15em;
+  width: 15em;
+  height: 100vh;
+  background: #B67CA7;
+  border-top: 6px solid #5C8989;
+  -webkit-transition: right .3s ease;
+          transition: right .3s ease;
 }
 @media (min-width: 47.938em) {
+  /* line 38, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+  .off-canvas {
+    width: 49.15254%;
+    float: right;
+    height: auto;
+    border-top: none;
+    position: relative;
+    background: #043D74;
+    margin-top: 1.125em;
+  }
+}
+
+@media (min-width: 47.938em) {
   /* line 57, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+  .navigation {
+    padding-top: 6px;
+  }
+}
+
+/* line 63, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+.page-link {
+  color: #F3F3F3;
+  display: block;
+  border-bottom: 2px solid #F3F3F3;
+  font-size: 1.1em;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (min-width: 47.938em) {
+  /* line 63, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
   .page-link {
-    padding: 5px 5px;
-    line-height: 1.375em;
+    font-size: 1em;
+    display: inline;
+    border-bottom: none;
+    padding-bottom: none;
   }
-  /* line 69, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
-  .page-link:not(:first-child) {
-    margin-left: 20px;
-  }
+}
+
+/* line 79, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+.content {
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: margin-left .3s ease;
+          transition: margin-left .3s ease;
+}
+
+/* line 85, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* line 94, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_navigation.scss */
+input:checked ~ .close {
+  pointer-events: auto;
 }
 
 /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_header.scss */
@@ -1211,12 +1241,13 @@ blockquote > :last-child {
 
 /* line 14, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_header.scss */
 .site-title {
+  width: 32.20339%;
+  float: left;
   margin-left: 8.47458%;
   font-size: 26px;
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  height: 150px;
 }
 /* line 21, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_header.scss */
 .site-title:hover {
@@ -1224,7 +1255,7 @@ blockquote > :last-child {
   color: #B67CA7;
 }
 
-/* line 27, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_header.scss */
+/* line 26, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_header.scss */
 .trois {
   font-family: "verdana";
   display: inline-block;
@@ -1232,7 +1263,7 @@ blockquote > :last-child {
   color: #B67CA7;
 }
 
-/* line 34, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_header.scss */
+/* line 33, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_header.scss */
 .trig:hover ~ .trois {
   -webkit-transform-origin: 0 0;
       -ms-transform-origin: 0 0;
