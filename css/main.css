@@ -1338,7 +1338,7 @@ input:checked ~ .close {
   line-height: 2em;
   list-style: none;
   color: #882b5a;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 /* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
