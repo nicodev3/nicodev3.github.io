@@ -88,6 +88,9 @@
     @include breakpoint($large) {
       @include container(87%);
     }
+    @include breakpoint($xlarge) {
+      @include container(58%);
+    }
 
     h2 {
         width: 150px;
