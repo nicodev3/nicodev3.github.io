@@ -1,75 +1,98 @@
 // ==========================================================================
 // Navigation
 // ==========================================================================
-.site-nav {
-  position         : absolute;
-  top              : 9px;
-  right            : 30px;
-  border           : 1px solid $grey-color-light;
-  border-radius    : 5px;
-  text-align       : right;
-
-  &:hover .trigger {
-    display        : block;
-    padding-bottom : 5px;
-  }
-  @include breakpoint($small) {
-    position : relative;
-    top      : 12px;
-    float    : right;
-    border   : none;
-  }
+.canvas {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.trigger {
-  clear   : both;
-  display : none;
-  @include breakpoint($small) {
-    a {
-      display : inline-block;
-    }
-    display : block;
-  }
+input {
+    display: none;
 }
 
-.menu-icon {
-  display     : block;
-  float       : right;
-  width       : 36px;
-  height      : 26px;
-  line-height : 0;
-  padding-top : 10px;
-  text-align  : center;
+// target the sibbling of input
+input:checked ~ .off-canvas {
+    right: 0;
+}
 
-  > svg {
-    width  : 18px;
-    height : 15px;
+input:checked + label {
+    margin-right: 15em;
+}
 
-    path {
-      fill : $grey-color-dark;
+input:checked ~ .content {
+    margin-left: -15em;
+}
+
+.open {
+    color: $blanc;
+    font-size: 1.1em;
+    margin-top: 18px;
+    @include span(3 last);
+    transition: margin-right .3s ease;
+    @include breakpoint($small) {
+        display: none;
     }
-  }
-  @include breakpoint($small) {
-    display : none;
-  }
+}
+
+.off-canvas {
+    position: absolute;
+    top: -6px;
+    right: -15em;
+    width: 15em;
+    height: 100vh;
+    background: $rose-clair;
+    border-top: 6px solid $vert;
+    transition: right .3s ease;
+    @include breakpoint($small) {
+        @include span(6 last);
+        height: auto;
+        border-top: none;
+        position: relative;
+        background: $bleu;
+        margin-top: em(18px);
+    }
+}
+
+.navigation {
+    @include breakpoint($small) {
+        padding-top: 6px;
+    }
 }
 
 .page-link {
-  display : block;
-  padding : 5px 10px;
-  color: $blanc;
-  &:hover {
     color: $blanc;
-    opacity: 0.8;
-  }
-  @include breakpoint($small) {
-    padding     : 5px 5px;
-    line-height : $lh-p;
-    // Gaps between nav items, but not on the first one
-    &:not(:first-child) {
-      margin-left : 20px;
+    display: block;
+    border-bottom: 2px solid $blanc;
+    font-size: 1.1em;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include breakpoint($small) {
+        font-size: 1em;
+        display: inline;
+        border-bottom: none;
+        padding-bottom: none;
     }
-  }
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    transition: margin-left .3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+input:checked ~ .close {
+    pointer-events: auto;
 }
 
 // ==========================================================================

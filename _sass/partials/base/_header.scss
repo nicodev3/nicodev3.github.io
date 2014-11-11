@@ -12,18 +12,17 @@
 }
 
 .site-title {
+  @include span(4);
   @include push(1);
   font-size      : 26px;
   line-height    : 56px;
   letter-spacing : -1px;
   margin-bottom  : 0;
-  height: 150px;
   &:hover {
     text-decoration: none;
     color: $rose-clair;
   }
 }
-
 .trois {
   font-family: "verdana";
   display: inline-block;
