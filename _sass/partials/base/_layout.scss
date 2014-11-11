@@ -1,66 +1,69 @@
-
 // ==========================================================================
 // Contenu vertical
 // ==========================================================================
 .bandeau {
-  @include container(100%);
-  @include span(12);
-  background: url('/images/swirl_pattern.png');
-  opacity: 0.8;
-  height: 7em;
-  @include breakpoint($small) {
-    height: 6em;
-  }
-  h1 {
-    @include push(1);
-    font-size : $fs-h1--phone;
-    color: $rose;
-    line-height: 1.1em;
+    @include container(100%);
+    @include span(12);
+    background: url("/images/swirl_pattern.png");
+    opacity: 0.8;
+    height: 7em;
     @include breakpoint($small) {
-      font-size: $fs-h1--desktop;
-      line-height: 1em;
+        height: 6em;
     }
-  }
+
+    h1 {
+        @include push(1);
+        font-size: $fs-h1--phone;
+        color: $rose;
+        line-height: 1.1em;
+        @include breakpoint($small) {
+            font-size: $fs-h1--desktop;
+            line-height: 1em;
+        }
+    }
 }
+
 .conteneur-haut {
-  @include break;
-  @include container(100%);
-  padding-top : 2em;
-  background  : lighten(lightyellow, 5);
+    @include break;
+    @include container(100%);
+    padding-top: 2em;
+    background: lighten(lightyellow, 5);
 }
+
 .conteneur-portfolio {
-  @include full;
-  background: lavender;
-  h2 {
-    @include push(1);
-  }
+    @include full;
+    background: lavender;
+    h2 {
+        @include push(1);
+    }
 }
 
 // ==========================================================================
 // Layout gauche/droite
 // ==========================================================================
 .content-left, .content-right {
-  @include pad(2%);
-  @include breakpoint($small) {
-    padding-top: em(20px);
-  }
+    @include pad(2%);
+    @include breakpoint($small) {
+        padding-top: em(20px);
+    }
 }
+
 .content-left {
-  hyphens : auto;
-  padding-bottom: em(8px);
-  @include breakpoint($small) {
-    @include span(6);
-    @include push(1);
-    padding-bottom: em(52px);
-  }
+    hyphens: auto;
+    padding-bottom: em(8px);
+    @include breakpoint($small) {
+        @include span(6);
+        @include push(1);
+        padding-bottom: em(52px);
+    }
 }
 
 .content-right {
-  padding-bottom: em(29px);
-  @include breakpoint($small) {
-    @include post(1);
-    @include span(3 last);
-  }
+    padding-bottom: em(29px);
+    @include breakpoint($small) {
+        @include post(1);
+        @include span(3 last);
+    }
 }
 
 // ==========================================================================
@@ -68,137 +71,149 @@
 // ==========================================================================
 
 .cv {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-top: $rose-clair solid 1px;
-  /*background: lighten($rose-clair, 10);*/
-  @include break;
-  @include container(100%);
-  @include pad(2%);
-  width: em(315px);
-  margin: 0 auto;
-  @include breakpoint($small) {
-    height: auto;
-    width: 100%;
-    padding-top: 2em;
-  }
-  h2 {
-    width: 150px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: $rose-clair solid 1px;
+    /*background: lighten($rose-clair, 10);*/
+    @include break;
+    
+    @include pad(2%);
+    width: em(315px);
     margin: 0 auto;
-  }
+    @include breakpoint($small) {
+        height: auto;
+        width: 100%;
+        padding-top: 2em;
+    }
+    @include breakpoint($large) {
+      @include container(87%);
+    }
+
+    h2 {
+        width: 150px;
+        margin: 0 auto;
+    }
 }
+
 .compe, .tools, .presta {
-  width: 95%;
+    width: 95%;
 }
+
 %h2 {
-    width: 60%; 
     border-bottom: 1px dashed #f2f3f4;
     text-align: center;
-    margin: 0 auto;
-    color:$vert;
+    color: $vert;
     padding-top: em(12px);
     line-height: em(44px);
-  }
+}
+
 .presta h2, .compe h2, .tools h2 {
-  @extend %h2;
+    @extend %h2;
 }
-.presta {
-  @include breakpoint($small) { @include span(6); }
-  @include breakpoint($medium) { @include span(4); }
-}
+
 .compe {
-  @include breakpoint($small) { @include span(6); }
-  @include breakpoint($medium) { @include span(4); }
+    @include breakpoint($small) {
+        @include span(6);
+    }
+
+    @include breakpoint($medium) {
+        @include span(4);
+    }
 }
+
 .tools {
-  @include breakpoint($small) { 
-    @include break;
-    width: auto;
-    margin: 0 auto;
-  }
-  @include breakpoint($medium) { @include span(4); clear: none;}
+    @include breakpoint($small) {
+        @include span(6);
+    }
+
+    @include breakpoint($medium) {
+        @include span(4);
+    }
+}
+
+.presta {
+    @include breakpoint($small) {
+        @include break;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    @include breakpoint($medium) {
+        clear: none;
+        @include span(4);
+    }
 }
 
 // ==========================================================================
 // Portfolio
 // ==========================================================================
 
-
-
 /**
- * Page content
- */
+* Page content
+*/
 .page-content {
-  padding : $spacing-unit 0;
+    padding: $spacing-unit 0;
 }
 
 .page-heading {
-  font-size : 20px;
-  @include breakpoint($small) {
-    font-size : 2em;
-  }
+    font-size: 20px;
+    @include breakpoint($small) {
+        font-size: 2em;
+    }
 }
 
 .post-list {
-  margin-left : 0;
-  list-style  : none;
-
-  > li {
-    margin-bottom : $spacing-unit;
-  }
+    margin-left: 0;
+    list-style: none;
+    > li {
+        margin-bottom: $spacing-unit;
+    }
 }
 
 .post-meta {
-  font-size : $base-font-size;
-  color     : $grey-color;
+    font-size: $base-font-size;
+    color: $grey-color;
 }
 
 .post-link {
-  display   : block;
-  font-size : 24px;
+    display: block;
+    font-size: 24px;
 }
 
 /**
- * Posts
- */
+* Posts
+*/
 .post-header {
-  margin-bottom : $spacing-unit;
+    margin-bottom: $spacing-unit;
 }
 
 .post-title {
-  font-size      : 42px;
-  letter-spacing : -1px;
-  line-height    : 1;
-
-  @include breakpoint($large) {
-    font-size : 36px;
-  }
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+    @include breakpoint($large) {
+        font-size: 36px;
+    }
 }
 
 .post-content {
-  margin-bottom : $spacing-unit;
-
-  h2 {
-    font-size : 32px;
-
-    @include breakpoint($large) {
-      font-size : 28px;
+    margin-bottom: $spacing-unit;
+    h2 {
+        font-size: 32px;
+        @include breakpoint($large) {
+            font-size: 28px;
+        }
     }
-  }
-
-  h3 {
-    font-size : 26px;
-
-    @include breakpoint($large) {
-      font-size : 22px;
+    h3 {
+        font-size: 26px;
+        @include breakpoint($large) {
+            font-size: 22px;
+        }
     }
-  }
-
-  h4 {
-    font-size : 20px;
-
-    @include breakpoint($large) {
-      font-size : 18px;
+    h4 {
+        font-size: 20px;
+        @include breakpoint($large) {
+            font-size: 18px;
+        }
     }
-  }
 }
