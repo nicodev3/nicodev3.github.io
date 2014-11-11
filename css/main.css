@@ -1161,7 +1161,7 @@ input:checked ~ .content {
   top: -6px;
   right: -15em;
   width: 15em;
-  height: 100vh;
+  height: 200vh;
   background: #B67CA7;
   border-top: 6px solid #5C8989;
   -webkit-transition: right .3s ease;
@@ -1278,37 +1278,42 @@ input:checked ~ .close {
 /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
 .site-footer {
   border-top: 1px solid #5C8989;
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-/* line 7, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
+/* line 8, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
 .footer-container {
   margin-top: 100px;
 }
 @media (min-width: 47.938em) {
-  /* line 7, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
+  /* line 8, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
   .footer-container {
     margin-top: 50px;
   }
 }
 
-/* line 14, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
+/* line 15, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
 .contact-list, .social-media-list {
   margin-left: 8.47458%;
 }
 @media (min-width: 47.938em) {
-  /* line 14, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
+  /* line 15, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
   .contact-list, .social-media-list {
     width: 23.72881%;
     float: left;
   }
 }
 
-/* line 21, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
+/* line 22, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
 .text {
   margin-left: 8.47458%;
 }
 @media (min-width: 47.938em) {
-  /* line 21, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
+  /* line 22, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
   .text {
     margin-left: 0;
     width: 32.20339%;
@@ -1316,7 +1321,7 @@ input:checked ~ .close {
   }
 }
 
-/* line 28, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
+/* line 29, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_footer.scss */
 .contact-list,
 .social-media-list {
   list-style: none;
