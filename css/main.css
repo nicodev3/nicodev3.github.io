@@ -527,7 +527,7 @@ blockquote > :last-child {
   fill: #828282;
 }
 
-/* line 5, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .bandeau {
   max-width: 100%;
   margin-left: auto;
@@ -547,7 +547,7 @@ blockquote > :last-child {
   clear: both;
 }
 @media (min-width: 47.938em) {
-  /* line 5, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .bandeau {
     height: 6em;
   }
@@ -567,7 +567,7 @@ blockquote > :last-child {
   }
 }
 
-/* line 25, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 26, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .conteneur-haut {
   clear: both;
   max-width: 100%;
@@ -583,7 +583,7 @@ blockquote > :last-child {
   clear: both;
 }
 
-/* line 31, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 33, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .conteneur-portfolio {
   clear: both;
   width: 100%;
@@ -592,24 +592,24 @@ blockquote > :last-child {
   margin-right: 0;
   background: lavender;
 }
-/* line 34, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 36, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .conteneur-portfolio h2 {
   margin-left: 8.47458%;
 }
 
-/* line 42, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 44, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .content-left, .content-right {
   padding-left: 2%;
   padding-right: 2%;
 }
 @media (min-width: 47.938em) {
-  /* line 42, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 44, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .content-left, .content-right {
     padding-top: 1.25em;
   }
 }
 
-/* line 48, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 51, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .content-left {
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
@@ -618,7 +618,7 @@ blockquote > :last-child {
   padding-bottom: 0.5em;
 }
 @media (min-width: 47.938em) {
-  /* line 48, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 51, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .content-left {
     width: 49.15254%;
     float: left;
@@ -627,12 +627,12 @@ blockquote > :last-child {
   }
 }
 
-/* line 58, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 61, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .content-right {
   padding-bottom: 1.8125em;
 }
 @media (min-width: 47.938em) {
-  /* line 58, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 61, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .content-right {
     margin-right: 8.47458%;
     width: 23.72881%;
@@ -640,81 +640,69 @@ blockquote > :last-child {
   }
 }
 
-/* line 70, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 73, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .cv {
   padding-top: 1em;
   padding-bottom: 1em;
   border-top: #B67CA7 solid 1px;
   /*background: lighten($rose-clair, 10);*/
   clear: both;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 2%;
   padding-right: 2%;
   width: 19.6875em;
   margin: 0 auto;
 }
-/* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-.cv:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
 @media (min-width: 47.938em) {
-  /* line 70, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 73, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .cv {
     height: auto;
     width: 100%;
     padding-top: 2em;
   }
 }
-/* line 85, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+@media (min-width: 62.5em) {
+  /* line 73, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  .cv {
+    max-width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+  .cv:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 92, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .cv h2 {
   width: 150px;
   margin: 0 auto;
 }
 
-/* line 90, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 98, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .compe, .tools, .presta {
   width: 95%;
 }
 
-/* line 93, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 102, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .presta h2, .compe h2, .tools h2 {
-  width: 60%;
   border-bottom: 1px dashed #f2f3f4;
   text-align: center;
-  margin: 0 auto;
   color: #5C8989;
   padding-top: 0.75em;
   line-height: 2.75em;
 }
 
 @media (min-width: 47.938em) {
-  /* line 105, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
-  .presta {
-    width: 49.15254%;
-    float: left;
-  }
-}
-@media (min-width: 52.5em) {
-  /* line 105, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
-  .presta {
-    width: 32.20339%;
-    float: left;
-  }
-}
-
-@media (min-width: 47.938em) {
-  /* line 109, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 114, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .compe {
     width: 49.15254%;
     float: left;
   }
 }
 @media (min-width: 52.5em) {
-  /* line 109, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 114, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .compe {
     width: 32.20339%;
     float: left;
@@ -722,114 +710,129 @@ blockquote > :last-child {
 }
 
 @media (min-width: 47.938em) {
-  /* line 113, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 124, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .tools {
+    width: 49.15254%;
+    float: left;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 124, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  .tools {
+    width: 32.20339%;
+    float: left;
+  }
+}
+
+@media (min-width: 47.938em) {
+  /* line 134, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  .presta {
     clear: both;
     width: auto;
     margin: 0 auto;
   }
 }
 @media (min-width: 52.5em) {
-  /* line 113, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
-  .tools {
+  /* line 134, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  .presta {
+    clear: none;
     width: 32.20339%;
     float: left;
-    clear: none;
   }
 }
 
 /**
- * Page content
- */
-/* line 131, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+* Page content
+*/
+/* line 154, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .page-content {
   padding: 30px 0;
 }
 
-/* line 135, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 158, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .page-heading {
   font-size: 20px;
 }
 @media (min-width: 47.938em) {
-  /* line 135, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 158, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .page-heading {
     font-size: 2em;
   }
 }
 
-/* line 142, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 165, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-list {
   margin-left: 0;
   list-style: none;
 }
-/* line 146, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 168, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-list > li {
   margin-bottom: 30px;
 }
 
-/* line 151, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 173, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-meta {
   font-size: 16px;
   color: #828282;
 }
 
-/* line 156, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 178, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-link {
   display: block;
   font-size: 24px;
 }
 
 /**
- * Posts
- */
-/* line 164, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+* Posts
+*/
+/* line 186, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-header {
   margin-bottom: 30px;
 }
 
-/* line 168, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 190, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-title {
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1;
 }
-@media (min-width: 75em) {
-  /* line 168, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+@media (min-width: 62.5em) {
+  /* line 190, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .post-title {
     font-size: 36px;
   }
 }
 
-/* line 178, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 199, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-content {
   margin-bottom: 30px;
 }
-/* line 181, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 201, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-content h2 {
   font-size: 32px;
 }
-@media (min-width: 75em) {
-  /* line 181, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+@media (min-width: 62.5em) {
+  /* line 201, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .post-content h2 {
     font-size: 28px;
   }
 }
-/* line 189, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 207, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-content h3 {
   font-size: 26px;
 }
-@media (min-width: 75em) {
-  /* line 189, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+@media (min-width: 62.5em) {
+  /* line 207, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .post-content h3 {
     font-size: 22px;
   }
 }
-/* line 197, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 213, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .post-content h4 {
   font-size: 20px;
 }
-@media (min-width: 75em) {
-  /* line 197, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+@media (min-width: 62.5em) {
+  /* line 213, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .post-content h4 {
     font-size: 18px;
   }
@@ -1288,38 +1291,63 @@ blockquote > :last-child {
   font-weight: 500;
 }
 
-/* line 11, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+/* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
 .competences li:before {
   content: '\2661';
+  padding-right: 5px;
   color: #d478a6;
 }
+@media (min-width: 47.938em) {
+  /* line 7, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+  .competences {
+    margin-left: 3.375em;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 7, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+  .competences {
+    margin-left: -0.3125em;
+  }
+}
 
-/* line 21, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+/* line 27, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
 .outils li:before {
   content: "\2692";
+  padding-right: 5px;
   color: #af3774;
 }
 @media (min-width: 47.938em) {
-  /* line 18, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+  /* line 24, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
   .outils {
-    padding-left: 0;
-    width: 150px;
-    margin: 0 auto;
+    margin-left: 4.3125em;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 24, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+  .outils {
+    margin-left: 10px;
   }
 }
 
-/* line 36, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+/* line 44, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
 .prestations li:before {
   content: "\2713";
+  padding-right: 5px;
   color: #882b5a;
 }
-
 @media (min-width: 47.938em) {
-  /* line 43, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
-  .competences, .prestations {
-    margin-left: 4.25em;
+  /* line 41, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+  .prestations {
+    margin-left: 15.4375em;
   }
 }
+@media (min-width: 52.5em) {
+  /* line 41, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
+  .prestations {
+    margin-left: -9px;
+  }
+}
+
 /**
  * Code formatting
  */

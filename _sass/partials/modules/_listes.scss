@@ -1,46 +1,56 @@
 %list-style {
-	line-height : 2em;
-	list-style: none;
-	color: darken($rose, 20);
-	font-weight: 500;
+    line-height: 2em;
+    list-style: none;
+    color: darken($rose, 20);
+    font-weight: 500;
 }
-
 .competences {
-	@extend %list-style;
-	li {
-		&:before {
-			content: '\2661';
-			color: lighten($rose, 10);
-		}
-	}
+    @extend %list-style;
+    li {
+        &:before {
+            content: '\2661';
+            padding-right: 5px;
+            color: lighten($rose, 10);
+        }
+    }
+    @include breakpoint($small) {
+    	margin-left: em(54px);
+    }
+    @include breakpoint($medium) {
+    	margin-left: em(-5px);
+    }
 }
 
 .outils {
-	@extend %list-style;
-	li {
-		&:before {
-			content: "\2692";
-			color: darken($rose, 10);
-		}
-	}
+    @extend %list-style;
+    li {
+        &:before {
+            content: "\2692";
+            padding-right: 5px;
+            color: darken($rose, 10);
+        }
+    }
 	@include breakpoint($small) {
-		padding-left: 0;
-		width: 150px;
-		margin: 0 auto;
-	}
+    	margin-left: em(69px);
+    }
+    @include breakpoint($medium) {
+    	margin-left: 10px;
+    }
 }
 
 .prestations {
-	@extend %list-style;
-	li {
-		&:before {
-			content: "\2713";
-			color: darken($rose, 20);
-		}
-	}
-}
-@include breakpoint($small) {
-	.competences, .prestations {
-		margin-left: em(68px);
-	}
+    @extend %list-style;
+    li {
+        &:before {
+            content: "\2713";
+            padding-right: 5px;
+            color: darken($rose, 20);
+        }
+    }
+    @include breakpoint($small) {
+    	margin-left: 15.4375em;
+    }
+    @include breakpoint($medium) {
+    	margin-left: -9px;
+    }
 }
