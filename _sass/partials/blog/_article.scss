@@ -1,0 +1,8 @@
+.conteneur-post {
+    @include pad(5%);
+    margin-top: 1.5em;
+    @include breakpoint($small) {
+        @include span(8);
+        @include push(2);
+    }
+}
