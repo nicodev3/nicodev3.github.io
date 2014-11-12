@@ -11,19 +11,33 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-$spacing-unit:     30px;
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-
 p {
     line-height: $lh-p;
+}
+// ==========================================================================
+// Headings
+// ==========================================================================
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+h1 {
+    font-size: $fs-h1--phone;
+    line-height: $lh-h1--phone;
+    letter-spacing: -1px;
+    @include breakpoint($small) {
+        font-size: $fs-h1--desktop;
+        line-height: $lh-h1--desktop;
+    }
+}
+
+h2 {
+    margin-top: $base-margin;
+    margin-bottom: $base-margin;
+    line-height: $lh-h2--phone;
+    font-size: $fs-h2--phone;
+    @include breakpoint($small) {
+        font-size: $fs-h2--desktop;
+    }
 }
 
 // ==========================================================================
@@ -34,23 +48,12 @@ img {
     vertical-align: middle;
 }
 
-
-
 /**
  * Figures
  */
 figure > img {
     display: block;
 }
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-}
-
-
 
 /**
  * Links
@@ -73,7 +76,6 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
