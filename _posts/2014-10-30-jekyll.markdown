@@ -5,6 +5,33 @@ date:   2014-10-27 20:37:52
 categories: jekyll
 ---
 
+## Héberger gratuitement son site Internet
+
 Aussi incroyable que cela puisse paraître, il est possible d'héberger un site **gratuitement** sur Github.
 
-Pour cela, il faut... Un compte Github
+Pour les néophytes, Github est un réseau social dédié aux développeurs et qui permet de collaborer sur des projets, tout en offrant une interface de gestion de versions reliée à Git.
+
+Si tout cela est du chinois pour vous, retenez simplement qu'il s'agit d'un moyen moderne de diffuser des contenus et des applications Web.
+
+Ce qui est moins connu, c'est que GitHub permet d'héberger gratuitement un site.
+
+## Jekyll : générateur de blog et sites statiques
+
+Jekyll est un générateur de sites satiques, qui s'affranchit de la lourdeur des bases de données, écrit dans le langage `Ruby`. Pour autant, nul besoin de maîtriser ```Ruby``` pour utiliser Jekyll.
+
+L'avantage des sites statiques est qu'il n'est pas nécessaire d'utiliser `PHP` ni `MySQL`, ce qui rend la gestion du site plus simple et accroît considérablement les **performances**. De plus, les sites ainsi créés peuvent être hébergés facilement, et de façon moins onéreuse, voire, comme c'est le cas sur GitHub, gratuitement.
+
+## Mise en place du site
+
+Il est indispensable pour le développeur d'avoir installé sur son système :
+
+- [ruby](https://www.ruby-lang.org/en/downloads/ "ruby")
+- [NodeJS](http://nodejs.org/ "NodeJs") si vous souhaitez le support de *CofeeScript*
+
+Si vous travaillez sur mac, `Ruby` devrait être déjà installé.
+
+
+```bash
+~ $ gem install jekyll
+```
+
