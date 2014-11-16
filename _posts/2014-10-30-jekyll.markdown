@@ -242,4 +242,4 @@ Il est possible de régénérer automatiquement les pages du site. Pour cela, en
 ~ $ jekyll s
 {% endhighlight %}
 
-A chaque enregistrement de votre code, Jekyll reconstruit les pages du site.
+A chaque enregistrement de votre code, Jekyll reconstruit les pages du site. Facile.
