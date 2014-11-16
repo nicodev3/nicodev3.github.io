@@ -40,27 +40,27 @@ Il est indispensable pour le développeur d'avoir installé sur son système :
 Si vous travaillez sur mac, `Ruby` devrait être déjà installé. Il faut avant tout installer la gem *jekyll*.
 
 
-```bash
+{% highlight bash %}
 ~ $ gem install jekyll
 # note : il peut être nécessaire d'utiliser la commande sudo (Super User DO)
 ~ $ sudo gem install jekyll
-```
+{% endhighlight %}
 
 ### 2. Installer les composants de Jekyll dans son projet
 {: #composants}
 
 Vous pouvez utiliser la commande `jekyll` pour créer un projet dans un dossier inexistant :
 
-```bash
+{% highlight bash %}
 ~ $ jekyll new monsite
-```
+{% endhighlight %}
 
 Une fois cette commande executée, rendez vous dans le dossier créé :
 
-```bash
+{% highlight bash %}
 # cd (change directory) to monsite :
 ~ $ cd monsite
-```
+{% endhighlight %}
 
 Voyons ce qui a été installé :
 
@@ -105,24 +105,24 @@ Nous avons la structure suivante :
 ### 1. Jekyll build
 C'est à partir de maintenant que la magie opére. Jekyll va générer votre site dans un dossier nommé `_site` (notez-bien qu'il n'existe pas encore ci-dessus) avec la commande :
 
-```bash
+{% highlight bash %}
 ~ $ jekyll build
 # note : vous devez bien entendu vous trouver dans le répertoire
 # de votre site. Pour le vérifier, entrez la commande ~ pwd (Present Working
 # Directory)
-```
+{% endhighlight %}
 
 ### 2. Structure du site une fois généré
 
 Voyons à présent la stucture du dossier :
 
-```bash
+{% highlight bash %}
 ~ $ tree
-```
+{% endhighlight %}
 
 Le répertoire `_site` a été créé. Il contient tous les fichiers nécessaires pour votre site :
 
-```bash
+{% highlight bash %}
 
 ├── _site
 │   ├── about
@@ -137,7 +137,7 @@ Le répertoire `_site` a été créé. Il contient tous les fichiers nécessaire
 │               └── 11
 │                   └── 16
 │                       └── welcome-to-jekyll.html
-```
+{% endhighlight %}
 
 La structure est évidente :
 
