@@ -481,7 +481,22 @@ h2 {
   }
 }
 
-/* line 46, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 43, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+h3 {
+  font-size: 1.375em;
+  line-height: 1.13664em;
+  color: #2b2b2b;
+}
+@media (min-width: 47.938em) {
+  /* line 43, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+    padding-left: 15px;
+  }
+}
+
+/* line 57, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -490,7 +505,7 @@ img {
 /**
  * Figures
  */
-/* line 54, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 65, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 figure > img {
   display: block;
 }
@@ -498,12 +513,12 @@ figure > img {
 /**
  * Links
  */
-/* line 61, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 72, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 a {
   color: #C8518D;
   text-decoration: none;
 }
-/* line 65, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 76, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 a:hover {
   color: #111;
   text-decoration: underline;
@@ -512,7 +527,7 @@ a:hover {
 /**
  * Blockquotes
  */
-/* line 76, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 87, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 blockquote {
   color: #828282;
   border-left: 4px solid #e8e8e8;
@@ -520,7 +535,7 @@ blockquote {
   letter-spacing: -1px;
   font-style: italic;
 }
-/* line 83, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 94, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 blockquote > :last-child {
   margin-bottom: 0;
 }
@@ -528,14 +543,14 @@ blockquote > :last-child {
 /**
  * Icons
  */
-/* line 93, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 104, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
   vertical-align: middle;
 }
-/* line 99, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
+/* line 110, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_base.scss */
 .icon > svg path {
   fill: #828282;
 }
@@ -773,256 +788,258 @@ blockquote > :last-child {
  */
 /* line 4, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight {
-  background: #fff;
+  background: #eee;
+  padding: 3px 0px 3px 20px;
+  border-radius: 5px;
 }
-/* line 7, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 9, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .c {
   color: #998;
   font-style: italic;
 }
-/* line 8, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .err {
   color: #a61717;
   background-color: #e3d2d2;
 }
-/* line 9, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 11, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .k {
   font-weight: bold;
 }
-/* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 12, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .o {
   font-weight: bold;
 }
-/* line 11, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 13, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .cm {
   color: #998;
   font-style: italic;
 }
-/* line 12, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 14, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .cp {
   color: #999;
   font-weight: bold;
 }
-/* line 13, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 15, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .c1 {
   color: #998;
   font-style: italic;
 }
-/* line 14, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 16, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .cs {
   color: #999;
   font-weight: bold;
   font-style: italic;
 }
-/* line 15, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 17, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gd {
   color: #000;
   background-color: #fdd;
 }
-/* line 16, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 18, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gd .x {
   color: #000;
   background-color: #faa;
 }
-/* line 17, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 19, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .ge {
   font-style: italic;
 }
-/* line 18, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 20, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gr {
   color: #a00;
 }
-/* line 19, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 21, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gh {
   color: #999;
 }
-/* line 20, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 22, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gi {
   color: #000;
   background-color: #dfd;
 }
-/* line 21, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 23, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gi .x {
   color: #000;
   background-color: #afa;
 }
-/* line 22, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 24, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .go {
   color: #888;
 }
-/* line 23, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 25, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gp {
   color: #555;
 }
-/* line 24, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 26, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gs {
   font-weight: bold;
 }
-/* line 25, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 27, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gu {
   color: #aaa;
 }
-/* line 26, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 28, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .gt {
   color: #a00;
 }
-/* line 27, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 29, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .kc {
   font-weight: bold;
 }
-/* line 28, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 30, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .kd {
   font-weight: bold;
 }
-/* line 29, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 31, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .kp {
   font-weight: bold;
 }
-/* line 30, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 32, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .kr {
   font-weight: bold;
 }
-/* line 31, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 33, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .kt {
   color: #458;
   font-weight: bold;
 }
-/* line 32, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 34, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .m {
   color: #099;
 }
-/* line 33, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 35, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .s {
   color: #d14;
 }
-/* line 34, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 36, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .na {
   color: #008080;
 }
-/* line 35, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 37, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .nb {
   color: #0086B3;
 }
-/* line 36, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 38, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .nc {
   color: #458;
   font-weight: bold;
 }
-/* line 37, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 39, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .no {
   color: #008080;
 }
-/* line 38, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 40, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .ni {
   color: #800080;
 }
-/* line 39, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 41, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .ne {
   color: #900;
   font-weight: bold;
 }
-/* line 40, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 42, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .nf {
   color: #900;
   font-weight: bold;
 }
-/* line 41, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 43, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .nn {
   color: #555;
 }
-/* line 42, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 44, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .nt {
   color: #000080;
 }
-/* line 43, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 45, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .nv {
   color: #008080;
 }
-/* line 44, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 46, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .ow {
   font-weight: bold;
 }
-/* line 45, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 47, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .w {
   color: #bbb;
 }
-/* line 46, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 48, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .mf {
   color: #099;
 }
-/* line 47, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 49, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .mh {
   color: #099;
 }
-/* line 48, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 50, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .mi {
   color: #099;
 }
-/* line 49, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 51, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .mo {
   color: #099;
 }
-/* line 50, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 52, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .sb {
   color: #d14;
 }
-/* line 51, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 53, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .sc {
   color: #d14;
 }
-/* line 52, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 54, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .sd {
   color: #d14;
 }
-/* line 53, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 55, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .s2 {
   color: #d14;
 }
-/* line 54, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 56, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .se {
   color: #d14;
 }
-/* line 55, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 57, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .sh {
   color: #d14;
 }
-/* line 56, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 58, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .si {
   color: #d14;
 }
-/* line 57, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 59, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .sx {
   color: #d14;
 }
-/* line 58, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 60, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .sr {
   color: #009926;
 }
-/* line 59, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 61, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .s1 {
   color: #d14;
 }
-/* line 60, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 62, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .ss {
   color: #990073;
 }
-/* line 61, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 63, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .bp {
   color: #999;
 }
-/* line 62, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 64, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .vc {
   color: #008080;
 }
-/* line 63, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 65, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .vg {
   color: #008080;
 }
-/* line 64, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 66, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .vi {
   color: #008080;
 }
-/* line 65, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
+/* line 67, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_syntax-highlighting.scss */
 .highlight .il {
   color: #099;
 }
@@ -1332,3 +1349,26 @@ input:checked ~ .close {
 /**
  * Code formatting
  */
+/* line 5, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_code.scss */
+pre,
+code {
+  font-size: 15px;
+}
+
+/* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_code.scss */
+code {
+  padding: 1px 5px;
+}
+
+/* line 14, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_code.scss */
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll;
+  white-space: pre-wrap;
+}
+/* line 19, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_code.scss */
+pre > code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
