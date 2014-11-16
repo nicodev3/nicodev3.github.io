@@ -40,6 +40,17 @@ h2 {
     }
 }
 
+h3 {
+    font-size: $fs-h3--phone;
+    line-height: $lh-h3--phone;
+    color: lighten($text-color, 10);
+    @include breakpoint($small) {
+        font-size: $fs-h3--desktop;
+        line-height: $lh-h3--desktop;
+        padding-left: 15px;
+    }
+}
+
 // ==========================================================================
 // Images
 // ==========================================================================
