@@ -15,23 +15,134 @@ Si tout cela est du chinois pour vous, retenez simplement qu'il s'agit d'un moye
 
 Ce qui est moins connu, c'est que GitHub permet d'héberger gratuitement un site.
 
+## Plan
+
+- [Installation de la gem](#install)
+- [Installation du projet](#composants)
+- [Structure du projet](#structure)
+
 ## Jekyll : générateur de blog et sites statiques
 
 Jekyll est un générateur de sites satiques, qui s'affranchit de la lourdeur des bases de données, écrit dans le langage `Ruby`. Pour autant, nul besoin de maîtriser ```Ruby``` pour utiliser Jekyll.
 
-L'avantage des sites statiques est qu'il n'est pas nécessaire d'utiliser `PHP` ni `MySQL`, ce qui rend la gestion du site plus simple et accroît considérablement les **performances**. De plus, les sites ainsi créés peuvent être hébergés facilement, et de façon moins onéreuse, voire, comme c'est le cas sur GitHub, gratuitement.
+L'avantage des sites statiques est qu'il n'est pas nécessaire d'utiliser `PHP` ni `MySQL`, ce qui rend la gestion du site plus simple et accroît considérablement les **performances**. Les sites ainsi créés peuvent être hébergés facilement, et de façon moins onéreuse, voire, comme c'est le cas sur GitHub, gratuitement.
 
 ## Mise en place du site
+
+### 1. Installation de la gem
+{: #install}
 
 Il est indispensable pour le développeur d'avoir installé sur son système :
 
 - [ruby](https://www.ruby-lang.org/en/downloads/ "ruby")
 - [NodeJS](http://nodejs.org/ "NodeJs") si vous souhaitez le support de *CofeeScript*
 
-Si vous travaillez sur mac, `Ruby` devrait être déjà installé.
+Si vous travaillez sur mac, `Ruby` devrait être déjà installé. Il faut avant tout installer la gem *jekyll*.
 
 
 ```bash
 ~ $ gem install jekyll
+# note : il peut être nécessaire d'utiliser la commande sudo (Super User DO)
+~ $ sudo gem install jekyll
 ```
 
+### 2. Installer les composants de Jekyll dans son projet
+{: #composants}
+
+Vous pouvez utiliser la commande `jekyll` pour créer un projet dans un dossier inexistant :
+
+```bash
+~ $ jekyll new monsite
+```
+
+Une fois cette commande executée, rendez vous dans le dossier créé :
+
+```bash
+# cd (change directory) to monsite :
+~ $ cd monsite
+```
+
+Voyons ce qui a été installé :
+
+{% highlight bash %}
+# listons les fichier avec la commande :
+~ $ tree ## sur mac, si tree n'est pas installé : ~ brew install tree
+# note : un simpe ~ ls suffit à afficher les dossiers, tree permet juste
+# d'afficher la structure
+{% endhighlight %}
+
+### 3. Structure du projet
+{: #structure}
+
+Nous avons la structure suivante :
+
+{% highlight bash %}
+.
+├── _config.yml
+├── _includes
+│   ├── footer.html
+│   ├── head.html
+│   └── header.html
+├── _layouts
+│   ├── default.html
+│   ├── page.html
+│   └── post.html
+├── _posts
+│   └── 2014-11-16-welcome-to-jekyll.markdown
+├── _sass
+│   ├── _base.scss
+│   ├── _layout.scss
+│   └── _syntax-highlighting.scss
+├── about.md
+├── css
+│   └── main.scss
+├── feed.xml
+└── index.html
+{% endhighlight %}
+
+## Générer le site
+
+### 1. Jekyll build
+C'est à partir de maintenant que la magie opére. Jekyll va générer votre site dans un dossier nommé `_site` (notez-bien qu'il n'existe pas encore ci-dessus) avec la commande :
+
+```bash
+~ $ jekyll build
+# note : vous devez bien entendu vous trouver dans le répertoire
+# de votre site. Pour le vérifier, entrez la commande ~ pwd (Present Working
+# Directory)
+```
+
+### 2. Structure du site une fois généré
+
+Voyons à présent la stucture du dossier :
+
+```bash
+~ $ tree
+```
+
+Le répertoire `_site` a été créé. Il contient tous les fichiers nécessaires pour votre site :
+
+```bash
+
+├── _site
+│   ├── about
+│   │   └── index.html
+│   ├── css
+│   │   └── main.css
+│   ├── feed.xml
+│   ├── index.html
+│   └── jekyll
+│       └── update
+│           └── 2014
+│               └── 11
+│                   └── 16
+│                       └── welcome-to-jekyll.html
+```
+
+La structure est évidente :
+
+- Le fichier `index.html` est le fichier racine du site
+- Le dossier `/css` contient les feuilles de style
+- Le dossier `/jekyll` contiendra les articles du blog
+- Le dossier `/about` est un dossier d'exemple. Il s'agit d'une des pages du site, incluse dans un répertoire pour avoir une URL propre.
+- Le fichier `feed.xml` vous sera utile si vous souhaitez un fil RSS
