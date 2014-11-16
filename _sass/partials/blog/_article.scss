@@ -6,3 +6,11 @@
         @include push(2);
     }
 }
+
+.footnotes {
+	border-top: 1px solid black;
+	&:before {
+		content: 'notes :';
+		font-style: italic;
+	}
+}
