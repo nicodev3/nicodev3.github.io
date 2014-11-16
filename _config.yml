@@ -4,7 +4,7 @@ email: contact.nicodev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Nicolas Devaux est développeur Web front-end. Création, optimisation, refonte de sites internet, responsive design, optimisation SEO
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://nicodev3.github.io" # the base hostname & protocol for your site
 twitter_username: nicodevaux
 github_username:  nicodev3
 
