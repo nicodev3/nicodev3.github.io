@@ -4,21 +4,23 @@
 
 pre,
 code {
-     font-size: 15px;
- }
+    font-size: 15px;
+}
 
- code {
-     padding: 1px 5px;
- }
+code {
+    border: 1px solid darken(#eee, 5);
+    background: lighten(#eee, 3);
+    padding: 1px 5px;
+}
 
- pre {
-     padding: 8px 12px;
-     overflow-x: scroll;
-     white-space: pre-wrap;
-
-     > code {
-         border: 0;
-         padding-right: 0;
-         padding-left: 0;
-     }
- }
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+    white-space: pre-wrap;
+    > code {
+        background: none;
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
