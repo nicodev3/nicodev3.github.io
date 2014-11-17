@@ -238,7 +238,7 @@ On veillera à ne jamais modifier directement le contenu du dossier `_site`, cel
 
 ## Génération automatique des pages
 
-Il est possible de régénérer automatiquement les pages du site. Pour cela, en ligne de commande dans le terminal, il suffit de spécifier
+Il est possible de régénérer automatiquement les pages du site. Pour cela, en ligne de commande, il suffit de spécifier
 
 {% highlight bash %}
 ~ $ jekyll s
