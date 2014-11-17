@@ -1265,6 +1265,10 @@ input:checked ~ .close {
 .post-list {
   padding-left: 0;
 }
+/* line 3, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_liste.scss */
+.post-list li {
+  list-style: none;
+}
 
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
 .conteneur-post {
