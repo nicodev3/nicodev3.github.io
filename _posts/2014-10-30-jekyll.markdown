@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Votre site sur Github avec Jekyll"
-date:   2014-10-27 20:37:52
+title: Votre site sur Github avec Jekyll
+date: {}
 categories: jekyll
+published: true
 ---
 
 ## Héberger gratuitement son site Internet
@@ -25,7 +26,7 @@ Ce qui est moins connu, c'est que GitHub permet d'héberger gratuitement un site
 
 ## Jekyll : générateur de blog et sites statiques
 
-Jekyll est un générateur de sites satiques, qui s'affranchit de la lourdeur des bases de données, écrit dans le langage `Ruby`. Pour autant, nul besoin de maîtriser ```Ruby``` pour utiliser Jekyll.
+Jekyll est un générateur de sites statiques, qui s'affranchit de la lourdeur des bases de données, écrit dans le langage `Ruby`. Pour autant, nul besoin de maîtriser ```Ruby``` pour utiliser Jekyll.
 
 L'avantage des sites statiques est qu'il n'est pas nécessaire d'utiliser `PHP` ni `MySQL`, ce qui rend la gestion du site plus simple et accroît considérablement les **performances**. Les sites ainsi créés peuvent être hébergés facilement, et de façon moins onéreuse, voire, comme c'est le cas sur GitHub, gratuitement.
 
