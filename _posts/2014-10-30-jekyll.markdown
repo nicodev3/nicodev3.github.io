@@ -4,6 +4,7 @@ title: Votre site sur Github avec Jekyll
 date: 2014-11-17
 categories: jekyll
 published: true
+excerpt: Dans ce tutoriel, vous apprendrez comment mettre en place rapidement un site ou un blog avec le générateur de sites statiques Jekyll et l'héberger gratuitement sur Github.
 ---
 
 ## Héberger gratuitement son site Internet
@@ -40,7 +41,7 @@ Il est indispensable pour le développeur d'avoir installé sur son système :
 - [ruby](https://www.ruby-lang.org/en/downloads/ "ruby")
 - [NodeJS](http://nodejs.org/ "NodeJs") si vous souhaitez le support de *CofeeScript*
 
-Si vous travaillez sur mac, `Ruby` devrait être déjà installé. Il faut avant tout installer la gem *jekyll*.
+Si vous travaillez sur Mac, `Ruby` devrait être déjà installé. Il faut avant tout installer la gem *jekyll*.
 
 
 {% highlight bash %}
@@ -58,7 +59,7 @@ Vous pouvez utiliser la commande `jekyll` pour créer un projet dans un dossier 
 ~ $ jekyll new monsite
 {% endhighlight %}
 
-Une fois cette commande executée, rendez vous dans le dossier créé :
+Une fois cette commande exécutée, rendez-vous dans le dossier créé :
 
 {% highlight bash %}
 # cd (change directory) to monsite :
@@ -71,7 +72,7 @@ Une fois cette commande executée, rendez vous dans le dossier créé :
 Voyons ce qui a été installé :
 
 {% highlight bash %}
-# listons les fichier avec la commande :
+# listons les fichiers avec la commande :
 ~ $ tree ## sur mac, si tree n'est pas installé : ~ brew install tree
 # note : un simpe ~ ls suffit à afficher les dossiers, tree permet juste
 # d'afficher la structure
@@ -140,7 +141,7 @@ Imaginons que le contenu de mon fichier `head.html` soit le suivant :
 </head>
 {% endhighlight %}
 
-Dans mon fichier `index.html`[^1], je n'ai plus qu'à placer mon code `HTML` qui apparaitra en lieu et place de `{% raw  %}{{ content }}{% endraw %}`, comme ceci :
+Dans mon fichier `index.html`[^1], je n'ai plus qu'à placer mon code `HTML` qui apparaîtra en lieu et place de `{% raw  %}{{ content }}{% endraw %}`, comme ceci :
 
 {% highlight html %}
 ---
@@ -189,7 +190,7 @@ Il s'agit de variables contenues dans le fichier de configuration `_config.yml`.
 
 ### 1. Jekyll build
 {: #generer}
-C'est à partir de maintenant que la magie opére. Jekyll va générer votre site dans un dossier nommé `_site` (notez-bien qu'il n'existe pas encore ci-dessus) avec la commande :
+C'est à partir de maintenant que la magie opère. Jekyll va générer votre site dans un dossier nommé `_site` (notez bien qu'il n'existe pas encore ci-dessus) avec la commande :
 
 {% highlight bash %}
 ~ $ jekyll build
@@ -200,7 +201,7 @@ C'est à partir de maintenant que la magie opére. Jekyll va générer votre sit
 
 ### 2. Structure du site une fois généré
 
-Voyons à présent la stucture du dossier :
+Voyons à présent la structure du dossier :
 
 {% highlight bash %}
 ~ $ tree
@@ -243,4 +244,4 @@ Il est possible de régénérer automatiquement les pages du site. Pour cela, en
 ~ $ jekyll s
 {% endhighlight %}
 
-A chaque enregistrement de votre code, Jekyll reconstruit les pages du site. Facile.
+&Agrave; chaque enregistrement de votre code, Jekyll reconstruit les pages du site. Facile.
