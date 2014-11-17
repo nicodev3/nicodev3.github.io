@@ -68,6 +68,9 @@ input:checked ~ .content {
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    &:hover {
+      color: $rose-clair;
+    }
     @include breakpoint($small) {
         font-size: 1em;
         display: inline;
