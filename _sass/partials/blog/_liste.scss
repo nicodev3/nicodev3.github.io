@@ -3,4 +3,14 @@
 	li {
 		list-style: none;
 	}
+	@include breakpoint($small) {
+		h2 {
+			margin: 0;
+		}
+	}
+}
+.post-link {
+	@include breakpoint($small) {
+		font-size: 0.8em;
+	}
 }

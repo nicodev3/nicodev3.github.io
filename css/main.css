@@ -1269,6 +1269,19 @@ input:checked ~ .close {
 .post-list li {
   list-style: none;
 }
+@media (min-width: 47.938em) {
+  /* line 7, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_liste.scss */
+  .post-list h2 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 47.938em) {
+  /* line 12, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_liste.scss */
+  .post-link {
+    font-size: 0.8em;
+  }
+}
 
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
 .conteneur-post {
