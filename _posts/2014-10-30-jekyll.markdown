@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Votre site sur Github avec Jekyll
-date: {}
+date: 2014-11-17
 categories: jekyll
 published: true
 ---
