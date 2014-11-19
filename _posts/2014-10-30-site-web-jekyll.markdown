@@ -3,6 +3,7 @@ layout: post
 title: Votre site sur Github avec Jekyll
 date: 2014-11-17
 categories: jekyll
+comments: true
 published: true
 excerpt: Dans ce tutoriel, vous apprendrez comment mettre en place rapidement un site ou un blog avec le générateur de sites statiques Jekyll et l'héberger gratuitement sur Github.
 ---
