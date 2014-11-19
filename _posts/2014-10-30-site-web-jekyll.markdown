@@ -22,7 +22,7 @@ Ce qui est moins connu, c'est que GitHub permet d'héberger gratuitement un site
 ## Plan de l'article
 
 - [Installation de la gem](#install)
-- [Installation du projet](#composants)
+- [Démarrer votre projet](#composants)
 - [Structure du projet](#structure)
 - [Générer les pages](#generer)
 - [Gestion des templates avec *liquid*](#liquid)
