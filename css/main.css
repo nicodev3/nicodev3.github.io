@@ -1303,24 +1303,34 @@ input:checked ~ .close {
 }
 
 /* line 10, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
+.post-content ul {
+  list-style: none;
+}
+/* line 13, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
+.post-content ul li:before {
+  content: '\21DD  ';
+  color: #C8518D;
+}
+
+/* line 20, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
 .footnotes {
   border-top: 1px solid black;
   margin-top: 5em;
 }
-/* line 13, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
+/* line 23, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
 .footnotes:before {
   content: 'notes :';
   font-style: italic;
 }
 
-/* line 19, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
+/* line 29, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
 #disqus_thread {
   margin-top: 2em;
   padding-left: 5%;
   padding-right: 5%;
 }
 @media (min-width: 47.938em) {
-  /* line 19, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
+  /* line 29, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
   #disqus_thread {
     width: 66.10169%;
     float: left;
