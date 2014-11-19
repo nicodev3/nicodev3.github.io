@@ -1,0 +1,247 @@
+---
+layout: post
+title: Votre site sur Github avec Jekyll
+date: 2014-11-17
+categories: jekyll
+published: true
+excerpt: Dans ce tutoriel, vous apprendrez comment mettre en place rapidement un site ou un blog avec le générateur de sites statiques Jekyll et l'héberger gratuitement sur Github.
+---
+
+## Héberger gratuitement son site Internet
+
+Aussi incroyable que cela puisse paraître, il est possible d'héberger un site **gratuitement** sur Github.
+
+Pour les néophytes, Github est un réseau social dédié aux développeurs et qui permet de collaborer sur des projets, tout en offrant une interface de gestion de versions reliée à Git.
+
+Si tout cela est du chinois pour vous, retenez simplement qu'il s'agit d'un moyen moderne de diffuser des contenus et des applications Web.
+
+Ce qui est moins connu, c'est que GitHub permet d'héberger gratuitement un site.
+
+## Plan de l'article
+
+- [Installation de la gem](#install)
+- [Installation du projet](#composants)
+- [Structure du projet](#structure)
+- [Générer les pages](#generer)
+- [Gestion des templates avec *liquid*](#liquid)
+
+## Jekyll : générateur de blog et sites statiques
+
+Jekyll est un générateur de sites statiques, qui s'affranchit de la lourdeur des bases de données, écrit dans le langage `Ruby`. Pour autant, nul besoin de maîtriser ```Ruby``` pour utiliser Jekyll.
+
+L'avantage des sites statiques est qu'il n'est pas nécessaire d'utiliser `PHP` ni `MySQL`, ce qui rend la gestion du site plus simple et accroît considérablement les **performances**. Les sites ainsi créés peuvent être hébergés facilement, et de façon moins onéreuse, voire, comme c'est le cas sur GitHub, gratuitement.
+
+## Mise en place du site
+
+### 1. Installation de la gem
+{: #install}
+
+Il est indispensable pour le développeur d'avoir installé sur son système :
+
+- [ruby](https://www.ruby-lang.org/en/downloads/ "ruby")
+- [NodeJS](http://nodejs.org/ "NodeJs") si vous souhaitez le support de *CofeeScript*
+
+Si vous travaillez sur Mac, `Ruby` devrait être déjà installé. Il faut avant tout installer la gem *jekyll*.
+
+
+{% highlight bash %}
+~ $ gem install jekyll
+# note : il peut être nécessaire d'utiliser la commande sudo (Super User DO)
+~ $ sudo gem install jekyll
+{% endhighlight %}
+
+### 2. Installer les composants de Jekyll dans son projet
+{: #composants}
+
+Vous pouvez utiliser la commande `jekyll` pour créer un projet dans un dossier inexistant :
+
+{% highlight bash %}
+~ $ jekyll new monsite
+{% endhighlight %}
+
+Une fois cette commande exécutée, rendez-vous dans le dossier créé :
+
+{% highlight bash %}
+# cd (change directory) to monsite :
+~ $ cd monsite
+{% endhighlight %}
+
+### 3. Structure du projet
+{: #structure}
+
+Voyons ce qui a été installé :
+
+{% highlight bash %}
+# listons les fichiers avec la commande :
+~ $ tree ## sur mac, si tree n'est pas installé : ~ brew install tree
+# note : un simpe ~ ls suffit à afficher les dossiers, tree permet juste
+# d'afficher la structure
+{% endhighlight %}
+
+Nous avons la structure suivante :
+
+{% highlight bash %}
+.
+├── _config.yml
+├── _includes
+│   ├── footer.html
+│   ├── head.html
+│   └── header.html
+├── _layouts
+│   ├── default.html
+│   ├── page.html
+│   └── post.html
+├── _posts
+│   └── 2014-11-16-welcome-to-jekyll.markdown
+├── _sass
+│   ├── _base.scss
+│   ├── _layout.scss
+│   └── _syntax-highlighting.scss
+├── about.md
+├── css
+│   └── main.scss
+├── feed.xml
+└── index.html
+{% endhighlight %}
+
+Jekyll inclut automatiquement la prise en charge de `SASS`.
+
+### 4. Gestion des templates avec *liquid*
+{: #liquid}
+
+Un certain nombre de dossiers et de fichiers contenus dans ceux-ci vont faciliter l'écriture du code en le fragmentant, comme avec les `include` en `PHP`.
+
+Ainsi, on voit dans la structure que le dossier `_includes` contient des fichiers spécifiques pour le *footer*, le *header* etc...
+
+Il faut savoir que Jekyll utilise la syntaxe du moteur de templates *[liquid](https://github.com/Shopify/liquid/wiki)*. Pas de panique, cette syntaxe est très simple.
+
+Par exemple, dans mon fichier `default.html` du dossier `_layouts`, je déclare&nbsp;:
+
+{% highlight liquid %}
+{% raw  %}
+{% include head.html %} {% comment %} j'inclus head.html {% endcomment %}
+<div class="wrapper">
+    {{ content }} {% comment %} j'inclus head.html {% endcomment %}
+</div>
+{% include footer.html %}
+{% endraw %}
+{% endhighlight %}
+
+Imaginons que le contenu de mon fichier `head.html` soit le suivant :
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <title>{% raw  %}{{ page.title }}{% endraw %}</title>
+    <meta name="description" content="{% raw  %}{{ page.description }}{% endraw %}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+</head>
+{% endhighlight %}
+
+Dans mon fichier `index.html`[^1], je n'ai plus qu'à placer mon code `HTML` qui apparaîtra en lieu et place de `{% raw  %}{{ content }}{% endraw %}`, comme ceci :
+
+{% highlight html %}
+---
+layout: default
+title: mon titre
+description: Tutoriels développement web front-end et back-end
+h1: mon titre principal
+---
+<p>Mon html bla bla bla</p>
+{% endhighlight %}
+
+Après génération par Jekyll, le code `HTML` de ma page ressemblera à ceci :
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <title>mon titre</title>
+    <meta name="description" content="Tutoriels développement web front-end et back-end">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <h1>mon titre principal</h1>
+    <p>Mon html bla bla bla</p>
+</body>
+{% endhighlight %}
+
+Comme vous l'avez remarqué, le haut de mon code dans `index.html` contient
+
+{% highlight liquid %}
+---
+layout: default
+title: mon titre
+description: Tutoriels développement web front-end et back-end
+h1: mon titre principal
+---
+{% endhighlight %}
+
+Il s'agit de variables contenues dans le fichier de configuration `_config.yml`.
+
+[^1]: si vous avez bien compris la structure, il s'agit du fichier `index.html` situé à la racine du site, pas dans `_site` !.
+
+## Générer le site
+
+### 1. Jekyll build
+{: #generer}
+C'est à partir de maintenant que la magie opère. Jekyll va générer votre site dans un dossier nommé `_site` (notez bien qu'il n'existe pas encore ci-dessus) avec la commande :
+
+{% highlight bash %}
+~ $ jekyll build
+# note : vous devez bien entendu vous trouver dans le répertoire
+# de votre site. Pour le vérifier, entrez la commande ~ pwd (Present Working
+# Directory)
+{% endhighlight %}
+
+### 2. Structure du site une fois généré
+
+Voyons à présent la structure du dossier :
+
+{% highlight bash %}
+~ $ tree
+{% endhighlight %}
+
+Le répertoire `_site` a été créé. Il contient tous les fichiers nécessaires pour votre site :
+
+{% highlight bash %}
+
+├── _site
+│   ├── about
+│   │   └── index.html
+│   ├── css
+│   │   └── main.css
+│   ├── feed.xml
+│   ├── index.html
+│   └── jekyll
+│       └── update
+│           └── 2014
+│               └── 11
+│                   └── 16
+│                       └── welcome-to-jekyll.html
+{% endhighlight %}
+
+La structure est évidente :
+
+- Le fichier `index.html` est le fichier racine du site
+- Le dossier `/css` contient les feuilles de style
+- Le dossier `/jekyll` contiendra les articles du blog
+- Le dossier `/about` est un dossier d'exemple. Il s'agit d'une des pages du site, incluse dans un répertoire pour avoir une URL propre.
+- Le fichier `feed.xml` vous sera utile si vous souhaitez un fil RSS
+
+On veillera à ne jamais modifier directement le contenu du dossier `_site`, celui-ci étant généré par Jekyll.
+
+## Génération automatique des pages
+
+Il est possible de régénérer automatiquement les pages du site. Pour cela, en ligne de commande, il suffit de spécifier
+
+{% highlight bash %}
+~ $ jekyll s
+{% endhighlight %}
+
+&Agrave; chaque enregistrement de votre code, Jekyll reconstruit les pages du site.
