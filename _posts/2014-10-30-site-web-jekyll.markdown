@@ -244,4 +244,6 @@ Il est possible de régénérer automatiquement les pages du site. Pour cela, en
 ~ $ jekyll s
 {% endhighlight %}
 
-&Agrave; chaque enregistrement de votre code, Jekyll reconstruit les pages du site.
+&Agrave; chaque enregistrement de votre code, Jekyll reconstruit les pages du site. Il est bien entendu possible d'ajouter à votre *workflow* des outils comme Gulp ou Grunt, afin d'automatiser certaines tâches et de profiter du livereload.
+
+Mais cela est une autre histoire et pourra faire partie d'un prochain post...
