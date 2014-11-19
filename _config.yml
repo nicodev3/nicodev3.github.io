@@ -24,6 +24,8 @@ kramdown:
 
 
 permalink: /:year/:month/:day/:title/
+
+comments: true
 # redcarpet:
 #   extensions:
 #     - hard_wrap
