@@ -14,3 +14,12 @@
 		font-style: italic;
 	}
 }
+
+#disqus_thread {
+    margin-top: 2em;
+    @include pad(5%);
+    @include breakpoint($small) {
+        @include span(8);
+        @include push(2);
+    }
+}

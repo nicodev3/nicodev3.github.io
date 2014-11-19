@@ -1312,6 +1312,21 @@ input:checked ~ .close {
   font-style: italic;
 }
 
+/* line 18, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
+#disqus_thread {
+  margin-top: 2em;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+@media (min-width: 47.938em) {
+  /* line 18, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/blog/_article.scss */
+  #disqus_thread {
+    width: 66.10169%;
+    float: left;
+    margin-left: 16.94915%;
+  }
+}
+
 /* line 1, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/modules/_listes.scss */
 .competences, .outils, .prestations {
   line-height: 2em;
