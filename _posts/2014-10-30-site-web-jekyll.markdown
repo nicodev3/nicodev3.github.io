@@ -132,8 +132,6 @@ Par exemple, dans mon fichier `default.html` du dossier `_layouts`, je déclare&
 Imaginons que le contenu de mon fichier `head.html` soit le suivant :
 
 {% highlight html %}
-<!DOCTYPE html>
-<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
