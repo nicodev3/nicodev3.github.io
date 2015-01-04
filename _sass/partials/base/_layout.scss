@@ -158,11 +158,10 @@
 }
 
 .gallery .site {
-    @include gallery(6);
-    height: auto;
+    min-height: em(760px);
     background-color: rgb(239, 239, 231);
-    box-shadow: 5px 5px 15px 0px #6B6969;
     @include breakpoint($small) {
+        box-shadow: 5px 5px 15px 0px #6B6969;
         @include gallery(4);
     }
 }
