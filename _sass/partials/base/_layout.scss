@@ -154,39 +154,80 @@
 }
 
 .gallery .site {
-    @include gallery(4);
+    @include gallery(6);
     background-color: white;
     box-shadow: 2px 3px 8px rgb(139, 133, 133);
+    @include breakpoint($small) {
+        @include gallery(4);
+    }
 }
 
-.site p {
-    text-align: center;
+.site {
+    p {
+        text-align: center;
+        padding: 5px 0;
+        background: #eee;
+    }
+    h4 {
+        text-align: center;
+    }
+}
+
+.button-container {
+    padding: 0 5px;
+}
+
+.button-container .button {
+    @include gallery(6);
+    @include breakpoint($small) {
+        @include gallery(4);
+    }
 }
 
 .button {
-    @include span(2);
-    margin: 0 1px;
     text-align: center;
-    padding: 5px;
     border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    @include breakpoint($small) {
+        @include span(2);
+    }
 }
 
-.html {
+.button-html {
     background-color: #E44D26;
     color: #EBEBEB;
 }
 
-.css3 {
-    background-color: green;
+.button-css3 {
+    background-color: #1572B7;
     color: white;
 }
 
-.sass {
+.button-sass {
     background-color: #C8518D;
     color: white;
 }
 
-.jekyll {
-    background-color: #333333;
-    color: #FFCC00;
+.button-jekyll {
+    background-color: #FFCC00;
+    color: #333333;
+}
+.button-laravel {
+    background-color: #F87265;
+    color: white;
+}
+.button-javascript {
+    background-color: #F0DB4F;
+}
+.button-php {
+    background-color: #5A66A2;
+    color: white;
+}
+.button-github {
+    background-color: #9CDAF0;
+}
+
+.features {
+    @include full();
 }
