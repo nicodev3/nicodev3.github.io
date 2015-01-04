@@ -777,9 +777,8 @@ blockquote > :last-child {
   float: left;
   margin-left: 0;
   margin-right: 0;
-  padding-left: 5%;
-  padding-right: 5%;
   background-color: #85adad;
+  padding-bottom: 3.125em;
 }
 /* line 151, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .conteneur-portfolio h2 {
@@ -787,11 +786,18 @@ blockquote > :last-child {
 }
 
 /* line 156, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+.gallery {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+/* line 160, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .gallery .site {
   width: 49.15254%;
   float: left;
-  background-color: white;
-  box-shadow: 2px 3px 8px #8b8585;
+  height: auto;
+  background-color: #efefe7;
+  box-shadow: 5px 5px 15px 0px #6B6969;
 }
 /* line 66, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/language/susy/_gallery.scss */
 .gallery .site:nth-child(2n + 1) {
@@ -807,7 +813,7 @@ blockquote > :last-child {
   clear: none;
 }
 @media (min-width: 47.938em) {
-  /* line 156, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 160, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .gallery .site {
     width: 32.20339%;
     float: left;
@@ -833,28 +839,50 @@ blockquote > :last-child {
   }
 }
 
-/* line 166, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 171, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .site p {
   text-align: center;
-  padding: 5px 0;
+  padding: 10px 0;
+  margin-top: -5px;
   background: #B67CA7;
 }
-/* line 171, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 177, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .site a {
   color: white;
 }
-/* line 174, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 180, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .site h4 {
   text-align: center;
   color: #C8518D;
 }
+/* line 184, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+.site img {
+  z-index: 1;
+}
+/* line 186, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+.site img:hover {
+  -webkit-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
+  -webkit-transform: scale(1.25, 1.25) translateY(1em);
+      -ms-transform: scale(1.25, 1.25) translateY(1em);
+          transform: scale(1.25, 1.25) translateY(1em);
+  border: 2px solid #FFFFFA;
+}
+/* line 191, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+.site img:hover ~ .description {
+  display: none;
+}
+/* line 194, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+.site img:hover + .site {
+  min-height: 2px;
+}
 
-/* line 180, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 200, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-container {
   padding: 0 5px;
 }
 
-/* line 184, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 205, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-container .button {
   width: 49.15254%;
   float: left;
@@ -873,7 +901,7 @@ blockquote > :last-child {
   clear: none;
 }
 @media (min-width: 47.938em) {
-  /* line 184, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 205, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .button-container .button {
     width: 32.20339%;
     float: left;
@@ -899,7 +927,7 @@ blockquote > :last-child {
   }
 }
 
-/* line 191, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 213, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button {
   text-align: center;
   border-radius: 3px;
@@ -907,65 +935,65 @@ blockquote > :last-child {
   padding: 5px 0;
 }
 @media (min-width: 47.938em) {
-  /* line 191, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 213, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .button {
     width: 15.25424%;
     float: left;
   }
 }
 
-/* line 200, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 223, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-border {
-  border: 1px solid #043D74;
+  border: 1px solid #C8518D;
 }
 
-/* line 203, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 227, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-html {
   background-color: #E44D26;
   color: #EBEBEB;
 }
 
-/* line 208, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 232, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-css3 {
   background-color: #1572B7;
   color: white;
 }
 
-/* line 213, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 237, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-sass {
   background-color: #C8518D;
   color: white;
 }
 
-/* line 218, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 242, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-jekyll {
   background-color: #FFCC00;
   color: #333333;
 }
 
-/* line 222, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 247, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-laravel {
   background-color: #F87265;
   color: white;
 }
 
-/* line 226, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 252, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-javascript {
   background-color: #F0DB4F;
 }
 
-/* line 229, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 256, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-php {
   background-color: #5A66A2;
   color: white;
 }
 
-/* line 233, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 261, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-github {
   background-color: #9CDAF0;
 }
 
-/* line 237, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 265, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .features {
   clear: both;
   width: 100%;
