@@ -30,14 +30,6 @@
     background: lighten(lightyellow, 5);
 }
 
-.conteneur-portfolio {
-    @include full;
-    background: lavender;
-    h2 {
-        @include push(1);
-    }
-}
-
 // ==========================================================================
 // Layout gauche/droite
 // ==========================================================================
@@ -76,7 +68,6 @@
     border-top: $rose-clair solid 1px;
     /*background: lighten($rose-clair, 10);*/
     @include break;
-    
     @include pad(2%);
     width: em(315px);
     margin: 0 auto;
@@ -85,11 +76,13 @@
         width: 100%;
         padding-top: 2em;
     }
+
     @include breakpoint($large) {
-      @include container(87%);
+        @include container(87%);
     }
+
     @include breakpoint($xlarge) {
-      @include container(58%);
+        @include container(58%);
     }
 
     h2 {
@@ -151,4 +144,49 @@
 // Portfolio
 // ==========================================================================
 
+.conteneur-portfolio {
+    @include full;
+    @include pad(5%);
+    background-color: lighten($vert, 15);
+    h2 {
+        @include push(1);
+    }
+}
 
+.gallery .site {
+    @include gallery(4);
+    background-color: white;
+    box-shadow: 2px 3px 8px rgb(139, 133, 133);
+}
+
+.site p {
+    text-align: center;
+}
+
+.button {
+    @include span(2);
+    margin: 0 1px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.html {
+    background-color: #E44D26;
+    color: #EBEBEB;
+}
+
+.css3 {
+    background-color: green;
+    color: white;
+}
+
+.sass {
+    background-color: #C8518D;
+    color: white;
+}
+
+.jekyll {
+    background-color: #333333;
+    color: #FFCC00;
+}
