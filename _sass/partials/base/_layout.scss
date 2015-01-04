@@ -166,10 +166,14 @@
     p {
         text-align: center;
         padding: 5px 0;
-        background: #eee;
+        background: $rose-clair;
+    }
+    a {
+        color: white;
     }
     h4 {
         text-align: center;
+        color: $rose;
     }
 }
 
@@ -193,7 +197,9 @@
         @include span(2);
     }
 }
-
+.button-border {
+    border: 1px solid $bleu;
+}
 .button-html {
     background-color: #E44D26;
     color: #EBEBEB;
