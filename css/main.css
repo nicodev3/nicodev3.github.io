@@ -979,6 +979,61 @@ blockquote > :last-child {
 }
 
 /* line 264, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+.button-love {
+  background-color: #B67CA7;
+  color: white;
+}
+
+/* line 269, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+.fa-heart, .fa-heart-o {
+  -webkit-animation: pulsate 3s ease-out;
+          animation: pulsate 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition: background-color 3s ease;
+          transition: background-color 3s ease;
+}
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1) rotate(-5deg);
+            transform: scale(1, 1) rotate(-5deg);
+  }
+  10% {
+    -webkit-transform: scale(1.15, 1.15) rotate(-10deg);
+            transform: scale(1.15, 1.15) rotate(-10deg);
+    color: #ffcccc;
+  }
+  20% {
+    -webkit-transform: scale(1.25, 1.25) rotate(-15deg);
+            transform: scale(1.25, 1.25) rotate(-15deg);
+    color: #ff9999;
+  }
+  100% {
+    -webkit-transform: scale(1, 1) rotate(-5deg);
+            transform: scale(1, 1) rotate(-5deg);
+  }
+}
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1) rotate(-5deg);
+            transform: scale(1, 1) rotate(-5deg);
+  }
+  10% {
+    -webkit-transform: scale(1.15, 1.15) rotate(-10deg);
+            transform: scale(1.15, 1.15) rotate(-10deg);
+    color: #ffcccc;
+  }
+  20% {
+    -webkit-transform: scale(1.25, 1.25) rotate(-15deg);
+            transform: scale(1.25, 1.25) rotate(-15deg);
+    color: #ff9999;
+  }
+  100% {
+    -webkit-transform: scale(1, 1) rotate(-5deg);
+            transform: scale(1, 1) rotate(-5deg);
+  }
+}
+/* line 292, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .features {
   clear: both;
   width: 100%;
