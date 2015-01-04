@@ -11,24 +11,21 @@ h1: Nicolas Devaux, développeur Web
         <p>Aujourd'hui, je suis également titulaire d'une Licence Professionnelle Activités et Techniques de Communication mention développeur web des systèmes d'information et multimédia.</p>
         <p>Cela ne veut rien dire pour vous ? Nous somme d'accord. Alors en bref...</p>
     </article>
-
     <div class="content-right">
         <h2>Derniers articles du blog</h2>
         <ul class="post-list">
             {% for post in site.posts %}
-            <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-                <h2>
+                <li>
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <h2>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-            </li>
+                    </h2>
+                </li>
             {% endfor %}
         </ul>
         <p class="rss-subscribe">Souscrivez <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
     </div>
     <div class="cv">
-
         <section class="compe">
             <h2>Compétences</h2>
             <ul class="competences">
@@ -39,7 +36,6 @@ h1: Nicolas Devaux, développeur Web
                 <li> Photoshop/Illustrator</li>
             </ul>
         </section>
-
         <section class="tools">
             <h2>Frameworks</h2>
             <ul class="outils">
@@ -50,7 +46,6 @@ h1: Nicolas Devaux, développeur Web
                 <li> Jekyll..</li>
             </ul>
         </section>
-
         <section class="presta">
             <h2>Prestations</h2>
             <ul class="prestations">
@@ -59,25 +54,44 @@ h1: Nicolas Devaux, développeur Web
                 <li> Référencement naturel</li>
                 <li> Responsive Webdesign</li>
                 <li> Rédaction de contenus</li>
-            </ul> 
+            </ul>
         </section>
     </div>
 </div>
-
 <div class="conteneur-portfolio">
     <h2>Portfolio</h2>
     <section class="gallery">
         <div class="site">
-           <img src="images/psy-emdr.jpg" height="400" width="400" alt="www.psy-emdr.com">
-           <p><a href="">www.psy-emdr.com</a></p>
-           <div class="button html">HTML5</div> 
-           <div class="button css3">CSS3</div>
-           <div class="button sass">SASS</div>
-           <div class="button jekyll">Jekyll</div>
+            <img src="images/psy-emdr.jpg" height="400" width="400" alt="www.psy-emdr.com">
+            <p><a href="">www.psy-emdr.com</a></p>
+            <h4>Développé avec...</h4>
+            <div class="button-container">
+                <div class="button button-html"><i class="fa fa-html5"></i> HTML5</div>
+                <div class="button button-css3"><i class="fa fa-css3"></i> CSS3</div>
+                <div class="button button-javascript">JavaScript</div>
+                <div class="button button-sass">SASS</div>
+                <div class="button button-jekyll">Jekyll</div>
+                <div class="button button-github">GitHub</div>
+            </div>
+            <div class="features">
+                <div class="feature-button">
+                    <h4><i class="fa fa-camera-retro fa-lg"></i> Fonctionnalités...</h4>
+
+                </div>
+            </div>
         </div>
         <div class="site">
             <img src="images/psy92.jpg" height="400" width="400" alt="www.psy92.info">
             <p><a href="">www.psy92.info</a></p>
+            <h4>Développé avec...</h4>
+            <div class="button-container">
+                <div class="button button-html"><i class="fa fa-html5"></i> HTML5</div>
+                <div class="button button-css3"><i class="fa fa-css3"></i> CSS3</div>
+                <div class="button button-javascript">JavaScript</div>
+                <div class="button button-sass">SASS</div>
+                <div class="button button-laravel">Laravel</div>
+                <div class="button button-php">PHP</div>
+            </div>
         </div>
         
     </section>
