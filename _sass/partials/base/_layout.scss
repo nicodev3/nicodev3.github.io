@@ -180,20 +180,6 @@
         text-align: center;
         color: $rose;
     }
-    img {
-        z-index: 1;
-        &:hover {
-            transition: all .1s ease-in-out;
-            transform: scale(1.25, 1.25) translateY(1em);
-            border: 2px solid #FFFFFA;
-        }
-        &:hover ~ .description {
-            display: none;
-        }
-        &:hover + .site {
-            min-height: 2px;
-        }
-    }
 }
 
 .button-container {

@@ -840,34 +840,13 @@ blockquote > :last-child {
   text-align: center;
   color: #C8518D;
 }
-/* line 183, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
-.site img {
-  z-index: 1;
-}
-/* line 185, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
-.site img:hover {
-  -webkit-transition: all .1s ease-in-out;
-          transition: all .1s ease-in-out;
-  -webkit-transform: scale(1.25, 1.25) translateY(1em);
-      -ms-transform: scale(1.25, 1.25) translateY(1em);
-          transform: scale(1.25, 1.25) translateY(1em);
-  border: 2px solid #FFFFFA;
-}
-/* line 190, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
-.site img:hover ~ .description {
-  display: none;
-}
-/* line 193, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
-.site img:hover + .site {
-  min-height: 2px;
-}
 
-/* line 199, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 185, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-container {
   padding: 0 5px;
 }
 
-/* line 204, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 190, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-container .button {
   width: 49.15254%;
   float: left;
@@ -886,7 +865,7 @@ blockquote > :last-child {
   clear: none;
 }
 @media (min-width: 47.938em) {
-  /* line 204, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 190, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .button-container .button {
     width: 32.20339%;
     float: left;
@@ -912,7 +891,7 @@ blockquote > :last-child {
   }
 }
 
-/* line 212, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 198, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button {
   text-align: center;
   border-radius: 3px;
@@ -920,71 +899,71 @@ blockquote > :last-child {
   padding: 5px 0;
 }
 @media (min-width: 47.938em) {
-  /* line 212, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+  /* line 198, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
   .button {
     width: 15.25424%;
     float: left;
   }
 }
 
-/* line 222, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 208, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-border {
   border: 1px solid #C8518D;
 }
 
-/* line 226, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 212, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-html {
   background-color: #E44D26;
   color: #EBEBEB;
 }
 
-/* line 231, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 217, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-css3 {
   background-color: #1572B7;
   color: white;
 }
 
-/* line 236, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 222, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-sass {
   background-color: #C8518D;
   color: white;
 }
 
-/* line 241, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 227, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-jekyll {
   background-color: #FFCC00;
   color: #333333;
 }
 
-/* line 246, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 232, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-laravel {
   background-color: #F87265;
   color: white;
 }
 
-/* line 251, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 237, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-javascript {
   background-color: #F0DB4F;
 }
 
-/* line 255, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 241, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-php {
   background-color: #5A66A2;
   color: white;
 }
 
-/* line 260, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 246, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-github {
   background-color: #9CDAF0;
 }
 
-/* line 264, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 250, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .button-love {
   background-color: #B67CA7;
   color: white;
 }
 
-/* line 269, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 255, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .fa-heart, .fa-heart-o {
   -webkit-animation: pulsate 3s ease-out;
           animation: pulsate 3s ease-out;
@@ -1033,7 +1012,7 @@ blockquote > :last-child {
             transform: scale(1, 1) rotate(-5deg);
   }
 }
-/* line 292, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
+/* line 278, ../../../../../../../Users/HomeNico/dev/nicodev3.github.io/_sass/partials/base/_layout.scss */
 .features {
   clear: both;
   width: 100%;
