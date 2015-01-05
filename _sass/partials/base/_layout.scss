@@ -56,6 +56,13 @@
         @include post(1);
         @include span(3 last);
     }
+
+    h2 {
+        margin-top: 0;
+    }
+    .h2-contact {
+        margin-top: 1em;
+    }
 }
 
 // ==========================================================================
@@ -63,7 +70,6 @@
 // ==========================================================================
 
 .cv {
-    padding-top: 1em;
     padding-bottom: 1em;
     border-top: $rose-clair solid 1px;
     /*background: lighten($rose-clair, 10);*/
@@ -99,7 +105,6 @@
     border-bottom: 1px dashed #f2f3f4;
     text-align: center;
     color: $vert;
-    padding-top: em(12px);
     line-height: em(44px);
 }
 
@@ -147,9 +152,12 @@
 .conteneur-portfolio {
     @include full;
     background-color: lighten($vert, 15);
-    padding-bottom: em(50px);
+    margin-top: em(30px);
+    padding-bottom: em(75px);
     h2 {
         @include push(1);
+        color: $blanc;
+        letter-spacing: 1px;
     }
 }
 
@@ -256,7 +264,6 @@
     animation: pulsate 3s ease-out;
     animation-iteration-count: infinite;
     transition: background-color 3s ease;
-
     @keyframes pulsate {
         0% {
             transform: scale(1, 1) rotate(-5deg);

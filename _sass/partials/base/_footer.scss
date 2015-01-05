@@ -2,9 +2,8 @@
 // footer
 // ==========================================================================
 .site-footer {
-  border-top: 1px solid $vert;
   @include full;
-  margin-top: 74px;
+  background-color: $bleu;
 }
 .footer-container {
   margin-top: 100px;
@@ -22,6 +21,7 @@
 
 .text {
   @include push(1);
+  color: #D5D5CF;
   @include breakpoint($small) {
     margin-left: 0;
     @include span(4 last);
@@ -31,4 +31,8 @@
 .social-media-list {
   list-style  : none;
   padding-left: 0;
+  color: #A576A7;
+  a {
+    color: #A576A7;
+  }
 }
