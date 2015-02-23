@@ -1,0 +1,56 @@
+%list-style {
+    line-height: 2em;
+    list-style: none;
+    color: darken($rose, 20);
+    font-weight: 300;
+}
+.competences {
+    @extend %list-style;
+    li {
+        &:before {
+            content: '\2661';
+            padding-right: 5px;
+            color: lighten($rose, 10);
+        }
+    }
+    @include susy-breakpoint($small) {
+    	margin-left: em(54px);
+    }
+    @include susy-breakpoint($medium) {
+    	margin-left: em(-5px);
+    }
+}
+
+.outils {
+    @extend %list-style;
+    li {
+        &:before {
+            content: "\2692";
+            padding-right: 5px;
+            color: darken($rose, 10);
+        }
+    }
+	@include susy-breakpoint($small) {
+    	margin-left: em(69px);
+    }
+    @include susy-breakpoint($medium) {
+    	margin-left: 10px;
+    }
+}
+
+.prestations {
+    @extend %list-style;
+    li {
+        &:before {
+            content: "\2713";
+            padding-right: 5px;
+            color: darken($rose, 20);
+        }
+    }
+    @include susy-breakpoint($small) {
+    	margin-left: 15.4375em;
+    }
+    @include susy-breakpoint($medium) {
+    	margin-left: -9px;
+    }
+}

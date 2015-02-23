@@ -1,0 +1,113 @@
+// ==========================================================================
+// Styles basiques
+// ==========================================================================
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $lh-p;
+    font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+}
+p {
+    line-height: $lh-p;
+}
+// ==========================================================================
+// Headings
+// ==========================================================================
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+h1 {
+    font-size: $fs-h1--phone;
+    line-height: $lh-h1--phone;
+    letter-spacing: -1px;
+    @include susy-breakpoint($small) {
+        font-size: $fs-h1--desktop;
+        line-height: $lh-h1--desktop;
+    }
+}
+
+h2 {
+    margin-top: $base-margin;
+    margin-bottom: $base-margin;
+    line-height: $lh-h2--phone;
+    font-size: $fs-h2--phone;
+    @include susy-breakpoint($small) {
+        font-size: $fs-h2--desktop;
+    }
+}
+
+h3 {
+    font-size: $fs-h3--phone;
+    line-height: $lh-h3--phone;
+    color: lighten($text-color, 10);
+    @include susy-breakpoint($small) {
+        font-size: $fs-h3--desktop;
+        line-height: $lh-h3--desktop;
+        padding-left: 15px;
+    }
+}
+
+// ==========================================================================
+// Images
+// ==========================================================================
+img {
+    width: 100%;
+    height: auto;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
