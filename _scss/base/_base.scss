@@ -10,15 +10,19 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
+
 p {
     line-height: $lh-p;
+    font-family: "adelle";
 }
+
 // ==========================================================================
 // Headings
 // ==========================================================================
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-family: "adelle-sans";
 }
+
 h1 {
     font-size: $fs-h1--phone;
     line-height: $lh-h1--phone;
@@ -71,14 +75,20 @@ figure > img {
 a {
     color: $brand-color;
     text-decoration: none;
-
+    font-family: "adelle";
     &:hover {
         color: $text-color;
         text-decoration: underline;
     }
 }
 
+// ==========================================================================
+// Listes
+// ==========================================================================
 
+ul > li {
+    font-family: "adelle";
+}
 
 /**
  * Blockquotes
@@ -89,7 +99,6 @@ blockquote {
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
-
     > :last-child {
         margin-bottom: 0;
     }
@@ -99,13 +108,11 @@ blockquote {
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
         height: 16px;
         vertical-align: middle;
-
         path {
             fill: $grey-color;
         }
