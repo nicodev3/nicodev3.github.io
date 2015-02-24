@@ -11,7 +11,7 @@
 
     h2 {
         @include push(1);
-        color: $blanc;
+        color: $rose;
         letter-spacing: 1px;
     }
 }
@@ -22,10 +22,12 @@
     margin-bottom: 40px;
     p {
         text-align: center;
-        padding: 10px 0;
-        margin-top: 5px;
     }
     a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 2em;
         text-decoration: underline;
         color: #FFFFFA;
         font-family: "adelle";
@@ -33,13 +35,20 @@
     }
     h4 {
         text-align: center;
-        font-size: 1.2em;
+        font-size: 1.4em;
         color: $rose;
+    }
+}
+
+.conteneur-com-desc {
+    @include susy-breakpoint($large) {
+        @include squish(1);
     }
 }
 
 .screenshots {
     @include full;
+    padding-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -48,15 +57,17 @@
 }
 
 .commande, .description {
-    background-color: rgb(255, 255, 250);
-    box-shadow: 0px 0px 100px 0px #85ADAD inset;
     padding-top: 40px;
     @include susy-breakpoint($small) {
+        background-color: rgb(255, 255, 250);
+        box-shadow: 0px 0px 100px 0px #85ADAD inset;
         padding: 20px;
     }
 }
 
 .commande {
+    background-color: rgb(255, 255, 250);
+    padding: 10px 0;
     @include susy-breakpoint($small) {
         @include span(360px);
         height: 360px;
@@ -64,6 +75,10 @@
         h4 {
             margin-top: 58px;
             margin-bottom: 0;
+            padding-bottom: 10px;
+        }
+        p {
+            padding: 0 12px;
         }
     }
 }
@@ -102,7 +117,6 @@
         @include span(2);
     }
 }
-
 
 .button-border {
     border: 1px solid $rose;

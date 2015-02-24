@@ -1,10 +1,5 @@
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
-// breakpoints
-$small  : 47.938em; //767px
-$medium : 52.500em; //840px
-$large  : 62.500em; //1200px
-$xlarge : 105.000em;
 
 // fonts
 $base-font-size: 16px;
@@ -67,3 +62,9 @@ $susy: (
 @function em($target, $context: 16px) {
   @return ($target / $context) * 1em;
 }
+
+// breakpoints
+$small  : em(767px);
+$medium : em(840px);
+$large  : em(1200px);
+$xlarge : em(1680px);
