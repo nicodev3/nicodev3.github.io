@@ -2,35 +2,38 @@
 // Header
 // ==========================================================================
 .site-header {
-  background    : $bleu;
-  border-top    : 5px solid $vert;
-  border-bottom : 1px solid $vert;
-  min-height    : 56px;
-
+  background: $bleu;
+  border-top: 5px solid $vert;
+  border-bottom: 1px solid $vert;
+  min-height: 56px;
   // Positioning context for the mobile navigation icon
-  position      : relative;
+  position: relative;
 }
-
 
 .site-title {
   @include span(5);
-  @include push(1);
-  font-size      : 30px;
-  line-height    : 56px;
-  letter-spacing : -1px;
-  margin-bottom  : 0;
+  font-size: 30px;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+
   &:hover {
     text-decoration: none;
     color: $rose-clair;
   }
+
+  @include susy-breakpoint($small) {
+    @include push(1);
+  }
 }
+
 .trois {
   font-family: "verdana";
   display: inline-block;
   font-size: 0.8em;
   color: $rose-clair;
-
 }
+
 .trig:hover ~ .trois {
   transform-origin: 0 0;
   transform: rotate(-90deg) translateY(-34px) translateX(-24px);
