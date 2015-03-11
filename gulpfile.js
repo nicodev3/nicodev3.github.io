@@ -43,6 +43,7 @@ gulp.task('sass', function () {
     return gulp.src('./_scss/*.scss')
         .pipe(sass({
             includePaths: ['scss/**/index.scss', 'bower_components/susy/sass'],
+            outputStyle: 'compressed',
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
