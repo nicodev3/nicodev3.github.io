@@ -26,9 +26,9 @@ input:checked ~ .content {
 
 .open {
     color: $blanc;
-    font-size: 1.1em;
+    font-size: 3em;
     margin-top: 18px;
-    @include span(3 last);
+    @include span(2 last);
     transition: margin-right .3s ease;
     @include susy-breakpoint($small) {
         display: none;
@@ -44,6 +44,7 @@ input:checked ~ .content {
     background: $rose-clair;
     border-top: 6px solid $vert;
     transition: right .3s ease;
+
     @include susy-breakpoint($small) {
         @include span(6 last);
         height: auto;
