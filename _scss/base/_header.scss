@@ -13,9 +13,9 @@
 
 
 .site-title {
-  @include span(4);
+  @include span(5);
   @include push(1);
-  font-size      : 26px;
+  font-size      : 30px;
   line-height    : 56px;
   letter-spacing : -1px;
   margin-bottom  : 0;
