@@ -4,41 +4,46 @@
 
 .conteneur-portfolio {
     @include full;
-    background-color: lighten($vert, 15);
-    margin-top: em(30px);
-    padding-bottom: em(75px);
-    @include susy-breakpoint($small) {}
+    @include susy-breakpoint($small) {
+    }
+    margin-top       : em(30px);
+    padding-bottom   : em(75px);
+    background-color : lighten($vert, 15);
 
     h2 {
-        
-        color: $rose;
-        background : linear-gradient(to right, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 90%);
-        padding: 10px 0 10px 10px;
+        padding       : 10px 0 10px 10px;
         border-radius : 5px;
+        background    : linear-gradient(to right, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 90%);
+        color         : $rose;
     }
 }
 
 .site {
     @include container;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top    : 40px;
+    margin-bottom : 40px;
+
     p {
-        text-align: center;
+        text-align : center;
     }
+
     a {
-        display: block;
-        text-align: center;
-        padding: 10px 0;
-        margin-bottom: 2em;
-        text-decoration: underline;
-        color: #FFFFFA;
-        font-family: "adelle";
-        font-size: 1.5em;
+        display         : block;
+        width           : 300px;
+        margin          : 0 auto 2em;
+        padding         : 20px 0;
+        border-radius : 5px;
+        background      : rgba(0, 0, 0, .3);
+        color           : #fffffa;
+        font-family     : 'adelle';
+        font-size       : 1.5em;
+        text-align      : center;
+        text-decoration : underline;
     }
     h4 {
-        text-align: center;
-        font-size: 1.4em;
-        color: $rose;
+        color      : $rose;
+        font-size  : 1.4em;
+        text-align : center;
     }
 }
 
@@ -50,54 +55,56 @@
 
 .screenshots {
     @include full;
-    padding-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom : 50px;
+    padding-top   : 20px;
 }
 
 .desktop-img {
-    @include susy-breakpoint($small) {}
+    @include susy-breakpoint($small) {
+    }
 }
 
-.commande, .description {
-    padding-top: 40px;
+.commande,
+.description {
     @include susy-breakpoint($small) {
-        background-color: rgb(255, 255, 250);
-        box-shadow: 0 0 100px 0 #85ADAD inset;
-        padding: 20px;
+        padding          : 20px;
+        background-color : rgb(255, 255, 250);
+        box-shadow       : 0 0 100px 0 #85adad inset;
     }
+    padding-top : 40px;
 }
 
 .commande {
-    background-color: rgb(255, 255, 250);
-    padding: 10px 0;
     @include susy-breakpoint($small) {
         @include span(360px);
-        height: 360px;
-        border-radius: 50%;
+        height        : 360px;
+        border-radius : 50%;
         h4 {
-            margin-top: 58px;
-            margin-bottom: 0;
-            padding-bottom: 10px;
+            margin-top     : 58px;
+            margin-bottom  : 0;
+            padding-bottom : 10px;
         }
         p {
-            padding: 0 12px;
+            padding : 0 12px;
         }
     }
+    padding          : 10px 0;
+    background-color : rgb(255, 255, 250);
 }
 
 .description {
-    margin-top: 10px;
     @include susy-breakpoint($small) {
         @include span(6 last);
-        border-radius: 10px;
+        border-radius : 10px;
         h4 {
-            margin-top: 10px;
+            margin-top : 10px;
         }
     }
+    margin-top : 10px;
 }
 
 .button-container {
-    padding: 0 5px;
+    padding : 0 5px;
 }
 
 .button-container {
@@ -110,81 +117,83 @@
 }
 
 .button {
-    text-align: center;
-    border-radius: 3px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    padding: 10px 0;
     @include susy-breakpoint($small) {
         @include span(2);
     }
+    margin-right  : 5px;
+    margin-bottom : 5px;
+    padding       : 10px 0;
+    border-radius : 3px;
+    text-align    : center;
 }
 
 .button-border {
-    border: 1px solid $rose;
+    border : 1px solid $rose;
 }
 
 .button-html {
-    background-color: #E44D26;
-    color: #EBEBEB;
+    background-color : #e44d26;
+    color            : #ebebeb;
 }
 
 .button-css3 {
-    background-color: #1572B7;
-    color: white;
+    background-color : #1572b7;
+    color            : white;
 }
 
 .button-sass {
-    background-color: #C8518D;
-    color: white;
+    background-color : #c8518d;
+    color            : white;
 }
 
 .button-jekyll {
-    background-color: #FFCC00;
-    color: #333333;
+    background-color : #fc0;
+    color            : #333;
 }
 
 .button-laravel {
-    background-color: #F87265;
-    color: white;
+    background-color : #f87265;
+    color            : white;
 }
 
 .button-javascript {
-    background-color: #F0DB4F;
+    background-color : #f0db4f;
 }
 
 .button-php {
-    background-color: #5A66A2;
-    color: white;
+    background-color : #5a66a2;
+    color            : white;
 }
 
 .button-github {
-    background-color: #9CDAF0;
+    background-color : #9cdaf0;
 }
 
 .button-love {
-    background-color: $rose-clair;
-    color: white;
+    background-color : $rose-clair;
+    color            : white;
 }
 
-.fa-heart, .fa-heart-o {
-    animation: pulsate 3s ease-out;
-    animation-iteration-count: infinite;
-    transition: background-color 3s ease;
+.fa-heart,
+.fa-heart-o {
+    transition                : background-color 3s ease;
+
+    animation                 : pulsate 3s ease-out;
+    animation-iteration-count : infinite;
     @keyframes pulsate {
         0% {
-            transform: scale(1, 1) rotate(-5deg);
+            transform : scale(1, 1) rotate(-5deg);
         }
         10% {
-            transform: scale(1.15, 1.15) rotate(-10deg);
-            color: lighten(red, 40);
+            transform : scale(1.15, 1.15) rotate(-10deg);
+            color     : lighten(red, 40);
         }
         20% {
-            transform: scale(1.25, 1.25) rotate(-15deg);
-            color: lighten(red, 30);
+            transform : scale(1.25, 1.25) rotate(-15deg);
+            color     : lighten(red, 30);
         }
         100% {
-            transform: scale(1, 1) rotate(-5deg);
+            transform : scale(1, 1) rotate(-5deg);
         }
     }
 }
