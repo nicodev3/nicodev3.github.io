@@ -1,0 +1,9 @@
+#tinker {
+    display : block;
+    width   : 200px;
+    margin  : 0 auto;
+
+    &--container {
+        fill : rgba(0, 0, 0, .8);
+    }
+}
