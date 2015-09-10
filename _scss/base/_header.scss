@@ -2,40 +2,48 @@
 // Header
 // ==========================================================================
 .site-header {
-  background: $bleu;
-  border-top: 5px solid $vert;
-  border-bottom: 1px solid $vert;
-  min-height: 56px;
-  // Positioning context for the mobile navigation icon
-  position: relative;
+    // Positioning context for the mobile navigation icon
+    position      : relative;
+    min-height    : 56px;
+    border-top    : 5px solid $vert;
+    border-bottom : 1px solid $vert;
+    background    : $bleu;
 }
 
 .site-title {
-  @include span(5);
-  font-size: 30px;
-  line-height: 56px;
-  letter-spacing: -1px;
-  margin-bottom: 0;
+    @include span(5);
+    @include susy-breakpoint($small) {
+        @include push(1);
+    }
+    position       : relative;
+    margin-bottom  : 0;
+    font-size      : 30px;
+    letter-spacing : -1px;
+    line-height    : 56px;
 
-  &:hover {
-    text-decoration: none;
-    color: $rose-clair;
-  }
-
-  @include susy-breakpoint($small) {
-    @include push(1);
-  }
+    &:hover {
+        color           : $rose-clair;
+        text-decoration : none;
+    }
 }
 
 .trois {
-  font-family: "verdana";
-  display: inline-block;
-  font-size: 0.8em;
-  color: $rose-clair;
+    display     : inline-block;
+    position    : absolute;
+    left        : 55%;
+    color       : $rose-clair;
+    font-family : 'verdana';
+    font-size   : .8em;
+}
+
+.trig {
+    position : absolute;
+    left     : 10%;
 }
 
 .trig:hover ~ .trois {
-  transform-origin: 0 0;
-  transform: rotate(-90deg) translateY(-34px) translateX(-24px);
-  transition: .5s ease-in;
+    transform        : rotate(-90deg) translateY(-34px) translateX(-24px);
+    transition       : .5s ease-in;
+
+    transform-origin : 0 0;
 }
