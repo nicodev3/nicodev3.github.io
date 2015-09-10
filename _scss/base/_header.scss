@@ -30,7 +30,7 @@
 .trois {
     display     : inline-block;
     position    : absolute;
-    left        : 55%;
+    left        : 110px;
     color       : $rose-clair;
     font-family : 'verdana';
     font-size   : .8em;
@@ -38,12 +38,5 @@
 
 .trig {
     position : absolute;
-    left     : 10%;
-}
-
-.trig:hover ~ .trois {
-    transform        : rotate(-90deg) translateY(-34px) translateX(-24px);
-    transition       : .5s ease-in;
-
-    transform-origin : 0 0;
+    left     : 0;
 }

@@ -1,1 +1,1 @@
-!function(e){var a,r=e(".trois");e(".trig");a=new TimelineMax({repeat:-1,repeatDelay:.5}),a.fromTo(r,5,{autoAlpha:0,xPercent:"1000"},{autoAlpha:1,xPercent:"-1000",ease:Power4.easeInOut})}(jQuery);
+!function(e){var a,t=e(".trois"),o=e(".trig");a=new TimelineMax({repeat:-1,repeatDelay:.5}),a.set([t,o],{autoAlpha:0}).fromTo(o,2,{autoAlpha:0,xPercent:"-1000"},{autoAlpha:1,xPercent:"0",ease:Power4.easeInOut}).add("nicodevIn").fromTo(t,3,{autoAlpha:0,xPercent:"3000"},{autoAlpha:1,xPercent:"-48",ease:Power4.easeInOut})}(jQuery);
