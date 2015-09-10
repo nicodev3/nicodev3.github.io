@@ -13,7 +13,7 @@
 .site-title {
     @include span(5);
     @include susy-breakpoint($small) {
-        @include push(1);
+        @include push(1.1);
     }
     position       : relative;
     margin-bottom  : 0;
