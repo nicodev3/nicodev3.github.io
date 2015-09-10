@@ -1,11 +1,15 @@
-function onReady() {
+(function ($) {
 
-    var anim = $('.anim-path');
-    TweenMax.fromTo(anim, 6, {
-        drawSVG: "0 0%"
-    }, {
-        drawSVG: "0% 100%"
+    var trois = $('.trois'),
+        nicodev = $('.trig'),
+        tlAnim;
+
+    tlAnim = new TimelineMax({repeat: -1, repeatDelay: .5});
+
+    tlAnim.fromTo(trois, 5, {autoAlpha: 0, xPercent: '1000'}, {
+        autoAlpha: 1,
+        xPercent: '-1000',
+        ease: Power4.easeInOut
     });
 
-    $(document).ready(onReady);
-}
+})(jQuery);

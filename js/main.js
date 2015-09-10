@@ -1,1 +1,1 @@
-function onReady(){var a=$(".anim-path");TweenMax.fromTo(a,6,{drawSVG:"0 0%"},{drawSVG:"0% 100%"}),$(document).ready(onReady)}
+!function(e){var a,r=e(".trois");e(".trig");a=new TimelineMax({repeat:-1,repeatDelay:.5}),a.fromTo(r,5,{autoAlpha:0,xPercent:"1000"},{autoAlpha:1,xPercent:"-1000",ease:Power4.easeInOut})}(jQuery);
