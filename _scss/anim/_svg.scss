@@ -2,8 +2,9 @@
     display : block;
     width   : 200px;
     margin  : 0 auto;
+}
 
-    &--container {
-        fill : rgba(0, 0, 0, .8);
-    }
+.anim-path {
+	stroke: yellow;
+	stroke-width: 2px;
 }
