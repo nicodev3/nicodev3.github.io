@@ -1,20 +1,33 @@
 <div class="canvas">
-  <input type="checkbox" id="checkbox" />
+	<input type="checkbox" id="checkbox"/>
 
-
-  <div class="content">
-    <header class="site-header">
-      <a class="site-title" href="{{ site.baseurl }}/"><span class="trig">nicodev</span><span class="trois">3</span></a>
-      
-      <label for="checkbox" class="open">&#9776;</label>
-      <label for="checkbox" class="close"></label>
-      <div class="off-canvas">
-        <nav class="navigation" role="navigation">
-        {% for page in site.pages %}
-        {% if page.title %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
-        {% endfor %}
-        </nav>
-      </div>
-    </header>
+	<div class="content">
+		<header class="site-header">
+			<a class="site-title" href="{{ site.baseurl }}/">
+				<span class="n">n</span>
+				<span class="i">i</span>
+				<span class="c">c</span>
+				<span class="o">o</span>
+				<span class="l">l</span>
+				<span class="a">a</span>
+				<span class="s">s</span>
+				<span class="d">d</span>
+				<span class="e">e</span>
+				<span class="v">v</span>
+				<span class="a2">a</span>
+				<span class="u">u</span>
+				<span class="x">x</span>
+				<span class="trois">3</span>
+			</a>
+			<label for="checkbox" class="open">&#9776;</label>
+			<label for="checkbox" class="close"></label>
+			<div class="off-canvas">
+				<nav class="navigation" role="navigation">
+					{% for page in site.pages %}
+					{% if page.title %}
+					<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+					{% endif %}
+					{% endfor %}
+				</nav>
+			</div>
+		</header>
