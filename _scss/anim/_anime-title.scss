@@ -1,0 +1,74 @@
+$pos-left: 34px;
+.nico,
+.trois {
+    letter-spacing : 1px;
+}
+
+.n,
+.i,
+.c,
+.o,
+.l,
+.a,
+.s,
+.d,
+.e,
+.v,
+.a2,
+.u,
+.x,
+.trois {
+    position : absolute;
+    top : 13px;
+    background-color : #fffffa;
+    display : block;
+    width: 30px;
+    height: 30px;
+    text-align : center;
+    line-height : 30px;
+    border-radius : 5px;
+}
+
+.n {
+    left : 0;
+}
+.i {
+    left : $pos-left;
+}
+.c {
+    left : $pos-left * 2;
+}
+.o {
+left : $pos-left * 3;
+}
+.l {
+left : $pos-left * 4;
+}
+.a {
+left : $pos-left * 5;
+}
+.s {
+left : $pos-left * 6;
+}
+.d {
+left : $pos-left * 8;
+}
+.e {
+left : $pos-left * 9;
+}
+.v {
+left : $pos-left * 10;
+}
+.a2 {
+left : $pos-left * 11;
+}
+.u {
+left : $pos-left * 12;
+}
+.x {
+left : $pos-left * 13;
+}
+.trois {
+left : $pos-left * 14;
+    opacity : 0;
+}
