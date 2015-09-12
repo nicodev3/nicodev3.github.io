@@ -43,7 +43,7 @@ Le nom de domaine est l'adresse qui permet de joindre votre site Internet, comme
 
 En réalité les choses sont un peu plus complexes. Retenez simplement que l'adresse d'un site telle que nous la connaissons est la traduction d'une **adresse IP**, qui est une suite de chiffres impossible à mémoriser.
 
-{: .svg-article}
+
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 80 65" enable-background="new 0 0 80 80" xml:space="preserve">
   <rect x="39" y="51" fill="#000000" width="2" height="10"/>
   <rect x="11" y="60" fill="#000000" width="58" height="2"/>
@@ -51,6 +51,8 @@ En réalité les choses sont un peu plus complexes. Retenez simplement que l'adr
   <polygon fill="#000000" points="59.38 35.78 40 20.28 20.63 35.78 19.38 34.22 40 17.72 60.63 34.22 "/>
   <polygon fill="#000000" points="45 51 43 51 43 39 37 39 37 51 35 51 35 37 45 37 "/>
 </svg>
+{: .svg-article}
+
 
 {: .ndd-article}
 91.198.174.192
