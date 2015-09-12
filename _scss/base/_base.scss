@@ -27,6 +27,7 @@ h1 {
     font-size: $fs-h1--phone;
     line-height: $lh-h1--phone;
     letter-spacing: -1px;
+    color: $rose;
     @include susy-breakpoint($small) {
         font-size: $fs-h1--desktop;
         line-height: $lh-h1--desktop;
@@ -38,6 +39,7 @@ h2 {
     margin-bottom: $base-margin;
     line-height: $lh-h2--phone;
     font-size: $fs-h2--phone;
+    color: mix(#fff, $bleu, 15%);
     @include susy-breakpoint($small) {
         font-size: $fs-h2--desktop;
     }
@@ -46,11 +48,22 @@ h2 {
 h3 {
     font-size: $fs-h3--phone;
     line-height: $lh-h3--phone;
-    color: lighten($text-color, 10);
+    color: mix(#fff, $bleu, 30%);
     @include susy-breakpoint($small) {
         font-size: $fs-h3--desktop;
         line-height: $lh-h3--desktop;
-        padding-left: 15px;
+
+    }
+}
+
+h4 {
+    font-size: $fs-h4--phone;
+    line-height: $lh-h4--phone;
+    color: mix(#fff, $bleu, 40%);
+    @include susy-breakpoint($small) {
+        font-size: $fs-h4--desktop;
+        line-height: $lh-h4--desktop;
+
     }
 }
 

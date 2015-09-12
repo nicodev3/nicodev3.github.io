@@ -1,75 +1,88 @@
-$pos-left: 34px;
+$pos-left : 34px;
 .nico,
 .trois {
     letter-spacing : 1px;
 }
 
-.n,
-.i,
-.c,
-.o,
-.l,
-.a,
-.s,
-.d,
-.e,
-.v,
-.a2,
-.u,
-.x,
+.lettre-n,
+.lettre-i,
+.lettre-c,
+.lettre-o,
+.lettre-l,
+.lettre-a,
+.lettre-s,
+.lettre-d,
+.lettre-e,
+.lettre-v,
+.lettre-a2,
+.lettre-u,
+.lettre-x,
 .trois {
-    position : absolute;
-    top : 13px;
+    display          : block;
+    position         : absolute;
+    top              : 13px;
+    width            : 30px;
+    height           : 30px;
+    border-radius    : 5px;
     background-color : #fffffa;
-    display : block;
-    width: 30px;
-    height: 30px;
-    text-align : center;
-    line-height : 26px;
-    border-radius : 5px;
+    line-height      : 26px;
+    text-align       : center;
 }
 
-.n {
+.lettre-n {
     left : 0;
 }
-.i {
+
+.lettre-i {
     left : $pos-left;
 }
-.c {
+
+.lettre-c {
     left : $pos-left * 2;
 }
-.o {
-left : $pos-left * 3;
+
+.lettre-o {
+    left : $pos-left * 3;
 }
-.l {
-left : $pos-left * 4;
+
+.lettre-l {
+    left : $pos-left * 4;
 }
-.a {
-left : $pos-left * 5;
+
+.lettre-a {
+    left : $pos-left * 5;
 }
-.s {
-left : $pos-left * 6;
+
+.lettre-s {
+    left : $pos-left * 6;
 }
-.d {
-left : $pos-left * 8;
+
+.lettre-d {
+    left : $pos-left * 8;
 }
-.e {
-left : $pos-left * 9;
+
+.lettre-e {
+    left : $pos-left * 9;
 }
-.v {
-left : $pos-left * 10;
+
+.lettre-v {
+    left : $pos-left * 10;
 }
-.a2 {
-left : $pos-left * 11;
+
+.lettre-a2 {
+    left : $pos-left * 11;
 }
-.u {
-left : $pos-left * 12;
+
+.lettre-u {
+    left : $pos-left * 12;
 }
-.x {
-left : $pos-left * 13;
+
+.lettre-x {
+    left : $pos-left * 13;
 }
+
 .trois {
-left : $pos-left * 14;
+    left    : $pos-left * 14;
     opacity : 0;
 }
 
@@ -77,22 +90,41 @@ left : $pos-left * 14;
   ============================= */
 
 .cv-svg {
-    width   : 100px;
-    height  : 100px;
-    display : block;
-    margin  : 0 auto;
+    display       : block;
+    width         : 100px;
+    height        : 100px;
+    margin        : 0 auto;
+    padding       : 1em;
+    border-radius : 5px;
+    background    : RGBA(230, 62, 142, .1);
 }
 
 #gear {
-    fill: none;
-    stroke: black;
-    stroke-width: 2px;
+    fill         : none;
+    stroke       : black;
+    stroke-width : 2px;
 }
 
 #battery-1,
 #battery-2,
 #battery-3,
-#battery-4{
+#battery-4 {
     opacity : 0;
-    fill: #3C8B89;
+
+    fill    : #3c8b89;
+}
+
+.svg-article {
+    display : block;
+    width   : 200px;
+    margin  : 0 auto;
+}
+
+.ndd-article {
+    text-align : center;
+    font-size : 1.1em;
+}
+
+.ndd-article-pink {
+    color: $rose;
 }

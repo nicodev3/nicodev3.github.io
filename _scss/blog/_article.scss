@@ -38,3 +38,28 @@
         @include push(2);
     }
 }
+
+.plan-article {
+    background : RGBA(186, 186, 186, .2);
+    padding: gutter();
+    border-radius : 5px;
+    h4 {
+        margin-top : 0;
+    }
+}
+
+.caddie {
+    width: 80px;
+    position : relative;
+    left : 0;
+}
+
+#tuto-gif {
+    background : RGBA(0, 0, 0, .2);
+    width: 600px;
+    display : block;
+    margin : 4em auto;
+    padding: 1em;
+    border-radius : 5px;
+
+}

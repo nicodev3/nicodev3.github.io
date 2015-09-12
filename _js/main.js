@@ -1,18 +1,18 @@
 (function ($) {
 
-    var n = $('.n'),
-        i = $('.i'),
-        c = $('.c'),
-        o = $('.o'),
-        l = $('.l'),
-        a = $('.a'),
-        s = $('.s'),
-        d = $('.d'),
-        e = $('.e'),
-        v = $('.v'),
-        a2 = $('.a2'),
-        u = $('.u'),
-        x = $('.x'),
+    var n = $('.lettre-n'),
+        i = $('.lettre-i'),
+        c = $('.lettre-c'),
+        o = $('.lettre-o'),
+        l = $('.lettre-l'),
+        a = $('.lettre-a'),
+        s = $('.lettre-s'),
+        d = $('.lettre-d'),
+        e = $('.lettre-e'),
+        v = $('.lettre-v'),
+        a2 = $('.lettre-a2'),
+        u = $('.lettre-u'),
+        x = $('.lettre-x'),
         trois = $('.trois'),
         bat1 = $('#battery-1'),
         bat2 = $('#battery-2'),
@@ -20,8 +20,11 @@
         bat4 = $('#battery-4'),
         tlAnim,
         tlBattery,
+        tlDomainName,
         time1,
-        time2;
+        time2,
+        domaine = $('.ndd-article')
+        ;
 
 
     tlAnim = new TimelineMax({repeat: -1, repeatDelay: 2, yoyo: true, delay: 2});
@@ -56,4 +59,18 @@
         .to(bat4,.3, {autoAlpha: 1,  ease: Power4.easeInOut})
     ;
 
+    tlDomainName = new TimelineMax({repeat:-1, repeatDelay: 4, yoyo: true, delay: 4});
+    tlDomainName
+        .to(domaine, 2, {
+        text:{
+            value:"www.mon-site.fr",
+            newClass:"ndd-article-pink",
+            oldClass:"ndd-article"
+        }, ease: Linear.easeNone
+    });
+
+    tlCaddie = new TimelineMax({repeat:-1, repeatDelay: 4, yoyo: true, delay: 4});
+
+    tlCaddie
+        .fromTo($('.caddie'), 4, {x: 0}, {x: 800, ease: Back.easeOut.config(1.7), y: 0})
 })(jQuery);

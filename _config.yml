@@ -12,7 +12,7 @@ github_username:  nicodev3
 markdown: kramdown
 highlighter: pygments
 kramdown:
-  auto_ids:      true
+  auto_ids:      false
   footnote_nr:   1
   entity_output: as_char
   toc_levels:    1..6
@@ -21,7 +21,6 @@ kramdown:
 
 kramdown:
    input: GFM
-
 
 permalink: /:year/:month/:day/:title/
 
