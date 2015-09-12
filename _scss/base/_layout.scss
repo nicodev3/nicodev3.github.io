@@ -91,11 +91,6 @@
     @include susy-breakpoint($xlarge) {
         @include container(58%);
     }
-
-    h2 {
-        width: 150px;
-        margin: 0 auto;
-    }
 }
 
 .compe, .tools, .presta {
@@ -103,10 +98,9 @@
 }
 
 %h2 {
-    border-bottom: 1px dashed #f2f3f4;
-    text-align: center;
+    border-bottom: 1px dashed #882B5A;
     color: $vert;
-    line-height: em(44px);
+    width: 80%;
 }
 
 .presta h2, .compe h2, .tools h2 {

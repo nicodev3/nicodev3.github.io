@@ -3,6 +3,7 @@
     list-style: none;
     color: darken($rose, 20);
     font-weight: 300;
+    padding-left : 0;
 }
 .competences {
     @extend %list-style;
