@@ -7,9 +7,7 @@ comments: true
 published: true
 excerpt: Dans ce tutoriel, vous apprendrez comment mettre en place rapidement un site ou un blog avec le générateur de sites statiques Jekyll et l'héberger gratuitement sur Github.
 ---
-# Hébergement et nom de domaine
-
-## Quelles différences, comment choisir
+# Hébergement et nom de domaine : comment choisir
 
 Mes clients, très souvent psychologues, et néophytes dans le monde informatique, me demandent souvent quelles différences il y a entre **nom de domaine** et **hébergement**.
 
@@ -31,10 +29,10 @@ Voici quelques éléments pour comprendre et faire au mieux votre choix.
 
 </div>
 
-### Le nom de domaine
+## Le nom de domaine
 {: #ndd}
 
-#### C'est quoi un nom de domaine ?
+### C'est quoi un nom de domaine ?
 {: #ckoi}
 
 Permettez moi une analogie. Vous habitez certainement dans une maison ou un appartement. Afin de vous joindre, par courrier ou par téléphone, vous disposez d'une adresse et d'un numéro de téléphone, qui sont bien entendu uniques.
@@ -57,7 +55,7 @@ En réalité les choses sont un peu plus complexes. Retenez simplement que l'adr
 {: .ndd-article}
 91.198.174.192
 
-#### Quel nom de domaine choisir ?
+### Quel nom de domaine choisir ?
 
 Sachez avant tout qu'il importe peu que vous choisissiez un nom de domaine en `.com` ou `.fr`. Il existe en réalité des centaines d'extensions possibles, et il en sort tous les jours ! D'une façon générale, je recommande le `.fr` dans la mesure ou il est réservé aux entreprises résidant en France. Pourquoi s'en priver..
 
@@ -67,7 +65,7 @@ Par exemple, si vous êtes psychologue à Saint-Malo, il serait plus judicieux d
 
 [^1]: SEO signifie Search Engine Optimization, il s'agit simplement du référencement naturel de votre site dans les moteurs de recherche, Google, Bing et les autres...
 
-#### Ou acheter son nom de domaine ?
+### Ou acheter son nom de domaine ?
 {: #kelnom}
 
 Il existe de très nombreux bureaux d'enregistrement de nom de domaine. Ces *registrars* ou *registraires* en français sont des revendeurs de noms de domaine. Les plus connus sont [gandi](https://www.gandi.net/?lang=fr), ou encore [OVH](https://www.ovh.com/fr/). Je recommande toutefois d'acheter le nom de domaine chez l'hébergeur ou vous aller déposer le code de votre site.
@@ -77,12 +75,12 @@ Il existe de très nombreux bureaux d'enregistrement de nom de domaine. Ces *reg
 
 Pour mes clients, je fais souvent appel à [Planet Hoster](https://www.planethoster.net/fr/), qui est un excellent hébergeur.
 
-### L'hébergement
+## L'hébergement
 {: #heberg}
 
 Nous avons vu que le nom de domaine correspond à l'adresse de votre site. Pour reprendre la métaphore de la maison, si vous possédez une adresse sans maison, c'est plutôt ennuyeux..
 
-#### Pourquoi un hébergeur ?
+### Pourquoi un hébergeur ?
 {: #pkoihebergeur}
 
 Un site internet, ce n'est pas un simple assemblage d'images et de texte, comme on l'imagine parfois. Ce qui produit les lignes que vous êtes entrain de lire, c'est du code `HTML`[^2]. Les animations sont faites avec du code `javaScript` et l'agencement visuel de la page par du code `CSS`[^3].
@@ -99,15 +97,21 @@ Si vous êtes curieux(se), vous pouvez voir ce code en effectuant un clic droit 
 
 Inutile de retenir tout cela. Ce que vous devez savoir c'est que ce code doit exister sur un ordinateur disant, le serveur, qui réside chez l'hébergeur.
 
-#### Quel type d'hébergement choisir ?
+### Quel type d'hébergement choisir ?
 {: #kelhebergement}
 
 Il existe plusieurs formules d'hébergement pour un site Web. Pour faire simple, l'hébergement mutualisé est la meilleure solution pour des sites Web dits *vitrine*. Si vous n'envisagez pas un site complexe ou visité par des millions d'internautes par jour, cette solution est amplement suffisante et la moins onéreuse.
 
-#### Quel hébergeur choisir ?
+### Quel hébergeur choisir ?
 {: #kelhebergeurchoisir}
 
 La encore, il y a pléthore d'hébergeurs sur le marché. Le choix vous appartient ! Néanmoins je recommande un hébergeur avec un service d'infogérance compris dans son offre, afin de ne pas avoir de mauvaise surprise en cas de panne. La sécurité de votre site est également un élément à ne pas négliger.
+
+## Conclusion
+
+Pour conclure, vous l'avez compris je l'espère, hébergement et nom de domaine sont deux choses bien distinctes et en réalité très simples. Il ne faut juste pas confondre corps et identité, même si l'un ne va pas sans l'autre.. Mes collègues psychologues comprendront sans doute l'allusion&nbsp;!
+
+N'hésitez pas à poster vos commentaires et questions, j'améliorerai l'article en conséquence.
 
 
 
