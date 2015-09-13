@@ -130,6 +130,28 @@ $pos-left : 34px;
 }
 
 #Calque_1 {
-    border: 1px solid RGBA(230, 62, 142, .5);
+    border: 1px solid RGBA(230, 62, 142, .2);
     border-radius: 5px;
+    box-shadow: 2px 2px 4px 1px #9b9b9b;
+    margin-top: 1em
+}
+
+#animation-play {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    text-align: center;
+    background: $rose;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    height: 25px;
+    line-height: 28px;
+    cursor: pointer;
+    transition: opacity .3s ease;
+
+    &:hover {
+        text-decoration: none;
+        opacity: .6;
+    }
 }

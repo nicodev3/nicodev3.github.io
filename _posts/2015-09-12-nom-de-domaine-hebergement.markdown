@@ -182,6 +182,9 @@ Là encore, il y a pléthore d'hébergeurs sur le marché. Le choix vous apparti
 </svg>
 
 
+<a id="animation-play">Rejouer l'animation</a>
+
+
 ## Conclusion
 
 Pour conclure, vous l'avez compris je l'espère, hébergement et nom de domaine sont deux choses bien distinctes et en réalité très simples. Il ne faut juste pas confondre corps et identité, même si l'un ne va pas sans l'autre.. Mes collègues psychologues comprendront sans doute l'allusion&nbsp;!
