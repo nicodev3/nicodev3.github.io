@@ -11,7 +11,7 @@ excerpt: Dans ce tutoriel, vous apprendrez comment mettre en place rapidement un
 
 Mes clients, très souvent psychologues, et néophytes dans le monde informatique, me demandent souvent quelles différences il y a entre **nom de domaine** et **hébergement**.
 
-**Comment choisir mon nom de domaine**? **quel hébergeur choisir**? Il n'est pas facile de se repérer sans avoir compris à minima le fonctionnement d'Internet.
+**Comment choisir mon nom de domaine ?** **Quel hébergeur choisir ?** Il n'est pas facile de se repérer sans avoir compris à minima le fonctionnement d'Internet.
 
 Voici quelques éléments pour comprendre et faire au mieux votre choix.
 

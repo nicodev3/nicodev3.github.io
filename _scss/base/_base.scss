@@ -2,97 +2,110 @@
 // Styles basiques
 // ==========================================================================
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $lh-p;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $lh-p;
+
+  -webkit-text-size-adjust: 100%;
 }
 
-p {
-    line-height: $lh-p;
-    font-family: "adelle";
+p ,
+.post-link {
+  font-family: $texte;
+  line-height: $lh-p;
+
+  font-variant-ligatures: discretionary-ligatures;
+  font-feature-settings: 'liga';
 }
 
 // ==========================================================================
 // Headings
 // ==========================================================================
-h1, h2, h3, h4, h5, h6 {
-    font-family: "adelle-sans";
+h1 ,
+h2 ,
+h3 ,
+h4 ,
+h5 ,
+h6 {
+  font-family: 'adelle-sans',sans-serif;
+  font-style: normal;
+  font-weight: 300;
+
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: 'liga','clig';
 }
 
 h1 {
-    font-size: $fs-h1--phone;
-    line-height: $lh-h1--phone;
-    letter-spacing: -1px;
-    color: $rose;
-    @include susy-breakpoint($small) {
-        font-size: $fs-h1--desktop;
-        line-height: $lh-h1--desktop;
-    }
+  @include susy-breakpoint($small) {
+    font-size: $fs-h1--desktop;
+    line-height: $lh-h1--desktop;
+  }
+  color: $rose;
+  font-size: $fs-h1--phone;
+  letter-spacing: -1px;
+  line-height: $lh-h1--phone;
 }
 
 h2 {
-    margin-top: $base-margin;
-    margin-bottom: $base-margin;
-    line-height: $lh-h2--phone;
-    font-size: $fs-h2--phone;
-    color: mix(#fff, $bleu, 15%);
-    @include susy-breakpoint($small) {
-        font-size: $fs-h2--desktop;
-    }
+  @include susy-breakpoint($small) {
+    font-size: $fs-h2--desktop;
+  }
+  margin-top: $base-margin;
+  margin-bottom: $base-margin;
+  color: mix(#fff, $bleu, 15%);
+  font-size: $fs-h2--phone;
+  line-height: $lh-h2--phone;
 }
 
 h3 {
-    font-size: $fs-h3--phone;
-    line-height: $lh-h3--phone;
-    color: mix(#fff, $bleu, 30%);
-    @include susy-breakpoint($small) {
-        font-size: $fs-h3--desktop;
-        line-height: $lh-h3--desktop;
-
-    }
+  @include susy-breakpoint($small) {
+    font-size: $fs-h3--desktop;
+    line-height: $lh-h3--desktop;
+  }
+  color: mix(#fff, $bleu, 30%);
+  font-size: $fs-h3--phone;
+  line-height: $lh-h3--phone;
 }
 
 h4 {
-    font-size: $fs-h4--phone;
-    line-height: $lh-h4--phone;
-    color: mix(#fff, $bleu, 40%);
-    @include susy-breakpoint($small) {
-        font-size: $fs-h4--desktop;
-        line-height: $lh-h4--desktop;
-
-    }
+  @include susy-breakpoint($small) {
+    font-size: $fs-h4--desktop;
+    line-height: $lh-h4--desktop;
+  }
+  color: mix(#fff, $bleu, 40%);
+  font-size: $fs-h4--phone;
+  line-height: $lh-h4--phone;
 }
 
 // ==========================================================================
 // Images
 // ==========================================================================
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /**
  * Figures
  */
 figure > img {
-    display: block;
+  display: block;
 }
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
-    text-decoration: none;
-    font-family: "adelle";
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
+  color: $brand-color;
+  font-family: $texte;
+  text-decoration: none;
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
 }
 
 // ==========================================================================
@@ -100,34 +113,39 @@ a {
 // ==========================================================================
 
 ul > li {
-    font-family: "adelle";
+  font-family: $texte;
+}
+
+strong {
+  font-style: normal;
+  font-weight: 700;
 }
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-    > :last-child {
-        margin-bottom: 0;
-    }
+  border-left: 4px solid $grey-color-light;
+  color: $grey-color;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: -1px;
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 /**
  * Icons
  */
 .icon {
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-        path {
-            fill: $grey-color;
-        }
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    path {
+      fill: $grey-color;
     }
+  }
 }

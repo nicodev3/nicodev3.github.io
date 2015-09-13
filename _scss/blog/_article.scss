@@ -21,6 +21,24 @@
         }
     }
 }
+.blog-list-h2 {
+    font-size: 1.5em;
+}
+
+// titre post
+.post-list h2 {
+    font-size: 1.5em;
+    line-height: 16px;
+    padding-top: .3em;
+    padding-bottom: 1em;
+}
+
+// dates
+.post-meta {
+    font-variant-numeric: oldstyle-nums;
+    font-feature-settings: "onum";
+}
+
 .footnotes {
 	border-top: 1px solid black;
     margin-top: 5em;
