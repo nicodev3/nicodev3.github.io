@@ -105,7 +105,7 @@ Il existe plusieurs formules d'hébergement pour un site Web. Pour faire simple,
 ### Quel hébergeur choisir ?
 {: #kelhebergeurchoisir}
 
-La encore, il y a pléthore d'hébergeurs sur le marché. Le choix vous appartient ! Néanmoins je recommande un hébergeur avec un service d'infogérance compris dans son offre, afin de ne pas avoir de mauvaise surprise en cas de panne. La sécurité de votre site est également un élément à ne pas négliger.
+Là encore, il y a pléthore d'hébergeurs sur le marché. Le choix vous appartient ! Néanmoins je recommande un hébergeur avec un service d'infogérance compris dans son offre, afin de ne pas avoir de mauvaise surprise en cas de panne. La sécurité de votre site est également un élément à ne pas négliger.
 
 ## Conclusion
 
