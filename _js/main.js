@@ -18,6 +18,9 @@
         bat2 = $('#battery-2'),
         bat3 = $('#battery-3'),
         bat4 = $('#battery-4'),
+        html = $('#html'),
+        css = $('#css'),
+        js = $('#js'),
         tlAnim,
         tlBattery,
         tlDomainName,
@@ -69,8 +72,14 @@
         }, ease: Linear.easeNone
     });
 
-    tlCaddie = new TimelineMax({repeat:-1, repeatDelay: 4, yoyo: true, delay: 4});
+    tlCaddie = new TimelineMax({repeat:-1, repeatDelay: 4, yoyo: false, delay: 4});
 
     tlCaddie
-        .fromTo($('.caddie'), 4, {x: 0}, {x: 800, ease: Back.easeOut.config(1.7), y: 0})
+        .fromTo($('.caddie'), 4, {x: 0}, {x: 800, ease: Back.easeOut.config(1.7), y: 0});
+
+    tlServeur = new TimelineMax({repeat: -1, repeatDelay: 1, yoyo: false, delay: 0});
+    tlServeur
+        .fromTo([html, css, js], 4, {x: 0, y: 0}, {x: 260, y: -120, ease: Power4.easeInOut})
+        .fromTo([html, css, js], 4, {x: 260, y: -120}, {x: 520, y: 0, ease: Power4.easeInOut})
+
 })(jQuery);
