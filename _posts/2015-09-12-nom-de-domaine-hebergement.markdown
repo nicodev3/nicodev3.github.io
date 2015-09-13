@@ -95,7 +95,9 @@ Si vous êtes curieux(se), vous pouvez voir ce code en effectuant un clic droit 
 ![code source](http://d.pr/i/AP8j+)
 {: #tuto-gif}
 
-Inutile de retenir tout cela. Ce que vous devez savoir c'est que ce code doit être stocké sur un ordinateur distant, le serveur, qui réside chez l'hébergeur. Ansi, quand un inernaute saisit l'adresse de votre site dans son navigateur, son ordinateur peut lire les fichiers qui s'y trouvent et lui restituer le tout sous forme lisible et dans le meilleur des cas agréable à lire.
+Inutile de retenir tout cela. Ce que vous devez savoir c'est que ce code doit être stocké sur un ordinateur distant, le serveur, qui réside chez l'hébergeur[^4]. Ansi, quand un inernaute saisit l'adresse de votre site dans son navigateur, son ordinateur peut lire les fichiers qui s'y trouvent et lui restituer le tout sous forme lisible et dans le meilleur des cas agréable à lire.
+
+[^4]: En réalité vous pourriez posséder votre propre serveur et héberger tout cela chez vous, mais la maintenance d'un serveur est une chose très complexe ! 
 
 ### Quel type d'hébergement choisir ?
 {: #kelhebergement}
