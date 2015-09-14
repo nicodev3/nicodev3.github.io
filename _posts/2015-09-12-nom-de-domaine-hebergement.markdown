@@ -58,7 +58,7 @@ En réalité, les choses sont un peu plus complexes. Retenez simplement que l'ad
 
 ### Quel nom de domaine choisir ?
 
-Sachez avant tout qu'il importe peu que vous choisissiez un nom de domaine en `.com` ou `.fr`. Il existe en réalité des centaines d'extensions possibles, et il en sort tous les jours ! D'une façon générale, je recommande le `.fr`.
+Sachez avant tout qu'il importe peu que vous choisissiez un nom de domaine en `.com` ou `.fr`. Il existe en réalité des centaines d'extensions possibles, et il en sort tous les jours ! D'une façon générale, je recommande le `.fr` qui me semble plus pertinent si votre activité est en France.
 
 En ce qui concerne le nom proprement dit, il est conseillé pour des questions de `SEO`[^1] de choisir un nom de domaine avec des termes sémantiquement corrects.
 
