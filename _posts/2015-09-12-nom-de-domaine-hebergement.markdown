@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Choisir son nom de domaine et son hébergeur
-date: 2015-09-12
-categories: site internet, hébergement
+date: {}
+categories: "site internet, hébergement"
 comments: true
 published: true
-excerpt: Dans ce tutoriel, vous apprendrez comment mettre en place rapidement un site ou un blog avec le générateur de sites statiques Jekyll et l'héberger gratuitement sur Github.
+excerpt: "Dans ce tutoriel, vous apprendrez comment mettre en place rapidement un site ou un blog avec le générateur de sites statiques Jekyll et l'héberger gratuitement sur Github."
 ---
+
 # Hébergement et nom de domaine : comment choisir
 
 Certains de mes clients, très souvent psychologues, et la plupart du temps néophytes dans le monde informatique, me demandent souvent quelles différences il y a entre **nom de domaine** et **hébergement**.
@@ -57,7 +58,7 @@ En réalité, les choses sont un peu plus complexes. Retenez simplement que l'ad
 
 ### Quel nom de domaine choisir ?
 
-Sachez avant tout qu'il importe peu que vous choisissiez un nom de domaine en `.com` ou `.fr`. Il existe en réalité des centaines d'extensions possibles, et il en sort tous les jours ! D'une façon générale, je recommande le `.fr` dans la mesure ou il est réservé aux entreprises résidant en France. Pourquoi s'en priver...
+Sachez avant tout qu'il importe peu que vous choisissiez un nom de domaine en `.com` ou `.fr`. Il existe en réalité des centaines d'extensions possibles, et il en sort tous les jours ! D'une façon générale, je recommande le `.fr`.
 
 En ce qui concerne le nom proprement dit, il est conseillé pour des questions de `SEO`[^1] de choisir un nom de domaine avec des termes sémantiquement corrects.
 
@@ -190,8 +191,3 @@ Là encore, il y a pléthore d'hébergeurs sur le marché. Le choix vous apparti
 Pour conclure, vous l'avez compris je l'espère, hébergement et nom de domaine sont deux choses bien distinctes et en réalité très simples. Il ne faut juste pas confondre corps et identité, même si l'un ne va pas sans l'autre.. Mes collègues psychologues comprendront sans doute l'allusion&nbsp;!
 
 N'hésitez pas à poster vos commentaires et questions, j'améliorerai l'article en conséquence.
-
-
-
-
-
