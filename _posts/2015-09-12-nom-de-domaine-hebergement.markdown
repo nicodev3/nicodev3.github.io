@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Choisir son nom de domaine et son hébergeur
-date: {}
+date: 2015-09-12
 categories: "site internet, hébergement"
 comments: true
 published: true
