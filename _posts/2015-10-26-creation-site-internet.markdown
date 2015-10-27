@@ -101,6 +101,7 @@ JavaScript. Le graal de tout développeur *front-end*[^1] tant il peut s'avérer
 <p data-height="422" data-theme-id="5075" data-slug-hash="OyZVPe" data-default-tab="result" data-user="ndevaux" class='codepen'>See the Pen <a href='http://codepen.io/ndevaux/pen/OyZVPe/'>Le langage HTML</a> by DEVAUX (<a href='http://codepen.io/ndevaux'>@ndevaux</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
+
 [^1]: le dévoloppeur dit *front-end* est celui qui développe la partie visible du site internet. Le développeur *back-end* développe la partie serveur, souvent à l'aide du langage PHP. C'est grâce au *back-end* que des systèmes comme WordPress sont possibles.
 
 
