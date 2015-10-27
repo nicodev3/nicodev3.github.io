@@ -164,7 +164,7 @@ L'accessibilité est possible pour les personnes en situation de handicap. Les n
 
 Dans ce bref article nous avons pu voir qu'un site internet n'est pas une simple juxtaposition d'éléments textuels et graphiques comme on pourrait en faire la composition avec un logiciel de bureau. Au delà des apparences, se cache un monde complexe fait de code informatique, qui permet de mettre en forme un contenu qui se doit d'être le plus pertinent possible au regard de la requête de l'internaute, quel qu'il soit.
 
-Développer des sites internet peut être un loisir. Internet est un mode de liberté - bien illusoire, mais cela ferait l'objet d'une autre publication - et tout un chacun est libre de mettre en ligne des contenus, pour partager, ou simplement s'amuser. Mais dans le cas d'une utilisation professionnelle, comme c'est le cas pour la plupart de mes clients, il est important d'être averti de la somme de travail qui co-existe avec la simple apparence visuelle d'un site.
+Développer des sites internet peut être un loisir. Internet est un espace de liberté - bien illusoire, mais cela ferait l'objet d'une autre publication - et tout un chacun est libre de mettre en ligne des contenus, pour partager, ou simplement s'amuser. Mais dans le cas d'une utilisation professionnelle, comme c'est le cas pour la plupart de mes clients, il est important d'être averti de la somme de travail qui co-existe avec la simple apparence visuelle d'un site.
 
 L'essentiel est donc bien invisible pour les yeux...
 
