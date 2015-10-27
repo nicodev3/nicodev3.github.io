@@ -135,3 +135,12 @@
         @include span(4);
     }
 }
+
+.video-center{
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+    border: 10px solid RGB(230, 62, 142);
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
