@@ -58,6 +58,9 @@ h2 {
   color: mix(#fff, $bleu, 15%);
   font-size: $fs-h2--phone;
   line-height: $lh-h2--phone;
+  margin-left: gutter();
+  padding-left: gutter();
+  box-shadow:  -2px 0px 0px RGBA(230, 62, 142, .8), -6px 0px 0px rgba(255,255,255,1.00), -8px 0px 0px RGBA(230, 62, 142, .8);
 }
 
 h3 {
@@ -68,6 +71,13 @@ h3 {
   color: mix(#fff, $bleu, 30%);
   font-size: $fs-h3--phone;
   line-height: $lh-h3--phone;
+  margin-left: gutter(2);
+  padding-left: gutter();
+  box-shadow:  -2px 0px 0px RGBA(230, 62, 142, .6),
+   -4px 0px 0px rgba(255,255,255,1.00),
+    -6px 0px 0px RGBA(230, 62, 142, .6),
+    -8px 0px 0px rgba(255,255,255,1.00),
+    -10px 0px 0px RGBA(230, 62, 142, .6);
 }
 
 h4 {

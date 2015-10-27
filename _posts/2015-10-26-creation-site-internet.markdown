@@ -24,17 +24,18 @@ Nous partirons de la surface pour aller vers les profondeurs. Mais je suis certa
 {: .plan-article}
 <div>
 #### Plan de l'article
-- [Le navigateur : fenêtre sur le Web](#navigateur)
-    - [Les différents navigateurs](#navigateurs)
-    - [Un interprète pour le code](#interprete)
-- [Du code à la page, les langages du Web](#langages)
-    - [HTML: des balises pour structurer le Web](#html)
-    - [CSS : mettre en forme le HTML](#css)
-    - [Javascript : donner vie au contenu](#js)
-- [Du contenu, du contenu, encore du contenu !](#contenu)
-	- [Structurer les données](#structurer)
-	- [l'UX, une donnée à ne pas négliger](#ux)
-	- [L'accessibilité, une nécessité, un challenge](#accessibilité)
+1. [Le navigateur : fenêtre sur le Web](#navigateur)
+    1. [Les différents navigateurs](#navigateurs)
+    2. [Un interprète pour le code](#interprete)
+2. [Du code à la page, les langages du Web](#langages)
+    1. [HTML: des balises pour structurer le Web](#html)
+    2. [CSS : mettre en forme le HTML](#css)
+    3. [Javascript : donner vie au contenu](#js)
+3. [Du contenu, du contenu, encore du contenu !](#contenu)
+	1. [Structurer les données](#structurer)
+	2. [l'UX, une donnée à ne pas négliger](#ux)
+	3. [L'accessibilité, une nécessité, un challenge](#accessibilité)
+4. [Conclusion](#conclusion)
 
 </div>
 
@@ -159,6 +160,7 @@ L'expérience de l'Internet est le plus souvent une expérience visuelle. Vous c
 L'accessibilité est possible pour les personnes en situation de handicap. Les normes [ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA), pour Accessible Rich Internet Applications, permettent par exemple à une personne aveugle de naviguer sur votre site grâce à des balises HTML spécifiques. Voulons-nous créer un Internet inaccessible aux personnes en situation de handicap ? Non.
 
 ## Conclusion
+{: #conclusion}
 
 Dans ce bref article nous avons pu voir qu'un site internet n'est pas une simple juxtaposition d'éléments textuels et graphiques comme on pourrait en faire la composition avec un logiciel de bureau. Au delà des apparences, se cache un monde complexe fait de code informatique, qui permet de mettre en forme un contenu qui se doit d'être le plus pertinent possible au regard de la requête de l'internaute, quel qu'il soit.
 

@@ -82,7 +82,15 @@
 }
 
 .blog-image {
-    width: 100px;
+    width: 80px;
     display: block;
     margin: 0 auto;
+}
+
+.plan-article ol {
+    padding-bottom: 1em;
+}
+
+.plan-article ol ol {
+    padding-top: .5em;
 }
