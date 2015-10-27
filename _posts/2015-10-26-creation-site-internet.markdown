@@ -28,9 +28,9 @@ Nous partirons de la surface pour aller vers les profondeurs. Mais je suis certa
     - [Les différents navigateurs](#navigateurs)
     - [Un interprête pour le code](#interprete)
 - [Du code à la page, les langages du Web](#langages)
-    - [Pourquoi un hébergeur](#pkoihebergeur)
-    - [Quel type d\'hébergement choisir](#kelhebergement)
-    - [Quel hébergeur choisir](#kelhebergeurchoisir)
+    - [HTML: des balises pour strucurer le Web](#html)
+    - [CSS : mettre en forme le HTML](#css)
+    - [Javascript : donner vie au contenu](#js)
 
 </div>
 
@@ -70,6 +70,7 @@ Ainsi, HTML, CSS, PHP, Javascript (entre autres), sont les langages que comprend
 Le navigateur, votre interpête, a besoin d'un langage qu'il comprend afin de vous restituer visuellement les pages que vous souhaitez voir. Nous allons avancer pas à pas. Le premier langage permet au navigateur de vous restituer du contenu textuel, ce que vous lisez en ce moment-même ! Ce langage est le `HTML` (Hypertext Markup Language ou Langage de marquage de données en français).
 
 ### HTML : des balises pour stucturer le Web
+{: #navigateur}
 
 Le langage HTML est relativement simple à comprendre et à apprendre. Il structure les données selon un code bien précis de balises. Dans la courte vidéo ci-dessous, vous pourrez voir un apperçu du fonctionnement du langage HTML.
 
@@ -82,6 +83,7 @@ Comme vous avez pu vous en appercevoir si vous avez visionné la vidéo, le rés
 Si vous avez connu les débuts d'Internet, cela doit vous rappeler des souvenirs ! Pour ajouter une mise en forme au contenu HTML brut, nous avons besoin d'un autre langage : le CSS.
 
 ### CSS : mettre en forme le HTML
+{: #css}
 
 CSS (Cascading Style Sheet, ou feuille de styles en cascade) est un langage qui permet la mise en forme du contenu généré par le HTML. Si nous reprenons notre exemple de la courte vidéo ci-dessus, nous pouvons ajouter quelques changements visuels.
 
@@ -95,14 +97,17 @@ Ce travail de mise en forme prend du temps et il existe plus d'une centaine d'at
 Ce n'est pas tout, il est également possible d'ajouter des animations sur un site internet. C'est possible avec le langage CSS, mais les animations sont surtout réalisées avec un langage encore plus complexe : le JavaScript.
 
 ### Javascript : donner vie au contenu
+{: #js}
 
-JavaScript. Le graal de tout développeur *front-end*[^1] tant il peut s'avérer complexe, mais également riche de fonctionnalités. Ce langage permet de manipuler les éléments HTML afin d'ajouter de l'interactivité aux pages Internet.
+JavaScript. Le graal de tout développeur *front-end*[^1] tant il peut s'avérer complexe, mais également riche de fonctionnalités. Ce langage permet de manipuler les éléments HTML afin d'ajouter de l'interactivité aux pages Internet. Sur la simple animation ci-dessous on peut voir la puissance de JavaScript.
 
 <p data-height="422" data-theme-id="5075" data-slug-hash="OyZVPe" data-default-tab="result" data-user="ndevaux" class='codepen'>See the Pen <a href='http://codepen.io/ndevaux/pen/OyZVPe/'>Le langage HTML</a> by DEVAUX (<a href='http://codepen.io/ndevaux'>@ndevaux</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
+Maintenant que vous êtes plus familliers avec le code, vous pouvez cliquer sur les onglets de la démonstration ci-dessus pour voir le code `html`, `css` ou `JavaScript` que j'ai utilisé pour cet exemple. Vous pouvez même l'éditer si vous voulez vous amuser !
 
-[^1]: le dévoloppeur dit *front-end* est celui qui développe la partie visible du site internet. Le développeur *back-end* développe la partie serveur, souvent à l'aide du langage PHP. C'est grâce au *back-end* que des systèmes comme WordPress sont possibles.
+
+[^1]: le développeur dit *front-end* est celui qui développe la partie visible du site internet. Le développeur *back-end* développe la partie serveur, souvent à l'aide du langage PHP. C'est grâce au *back-end* que des systèmes comme WordPress sont possibles.
 
 
 
