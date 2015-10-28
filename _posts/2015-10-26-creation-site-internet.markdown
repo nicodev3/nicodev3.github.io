@@ -155,7 +155,7 @@ L'expérience utilisateur ne doit pas être faussée par des contenus difficilem
 
 L'expérience de l'Internet est le plus souvent une expérience visuelle. Vous consultez un site, prenez de l'information. Avez-vous pensé aux personnes privées de la vue, ou encore à ceux qui à en raison d'une tétraplégie ne peuvent manipuler une souris ou un clavier ?
 
-> " Voulons-nous créer un Internet inaccessibles aux personnes en situation de handicap ? Non. "
+> " Voulons-nous créer un Internet inaccessible aux personnes en situation de handicap ? Non. "
 
 L'accessibilité est possible pour les personnes en situation de handicap. Les normes [ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA), pour Accessible Rich Internet Applications, permettent par exemple à une personne aveugle de naviguer sur votre site grâce à des balises HTML spécifiques. Voulons-nous créer un Internet inaccessible aux personnes en situation de handicap ? Non.
 
