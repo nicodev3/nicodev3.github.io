@@ -1,0 +1,78 @@
+---
+layout: default
+title: Modèles de site
+h1: Modèles de site à choisir
+permalink: /modeles-de-sites/
+---
+<div class="conteneur-haut">
+	<article>
+		<h2>Modèles de site</h2>
+		<div class="c-model c-model--left c-model-left--site">
+			<h3>Classique</h3>
+			<div class="model">
+				<div class="model__header">
+					<div class="model__header__logo opacity"></div>
+					<ul class="model__header__nav opacity">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="model__main">
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+					<div class="model__main__text opacity"></div>
+				</div>
+				<div class="model__sidebar">
+					<div class="model__sidebar__box opacity"></div>
+					<div class="model__sidebar__box opacity"></div>
+					<div class="model__sidebar__box opacity"></div>
+				</div>
+				<div class="model__footer"></div>
+			</div>
+			<a class="choix-modele" href="#">Choisir</a>
+		</div>
+
+		<div class="c-model c-model--middle modele--site">
+			<h3>Moderne</h3>
+			<span class="simple-tooltip" title="First tooltip">I have a tooltip</span>
+
+		</div>
+
+		<div class="c-model c-model--right modele--site">
+			<h3>Moderne</h3>
+
+		</div>
+
+	</article>
+	<script type="text/javascript">
+		$(document).ready(onReady);
+		function onReady() {
+			var cssHeader = $('.model__header');
+			var cssMain = $('.model__main');
+			var cssSidebar = $('.model__sidebar');
+			var cssFooter = $('.model__footer');
+			var content = $('.opacity');
+			var tlLayout = new TimelineMax({
+				repeat: 0,
+				repeatDelay: 10
+			});
+			tlLayout
+					.to(cssHeader, 2, {x: 0, ease: Expo.easeOut})
+					.to(cssSidebar, 2, {y: 0, ease: Expo.easeOut}, '-=1')
+					.to(cssMain, 2, {x: 0, ease: Expo.easeOut}, '-=1')
+					.to(cssFooter, 2, {y: 0, ease: Expo.easeOut}, '-=1')
+					.to(content, 3, {opacity: 1, ease: Power3.easeOut}, '+=1');
+
+			Tipped.create('.simple-tooltip', 'Some tooltip text');
+		}
+	</script>
+</div>

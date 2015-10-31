@@ -5,6 +5,207 @@
 }
 
 .anim-path {
-	
-	stroke-width: 2px;
+    stroke-width : 2px;
+}
+
+/* =====================================
+  modeles
+===================================== */
+.c-model {
+    position : relative;
+    h3 {
+        text-align : center;
+    }
+    &--left {
+        @include span(4);
+    }
+    &--middle {
+        @include span(4);
+    }
+    &--right {
+        @include span(4 last);
+    }
+}
+
+.model {
+    position   : relative;
+    width      : 330px;
+    height     : 330px;
+    background : #eef;
+    overflow   : hidden;
+}
+
+$css-model-border-color : #eee;
+
+.model__header,
+.model__header__nav,
+.model__header__logo,
+.model__main,
+.model__sidebar,
+.model__footer {
+    position : absolute;
+}
+
+.model__header,
+.model__header__logo,
+.model__main,
+.model__sidebar,
+.model__footer {
+    background : RGBA(84, 83, 77, .3);
+}
+
+.model__header__nav,
+.model__header__nav li,
+.model__header__logo,
+.model__sidebar__box {
+    background : RGBA(84, 83, 77, .2);
+}
+
+.model__header {
+    top           : 0;
+    right         : 0;
+    left          : 0;
+    width         : 100%;
+    height        : 15%;
+    transform     : translateX(-200em);
+    border-bottom : 1px solid $css-model-border-color;
+
+    &__logo {
+        top     : 5px;
+        left    : 5px;
+        width   : 40px;
+        height  : 40px;
+        z-index : 100;
+    }
+
+    &__nav {
+        display         : flex;
+        top             : 5px;
+        right           : 5px;
+        width           : 150px;
+        height          : 20px;
+        margin          : 0;
+        padding-right   : 5px;
+        padding-left    : 5px;
+        border-radius   : 3px;
+
+        flex-direction  : row;
+        justify-content : space-around;
+        align-items     : center;
+
+        li {
+            width           : 25px;
+            height          : 8px;
+
+            list-style-type : none;
+        }
+    }
+}
+
+.opacity {
+    opacity : 0;
+}
+
+.model__sidebar {
+    display         : flex;
+    top             : 15%;
+    right           : 0;
+    width           : 20%;
+    height          : 70%;
+    transform       : translateY(-200em);
+    border-bottom   : 1px solid $css-model-border-color;
+    border-left     : 1px solid $css-model-border-color;
+
+    flex-direction  : column;
+    justify-content : space-around;
+    align-items     : center;
+
+    &__box {
+        width  : 80%;
+        height : 22%;
+    }
+}
+
+.model__main {
+    top           : 15%;
+    width         : 80%;
+    height        : 70%;
+    transform     : translateX(100em);
+    border-bottom : 1px solid $css-model-border-color;
+    display        : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : center;
+    padding-top    : 2em;
+    padding-bottom : 2em;
+
+
+    &__text {
+        width: 60%;
+        height: 2px;
+        background: #8E8D94;
+    }
+}
+
+.model__footer {
+    bottom    : 0;
+    width     : 100%;
+    height    : 15%;
+    transform : translateY(100em);
+}
+
+.choix-modele {
+    display       : block;
+    width         : 150px;
+    height        : 50px;
+    margin        : gutter() auto;
+    transition    : background .3s ease;
+    border-radius : 5px;
+    background    : RGBA(238, 104, 164, .8);
+    color         : white;
+    font-family   : 'adelle-sans';
+    font-size     : 1.2em;
+    line-height   : 50px;
+    text-align    : center;
+    &:hover {
+        background      : RGBA(238, 104, 164, 1);
+        color           : #fff;
+        text-decoration : none;
+    }
+}
+
+.layout-parts {
+    fill              : RGBA(84, 83, 77, .4);
+    stroke            : #fff;
+    stroke-miterlimit : 10;
+}
+
+.st0 {
+    fill : RGBA(84, 83, 77, .2);
+}
+
+.st1 {
+    fill   : #fff;
+    stroke : #fff;
+}
+
+#header_1_ {
+    transform : translateX(-200em);
+    opacity   : 0;
+}
+
+#main_1_ {
+    transform : translateX(200em);
+}
+
+#aside_1_ {
+    transform : translateY(-200em);
+}
+
+#footer_1_ {
+    transform : translateY(50em);
+}
+
+#contenu {
+    opacity : 0;
 }

@@ -5,6 +5,8 @@ var uglify = require('gulp-uglify');
 var prefix = require('gulp-autoprefixer');
 var notify = require('gulp-notify');
 var gutil = require('gulp-util');
+var beep = require('beepbeep');
+var plumber = require('gulp-plumber');
 var cp = require('child_process');
 
 var messages = {
@@ -16,6 +18,13 @@ var messages = {
  */
 gulp.task('sass', function() {
     return gulp.src('./_scss/*.scss')
+        .pipe(plumber({
+            errorHandler: function(err) {
+                gutil.log(gutil.colors.red('erreur sass'));
+                beep();
+                this.emit('end');
+            }
+        }))
         .pipe(sass({
             includePaths: ['scss/**/index.scss', 'bower_components/susy/sass'],
             outputStyle: 'compressed',
@@ -42,7 +51,9 @@ gulp.task('js', function() {
         .pipe(uglify().on('error', gutil.log))
         .pipe(gulp.dest('_site/js'))
         .pipe(gulp.dest('./js')) // sinon jekyll build fait disparaitre !
-        .pipe(notify({ message: 'Scripts minifiés'}));
+        .pipe(notify({
+            message: 'Scripts minifiés'
+        }));
 });
 
 /**
@@ -82,7 +93,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 gulp.task('watch', function() {
     gulp.watch('_scss/**/*.scss', ['sass']);
     gulp.watch('_js/**/*.js', ['js']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_includes/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', 'modeles-de-sites/index.html', '_layouts/*.html', '_posts/*', '_includes/*.html'], ['jekyll-rebuild']);
 });
 
 /**

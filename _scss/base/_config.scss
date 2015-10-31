@@ -49,8 +49,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $susy: (
         columns: 12,
         gutters: 0.25,
-        math: fluid,
-        gutter-position: inside,
+        container : 1024px,
         debug: (
                 image: hide,
                 color: rgba(#bada56, .40),
@@ -58,6 +57,8 @@ $susy: (
                 toggle: top right,
         ),
 );
+
+@include border-box-sizing;
 
 // calcul des valeurs en em
 @function em($target, $context: 16px) {

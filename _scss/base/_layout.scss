@@ -1,8 +1,9 @@
+
+
 // ==========================================================================
 // Contenu vertical
 // ==========================================================================
 .bandeau {
-  @include container(100%);
   @include span(12);
   @include susy-breakpoint($small) {
     height: 6em;
@@ -23,10 +24,8 @@
 }
 
 .conteneur-haut {
-  @include break;
-  @include container(100%);
+  @include container();
   padding-bottom: 3em;
-  background: lighten(lightyellow, 5);
 }
 
 // ==========================================================================
@@ -34,15 +33,22 @@
 // ==========================================================================
 .content-left ,
 .content-right {
-  @include pad(2%);
-  padding-top: 4em;
-  padding-bottom: 4em;
+  min-height: 30em;
+  margin-top: gutter();
+  padding-top: gutter();
+  background: lighten(lightyellow, 5);
+  border: 1px solid #eee;
 }
 
 .content-left {
   @include susy-breakpoint($small) {
-    @include span(6);
-    @include push(1);
+    @include span(9);
+    @include pad(gutter());
+    display: flex;
+    overflow: auto;
+
+    flex-direction: column;
+    justify-content: center;
   }
 
   hyphens: auto;
@@ -50,8 +56,8 @@
 
 .content-right {
   @include susy-breakpoint($small) {
-    @include post(1);
     @include span(3 last);
+    @include pad(gutter());
   }
   h2 {
     margin-top: 0;
@@ -67,34 +73,29 @@
 
 .cv {
   /*background: lighten($rose-clair, 10);*/
-  @include break;
-  @include pad(2%);
+  @include full;
+
   @include susy-breakpoint($small) {
-    width: 100%;
+    background: lighten(lightyellow, 5);
     height: auto;
-    padding-top: 4em;
+    margin-top: gutter();
+    padding-top: 2em;
+    border: 1px solid #eee;
   }
-  @include susy-breakpoint($large) {
-    @include container(87%);
+
+  section {
+  
   }
-  @include susy-breakpoint($xlarge) {
-    @include container(58%);
-  }
-  width: em(315px);
-  margin: 0 auto;
   padding-bottom: 1em;
-  border-top: $rose-clair solid 1px;
 }
 
-.compe ,
-.tools ,
-.presta {
-  width: 95%;
-}
+
 
 %h2 {
   width: 80%;
   border-bottom: 1px dashed #882b5a;
+  margin: 1em auto;
+  text-align: center;
   color: $vert;
 }
 
@@ -129,7 +130,7 @@
     margin: 0 auto;
   }
   @include susy-breakpoint($medium) {
-    @include span(4);
+    @include span(4 last);
     clear: none;
   }
 }
@@ -141,4 +142,9 @@
   margin-top: 3em;
   margin-bottom: 3em;
   border: 10px solid RGB(230, 62, 142);
+}
+
+.codepen-modele {
+  min-width: 900px;
+  max-width: 50%;
 }
