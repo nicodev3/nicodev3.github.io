@@ -3,3 +3,5 @@ _site/*
 .idea
 node_modules
 _scss/.sass-cache
+nicodev.sublime-project
+nicodev.sublime-workspace
