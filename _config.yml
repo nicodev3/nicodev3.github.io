@@ -10,7 +10,7 @@ github_username:  nicodev3
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 kramdown:
   auto_ids:      false
   footnote_nr:   1
