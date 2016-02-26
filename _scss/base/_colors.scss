@@ -1,0 +1,97 @@
+/* maps to choose from
+  ============================= */
+
+$colors-nico :(
+        primary-color-dark : #512DAB,
+        primary-color : #673AB7,
+        primary-color-light : #D1C4E9,
+        primary-color-text : #fff,
+        accent-color : #FF4081,
+        primary-text-color : #212121,
+        secondary-text-color : #727272,
+        divider-color : #b6b6b6
+);
+
+/*$colors-nico : (
+        primary-color-dark:   #C2185B,
+        primary-color:        #E91E63,
+        primary-color-light:  #F8BBD0,
+        primary-color-text:   #FFFFFF,
+        accent-color:         #9E9E9E,
+        primary-text-color:   #212121,
+        secondary-text-color: #727272,
+        divider-color:        #B6B6B6
+);*/
+
+/*$colors-nico : (
+        primary-color-dark:   #0288D1,
+        primary-color:        #03A9F4,
+        primary-color-light:  #B3E5FC,
+        primary-color-text:   #FFFFFF,
+        accent-color:         #009688,
+        primary-text-color:   #212121,
+        secondary-text-color: #727272,
+        divider-color:        #B6B6B6
+);*/
+
+/* opacity map
+  ============================= */
+$nico-opacity :(
+        '.1': .1,
+        '.2': .2,
+        '.3': .3,
+        '.4': .4,
+        '.5': .5,
+        '.6': .6,
+        '.7': .7,
+        '.8': .8,
+        '.9': .9,
+);
+/* background: color-nico(color);
+  ============================= */
+@function color($key: 'cool') {
+  @return map-get($colors-nico, $key);
+}
+
+// variable qui découle de la fonction
+$color-dark-text :color('dark-text');
+$color-light-text :color('light-text');
+$color-background :color('background');
+$color-cool :color('cool');
+$color-nav :color('nav');
+$color-light :color('light');
+$color-button :color('button');
+
+/* color-darker() / color-lighter()
+  ============================= */
+@function color-darker($color-cool, $level: 0) {
+  $color-tint-percentage :10%;
+  $color-to-tint :color($color-cool);
+  $color-tint :#000;
+  @return mix($color-tint, $color-to-tint, $color-tint-percentage * $level);
+}
+
+@function color-lighter($color-cool, $level: 0) {
+  $color-tint-percentage :10%;
+  $color-to-tint :color($color-cool);
+  $color-tint :#fff;
+  @return mix($color-tint, $color-to-tint, $color-tint-percentage * $level);
+}
+
+/* color-opa(color, .x);
+  ============================= */
+@function color-opa($name: 'cool', $opacity: 0) {
+  $color :color($name);
+
+  // Get the named opacity level, if it exists
+  @if map_has_key($nico-opacity, $opacity) {
+    $opacity :map-get($nico-opacity, $opacity);
+  }
+
+  // Use rgba() to manipulate the color's alpha level
+  @return rgba($color, $opacity);
+}
+
+/* =====================================
+  end
+===================================== */

@@ -4,6 +4,7 @@ $base-font-family: Helvetica, Arial, sans-serif;
 // fonts
 $base-font-size: 16px;
 $texte: "warnock-pro";
+$sans-serif: "adelle-sans",sans-serif;
 // margin
 $base-margin: 1em;
 
@@ -49,7 +50,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $susy: (
         columns: 12,
         gutters: 0.25,
-        container : 1024px,
+        container : 1200px,
         debug: (
                 image: hide,
                 color: rgba(#bada56, .40),

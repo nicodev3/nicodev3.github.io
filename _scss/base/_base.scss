@@ -3,7 +3,7 @@
 // ==========================================================================
 body {
   background-color: $background-color;
-  color: $text-color;
+  color: color(primary-text-color);
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: 300;
@@ -55,7 +55,7 @@ h2 {
   }
   margin-top: $base-margin;
   margin-bottom: $base-margin;
-  color: mix(#fff, $bleu, 15%);
+  color: color(primary-color);
   font-size: $fs-h2--phone;
   line-height: $lh-h2--phone;
 }

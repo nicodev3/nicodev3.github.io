@@ -41,7 +41,7 @@ input:checked ~ .content {
     right: -15em;
     width: 15em;
     height: 200vh;
-    background: $rose-clair;
+
     border-top: 6px solid $vert;
     transition: right .3s ease;
 
@@ -50,14 +50,14 @@ input:checked ~ .content {
         height: auto;
         border-top: none;
         position: relative;
-        background: $bleu;
+  
         margin-top: em(18px);
     }
 }
 
 .navigation {
     @include susy-breakpoint($small) {
-        padding-top: 6px;
+        padding-top: 3px;
     }
 }
 

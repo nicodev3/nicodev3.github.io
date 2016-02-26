@@ -9,18 +9,21 @@
     height: 6em;
   }
   height: 7em;
-  background: url('/images/swirl_pattern.png');
-  opacity: .8;
+  background: url('/images/bg.png');
+  background-repeat: repeat;
   h1 {
-    @include push(1);
     @include susy-breakpoint($small) {
       font-size: $fs-h1--desktop;
       line-height: 1em;
     }
-    color: $rose;
+    color: color-darker(accent-color, 1);
     font-size: $fs-h1--phone;
     line-height: 1.1em;
   }
+}
+
+.bandeau-container {
+  @include container();
 }
 
 .conteneur-haut {
@@ -93,10 +96,10 @@
 
 %h2 {
   width: 80%;
-  border-bottom: 1px dashed #882b5a;
+  border-bottom: 1px dashed color(accent-color);
   margin: 1em auto;
   text-align: center;
-  color: $vert;
+  color: color(primary-color-dark);
 }
 
 .presta h2 ,
