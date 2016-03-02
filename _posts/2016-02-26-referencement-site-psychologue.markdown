@@ -42,7 +42,7 @@ Vous êtes-vous déjà posé cette question ? Nous savons tous ce **que nous att
 ### La mission de Google : satisfaire l'utilisateur
 {: #mission_google}
 
-Cela peut vous paraître évident, mais la mission première de Google est de satisfaire ses utilisateurs. Non pas par pure philanthropie - les enjeux financiers sont énormes - mais pour être le meilleur moteur de recherche !
+Cela peut vous paraître évident, mais la mission première de Google est de satisfaire ses utilisateurs. Non pas par pure philanthropie - les enjeux financiers sont énormes - mais pour être le meilleur moteur de recherche&nbsp;!
 
 Ainsi, si dans un restaurant vous commandez un plat, vous vous attendez à voir apparaître le plat que vous avez commandé, si possible dans des délais raisonnables. Vous attendez également que le plat que vous avez commandé vous soit servi chaud, avec des produits de qualité. Ainsi vous avez toutes les chances d'être satisfait et de revenir commander dans ce restaurant.
 
@@ -84,7 +84,7 @@ Mais comment Google juge-t-il la qualité d'un contenu ? Les *robots d'indexatio
 
 Ce petit gourmand aux doux noms de *Google Panda*, *Google Pinguin* - selon ses versions successives, raffole de certaines substances contenues dans le code de votre site.
 
-En particulier, il absorbe de façon préférentielle des *mots clé* qu'il va chercher dans des endroits spécifiques de votre site :
+En particulier, il absorbe de façon préférentielle des *mots clé* qu'il va chercher dans des endroits spécifiques de votre site&nbsp;:
 
 - La balise `<title>`
 - Les balises `<h1>` et `<h2>` qui sont des balises de titre.
