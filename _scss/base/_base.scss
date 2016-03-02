@@ -61,6 +61,16 @@ h2 {
 }
 
 .post-content h2 {
+  position: relative;
+  margin-top: 3em;
+  &:before {
+    position: absolute;
+    top: -1.5em;
+    left: 48%;
+    content: '\e906';
+    color: color(primary-color);
+    font-family: icomoon;
+  }
 }
 
 h3 {

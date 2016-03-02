@@ -19,15 +19,19 @@ excerpt: "Avoir un site internet, c'est bien. Avoir un site internet que peuvent
 - [Les ingrédients d'un bon référencement](#ingredients){: data-scroll=""}
   - [Le contenu textuel](#ingredient_texte){: data-scroll=""}
   - [La vitesse de chargement des pages](#ingredient_vitesse){: data-scroll=""}
-
+  - [La popularité](#ingredient_popularite){: data-scroll=""}
+- [Le *crawl* des robots d'indexation](#crawl_robots){: data-scroll=""}  
+  - [Ce que voient les robots](#robots_voient_true){: data-scroll=""}
+  - [Ce que ne voient pas les robots](#robots_voient_false){: data-scroll=""}
+- [Fournir du contenu adéquat et à jour](#fresh_content){: data-scroll=""}  
 
 </div>
 
 Pour comprendre les **bases du référencement naturel**[^1], il est nécessaire d'appréhender à minima le fonctionnement des moteurs de recherche. Nous prendrons comme exemple le moteur Google, qui, s'il n'est pas l'unique moteur existant, est suffisamment représentatif (de fait la part de marché de Google est écrasante par rapport à ses concurrents).
 
-[^1]: à ne pas confondre avec le référencement payant via les campagnes Google Adwords qui sont des annonces publicitaires dans les résultats de recherche.
+[^1]: A ne pas confondre avec le référencement payant via les campagnes Google Adwords qui sont des annonces publicitaires dans les résultats de recherche.
 
-## Mais que veulent les moteurs de recherche ?
+## Mais que veulent les moteurs de recherche&nbsp;?
 {: #que_veulent_les_moteurs}
 
 Vous êtes-vous déjà posé cette question ? Nous savons tous ce **que nous attendons** d'un moteur de recherche tel que Google, Bing, etc. Mais savez-vous ce que le moteur de recherche **attend de vous** ? Il est indispensable de connaître la raison d'être de Google pour mieux comprendre comment lui fournir **un contenu adéquat** (afin d'être bien référencé).
@@ -112,9 +116,16 @@ Le truc du pro : Pour avoir une idée de la vitesse de chargement des pages de v
 {: .hr-icon} 
 
 ### Les ingrédients : la popularité
+{: #ingredient_popularite}
+
+La popularité de votre site est un gage de sérieux pour Google. Toujours en vertu de sa *mission* qui consiste à servir à ses utilisateurs un contenu de qualité en rapport avec sa recherche, Google va orienter son classement en fonction de la popularité de votre site, dont les indicateurs sont :
 
 - Les liens internes entre parties de votre site.
 - Les liens externes en provenance de sites de qualité qui pointent vers votre site.
+
+Les premiers, **les liens entre les pages de votre site** sont surtout importants pour l'indexation de vos pages. En effet, comme nous le verrons dans le paragraphe suivant, les robots d'indexation parcourent en permanence le Web à la recherche de contenu. Les liens contenus dans vos pages lui permettent de visiter celles-ci fréquemment.
+
+Les seconds, **les liens pointant vers votre site**, sont les plus importants en termes de classement. Il doivent impérativement provenir de sites ayant une bonne popularité auprès de Google - méfiez-vous donc des annuaires - pour vous fournir le *jus* nécessaire.
 
 
 
@@ -130,23 +141,34 @@ Le truc du pro : Pour avoir une idée de la vitesse de chargement des pages de v
 </svg>
 
 ## Le *crawl* des robots d'indexation
+{: #crawl_robots}
 
 Les robots, encore appelés *spiders* ou *bots*, sont des algorithmes informatiques dont la fonction est d'indexer des pages web, c'est-à-dire de les ranger dans une immense bibliothèque de contenus. Pour ce faire, les **robots d'indexation** naviguent en permanence sur le web (*crawl* en anglais veut dire *ramper*, on voit bien la métaphore avec *spider* et *web* : l'araignée tisse sa toile !), de lien en lien, et récoltent le contenu des pages pour les mettre dans cette bibliothèque (l'index des pages).
 
 Mais quel contenu est indexé ? Que peuvent voir les robots d'indexation ?
 
+---
+{: .hr-icon} 
+
 ### Ce que voient les robots d'indexation
+{: #robots_voient_true}
 
 Les robots d'indexation sont, du fait de leur nature informatique, binaires. Ils n'ont - à ce jour - pas la capacité de discerner autre chose que du contenu textuel (bien que Google commence timidement à reconnaître certains contenus d'images). Leur logique binaire leur permet de classer le contenu qu'ils rencontrent dans des collections et d'en extraire des données plus ou moins brutes.
 
 Les robots vont collecter ces données dans :
 
 - le contenu textuel des balises HTML (HyperText Markup Langage, le langage qui permet d'afficher des pages web), avec en particulier :
-- le contenu de la balise `<title>`
-- le contenu des balises `alt=""` des images
-- le contenu de la balise `<meta="description"/>` (pas d'impact sur le classement)
+  - le contenu de la balise `<title>` (titre de la page, à ne pas confondre avec ci-dessous)
+  - le contenu des balises `<h1>` et `<h2>` (balises de titre)
+  - les liens ou *ancres* contenues dans vos pages
+  - le contenu des balises `alt=""` des images
+  - le contenu de la balise `<meta="description"/>` (pas d'impact sur le classement)
+
+---
+{: .hr-icon}   
 
 ### Ce que ne voient pas les robots (ou très mal !)
+{: #robots_voient_false}
 
 - les images
 - le texte contenu dans les images
@@ -154,14 +176,20 @@ Les robots vont collecter ces données dans :
 - le contenu généré par javascript (ajax, angular.js...)
 - les contenus générés par Flash
 
-## Délivrer du contenu adéquat et à jour 
+On le voit, ce qui importe le plus dans votre site est que vos **Mots Clés** - qui sont les mots pour lesquels vous voulez voir votre site être bien classé (*ranker*) - soient contenus dans ces balises. Il est donc vital que vous puissiez avoir la main sur ces balises, ce que ne permettent pas tous les CMS et encore moins la plupart des outils de création gratuits...
+{: .pro-tip}
 
-> delivering relevant, fresh content (fournir du contenu pertinent et à jour)
+## Délivrer du contenu adéquat et à jour
+{: #fresh_content}
+
+> Delivering relevant, fresh content[^3]
+
+[^3]: Fournir du contenu adéquat et à jour.
 
 Deux facteurs, la *pertinence* et *la fraîcheur* sont analysés par l'algorithme avec :
 
 - *analyse du document et connectivité sémantique* : 
-    - analyse du document : recherche des Mots Clé dans les balises <meta>, <title>, <Hn>, et dans le texte de la page (voir plus haut)
+    - analyse du document : recherche des Mots Clé dans les balises `<meta>`, `<title>`, `<Hn>, et dans le texte de la page (voir plus haut)
     - la connectivité sémantique est la possibilité pour les robots d'associer entre eux des mots du même champ sémantique pour donner des résultats proches de la recherche initiale
 
 - *qualité du contenu et intérêt de la part de l'utilisateur* :
@@ -173,5 +201,36 @@ Avec l'outil Google analytics par exemple on peut voir:
 - le taux de rebond (*bounce rate*) : pourcentage des visiteurs qui ne voient qu'une page du site, ce qui est un indice de contenu non pertinent;
 - le temps passé sur le site : ne tient compte que du temps après chaque page chargée (inutile donc de passer du temps sur la page d'accueil...)
 - nombre de pages vues par visiteur
+
+## Conclusion (temporaire...)
+
+Comme nous l'avons vu succintement, être référencé n'est pas une chose simple. Il faut avant tout s'assurer que toutes ses pages ont été indexées pas le moteur de recherche, mais également maîtriser son code pour fournir les mots clés les plus pertinents possibles.
+
+La stratégie SEO n'est toutefois pas une science exacte, mais plutôt un art...
+
+Truc de pro : pour savoir si votre site correspond aux bonnes pratiques recommandées par Google, vous pouvez le tester sur [https://varvy.com/](https://varvy.com/).
+{: .pro-tip}
+
+## Glossaire
+{: .glossaire}
+- Algorithme :
+  - Programme utilisé par les moteurs de recherche pour déterminer le classement des pages en fonction d'une requête utilisateur.
+- Black Hat
+  - Utilisateur qui tente de flouer Google avec de mauvaises pratiques.
+- Domain Authority ou DA
+  - Popularité accordée par Google à un site donné. Les liens provenant de sites ayant un fort D.A. sont de plus grande valeur.
+- Google AdWords :
+  - Campagne publicitaire Google. S'oppose ou complète le *référencement naturel*.
+- Jus ou *juice*
+  - Influence d'un lien pointant vers le site.  
+- Référencement naturel :
+  - Classement naturel du site, hors Google AdWords et géolocalisation.
+- SERP :
+  - Search Engine Result Page : On parle de classement dans les SERPs, c'est à dire du classement d'un site dans les résultats obtenus après une requête par un internaute.
+- SEO :
+  - Search Engine Optimization. C'est l'ensemble des stratégies qui permettent d'optimiser un site pour les moteurs de recherche. Il fait partie du SEM (Search Engine Marketing) avec le SEA (Search Engine Advertising) et le SMO (Social Media Optimization).
+- Taux de rebond :
+  - Pourcentage de visiteurs quittant le site peu après y avoir accédé. Un taux de rebond bas est un indicateur de contenu adéquat.
+
 
 
