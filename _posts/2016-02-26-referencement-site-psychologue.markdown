@@ -179,7 +179,7 @@ Les robots vont collecter ces données dans :
 On le voit, ce qui importe le plus dans votre site est que vos **Mots Clés** - qui sont les mots pour lesquels vous voulez voir votre site être bien classé (*ranker*) - soient contenus dans ces balises. Il est donc vital que vous puissiez avoir la main sur ces balises, ce que ne permettent pas tous les CMS et encore moins la plupart des outils de création gratuits...
 {: .pro-tip}
 
-## Délivrer du contenu adéquat et à jour
+## Fournir du contenu adéquat et à jour
 {: #fresh_content}
 
 > Delivering relevant, fresh content[^3]
