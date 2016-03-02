@@ -9,9 +9,10 @@
     @extend %list-style;
     li {
         &:before {
-            content: '\2661';
+            content: '\e903';
+            font-family: icomoon;
             padding-right: 5px;
-            color: lighten($rose, 10);
+            color: color(accent-color);
         }
     }
     @include susy-breakpoint($small) {
@@ -26,9 +27,10 @@
     @extend %list-style;
     li {
         &:before {
-            content: "\2692";
+            content: "\e902";
+            font-family: icomoon;
             padding-right: 5px;
-            color: darken($rose, 10);
+            color: color(accent-color);
         }
     }
 	@include susy-breakpoint($small) {
@@ -43,9 +45,10 @@
     @extend %list-style;
     li {
         &:before {
-            content: "\2713";
+            content: "\e901";
+            font-family: icomoon;
             padding-right: 5px;
-            color: darken($rose, 20);
+            color: color(accent-color);
         }
     }
     @include susy-breakpoint($small) {

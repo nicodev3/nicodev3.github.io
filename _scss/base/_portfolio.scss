@@ -6,24 +6,32 @@
   @include container();
   margin-top: em(30px);
   padding: 1em gutter();
-  padding-bottom: em(75px);
+  
   h2 {
-    background: linear-gradient(to right, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 90%);
-    color: color(primary-color);
+    color: color(primary-text-color);
     font-weight: 700;
     text-align: center;
+  }
+}
+
+.conteneur-portfolio .site {
+  @include susy-breakpoint($small) {
+    @include gallery(6);
   }
 }
 
 .site {
   margin-bottom: 1em;
   padding: gutter();
-  &:nth-of-type(even) {
-    @include span(6);
+  border: 1px solid #eee;
+
+  @include susy-breakpoint($small) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 550px;
   }
-  &:nth-of-type(odd) {
-    @include span(6 last);
-  }
+  
   p {
     text-align: center;
   }
@@ -37,6 +45,7 @@
     font-weight: 300;
     line-height: 50px;
     text-align: center;
+    flex-shrink: 1;
   }
   h4 {
     color: color-darker(accent-color, 2);
@@ -45,9 +54,52 @@
   }
 }
 
+.site-img {
+  height: 290px;
+  padding: gutter();
 
+  width: 100%;
+}
+.mj-grasso{
+      background:  url('/images/screen-sorgues.png') no-repeat center center / 400px;
 
+}
 
+.ussel {
+  background: url('/images/screen-sarrebourg.png') no-repeat center center / 400px;
+}
+
+.livry-gargan {
+  background: url('/images/screen-livry-gargan.png') no-repeat center center / 400px;
+}
+
+.stephanie {
+  background: url('/images/screen-stephanie.png') no-repeat center center / 400px;
+}
+
+.site-features {
+  @include susy-breakpoint($small) {
+    align-self: flex-start;
+    width: 100%;
+    flex-grow: 3;
+  }
+}
+
+.site-features__ul {
+  margin: 0 auto;
+  width: 80%;
+
+  li {
+    list-style-type: none;
+
+    &:before {
+      content: '\e900';
+      font-family: icomoon;
+      color: color(accent-color);
+      margin-right: 10px;
+    }
+  }
+}
 
 .button-container {
   padding: 0 5px;
@@ -147,15 +199,31 @@
 .features {
   @include full;
 }
-.site-img {
-  height: 400px;
-  padding: gutter();
-}
-.pilates-laurent {
-      background: color-lighter(divider-color, 9) url('/images/salon-pilates-portfolio.png') no-repeat center center / 400px;
 
+
+.realisations {
+  font-size: 1.2em;
+  width: 30%;
+  margin: 0 auto 3em;
+  position: relative;
+  line-height: 2em;
 }
 
-.ussel {
-  background: color-lighter(divider-color, 9) url('/images/ussel-portfolio.png') no-repeat center center / 400px;
+.site-quality {
+  display: block;
+  position: absolute;
+  top: -3px;
+  right: 45px;
+  background: color(accent-color);
+  color: #fff;
+  width: 135px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 4px;
+  height: 2em;
+  line-height: 2em;
+  font-family: $sans-serif;
+  transform: rotationX(-90deg);
+  border-radius: 3px;
 }
+

@@ -142,17 +142,14 @@ strong {
  */
 blockquote {
   display: block;
-  width: 70%;
-  margin: 2em auto;
-  padding: 1em 0 .8em 0;
-  color: #c8518d;
-  font-size: 18px;
+  margin: 2em;
+  padding: 1em 0 1em 1em;
+  color: color-lighter(primary-text-color, 2);
   font-size: 1.4em;
   font-style: italic;
-  letter-spacing: -1px;
-  text-align: center;
-  text-transform: uppercase;
-  box-shadow: 0 -3px 0  #c8518d, 0 3px 0 #c8518d;
+  border-left: 10px solid color(accent-color);
+
+  
   p {
     margin: 0;
     padding: 0;

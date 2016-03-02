@@ -26,9 +26,35 @@
         tlDomainName,
         time1,
         time2,
-        domaine = $('.ndd-article')
-        ;
+        domaine = $('.ndd-article'),
+        $piedsRobot = $('#robot-foots'),
+        $robot = $('#svg-robot'),
+        $brasUn = $('#bras-1'),
+        $brasDeux = $('#bras-2'),
+        tlRobot,
+        $burgerPart = $('.burger-part'),
+        tlBurger,
+        $siteQuality = $('.site-quality');
 
+    TweenMax.staggerTo($siteQuality, 2, {rotationX: '90deg', ease:SteppedEase.config(1),repeat:-1, repeatDelay:1.5, delay:-1}, 2);
+
+    tlBurger = new TimelineMax({
+        repeat: -1,
+        repeatDelay: 4
+    });
+    
+    tlBurger
+        .staggerFromTo($burgerPart, 0.8, {y: -100}, {y: 0, ease:Power3.easeIn}, 0.3);    
+
+    tlRobot = new TimelineMax({
+        repeat: -1,
+        yoyo: true
+    });
+
+    tlRobot
+        .to($robot, 5, {x: 400})
+        .to($brasUn, 2, {rotation: '90deg', transformOrigin: 'center center'}, '-=5')
+        .to($piedsRobot, 5, {rotationY: '1200deg', transformOrigin: 'center center'}, '-=5');
 
     tlAnim = new TimelineMax({repeat: -1, repeatDelay: 2, yoyo: true, delay: 2});
     time1 = .3;
@@ -83,6 +109,8 @@
         tlServeur
         .fromTo([html, css, js], 4, {x: 0, y: 0}, {x: 260, y: -120, ease: Power4.easeInOut})
         .fromTo([html, css, js], 4, {x: 260, y: -120}, {x: 520, y: 0, ease: Power4.easeInOut})
-    })
+    });
+
+    smoothScroll.init();
     
 })(jQuery);

@@ -9,6 +9,7 @@
   margin-top: 100px;
   @include susy-breakpoint($small) {
     margin-top: 50px;
+    @include container();
   }
 }
 

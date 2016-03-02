@@ -99,7 +99,7 @@
   border-bottom: 1px dashed color(accent-color);
   margin: 1em auto;
   text-align: center;
-  color: color(primary-color-dark);
+  color: color(primary-text-color);
 }
 
 .presta h2 ,
@@ -151,3 +151,28 @@
   min-width: 900px;
   max-width: 50%;
 }
+
+.inline-link {
+  display: inline !important;
+  font-size: 1em !important;
+  color: #fff !important;
+  background: color(accent-color);
+  padding: .3em .8em;
+  border-radius: 5px;
+  margin-left: 1em !important;
+}
+
+.autres-sites {
+  @include container();
+  padding: gutter();
+
+  h2 {
+    text-align: center;
+    color: currentColor;
+  }
+
+}
+
+
+
+
