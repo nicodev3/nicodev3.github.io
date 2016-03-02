@@ -43,7 +43,7 @@ h1 {
     font-size: $fs-h1--desktop;
     line-height: $lh-h1--desktop;
   }
-  color: $rose;
+  color: color(accent-color);
   font-size: $fs-h1--phone;
   letter-spacing: -1px;
   line-height: $lh-h1--phone;
@@ -55,15 +55,12 @@ h2 {
   }
   margin-top: $base-margin;
   margin-bottom: $base-margin;
-  color: color(primary-color);
+  color: color(primary-text-color);
   font-size: $fs-h2--phone;
   line-height: $lh-h2--phone;
 }
 
 .post-content h2 {
-  margin-left: gutter();
-  padding-left: gutter();
-  box-shadow: -2px 0 0 RGBA(230, 62, 142, .8), -6px 0 0 rgba(255,255,255,1.00), -8px 0 0 RGBA(230, 62, 142, .8);
 }
 
 h3 {
@@ -71,19 +68,13 @@ h3 {
     font-size: $fs-h3--desktop;
     line-height: $lh-h3--desktop;
   }
-  color: mix(#fff, $bleu, 30%);
+  color: color(secondary-text-color);
   font-size: $fs-h3--phone;
   line-height: $lh-h3--phone;
 }
 
 .post-content h3 {
-  margin-left: gutter(2);
-  padding-left: gutter();
-  box-shadow: -2px 0 0 RGBA(230, 62, 142, .6),
-  -4px 0 0 rgba(255,255,255,1.00),
-  -6px 0 0 RGBA(230, 62, 142, .6),
-  -8px 0 0 rgba(255,255,255,1.00),
-  -10px 0 0 RGBA(230, 62, 142, .6);
+  
 }
 
 h4 {

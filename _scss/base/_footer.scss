@@ -3,7 +3,7 @@
 // ==========================================================================
 .site-footer {
   @include full;
-  background-color: $bleu;
+  background-color: color(primary-color-dark);
 }
 .footer-container {
   margin-top: 100px;
