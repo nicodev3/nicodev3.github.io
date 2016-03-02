@@ -125,7 +125,7 @@ La popularité de votre site est un gage de sérieux pour Google. Toujours en ve
 
 Les premiers, **les liens entre les pages de votre site** sont surtout importants pour l'indexation de vos pages. En effet, comme nous le verrons dans le paragraphe suivant, les robots d'indexation parcourent en permanence le Web à la recherche de contenu. Les liens contenus dans vos pages lui permettent de visiter celles-ci fréquemment.
 
-Les seconds, **les liens pointant vers votre site**, sont les plus importants en termes de classement. Il doivent impérativement provenir de sites ayant une bonne popularité auprès de Google - méfiez-vous donc des annuaires - pour vous fournir le *jus* nécessaire.
+Les seconds, **les liens pointant vers votre site**, sont les plus importants en termes de classement. Ils doivent impérativement provenir de sites ayant une bonne popularité auprès de Google - méfiez-vous donc des annuaires - pour vous fournir le *jus* nécessaire.
 
 
 
@@ -204,7 +204,7 @@ Avec l'outil Google analytics par exemple on peut voir:
 
 ## Conclusion (temporaire...)
 
-Comme nous l'avons vu succintement, être référencé n'est pas une chose simple. Il faut avant tout s'assurer que toutes ses pages ont été indexées pas le moteur de recherche, mais également maîtriser son code pour fournir les mots clés les plus pertinents possibles.
+Comme nous l'avons vu succinctement, être référencé n'est pas une chose simple. Il faut avant tout s'assurer que toutes ses pages ont été indexées pas le moteur de recherche, mais également maîtriser son code pour fournir les mots clés les plus pertinents possible.
 
 La stratégie SEO n'est toutefois pas une science exacte, mais plutôt un art...
 
@@ -226,7 +226,7 @@ Truc de pro : pour savoir si votre site correspond aux bonnes pratiques recomman
 - Référencement naturel :
   - Classement naturel du site, hors Google AdWords et géolocalisation.
 - SERP :
-  - Search Engine Result Page : On parle de classement dans les SERPs, c'est à dire du classement d'un site dans les résultats obtenus après une requête par un internaute.
+  - Search Engine Result Page : On parle de classement dans les SERPs, c'est-à-dire du classement d'un site dans les résultats obtenus après une requête par un internaute.
 - SEO :
   - Search Engine Optimization. C'est l'ensemble des stratégies qui permettent d'optimiser un site pour les moteurs de recherche. Il fait partie du SEM (Search Engine Marketing) avec le SEA (Search Engine Advertising) et le SMO (Social Media Optimization).
 - Taux de rebond :
