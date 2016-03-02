@@ -39,8 +39,8 @@
   min-height: 30em;
   margin-top: gutter();
   padding-top: gutter();
-  background: lighten(lightyellow, 5);
   border: 1px solid #eee;
+  background: lighten(lightyellow, 5);
 }
 
 .content-left {
@@ -77,17 +77,12 @@
 .cv {
   /*background: lighten($rose-clair, 10);*/
   @include full;
-
   @include susy-breakpoint($small) {
-    background: lighten(lightyellow, 5);
     height: auto;
     margin-top: gutter();
     padding-top: 2em;
     border: 1px solid #eee;
-  }
-
-  section {
-  
+    background: lighten(lightyellow, 5);
   }
   padding-bottom: 1em;
 }
@@ -96,10 +91,10 @@
 
 %h2 {
   width: 80%;
-  border-bottom: 1px dashed color(accent-color);
   margin: 1em auto;
-  text-align: center;
+  border-bottom: 1px dashed color(accent-color);
   color: color(primary-text-color);
+  text-align: center;
 }
 
 .presta h2 ,
@@ -154,25 +149,57 @@
 
 .inline-link {
   display: inline !important;
-  font-size: 1em !important;
-  color: #fff !important;
-  background: color(accent-color);
+  margin-left: 1em !important;
   padding: .3em .8em;
   border-radius: 5px;
-  margin-left: 1em !important;
+  background: color(accent-color);
+  color: #fff !important;
+  font-size: 1em !important;
 }
 
 .autres-sites {
   @include container();
   padding: gutter();
-
   h2 {
-    text-align: center;
     color: currentColor;
+    text-align: center;
   }
-
 }
 
+.pro-tip {
+  display: inline-block;
+  position: relative;
+  padding: gutter();
+  box-shadow: 3px -3px 2px -2px color(accent-color);
+  &:before {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    color: color(accent-color);
+    font-family: icomoon;
+    font-size: 2em;
+    content: '\e900';
+  }
+}
 
+.hr-icon {
+  width: 100%;
+  margin: 4em 0;
+  float: left;
+  clear: both;
+  border-top: 4px double #8c8b8b;
+  text-align: center;
 
-
+  &:after {
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    padding: 10px;
+    margin: 0 10px;
+    background: #fdfdfd;
+    color:   color(primary-color);
+    font-family: icomoon;
+    font-size: 1.5em;
+    content: '\e905';
+  }
+}

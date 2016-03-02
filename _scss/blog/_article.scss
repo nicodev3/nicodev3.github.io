@@ -14,9 +14,22 @@
     ul {
         list-style: none;
         li {
+            position: relative;
+
             &:before {
-                content: '\21DD  ';
-                color: $rose;
+                position: absolute;
+                left: -8px;
+                top: 9px;
+                content: '';
+                height: 4px;
+                width: 4px;
+                border-radius: 50%;
+                display: block;
+                background: color(primary-color-light);
+            }
+            a {
+                color: #fff;
+                font-family: $sans-serif;
             }
         }
     }
@@ -57,12 +70,20 @@
     }
 }
 
+.post-content p:first-of-type:first-letter {
+    font-size: 2em;
+}
+
 .plan-article {
-    background : RGBA(186, 186, 186, .2);
+    background : color(primary-color-dark);
     padding: gutter();
     border-radius : 5px;
+    margin: 4em 0;
+
+
     h4 {
         margin-top : 0;
+        color: color(primary-color-text);
     }
 }
 

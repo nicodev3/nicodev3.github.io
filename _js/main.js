@@ -110,7 +110,5 @@
         .fromTo([html, css, js], 4, {x: 0, y: 0}, {x: 260, y: -120, ease: Power4.easeInOut})
         .fromTo([html, css, js], 4, {x: 260, y: -120}, {x: 520, y: 0, ease: Power4.easeInOut})
     });
-
-    smoothScroll.init();
     
 })(jQuery);

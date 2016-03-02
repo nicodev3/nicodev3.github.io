@@ -14,8 +14,11 @@ excerpt: "Avoir un site internet, c'est bien. Avoir un site internet que peuvent
 {: .plan-article}
 <div>
 #### Plan de l'article
-- [Que veulent les moteurs de recherche](#que_veulent_les_moteurs)
-- [L'hébergement](#heberg)
+- [Que veulent les moteurs de recherche](#que_veulent_les_moteurs){: data-scroll=""}
+  - [La mission de Google](#mission_google){: data-scroll=""}
+- [Les ingrédients d'un bon référencement](#ingredients){: data-scroll=""}
+  - [Le contenu textuel](#ingredient_texte){: data-scroll=""}
+  - [La vitesse de chargement des pages](#ingredient_vitesse){: data-scroll=""}
 
 
 </div>
@@ -29,7 +32,11 @@ Pour comprendre les **bases du référencement naturel**[^1], il est nécessaire
 
 Vous êtes-vous déjà posé cette question ? Nous savons tous ce **que nous attendons** d'un moteur de recherche tel que Google, Bing, etc. Mais savez-vous ce que le moteur de recherche **attend de vous** ? Il est indispensable de connaître la raison d'être de Google pour mieux comprendre comment lui fournir **un contenu adéquat** (afin d'être bien référencé).
 
+---
+{: .hr-icon} 
+
 ### La mission de Google : satisfaire l'utilisateur
+{: #mission_google}
 
 Cela peut vous paraître évident, mais la mission première de Google est de satisfaire ses utilisateurs. Non pas par pure philanthropie - les enjeux financiers sont énormes - mais pour être le meilleur moteur de recherche !
 
@@ -37,9 +44,9 @@ Ainsi, si dans un restaurant vous commandez un plat, vous vous attendez à voir 
 
 C'est à peu près la même chose pour Google. Lorsque vous saisissez une **requête**, c'est à dire une recherche, vous attendez de lui qu'il vous serve un contenu pertinent satisfaisant vos attentes. Dans certains cas, il vous est par ailleurs impératif d'avoir un contenu récent. Si la réponse est donnée rapidement et que le contenu que vous consultez via le résultat de recherche vous plaît, vous êtes plutôt satisfait, et vous avez toutes les chances de préférer Google à Bing ou Duckduckgo...
 
-> L'une des priorités de Google est de s'assurer que les sites vers lesquels il oriente ses utilisateurs vont leur apporter une satisfaction, et ce afin que l'utilisateur fasse confiance à Google pour chercher des sites !
+> L'une des priorités de Google est de s'assurer que les sites vers lesquels il oriente ses utilisateurs vont leur apporter une satisfaction, et ce afin que l'utilisateur fasse confiance à Google comme moteur de recherche !
 
-Ainsi, Google doit-il s'assurer que votre site comporte certains ingrédients indispensables - en réalité plus de 200 ingrédients entrent dans la composition du site idéal tel que vu par les algorithmes de Google - à la satisfaction de ses utilisateurs.
+Ainsi, Google doit-il s'assurer que votre site comporte certains ingrédients indispensables - **en réalité plus de 200 ingrédients entrent dans la composition du site idéal** tel que vu par les algorithmes de Google - à la satisfaction de ses utilisateurs.
 
 Quels sont donc ces ingrédients ? Il est impossible ici de tous les passer en revue. Toutefois, certains sont plus importants que d'autres pour Google. Nous allons voir lesquels.
 
@@ -58,9 +65,14 @@ Quels sont donc ces ingrédients ? Il est impossible ici de tous les passer en r
   </g>
 </svg>
 
-## Les ingrédients nécessaires à un bon référencement
+## Les ingrédients d'un bon référencement
+{: #ingredients}
+
+---
+{: .hr-icon} 
 
 ### Les ingrédients : le contenu textuel
+{: #ingredient_texte}
 
 Le contenu textuel de votre site est un indice fort de qualité pour Google car il est plus probable qu'un utilisateur soit satisfait si le contenu de votre site répond avec pertinence à sa requête. 
 
@@ -78,13 +90,26 @@ En particulier, il absorbe de façon préférentielle des *mots clé* qu'il va c
 
 Pour mieux comprendre ce que sont ces **balises HTML**, voir mon article sur la [création d'un site Internet](http://nicodev3.github.io/2015/10/26/creation-site-internet/).
 
+
 > C'est pour ces raisons qu'il est important que vous ayez la main sur le code de votre site. Si vous avez réalisé votre site avec un CMS ou un outil de création en ligne, savez-vous où sont vos balises et pouvez-vous les modifier ? Certains CMS ont été réalisés par des développeurs n'ayant aucune connaissance du référencement, soyez prudent dans votre choix&nbsp;!
 
+---
+{: .hr-icon} 
+
 ### Les ingrédients : la vitesse de chargement de pages
+{: #ingredient_vitesse}
 
 Une vitesse de chargement des pages trop longue peut ralentir les robots d'indexation et avoir un impact négatif sur votre référencement. C'est particulièrement vrai pour le référencement sur les appareils mobiles[^2].
 
+Le truc du pro : Pour avoir une idée de la vitesse de chargement des pages de votre site, allez à l'adresse [Google Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=fr) et entrez votre URL. Les résultats vont peut-être vous surprendre... Toutefois si vous n'obtenez pas d'aussi bons résultats que sur la capture d'écran ci-dessous, pas de panique, monter à 95% devrait suffire.
+{: .pro-tip}
+ 
+![google speed test](/images/google-speed-test.png)
+
 [^2]: En effet les résultats de recherche diffèrent selon si vous effectuez une recherche à partir d'un ordinateur dit de bureau ou à partir d'un smartphone ou d'une tablette.
+
+---
+{: .hr-icon} 
 
 ### Les ingrédients : la popularité
 
