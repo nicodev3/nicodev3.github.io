@@ -224,7 +224,7 @@ Truc de pro : pour savoir si votre site correspond aux bonnes pratiques recomman
 - Jus ou *juice*
   - Influence d'un lien pointant vers le site.  
 - Référencement naturel :
-  - Classement naturel du site, hors Google AdWords et géolocalisation.
+  - Classement naturel du site dans les *SERPs*, hors Google AdWords et géolocalisation.
 - SERP :
   - Search Engine Result Page : On parle de classement dans les SERPs, c'est-à-dire du classement d'un site dans les résultats obtenus après une requête par un internaute.
 - SEO :
