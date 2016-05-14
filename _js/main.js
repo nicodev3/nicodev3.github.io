@@ -25,18 +25,24 @@
         tlBattery,
         tlDomainName,
         time1,
-        time2,
         domaine = $('.ndd-article'),
         $piedsRobot = $('#robot-foots'),
         $robot = $('#svg-robot'),
         $brasUn = $('#bras-1'),
-        $brasDeux = $('#bras-2'),
         tlRobot,
         $burgerPart = $('.burger-part'),
         tlBurger,
-        $siteQuality = $('.site-quality');
+        $responsive = $('#responsives'),
+        tlSiteQuality;
 
-    TweenMax.staggerTo($siteQuality, 2, {rotationX: '90deg', ease:SteppedEase.config(1),repeat:-1, repeatDelay:1.5, delay:-1}, 2);
+    tlSiteQuality = new TimelineMax({
+      repeat: -1,
+      yoyo: true
+    });
+
+    tlSiteQuality
+      .fromTo($responsive, 2, {width: "40%"}, {width: "100%", ease: Back.easeOut.config(2)});
+
 
     tlBurger = new TimelineMax({
         repeat: -1,
