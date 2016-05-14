@@ -1,34 +1,39 @@
-
-
 // ==========================================================================
 // Contenu vertical
 // ==========================================================================
+.wrapper {
+    @include pad(gutter());
+}
+
 .bandeau {
-  @include span(12);
-  @include susy-breakpoint($small) {
-    height: 6em;
-  }
-  height: 7em;
-  background: url('/images/bg.png');
-  background-repeat: repeat;
-  h1 {
+    @include span(12);
     @include susy-breakpoint($small) {
-      font-size: $fs-h1--desktop;
-      line-height: 1em;
+        height: 6em;
+        margin-bottom: 0;
     }
-    color: color-darker(accent-color, 1);
-    font-size: $fs-h1--phone;
-    line-height: 1.1em;
-  }
+    margin-bottom: gutter();
+    background: url('/images/bg.png') repeat;
+    line-height: 2;
+
+    h1 {
+        @include susy-breakpoint($small) {
+            padding-left: gutter();
+            font-size: $fs-h1--desktop;
+            text-align: left;
+        }
+        color: color-darker(accent-color, 1);
+        font-size: 1.5em;
+        text-align: center;
+    }
 }
 
 .bandeau-container {
-  @include container();
+    @include container();
 }
 
 .conteneur-haut {
-  @include container();
-  padding-bottom: 3em;
+    @include container();
+    padding-bottom: 3em;
 }
 
 // ==========================================================================
@@ -36,38 +41,38 @@
 // ==========================================================================
 .content-left ,
 .content-right {
-  min-height: 30em;
-  margin-top: gutter();
-  padding-top: gutter();
-  border: 1px solid #eee;
-  background: lighten(lightyellow, 5);
+    min-height: 30em;
+    margin-top: gutter();
+    padding-top: gutter();
+    border: 1px solid #eee;
+    background: lighten(lightyellow, 5);
 }
 
 .content-left {
-  @include susy-breakpoint($small) {
-    @include span(9);
-    @include pad(gutter());
-    display: flex;
-    overflow: auto;
+    @include susy-breakpoint($small) {
+        @include span(9);
+        @include pad(gutter());
+        display: flex;
+        overflow: auto;
 
-    flex-direction: column;
-    justify-content: center;
-  }
+        flex-direction: column;
+        justify-content: center;
+    }
 
-  hyphens: auto;
+    hyphens: auto;
 }
 
 .content-right {
-  @include susy-breakpoint($small) {
-    @include span(3 last);
-    @include pad(gutter());
-  }
-  h2 {
-    margin-top: 0;
-  }
-  .h2-contact {
-    margin-top: 1em;
-  }
+    @include susy-breakpoint($small) {
+        @include span(3 last);
+        @include pad(gutter());
+    }
+    h2 {
+        margin-top: 0;
+    }
+    .h2-contact {
+        margin-top: 1em;
+    }
 }
 
 // ==========================================================================
@@ -75,131 +80,129 @@
 // ==========================================================================
 
 .cv {
-  /*background: lighten($rose-clair, 10);*/
-  @include full;
-  @include susy-breakpoint($small) {
-    height: auto;
-    margin-top: gutter();
-    padding-top: 2em;
-    border: 1px solid #eee;
-    background: lighten(lightyellow, 5);
-  }
-  padding-bottom: 1em;
+    /*background: lighten($rose-clair, 10);*/
+    @include full;
+    @include susy-breakpoint($small) {
+        height: auto;
+        margin-top: gutter();
+        padding-top: 2em;
+        border: 1px solid #eee;
+        background: lighten(lightyellow, 5);
+    }
+    padding-bottom: 1em;
 }
 
-
-
 %h2 {
-  width: 80%;
-  margin: 1em auto;
-  border-bottom: 1px dashed color(accent-color);
-  color: color(primary-text-color);
-  text-align: center;
+    width: 80%;
+    margin: 1em auto;
+    border-bottom: 1px dashed color(accent-color);
+    color: color(primary-text-color);
+    text-align: center;
 }
 
 .presta h2 ,
 .compe h2 ,
 .tools h2 {
-  @extend %h2;
+    @extend %h2;
 }
 
 .compe {
-  @include susy-breakpoint($small) {
-    @include span(6);
-  }
-  @include susy-breakpoint($medium) {
-    @include span(4);
-  }
+    @include susy-breakpoint($small) {
+        @include span(6);
+    }
+    @include susy-breakpoint($medium) {
+        @include span(4);
+    }
 }
 
 .tools {
-  @include susy-breakpoint($small) {
-    @include span(6);
-  }
-  @include susy-breakpoint($medium) {
-    @include span(4);
-  }
+    @include susy-breakpoint($small) {
+        @include span(6);
+    }
+    @include susy-breakpoint($medium) {
+        @include span(4);
+    }
 }
 
 .presta {
-  @include susy-breakpoint($small) {
-    @include break;
-    width: auto;
-    margin: 0 auto;
-  }
-  @include susy-breakpoint($medium) {
-    @include span(4 last);
-    clear: none;
-  }
+    @include susy-breakpoint($small) {
+        @include break;
+        width: auto;
+        margin: 0 auto;
+    }
+    @include susy-breakpoint($medium) {
+        @include span(4 last);
+        clear: none;
+    }
 }
 
 .video-center {
-  display: block;
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  border: 10px solid RGB(230, 62, 142);
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border: 10px solid RGB(230, 62, 142);
 }
 
 .codepen-modele {
-  min-width: 900px;
-  max-width: 50%;
+    min-width: 900px;
+    max-width: 50%;
 }
 
 .inline-link {
-  display: inline !important;
-  margin-left: 1em !important;
-  padding: .3em .8em;
-  border-radius: 5px;
-  background: color(accent-color);
-  color: #fff !important;
-  font-size: 1em !important;
+    display: inline !important;
+    margin-left: 1em !important;
+    padding: .3em .8em;
+    border-radius: 5px;
+    background: color(accent-color);
+    color: #fff !important;
+    font-size: 1em !important;
 }
 
 .autres-sites {
-  @include container();
-  padding: gutter();
-  h2 {
-    color: currentColor;
-    text-align: center;
-  }
+    @include container();
+    padding: gutter();
+    h2 {
+        color: currentColor;
+        text-align: center;
+    }
 }
 
 .pro-tip {
-  display: inline-block;
-  position: relative;
-  padding: gutter();
-  box-shadow: 3px -3px 2px -2px color(accent-color);
-  &:before {
-    position: absolute;
-    top: -16px;
-    left: -16px;
-    color: color(accent-color);
-    font-family: icomoon;
-    font-size: 2em;
-    content: '\e900';
-  }
+    display: inline-block;
+    position: relative;
+    padding: gutter();
+    box-shadow: 3px -3px 2px -2px color(accent-color);
+    &:before {
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        color: color(accent-color);
+        font-family: icomoon;
+        font-size: 2em;
+        content: '\e900';
+    }
 }
 
 .hr-icon {
-  width: 100%;
-  margin: 4em 0 2em;
-  float: left;
-  clear: both;
-  border-top: 4px double #8c8b8b;
-  text-align: center;
+    width: 100%;
+    margin: 4em 0 2em;
+    float: left;
+    clear: both;
+    border-top: 4px double #8c8b8b;
+    text-align: center;
 
-  &:after {
-    display: inline-block;
-    position: relative;
-    top: -20px;
-    padding: 10px;
-    margin: 0 10px;
-    background: #fdfdfd;
-    color:   color(primary-color);
-    font-family: icomoon;
-    font-size: 1.5em;
-    content: '\e905';
-  }
+    &:after {
+        display: inline-block;
+        position: relative;
+        top: -20px;
+        margin: 0 10px;
+        padding: 10px;
+        background: #fdfdfd;
+        color: color(primary-color);
+        font-family: icomoon;
+        font-size: 1.5em;
+        content: '\e905';
+    }
 }

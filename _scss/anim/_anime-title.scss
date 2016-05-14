@@ -4,21 +4,8 @@ $pos-left: 34px;
   letter-spacing: 1px;
 }
 
-.lettre-n ,
-.lettre-i ,
-.lettre-c ,
-.lettre-o ,
-.lettre-l ,
-.lettre-a ,
-.lettre-s ,
-.lettre-d ,
-.lettre-e ,
-.lettre-v ,
-.lettre-a2 ,
-.lettre-u ,
-.lettre-x ,
-.trois {
-  display: block;
+.lettre {
+  display: none;
   position: absolute;
   top: 11px;
   width: 30px;
@@ -27,6 +14,10 @@ $pos-left: 34px;
   background-color: #fffffa;
   line-height: 33px;
   text-align: center;
+
+    @include susy-breakpoint($small) {
+        display :block;
+    }
 }
 
 .lettre-n {
