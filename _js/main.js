@@ -39,6 +39,9 @@
         $responsiveDesktop = $('#responsive_desktop'),
         $responsiveTablet = $('#responsive_tablet'),
         $responsivePhone = $('#responsive_phone'),
+        $podiumStar = $('#podium-star'),
+        $ciseauUn = $('#ciseau-1'),
+        $ciseauDeux = $('#ciseau-2'),
         tlSiteResponsive,
         tlSiteQuality;
 
@@ -46,10 +49,20 @@
     repeat: -1,
     repeatDelay: 3
   });
+
   tlSiteResponsive
     .to($responsiveDesktop, 1, {morphSVG: $responsiveTablet, x:80, ease: Bounce.easeOut})
     .to($responsiveDesktop, 1, {morphSVG: $responsivePhone, ease: Bounce.easeOut}, '+=1')
-    ;
+    .to($podiumStar, 1.4, {bezier: {type:"quadratic",
+    values: [{x:-50,y:-30},{x:-125,y:-40},{x:-180,y:20}],
+    autoRotate:90
+  }})
+    .to($podiumStar, 1, {bezier: {type: "quadratic",
+    values: [{x: -180, y: 0},{x: -100, y: -20},{x: -80, y: -10}]}})
+    .to($podiumStar, 1, {scale:1.2, ease: Elastic.easeInOut.config(1.2, 0.4)});
+
+  TweenMax.to($ciseauUn, 1, {rotation: '8deg', transformOrigin: '30% 50%', yoyo:true, repeat:-1});
+  TweenMax.to($ciseauDeux, 1, {rotation: '-8deg', transformOrigin: '30% 50%', yoyo:true, repeat:-1});
 
   tlCompetences = new TimelineMax({repeat: -1, repeatDelay: 4});
 

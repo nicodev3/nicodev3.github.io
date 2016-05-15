@@ -258,10 +258,17 @@
 .susy-gallery-6 {
     @include gallery(6);
     margin-bottom: gutter();
+    min-height: 300px;
     border: 1px solid #eee;
 }
 
 .susy-gallery-6 h3 {
     margin-top: .5em;
     text-align: center;
+}
+
+.susy-gallery-6 svg {
+    display :block;
+    margin :0 auto;
+    width :250px;
 }
