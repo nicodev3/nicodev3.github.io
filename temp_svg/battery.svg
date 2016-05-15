@@ -1,0 +1,10 @@
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="35.51" height="85" viewBox="0 0 35.51 85">
+  <title>battery</title>
+  <rect id="pile" y="11.75" width="35.51" height="73.25" rx="1" ry="1" style="fill: #fff"/>
+  <path id="haut_pile" d="M24.69,10H10.82V2.78A2.78,2.78,0,0,1,13.59,0h8.32a2.78,2.78,0,0,1,2.78,2.78V10h0Z" style="fill: #fff"/>
+  <rect id="pile_level" x="4.53" y="69.46" width="26.64" height="11.1" style="fill: none"/>
+  <rect id="pile_level-2" data-name="pile_level" x="4.62" y="55.46" width="26.64" height="11.1" style="fill: none"/>
+  <rect id="pile_level-3" data-name="pile_level" x="4.71" y="41.46" width="26.64" height="11.1" style="fill: none"/>
+  <rect id="pile_level-4" data-name="pile_level" x="4.8" y="27.46" width="26.64" height="11.1" style="fill: none"/>
+  <rect x="4.9" y="13.46" width="26.64" height="11.1" style="fill: none"/>
+</svg>

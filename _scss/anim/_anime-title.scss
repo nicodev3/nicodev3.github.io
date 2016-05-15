@@ -79,15 +79,21 @@ $pos-left: 34px;
 
 /* cv svg
   ============================= */
-
 .cv-svg {
-  display: block;
-  width: 100px;
-  height: 100px;
+  display: flex;
+    justify-content :center;
+    align-items :center;
+  width: 110px;
+  height: 110px;
   margin: 0 auto;
-  padding: 1em;
-  border-radius: 5px;
-  background: color-opa(accent-color, .1);
+  border-radius: 4px;
+  background: color(primary-color);
+}
+
+.cv-svg svg {
+    display :block;
+    margin :0 auto;
+    width :70%;
 }
 
 #gear {
@@ -118,13 +124,6 @@ $pos-left: 34px;
 
 .ndd-article-pink {
   color: $rose;
-}
-
-#Calque_1 {
-  margin-top: 1em;
-  border: 1px solid RGBA(230, 62, 142, .2);
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px 1px #9b9b9b;
 }
 
 #animation-play {
