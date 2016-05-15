@@ -4,7 +4,7 @@ title: nicodev3
 description: Tutoriels développement web front-end et back-end
 h1: Nicolas Devaux, développeur Web
 ---
-<div class="conteneur-haut">
+<section class="conteneur-haut">
     <article class="content-left">
         <p>Je suis développeur web et webdesigner, formé en autodidacte puis à l'Université de Strasbourg.</p>
         <p>Je suis titulaire d'une Licence Professionnelle Activités et Techniques de Communication mention<strong> développeur web des systèmes d'information et multimédia</strong>, option
@@ -17,7 +17,7 @@ h1: Nicolas Devaux, développeur Web
         </p>
         <p>Tous mes sites sont conçus avec les dernières technologies, sont responsives (visibles sur mobiles, tablettes...) et optimisés pour le référencement naturel.</p>
     </article>
-    <div class="content-right">
+    <aside class="content-right">
         <h2 class="blog-list-h2">Derniers articles du blog</h2>
         <ul class="post-list">
             {% for post in site.posts %}
@@ -26,81 +26,96 @@ h1: Nicolas Devaux, développeur Web
             </li>
             {% endfor %}
         </ul>
+    </aside>
+</section>
+<section class="wrapper--cv">
+    <section class="compe">
+        <div class="cv-svg">
+            <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="35.51" height="85" viewBox="0 0 35.51 85">
+                <title>battery</title>
+                <rect id="pile" y="11.75" width="35.51" height="73.25" rx="1" ry="1" style="fill: #fff"/>
+                <path id="haut_pile" d="M24.69,10H10.82V2.78A2.78,2.78,0,0,1,13.59,0h8.32a2.78,2.78,0,0,1,2.78,2.78V10h0Z" style="fill: #fff"/>
+                <rect class="pile-level" x="4.53" y="69.46" width="26.64" height="11.1" style="fill: none"/>
+                <rect class="pile-level" data-name="pile_level" x="4.62" y="55.46" width="26.64" height="11.1" style="fill: none"/>
+                <rect class="pile-level" data-name="pile_level" x="4.71" y="41.46" width="26.64" height="11.1" style="fill: none"/>
+                <rect class="pile-level" data-name="pile_level" x="4.8" y="27.46" width="26.64" height="11.1" style="fill: none"/>
+                <rect x="4.9" y="13.46" width="26.64" height="11.1" style="fill: none"/>
+            </svg>
+        </div>
+        <h2>Compétences</h2>
+        <ul class="competences">
+            <li> HTML5 / CSS3 / JavaScript</li>
+            <li> Sass / jQuery / Susy</li>
+            <li> PHP/MySQL</li>
+            <li> Photoshop / Illustrator</li>
+            <li> Animation (CSS, JavaScript, Greensock Animation Platform)</li>
+        </ul>
+    </section>
+    <section class="tools">
+        <div class="cv-svg">
+            <svg id="tool-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+                <title>tools</title>
+                <path d="M98.48,14L84.23,28.21h0L71.79,15.76,86,1.52A22,22,0,0,0,57.54,30L30,57.54A22,22,0,0,0,1.52,86L15.77,71.78,28.21,84.23,14,98.48A22,22,0,0,0,42.47,70L70,42.46A22,22,0,0,0,98.48,14Z" transform="translate(0 0)" style="fill:#fff"/>
+            </svg>
+        </div>
+        <h2>Outils</h2>
+        <ul class="outils">
+            <li> Perch CMS</li>
+            <li> Jekyll</li>
+            <li> Nunjucks</li>
+            <li> Jade</li>
+            <li> Gulp / Git...</li>
+        </ul>
+    </section>
+    <section class="presta">
+        <div class="cv-svg">
+            <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="100" height="103" viewBox="0 0 100 103">
+                <title>masonery</title>
+                <rect x="1.5" y="1.5" width="97" height="100" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+                <circle cx="10.48" cy="9.49" r="1.5" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+                <circle cx="17.48" cy="9.49" r="1.5" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+                <circle cx="24.48" cy="9.49" r="1.5" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+                <rect x="1.5" y="1.5" width="97" height="15.98" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+                <rect class="masonery-block" id="masonery_block_1" x="4.21" y="20.4" width="30" height="48.14"/>
+                <rect class="masonery-block" id="masonery_block_2" data-name="masonry" x="4.21" y="69.41" width="30" height="30" transform="translate(-65.2 103.63) rotate(-90)"/>
+                <rect class="masonery-block" id="masonery_block_3" data-name="masonry" x="66.21" y="20.4" width="30" height="26.52"/>
+                <rect class="masonery-block" id="masonery_block_4" data-name="masonry" x="35.21" y="20.4" width="30" height="26.52"/>
+            </svg>
+        </div>
+        <h2>Prestations</h2>
+        <ul class="prestations">
+            <li> Sites statiques ou dynamiques</li>
+            <li> Création, refonte, optimisation</li>
+            <li> Référencement naturel</li>
+            <li> Responsive webdesign</li>
+            <li> Rédaction de contenus</li>
+        </ul>
+    </section>
+</section>
+<section class="conteneur-qualites-sites">
+    <h2>Tous mes sites sont&nbsp;:</h2>
+    <div class="gallery-container">
+        <div class="susy-gallery-6">
+            <h3 id="responsives">responsives</h3>
+            <svg id="responsive_svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="284" height="178" viewBox="0 0 284 178">
+                <path id="responsive_desktop" d="M282.32,0H1.68A1.4,1.4,0,0,0,0,1.54V149.11A1.66,1.66,0,0,0,1.68,151H129.29l-15.78,27h57l-15.78-27H282.32a1.66,1.66,0,0,0,1.68-1.89V1.54A1.4,1.4,0,0,0,282.32,0ZM142,144a3,3,0,1,1,3-3A3,3,0,0,1,142,144Zm134-15H7V8H276V129Z"/>
+                <path id="responsive_tablet" d="M113.37,0H0.67C0.23,0,0,.43,0,1.54V149.11C0,150.21.23,151,.67,151h112.7c0.44,0,.63-0.79.63-1.89V1.54C114,0.43,113.81,0,113.37,0ZM58.75,144a3,3,0,1,1,3-3A3,3,0,0,1,58.75,144ZM111,129H3V8H111V129Z"/>
+                <path id="responsive_phone" d="M39.4,0H0.23C0.08,0,0,.22,0,0.8V77.67A2.27,2.27,0,0,0,.23,79H39.4a1.87,1.87,0,0,0,.6-1.33V0.8A0.76,0.76,0,0,0,39.4,0ZM20.46,75a1,1,0,1,1,1-1A1,1,0,0,1,20.46,75ZM39,67H1V4H39V67Z"/>
+            </svg>
+        </div>
+        <div class="susy-gallery-6">
+            <h3>optimisés pour le référencement</h3>
+        </div>
+        <div class="susy-gallery-6">
+            <h3>faits maison</h3>
+        </div>
+        <div class="susy-gallery-6">
+            <h3>performants</h3>
+        </div>
     </div>
-    <div class="cv">
-        <section class="compe">
-            <div class="cv-svg">
-                <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="35.51" height="85" viewBox="0 0 35.51 85">
-                    <title>battery</title>
-                    <rect id="pile" y="11.75" width="35.51" height="73.25" rx="1" ry="1" style="fill: #fff"/>
-                    <path id="haut_pile" d="M24.69,10H10.82V2.78A2.78,2.78,0,0,1,13.59,0h8.32a2.78,2.78,0,0,1,2.78,2.78V10h0Z" style="fill: #fff"/>
-                    <rect class="pile-level" x="4.53" y="69.46" width="26.64" height="11.1" style="fill: none"/>
-                    <rect class="pile-level" data-name="pile_level" x="4.62" y="55.46" width="26.64" height="11.1" style="fill: none"/>
-                    <rect class="pile-level" data-name="pile_level" x="4.71" y="41.46" width="26.64" height="11.1" style="fill: none"/>
-                    <rect class="pile-level" data-name="pile_level" x="4.8" y="27.46" width="26.64" height="11.1" style="fill: none"/>
-                    <rect x="4.9" y="13.46" width="26.64" height="11.1" style="fill: none"/>
-                </svg>
-            </div>
-            <h2>Compétences</h2>
-            <ul class="competences">
-                <li> HTML5 / CSS3 / JavaScript</li>
-                <li> Sass / jQuery / Susy</li>
-                <li> PHP/MySQL</li>
-                <li> Photoshop / Illustrator</li>
-                <li> Animation (CSS, JavaScript, Greensock Animation Platform)</li>
-            </ul>
-        </section>
-        <section class="tools">
-            <div class="cv-svg">
-                <svg id="tool-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-                    <title>tools</title>
-                    <path d="M98.48,14L84.23,28.21h0L71.79,15.76,86,1.52A22,22,0,0,0,57.54,30L30,57.54A22,22,0,0,0,1.52,86L15.77,71.78,28.21,84.23,14,98.48A22,22,0,0,0,42.47,70L70,42.46A22,22,0,0,0,98.48,14Z" transform="translate(0 0)" style="fill:#fff"/>
-                </svg>
-            </div>
-            <h2>Outils</h2>
-            <ul class="outils">
-                <li> Perch CMS</li>
-                <li> Jekyll</li>
-                <li> Nunjucks</li>
-                <li> Jade</li>
-                <li> Gulp / Git...</li>
-            </ul>
-        </section>
-        <section class="presta">
-            <div class="cv-svg">
-                <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="100" height="103" viewBox="0 0 100 103">
-                    <title>masonery</title>
-                    <rect x="1.5" y="1.5" width="97" height="100" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <circle cx="10.48" cy="9.49" r="1.5" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <circle cx="17.48" cy="9.49" r="1.5" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <circle cx="24.48" cy="9.49" r="1.5" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <rect x="1.5" y="1.5" width="97" height="15.98" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <rect class="masonery-block" id="masonery_block_1" x="4.21" y="20.4" width="30" height="48.14"/>
-                    <rect class="masonery-block" id="masonery_block_2" data-name="masonry" x="4.21" y="69.41" width="30" height="30" transform="translate(-65.2 103.63) rotate(-90)"/>
-                    <rect class="masonery-block" id="masonery_block_3" data-name="masonry" x="66.21" y="20.4" width="30" height="26.52"/>
-                    <rect class="masonery-block" id="masonery_block_4" data-name="masonry" x="35.21" y="20.4" width="30" height="26.52"/>
-                </svg>
-            </div>
-            <h2>Prestations</h2>
-            <ul class="prestations">
-                <li> Sites statiques ou dynamiques</li>
-                <li> Création, refonte, optimisation</li>
-                <li> Référencement naturel</li>
-                <li> Responsive webdesign</li>
-                <li> Rédaction de contenus</li>
-            </ul>
-        </section>
-    </div>
-</div>
-<div class="conteneur-portfolio">
+</section>
+<section class="conteneur-portfolio">
     <h2>Dernières réalisations</h2>
-    <p class="realisations">Tous mes sites sont&nbsp;:</p>
-    <ul class="realisations-liste">
-        <li><span id="responsives">responsives</span></li>
-        <li><span>optimisés pour le référencement</span></li>
-        <li><span>faits maison</span></li>
-        <li><span>performants</span></li>
-    </ul>
     <div class="site">
         <div class="site-img montpellier"></div>
         <div class="site-features">
@@ -164,7 +179,7 @@ h1: Nicolas Devaux, développeur Web
         </div>
         <a href="http://psychologue-andrezieux-boutheon.fr">http://psychologue-andrezieux-boutheon.fr</a>
     </section>
-</div>
+</section>
 <section class="autres-sites">
     <h2>Mais aussi...</h2>
     <a href="http//cours-pilates.fr" class="btn">http//cours-pilates.fr</a>

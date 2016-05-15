@@ -30,12 +30,10 @@ h3 ,
 h4 ,
 h5 ,
 h6 {
-  font-family: 'adelle-sans',sans-serif;
+  font-family: $sans-serif;
   font-style: normal;
-  font-weight: 300;
-
-  font-variant-ligatures: common-ligatures;
-  font-feature-settings: 'liga','clig';
+  font-weight: 400;
+  color: color(primary-text-color);
 }
 
 h1 {
@@ -43,7 +41,7 @@ h1 {
     font-size: $fs-h1--desktop;
     line-height: $lh-h1--desktop;
   }
-  color: color(accent-color);
+  color: color(primary-color);
   font-size: $fs-h1--phone;
   letter-spacing: -1px;
   line-height: $lh-h1--phone;

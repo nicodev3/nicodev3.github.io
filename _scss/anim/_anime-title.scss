@@ -11,8 +11,8 @@ $pos-left: 34px;
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  background-color: #fffffa;
-  line-height: 33px;
+  background-color: color(primary-color-light);
+  line-height: 1;
   text-align: center;
 
     @include susy-breakpoint($small) {

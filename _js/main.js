@@ -14,14 +14,15 @@
         $u = $('.lettre-u'),
         $x = $('.lettre-x'),
         $trois = $('.trois'),
+
         $pileLevel = $('.pile-level'),
         $tool = $('#tool-svg'),
         $masoneryBlockOne = $('#masonery_block_1'),
         $masoneryBlockTwo = $('#masonery_block_2'),
         $masoneryBlockThree = $('#masonery_block_3'),
         $masoneryBlockFour = $('#masonery_block_4'),
-
         tlCompetences,
+
         $html = $('#html'),
         $css = $('#css'),
         $js = $('#js'),
@@ -35,8 +36,20 @@
         tlRobot,
         $burgerPart = $('.burger-part'),
         tlBurger,
-        $responsive = $('#responsives'),
+        $responsiveDesktop = $('#responsive_desktop'),
+        $responsiveTablet = $('#responsive_tablet'),
+        $responsivePhone = $('#responsive_phone'),
+        tlSiteResponsive,
         tlSiteQuality;
+
+  tlSiteResponsive = new TimelineMax({
+    repeat: -1,
+    repeatDelay: 3
+  });
+  tlSiteResponsive
+    .to($responsiveDesktop, 1, {morphSVG: $responsiveTablet, x:80, ease: Bounce.easeOut})
+    .to($responsiveDesktop, 1, {morphSVG: $responsivePhone, ease: Bounce.easeOut}, '+=1')
+    ;
 
   tlCompetences = new TimelineMax({repeat: -1, repeatDelay: 4});
 
@@ -54,8 +67,7 @@
       yoyo: true
     });
 
-    tlSiteQuality
-      .fromTo($responsive, 2, {width: "40%"}, {width: "100%", ease: Back.easeOut.config(2)});
+
 
 
     tlBurger = new TimelineMax({
@@ -95,7 +107,7 @@
         .to($d, .5, {x: -156, ease: Power4.easeInOut})
         .to($e, .5, {x: -162, ease: Power4.easeInOut})
         .to($v, .8, {x: -168, ease: Elastic.easeOut.config(1, 0.3)})
-        .to([$n, $i, $c, $o, $d, $e, $v], .5, {backgroundColor: "#D3D39E", borderRadius: 0, ease: Linear.easeNone})
+        .to([$n, $i, $c, $o, $d, $e, $v], .5, {backgroundColor: "#fff", borderRadius: 0, ease: Linear.easeNone})
         .to($trois, .3 , {autoAlpha: 1, ease: Power4.easeInOut })
         .to($trois, 2, {autoAlpha: 1, x: -270, rotationY: 380, ease: Power4.easeInOut });
 

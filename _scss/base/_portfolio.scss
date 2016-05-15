@@ -1,17 +1,30 @@
 // ==========================================================================
 // Portfolio
 // ==========================================================================
+.wrapper--cv ,
+.conteneur-portfolio ,
+.conteneur-qualites-sites {
+    @include container();
+    padding: gutter();
+    overflow: auto;
+}
+
+
+.conteneur-portfolio h2 ,
+.conteneur-qualites-sites h2 {
+    text-align: center;
+}
+
+.wrapper--cv {
+    background: color-lighter(primary-color-light, 6);
+}
 
 .conteneur-portfolio {
-    @include container();
-    margin-top: em(30px);
-    padding: 1em gutter();
+    background: color-lighter(primary-color-light, 7);
+}
 
-    h2 {
-        color: color(primary-text-color);
-        font-weight: 700;
-        text-align: center;
-    }
+.conteneur-qualites-sites {
+    background: color-lighter(primary-color-light, 8);
 }
 
 .conteneur-portfolio .site {
@@ -31,22 +44,22 @@
     margin-bottom: 1em;
     padding: gutter();
     border: 1px solid #eee;
+    background: #fff;
 
     p {
         text-align: center;
     }
     a {
         display: block;
-        height: 50px;
         margin: 0;
         padding: .4em .8em;
         border-radius: 4px;
         background: color-opa(accent-color, .2);
         color: inherit;
         font-family: $sans-serif;
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: 300;
-        line-height: 1.3;
+        line-height: 2;
         text-align: center;
 
         flex-shrink: 1;
@@ -210,39 +223,45 @@
 
 
 .realisations {
+    @include susy-breakpoint($small) {
+        padding-bottom: 1em;
+        font-size: 1.2em;
+        text-align: center;
+    }
     position: relative;
     font-size: 1em;
     line-height: 2;
-
-    @include susy-breakpoint($small) {
-        font-size :1.2em;
-        text-align :center;
-        padding-bottom : 1em;
-    }
 }
 
 .realisations-liste {
-    overflow :auto;
+    overflow: auto;
 }
 
 .realisations-liste li {
-    list-style-type :none;
-
     @include gallery(6);
-    text-align :center;
-    height :50px;
-    margin-bottom : gutter();
+    margin-bottom: gutter();
+    text-align: center;
+
+    list-style-type: none;
 }
 
 .realisations-liste span {
-    width :100%;
-    display :block;
-    line-height :3;
-    font-family :$sans-serif;
+    display: block;
+    width: 100%;
+    font-family: $sans-serif;
+    line-height: 3;
+}
+.gallery-container {
+    overflow: auto;
 }
 
-#responsives {
-    background : color(primary-color);
-    color: #fff;
-    
+.susy-gallery-6 {
+    @include gallery(6);
+    margin-bottom: gutter();
+    border: 1px solid #eee;
+}
+
+.susy-gallery-6 h3 {
+    margin-top: .5em;
+    text-align: center;
 }

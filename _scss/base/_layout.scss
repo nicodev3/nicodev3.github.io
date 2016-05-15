@@ -3,6 +3,7 @@
 // ==========================================================================
 .wrapper {
     @include pad(gutter());
+    background : color-lighter(primary-color-light, 9);
 }
 
 .bandeau {
@@ -14,17 +15,6 @@
     margin-bottom: gutter();
     background: url('/images/bg.png') repeat;
     line-height: 2;
-
-    h1 {
-        @include susy-breakpoint($small) {
-            padding-left: gutter();
-            font-size: $fs-h1--desktop;
-            text-align: left;
-        }
-        color: color-darker(accent-color, 1);
-        font-size: 1.5em;
-        text-align: center;
-    }
 }
 
 .bandeau-container {
@@ -33,7 +23,6 @@
 
 .conteneur-haut {
     @include container();
-    padding-bottom: 3em;
 }
 
 // ==========================================================================
@@ -45,7 +34,7 @@
     margin-top: gutter();
     padding-top: gutter();
     border: 1px solid #eee;
-    background: lighten(lightyellow, 5);
+    background: #fff;
 }
 
 .content-left {
@@ -78,20 +67,6 @@
 // ==========================================================================
 // Presta compe tools
 // ==========================================================================
-
-.cv {
-    /*background: lighten($rose-clair, 10);*/
-    @include full;
-    @include susy-breakpoint($small) {
-        height: auto;
-        margin-top: gutter();
-        padding-top: 2em;
-        border: 1px solid #eee;
-        background: lighten(lightyellow, 5);
-    }
-    padding-bottom: 1em;
-}
-
 %h2 {
     width: 80%;
     margin: 1em auto;

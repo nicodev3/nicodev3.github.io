@@ -5,9 +5,8 @@
     // Positioning context for the mobile navigation icon
     position      : relative;
     min-height    : 56px;
-    border-top    : 5px solid $vert;
-    border-bottom : 1px solid $vert;
-    background    : color(primary-color);
+    border-bottom : 5px solid color(primary-color-light);
+    background    : color(primary-color-dark);
 }
 
 .site-title {

@@ -218,3 +218,13 @@ $css-model-border-color : #eee;
 .masonery-block {
     fill: color(accent-color);
 }
+
+#responsive_svg {
+    display :block;
+    margin : 0 auto;
+    width :200px;
+}
+#responsive_tablet,
+#responsive_phone {
+    visibility: hidden;
+}
