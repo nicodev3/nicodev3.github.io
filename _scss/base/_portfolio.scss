@@ -28,6 +28,7 @@
 }
 
 .conteneur-portfolio {
+    overflow: auto;
     @include full();
 }
 
