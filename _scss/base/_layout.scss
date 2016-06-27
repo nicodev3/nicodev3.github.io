@@ -21,6 +21,10 @@
     @include container();
 }
 
+.bandeau-container h1 {
+    padding-left: gutter();
+}
+
 .conteneur-haut {
     @include container();
 }
