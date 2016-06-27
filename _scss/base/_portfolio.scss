@@ -27,7 +27,11 @@
     background: color-lighter(primary-color-light, 8);
 }
 
-.conteneur-portfolio .site {
+.conteneur-portfolio {
+    @include full();
+}
+
+.gallery .site {
     @include susy-breakpoint($small) {
         @include gallery(6);
     }
