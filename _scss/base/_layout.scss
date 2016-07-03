@@ -21,6 +21,10 @@
     @include container();
 }
 
+.bandeau-container h1 {
+    padding-left: gutter();
+}
+
 .conteneur-haut {
     @include container();
 }
@@ -136,6 +140,7 @@
 }
 
 .autres-sites {
+    @include full();
     @include container();
     padding: gutter();
     h2 {

@@ -8,6 +8,7 @@
     "gulp": "^3.8.11"
   },
   "devDependencies": {
+    "beepbeep": "^1.2.0",
     "browser-sync": "^2.2.1",
     "del": "^2.0.0",
     "gulp": "^3.8.11",
