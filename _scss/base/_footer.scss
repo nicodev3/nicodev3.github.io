@@ -2,39 +2,40 @@
 // footer
 // ==========================================================================
 .site-footer {
-  @include full;
-  background-color: color(primary-color-dark);
+    @include full;
+    background-color: color(primary-color-dark);
 }
 .footer-container {
-  margin-top: 100px;
-  @include susy-breakpoint($small) {
-    margin-top: 50px;
-    @include container();
-  }
+    @include susy-breakpoint($small) {
+        @include container();
+        margin-top: 50px;
+    }
+    margin-top: 100px;
 }
 
-.contact-list, .social-media-list {
-  @include push(1);
-  @include susy-breakpoint($small) {
-    @include span(3);
-  }
+.contact-list ,
+.social-media-list {
+    @include push(1);
+    @include susy-breakpoint($small) {
+        @include span(3);
+    }
 }
 
 .text {
-  @include push(1);
-  color: #D5D5CF;
-  @include susy-breakpoint($small) {
-    margin-left: 0;
-    @include span(4 last);
-  }
-}
-.contact-list,
-.social-media-list {
-  list-style  : none;
-  padding-left: 0;
-  color: #A576A7;
-  a {
-    color: #A576A7;
-  }
+    @include push(1);
+    @include susy-breakpoint($small) {
+        @include span(4 last);
+        margin-left: 0;
+    }
+    color: #d5d5cf;
 }
 
+.contact-list ,
+.social-media-list {
+    padding-left: 0;
+    color: #a576a7;
+    list-style: none;
+    a {
+        color: #a576a7;
+    }
+}
