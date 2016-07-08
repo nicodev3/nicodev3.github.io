@@ -102,3 +102,17 @@ input:checked ~ .close {
 // ==========================================================================
 // FIN Navigation
 // ==========================================================================
+
+.ariane ul {
+    padding-left: 0;
+}
+
+.ariane li {
+    list-style-type: none;
+    display: inline-block;
+
+    &:first-of-type:after {
+        content:'>';
+        padding-left: .3em;
+    }
+}

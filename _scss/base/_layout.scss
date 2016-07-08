@@ -44,12 +44,9 @@
 .content-left {
     @include susy-breakpoint($small) {
         @include span(9);
-        @include pad(gutter());
-        display: flex;
+        @include pad(gutter());  
         overflow: auto;
-
-        flex-direction: column;
-        justify-content: center;
+        
     }
 
     hyphens: auto;
@@ -185,4 +182,23 @@
         font-size: 1.5em;
         content: '\e905';
     }
+}
+
+// GALLERY
+.gallery {
+    overflow: auto;
+}
+
+.gallery__item {
+    padding: gutter();
+    @include susy-breakpoint($small) {
+        @include gallery(6);
+        border: 1px solid color(primary-color-light);
+        border-radius: 4px;
+    }
+}
+
+.gallery__item h2 {
+    font-size: $fs-h3--desktop;
+    margin: 0;
 }
