@@ -4,8 +4,6 @@
 .site-footer {
   @include full;
   background-color: color(primary-color-dark);
-  position: absolute;
-  bottom: 0;
 }
 .footer-container {
   margin-top: 100px;
