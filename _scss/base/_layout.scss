@@ -195,6 +195,7 @@
         @include gallery(6);
         border: 1px solid color(primary-color-light);
         border-radius: 4px;
+        margin-bottom: gutter();
     }
 }
 
