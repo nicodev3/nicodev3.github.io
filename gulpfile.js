@@ -7,6 +7,7 @@ var notify = require('gulp-notify');
 var gutil = require('gulp-util');
 var beep = require('beepbeep');
 var plumber = require('gulp-plumber');
+var cssnano = require('gulp-cssnano');
 var cp = require('child_process');
 
 var messages = {
@@ -27,12 +28,12 @@ gulp.task('sass', function() {
         }))
         .pipe(sass({
             includePaths: ['scss/**/index.scss', 'bower_components/susy/sass'],
-            outputStyle: 'compressed',
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
             cascade: true
         }))
+        .pipe(cssnano(({discardComments: {removeAll: true}})))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({
             stream: true
