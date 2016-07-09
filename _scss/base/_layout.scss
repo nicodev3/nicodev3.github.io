@@ -4,6 +4,13 @@
 .wrapper {
     @include pad(gutter());
     background : color-lighter(primary-color-light, 9);
+
+    // sticky footer
+    &:after {
+        content: '';
+        display : block;
+        height: $footer-height;
+    }
 }
 
 .bandeau {

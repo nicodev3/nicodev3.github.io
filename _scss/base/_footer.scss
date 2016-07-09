@@ -4,6 +4,7 @@
 .site-footer {
     @include full;
     background-color: color(primary-color-dark);
+    height: $footer-height;
 }
 .footer-container {
     @include susy-breakpoint($small) {
@@ -29,8 +30,7 @@
     }
     color: #d5d5cf;
 }
-
-.contact-list ,
+contact-list ,
 .social-media-list {
     padding-left: 0;
     color: #a576a7;
