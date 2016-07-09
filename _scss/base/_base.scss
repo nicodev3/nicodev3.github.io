@@ -169,11 +169,9 @@ blockquote {
 .icon {
     > svg {
         display: inline-block;
+        margin-right : .4em;
         width: 16px;
         height: 16px;
         vertical-align: middle;
-        path {
-            fill: $grey-color;
-        }
     }
 }
