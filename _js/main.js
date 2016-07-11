@@ -42,6 +42,7 @@
         $podiumStar = $('#podium-star'),
         $ciseauUn = $('#ciseau-1'),
         $ciseauDeux = $('#ciseau-2'),
+        $speed = $('#speedometer'),
         tlSiteResponsive,
         tlSiteQuality;
 
@@ -59,10 +60,11 @@
   }})
     .to($podiumStar, 1, {bezier: {type: "quadratic",
     values: [{x: -180, y: 0},{x: -100, y: -20},{x: -80, y: -10}]}})
-    .to($podiumStar, 1, {scale:1.2, ease: Elastic.easeInOut.config(1.2, 0.4)});
+    .to($podiumStar, 1, {scale:1.2, ease: Elastic.easeInOut.config(1.2, 0.4)})
+    .fromTo($speed, 1, {rotation: '0deg'}, {rotation: '90deg', transformOrigin: 'bottom left', ease:Bounce.easeInOut});
 
-  TweenMax.to($ciseauUn, 1, {rotation: '8deg', transformOrigin: '30% 50%', yoyo:true, repeat:-1});
-  TweenMax.to($ciseauDeux, 1, {rotation: '-8deg', transformOrigin: '30% 50%', yoyo:true, repeat:-1});
+  TweenMax.to($ciseauUn, 1, {rotation: '5deg', transformOrigin: '32% 50%', yoyo:true, repeat:-1});
+  TweenMax.to($ciseauDeux, 1, {rotation: '-5deg', transformOrigin: '32% 50%', yoyo:true, repeat:-1});
 
   tlCompetences = new TimelineMax({repeat: -1, repeatDelay: 4});
 

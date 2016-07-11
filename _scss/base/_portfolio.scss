@@ -4,7 +4,6 @@
 .wrapper--cv ,
 .conteneur-portfolio ,
 .conteneur-qualites-sites {
-    @include container();
     padding: gutter();
     overflow: auto;
 }
@@ -17,6 +16,7 @@
 
 .wrapper--cv {
     background: color-lighter(primary-color-light, 6);
+    padding: 5em gutter();
 }
 
 .conteneur-portfolio {
@@ -24,7 +24,7 @@
 }
 
 .conteneur-qualites-sites {
-    background: color-lighter(primary-color-light, 8);
+    background: color-lighter(primary-color-light, 2);
 }
 
 .conteneur-portfolio {
@@ -267,8 +267,13 @@
 .susy-gallery-6 {
     @include gallery(6);
     margin-bottom: gutter();
-    min-height: 300px;
+    min-height: 350px;
     border: 1px solid #eee;
+    background : color-lighter(primary-color-light, 7);
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
 }
 
 .susy-gallery-6 h3 {
@@ -277,7 +282,6 @@
 }
 
 .susy-gallery-6 svg {
-    display :block;
-    margin :0 auto;
-    width :250px;
+    width :200px;
+    height: 200px;
 }
