@@ -199,13 +199,25 @@
     margin-top : 3em;
 }
 
-.gallery__item {
+.gallery__item,
+.gallery__item--3 {
     padding: gutter();
     @include susy-breakpoint($small) {
-        @include gallery(6);
         border: 1px solid color(primary-color-light);
         border-radius: 4px;
         margin-bottom: gutter();
+    }
+}
+
+.gallery__item {
+    @include susy-breakpoint($small) {
+        @include gallery(6);
+    }
+}
+
+.gallery__item--3 {
+    @include susy-breakpoint($small) {
+        @include gallery(4);
     }
 }
 

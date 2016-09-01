@@ -285,3 +285,30 @@
     width :200px;
     height: 200px;
 }
+
+.gallery .gallery-no-gutter {
+    position: relative;
+
+    @include susy-breakpoint($small) {
+        @include span(4 no-gutter);
+    }
+}
+
+.portfolio-site-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    line-height: 3;
+    color: #fff;
+    text-align: center;
+    background: color-opa(primary-color-dark, .9);
+}
+
+.portfolio-main-link h2 {
+    color: color(accent-color);
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-align: center;
+    line-height: 1.5;
+}

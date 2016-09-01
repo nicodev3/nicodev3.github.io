@@ -5,3 +5,5 @@ node_modules
 _scss/.sass-cache
 nicodev.sublime-project
 nicodev.sublime-workspace
+bower_components/susy
+svg-optim/
