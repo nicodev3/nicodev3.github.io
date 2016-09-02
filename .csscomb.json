@@ -18,7 +18,7 @@
   "space-after-opening-brace": "\n",
   "space-after-selector-delimiter": "\n",
   "space-before-closing-brace": "\n",
-  "space-before-colon": "",
+  "space-before-colon": " ",
   "space-before-combinator": " ",
   "space-before-opening-brace": 1,
   "space-before-selector-delimiter": 1,
@@ -27,7 +27,6 @@
   "vendor-prefix-align": true,
   "sort-order": [
     [
-      "$include",
       "display",
       "position",
       "top",
@@ -134,8 +133,5 @@
       "visibility",
       "z-index"
     ],
-    [
-      "$include media"
-    ]
-  ]
-}
+    ["$include"]
+  ]}
