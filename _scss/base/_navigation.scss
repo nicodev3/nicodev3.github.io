@@ -46,10 +46,9 @@ input:checked ~ .content {
     background : color(primary-color);
 
     @include susy-breakpoint($small) {
-
-        bottom : 0em;
         right : 0;
-        left: 0;
+        bottom : 0;
+        left : 0;
         width : 100%;
         height : auto;
         border-top : none;
@@ -64,7 +63,7 @@ input:checked ~ .content {
 .navigation {
     @include susy-breakpoint($small) {
         padding-top : 3px;
-        line-height: 3;
+        line-height : 3;
     }
 }
 
@@ -73,7 +72,7 @@ input:checked ~ .content {
     padding : 0;
 
     @include susy-breakpoint($small) {
-        float: right;
+        float : right;
     }
 }
 
@@ -82,7 +81,7 @@ input:checked ~ .content {
 
     @include susy-breakpoint($small) {
         display : inline-block;
-        line-height: 3;
+        line-height : 3;
     }
 
     list-style-type : none;
@@ -93,22 +92,22 @@ input:checked ~ .content {
     padding-top : 20px;
     padding-bottom : 20px;
     padding-left : 20px;
+    transition : all .3s ease-out;
     border-bottom : 2px solid $blanc;
     color : $blanc;
     font-size : 1.1em;
-    transition: all .3s ease-out;
 
     @include susy-breakpoint($small) {
         display : inline-block;
-        padding: 0 1em;
+        height : 100%;
+        padding : 0 1em;
         border-bottom : none;
         font-size : 1em;
-        height: 100%;
     }
     &:hover {
-        color: #fff;
-        background: color-darker(primary-color-dark, 3);
-        text-decoration: none;
+        background : color-darker(primary-color-dark, 3);
+        color : #fff;
+        text-decoration : none;
     }
 }
 
