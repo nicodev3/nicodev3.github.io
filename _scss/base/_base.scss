@@ -3,29 +3,29 @@
 // ==========================================================================
 html ,
 body {
-    height: 100%;
+    height : 100%;
 }
 
 body {
-    min-height: 100%;
-    background-color: $background-color;
-    color: color(primary-text-color);
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    font-weight: 300;
-    line-height: $lh-p;
+    min-height : 100%;
     margin-bottom : -$footer-height;
+    background-color : $background-color;
+    color : color(primary-text-color);
+    font-family : $base-font-family;
+    font-size : $base-font-size;
+    font-weight : 300;
+    line-height : $lh-p;
 
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust : 100%;
 }
 
 p ,
 .post-link {
-    font-family: $texte;
-    line-height: $lh-p;
+    font-family : $texte;
+    line-height : $lh-p;
 
-    font-variant-ligatures: discretionary-ligatures;
-    font-feature-settings: 'liga';
+    font-variant-ligatures : discretionary-ligatures;
+    font-feature-settings : 'liga';
 }
 
 // ==========================================================================
@@ -37,94 +37,96 @@ h3 ,
 h4 ,
 h5 ,
 h6 {
-    color: color(primary-text-color);
-    font-family: $sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    color : color(primary-text-color);
+    font-family : $sans-serif;
+    font-style : normal;
+    font-weight : 400;
 }
 
 h1 {
+    color : color(primary-color);
+    font-size : $fs-h1--phone;
+    letter-spacing : -1px;
+    line-height : $lh-h1--phone;
+
     @include susy-breakpoint($small) {
-        font-size: $fs-h1--desktop;
-        line-height: $lh-h1--desktop;
+        font-size : $fs-h1--desktop;
+        line-height : $lh-h1--desktop;
     }
-    color: color(primary-color);
-    font-size: $fs-h1--phone;
-    letter-spacing: -1px;
-    line-height: $lh-h1--phone;
 }
 
 h2 {
+    margin-top : $base-margin;
+    margin-bottom : $base-margin;
+    color : color(primary-text-color);
+    font-size : $fs-h2--phone;
+    line-height : $lh-h2--phone;
+
     @include susy-breakpoint($small) {
-        font-size: $fs-h2--desktop;
+        font-size : $fs-h2--desktop;
     }
-    margin-top: $base-margin;
-    margin-bottom: $base-margin;
-    color: color(primary-text-color);
-    font-size: $fs-h2--phone;
-    line-height: $lh-h2--phone;
 }
 
 .post-content h2 {
-    position: relative;
-    margin-top: 3em;
+    position : relative;
+    margin-top : 3em;
     &:before {
-        position: absolute;
-        top: -1.5em;
-        left: 48%;
-        color: color(primary-color);
-        font-family: icomoon;
-        content: '\e906';
+        position : absolute;
+        top : -1.5em;
+        left : 48%;
+        color : color(primary-color);
+        font-family : icomoon;
+        content : '\e906';
     }
 }
 
 h3 {
+    color : color(secondary-text-color);
+    font-size : $fs-h3--phone;
+    line-height : $lh-h3--phone;
+
     @include susy-breakpoint($small) {
-        font-size: $fs-h3--desktop;
-        line-height: $lh-h3--desktop;
+        font-size : $fs-h3--desktop;
+        line-height : $lh-h3--desktop;
     }
-    color: color(secondary-text-color);
-    font-size: $fs-h3--phone;
-    line-height: $lh-h3--phone;
 }
 
-
-
 h4 {
+    color : mix(#fff, $bleu, 40%);
+    font-size : $fs-h4--phone;
+    line-height : $lh-h4--phone;
+
     @include susy-breakpoint($small) {
-        font-size: $fs-h4--desktop;
-        line-height: $lh-h4--desktop;
+        font-size : $fs-h4--desktop;
+        line-height : $lh-h4--desktop;
     }
-    color: mix(#fff, $bleu, 40%);
-    font-size: $fs-h4--phone;
-    line-height: $lh-h4--phone;
 }
 
 // ==========================================================================
 // Images
 // ==========================================================================
 img {
-    width: 100%;
-    height: auto;
+    width : 100%;
+    height : auto;
 }
 
 /**
  * Figures
  */
 figure > img {
-    display: block;
+    display : block;
 }
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
-    font-family: $texte;
-    text-decoration: none;
+    color : $brand-color;
+    font-family : $texte;
+    text-decoration : none;
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color : $text-color;
+        text-decoration : underline;
     }
 }
 
@@ -133,33 +135,33 @@ a {
 // ==========================================================================
 
 ul > li {
-    font-family: $texte;
+    font-family : $texte;
 }
 
 strong {
-    font-style: normal;
-    font-weight: 700;
+    font-style : normal;
+    font-weight : 700;
 }
 
 /**
  * Blockquotes
  */
 blockquote {
-    display: block;
-    margin: 2em;
-    padding: 1em 0 1em 1em;
-    border-left: 10px solid color(accent-color);
-    color: color-lighter(primary-text-color, 2);
-    font-size: 1.4em;
-    font-style: italic;
+    display : block;
+    margin : 2em;
+    padding : 1em 0 1em 1em;
+    border-left : 10px solid color(accent-color);
+    color : color-lighter(primary-text-color, 2);
+    font-size : 1.4em;
+    font-style : italic;
 
 
     p {
-        margin: 0;
-        padding: 0;
+        margin : 0;
+        padding : 0;
     }
     > :last-child {
-        margin-bottom: 0;
+        margin-bottom : 0;
     }
 }
 
@@ -168,10 +170,10 @@ blockquote {
  */
 .icon {
     > svg {
-        display: inline-block;
+        display : inline-block;
+        width : 16px;
+        height : 16px;
         margin-right : .4em;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
+        vertical-align : middle;
     }
 }

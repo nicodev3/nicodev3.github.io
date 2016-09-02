@@ -2,101 +2,134 @@
 // Navigation
 // ==========================================================================
 .canvas {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    position : relative;
+    width : 100%;
+    overflow : hidden;
 }
 
 input {
-    display: none;
+    display : none;
 }
 
 // target the sibbling of input
 input:checked ~ .off-canvas {
-    right: 0;
+    right : 0;
 }
 
 input:checked + label {
-    margin-right: 15em;
+    margin-right : 15em;
 }
 
 input:checked ~ .content {
-    margin-left: -15em;
+    margin-left : -15em;
 }
 
 .open {
-    color: $blanc;
-    font-size: 3em;
-    margin-top: 18px;
+    margin-top : 18px;
+    transition : margin-right .3s ease;
+    color : $blanc;
+    font-size : 3em;
+
     @include span(2 last);
-    transition: margin-right .3s ease;
     @include susy-breakpoint($small) {
-        display: none;
+        display : none;
     }
 }
 
 .off-canvas {
-    position: absolute;
-    top: -6px;
-    right: -15em;
-    width: 15em;
-    height: 200vh;
-
-    border-top: 6px solid $vert;
-    transition: right .3s ease;
+    position : absolute;
+    right : -15em;
+    width : 15em;
+    height : 200vh;
+    transition : right .3s ease;
+    border-top : 6px solid $vert;
+    background : color(primary-color);
 
     @include susy-breakpoint($small) {
-        @include span(6 last);
-        height: auto;
-        border-top: none;
-        position: relative;
-  
-        margin-top: em(18px);
+
+        bottom : 0em;
+        right : 0;
+        left: 0;
+        width : 100%;
+        height : auto;
+        border-top : none;
+        background : none;
+        // DEBUG
+        background : color(primary-color);
+        z-index : 1000;
+        // DEBUG
     }
 }
 
 .navigation {
     @include susy-breakpoint($small) {
-        padding-top: 3px;
+        padding-top : 3px;
+        line-height: 3;
     }
 }
 
-.page-link {
-    color: $blanc;
-    display: block;
-    border-bottom: 2px solid $blanc;
-    font-size: 1.1em;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    &:hover {
-      color: $rose-clair;
-    }
+.navigation__ul {
+    margin : 0 2em 0 0;
+    padding : 0;
+
     @include susy-breakpoint($small) {
-        font-size: 1em;
-        display: inline;
-        border-bottom: none;
-        padding-bottom: none;
+        float: right;
+    }
+}
+
+.navigation__ul li {
+    text-decoration : none;
+
+    @include susy-breakpoint($small) {
+        display : inline-block;
+        line-height: 3;
+    }
+
+    list-style-type : none;
+}
+
+.page-link {
+    display : block;
+    padding-top : 20px;
+    padding-bottom : 20px;
+    padding-left : 20px;
+    border-bottom : 2px solid $blanc;
+    color : $blanc;
+    font-size : 1.1em;
+    transition: all .3s ease-out;
+
+    @include susy-breakpoint($small) {
+        display : inline-block;
+        padding: 0 1em;
+        border-bottom : none;
+        font-size : 1em;
+        height: 100%;
+    }
+    &:hover {
+        color: #fff;
+        background: color-darker(primary-color-dark, 3);
+        text-decoration: none;
     }
 }
 
 .content {
-    width: 100%;
-    height: 100vh;
-    transition: margin-left .3s ease;
+    width : 100%;
+    height : 100vh;
+    transition : margin-left .3s ease;
 }
 
 .close {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+
+    pointer-events : none;
 }
 
 input:checked ~ .close {
-    pointer-events: auto;
+    pointer-events : auto;
 }
 
 // ==========================================================================
@@ -104,15 +137,16 @@ input:checked ~ .close {
 // ==========================================================================
 
 .ariane ul {
-    padding-left: 0;
+    padding-left : 0;
 }
 
 .ariane li {
-    list-style-type: none;
-    display: inline-block;
+    display : inline-block;
+
+    list-style-type : none;
 
     &:first-of-type:after {
-        content:'>';
-        padding-left: .3em;
+        padding-left : .3em;
+        content : '>';
     }
 }
