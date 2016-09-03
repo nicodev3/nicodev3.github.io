@@ -1,0 +1,99 @@
+// ==========================================================================
+// Headings
+// ==========================================================================
+h1 ,
+h2 ,
+h3 ,
+h4 ,
+h5 ,
+h6 {
+  color : color(primary-text-color);
+  font-family : $sans-serif;
+  font-style : normal;
+  font-weight : 400;
+}
+
+h1 {
+  color : color(primary-color);
+  @include fz($h1-fz)
+}
+
+.page-h1 {
+  padding-left: 1em;
+  line-height: 2.5em;
+  margin: 0;
+  color: hsla(0, 0, 92%, 1);
+  background: url('/images/h1-bg.png') repeat center center;
+}
+
+h2 {
+  color : color(primary-text-color);
+  @include fz($h2-fz);
+  @include lh($h2-lh);
+}
+
+.post-content h2 {
+  position : relative;
+  margin-top : 3em;
+  &:before {
+    position : absolute;
+    top : -1.5em;
+    left : 48%;
+    color : color(primary-color);
+    font-family : icomoon;
+    content : '\e906';
+  }
+}
+
+h3 {
+  color : color(secondary-text-color);
+  @include fz($h3-fz);
+  @include lh($h3-lh);
+}
+
+h4 {
+  color : #000;
+  @include fz($h4-fz);
+  @include lh($h4-lh);
+}
+
+strong {
+  font-style : normal;
+  font-weight : 700;
+}
+
+// -----------------------------------
+// @Blockquoite
+// -----------------------------------
+
+blockquote {
+  display : block;
+  margin : 2em;
+  padding : 1em 0 1em 1em;
+  border-left : 10px solid color(accent-color);
+  color : color-lighter(primary-text-color, 2);
+  font-size : 1.4em;
+  font-style : italic;
+
+
+  p {
+    margin : 0;
+    padding : 0;
+  }
+  > :last-child {
+    margin-bottom : 0;
+  }
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+/**
+ * souligne les liens dans le texte
+ */
+p a {
+  color: #c8518d;
+  font-family: pt-sans,sans-serif;
+  text-decoration: none;
+}

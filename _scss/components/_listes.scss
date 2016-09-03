@@ -14,10 +14,10 @@
             color: color(accent-color);
         }
     }
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
     	margin-left: em(54px);
     }
-    @include susy-breakpoint($medium) {
+    @include susy-breakpoint($tablet-paysage) {
     	margin-left: em(-5px);
     }
 }
@@ -32,10 +32,10 @@
             color: color(accent-color);
         }
     }
-	@include susy-breakpoint($small) {
+	@include susy-breakpoint($tablet-portrait) {
     	margin-left: em(69px);
     }
-    @include susy-breakpoint($medium) {
+    @include susy-breakpoint($tablet-paysage) {
     	margin-left: 10px;
     }
 }
@@ -50,10 +50,10 @@
             color: color(accent-color);
         }
     }
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
     	margin-left: 15.4375em;
     }
-    @include susy-breakpoint($medium) {
+    @include susy-breakpoint($tablet-paysage) {
     	margin-left: -9px;
     }
 }

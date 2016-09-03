@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var prefix = require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 var notify = require('gulp-notify');
 var gutil = require('gulp-util');
 var beep = require('beepbeep');
@@ -14,24 +14,29 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
+// custom error handler
+function customPlumber(errTitle) {
+    return plumber({
+        errorHandler: notify.onError({
+            title: errTitle || "Error running Gulp",
+            message: ' ---> <%= error.message %>',
+            sound: 'Glass'
+        })
+    });
+}
+
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function() {
     return gulp.src('./_scss/*.scss')
-        .pipe(plumber({
-            errorHandler: function(err) {
-                gutil.log(gutil.colors.red('erreur sass'));
-                beep();
-                this.emit('end');
-            }
-        }))
+        .pipe(customPlumber('Error running Sass'))
         .pipe(sass({
             includePaths: ['scss/**/index.scss', 'bower_components/susy/sass'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
-            cascade: true
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
         }))
         .pipe(cssnano(({discardComments: {removeAll: true}})))
         .pipe(gulp.dest('_site/css'))

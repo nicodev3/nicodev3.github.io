@@ -1,0 +1,204 @@
+$footer-height : 25em;
+
+// -----------------------------------
+// @FONTS
+// -----------------------------------
+$base-font-size : 16px;
+$texte : 'pt-sans', sans-serif;
+$sans-serif : 'cubano', sans-serif;
+
+// -----------------------------------
+// SUSY
+// -----------------------------------
+$susy : (
+        container: 1200px,
+        columns: 12,
+        gutters: 1/4,
+        column-width: false,
+        global-box-sizing: content-box,
+        debug: (
+                image: hide,
+                color: rgba(#ff4b54, .4),
+                output: background,
+                toggle: top right,
+        ),
+        use-custom: (
+                background-image: true,
+                background-options: false,
+                box-sizing: true,
+                clearfix: false,
+                rem: true,
+        )
+);
+
+@include border-box-sizing;
+
+// -----------------------------------
+// BREAKPOINTS
+// -----------------------------------
+$phone : em(320px); // largeur mini
+$phone-large : em(375px); // iphone 6 plus
+$tablet-portrait : em(768px);
+$tablet-paysage : em(1024px);
+$desktop : em(1200px);
+$macbook : em(1440px);
+$desktop-large : em(1600px);
+
+// -----------------------------------
+// COLORS
+// -----------------------------------
+$colors-nico : (
+        primary-color-dark : #512dab,
+        primary-color : #673ab7,
+        primary-color-light : #d1c4e9,
+        primary-color-text : #fff,
+        accent-color : #ff4081,
+        primary-text-color : #212121,
+        secondary-text-color : #727272,
+        divider-color : #b6b6b6
+);
+
+/* opacity map
+  ============================= */
+$nico-opacity : (
+        '.1': .1,
+        '.2': .2,
+        '.3': .3,
+        '.4': .4,
+        '.5': .5,
+        '.6': .6,
+        '.7': .7,
+        '.8': .8,
+        '.9': .9,
+);
+/* background: color-nico(color);
+  ============================= */
+@function color($key : 'cool') {
+    @return map-get($colors-nico, $key);
+}
+
+// variable qui découle de la fonction
+$color-dark-text : color('dark-text');
+$color-light-text : color('light-text');
+$color-background : color('background');
+$color-cool : color('cool');
+$color-nav : color('nav');
+$color-light : color('light');
+$color-button : color('button');
+
+/* color-darker() / color-lighter()
+  ============================= */
+@function color-darker($color-cool, $level : 0) {
+    $color-tint-percentage : 10%;
+    $color-to-tint : color($color-cool);
+    $color-tint : #000;
+
+    @return mix($color-tint, $color-to-tint, $color-tint-percentage * $level);
+}
+
+@function color-lighter($color-cool, $level : 0) {
+    $color-tint-percentage : 10%;
+    $color-to-tint : color($color-cool);
+    $color-tint : #fff;
+
+    @return mix($color-tint, $color-to-tint, $color-tint-percentage * $level);
+}
+
+/* color-opa(color, .x);
+  ============================= */
+@function color-opa($name : 'cool', $opacity: 0) {
+    $color : color($name);
+
+    // Get the named opacity level, if it exists
+    @if map_has_key($nico-opacity, $opacity) {
+        $opacity : map-get($nico-opacity, $opacity);
+    }
+
+    // Use rgba() to manipulate the color's alpha level
+    @return rgba($color, $opacity);
+}
+
+// -----------------------------------
+// FONT-SIZE MAP
+// -----------------------------------
+$h1-fz : (
+        null : 1em,
+        320px : 1.5em,
+        375px : 2em,
+        768px : 2.5em,
+        1200px : 3em
+);
+$h2-fz : (
+        null : 1.625em,
+        320px : 1.625em,
+        375px : 1.5em,
+        768px : 2em,
+        1200px : 2em
+);
+$h3-fz : (
+        null : 1.625em,
+        320px : 1.625em,
+        375px : 1.375em,
+        768px : 1.75em,
+        1200px : 1.75em
+);
+$h4-fz : (
+        null : 1.625em
+);
+$h5-fz : (
+        null : 1em
+);
+
+@mixin fz($fs-map) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            font-size : $fs-font-size;
+        } @else {
+            @media screen and(min-width : $fs-breakpoint) {
+                font-size : $fs-font-size;
+            }
+        }
+    }
+}
+
+// -----------------------------------
+// LINE-HEIGHT MAP
+// -----------------------------------
+$p-lh : (
+        null : 1.25em,
+        320px : 1.25em,
+        375px : 1.125em,
+        768px : 1.375em
+);
+$h1-lh : (
+        null : 1.25em,
+        1200px : 1.50em
+);
+$h2-lh : (
+        null : 1.15384615em,
+        320px : 1.15384615em,
+        375px : 1.25em
+);
+$h3-lh : (
+        null : 1.13636364em,
+        320px : 1.13636364em,
+        375px : 1.25em
+);
+$h4-lh : (
+        null : 1.11111111em,
+        320px : 1.11111111em,
+        375px : 1.22222222em
+);
+
+@mixin lh($lh-map) {
+    @each $lh-breakpoint, $lh in $lh-map {
+        @if $lh-breakpoint == null {
+            line-height : $lh;
+        } @else {
+            @media screen and(min-width : $lh-breakpoint) {
+                line-height : $lh;
+            }
+        }
+    }
+}
+

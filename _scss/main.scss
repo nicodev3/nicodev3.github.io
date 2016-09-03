@@ -1,8 +1,9 @@
-@import
-'../bower_components/susy/sass/susy',
+@import '../bower_components/susy/sass/susy',
+'abstracts/index',
 'base/index',
-'blog/index',
-'modules/index',
-'debug/debug',
+'components/index',
+'layout/index.scss',
+'pages/index',
+'partials/index.scss',
 'anim/index',
 'vendor/index';

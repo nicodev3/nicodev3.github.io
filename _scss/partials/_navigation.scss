@@ -27,11 +27,11 @@ input:checked ~ .content {
 .open {
     margin-top : 18px;
     transition : margin-right .3s ease;
-    color : $blanc;
+    color : #fff;
     font-size : 3em;
 
     @include span(2 last);
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display : none;
     }
 }
@@ -42,10 +42,10 @@ input:checked ~ .content {
     width : 15em;
     height : 200vh;
     transition : right .3s ease;
-    border-top : 6px solid $vert;
+    border-top : 6px solid green;
     background : color(primary-color);
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         right : 0;
         bottom : 0;
         left : 0;
@@ -61,7 +61,7 @@ input:checked ~ .content {
 }
 
 .navigation {
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         padding-top : 3px;
         line-height : 3;
     }
@@ -71,7 +71,7 @@ input:checked ~ .content {
     margin : 0 2em 0 0;
     padding : 0;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         float : right;
     }
 }
@@ -79,7 +79,7 @@ input:checked ~ .content {
 .navigation__ul li {
     text-decoration : none;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display : inline-block;
         line-height : 3;
     }
@@ -93,11 +93,11 @@ input:checked ~ .content {
     padding-bottom : 20px;
     padding-left : 20px;
     transition : all .3s ease-out;
-    border-bottom : 2px solid $blanc;
-    color : $blanc;
+    border-bottom : 2px solid #fff;
+    color : #fff;
     font-size : 1.1em;
 
-    @include susy-breakpoint($small) {
+    @include susy-breakpoint($tablet-portrait) {
         display : inline-block;
         height : 100%;
         padding : 0 1em;

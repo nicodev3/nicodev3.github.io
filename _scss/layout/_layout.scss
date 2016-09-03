@@ -1,0 +1,78 @@
+// ==========================================================================
+// Contenu vertical
+// ==========================================================================
+/**
+ * conteneur global après h1
+ */
+.page-content-wrapper {
+  background : color-lighter(primary-color-light, 9);
+  @include container();
+  @include pad(gutter());
+
+  // sticky footer
+  &:after {
+    display : block;
+    height : $footer-height;
+    content : '';
+  }
+}
+
+// ==========================================================================
+// Layout gauche/droite
+// ==========================================================================
+.content-left ,
+.content-right ,
+.content-fullpage {
+  min-height : 30em;
+  margin : gutter() 0;
+  padding-top : gutter();
+  border : 1px solid #eee;
+  background : #fff;
+}
+
+.content-left {
+  @include susy-breakpoint($tablet-portrait) {
+    overflow : auto;
+
+    @include span(9);
+    @include pad(gutter());
+  }
+
+  hyphens : auto;
+}
+
+.content-right {
+  @include susy-breakpoint($tablet-portrait) {
+    @include span(3 last);
+    @include pad(gutter());
+  }
+}
+
+.content-fullpage {
+  margin-top : 1em;
+  padding : gutter();
+  overflow: auto;
+}
+
+// ==========================================================================
+// Presta compe tools
+// ==========================================================================
+.presta,
+.compe,
+.tools {
+  @include susy-breakpoint($tablet-portrait) {
+    min-height : 30em;
+  }
+}
+
+.presta h2 ,
+.compe h2 ,
+.tools h2 {
+  width : 80%;
+  margin : 1em auto;
+  border-bottom : 1px dashed color(accent-color);
+  color : color(primary-text-color);
+  text-align : center;
+}
+
+

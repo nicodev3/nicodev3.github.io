@@ -1,0 +1,38 @@
+// -----------------------------------
+// containeur
+// -----------------------------------
+.gallery {
+  overflow : auto;
+}
+
+/**
+ * Le chiffre après -- donne le nombre de colones à la gallerie
+ */
+.gallery__item--2 ,
+.gallery__item--3 {
+  padding : gutter();
+
+  @include susy-breakpoint($tablet-portrait) {
+    margin-bottom : gutter();
+    border : 1px solid color(primary-color-light);
+    border-radius : 4px;
+  }
+}
+
+.gallery__item--2 {
+  @include susy-breakpoint($tablet-portrait) {
+    @include gallery(6);
+  }
+}
+
+.gallery__item--3 {
+  @include susy-breakpoint($tablet-portrait) {
+    @include gallery(4);
+  }
+}
+
+.gallery__item--1,
+.gallery__item--2 h2 {
+  margin : 0;
+  @include fz($h4-fz);
+}

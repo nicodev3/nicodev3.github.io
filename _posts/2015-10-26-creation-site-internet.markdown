@@ -125,7 +125,7 @@ Par exemple, les robots d'indexation de Google et autres sont friands de balises
 
 Bien entendu, nombreux sont ceux qui créent des sites via ces outils, sans savoir qu'ils les utilisent mal. Il est en effet tentant de fabriquer soi-même un site Internet. La gratuité est le leurre des naïfs[^3].. Les CMS gratuits (open source) sont en revanche d'excellents outils si vous voulez créer un blog avec vos photos de vacances ! Pour des sites professionnels, je ne les recommande pas, sauf s'ils sont configurés par un développeur professionnel... qui connaît le domaine du référencement !
 
-## Du contenu, du contenu, encore du contenu !
+## Du contenu, du contenu, encore du contenu&nbsp;!
 {: #contenu}
 
 C'est une telle évidence qu'on a de nos jours tendance à l'oublier. Internet, c'est avant tout du contenu informatif ! La qualité de ce dernier est certainement la chose la plus importante. Je préfère 100 fois un site au contenu pertinent à un joli site au contenu hasardeux... La bonne (et mauvaise pour certains) nouvelle, c'est que Google aussi ! 

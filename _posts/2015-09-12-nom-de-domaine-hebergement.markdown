@@ -44,11 +44,11 @@ En réalité, les choses sont un peu plus complexes. Retenez simplement que l'ad
 
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 80 65" enable-background="new 0 0 80 80" xml:space="preserve">
-  <rect x="39" y="51" fill="#000000" width="2" height="10"/>
-  <rect x="11" y="60" fill="#000000" width="58" height="2"/>
-  <path fill="#000000" d="M50.56 52H29.51C27.02 52 25 49.98 25 47.49V30h2v17.49C27 48.88 28.12 50 29.51 50H50.56c1.38 0 2.51-1.12 2.51-2.51V30h2v17.49C55.07 49.98 53.04 52 50.56 52z"/>
-  <polygon fill="#000000" points="59.38 35.78 40 20.28 20.63 35.78 19.38 34.22 40 17.72 60.63 34.22 "/>
-  <polygon fill="#000000" points="45 51 43 51 43 39 37 39 37 51 35 51 35 37 45 37 "/>
+  <rect x="39" y="51" width="2" height="10"/>
+  <rect x="11" y="60" width="58" height="2"/>
+  <path d="M50.56 52H29.51C27.02 52 25 49.98 25 47.49V30h2v17.49C27 48.88 28.12 50 29.51 50H50.56c1.38 0 2.51-1.12 2.51-2.51V30h2v17.49C55.07 49.98 53.04 52 50.56 52z"/>
+  <polygon points="59.38 35.78 40 20.28 20.63 35.78 19.38 34.22 40 17.72 60.63 34.22 "/>
+  <polygon points="45 51 43 51 43 39 37 39 37 51 35 51 35 37 45 37 "/>
 </svg>
 {: .svg-article}
 
@@ -93,9 +93,6 @@ De plus, afin de vous permettre de commenter cet article, un langage spécifique
 
 Si vous êtes curieux(se), vous pouvez voir ce code en effectuant un clic droit de souris, puis "*afficher le code source de la page*". Complexe n'est-ce pas ? Et encore, ce n'est que la face émergée...
 
-![code source](http://d.pr/i/AP8j+)
-{: #tuto-gif}
-
 Inutile de retenir tout cela. Ce que vous devez savoir c'est que ce code doit être stocké sur un ordinateur distant, le serveur, qui réside chez l'hébergeur[^4]. Ansi, quand un inernaute saisit l'adresse de votre site dans son navigateur, son ordinateur peut lire les fichiers qui s'y trouvent et lui restituer le tout sous forme lisible et dans le meilleur des cas agréable à lire.
 
 [^4]: En réalité vous pourriez posséder votre propre serveur et héberger tout cela chez vous, mais la maintenance d'un serveur est une chose très complexe ! 
@@ -109,82 +106,6 @@ Il existe plusieurs formules d'hébergement pour un site Web. Pour faire simple,
 {: #kelhebergeurchoisir}
 
 Là encore, il y a pléthore d'hébergeurs sur le marché. Le choix vous appartient ! Néanmoins je recommande un hébergeur avec un service d'infogérance compris dans son offre, afin de ne pas avoir de mauvaise surprise en cas de panne. La sécurité de votre site est également un élément à ne pas négliger.
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Calque_1" x="0" y="0" viewBox="0 0 960 560" xml:space="preserve">
-  <style type="text/css">
-    
-  .st0{fill:#FFFFFF;stroke:#050101;stroke-width:2;stroke-miterlimit:10;}
-  .st1{fill:none;stroke:#050101;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
-  .st2{fill:#050101;}
-  .st3{fill:#FFFFFF;stroke:#050101;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-  .st4{fill:#FFFFFF;stroke:#050101;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-  .st5{fill:#FFFFFF;stroke:#050101;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-  .st6{fill:none;stroke:#050101;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-  .st7{font-family:'SourceCodePro-Regular';}
-  .st8{font-size:9px;}
-  .st9{fill:none;stroke:#050101;stroke-miterlimit:10;}
-  .st10{font-size:14px;}
-
-  </style>
-  <g id="serveur">
-    <path class="st0" d="M510.3 85h-115c-2.8 0-5-2.2-5-5V53c0-2.8 2.2-5 5-5h115c2.8 0 5 2.2 5 5v27C515.3 82.8 513 85 510.3 85z"/>
-    <line class="st1" x1="405" y1="66.5" x2="453" y2="66.5"/>
-    <circle class="st2" cx="495.8" cy="66.5" r="5"/>
-    <path class="st0" d="M510.3 128h-115c-2.8 0-5-2.2-5-5V96c0-2.8 2.2-5 5-5h115c2.8 0 5 2.2 5 5v27C515.3 125.8 513 128 510.3 128z"/>
-    <line class="st1" x1="405" y1="109.5" x2="453" y2="109.5"/>
-    <circle class="st2" cx="495.8" cy="109.5" r="5"/>
-    <path class="st0" d="M510.3 171h-115c-2.8 0-5-2.2-5-5v-27c0-2.8 2.2-5 5-5h115c2.8 0 5 2.2 5 5v27C515.3 168.8 513 171 510.3 171z"/>
-    <line class="st1" x1="405" y1="152.5" x2="453" y2="152.5"/>
-    <circle class="st2" cx="495.8" cy="152.5" r="5"/>
-  </g>
-  <polygon class="st3" points="282 515 96 515 115.5 477 262.5 477 "/>
-  <path class="st3" d="M251.5 356.8H126.3c-7.1 0-12.9 5.8-12.9 12.9v85.1c0 7.1 5.8 12.9 12.9 12.9h125.2c7.1 0 12.9-5.8 12.9-12.9v-85.1C264.4 362.6 258.6 356.8 251.5 356.8z"/>
-  <rect x="128.6" y="374.4" class="st3" width="120.5" height="75.6"/>
-  <polygon class="st3" points="815 515 629 515 648.5 477 795.5 477 "/>
-  <path class="st3" d="M784.5 356.8H659.3c-7.1 0-12.9 5.8-12.9 12.9v85.1c0 7.1 5.8 12.9 12.9 12.9h125.2c7.1 0 12.9-5.8 12.9-12.9v-85.1C797.4 362.6 791.6 356.8 784.5 356.8z"/>
-  <rect x="661.6" y="374.4" class="st3" width="120.5" height="75.6"/>
-  <g id="js">
-    <path class="st4" d="M211 303.5h-10.8c-0.5 0-0.8-0.8-0.8-1.4v-10.8c0-0.5 0.2-0.9 0.8-0.9H179c-1.1 0-2.5 0.8-2.5 1.9v46c0 1.1 1.4 2.1 2.5 2.1h31c1.1 0 1.5-1 1.5-2.1v-36.2C211.5 302.7 211.5 303.5 211 303.5z"/>
-    <line class="st4" x1="200.7" y1="290.7" x2="211.5" y2="302"/>
-    <polyline class="st5" points="189 319.5 185.5 317.8 182 316 185.5 314.3 188.9 312.5 "/>
-    <polyline class="st5" points="199 319.5 202.5 317.8 206 316 202.5 314.3 199.1 312.5 "/>
-    <line class="st6" x1="195.4" y1="309.3" x2="192.7" y2="321.7"/>
-    <path class="st4" d="M214.4 333.2h-28.9c-1 0-1.8 0.8-1.8 1.8v9.6c0 1 0.8 1.8 1.8 1.8h28.9c1 0 1.8-0.8 1.8-1.8v-9.6C216.2 334.1 215.4 333.2 214.4 333.2z"/>
-    <text transform="matrix(1 0 0 1 190.0926 343.2451)" class="st7 st8">
-      .JS
-    </text>
-  </g>
-  <g id="css">
-    <path class="st4" d="M268 304.5h-10.8c-0.5 0-0.8-0.8-0.8-1.4v-10.8c0-0.5 0.2-0.9 0.8-0.9H236c-1.1 0-2.5 0.8-2.5 1.9v46c0 1.1 1.4 2.1 2.5 2.1h31c1.1 0 1.5-1 1.5-2.1v-36.2C268.5 303.7 268.5 304.5 268 304.5z"/>
-    <line class="st4" x1="257.7" y1="291.7" x2="268.5" y2="303"/>
-    <polyline class="st5" points="246 320.5 242.5 318.8 239 317 242.5 315.3 245.9 313.5 "/>
-    <polyline class="st5" points="256 320.5 259.5 318.8 263 317 259.5 315.3 256.1 313.5 "/>
-    <line class="st6" x1="252.4" y1="310.3" x2="249.7" y2="322.7"/>
-    <path class="st4" d="M271.4 334.2h-28.9c-1 0-1.8 0.8-1.8 1.8v9.6c0 1 0.8 1.8 1.8 1.8h28.9c1 0 1.8-0.8 1.8-1.8v-9.6C273.2 335.1 272.4 334.2 271.4 334.2z"/>
-    <text transform="matrix(1 0 0 1 246.1924 344.2451)" class="st7 st8">
-      .CSS
-    </text>
-  </g>
-  <g id="html">
-    <path class="st4" d="M154 303.5h-10.8c-0.5 0-0.8-0.8-0.8-1.4v-10.8c0-0.5 0.2-0.9 0.8-0.9H122c-1.1 0-2.5 0.8-2.5 1.9v46c0 1.1 1.4 2.1 2.5 2.1h31c1.1 0 1.5-1 1.5-2.1v-36.2C154.5 302.7 154.5 303.5 154 303.5z"/>
-    <line class="st4" x1="143.7" y1="290.7" x2="154.5" y2="302"/>
-    <path class="st4" d="M157.4 333.2h-28.9c-1 0-1.8 0.8-1.8 1.8v9.6c0 1 0.8 1.8 1.8 1.8h28.9c1 0 1.8-0.8 1.8-1.8v-9.6C159.2 334.1 158.4 333.2 157.4 333.2z"/>
-    <text transform="matrix(1 0 0 1 129.0926 343.2451)" class="st7 st8">
-      .HTML
-    </text>
-    <line class="st9" x1="127" y1="312.5" x2="149" y2="312.5"/>
-    <line class="st9" x1="127" y1="318.5" x2="149" y2="318.5"/>
-    <line class="st9" x1="127" y1="321.5" x2="143" y2="321.5"/>
-    <line class="st9" x1="127" y1="315.5" x2="149" y2="315.5"/>
-  </g>
-  <text transform="matrix(1 0 0 1 423.3836 35)" class="st7 st10">
-    Serveur
-  </text>
-</svg>
-
-
-<a id="animation-play">Rejouer l'animation</a>
-
 
 ## Conclusion
 

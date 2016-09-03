@@ -1,0 +1,35 @@
+#pipe-bg,
+#assoc-carre-bg,
+.bg-entreprise {
+  fill: color(primary-color-dark);
+}
+
+#assoc-bg {
+  fill: color(primary-color);
+}
+
+.article-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+// -----------------------------------
+// @ svg home prestations
+// -----------------------------------
+.masonery-block {
+  fill: color(accent-color);
+}
+
+// -----------------------------------
+// @ svg home responsives
+// -----------------------------------
+#responsive_svg {
+  display :block;
+  margin : 0 auto;
+  width :200px;
+}
+
+#responsive_tablet,
+#responsive_phone {
+  visibility: hidden;
+}
