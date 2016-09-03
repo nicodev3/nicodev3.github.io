@@ -18,12 +18,14 @@ h1 {
   @include fz($h1-fz)
 }
 
-.page-h1 {
-  padding-left: 1em;
-  line-height: 2.5em;
+.page-h1,
+.post-content h1 {
+  padding: 1em 0 1em 1em;;
+  line-height: 1.5em;
   margin: 0;
   color: hsla(0, 0, 92%, 1);
   background: url('/images/h1-bg.png') repeat center center;
+  @include bleed-x(3em);
 }
 
 h2 {

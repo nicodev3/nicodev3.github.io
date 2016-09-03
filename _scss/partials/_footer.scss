@@ -44,6 +44,16 @@
     list-style : none;
 }
 
-.social-media-list a {
-    color : color-lighter(accent-color, 4);
+.social-media-list li {
+    line-height: 2;
+}
+
+.social-media-list a,
+.contact-list a {
+    color : color-lighter(accent-color, 6);
+    text-decoration: none;
+}
+
+#disqus_thread {
+    @include container();
 }

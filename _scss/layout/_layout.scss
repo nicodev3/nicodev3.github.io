@@ -75,4 +75,24 @@
   text-align : center;
 }
 
+// -----------------------------------
+// Qualites sites
+// -----------------------------------
+.qualite-site {
+  min-height: 25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// -----------------------------------
+// FLEXBOX
+// -----------------------------------
+.has-flex--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 
