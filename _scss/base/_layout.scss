@@ -30,10 +30,6 @@
     @include container();
 }
 
-.bandeau-container h1 {
-    padding-left : gutter();
-}
-
 .conteneur-haut {
     @include container();
 }
@@ -42,7 +38,8 @@
 // Layout gauche/droite
 // ==========================================================================
 .content-left ,
-.content-right {
+.content-right,
+.content-fullpage {
     min-height : 30em;
     margin-top : gutter();
     padding-top : gutter();

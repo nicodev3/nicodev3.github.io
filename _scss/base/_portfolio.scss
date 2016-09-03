@@ -162,49 +162,6 @@
     border : 1px solid $rose;
 }
 
-.button-html {
-    background-color : #e44d26;
-    color : #ebebeb;
-}
-
-.button-css3 {
-    background-color : #1572b7;
-    color : white;
-}
-
-.button-sass {
-    background-color : #c8518d;
-    color : white;
-}
-
-.button-jekyll {
-    background-color : #fc0;
-    color : #333;
-}
-
-.button-laravel {
-    background-color : #f87265;
-    color : white;
-}
-
-.button-javascript {
-    background-color : #f0db4f;
-}
-
-.button-php {
-    background-color : #5a66a2;
-    color : white;
-}
-
-.button-github {
-    background-color : #9cdaf0;
-}
-
-.button-love {
-    background-color : $rose-clair;
-    color : white;
-}
-
 .fa-heart ,
 .fa-heart-o {
     transition : background-color 3s ease;
@@ -350,4 +307,8 @@
 .gal-thumb a img {
     display : block;
     width : 100%;
+}
+
+.portfolio-h2 {
+    font-size: 1.3em;
 }

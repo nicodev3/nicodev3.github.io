@@ -46,13 +46,20 @@ h6 {
 h1 {
     color : color(primary-color);
     font-size : $fs-h1--phone;
-    letter-spacing : -1px;
     line-height : $lh-h1--phone;
 
     @include susy-breakpoint($small) {
         font-size : $fs-h1--desktop;
         line-height : $lh-h1--desktop;
     }
+}
+
+.page-h1 {
+    padding-left: 1em;
+    line-height: 2.5em;
+    margin: 0;
+    color: hsla(0, 0, 92%, 1);
+    background: url('/images/h1-bg.png') repeat center center;
 }
 
 h2 {

@@ -4,7 +4,7 @@
 .site-header {
     position : relative;
     min-height : 5em;
-    border-bottom : 5px solid color(primary-color-light);
+    border-bottom : 5px solid color(accent-color);
     background : color(primary-color-dark);
 
     @include susy-breakpoint($small) {
