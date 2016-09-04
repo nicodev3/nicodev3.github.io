@@ -8,6 +8,13 @@ url: "http://nicodev3.github.io" # the base hostname & protocol for your site
 twitter_username: nicodevaux
 github_username:  nicodev3
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -35,17 +42,4 @@ comments: true
 # Exclude directories and/or files from the conversion.
 exclude: [node_modules, gulpfile.js, package.json, Gemfile, Gemfile.lock]
 
-#defaults:
-#  -
-#    scope:
-#      path: "" # an empty string here means all files in the project
-#    values:
-#      layout: "default"
-
-#defaults:
-#  -
-#    scope:
-#      path: "" # an empty string here means all files in the project
-#      type: "posts" ou pages, drafts
-#    values:
-#      layout: "default"
+gems: [jekyll-admin]
