@@ -24,10 +24,12 @@ Un site internet c'est, à priori, si l'on s'en tient à la vocation première d
 
 En tant que psychologues, nous savons, ou plutôt nous sommes censés savoir, par expérience plus que par érudition, que la parole, et par extension le texte, peuvent avoir sur celui qui y est soumis un effet suggestif. La psychanalyse est d'ailleurs née du constat freudien que l'hypnose seule ne venait pas à bout de certaines névroses, et que la dimension inconsciente avait fort à voir avec l'expression symptômatique. 
 
-Dès lors, quand nous nous adressons, à travers une communication écrite, à nos hypothétiques futurs patients - les visiteurs de notre site internet - quels effets produisons-nous chez eux&nbsp;? Effet de séduction, ou mise en place d'un cadre venant recueillir la parole&nbsp;?
+Dès lors, quand nous nous adressons, à travers une communication écrite, à nos hypothétiques futurs patients - les visiteurs de notre site internet - quels effets produisons-nous chez eux&nbsp;? Effet de séduction, ou mise en place de l'archéologie d'un cadre venant recueillir la parole&nbsp;?
+
+En d'autres termes, le contenant, l'apparence du site internet, fait-il cadre ou séduction&nbsp;? Et par extension ce contenant permet-il d'accéder au contenu, ce qui vient à priori chercher la personne en souffrance psychique&nbsp;?
 
 ## Esthétique vs Cosmétique
 
-
+De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offrent à nous. Utiliser une solution toute faite, avec un design prémâché, et y intégrer du contenu, ou bien encore faire appel à une agence Web ou un freelance pour faire le travail. Or, il semble que la plupart des solutions évoquées néglige, la plupart du temps, la spécificité de notre profession. On ne fait pas un site pour un psychologue comme on fait un site pour un commerçant (même si le psychologue libéral fait commerce de son art).
 
 
