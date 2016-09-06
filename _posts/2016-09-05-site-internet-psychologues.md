@@ -32,4 +32,10 @@ En d'autres termes, le contenant, l'apparence du site internet, fait-il cadre ou
 
 De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offrent à nous. Utiliser une solution toute faite, avec un design prémâché, et y intégrer du contenu, ou bien encore faire appel à une agence Web ou un freelance pour faire le travail. Or, il semble que la plupart des solutions évoquées néglige, la plupart du temps, la spécificité de notre profession. On ne fait pas un site pour un psychologue comme on fait un site pour un commerçant (même si le psychologue libéral fait commerce de son art).
 
+Nous vivons dans une société ou le pouvoir de l'image va grandissant, installant même à certains endroits une forme de dictature. "Ce qui est beau est bon". Tel est l'argument des publicitaires, qui savent user du pouvoir de séduction de l'image et du verbe. Ce déni de la dimension fragile de l'Humain, vire parfois à un véritable fétichisme qui vient voiler, ou plutôt parer, la réalité de notre finitude sous des oripeaux. Jeunesse éternelle.. Cette **haine de la castration**, de ce qui nous délite et nous sépare du monde, donne lieu à une mascarade souvent grotesque mais oh combien séduisante. On recouvre la laideur ou la vieillesse - jusqu'au mort - d'une poudre cosmétique afin d'en nier l'inexorable réalité. "Parce qu'on le vaut bien", dit la publicité.
+
+La dimension esthétique, quant à elle, vise, par une production sublimatoire, à transmettre un message d'humanité, via le déclenchement, à travers l'oeil du spectateur, d'une émotion, d'affects, qui peuvent dès lors se partager. Nous avons tous vécu ces moments d'une profonde sérénité ou l'oeuvre nous transporte et met du baume à l'âme.
+
+Or, nous, psychologues, nous situons nous du côté d'une société par certains aspects hystérique, voire perverse, ou du côté du sens et de l'humain&nbsp;? Avons nous la capacité de résister à l'appel des sirènes&nbsp;? Rien n'est moins sur, mais quelques précautions peuvent se penser.
+
 
