@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "beepbeep": "^1.2.0",
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.15.0",
     "del": "^2.0.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^3.0.0",
