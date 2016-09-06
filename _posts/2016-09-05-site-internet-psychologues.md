@@ -22,4 +22,12 @@ Cet article est un essai, une tentative - bien modeste - de penser, en tant que 
 
 Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange, si l'on tient compte des évolutions du Web dit 2.0, de **contenus**. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage&nbsp;?
 
+En tant que psychologues, nous savons, ou plutôt nous sommes censés savoir, par expérience plus que par érudition, que la parole, et par extension le texte, peuvent avoir sur celui qui y est soumis un effet suggestif. La psychanalyse est d'ailleurs née du constat freudien que l'hypnose seule ne venait pas à bout de certaines névroses, et que la dimension inconsciente avait fort à voir avec l'expression symptômatique. 
+
+Dès lors, quand nous nous adressons, à travers une communication écrite, à nos hypothétiques futurs patients - les visiteurs de notre site internet - quels effets produisons-nous chez eux&nbsp;? Effet de séduction, ou mise en place d'un cadre venant recueillir la parole&nbsp;?
+
+## Esthétique vs Cosmétique
+
+
+
 
