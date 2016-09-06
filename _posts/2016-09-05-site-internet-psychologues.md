@@ -10,4 +10,4 @@ excerpt: "De plus en plus de psychologues se font connaître via un site interne
 
 # Article en cours de rédaction
 
-[https://fr.wikipedia.org/wiki/Tim_Berners-Lee](Time Berners-Lee), qui inventa le *World Wide Web*, se doutait-il, pour reprendre la métaphore de S. Freud à S. Ferenszi et C.G. Jung, qu'il nous apportait la peste&nbsp;?
+[Time Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee), qui inventa le *World Wide Web*, se doutait-il, pour reprendre la métaphore de S. Freud à S. Ferenszi et C.G. Jung, qu'il nous apportait la peste&nbsp;?
