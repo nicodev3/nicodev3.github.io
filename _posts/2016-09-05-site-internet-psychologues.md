@@ -38,4 +38,10 @@ La dimension esthétique, quant à elle, vise, par une production sublimatoire, 
 
 Or, nous, psychologues, nous situons nous du côté d'une société par certains aspects hystérique, voire perverse, ou du côté du sens et de l'humain&nbsp;? Avons nous la capacité de résister à l'appel des sirènes&nbsp;? Rien n'est moins sur, mais quelques précautions peuvent se penser, quand on est à l'aube de la création d'un site.
 
+J'avais récemment une conversation sur un forum avec une collègue qui m'opposait ce que je traduirai par la phrase suivante. "Ce n'est pas parce qu'un site est beau que le psychologue est bon". Elle précisait d'ailleurs que selon elle, les "bons" psychologues avaient souvent des sites très simples et réalisés à l'ancienne. Je lui accorde un crédit. Ce n'est pas parce que c'est beau que c'est bon, pas plus que les pâtes Machintruc sont bonnes en raison de l'emballage coloré. *C'est bon quand c'est bien fait, avec amour et simplicité, et surtout avec honêteté*.
+
+## Ce qui se conçoit bien... **Content Architecture**
+
+
+
 
