@@ -33,7 +33,7 @@ Internet, qui au départ était conçu comme un réseau d'échange d'information
 
 ### Les psychologues sur Internet
 
-Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômés, dont le titre est protégé par un décret&nbsp;? Sont-ils présents sur la toile&nbsp;? Maitrisent-t-ils les outils informatiques, mais aussi et surtout les bonnes pratiques du Web, qui leur permettront de diffuser leur contenu, et ce si possible en adéquation avec leur déontologie&nbsp? 
+Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômés, dont le titre est protégé par un décret&nbsp;? Sont-ils présents sur la toile&nbsp;? Maitrisent-t-ils les outils informatiques, mais aussi et surtout les bonnes pratiques du Web, qui leur permettront de diffuser leur contenu, et ce si possible en adéquation avec leur déontologie&nbsp;? 
 
 Si les médecins et paramédicaux ont l'interdiction formelle via l'Ordre des Médecins de faire publicité, les psychologues, de par leur statut, ont toute légitimité à opérer de la sorte. Cela autorise-t-il toutes les pratiques&nbsp;?
 
@@ -41,7 +41,7 @@ Cet article est un essai, une tentative ‒ bien modeste ‒ de penser, en tant 
 
 ## Hypertexte et images, du contenu au contenant
 
-Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange ‒ si l'on tient compte des évolutions du Web dit 2.0 ‒ de **contenus**.  N’oublions pas qu’aux débuts d’Internet, ces contenus étaient strictement constitués de texte, et que la grande nouveauté était la possibilité de créer des **liens hypertexte**, ce qui a tissé au fil des années ‒ c’est le cas de le dire ‒  la toile que nous connaissons aujourd’hui. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage&nbsp;?
+Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange ‒ si l'on tient compte des évolutions du Web dit 2.0 [^1] ‒ de **contenus**.  N’oublions pas qu’aux débuts d’Internet, ces contenus étaient strictement constitués de texte, et que la grande nouveauté était la possibilité de créer des **liens hypertexte**, ce qui a tissé au fil des années ‒ c’est le cas de le dire ‒  la toile que nous connaissons aujourd’hui. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage&nbsp;?
 
 En tant que psychologues, nous savons, ou plutôt nous sommes censés savoir, par expérience plus que par érudition, que la parole, mais aussi l’écrit et l’image, peuvent avoir sur celui qui y est soumis un effet suggestif. La psychanalyse est d'ailleurs née du constat freudien que l'hypnose seule ne venait pas à bout de certaines névroses, et que la dimension inconsciente avait fort à voir avec l'expression symptomatique. 
 
@@ -105,9 +105,11 @@ Un exemple parmi tant d’autres, justifier le texte d’une page Web c’est re
 
 > Il est important de se rappeler que le handicap peut être invisible, la dyslexie ne se voit pas, pourtant elle empêche de nombreuses personnes d’accéder à certains contenus.
 
-Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^1] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
+Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^2] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
 
-[^1]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
+[^1]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
+
+[^2]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
 
 ## Réseaux sociaux, attention aux dérives
 
