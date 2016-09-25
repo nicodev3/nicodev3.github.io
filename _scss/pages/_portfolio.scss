@@ -1,53 +1,57 @@
 .portfolio-site-name {
-  display : block;
-  position : relative;
-  width : 100%;
-  height : 100%;
-  &:hover {
-    box-shadow : 0 1px 0 0 #fa9c00;
-  }
+    display : block;
+    position : relative;
+    width : 100%;
+    height : 100%;
+    &:hover {
+        box-shadow : 0 1px 0 0 #fa9c00;
+    }
 
-  &:hover .thumbover {
-    opacity : .6;
-  }
+    &:hover .thumbover {
+        opacity : .6;
+    }
 
-  &:hover .icon-thumb {
-    transform : scale(1);
-  }
+    &:hover .icon-thumb {
+        transform : scale(1);
+    }
 }
 
 .thumbover {
-  display : flex;
-  position : absolute;
-  top : 0;
-  right : 0;
-  bottom : 0;
-  left : 0;
-  transition : all .3s ease-out;
-  background : color(primary-color);
-  opacity : 0;
+    display : flex;
+    position : absolute;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+    transition : all .3s ease-out;
+    background : color(primary-color);
+    opacity : 0;
 
-  align-items : center;
-  justify-content : center;
+    align-items : center;
+    justify-content : center;
 }
 
 .portfolio-main-link h2 {
-  color : color(accent-color);
-  font-size : 1.2em;
-  line-height : 1.5;
-  text-align : center;
-  text-decoration : underline;
+    color : color(accent-color);
+    font-size : 1.2em;
+    line-height : 1.5;
+    text-align : center;
+    text-decoration : underline;
 }
 
 .gal-thumb {
-  position : relative;
+    position : relative;
 }
 
 .gal-thumb a img {
-  display : block;
-  width : 100%;
+    display : block;
+    width : 100%;
 }
 
 .portfolio-h2 {
-  font-size : 1.3em;
+    font-size : 1.1em;
+    text-align : center;
+    font-weight: 400;
+    color: color(primary-color-dark);
+    margin-top: 1.5em;
 }
