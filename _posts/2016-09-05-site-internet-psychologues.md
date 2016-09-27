@@ -73,6 +73,16 @@ De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offren
 
 Nous vivons dans une société ou le pouvoir de l'image va grandissant, installant même à certains endroits une forme de dictature. "Ce qui est beau est bon". Tel est l'argument des publicitaires, qui savent user du pouvoir de séduction de l'image et du verbe. Ce déni de la dimension fragile de l'Humain, vire parfois à un véritable fétichisme qui vient voiler, ou plutôt parer, la réalité de notre finitude sous des oripeaux. Jeunesse éternelle.. Cette **haine de la castration**, de ce qui nous délite et nous sépare du monde, donne lieu à une mascarade souvent grotesque, mais oh combien séduisante. On recouvre la laideur ou la vieillesse &mdash; jusqu'au morts que l’on embaume &mdash; d'une poudre cosmétique afin d'en nier l'inexorable réalité. "Parce qu'on le vaut bien", dit la publicité.
 
+### *Personal Branding* ou comment ne pas tomber dans l'auto-promotion publicitaire
+
+*Personnal Branding*. Voilà un drôle de mot glané au fil des récits de certains de mes patients immergés dans le monde professionnel. Renseignements pris, cette expression encore peu courante mais émergente fait un véritable *buzz* &mdash; pour s'exprimer ainsi... Le marketing personnel utilise des stratégies publicitaires éprouvées afin de promouvoir sa personne. La définition est édifiante&nbsp;: "Le Personal Branding a pour but premier de vous permettre de développer une communication claire sur votre identité, quel que soit le support, afin que vous puissiez vous démarquer de vos concurrents et de vos pairs. C’est une démarche qui devient essentielle si vous souhaite promouvoir votre projet professionnel, votre expertise et développer votre notoriété". 
+
+Cette forme de *propagande*, avec ses idéaux de performance et de victoire sur autrui, s'immisce parfois subrepticement dans nos discours, et malheureusement dans nos sites internet à destination d'un public en souffrance, ou tout au moins en recherche d'apaisement. Certains "collègues" &mdash; il suffit de faire quelques recherches sur le Net pour savoir de quoi je parle, ne comptez-pas sur moi pour faire de la délation &mdash; semblent à cet égard être tombés bien bas. Les *experts*, *sachants* en tout genre, promettent guérison du symptôme en mettant en avant, non leur technique, mais leur aura supposée. Ces *gurus* ont pourtant bien souvent tous les titres légitimant l'appellation de psychologue. Que reste-t-il de la psychologie&nbsp;?
+
+> Qu'on ne se méprenne pas. Les gurus en tous genres ont bien compris l'importance de leur image. Séduction, falsification, promesses et danses en tous genres sont leurs armes fétiches.
+
+
+
 ### Esthétique
 
 La dimension esthétique, quant à elle, provoque, par une production sublimatoire, le déclenchement, à travers les sens du spectateur, d'une émotion, d'affects, qui peuvent dès lors se partager. Nous avons tous vécu ces moments d'une profonde sérénité ou l'oeuvre nous transporte et met du baume à l'âme, **parce qu'un autre nous dévoile sa propre condition humaine**. "Il fait moins noir quand quelqu'un parle", dit l'enfant à son père.
