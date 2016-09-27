@@ -38,6 +38,11 @@ Internet, qui au départ était conçu comme un réseau d'échange d'information
 
 Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômés, dont le titre est protégé par un décret&nbsp;? Sont-ils présents sur la toile&nbsp;? Maitrisent-t-ils les outils informatiques, mais aussi et surtout les bonnes pratiques du Web, qui leur permettront de diffuser leur contenu, et ce si possible en adéquation avec leur déontologie&nbsp;?
 
+Le (http://www.codededeontologiedespsychologues.fr/LE-CODE.html)[code de déontologie des psychologues] propose à cet égard deux notions fondamentales :
+
+- **Article 32**  : Le psychologue a une responsabilité dans la diffusion de la psychologie et de l’image de la profession auprès du public et des médias. Il fait une présentation de la psychologie, de ses applications et de son exercice en accord avec les règles déontologiques de la profession. Il use de son droit de rectification pour contribuer au sérieux des informations communiquées au public.
+- **Article 33** : Le psychologue fait preuve de discernement, dans sa présentation au public, des méthodes et techniques psychologiques qu’il utilise. Il informe le public des dangers potentiels de leur utilisation et instrumentalisation par des non psychologues. Il se montre vigilant quant aux conditions de sa participation à tout message diffusé publiquement.
+
 Il est étonnant que le numéro du *Journal des Psychologues* n°301 (2012), dont le thème est *Des psychologues sur Internet*, n'aborde pas ce point. Le numéro, consacré dans sa grande majorité aux *cyberthérapies*, me semble évacuer une dimension majeure et sans doute trop évidente pour être perçue&nbsp;: les psychologues utilisent de plus en plus Internet pour se faire connaître. Tout au plus, ce n'est déjà pas si mal, la conclusion du numéro invite à une reflexion globale sur la présence des psychologues sur Internet.
 
 > Mais se prémunir des « mésusages » de la psychologie implique d’en explorer les « usages » nouveaux qui sont appelés à prendre une place toujours plus importante dans le paysage psychologique. <cite>(Benoît Schneider)[^1]</cite>
