@@ -107,15 +107,29 @@ Un exemple parmi tant d’autres, justifier le texte d’une page Web c’est re
 
 Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^2] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
 
+
+
+## Réseaux sociaux, attention aux dérives
+
+Activer et entrentenir sa présence sur Internet est de nos jours une activité qui peut mettre en jeu une multitude de canaux. Du site internet en passant pas les réseaux sociaux comme Facebook ou Twitter, notre présence en ligne n'est jamais anodine, et les implications pour notre travail de psychologues existent.
+
+Une règle à suivre : ne jamais confondre identité personnelle et identité professionnelle. Notre activité de psychologue réclame, à fortiori quand une relation de type psychothérapeutique est impliquée, une certaine opacité qui facilite le transfert. En montrer un peu, mais pas trop. Mettez-vous des photos de vos vacances dans votre lieu de consultation ? Je suppose que non. 
+
+> Donner accès à des informations relevant de l'intime sur les réseaux sociaux peut, au minimum, empêcher une relation transferentielle de se déployer, au pire venir entammer votre cadre.
+
+Votre espace professionnel sur les réseaux sociaux ne devrait pas être infiltré d'informations trop personnelles.
+
+## Référencement, le sens sacrifié
+
+**Delivering fresh and relevant content**, telle est la devise de Google, Bing et autres moteurs de recherche
+
+## Conclusion
+
 [^1]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
 
 [^2]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
 
-## Réseaux sociaux, attention aux dérives
-
-## Référencement, le sens sacrifié
-
-## Conclusion
+[^3]: "Proposer du contenu approprié et à jour"
 
 
 
