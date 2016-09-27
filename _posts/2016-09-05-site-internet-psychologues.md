@@ -83,8 +83,6 @@ Cette forme de *propagande*, avec ses idéaux de performance et de victoire sur 
 
 Qu'on ne se méprenne pas. Les gurus en tous genres ont bien compris l'importance de leur image. Séduction, falsification, promesses et danses en tous genres sont leurs armes fétiches.
 
-
-
 ### Esthétique
 
 La dimension esthétique, quant à elle, provoque, par une production sublimatoire, le déclenchement, à travers les sens du spectateur, d'une émotion, d'affects, qui peuvent dès lors se partager. Nous avons tous vécu ces moments d'une profonde sérénité ou l'oeuvre nous transporte et met du baume à l'âme, **parce qu'un autre nous dévoile sa propre condition humaine**. "Il fait moins noir quand quelqu'un parle", dit l'enfant à son père.
@@ -135,7 +133,7 @@ Un exemple parmi tant d’autres, justifier le texte d’une page Web c’est re
 
 > Il est important de se rappeler que le handicap peut être invisible, la dyslexie ne se voit pas, pourtant elle empêche de nombreuses personnes d’accéder à certains contenus.
 
-Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^2] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
+Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^4] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
 
 ## Réseaux sociaux, attention aux dérives
 {: #reseaux}
@@ -151,7 +149,7 @@ Votre espace professionnel sur les réseaux sociaux ne devrait pas être infiltr
 ## Référencement, le sens sacrifié
 {: #referencement}
 
-*Delivering fresh and relevant content*[^3], telle est la devise de Google, Bing et autres moteurs de recherche. Malheureusement, afin d'atteindre le saint Graal du positionnement dans le top 3 des résultats de Google, ou à minima la première page - n'oubliez pas qu'un site situé en seconde page n'a que peu de chances d'être consulté, ne parlons même pas du positionnement des pages suivantes - certains cèdent à la tentation du mot clé et du lien à tout va.
+*Delivering fresh and relevant content*[^5], telle est la devise de Google, Bing et autres moteurs de recherche. Malheureusement, afin d'atteindre le saint Graal du positionnement dans le top 3 des résultats de Google, ou à minima la première page - n'oubliez pas qu'un site situé en seconde page n'a que peu de chances d'être consulté, ne parlons même pas du positionnement des pages suivantes - certains cèdent à la tentation du mot clé et du lien à tout va.
 
 Comme je vous l'ai détaillé dans l'article [Référencer son site avec Google : les bonnes pratiques](http://nicodev3.github.io/2016/01/26/referencement-site-psychologue/), les mots clé sont importants - leur présence, leur densité et leur emplacement dans la page -, de même que les liens pointant vers votre site, et des centaines d'autres choses.
 
@@ -169,8 +167,8 @@ Réaliser un site internet, c'est bien plus que juxtaposer du texte et des image
 
 [^2]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
 
-[^3]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
+[^3]: Dimitri Weyl, « L’omniprésence de la toutepuissance dans l’imagerie publicitaire - Un exemple paradigmatique : l’utilisation du corps féminin », *Recherches en Psychanalyse*, 16|2013.
 
-[^4]: "Proposer du contenu approprié et à jour"
+[^4]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
 
-[^6]: Dimitri Weyl, « L’omniprésence de la toutepuissance dans l’imagerie publicitaire - Un exemple paradigmatique : l’utilisation du corps féminin », *Recherches en Psychanalyse*, 16|2013.
+[^5]: "Proposer du contenu approprié et à jour"
