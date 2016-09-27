@@ -42,7 +42,7 @@ Il est étonnant que le numéro du *Journal des Psychologues* n°301 (2012), don
 
 > Mais se prémunir des « mésusages » de la psychologie implique d’en explorer les « usages » nouveaux qui sont appelés à prendre une place toujours plus importante dans le paysage psychologique.
 
-<cite>(Benoît Schneider)[^1]</cite>
+> <cite>(Benoît Schneider)[^1]</cite>
 
 Depuis, peu d'avancées à ma connaissance.
 
@@ -149,9 +149,7 @@ Mais le plus important, et ce qui est de plus en plus pris en compte par Google 
 Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable reflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
 
 
-[^1]: Schneider Benoît, « Une réflexion collective nécessaire », Le Journal des psychologues 8/2012 (n° 301) , p. 42-42 
-URL : www.cairn.info/revue-le-journal-des-psychologues-2012-8-page-42.htm. 
-DOI : 10.3917/jdp.301.0042.
+[^1]: Schneider Benoît, « Une réflexion collective nécessaire », Le Journal des psychologues 8/2012 (n° 301) , p. 42-42 / DOI : 10.3917/jdp.301.0042.
 
 [^2]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
 
