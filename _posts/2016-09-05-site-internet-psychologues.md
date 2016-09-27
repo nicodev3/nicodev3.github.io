@@ -16,22 +16,25 @@ excerpt: De plus en plus de psychologues se font connaître via un site internet
 {: .plan-article}
 <div>
 #### Plan de l'article
-- [Le nom de domaine](#ndd)
-	- [Internet idéal, réalité d'Internet](#ideal)
-	- [Quel nom de domaine choisir](#kelnom)
-- [L'hébergement](#heberg)
-	- [Pourquoi un hébergeur](#pkoihebergeur)
-	- [Quel type d\'hébergement choisir](#kelhebergement)
-	- [Quel hébergeur choisir](#kelhebergeurchoisir)
+- [Internet idéal, réalité d'Internet](#ideal)
+- [Les psychologues sur Internet](#psysurinternet)
+- [Hypertexte et images, du contenu au contenant](#hypertexte)
+- [Ce qui se conçoit bien... *Content Architecture*](#architecture)
+- [Accessibilité : pour le Web aussi&nbsp;!](#accessibilite)
+- [Réseaux sociaux, attention aux dérives](#reseaux)
+- [Référencement, le sens sacrifié](#referencement)
+- [Conclusion](#conclusion)
 </div>
 
 ## Internet idéal, réalité d'Internet
+{: #ideal}
 
 [Time Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee), qui inventa le *World Wide Web*, se doutait-il, pour reprendre la boutade de S. Freud à S. Ferenszi et C.G. Jung, alors qu'il s'apprêtait à présenter sa théorie psychanalytique aux &Eacute;tats-Unis, qu'il nous apportait la peste&nbsp;?
 
 Internet, qui au départ était conçu comme un réseau d'échange d'informations entre universitaires, est vite devenu un lieu incontournable pour médiatiser toutes sortes de contenus, des plus scientifiques aux plus futiles. De nos jours, le commerce prend une part majeure dans l'utilisation d'Internet, et sous des formes pas toujours reconnaissables.
 
 ## Les psychologues sur Internet
+{: #psysurinternet}
 
 Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômés, dont le titre est protégé par un décret&nbsp;? Sont-ils présents sur la toile&nbsp;? Maitrisent-t-ils les outils informatiques, mais aussi et surtout les bonnes pratiques du Web, qui leur permettront de diffuser leur contenu, et ce si possible en adéquation avec leur déontologie&nbsp;? 
 
@@ -40,6 +43,7 @@ Si les médecins et paramédicaux ont l'interdiction formelle via l'Ordre des M�
 Cet article est un essai, une tentative ‒ bien modeste ‒ de penser, en tant que psychologue et créateur de sites internet, aux implications pour le psychologue et son public, de la création d'un site. Pour cela, divisons un peu les choses, avant de les rassembler...
 
 ## Hypertexte et images, du contenu au contenant
+{: #hypertexte}
 
 Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange ‒ si l'on tient compte des évolutions du Web dit 2.0 [^1] ‒ de **contenus**.  N’oublions pas qu’aux débuts d’Internet, ces contenus étaient strictement constitués de texte, et que la grande nouveauté était la possibilité de créer des **liens hypertexte**, ce qui a tissé au fil des années ‒ c’est le cas de le dire ‒  la toile que nous connaissons aujourd’hui. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage&nbsp;?
 
@@ -49,7 +53,7 @@ En tant que psychologues, nous savons, ou plutôt nous sommes censés savoir, pa
 
 En d'autres termes, le contenant, l'apparence du site internet, fait-il cadre ou séduction&nbsp;? Et par extension ce contenant permet-il d'accéder au contenu, ce que vient à priori chercher la personne en souffrance psychique&nbsp;?
 
-## Esthétique vs Cosmétique
+### Esthétique vs Cosmétique
 
 De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offrent à nous. Utiliser une solution toute faite, avec un design préconçu, et y intégrer du contenu, ou bien encore faire appel à une agence Web ou un freelance pour faire le travail. Or, il semble que la plupart des solutions évoquées néglige, la plupart du temps, la spécificité de notre profession. On ne fait pas un site pour un psychologue comme on fait un site pour un commerçant (même si le psychologue libéral fait commerce de son art).
 
@@ -72,6 +76,7 @@ Rien n'est moins sur, mais quelques précautions peuvent se penser, quand on est
 J'avais récemment une conversation sur un forum avec une collègue qui m'opposait ce que je traduirai par la phrase suivante. "Ce n'est pas parce qu'un site est beau que le psychologue est bon". Elle précisait d'ailleurs que selon elle, les "bons" psychologues avaient souvent des sites très simples et réalisés à l'ancienne. Je lui accorde un crédit. Ce n'est pas parce que c'est beau que c'est bon, pas plus que les pâtes Machintruc sont bonnes en raison de l'emballage coloré. **C'est bon quand c'est bien fait**. Mais qu'est-ce qu'un site "bien fait" ? Cette vision peut sembler subjective au néophyte. Quelques pistes...
 
 ## Ce qui se conçoit bien... *Content Architecture*
+{: #architecture}
 
 L'architecture de contenu est très à la mode dans le monde du webdesign, ainsi que son dérivé, l'UX (pour User Experience). Pourquoi diable se soucier d'architecture&nbsp;? Si l'on reprend le modèle de l'architecture la plus connue, celle des bâtiments, vous admettrez qu'une école n'est pas conçue comme une banque, de même que votre salle de bains et votre salon sont ‒ je vous le souhaite ‒ différents.
 
@@ -86,6 +91,7 @@ Que penseriez-vous, en tant que visiteur d'un site de psychologue, si le contenu
 > Votre site internet, c’est souvent la première chose de vous que voit votre patient, avant même le pas de votre porte. Il fait partie de l’accueil que vous lui réservez.
 
 ## Accessibilité : pour le Web aussi&nbsp;!
+{: #accessibilite}
 
 Vous avez mis ‒ ou pas ! ‒ votre cabinet de consultation aux normes ‒ drastiques ‒ d’accessibilité&nbsp;? Bravo, je vous en félicite. Mais qu’en est il de votre site internet&nbsp;?
 
@@ -107,9 +113,8 @@ Un exemple parmi tant d’autres, justifier le texte d’une page Web c’est re
 
 Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^2] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
 
-
-
 ## Réseaux sociaux, attention aux dérives
+{: #reseaux}
 
 Activer et entrentenir sa présence sur Internet est de nos jours une activité qui peut mettre en jeu une multitude de canaux. Du site internet en passant pas les réseaux sociaux comme Facebook ou Twitter, notre présence en ligne n'est jamais anodine, et les implications pour notre travail de psychologues existent.
 
@@ -120,6 +125,7 @@ Une règle à suivre : ne jamais confondre identité personnelle et identité pr
 Votre espace professionnel sur les réseaux sociaux ne devrait pas être infiltré d'informations trop personnelles.
 
 ## Référencement, le sens sacrifié
+{: #referencement}
 
 *Delivering fresh and relevant content*[^3], telle est la devise de Google, Bing et autres moteurs de recherche. Malheureusement, afin d'atteindre le saint Graal du positionnement dans le top 3 des résultats de Google, ou à minima la première page - n'oubliez pas qu'un site situé en seconde page n'a que peu de chances d'être consulté, ne parlons même pas du positionnement des pages suivantes - certains cèdent à la tentation du mot clé et du lien à tout va.
 
@@ -130,6 +136,7 @@ Mais le plus important, et ce qui est de plus en plus pris en compte par Google 
 > Votre site doit posséder une architecture de contenu précise et logique, qui vient donner un accès le plus universel possible à l'internaute. C'est tant mieux pour l'utilisateur, et une bénédiction pour les auteurs de sites. Nous voici contraints d'élaborer notre contenu ! En tant que psychologues, c'est une bonne chose, vous en conviendrez.
 
 ## Conclusion
+{: #conclusion}
 
 Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable reflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
 
