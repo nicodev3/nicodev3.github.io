@@ -16,14 +16,14 @@ excerpt: De plus en plus de psychologues se font connaître via un site internet
 {: .plan-article}
 <div>
 #### Plan de l'article
-- [Internet idéal, réalité d'Internet](#ideal)
-- [Les psychologues sur Internet](#psysurinternet)
-- [Hypertexte et images, du contenu au contenant](#hypertexte)
-- [Ce qui se conçoit bien... *Content Architecture*](#architecture)
-- [Accessibilité : pour le Web aussi&nbsp;!](#accessibilite)
-- [Réseaux sociaux, attention aux dérives](#reseaux)
-- [Référencement, le sens sacrifié](#referencement)
-- [Conclusion](#conclusion)
+- [Internet idéal, réalité d'Internet](#ideal){: data-scroll=""}
+- [Les psychologues sur Internet](#psysurinternet){: data-scroll=""}
+- [Hypertexte et images, du contenu au contenant](#hypertexte){: data-scroll=""}
+- [Ce qui se conçoit bien... *Content Architecture*](#architecture){: data-scroll=""}
+- [Accessibilité : pour le Web aussi&nbsp;!](#accessibilite){: data-scroll=""}
+- [Réseaux sociaux, attention aux dérives](#reseaux){: data-scroll=""}
+- [Référencement, le sens sacrifié](#referencement){: data-scroll=""}
+- [Conclusion](#conclusion){: data-scroll=""}
 </div>
 
 ## Internet idéal, réalité d'Internet
