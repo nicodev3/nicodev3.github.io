@@ -79,7 +79,9 @@ Nous vivons dans une société ou le pouvoir de l'image va grandissant, installa
 
 Cette forme de *propagande*, avec ses idéaux de performance et de victoire sur autrui, s'immisce parfois subrepticement dans nos discours, et malheureusement dans nos sites internet à destination d'un public en souffrance, ou tout au moins en recherche d'apaisement. Certains "collègues" &mdash; il suffit de faire quelques recherches sur le Net pour savoir de quoi je parle, ne comptez-pas sur moi pour faire de la délation &mdash; semblent à cet égard être tombés bien bas. Les *experts*, *sachants* en tout genre, promettent guérison du symptôme en mettant en avant, non leur technique, mais leur aura supposée. Ces *gurus* ont pourtant bien souvent tous les titres légitimant l'appellation de psychologue. Que reste-t-il de la psychologie&nbsp;?
 
-> Qu'on ne se méprenne pas. Les gurus en tous genres ont bien compris l'importance de leur image. Séduction, falsification, promesses et danses en tous genres sont leurs armes fétiches.
+> Ce discours, mystificateur, promet la satisfaction de tous les désirs à condition d’y mettre le prix; c’est un encensement de la toute-puissance du désir. (Dimitri Weyl, 2013)[^6]
+
+Qu'on ne se méprenne pas. Les gurus en tous genres ont bien compris l'importance de leur image. Séduction, falsification, promesses et danses en tous genres sont leurs armes fétiches.
 
 
 
@@ -170,3 +172,5 @@ Réaliser un site internet, c'est bien plus que juxtaposer du texte et des image
 [^3]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
 
 [^4]: "Proposer du contenu approprié et à jour"
+
+[^6]: Dimitri Weyl, « L’omniprésence de la toutepuissance dans l’imagerie publicitaire - Un exemple paradigmatique : l’utilisation du corps féminin », *Recherches en Psychanalyse*, 16|2013.
