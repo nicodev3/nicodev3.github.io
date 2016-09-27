@@ -79,7 +79,7 @@ Nous vivons dans une société ou le pouvoir de l'image va grandissant, installa
 
 Cette forme de *propagande*, avec ses idéaux de performance et de victoire sur autrui, s'immisce parfois subrepticement dans nos discours, et malheureusement dans nos sites internet à destination d'un public en souffrance, ou tout au moins en recherche d'apaisement. Certains "collègues" &mdash; il suffit de faire quelques recherches sur le Net pour savoir de quoi je parle, ne comptez-pas sur moi pour faire de la délation &mdash; semblent à cet égard être tombés bien bas. Les *experts*, *sachants* en tout genre, promettent guérison du symptôme en mettant en avant, non leur technique, mais leur aura supposée. Ces *gurus* ont pourtant bien souvent tous les titres légitimant l'appellation de psychologue. Que reste-t-il de la psychologie&nbsp;?
 
-> Ce discours, mystificateur, promet la satisfaction de tous les désirs à condition d’y mettre le prix; c’est un encensement de la toute-puissance du désir. (Dimitri Weyl, 2013)[^6]
+> Ce discours [publicitaire], mystificateur, promet la satisfaction de tous les désirs à condition d’y mettre le prix; c’est un encensement de la toute-puissance du désir. (Dimitri Weyl, 2013)[^6]
 
 Qu'on ne se méprenne pas. Les gurus en tous genres ont bien compris l'importance de leur image. Séduction, falsification, promesses et danses en tous genres sont leurs armes fétiches.
 
