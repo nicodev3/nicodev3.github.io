@@ -36,7 +36,14 @@ Internet, qui au départ était conçu comme un réseau d'échange d'information
 ## Les psychologues sur Internet
 {: #psysurinternet}
 
-Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômés, dont le titre est protégé par un décret&nbsp;? Sont-ils présents sur la toile&nbsp;? Maitrisent-t-ils les outils informatiques, mais aussi et surtout les bonnes pratiques du Web, qui leur permettront de diffuser leur contenu, et ce si possible en adéquation avec leur déontologie&nbsp;? 
+Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômés, dont le titre est protégé par un décret&nbsp;? Sont-ils présents sur la toile&nbsp;? Maitrisent-t-ils les outils informatiques, mais aussi et surtout les bonnes pratiques du Web, qui leur permettront de diffuser leur contenu, et ce si possible en adéquation avec leur déontologie&nbsp;?
+
+Il est étonnant que le numéro du *Journal des Psychologues* n°301 (2012), dont le thème est *Des psychologues sur Internet*, n'aborde pas ce point. Le numéro, consacré dans sa grande majorité aux *cyberthérapies*, me semble évacuer une dimension majeure et sans doute trop évidente pour être perçue&nbsp;: les psychologues utilisent de plus en plus Internet pour se faire connaître. Tout au plus, ce n'est déjà pas si mal, la conclusion du numéro invite à une reflexion globale sur la présence des psychologues sur Internet.
+
+> Mais se prémunir des « mésusages » de la psychologie implique d’en explorer les « usages » nouveaux qui sont appelés à prendre une place toujours plus importante dans le paysage psychologique.
+> -- <cite>[Albert Einstein][1]</cite>
+
+Depuis, peu d'avancées à ma connaissance.
 
 Si les médecins et paramédicaux ont l'interdiction formelle via l'Ordre des Médecins de faire publicité, les psychologues, de par leur statut, ont toute légitimité à opérer de la sorte. Cela autorise-t-il toutes les pratiques&nbsp;?
 
@@ -45,7 +52,7 @@ Cet article est un essai, une tentative ‒ bien modeste ‒ de penser, en tant 
 ## Hypertexte et images, du contenu au contenant
 {: #hypertexte}
 
-Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange ‒ si l'on tient compte des évolutions du Web dit 2.0 [^1] ‒ de **contenus**.  N’oublions pas qu’aux débuts d’Internet, ces contenus étaient strictement constitués de texte, et que la grande nouveauté était la possibilité de créer des **liens hypertexte**, ce qui a tissé au fil des années ‒ c’est le cas de le dire ‒  la toile que nous connaissons aujourd’hui. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage&nbsp;?
+Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange ‒ si l'on tient compte des évolutions du Web dit 2.0 [^5] ‒ de **contenus**.  N’oublions pas qu’aux débuts d’Internet, ces contenus étaient strictement constitués de texte, et que la grande nouveauté était la possibilité de créer des **liens hypertexte**, ce qui a tissé au fil des années ‒ c’est le cas de le dire ‒  la toile que nous connaissons aujourd’hui. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage&nbsp;?
 
 En tant que psychologues, nous savons, ou plutôt nous sommes censés savoir, par expérience plus que par érudition, que la parole, mais aussi l’écrit et l’image, peuvent avoir sur celui qui y est soumis un effet suggestif. La psychanalyse est d'ailleurs née du constat freudien que l'hypnose seule ne venait pas à bout de certaines névroses, et que la dimension inconsciente avait fort à voir avec l'expression symptomatique. 
 
@@ -140,11 +147,16 @@ Mais le plus important, et ce qui est de plus en plus pris en compte par Google 
 
 Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable reflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
 
-[^1]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
 
-[^2]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
+[^1]: Schneider Benoît, « Une réflexion collective nécessaire », Le Journal des psychologues 8/2012 (n° 301) , p. 42-42 
+URL : www.cairn.info/revue-le-journal-des-psychologues-2012-8-page-42.htm. 
+DOI : 10.3917/jdp.301.0042.
 
-[^3]: "Proposer du contenu approprié et à jour"
+[^2]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
+
+[^3]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
+
+[^4]: "Proposer du contenu approprié et à jour"
 
 
 
