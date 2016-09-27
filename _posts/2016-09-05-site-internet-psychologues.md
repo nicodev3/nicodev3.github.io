@@ -52,16 +52,16 @@ Depuis, peu d'avancées à ma connaissance.
 
 Si les médecins et paramédicaux ont l'interdiction formelle via l'Ordre des Médecins de faire publicité, les psychologues, de par leur statut, ont toute légitimité à opérer de la sorte. Cela autorise-t-il toutes les pratiques&nbsp;?
 
-Cet article est un essai, une tentative ‒ bien modeste ‒ de penser, en tant que psychologue et créateur de sites internet, aux implications pour le psychologue et son public, de la création d'un site. Pour cela, divisons un peu les choses, avant de les rassembler...
+Cet article est un essai, une tentative &mdash; bien modeste &mdash; de penser, en tant que psychologue et créateur de sites internet, aux implications pour le psychologue et son public, de la création d'un site. Pour cela, divisons un peu les choses, avant de les rassembler...
 
 ## Hypertexte et images, du contenu au contenant
 {: #hypertexte}
 
-Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange ‒ si l'on tient compte des évolutions du Web dit 2.0[^2] ‒ de **contenus**.  N’oublions pas qu’aux débuts d’Internet, ces contenus étaient strictement constitués de texte, et que la grande nouveauté était la possibilité de créer des **liens hypertexte**, ce qui a tissé au fil des années ‒ c’est le cas de le dire ‒  la toile que nous connaissons aujourd’hui. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage&nbsp;?
+Un site internet c'est, à priori, si l'on s'en tient à la vocation première du réseau, un lieu de diffusion, voire d'échange &mdash; si l'on tient compte des évolutions du Web dit 2.0[^2] &mdash; de **contenus**.  N’oublions pas qu’aux débuts d’Internet, ces contenus étaient strictement constitués de texte, et que la grande nouveauté était la possibilité de créer des **liens hypertexte**, ce qui a tissé au fil des années &mdash; c’est le cas de le dire &mdash; la toile que nous connaissons aujourd’hui. Ces contenus sont vecteurs d'information à destination de l'usager. Dès lors, quelle information est susceptible d'intéresser l'usager, de lui être utile, par delà les effets de séduction du langage - écrit, mais aussi pictural, voire oral dans le cadre de contenus vidéos ou audio)&nbsp;?
 
 En tant que psychologues, nous savons, ou plutôt nous sommes censés savoir, par expérience plus que par érudition, que la parole, mais aussi l’écrit et l’image, peuvent avoir sur celui qui y est soumis un effet suggestif. La psychanalyse est d'ailleurs née du constat freudien que l'hypnose seule ne venait pas à bout de certaines névroses, et que la dimension inconsciente avait fort à voir avec l'expression symptomatique. 
 
-> Dès lors, quand nous nous adressons, à travers une communication écrite, à nos hypothétiques futurs patients ‒ les visiteurs de notre site internet ‒ quels effets produisons-nous chez eux&nbsp;? Effet de séduction, ou mise en place de l'archéologie d'un cadre venant recueillir la parole&nbsp;?
+> Dès lors, quand nous nous adressons, à travers une communication écrite, à nos hypothétiques futurs patients &mdash; les visiteurs de notre site internet &mdash; quels effets produisons-nous chez eux&nbsp;? Effet de séduction, ou mise en place de l'archéologie d'un cadre venant recueillir la parole&nbsp;?
 
 En d'autres termes, le contenant, l'apparence du site internet, fait-il cadre ou séduction&nbsp;? Et par extension ce contenant permet-il d'accéder au contenu, ce que vient à priori chercher la personne en souffrance psychique&nbsp;?
 
@@ -71,13 +71,13 @@ De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offren
 
 ### Image et séduction
 
-Nous vivons dans une société ou le pouvoir de l'image va grandissant, installant même à certains endroits une forme de dictature. "Ce qui est beau est bon". Tel est l'argument des publicitaires, qui savent user du pouvoir de séduction de l'image et du verbe. Ce déni de la dimension fragile de l'Humain, vire parfois à un véritable fétichisme qui vient voiler, ou plutôt parer, la réalité de notre finitude sous des oripeaux. Jeunesse éternelle.. Cette **haine de la castration**, de ce qui nous délite et nous sépare du monde, donne lieu à une mascarade souvent grotesque, mais oh combien séduisante. On recouvre la laideur ou la vieillesse ‒ jusqu'au morts que l’on embaume ‒ d'une poudre cosmétique afin d'en nier l'inexorable réalité. "Parce qu'on le vaut bien", dit la publicité.
+Nous vivons dans une société ou le pouvoir de l'image va grandissant, installant même à certains endroits une forme de dictature. "Ce qui est beau est bon". Tel est l'argument des publicitaires, qui savent user du pouvoir de séduction de l'image et du verbe. Ce déni de la dimension fragile de l'Humain, vire parfois à un véritable fétichisme qui vient voiler, ou plutôt parer, la réalité de notre finitude sous des oripeaux. Jeunesse éternelle.. Cette **haine de la castration**, de ce qui nous délite et nous sépare du monde, donne lieu à une mascarade souvent grotesque, mais oh combien séduisante. On recouvre la laideur ou la vieillesse &mdash; jusqu'au morts que l’on embaume &mdash; d'une poudre cosmétique afin d'en nier l'inexorable réalité. "Parce qu'on le vaut bien", dit la publicité.
 
 ### Esthétique
 
 La dimension esthétique, quant à elle, provoque, par une production sublimatoire, le déclenchement, à travers les sens du spectateur, d'une émotion, d'affects, qui peuvent dès lors se partager. Nous avons tous vécu ces moments d'une profonde sérénité ou l'oeuvre nous transporte et met du baume à l'âme, **parce qu'un autre nous dévoile sa propre condition humaine**. "Il fait moins noir quand quelqu'un parle", dit l'enfant à son père.
 
-Or, nous, psychologues, nous situons nous du côté d'une société par certains aspects hystérique ‒ au sens freudien du terme, c’est-à-dire qui réfute l’idée de la castration, en donnant l’illusion du comblement du manque ‒, voire perverse, ou du côté du sens et de l'humain&nbsp;?  
+Or, nous, psychologues, nous situons nous du côté d'une société par certains aspects hystérique &mdash; au sens freudien du terme, c’est-à-dire qui réfute l’idée de la castration, en donnant l’illusion du comblement du manque ‒, voire perverse, ou du côté du sens et de l'humain&nbsp;?  
 
 > Sommes-nous suffisamment aguerris pour résister aux sirènes du marketing publicitaire&nbsp;? 
 
@@ -90,7 +90,7 @@ J'avais récemment une conversation sur un forum avec une collègue qui m'opposa
 ## Ce qui se conçoit bien... *Content Architecture*
 {: #architecture}
 
-L'architecture de contenu est très à la mode dans le monde du webdesign, ainsi que son dérivé, l'UX (pour User Experience). Pourquoi diable se soucier d'architecture&nbsp;? Si l'on reprend le modèle de l'architecture la plus connue, celle des bâtiments, vous admettrez qu'une école n'est pas conçue comme une banque, de même que votre salle de bains et votre salon sont ‒ je vous le souhaite ‒ différents.
+L'architecture de contenu est très à la mode dans le monde du webdesign, ainsi que son dérivé, l'UX (pour User Experience). Pourquoi diable se soucier d'architecture&nbsp;? Si l'on reprend le modèle de l'architecture la plus connue, celle des bâtiments, vous admettrez qu'une école n'est pas conçue comme une banque, de même que votre salle de bains et votre salon sont &mdash; je vous le souhaite &mdash; différents.
 
 Nous repérons assez facilement dans notre environnement, sans même nous en apercevoir, dans quel type de milieu nous nous trouvons. C'est la même chose sur Internet. Un site bancaire ne présente pas l'information de la même façon que le site d'un artiste musical, sans même parler du design. 
 
@@ -105,7 +105,7 @@ Que penseriez-vous, en tant que visiteur d'un site de psychologue, si le contenu
 ## Accessibilité : pour le Web aussi&nbsp;!
 {: #accessibilite}
 
-Vous avez mis ‒ ou pas ! ‒ votre cabinet de consultation aux normes ‒ drastiques ‒ d’accessibilité&nbsp;? Bravo, je vous en félicite. Mais qu’en est il de votre site internet&nbsp;?
+Vous avez mis &mdash; ou pas ! &mdash; votre cabinet de consultation aux normes &mdash; drastiques &mdash; d’accessibilité&nbsp;? Bravo, je vous en félicite. Mais qu’en est il de votre site internet&nbsp;?
 
 > En théorie, n’importe qui peut utiliser Internet. En réalité, les personnes en situation de handicap en sont exclues.
 
@@ -160,7 +160,3 @@ Réaliser un site internet, c'est bien plus que juxtaposer du texte et des image
 [^3]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
 
 [^4]: "Proposer du contenu approprié et à jour"
-
-
-
-
