@@ -17,7 +17,7 @@ excerpt: De plus en plus de psychologues se font connaître via un site internet
 <div>
 #### Plan de l'article
 - [Le nom de domaine](#ndd)
-	- [C'est quoi un nom de domaine](#ckoi)
+	- [Internet idéal, réalité d'Internet](#ideal)
 	- [Quel nom de domaine choisir](#kelnom)
 - [L'hébergement](#heberg)
 	- [Pourquoi un hébergeur](#pkoihebergeur)
@@ -25,13 +25,13 @@ excerpt: De plus en plus de psychologues se font connaître via un site internet
 	- [Quel hébergeur choisir](#kelhebergeurchoisir)
 </div>
 
-### Internet idéal, réalité d'Internet
+## Internet idéal, réalité d'Internet
 
 [Time Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee), qui inventa le *World Wide Web*, se doutait-il, pour reprendre la boutade de S. Freud à S. Ferenszi et C.G. Jung, alors qu'il s'apprêtait à présenter sa théorie psychanalytique aux &Eacute;tats-Unis, qu'il nous apportait la peste&nbsp;?
 
 Internet, qui au départ était conçu comme un réseau d'échange d'informations entre universitaires, est vite devenu un lieu incontournable pour médiatiser toutes sortes de contenus, des plus scientifiques aux plus futiles. De nos jours, le commerce prend une part majeure dans l'utilisation d'Internet, et sous des formes pas toujours reconnaissables.
 
-### Les psychologues sur Internet
+## Les psychologues sur Internet
 
 Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômés, dont le titre est protégé par un décret&nbsp;? Sont-ils présents sur la toile&nbsp;? Maitrisent-t-ils les outils informatiques, mais aussi et surtout les bonnes pratiques du Web, qui leur permettront de diffuser leur contenu, et ce si possible en adéquation avec leur déontologie&nbsp;? 
 
