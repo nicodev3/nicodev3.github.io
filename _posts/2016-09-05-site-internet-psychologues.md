@@ -41,7 +41,7 @@ Qu'en est il des psychologues, ces professionnels du psychisme dûment diplômé
 Il est étonnant que le numéro du *Journal des Psychologues* n°301 (2012), dont le thème est *Des psychologues sur Internet*, n'aborde pas ce point. Le numéro, consacré dans sa grande majorité aux *cyberthérapies*, me semble évacuer une dimension majeure et sans doute trop évidente pour être perçue&nbsp;: les psychologues utilisent de plus en plus Internet pour se faire connaître. Tout au plus, ce n'est déjà pas si mal, la conclusion du numéro invite à une reflexion globale sur la présence des psychologues sur Internet.
 
 > Mais se prémunir des « mésusages » de la psychologie implique d’en explorer les « usages » nouveaux qui sont appelés à prendre une place toujours plus importante dans le paysage psychologique.
-> -- <cite>[Albert Einstein][1]</cite>
+> -- <cite>[Benoît Schneider][^1]</cite>
 
 Depuis, peu d'avancées à ma connaissance.
 
