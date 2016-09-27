@@ -121,9 +121,17 @@ Votre espace professionnel sur les réseaux sociaux ne devrait pas être infiltr
 
 ## Référencement, le sens sacrifié
 
-**Delivering fresh and relevant content**, telle est la devise de Google, Bing et autres moteurs de recherche
+*Delivering fresh and relevant content*[^3], telle est la devise de Google, Bing et autres moteurs de recherche. Malheureusement, afin d'atteindre le saint Graal du positionnement dans le top 3 des résultats de Google, ou à minima la première page - n'oubliez pas qu'un site situé en seconde page n'a que peu de chances d'être consulté, ne parlons même pas du positionnement des pages suivantes - certains cèdent à la tentation du mot clé et du lien à tout va.
+
+Comme je vous l'ai détaillé dans l'article (Référencer son site avec Google : les bonnes pratiques)[http://nicodev3.github.io/2016/01/26/referencement-site-psychologue/], les mots clé sont importants - leur présence, leur densité et leur emplacement dans la page -, de même que les liens pointant vers votre site, et des centaines d'autres choses.
+
+Mais le plus important, et ce qui est de plus en plus pris en compte par Google au fur et à mesure que son algorithme progresse, est la justesse et la richesse de votre contenu pour l'internaute. Autrement dit, si votre site est truffé de mots clé, utilise des techniques de référencement *black hat* ou autres astuces comme des liens payants, vous avez toutes les chances d'apparaître en première page... pendant quelques semaines ou quelques mois, avant de disparaitre définitivement dans les bas fonds des résultats !
+
+> Votre site doit posséder une architecture de contenu précise et logique, qui vient donner un accès le plus universel possible à l'internaute. C'est tant mieux pour l'utilisateur, et une bénédiction pour les auteurs de sites. Nous voici contraints d'élaborer notre contenu ! En tant que psychologues, c'est une bonne chose, vous en conviendrez.
 
 ## Conclusion
+
+Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable reflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
 
 [^1]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
 
