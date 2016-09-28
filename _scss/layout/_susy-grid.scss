@@ -14,8 +14,6 @@
 
   @include susy-breakpoint($tablet-portrait) {
     margin-bottom : gutter();
-    border : 1px solid color(primary-color-light);
-    border-radius : 4px;
   }
 }
 

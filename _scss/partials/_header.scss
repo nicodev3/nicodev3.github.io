@@ -4,25 +4,19 @@
 .site-header {
     position : relative;
     min-height : 5em;
-    border-bottom : 5px solid color(accent-color);
     background : color(primary-color-dark);
+    z-index: 100;
 
     @include susy-breakpoint($tablet-portrait) {
-        min-height : 7em;
+        height : 10em;
     }
 }
 
 .site-title {
-    position : relative;
-    margin-bottom : 0;
+    position: relative;
+    top: 1.5em;
+    left: 0;
     font-size : 30px;
-    letter-spacing : -1px;
-    line-height : 56px;
-
-    @include span(5);
-    @include susy-breakpoint($tablet-portrait) {
-        @include push(1.1);
-    }
 
     &:hover {
         color : color(accent-color);

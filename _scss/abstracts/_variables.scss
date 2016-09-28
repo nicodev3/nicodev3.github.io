@@ -3,15 +3,15 @@ $footer-height : 25em;
 // -----------------------------------
 // @FONTS
 // -----------------------------------
-$base-font-size : 16px;
-$texte : 'pt-sans', sans-serif;
-$sans-serif : 'cubano', sans-serif;
+$base-font-size : 18px;
+$texte : 'mrs-eaves', sans-serif;
+$sans-serif : 'filson-soft', sans-serif;
 
 // -----------------------------------
 // SUSY
 // -----------------------------------
 $susy : (
-        container: 1200px,
+        container: 1220px,
         columns: 12,
         gutters: 1/4,
         column-width: false,
@@ -47,12 +47,23 @@ $desktop-large : em(1600px);
 // -----------------------------------
 // COLORS
 // -----------------------------------
-$colors-nico : (
+/*$colors-nico : (
         primary-color-dark : #512dab,
         primary-color : #673ab7,
         primary-color-light : #d1c4e9,
         primary-color-text : #fff,
         accent-color : #ff4081,
+        primary-text-color : #212121,
+        secondary-text-color : #727272,
+        divider-color : #b6b6b6
+);*/
+
+$colors-nico : (
+        primary-color-dark : #455A64,
+        primary-color : #607D8B,
+        primary-color-light : #CFD8DC,
+        primary-color-text : #fff,
+        accent-color : #c82f00,
         primary-text-color : #212121,
         secondary-text-color : #727272,
         divider-color : #b6b6b6

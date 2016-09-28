@@ -1,35 +1,83 @@
-#pipe-bg,
-#assoc-carre-bg,
+#pipe-bg ,
+#assoc-carre-bg ,
 .bg-entreprise {
-  fill: color(primary-color-dark);
+    fill : color(primary-color-dark);
 }
 
 #assoc-bg {
-  fill: color(primary-color);
+    fill : color(primary-color);
 }
 
 .article-svg {
-  display: block;
-  margin: 0 auto;
+    display : block;
+    margin : 0 auto;
 }
 
 // -----------------------------------
 // @ svg home prestations
 // -----------------------------------
 .masonery-block {
-  fill: color(accent-color);
+    fill : color(accent-color);
 }
 
 // -----------------------------------
 // @ svg home responsives
 // -----------------------------------
 #responsive_svg {
-  display :block;
-  margin : 0 auto;
-  width :200px;
+    display : block;
+    width : 200px;
+    margin : 0 auto;
 }
 
-#responsive_tablet,
+#responsive_tablet ,
 #responsive_phone {
-  visibility: hidden;
+    visibility : hidden;
+}
+
+.svgwhitefill {
+    fill : #fff;
+}
+
+.masonery-style {
+    fill : none;
+    stroke : #fff;
+    stroke-miterlimit : 10;
+    stroke-width : 3px;
+}
+
+.serp-line {
+    fill : none;
+    stroke : color(primary-color-dark);
+    stroke-width : 4;
+    stroke-miterlimit : 10;
+}
+
+.serp-lin-middle {
+    stroke-width : 2;
+}
+
+.serp-lin-middle ,
+.serp-line-small {
+    fill : none;
+    stroke : color(primary-color);
+    stroke-miterlimit : 10;
+}
+
+.serp-line--low {
+    stroke-width : 4;
+    stroke-miterlimit : 10;
+    fill : none;
+    stroke : #C82F00;
+}
+
+.responsive-svg-color {
+    fill: color(primary-color);
+}
+
+.ciseau-un {
+    fill: color(accent-color);
+}
+
+.ciseau-deux {
+    fill: color(primary-color-dark);
 }

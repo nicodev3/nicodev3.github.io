@@ -1,184 +1,165 @@
 ---
-layout: default
+layout: home-layout
 title: nicodev3
 description: Tutoriels développement web front-end et back-end
 h1: Web Designer & Web Developer
 ---
 
-    <article class="content-left has-flex--center">
-        <p>Je suis développeur web et webdesigner, formé en autodidacte puis à l'Université de Strasbourg.</p>
-        <p>Je suis titulaire d'une Licence Professionnelle Activités et Techniques de Communication mention<strong>
-            développeur web des systèmes d'information et multimédia</strong>, option
-            <strong>ingénierie du E-learning et communication scientifique et culturelle</strong>.</p>
-        <p>Je suis également diplômé d'un bac+5 en psychologie et possède un diplôme d'&Eacute;tat de
-            psychomotricien.</p>
-        <p>Je mets au service de mes clients mon savoir faire pour développer des sites internet sur mesure. Ici,
-            point de grosse machine mais un procédé artisanal personnalisé au service de la
-            <strong>qualité du contenu</strong> et du <strong>design</strong>.</p>
-        <p>J'accompagne également mes clients dans la production de leurs contenus et j'attache une grande importance au
-            <strong>référencement sur les moteurs de recherche</strong>, un beau site internet ne servant pas à grand
-            chose s'il n'est pas visible !
-        </p>
-        <p>Tous mes sites sont conçus avec les dernières technologies, sont responsives (visibles sur mobiles,
-            tablettes...) et optimisés pour le <strong>référencement naturel</strong>.</p>
-    </article>
-    <aside class="content-right">
-        <h2>Derniers articles</h2>
-        <ul class="post-list">
-            {% for post in site.posts %}
-            <li><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-            </li>
-            {% endfor %}
-        </ul>
-    </aside>
+<section class="g-block has-flex--center">
+    <h1>Sites internet sur mesure</h1>
+    <p>Je suis développeur web et webdesigner, formé en autodidacte puis à l'Université de Strasbourg.</p>
+    <p>Je suis titulaire d'une Licence Professionnelle Activités et Techniques de Communication mention <strong>développeur web des systèmes d'information et multimédia</strong>, option <strong>ingénierie du E-learning et communication scientifique et culturelle</strong>.</p>
+    <p>Je mets au service de mes clients mon savoir faire pour développer des sites internet sur mesure. Ici, point de grosse machine mais un procédé artisanal personnalisé au service de la <strong>qualité du contenu</strong> et du <strong>design</strong>.</p>
+    <p>J'accompagne également mes clients dans la production de leurs contenus et j'attache une grande importance au <strong>référencement sur les moteurs de recherche</strong>, un beau site internet ne servant pas à grand chose s'il n'est pas visible&nbsp;! </p>
+    <p>Tous mes sites sont conçus avec les dernières technologies, sont responsives (visibles sur mobiles, tablettes...) et optimisés pour le <strong>référencement naturel</strong> et la géolocalisation.</p>
+    <p>Je suis également diplômé d'un bac+5 en psychologie et possède un diplôme d'&Eacute;tat de psychomotricien.</p>
 </section>
 <hr class="hr-icon">
-<section class="content-fullpage">
+<div class="g-block content-fullpage">
+    <h2 class="home-h2">Compétences et prestations</h2>
     <div class="gallery">
-        <section class="gallery__item--3 compe">
+        <section class="gallery__item--2">
             <div class="cv-svg">
-                <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="35.51" height="85"
-                     viewBox="0 0 35.51 85">
+                <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="35.51" height="85" viewBox="0 0 35.51 85">
                     <title>battery</title>
-                    <rect id="pile" y="11.75" width="35.51" height="73.25" rx="1" ry="1" style="fill: #fff"/>
-                    <path id="haut_pile"
-                          d="M24.69,10H10.82V2.78A2.78,2.78,0,0,1,13.59,0h8.32a2.78,2.78,0,0,1,2.78,2.78V10h0Z"
-                          style="fill: #fff"/>
-                    <rect class="pile-level" x="4.53" y="69.46" width="26.64" height="11.1" style="fill: none"/>
-                    <rect class="pile-level" data-name="pile_level" x="4.62" y="55.46" width="26.64" height="11.1"
-                          style="fill: none"/>
-                    <rect class="pile-level" data-name="pile_level" x="4.71" y="41.46" width="26.64" height="11.1"
-                          style="fill: none"/>
-                    <rect class="pile-level" data-name="pile_level" x="4.8" y="27.46" width="26.64" height="11.1"
-                          style="fill: none"/>
-                    <rect x="4.9" y="13.46" width="26.64" height="11.1" style="fill: none"/>
+                    <rect class="svgwhitefill" id="pile" y="11.75" width="35.51" height="73.25" rx="1" ry="1"/>
+                    <path class="svgwhitefill" id="haut_pile" d="M24.69,10H10.82V2.78A2.78,2.78,0,0,1,13.59,0h8.32a2.78,2.78,0,0,1,2.78,2.78V10h0Z"/>
+                    <rect class="pile-level" x="4.53" y="69.46" width="26.64" height="11.1" />
+                    <rect class="pile-level" data-name="pile_level" x="4.62" y="55.46" width="26.64" height="11.1" />
+                    <rect class="pile-level" data-name="pile_level" x="4.71" y="41.46" width="26.64" height="11.1" />
+                    <rect class="pile-level" data-name="pile_level" x="4.8" y="27.46" width="26.64" height="11.1" />
+
                 </svg>
             </div>
-            <h2>Compétences</h2>
-            <ul class="competences">
-                <li> HTML5 / CSS3 / JavaScript</li>
-                <li> Sass / jQuery / Susy</li>
-                <li> PHP/MySQL</li>
-                <li> Photoshop / Illustrator</li>
-                <li> Animation (CSS, JavaScript, Greensock Animation Platform)</li>
+            <h3 class="home-h3">Compétences</h3>
+            <ul class="home-ul">
+                <li class="home-ul__li">Développement Web Front-End
+                    <ul class="home-ul__li__ul">
+                        <li>HTML5</li>
+                        <li class="compemeter compemeter--top"></li>
+                        <li>CSS3</li>
+                        <li class="compemeter compemeter--top"></li>
+                        <li>JavaScript</li>
+                        <li class="compemeter compemeter--good"></li>
+                    </ul>
+                </li>
+                <li class="home-ul__li">Développement Back-End
+                    <ul class="home-ul__li__ul">
+                        <li>PHP</li>
+                        <li class="compemeter compemeter--middle"></li>
+                        <li>MySQL</li>
+                        <li class="compemeter compemeter--middle"></li>
+                    </ul>
+                </li>
+                <li class="home-ul__li">Librairies/Frameworks
+                    <ul class="home-ul__li__ul">
+                        <li>Sass</li>
+                        <li class="compemeter compemeter--top"></li>
+                        <li>jQuery</li>
+                        <li class="compemeter compemeter--good"></li>
+                        <li>Greensock Animation Platform</li>
+                        <li class="compemeter compemeter--top"></li>
+                    </ul>
+                </li>
+                <li class="home-ul__li">Design/Prototypage
+                    <ul class="home-ul__li__ul">
+                        <li>Illustrator</li>
+                        <li class="compemeter compemeter--good"></li>
+                        <li>Photoshop</li>
+                        <li class="compemeter compemeter--middle"></li>
+                    </ul>
+                </li>
+                <li class="home-ul__li">Outils d'intégration
+                    <ul class="home-ul__li__ul">
+                        <li>Git/GitHub</li>
+                        <li class="compemeter compemeter--good"></li>
+                    </ul>
+                </li>
             </ul>
         </section>
-        <section class="gallery__item--3 tools">
+        <section class="gallery__item--2">
             <div class="cv-svg">
-                <svg id="tool-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                     viewBox="0 0 100 100">
-                    <title>tools</title>
-                    <path d="M98.48,14L84.23,28.21h0L71.79,15.76,86,1.52A22,22,0,0,0,57.54,30L30,57.54A22,22,0,0,0,1.52,86L15.77,71.78,28.21,84.23,14,98.48A22,22,0,0,0,42.47,70L70,42.46A22,22,0,0,0,98.48,14Z"
-                          transform="translate(0 0)" style="fill:#fff"/>
-                </svg>
-            </div>
-            <h2>Outils</h2>
-            <ul class="outils">
-                <li> Perch CMS</li>
-                <li> Jekyll</li>
-                <li> Nunjucks</li>
-                <li> Jade</li>
-                <li> Gulp / Git...</li>
-            </ul>
-        </section>
-        <section class="gallery__item--3 presta">
-            <div class="cv-svg">
-                <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="100" height="103"
-                     viewBox="0 0 100 103">
+                <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="100" height="103" viewBox="0 0 100 103">
                     <title>masonery</title>
-                    <rect x="1.5" y="1.5" width="97" height="100"
-                          style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <circle cx="10.48" cy="9.49" r="1.5"
-                            style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <circle cx="17.48" cy="9.49" r="1.5"
-                            style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <circle cx="24.48" cy="9.49" r="1.5"
-                            style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
-                    <rect x="1.5" y="1.5" width="97" height="15.98"
-                          style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+                    <rect class="masonery-style" x="1.5" y="1.5" width="97" height="100" />
+                    <circle class="masonery-style" cx="10.48" cy="9.49" r="1.5"/>
+                    <circle class="masonery-style" cx="17.48" cy="9.49" r="1.5"/>
+                    <circle class="masonery-style" cx="24.48" cy="9.49" r="1.5"/>
+                    <rect class="masonery-style" x="1.5" y="1.5" width="97" height="15.98"/>
                     <rect class="masonery-block" id="masonery_block_1" x="4.21" y="20.4" width="30" height="48.14"/>
-                    <rect class="masonery-block" id="masonery_block_2" data-name="masonry" x="4.21" y="69.41" width="30"
-                          height="30" transform="translate(-65.2 103.63) rotate(-90)"/>
-                    <rect class="masonery-block" id="masonery_block_3" data-name="masonry" x="66.21" y="20.4" width="30"
-                          height="26.52"/>
-                    <rect class="masonery-block" id="masonery_block_4" data-name="masonry" x="35.21" y="20.4" width="30"
-                          height="26.52"/>
+                    <rect class="masonery-block" id="masonery_block_2" data-name="masonry" x="4.21" y="69.41" width="30" height="30" transform="translate(-65.2 103.63) rotate(-90)"/>
+                    <rect class="masonery-block" id="masonery_block_3" data-name="masonry" x="66.21" y="20.4" width="30" height="26.52"/>
+                    <rect class="masonery-block" id="masonery_block_4" data-name="masonry" x="35.21" y="20.4" width="30" height="26.52"/>
                 </svg>
             </div>
-            <h2>Prestations</h2>
-            <ul class="prestations">
-                <li> Sites statiques ou dynamiques</li>
-                <li> Création, refonte, optimisation</li>
-                <li> Référencement naturel</li>
-                <li> Responsive webdesign</li>
-                <li> Rédaction de contenus</li>
+            <h3 class="home-h3">Prestations</h3>
+            <ul class="home-ul">
+                <li class="home-ul__li">Création de sites internet
+                    <ul class="home-ul__li__ul">
+                        <li>Sites statiques</li>
+                        <li>Systèmes de Gestion de Contenu (CMS)</li>
+                    </ul>
+                </li>
+                <li class="home-ul__li">Optimisation technique
+                    <ul class="home-ul__li__ul">
+                        <li>Optimisation des performances</li>
+                        <li>Optimisation du référencement</li>
+                    </ul>
+                </li>
+                <li class="home-ul__li">Optimisation des contenus
+                    <ul class="home-ul__li__ul">
+                        <li>Architecture d'information</li>
+                        <li>Ergonomie/UX design</li>
+                    </ul>
+                </li>
+                <li class="home-ul__li">Optimisation accessibilité
+                    <ul class="home-ul__li__ul">
+                        <li>Mise aux normes WAI/ARIA</li>
+                    </ul>
+                </li>
+
             </ul>
         </section>
     </div>
-</section>
+</div>
 <hr class="hr-icon">
-<section class="content-fullpage conteneur-qualites-sites">
+<section class="g-block content-fullpage">
+    <h2 class="home-h2">Des sites optimisés</h2>
     <div class="gallery">
         <div class="gallery__item--2 qualite-site">
-            <h3 id="responsives">Sites responsives</h3>
-            <svg id="responsive_svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="284" height="178"
-                 viewBox="0 0 284 178">
-                <path id="responsive_desktop"
-                      d="M282.32,0H1.68A1.4,1.4,0,0,0,0,1.54V149.11A1.66,1.66,0,0,0,1.68,151H129.29l-15.78,27h57l-15.78-27H282.32a1.66,1.66,0,0,0,1.68-1.89V1.54A1.4,1.4,0,0,0,282.32,0ZM142,144a3,3,0,1,1,3-3A3,3,0,0,1,142,144Zm134-15H7V8H276V129Z"
-                      fill="#673ab7"/>
-                <path id="responsive_tablet"
-                      d="M113.37,0H0.67C0.23,0,0,.43,0,1.54V149.11C0,150.21.23,151,.67,151h112.7c0.44,0,.63-0.79.63-1.89V1.54C114,0.43,113.81,0,113.37,0ZM58.75,144a3,3,0,1,1,3-3A3,3,0,0,1,58.75,144ZM111,129H3V8H111V129Z"
-                      fill="#673ab7"/>
-                <path id="responsive_phone"
-                      d="M39.4,0H0.23C0.08,0,0,.22,0,0.8V77.67A2.27,2.27,0,0,0,.23,79H39.4a1.87,1.87,0,0,0,.6-1.33V0.8A0.76,0.76,0,0,0,39.4,0ZM20.46,75a1,1,0,1,1,1-1A1,1,0,0,1,20.46,75ZM39,67H1V4H39V67Z"
-                      fill="#673ab7"/>
+            <h3 class="home-h3">Design responsive desktop, tablettes et smartphones</h3>
+            <svg id="responsive_svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="284" height="178" viewBox="0 0 284 178">
+                <path class="responsive-svg-color" id="responsive_desktop" d="M282.32,0H1.68A1.4,1.4,0,0,0,0,1.54V149.11A1.66,1.66,0,0,0,1.68,151H129.29l-15.78,27h57l-15.78-27H282.32a1.66,1.66,0,0,0,1.68-1.89V1.54A1.4,1.4,0,0,0,282.32,0ZM142,144a3,3,0,1,1,3-3A3,3,0,0,1,142,144Zm134-15H7V8H276V129Z"/>
+                <path class="responsive-svg-color" id="responsive_tablet" d="M113.37,0H0.67C0.23,0,0,.43,0,1.54V149.11C0,150.21.23,151,.67,151h112.7c0.44,0,.63-0.79.63-1.89V1.54C114,0.43,113.81,0,113.37,0ZM58.75,144a3,3,0,1,1,3-3A3,3,0,0,1,58.75,144ZM111,129H3V8H111V129Z"/>
+                <path class="responsive-svg-color" id="responsive_phone" d="M39.4,0H0.23C0.08,0,0,.22,0,0.8V77.67A2.27,2.27,0,0,0,.23,79H39.4a1.87,1.87,0,0,0,.6-1.33V0.8A0.76,0.76,0,0,0,39.4,0ZM20.46,75a1,1,0,1,1,1-1A1,1,0,0,1,20.46,75ZM39,67H1V4H39V67Z"/>
             </svg>
-            <p>Visibles sur ordinateur, tablettes, smartphones</p>
+            <p>Visibles sur ordinateur, tablettes, smartphones grâce à un design adaptatif et fluide.</p>
         </div>
         <div class="gallery__item--2 qualite-site">
-            <h3>optimisés pour le référencement</h3>
-            <svg id="podium-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="301" height="178"
-                 viewBox="0 0 301 101"><title>podium</title>
-                <rect x="0.5" y="34.5" width="100" height="66" style="fill:#673ab7;stroke:#fff;stroke-miterlimit:10"/>
-                <rect x="100.5" y="0.5" width="100" height="100" style="fill:#673ab7;stroke:#fff;stroke-miterlimit:10"/>
-                <rect x="200.5" y="67.5" width="100" height="33" style="fill:#673ab7;stroke:#fff;stroke-miterlimit:10"/>
-                <polygon id="podium-star"
-                         points="250.87 13.68 257.06 24.55 270.9 26.3 260.88 34.76 263.25 46.71 250.87 41.07 238.49 46.71 240.85 34.76 230.83 26.3 244.68 24.55 250.87 13.68"
-                         style="fill:#c8518d"/>
-            </svg>
+            <h3 class="home-h3">Optimisés pour le référencement naturel</h3>
+            <svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 155.5 201.5"><g id="serp_down"><g id="serp-4"><path class="serp-line" d="M0 2h155.5"/><path class="serp-lin-middle" d="M0 8.8h137.7"/><path class="serp-line-small" d="M0 15.5h143.1M0 22.2h120.9M0 29h130.5"/></g><g id="serp-3"><path class="serp-line" d="M0 59.3h155.5"/><path class="serp-lin-middle" d="M0 66.1h137.7"/><path class="serp-line-small" d="M0 72.8h143.1M0 79.6h120.9M0 86.3h130.5"/></g><g id="serp-2"><path class="serp-line" d="M0 116.7h155.5"/><path class="serp-lin-middle" d="M0 123.4h137.7"/><path class="serp-line-small" d="M0 130.2h143.1M0 136.9h120.9M0 143.7h130.5"/></g></g></g><g id="serp_up"><path class="serp-line--low" d="M0 174h155.5"/><path class="serp-lin-middle" d="M0 180.8h137.7"/><path class="serp-line-small" d="M0 187.5h143.1M0 194.2h120.9M0 201h130.5"/></g></svg>
             <p>Toutes les chances de votre côté pour être au top dans les résultats.</p>
         </div>
         <div class="gallery__item--2 qualite-site">
-            <h3>faits maison</h3>
-            <svg id="ciseaux-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="86.46" height="62.39"
-                 viewBox="0 0 86.46 62.39">
+            <h3 class="home-h3">Faits maison</h3>
+            <svg id="ciseaux-svg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="86.46" height="62.39" viewBox="0 0 86.46 62.39">
                 <title>ciseaux</title>
-                <path id="ciseau-2"
-                      d="M37.25,51.32h0a3,3,0,0,1-1.58,2.17L6,68.81s11.56,16.72,23,11c8-4,6.91-13.25,5-19L91.77,28.5A1.07,1.07,0,0,0,92,26.81l-0.12-.12a3,3,0,0,0-2.12-.88H86.63a3,3,0,0,0-1.2.25L39.49,46.16a3,3,0,0,0-1.76,2.26ZM30,61.81h0s5,11-2,15-15-6-15-6Z"
-                      transform="translate(-6 -18.61)" style="fill: #673ab7"/>
-                <path id="ciseau-1"
-                      d="M35.63,38.88c2-5.73,3.15-15-4.88-19C19.26,14,7.47,30.65,7.47,30.65L90.44,74a1.36,1.36,0,0,0,2-1.2V71Zm-4-1L14.54,28.71s8.15-9.93,15.17-5.88S31.6,37.85,31.6,37.85Z"
-                      transform="translate(-6 -18.61)" style="fill: #c7528c"/>
+                <path class="ciseau-un" id="ciseau-2" d="M37.25,51.32h0a3,3,0,0,1-1.58,2.17L6,68.81s11.56,16.72,23,11c8-4,6.91-13.25,5-19L91.77,28.5A1.07,1.07,0,0,0,92,26.81l-0.12-.12a3,3,0,0,0-2.12-.88H86.63a3,3,0,0,0-1.2.25L39.49,46.16a3,3,0,0,0-1.76,2.26ZM30,61.81h0s5,11-2,15-15-6-15-6Z" transform="translate(-6 -18.61)" />
+                <path class="ciseau-deux" id="ciseau-1" d="M35.63,38.88c2-5.73,3.15-15-4.88-19C19.26,14,7.47,30.65,7.47,30.65L90.44,74a1.36,1.36,0,0,0,2-1.2V71Zm-4-1L14.54,28.71s8.15-9.93,15.17-5.88S31.6,37.85,31.6,37.85Z" transform="translate(-6 -18.61)" />
             </svg>
-            <p>Chaque site est codé entièrement par mes soins.</p>
+            <p>Chaque site est codé entièrement par mes soins. Pas de framework, pas de code inutile, tout est fait maison de A à Z.</p>
         </div>
         <div class="gallery__item--2 qualite-site">
-            <h3>performants</h3>
-            <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
-                 viewBox="0 0 100 100"><title>noun_331513</title>
-                <path d="M75.74,81.36A40.46,40.46,0,0,0,90.25,50.5a39.92,39.92,0,0,0-2.8-14.75A1.74,1.74,0,0,0,84.21,37,36.44,36.44,0,0,1,86.77,50.5,37,37,0,0,1,73.49,78.71a1.74,1.74,0,1,0,2.25,2.65Z"
-                      style="fill:#4db749"/>
-                <path d="M84.29,29.37a40,40,0,0,0-72.14,8.76,1.74,1.74,0,0,0,3.31,1.05,36.51,36.51,0,0,1,65.87-8,1.74,1.74,0,1,0,3-1.82Z"
-                      style="fill:#fdd20a"/>
-                <path d="M10.77,44.24a40.38,40.38,0,0,0-.44,5.93,39.4,39.4,0,0,0,15.75,31.5,1.74,1.74,0,1,0,2.1-2.77A35.92,35.92,0,0,1,13.81,50.17a36.91,36.91,0,0,1,.4-5.42,1.74,1.74,0,1,0-3.44-.51Z"
-                      style="fill:#e53f39"/>
-                <path d="M50.29,100A49.88,49.88,0,0,0,100,50.29C100,22.48,77.71,0,50.29,0A50.12,50.12,0,0,0,0,50.29C0,77.71,22.48,100,50.29,100Zm0-3.38c-25.95,0-46.91-20.79-46.91-46.33A46.74,46.74,0,0,1,50.29,3.38c25.54,0,46.33,21,46.33,46.91A46.49,46.49,0,0,1,50.29,96.62Z"
-                      style="fill:#5b5b5b"/>
-                <line id="speedometer" x1="50" y1="50" x2="66.72" y2="24.19"
-                      style="stroke:#5b5b5b;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/>
+            <h3 class="home-h3">Performants</h3>
+            <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><title>noun_331513</title>
+                <path d="M75.74,81.36A40.46,40.46,0,0,0,90.25,50.5a39.92,39.92,0,0,0-2.8-14.75A1.74,1.74,0,0,0,84.21,37,36.44,36.44,0,0,1,86.77,50.5,37,37,0,0,1,73.49,78.71a1.74,1.74,0,1,0,2.25,2.65Z" style="fill:#4db749"/>
+                <path d="M84.29,29.37a40,40,0,0,0-72.14,8.76,1.74,1.74,0,0,0,3.31,1.05,36.51,36.51,0,0,1,65.87-8,1.74,1.74,0,1,0,3-1.82Z" style="fill:#fdd20a"/>
+                <path d="M10.77,44.24a40.38,40.38,0,0,0-.44,5.93,39.4,39.4,0,0,0,15.75,31.5,1.74,1.74,0,1,0,2.1-2.77A35.92,35.92,0,0,1,13.81,50.17a36.91,36.91,0,0,1,.4-5.42,1.74,1.74,0,1,0-3.44-.51Z" style="fill:#e53f39"/>
+                <path d="M50.29,100A49.88,49.88,0,0,0,100,50.29C100,22.48,77.71,0,50.29,0A50.12,50.12,0,0,0,0,50.29C0,77.71,22.48,100,50.29,100Zm0-3.38c-25.95,0-46.91-20.79-46.91-46.33A46.74,46.74,0,0,1,50.29,3.38c25.54,0,46.33,21,46.33,46.91A46.49,46.49,0,0,1,50.29,96.62Z" style="fill:#5b5b5b"/>
+                <line id="speedometer" x1="50" y1="50" x2="66.72" y2="24.19" style="stroke:#5b5b5b;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/>
             </svg>
-            <p>Sites codés avec les standards de performance acutels.</p>
+            <p>Sites codés avec les standards de performance acutels, pour plus de rapidité d'affichage, et un meilleur référencement.</p>
         </div>
     </div>
 </section>
+

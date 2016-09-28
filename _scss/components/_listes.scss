@@ -1,59 +1,63 @@
-%list-style {
-    line-height: 2em;
+.home-ul {
+    padding-left: 0;
+}
+
+.home-ul li {
+    list-style-type: none;
+}
+
+.home-ul__li {
+    list-style-type: none;
+    margin-bottom: 1em;
+    font-family: $sans-serif;
+    line-height: 2;
+    color: color(primary-color-dark);
+}
+
+.home-ul__li__ul {
+    background: #fff;
+    padding-left: 0;
+}
+
+.home-ul__li__ul {
+    color: #000;
+}
+
+
+.compemeter {
+    width: 0;
+    height: .5em;
+    margin-bottom: .5em;
+    background: color(accent-color);
+}
+
+.compemeter--good {
+    max-width: 80%;
+}
+
+.compemeter--middle {
+    max-width: 65%;
+}
+
+// -----------------------------------
+// Plan articles
+// -----------------------------------
+.plan-article ol {
+    padding-left: 0;
+    font-family: $texte;
+    color: color(primary-color-light);
+    counter-reset: section;
     list-style: none;
-    font-weight: 400;
-    padding-left : 4em;
-}
-.competences {
-    @extend %list-style;
-    li {
-        &:before {
-            content: '\e903';
-            font-family: icomoon;
-            padding-right: 5px;
-            color: color(accent-color);
-        }
-    }
-    @include susy-breakpoint($tablet-portrait) {
-    	margin-left: em(54px);
-    }
-    @include susy-breakpoint($tablet-paysage) {
-    	margin-left: em(-5px);
-    }
 }
 
-.outils {
-    @extend %list-style;
-    li {
-        &:before {
-            content: "\e902";
-            font-family: icomoon;
-            padding-right: 5px;
-            color: color(accent-color);
-        }
-    }
-	@include susy-breakpoint($tablet-portrait) {
-    	margin-left: em(69px);
-    }
-    @include susy-breakpoint($tablet-paysage) {
-    	margin-left: 10px;
-    }
+.plan-article ol li:before {
+    counter-increment: section;
+    content: counters(section, ".") " ";
 }
 
-.prestations {
-    @extend %list-style;
-    li {
-        &:before {
-            content: "\e901";
-            font-family: icomoon;
-            padding-right: 5px;
-            color: color(accent-color);
-        }
-    }
-    @include susy-breakpoint($tablet-portrait) {
-    	margin-left: 15.4375em;
-    }
-    @include susy-breakpoint($tablet-paysage) {
-    	margin-left: -9px;
-    }
+.plan-article ol ol {
+    padding-top : .5em;
+    padding-left: 1em;
+    font-size: .9em;
 }
+

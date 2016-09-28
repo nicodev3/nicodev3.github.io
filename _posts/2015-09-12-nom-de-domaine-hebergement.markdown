@@ -1,14 +1,13 @@
 ---
-layout: post
 title: Choisir son nom de domaine et son hébergeur
-date: 2015-09-12
+layout: post
+date: '2015-09-12'
 categories: "site internet, hébergement"
+h1: Hébergement et nom de domaine
 comments: true
 published: true
 excerpt: "Cet article vous aidera à mieux comprendre la différence entre nom de domain et hébergement, deux notions souvent confondues par les néophytes."
 ---
-
-# Hébergement et nom de domaine : comment choisir
 
 Certains de mes clients, très souvent psychologues, et la plupart du temps néophytes dans le monde informatique, me demandent souvent quelles différences il y a entre **nom de domaine** et **hébergement**.
 
@@ -16,18 +15,26 @@ Certains de mes clients, très souvent psychologues, et la plupart du temps néo
 
 Voici quelques éléments pour comprendre et faire au mieux votre choix.
 
-{::options parse_block_html="true" /}
-{: .plan-article}
-<div>
-#### Plan de l'article
-- [Le nom de domaine](#ndd)
-    - [C'est quoi un nom de domaine](#ckoi)
-    - [Quel nom de domaine choisir](#kelnom)
-- [L'hébergement](#heberg)
-    - [Pourquoi un hébergeur](#pkoihebergeur)
-    - [Quel type d\'hébergement choisir](#kelhebergement)
-    - [Quel hébergeur choisir](#kelhebergeurchoisir)
+---
+{: .hr-icon} 
 
+{::options parse_block_html="true" /}
+
+<div class="plan-article-fixed">
+<div class="plan-article">
+<p>Plan de l'article</p>
+<nav>
+<ol>
+<li><a href="#ndd" data-scroll="">Le nom de domaine</a></li>
+<li><a href="#ckoi" data-scroll="">C'est quoi un nom de domaine</a></li>
+<li><a href="#kelnom" data-scroll="">Quel nom de domaine choisir</a></li>
+<li><a href="#heberg" data-scroll="">L'hébergement</a></li>
+<li><a href="#pkoihebergeur" data-scroll="">Pourquoi un hébergeur</a></li>
+<li><a href="#kelhebergement" data-scroll="">Quel type d\'hébergement choisir</a></li>
+<li><a href="#kelhebergeurchoisir" data-scroll="">Quel hébergeur choisir</a></li>
+</ol>
+</nav>
+</div>
 </div>
 
 ## Le nom de domaine

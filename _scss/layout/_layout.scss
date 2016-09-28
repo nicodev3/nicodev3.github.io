@@ -1,98 +1,105 @@
-// ==========================================================================
-// Contenu vertical
-// ==========================================================================
-/**
- * conteneur global après h1
- */
-.page-content-wrapper {
-  background : color-lighter(primary-color-light, 9);
-  @include container();
-  @include pad(gutter());
+.has-container {
+    position : relative;
+    height : 100%;
 
-  // sticky footer
-  &:after {
-    display : block;
-    height : $footer-height;
-    content : '';
-  }
+    @include susy-breakpoint($tablet-portrait) {
+        @include container();
+    }
+}
+.page-content-wrapper {
+    background : linear-gradient(to bottom, color-lighter(primary-color-light, 8) 50%, color(primary-color-light));
+
+    @include pad(gutter());
+
+    // sticky footer
+    &:after {
+        display : block;
+        height : $footer-height;
+        content : '';
+    }
 }
 
 // ==========================================================================
 // Layout gauche/droite
 // ==========================================================================
-.content-left ,
-.content-right ,
+.aside-content ,
 .content-fullpage {
-  min-height : 30em;
-  margin : gutter() 0;
-  padding-top : gutter();
-  border : 1px solid #eee;
-  background : #fff;
-}
-
-.content-left {
-  @include susy-breakpoint($tablet-portrait) {
+    margin : gutter() 0;
+    padding-top : gutter();
     overflow : auto;
-
-    @include span(9);
-    @include pad(gutter());
-  }
-
-  hyphens : auto;
 }
 
-.content-right {
-  @include susy-breakpoint($tablet-portrait) {
-    @include span(3 last);
-    @include pad(gutter());
-  }
+.main-content {
+    margin-top : gutter();
+
+    @include susy-breakpoint($tablet-portrait) {
+        @include span(9);
+    }
+
+    hyphens : auto;
+}
+
+.aside-content {
+    @include susy-breakpoint($tablet-portrait) {
+        @include span(3 last);
+        @include pad(gutter());
+        height: 100vh;
+    }
 }
 
 .content-fullpage {
-  margin-top : 1em;
-  padding : gutter();
-  overflow: auto;
+    margin-top : 1em;
+    padding : gutter();
+    overflow : auto;
 }
 
 // ==========================================================================
 // Presta compe tools
 // ==========================================================================
-.presta,
-.compe,
+.presta ,
+.compe ,
 .tools {
-  @include susy-breakpoint($tablet-portrait) {
-    min-height : 30em;
-  }
+    @include susy-breakpoint($tablet-portrait) {
+        min-height : 30em;
+    }
 }
 
 .presta h2 ,
 .compe h2 ,
 .tools h2 {
-  width : 80%;
-  margin : 1em auto;
-  border-bottom : 1px dashed color(accent-color);
-  color : color(primary-text-color);
-  text-align : center;
+    width : 80%;
+    margin : 1em auto;
+    border-bottom : 1px dashed color(accent-color);
+    color : color(primary-text-color);
+    text-align : center;
 }
 
 // -----------------------------------
 // Qualites sites
 // -----------------------------------
 .qualite-site {
-  min-height: 25em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+    display : flex;
+    min-height : 30em;
+
+    flex-direction : column;
+    justify-content : space-between;
+    align-items : center;
 }
 
 // -----------------------------------
 // FLEXBOX
 // -----------------------------------
 .has-flex--center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+    display : flex;
+
+    flex-direction : column;
+    justify-content : center;
+    align-items : flex-start;
 }
 
+.g-block {
+    border : 1px solid #eee;
+    background : hsla(0, 0, 100%, .8);
+
+    @include pad(gutter());
+}

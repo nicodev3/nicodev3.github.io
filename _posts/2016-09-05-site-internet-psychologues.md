@@ -2,6 +2,9 @@
 title: Les psychologues sur Internet
 layout: post
 date: '2016-09-05'
+h1: Les psychologues et leur site internet
+author: Nicolas Devaux
+temps: 10 minutes
 categories: site internet, psychologie
 comments: true
 published: true
@@ -10,24 +13,33 @@ excerpt: De plus en plus de psychologues se font connaître via un site internet
   son activité au public
 ---
 
-# Les psychologues et leur site internet
-
 {::options parse_block_html="true" /}
-{: .plan-article}
-<div>
-#### Plan de l'article
-- [Internet idéal, réalité d'Internet](#ideal){: data-scroll=""}
-- [Les psychologues sur Internet](#psysurinternet){: data-scroll=""}
-- [Hypertexte et images, du contenu au contenant](#hypertexte){: data-scroll=""}
-- [Ce qui se conçoit bien... *Content Architecture*](#architecture){: data-scroll=""}
-- [Accessibilité : pour le Web aussi&nbsp;!](#accessibilite){: data-scroll=""}
-- [Réseaux sociaux, attention aux dérives](#reseaux){: data-scroll=""}
-- [Référencement, le sens sacrifié](#referencement){: data-scroll=""}
-- [Conclusion](#conclusion){: data-scroll=""}
+<div class="plan-article-fixed">
+<div class="plan-article">
+<p>Plan de l'article</p>
+<nav>
+<ol>
+<li><a href="#psysurinternet" data-scroll="">Les psychologues sur Internet</a></li>
+<li><a href="#hypertexte" data-scroll="">Hypertexte et images</a>
+<ol>
+<li><a href="#esthetique_cosmetique" data-scroll="">Esthétique vs Cosmétique</a></li>
+<li><a href="#image_seduction" data-scroll="">Image et séduction</a></li>
+<li><a href="#personal_branding" data-scroll="">Personal Branding</a></li>
+<li><a href="#bon_beau" data-scroll="">Bon ou beau ?</a></li>
+</ol>
+</li>
+<li><a href="#architecture" data-scroll="">Ce qui se conçoit bien… <em>Content Architecture</em></a></li>
+<li><a href="#accessibilite" data-scroll="">Accessibilité : pour le Web aussi&nbsp;!</a></li>
+<li><a href="#reseaux" data-scroll="">Réseaux sociaux, attention aux dérives</a></li>
+<li><a href="#referencement" data-scroll="">Référencement, le sens sacrifié</a></li>
+<li><a href="#conclusion" data-scroll="">Conclusion</a></li>
+</ol>
+</nav>
+</div>
 </div>
 
-## Internet idéal, réalité d'Internet
-{: #ideal}
+---
+{: .hr-icon} 
 
 [Time Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee), qui inventa le *World Wide Web*, se doutait-il, pour reprendre la boutade de S. Freud à S. Ferenszi et C.G. Jung, alors qu'il s'apprêtait à présenter sa théorie psychanalytique aux &Eacute;tats-Unis, qu'il nous apportait la peste&nbsp;?
 
@@ -66,24 +78,30 @@ En tant que psychologues, nous savons, ou plutôt nous sommes censés savoir, pa
 En d'autres termes, le contenant, l'apparence du site internet, fait-il cadre ou séduction&nbsp;? Et par extension ce contenant permet-il d'accéder au contenu, ce que vient à priori chercher la personne en souffrance psychique&nbsp;?
 
 ### Esthétique vs Cosmétique
+{: #esthetique_cosmetique}
 
 De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offrent à nous. Utiliser une solution toute faite, avec un design préconçu, et y intégrer du contenu, ou bien encore faire appel à une agence Web ou un freelance pour faire le travail. Or, il semble que la plupart des solutions évoquées néglige, la plupart du temps, la spécificité de notre profession. On ne fait pas un site pour un psychologue comme on fait un site pour un commerçant (même si le psychologue libéral fait commerce de son art).
 
 ### Image et séduction
+{: #image_seduction}
 
 Nous vivons dans une société ou le pouvoir de l'image va grandissant, installant même à certains endroits une forme de dictature. "Ce qui est beau est bon". Tel est l'argument des publicitaires, qui savent user du pouvoir de séduction de l'image et du verbe. Ce déni de la dimension fragile de l'Humain, vire parfois à un véritable fétichisme qui vient voiler, ou plutôt parer, la réalité de notre finitude sous des oripeaux. Jeunesse éternelle.. Cette **haine de la castration**, de ce qui nous délite et nous sépare du monde, donne lieu à une mascarade souvent grotesque, mais oh combien séduisante. On recouvre la laideur ou la vieillesse &mdash; jusqu'au morts que l’on embaume &mdash; d'une poudre cosmétique afin d'en nier l'inexorable réalité. "Parce qu'on le vaut bien", dit la publicité.
 
 ### *Personal Branding* ou comment ne pas tomber dans l'auto-promotion publicitaire
+{: #personal_branding}
 
-*Personnal Branding*. Voilà un drôle de mot glané au fil des récits de certains de mes patients immergés dans le monde professionnel. Renseignements pris, cette expression encore peu courante mais émergente fait un véritable *buzz* &mdash; pour s'exprimer ainsi... Le marketing personnel utilise des stratégies publicitaires éprouvées afin de promouvoir sa personne. La définition est édifiante&nbsp;: "Le Personal Branding a pour but premier de vous permettre de développer une communication claire sur votre identité, quel que soit le support, afin que vous puissiez vous démarquer de vos concurrents et de vos pairs. C’est une démarche qui devient essentielle si vous souhaite promouvoir votre projet professionnel, votre expertise et développer votre notoriété". 
+*Personnal Branding*. Voilà un drôle de mot glané au fil des récits de certains de mes patients immergés dans le monde professionnel. Renseignements pris, cette expression encore peu courante mais émergente fait un véritable *buzz* &mdash; pour s'exprimer ainsi... Le marketing personnel utilise des stratégies publicitaires éprouvées afin de promouvoir sa personne. La définition est édifiante&nbsp;: "Le Personal Branding a pour but premier de vous permettre de développer une communication claire sur votre identité, quel que soit le support, afin que vous puissiez vous démarquer de vos concurrents et de vos pairs. C’est une démarche qui devient essentielle si vous souhaite promouvoir votre projet professionnel, votre expertise et développer votre notoriété".
+
+{::options parse_block_html="true" /}
+<div class="post-svg">
+<svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.74 81.48"><title>cosmetic</title><path d="M61.67 81.47h36.07V2.16C86.59.63 76.56 8.61 74.61 17.05c-.41 1.76-.87 6.36-.87 6.36-.28.58-5.51 11.12-5.51 11.76a1.7 1.7 0 0 0 1.7 1.7h3.81v5.9a8.32 8.32 0 0 0 8.32 8.33h3.31v5.81C71.51 64 63.87 75.77 61.67 81.47zM31.64 28.48c0 3.4-5.15 3.4-5.15 0s5.15-3.4 5.15 0z"/><path d="M34.17 72.03V61.47c5.4-4.13 40.05-31.92 25.64-54.12-6.82-10.49-18.38-7.92-28.29-.09-11.71-10.55-22.3-8.63-27.87-.5-14.67 21.39 19.14 49.5 25.52 54.44v10.83c-6.58.8-11.7 4.64-12.44 9.44h29.9c-.74-4.8-5.87-8.65-12.46-9.44zm-7.52-20.48A102.63 102.63 0 0 1 15.5 39.89c4.47.46 3.32-3.6 1.19-3-3.63 1-6.56-6.41-2.2-7.59a2.26 2.26 0 0 1 2.5 1.84 1.47 1.47 0 0 0 1.82 1c2.83-.81-.61-6.89-5.08-5.69a5.41 5.41 0 0 0-4.22 4.44c-2.69-5.13-4.1-10.46-3-15.45 10.48-8.8 25.55-2 27.95 8.16.33 1.43.71 5.16.71 5.16l5 8.17a1.38 1.38 0 0 1-1.29 1.91h-3.16c-.1 7.84.89 13-7.38 12.73z"/></svg>
+</div>
 
 Cette forme de *propagande*, avec ses idéaux de performance et de victoire sur autrui, s'immisce parfois subrepticement dans nos discours, et malheureusement dans nos sites internet à destination d'un public en souffrance, ou tout au moins en recherche d'apaisement. Certains "collègues" &mdash; il suffit de faire quelques recherches sur le Net pour savoir de quoi je parle, ne comptez-pas sur moi pour faire de la délation &mdash; semblent à cet égard être tombés bien bas. Les *experts*, *sachants* en tout genre, promettent guérison du symptôme en mettant en avant, non leur technique, mais leur aura supposée. Ces *gurus* ont pourtant bien souvent tous les titres légitimant l'appellation de psychologue. Que reste-t-il de la psychologie&nbsp;?
 
-> Ce discours [publicitaire], mystificateur, promet la satisfaction de tous les désirs à condition d’y mettre le prix; c’est un encensement de la toute-puissance du désir. (Dimitri Weyl, 2013)[^6]
+> Ce discours [publicitaire], mystificateur, promet la satisfaction de tous les désirs à condition d’y mettre le prix; c’est un encensement de la toute-puissance du désir. (Dimitri Weyl, 2013)[^3]
 
 Qu'on ne se méprenne pas. Les gurus en tous genres ont bien compris l'importance de leur image. Séduction, falsification, promesses et danses en tous genres sont leurs armes fétiches.
-
-### Esthétique
 
 La dimension esthétique, quant à elle, provoque, par une production sublimatoire, le déclenchement, à travers les sens du spectateur, d'une émotion, d'affects, qui peuvent dès lors se partager. Nous avons tous vécu ces moments d'une profonde sérénité ou l'oeuvre nous transporte et met du baume à l'âme, **parce qu'un autre nous dévoile sa propre condition humaine**. "Il fait moins noir quand quelqu'un parle", dit l'enfant à son père.
 
@@ -93,9 +111,12 @@ Or, nous, psychologues, nous situons nous du côté d'une société par certains
 
 Rien n'est moins sur, mais quelques précautions peuvent se penser, quand on est à l'aube de la création d'un site.
 
-### Sous l’emballage
+### Bon ou beau ?
+{:#bon_beau}
 
-J'avais récemment une conversation sur un forum avec une collègue qui m'opposait ce que je traduirai par la phrase suivante. "Ce n'est pas parce qu'un site est beau que le psychologue est bon". Elle précisait d'ailleurs que selon elle, les "bons" psychologues avaient souvent des sites très simples et réalisés à l'ancienne. Je lui accorde un crédit. Ce n'est pas parce que c'est beau que c'est bon, pas plus que les pâtes Machintruc sont bonnes en raison de l'emballage coloré. **C'est bon quand c'est bien fait**. Mais qu'est-ce qu'un site "bien fait" ? Cette vision peut sembler subjective au néophyte. Quelques pistes...
+J'avais récemment une conversation sur un forum avec une collègue qui m'opposait ce que je traduirai par la phrase suivante. "Ce n'est pas parce qu'un site est beau que le psychologue est bon". Elle précisait d'ailleurs que selon elle, les "bons" psychologues avaient souvent des sites très simples et réalisés à l'ancienne. 
+
+Je lui accorde un crédit. Ce n'est pas parce que c'est beau que c'est bon, pas plus que les pâtes Machintruc sont bonnes en raison de l'emballage coloré. **C'est bon quand c'est bien fait**. Mais qu'est-ce qu'un site "bien fait" ? Cette vision peut sembler subjective au néophyte. Quelques pistes...
 
 ## Ce qui se conçoit bien... *Content Architecture*
 {: #architecture}
@@ -103,6 +124,11 @@ J'avais récemment une conversation sur un forum avec une collègue qui m'opposa
 L'architecture de contenu est très à la mode dans le monde du webdesign, ainsi que son dérivé, l'UX (pour User Experience). Pourquoi diable se soucier d'architecture&nbsp;? Si l'on reprend le modèle de l'architecture la plus connue, celle des bâtiments, vous admettrez qu'une école n'est pas conçue comme une banque, de même que votre salle de bains et votre salon sont &mdash; je vous le souhaite &mdash; différents.
 
 Nous repérons assez facilement dans notre environnement, sans même nous en apercevoir, dans quel type de milieu nous nous trouvons. C'est la même chose sur Internet. Un site bancaire ne présente pas l'information de la même façon que le site d'un artiste musical, sans même parler du design. 
+
+{::options parse_block_html="true" /}
+<div class="post-svg">
+<svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.37 60.38"><title>architecture</title><path d="M52.7 24.51l-15.14-9.05L0 37.92l25.84 15.45 3.54-2.12-9.22-5.52 6.19-3.7-3.55-2.12-6.19 3.71-9.52-5.7 12.93-7.73 9.53 5.69-3.2 1.91 3.54 2.12 10.29-6.15-3.54-2.12-3.55 2.12-9.52-5.69 13.99-8.37 9.52 5.69-6.9 4.13 3.55 2.12 6.9-4.13.62.38 1.45-3.38zM61.64 34.1L68 37.92 37.56 56.14l-2.77-1.65-3.55 2.12 6.31 3.78 37.57-22.47-10.55-6.31-2.77 2.45zM54.52 25.15L83 0l6.33 7.18-28.48 25.15-10.75 3.1zm5.24 7v-2.06l-1.53-.23v-1.54l-1.53-.23v-1.54l-2-.3-2.75 6.4 1.27 1.44z"/></svg>
+</div>
 
 L'architecture de contenu vise à poser des règles afin de faciliter l'accès à l'information pour l'internaute. Cela peut vous sembler évident, mais c'est bien plus complexe que cela. Sont notamment concernés dans un site internet les liens de navigation (leur couleur, leur emplacement, leur soulignement ou pas, les transitions effectuées au survol de la souris), mais aussi l'ensemble des contenus informatifs du site, comprenant les icônes qui aident à se repérer, et bien entendu le contenu textuel (choix de la police, de l'interlignage, de sa taille, de son emplacement, de son rythme).
 
@@ -129,16 +155,26 @@ La réalité est toute autre, car les options permettant l’accessibilité sont
 
 Pour cela, il faut que le développeur du site ait une formation spécifique à l'implémentation dans le code des options permettant l'accessibilité. Une option qui n'est pas native sur WordPress, Drupal et autres CMS qui la permettent mais qui n'est pas implémentée dans les thèmes proposés.
 
+{::options parse_block_html="true" /}
+<div class="post-svg">
+<svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.8 65.78"><title>braille</title><path d="M16 41.59v-3.2a1.6 1.6 0 0 1 3.2 0v3.2a1.6 1.6 0 0 1-3.2 0zM22.2 41.59v-7.3a1.6 1.6 0 0 1 3.2 0v7.3a1.6 1.6 0 0 1-3.2 0zM28.4 41.59v-17.7a1.6 1.6 0 0 1 3.2 0v17.7a1.6 1.6 0 0 1-3.2 0zM9.7 53v-9.7a1.6 1.6 0 0 1 3.2 0V53a1.6 1.6 0 0 1-3.2 0zM34.7 41.59v-17.1a1.6 1.6 0 0 1 3.2 0v17.1a1.6 1.6 0 0 1-3.2 0zM40.9 53V36.39a1.6 1.6 0 0 1 3.2 0V53c.22 1.95-3.2 2.25-3.2 0z"/><path d="M35.3 62.59a10.66 10.66 0 0 0 5.6-9.5 1.6 1.6 0 0 1 3.2 0 14 14 0 0 1-7.4 12.4c-2.04 1.02-3.16-2.02-1.4-2.9zM17.2 65.59a13.88 13.88 0 0 1-7.4-12.4 1.6 1.6 0 0 1 3.2 0 10.66 10.66 0 0 0 5.6 9.5c1.83.91.56 3.87-1.4 2.9zM16 43.19a1.5 1.5 0 0 0-3 0 1.6 1.6 0 0 1-3.2 0 4.7 4.7 0 1 1 9.4 0 1.6 1.6 0 0 1-3.2 0zM22.2 37.29a1.5 1.5 0 0 0-3 0c0 2.22-3.3 2-3.3 0a4.7 4.7 0 1 1 9.4 0c.23 2.05-3.1 2.19-3.1 0zM34.7 23.89a1.5 1.5 0 0 0-3 0 1.6 1.6 0 0 1-3.2 0 4.7 4.7 0 0 1 9.4 0 1.6 1.6 0 0 1-3.2 0zM40.9 35.89a1.5 1.5 0 0 0-3 0 1.6 1.6 0 0 1-3.2 0 4.7 4.7 0 0 1 9.4 0c.22 1.96-3.2 2.26-3.2 0z"/><path d="M28.3 34.39a1.5 1.5 0 0 0-3 0 1.6 1.6 0 0 1-3.2 0 4.7 4.7 0 0 1 9.4 0c.24 1.9-3.2 2.29-3.2 0zM30.7 10.89a2.5 2.5 0 0 1 5 0c.22 3.11-5 3.47-5 0zM2.5 5.59A2.5 2.5 0 1 1 5 3.09a2.47 2.47 0 0 1-2.5 2.5zM0 11.39a2.5 2.5 0 0 1 5 0c.22 3.13-5 3.47-5 0zM38.6 10.59a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1-5 0zM7.8 2.79a2.5 2.5 0 0 1 5 0c.2 3.13-5 3.47-5 0zM7.8 11.19a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1-5 0zM46.8 10.59a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1-5 0zM16.1 2.79a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1-5 0zM16.1 11.19a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1-5 0zM30.7 2.49a2.5 2.5 0 0 1 5 0c.22 3.13-5 3.51-5 0z"/></svg>
+</div>
+
 Un exemple parmi tant d’autres, justifier le texte d’une page Web c’est rendre difficile son accès à des personnes souffrant de dyslexie… Nul besoin d’être atteint de paraplégie pour être victime de cette ségrégation.
 
 > Il est important de se rappeler que le handicap peut être invisible, la dyslexie ne se voit pas, pourtant elle empêche de nombreuses personnes d’accéder à certains contenus.
 
-Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^4] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
+Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;![^4] Cela demande du temps, mais cela ne semble définitivement pas une option dans la mise en ligne de contenus pour notre profession.
 
 ## Réseaux sociaux, attention aux dérives
 {: #reseaux}
 
 Activer et entrentenir sa présence sur Internet est de nos jours une activité qui peut mettre en jeu une multitude de canaux. Du site internet en passant pas les réseaux sociaux comme Facebook ou Twitter, notre présence en ligne n'est jamais anodine, et les implications pour notre travail de psychologues existent.
+
+{::options parse_block_html="true" /}
+<div class="post-svg">
+<svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.14 88.71"><title>social</title><path d="M85.82 2.05c3.93 18.8-2.42 44.2 0 63.31.07 1.72-1.83 1.46-2.69 2.25-.73 6.45-.56 13.77-3.56 17.96-1.71.37-1.74-1-2.25-1.8-1.32.48-.89 2.7-2.24 3.14-3 .05-3.3-2.69-4-4.94-2.26.74-.91 5.07-3.15 5.84-7.36-1.88-2.6-13.17-5.46-19.31-.91 6 1.64 16.88-3.59 19.76-3.79-2.2-1.68-10.29-3.15-14.82-1.85 3.72.71 12.85-4 14.82-2.67-4.39-4.29-11.76-2.24-16.16 2.12 4.18.22 9.86 2.69 13.92 2.33-1.11 1.16-5.72 1.79-8.53-4.55-2.79-2.62-12.05-3.59-18.41-1.87 3.77 1.67 13.39-4 14.37-.33 5 1.34 15.23-4.49 14.37-4.27-3 1.31-16-3.14-20.21-1.42 4.45.4 12-1.35 16.61-3.62-.32-2.56 4-5.39 4.49-1.69-.1-2.42-1.17-2.25-3.14-1.53.18-.57 1.21-2.25.45-.4-1.1-1-1.95-.9-3.59-2.2 1.24-1.81 5.08-4.94 5.39-.92-1.92-1.16-4.53-1.8-6.74-1.78 1.81-.62 6.57-4 6.74-2.19-.91-2.3-3.82-2.3-6.74-3 1-1.93 6.15-4.49 7.63-2.3-.54-2.77-2.92-2.69-5.84-1-.9-2.53.49-3.59-.9-.51-5.18 1.54-12.91-2.24-14.82C-.18 46.38-.62 21.84 2.3 3.38c5.32-2.33 11.61-1.19 18-1.35 13.73-.32 52.13-4.42 65.52.02zm-28.74 4c-.31 6.12-.62 12.25-.45 18.86 9.46 4.74 10.75 28-.45 31.88-.12 2-.72 3.47-.45 5.84 7.36-1.29 15 .8 24.25-.9-1.78-16.68 1.52-36.84.45-55.68-6.77-.27-15.47-1.04-23.35.04zM6.35 7.89c.32 5.09.66 9.45-.45 13.92 9 .68 16.7 0 26.94.45 5.2-2.93 11.67-4.27 16.61-1.35.74-4.23 1.76-10.45 1.35-14.37-14.97-.16-31.05.77-44.45 1.35zm31.43 36.37c1-3.93 3.38-13.15.45-16.61-.17 5.16-2.66 11.99-.45 16.61zm3.14-16.61c-.69 13-2.17 24.9-.45 38.61 3.67-12.47-.5-24.36 1.8-37.72 1.56 5.3-.1 15.07 1.8 20.21 2.56-4.93.86-14.11 1.35-21.1zm-35 35.47c8.37.73 15.74.27 22 1.35 0 5.65.52 10.85.45 18.41 2.3-.5 1.37-4.3 2.2-6.29-2.76-5.66 0-13.46 0-21.1-8.16-3.94-11.08-18.24-5.84-26.94-6-1.15-12.61.74-18.86-.45-1.49 10.28-.74 23.36.03 35.02zm43.1-20.65A22 22 0 0 0 50.37 29c-1-.38-1.53-1.16-3.14-.9 1.12 4.28-.37 11.12 1.77 14.36zM33.29 50.1c-.61-7.4 2.61-15.57.9-21.1-3.53 4.28-3.92 16.83-.9 21.1zM49 54.59c4.76-.58 4-19.47 3.59-24.25-.57 0-.62-.58-1.35-.45 2.33 10.07-3.76 15.2-2.24 24.7zm6.73-5.84c4.36-2.36 2.66-11.48 0-14.37a40.19 40.19 0 0 0 .01 14.37zm-26-4.94c.26-.81 1.18-7.91 0-8.53-.88 1.93-2.77 7.1-.04 8.53zm4.94 6.29c1.76.1.88-6.68.45-5.84.07 2.2-.83 3.4-.49 5.84zm9.88 0c3.47 4.81-.85 16.31 3.14 21.1 2.08-8-.24-18.31-1.35-26 .02 2.25-1.36 3.12-1.83 4.9zm-7.67 10.28c.5-3.8 2.32-10.69.45-13.92-.31 4.25-.93 10.29-.45 13.92zm15.27-6.73c2.4.44 4.26-2 4-2.69-1.51 1.62-2.07-1.5-3.15-1.79a6.28 6.28 0 0 1-.85 4.52zM41.82 67.16c0 1.87 1 3.83.9 5.84-.18 4.25-3.16 9.6.45 13.47 4.4-8.9.4-26.38 0-35.92 1.12 6.58-1.36 12.31-1.35 16.61zm-10.33 5.83c3.46-4.48 2.43-14.28 3.59-19.76-.1-.51-.5-.7-.9-.9-3.28 4.23-3.22 14.12-2.69 20.66zm22 1.35c2.09-4.79.81-13 1.79-18.86a2.92 2.92 0 0 1-3.59-.45c.64 6.29-.78 14.11 1.8 19.35zm-16.61-9.88c-1.33 5.1-2.08 12.22-.45 17.51 1.09-5.35-.23-13.1 1.79-17.51zm40.41 3.14c1.44 4.88-2 13.14 2.25 16.61.81-5.11 4.14-11.71 1.79-17.06-1.41.1-3.3-.3-4.04.46zm-6.74.9c1.84 2.8-.27 9.56 2.25 11.68 1.65-3.2 3.52-7.86 2.25-12.57-1.57.22-3.4.2-4.48.89zm-5.38 13.88c3.55-1.87 4-9.16 3.15-13.92-6.75-2.52-2.65 9.41-3.15 13.92zm-9-9.43c.25-.93.7-1 1.35-.45.92 4-1.33 11.54 2.24 13.92 1.77-5.21 2.25-12.53.45-18h-4.47c.28 1.45-.58 3.96.45 4.57zM5.45 81.08c.79-2.22 3.27-6.95 1.8-11.23H5c-.32 3.45-1.88 9.02.45 11.23zm6.29-10.78c1.21 2.14-1.49 7.12.45 8.53 2.65-.94 1.31-5.87 2.69-8.08-.97-.37-2.51-1.09-3.15-.45zm8.08 0c-.44 3.6.12 5.4.45 8.08 1.87-1.87 2.61-4.87 3.14-8.08a6.7 6.7 0 0 0-3.59 0zm2.69 15.27c3.49-2.08 4.88-10.94 2.69-15.72h-.9c-.21 5.42-3.65 9.7-1.79 15.72zM9.04 87.38c2.19-2.35 1.4-4.6.9-7.18-.66-3.39 1.18-9.43-.9-9.88-.22 5.93-2.59 12.39 0 17.06zm7.63-.9c2.39-4.31 1.08-9.64 1.35-16.17-4.93 1.35-3.39 12.85-1.35 16.15zm15.72.45c2.77-3.21 1.28-10.34 1.35-14.82-1.85 4-4.56 10.85-1.35 14.8zm35.47-.45c.78-3.83 4.53-7.74 1.35-11.67 1.48 5.25-5.77 9.16-1.35 11.65zm7.19-.9c0-3.15 1.72-6.95.45-9.88.32 3.68-4.61 7.77-.45 9.87z"/><path d="M69.21 7.89c12.14-2.53 12 16.72 2.69 16.61-8.5-.12-12.85-14.49-2.69-16.61zm.45 7.64c.82 1.86 3.27 2.18 4.94.9.97-4.93-5.24-6.05-4.94-.91z"/></svg>
+</div>
 
 Une règle à suivre : ne jamais confondre identité personnelle et identité professionnelle. Notre activité de psychologue réclame, à fortiori quand une relation de type psychothérapeutique est impliquée, une certaine opacité qui facilite le transfert. En montrer un peu, mais pas trop. Mettez-vous des photos de vos vacances dans votre lieu de consultation ? Je suppose que non. 
 
@@ -162,13 +198,15 @@ Mais le plus important, et ce qui est de plus en plus pris en compte par Google 
 
 Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable reflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
 
+---
+{: .hr-icon} 
 
 [^1]: Schneider Benoît, « Une réflexion collective nécessaire », Le Journal des psychologues 8/2012 (n° 301) , p. 42-42 / DOI : 10.3917/jdp.301.0042.
 
 [^2]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
 
-[^3]: Dimitri Weyl, « L’omniprésence de la toutepuissance dans l’imagerie publicitaire - Un exemple paradigmatique : l’utilisation du corps féminin », *Recherches en Psychanalyse*, 16|2013.
+[^3]: Dimitri Weyl, « L’omniprésence de la toutepuissance dans l’imagerie publicitaire - Un exemple paradigmatique : l’utilisation du corps féminin », *Recherches en Psychanalyse*, 16, 2013.
 
 [^4]:  Je dois l'avouer, mes sites ne respectent pas complètement à l’heure actuelle les normes d’accessibilité. Je suis en cours de formation sur ce sujet et ajouterai ces options dans mes futures productions ainsi qu’à tous les sites déjà en ligne et qui nécessiteraient une mise à jour (gratuite..).
 
-[^5]: "Proposer du contenu approprié et à jour"
+[^5]: "Proposer du contenu approprié et à jour" 

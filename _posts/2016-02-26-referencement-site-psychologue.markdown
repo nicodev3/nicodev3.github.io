@@ -3,6 +3,7 @@ layout: post
 title: Psychologues, référencez votre site sur Google&nbsp;!
 date: 2016-01-26
 categories: "site internet, référencement"
+h1: Référencer son site sur Google
 comments: true
 published: true
 excerpt: "Avoir un site internet, c'est bien. Avoir un site internet que peuvent trouver les utilisateurs, c'est mieux, voire indispensable !"
@@ -11,20 +12,31 @@ excerpt: "Avoir un site internet, c'est bien. Avoir un site internet que peuvent
 # Référencer son site avec Google : les bonnes pratiques
 
 {::options parse_block_html="true" /}
-{: .plan-article}
-<div>
-#### Plan de l'article
-- [Que veulent les moteurs de recherche](#que_veulent_les_moteurs){: data-scroll=""}
-  - [La mission de Google](#mission_google){: data-scroll=""}
-- [Les ingrédients d'un bon référencement](#ingredients){: data-scroll=""}
-  - [Le contenu textuel](#ingredient_texte){: data-scroll=""}
-  - [La vitesse de chargement des pages](#ingredient_vitesse){: data-scroll=""}
-  - [La popularité](#ingredient_popularite){: data-scroll=""}
-- [Le *crawl* des robots d'indexation](#crawl_robots){: data-scroll=""}  
-  - [Ce que voient les robots](#robots_voient_true){: data-scroll=""}
-  - [Ce que ne voient pas les robots](#robots_voient_false){: data-scroll=""}
-- [Fournir du contenu adéquat et à jour](#fresh_content){: data-scroll=""}  
-
+<div class="plan-article-fixed">
+<div class="plan-article">
+<p>Plan de l'article</p>
+<ol>
+<li><a href="#que_veulent_les_moteurs" data-scroll="">Que veulent les moteurs de recherche</a>
+<ol>
+<li><a href="#mission_google" data-scroll="">La mission de Google</a></li>
+</ol>
+</li>
+<li><a href="#ingredients" data-scroll="">Les ingrédients d'un bon référencement</a>
+<ol>
+<li><a href="#ingredient_texte" data-scroll="">Le contenu textuel</a></li>
+<li><a href="#ingredient_vitesse" data-scroll="">La vitesse de chargement des pages</a></li>
+<li><a href="#ingredient_popularite" data-scroll="">La popularité</a></li>
+</ol>
+</li>
+<li><a href="#crawl_robots" data-scroll="">Le crawl des robots d'indexation</a>
+<ol>
+<li><a href="#robots_voient_true" data-scroll="">Ce que voient les robots</a></li>
+<li><a href="#robots_voient_false" data-scroll="">Ce que ne voient pas les robots</a></li>
+</ol>
+</li>
+<li><a href="#fresh_content" data-scroll="">Fournir du contenu adéquat et à jour</a></li>
+</ol>
+</div>
 </div>
 
 Pour comprendre les **bases du référencement naturel**[^1], il est nécessaire d'appréhender à minima le fonctionnement des moteurs de recherche. Nous prendrons comme exemple le moteur Google, qui, s'il n'est pas l'unique moteur existant, est suffisamment représentatif (de fait la part de marché de Google est écrasante par rapport à ses concurrents).

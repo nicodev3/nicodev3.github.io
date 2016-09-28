@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <script src="//use.typekit.net/xac0gwv.js"></script>
+    <script>try {
+        Typekit.load();
+    } catch (e) {
+    }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src   = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-58214610-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <div class="canvas">
+        <input type="checkbox" id="checkbox"/>
+        <div class="content">
+            <header class="site-header" role="banner">
+                <div class="has-container">
+                    <h1 class="page-h1">{{ page.h1 }}</h1>
+                    <a class="site-title" href="{{ site.baseurl }}/">
+                        <span class="lettre lettre-n">n</span>
+                        <span class="lettre lettre-i">i</span>
+                        <span class="lettre lettre-c">c</span>
+                        <span class="lettre lettre-o">o</span>
+                        <span class="lettre lettre-l">l</span>
+                        <span class="lettre lettre-a">a</span>
+                        <span class="lettre lettre-s">s</span>
+                        <span class="lettre lettre-d">d</span>
+                        <span class="lettre lettre-e">e</span>
+                        <span class="lettre lettre-v">v</span>
+                        <span class="lettre lettre-a2">a</span>
+                        <span class="lettre lettre-u">u</span>
+                        <span class="lettre lettre-x">x</span>
+                        <span class="lettre trois">3</span>
+                    </a>
+                    <label for="checkbox" class="open">&#9776;</label>
+                    <label for="checkbox" class="close"></label>
+                    <div class="off-canvas">
+                        <nav class="navigation" role="navigation">
+                            <ul class="navigation__ul">
+                                <li><a class="page-link" href="/index.html">Accueil</a></li>
+                                <li><a class="page-link" href="/portfolio/index.html">Réalisations</a></li>
+                                <li><a class="page-link" href="/tutoriels/index.html">Tutoriels clients</a></li>
+                                <li><a class="page-link" href="/developpeur-web/index.html">Qui suis-je ?</a></li>
+                                <li><a class="page-link" href="/blog/index.html">Blog</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>

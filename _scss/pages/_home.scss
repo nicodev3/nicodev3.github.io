@@ -1,0 +1,13 @@
+// -----------------------------------
+// TEXT STYLES
+// -----------------------------------
+.home-h2 {
+    text-align: center;
+    margin: .5em 0 1.5em;
+}
+
+.home-h3 {
+    @include fz($h4-fz);
+    hyphens: none;
+    text-align: center;
+}

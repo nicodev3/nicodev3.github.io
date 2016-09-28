@@ -3,12 +3,11 @@ layout: post
 title: Création d'un site Internet
 date: 2015-10-26
 categories: "site internet, création"
+h1: créer un site internet
 comments: true
 published: true
 excerpt: "Dans cet article, je vous propose de découvrir se qui se cache derrière un site Internet."
 ---
-
-# Un site Internet, c'est quoi ?
 
 Pour la plupart d'entre nous, un site internet est un ensemble de textes et de visuels, animés ou non, parfois de sons, accessible depuis un ordinateur, un téléphone, une tablette, et même paraît-il une montre.. 
 
@@ -21,23 +20,26 @@ Je vous invite à un petit tour d'horizon du monde du développement. N'ayez cra
 Nous partirons de la surface pour aller vers les profondeurs. Mais je suis certain que mes amis psychologues en ont l'habitude...
 
 {::options parse_block_html="true" /}
-{: .plan-article}
-<div>
-#### Plan de l'article
-1. [Le navigateur : fenêtre sur le Web](#navigateur)
-    1. [Les différents navigateurs](#navigateurs)
-    2. [Un interprète pour le code](#interprete)
-2. [Du code à la page, les langages du Web](#langages)
-    1. [HTML: des balises pour structurer le Web](#html)
-    2. [CSS : mettre en forme le HTML](#css)
-    3. [Javascript : donner vie au contenu](#js)
-3. [Du contenu, du contenu, encore du contenu !](#contenu)
-	1. [Structurer les données](#structurer)
-	2. [l'UX, une donnée à ne pas négliger](#ux)
-	3. [L'accessibilité, une nécessité, un challenge](#accessibilité)
-4. [Conclusion](#conclusion)
-
+<div class="plan-article-fixed">
+<div class="plan-article">
+<p>Plan de l'article</p>
+1. [Le navigateur : fenêtre sur le Web](#navigateur){: data-scroll=""}
+    1. [Les différents navigateurs](#navigateurs){: data-scroll=""}
+    2. [Un interprète pour le code](#interprete){: data-scroll=""}
+2. [Du code à la page, les langages du Web](#langages){: data-scroll=""}
+    1. [HTML: des balises pour structurer le Web](#html){: data-scroll=""}
+    2. [CSS : mettre en forme le HTML](#css){: data-scroll=""}
+    3. [Javascript : donner vie au contenu](#js){: data-scroll=""}
+3. [Du contenu, du contenu, encore du contenu !](#contenu){: data-scroll=""}
+	1. [Structurer les données](#structurer){: data-scroll=""}
+	2. [l'UX, une donnée à ne pas négliger](#ux){: data-scroll=""}
+	3. [L'accessibilité, une nécessité, un challenge](#accessibilité){: data-scroll=""}
+4. [Conclusion](#conclusion){: data-scroll=""}
 </div>
+</div>
+
+---
+{: .hr-icon} 
 
 ## Le navigateur : fenêtre sur le Web
 {: #navigateur}

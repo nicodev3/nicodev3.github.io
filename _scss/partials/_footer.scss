@@ -4,8 +4,8 @@
 .site-footer {
     height : $footer-height;
     background-color : color(primary-color-dark);
-
-    @include full;
+    position: relative;
+    z-index: 100;
 }
 
 .footer-container {
@@ -13,8 +13,6 @@
 
     @include susy-breakpoint($tablet-portrait) {
         margin-top : 50px;
-
-        @include container();
     }
 }
 
@@ -52,8 +50,4 @@
 .contact-list a {
     color : color-lighter(accent-color, 6);
     text-decoration: none;
-}
-
-#disqus_thread {
-    @include container();
 }

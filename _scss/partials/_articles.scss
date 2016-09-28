@@ -1,136 +1,135 @@
 .hauteur-plus {
-  padding-bottom : 620px;
+    padding-bottom : 620px;
 }
 
 .conteneur-post {
-  margin-top : 1.5em;
+    background: none;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+}
 
-  @include pad(5%);
-  @include susy-breakpoint($tablet-portrait) {
-    @include span(8);
-    @include push(2);
-  }
+.post-header {
+    overflow: auto;
+    padding-top: 3em;
+}
+
+.post-content {
+    border : 1px solid #eee;
+    background : #fff;
+
+    @include pad(gutter());
+    @include susy-breakpoint($tablet-portrait) {
+        @include span(8 last);
+    }
+}
+
+.post-content h1 {
+    color : #000;
+    @include fz($h1-fz);
+}
+
+.plan-article-fixed {
+    @include susy-breakpoint($tablet-paysage) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: span(4);
+        background: #34495e;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+.plan-article {
+    position: relative;
+    top: 30%;
+    left: 7%;
+    z-index: 100;
+    color: #fff;
+}
+
+.plan-article p {
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+.plan-article a {
+    color: #e0e0e0;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: $sans-serif;
+    transition: color .2s ease-out;
+    &:hover {
+        color: #777;
+    }
+}
+
+.plan-article li {
+    margin-bottom: .4em;
 }
 
 .post-content ul {
-  list-style : none;
+    list-style : none;
 }
 
-.post-content li {
-  position : relative;
-
-  &:before {
-    display : block;
-    position : absolute;
-    top : 9px;
-    left : -8px;
-    width : 4px;
-    height : 4px;
-    border-radius : 50%;
-    background : color(primary-color-light);
-    content : '';
-  }
-
-  .post-content a {
-    color : #fff;
-    font-family : $sans-serif;
-  }
-
-  .blog-list-h2 {
+.blog-list-h2 {
+    color : red;
     font-size : 1rem !important;
-    color: red;
-  }
+}
 
-  // titre post
-  .post-list h2 {
+.post-list h2 {
     padding-top : .3em;
     padding-bottom : 1em;
     font-size : 1.5em;
     line-height : 16px;
-  }
+}
 
-  // dates
-  .post-meta {
+.post-meta {
+    margin : 0;
+    padding : 0;
+
     font-variant-numeric : oldstyle-nums;
     font-feature-settings : 'onum';
-  }
+}
 
-  .footnotes {
+.footnote {
+    padding-left: .4em;
+    font-size : 1.2em;
+}
+
+.footnotes {
     margin-top : 5em;
     border-top : 1px solid black;
     &:before {
-      font-style : italic;
-      content : 'notes :';
+        font-style : italic;
+        content : 'notes :';
     }
-  }
+}
 
-  .footnotes ol p:first-letter {
-    font-size : 1em !important;
-  }
-
-  #disqus_thread {
+#disqus_thread {
     margin-top : 2em;
 
     @include pad(5%);
     @include susy-breakpoint($tablet-portrait) {
-      @include span(8);
-      @include push(2);
+        @include span(8 last);
     }
-  }
+}
 
-  .post-content p:first-of-type:first-letter {
-    font-size : 2em;
-  }
-
-  .plan-article {
-    margin : 4em 0;
-    padding : gutter();
-    border-radius : 5px;
-    background : color(primary-color-dark);
-
-    h4 {
-      margin-top : 0;
-      color : color(primary-color-text);
-    }
-  }
-
-  .caddie {
-    position : relative;
-    left : 0;
-    width : 80px;
-  }
-
-  #tuto-gif {
-    display : block;
-    width : 600px;
-    margin : 4em auto;
-    padding : 1em;
-    border-radius : 5px;
-    background : RGBA(0, 0, 0, .2);
-  }
-
-  .blog-image {
+.blog-image {
     display : block;
     width : 80px;
     margin : 0 auto;
-  }
+}
 
-  .plan-article ol {
-    padding-bottom : 1em;
-  }
-
-  .plan-article ol ol {
-    padding-top : .5em;
-  }
-
-  .glossaire + ul li {
+.glossaire + ul li {
     margin-bottom : .5em;
     font-family : $sans-serif;
     font-size : 1.2em;
     font-style : italic;
-  }
+}
 
-  .glossaire + ul ul li {
+.glossaire + ul ul li {
     margin-top : 1em;
     padding-left : 1.5em;
     color : color(primary-text-color);
@@ -140,19 +139,19 @@
     font-weight : 400;
 
     &:before {
-      display : none;
+        display : none;
     }
 
     &:after {
-      display : block;
-      width : 150px;
-      height : 1px;
-      margin : 1em auto;
-      background : color(primary-color);
-      content : '';
+        display : block;
+        width : 150px;
+        height : 1px;
+        margin : 1em auto;
+        background : color(primary-color);
+        content : '';
     }
-  }
 }
+
 
 .pro-tip {
     display : inline-block;
@@ -175,74 +174,74 @@
 // icone horizontal rule
 // -----------------------------------
 .hr-icon {
-  width : 100%;
-  margin : 2em 0;
-  float : left;
-  clear : both;
-  border-top : 4px double #8c8b8b;
-  text-align : center;
+    width : 100%;
+    margin : 2em 0;
+    float : left;
+    clear : both;
+    border-top : 4px double #8c8b8b;
+    text-align : center;
 
-  &:after {
-    display : inline-block;
-    position : relative;
-    top : -20px;
-    margin : 0 10px;
-    padding : 10px;
-    background : #fdfdfd;
-    color : color(primary-color);
-    font-family : icomoon;
-    font-size : 1.5em;
-    content : '\e905';
-  }
+    &:after {
+        display : inline-block;
+        position : relative;
+        top : -20px;
+        margin : 0 10px;
+        padding : 10px;
+        background : #fdfdfd;
+        color : color(primary-color);
+        font-family : icomoon;
+        font-size : 1.5em;
+        content : '\e905';
+    }
 }
 
 /**
  * Aligen video post creation site internet
  */
 .video-center {
-  display : block;
-  width : 600px;
-  margin : 0 auto;
-  margin-top : 3em;
-  margin-bottom : 3em;
-  border : 10px solid RGB(230, 62, 142);
+    display : block;
+    width : 600px;
+    margin : 0 auto;
+    margin-top : 3em;
+    margin-bottom : 3em;
+    border : 10px solid RGB(230, 62, 142);
 }
 
 .post-list {
-  padding-left : 0;
+    padding-left : 0;
 
-  @include susy-breakpoint($tablet-portrait) {
-    h2 {
-      margin : 0;
+    @include susy-breakpoint($tablet-portrait) {
+        h2 {
+            margin : 0;
+        }
     }
-  }
 }
 
 .post-list h2 {
-  line-height: 1.375rem;
+    line-height : 1.375rem;
 }
 
 .post-list li {
-  list-style : none;
-  margin-bottom: 1em;
+    margin-bottom : 1em;
+    list-style : none;
 }
 
 .post-link {
-  color: #c8518d;
-  font-size: 1.3em;
-  @include susy-breakpoint($tablet-portrait) {
-    font-size : 1.3rem;
-  }
-}
+    color : color(accent-color);
+    font-size : 1.3em;
 
-.post-content {
-  @include pad(gutter());
-  background: #fff;
-  border: 1px solid #eee;
+    @include susy-breakpoint($tablet-portrait) {
+        font-size : 1.3rem;
+    }
 }
 
 .blog-image img {
-  display: block;
-  max-width: 5em;
-  margin: 2em auto;
+    display : block;
+    max-width : 5em;
+    margin : 2em auto;
+}
+
+.post-svg {
+    width: 400px;
+    margin: 3em auto;
 }

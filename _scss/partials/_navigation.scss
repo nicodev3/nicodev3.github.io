@@ -46,20 +46,13 @@ input:checked ~ .content {
     background : color(primary-color);
 
     @include susy-breakpoint($tablet-portrait) {
+        top : 0;
         right : 0;
-        bottom : 0;
         left : 0;
         width : 100%;
-        height : auto;
+        height : 0;
         border-top : none;
         background : #eee;
-    }
-}
-
-.navigation {
-    @include susy-breakpoint($tablet-portrait) {
-        padding-top : 3px;
-        line-height : 3;
     }
 }
 
@@ -68,6 +61,7 @@ input:checked ~ .content {
     padding : 0;
 
     @include susy-breakpoint($tablet-portrait) {
+        margin : 0;
         float : right;
     }
 }
@@ -77,11 +71,8 @@ input:checked ~ .content {
 
     @include susy-breakpoint($tablet-portrait) {
         display : inline-block;
-        line-height : 3;
-        margin-right: .2em;
-        border-radius: 4px;
-        border: 1px solid #eee;
-        background: #fff;
+        margin : 0;
+        line-height : 2;
     }
 
     list-style-type : none;
@@ -92,20 +83,22 @@ input:checked ~ .content {
     padding-top : 20px;
     padding-bottom : 20px;
     padding-left : 20px;
-    transition : all .3s ease-out;
+    transition : all .2s ease-out;
     border-bottom : 2px solid #fff;
-    color: #fff;
-    font-size : 1.1em;
-    text-decoration: none;
+    color : #fff;
+    font-family : $sans-serif;
+    font-size : 1em;
+    text-decoration : none;
 
     @include susy-breakpoint($tablet-portrait) {
         display : inline-block;
         height : 100%;
         padding : 0 1em;
         border-bottom : none;
+        background : color-darker(primary-color-dark, 1);
+        color : #fff;
         font-size : 1.1em;
-        color : color(accent-color);
-        font-weight: 700;
+        font-weight : 700;
     }
     &:hover {
         background : color-darker(primary-color-dark, 3);

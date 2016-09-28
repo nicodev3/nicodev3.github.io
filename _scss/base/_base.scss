@@ -8,19 +8,14 @@ body {
 
 body {
     color : color(primary-text-color);
-    font-size : $base-font-size;
-
+    font-size : 18px;
     @include lh($p-lh);
 }
 
 p ,
 .post-link {
     font-family : $texte;
-
     @include lh($p-lh);
-
-    font-variant-ligatures : discretionary-ligatures;
-    font-feature-settings : 'liga';
 }
 
 
@@ -39,3 +34,5 @@ img {
 ul > li {
     font-family : $texte;
 }
+
+
