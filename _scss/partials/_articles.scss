@@ -17,6 +17,7 @@
 .post-content {
     border : 1px solid #eee;
     background : #fff;
+    overflow-x: hidden;
 
     @include pad(gutter());
     @include susy-breakpoint($tablet-portrait) {
