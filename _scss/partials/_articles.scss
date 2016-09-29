@@ -201,10 +201,17 @@
 .video-center {
     display : block;
     width : 600px;
-    margin : 0 auto;
-    margin-top : 3em;
-    margin-bottom : 3em;
-    border : 10px solid RGB(230, 62, 142);
+    margin : 3em auto 1em;
+    box-shadow: 5px 5px 7px 3px #777;
+}
+
+.duree-video {
+    background: color(accent-color);
+    color: #fff;
+    width: 12em;
+    text-align: center;
+    padding: .5em 1em;
+    margin: 0 auto 2em;
 }
 
 .post-list {
@@ -224,6 +231,18 @@
 .post-list li {
     margin-bottom : 1em;
     list-style : none;
+}
+
+.post-content h3 {
+    padding-left: .5em;
+    @include fz($h4-fz);
+    margin: 2em 0 1em;
+}
+
+.post-content img {
+    max-width: 15em;
+    margin: 0 auto;
+    display: block;
 }
 
 .post-link {
