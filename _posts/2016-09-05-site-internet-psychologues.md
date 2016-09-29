@@ -9,7 +9,7 @@ categories: site internet, psychologie
 comments: true
 published: true
 excerpt: De plus en plus de psychologues se font connaître via un site internet. Cet
-  article est une reflexion sur les bonnes pratiques en termes de présentation de
+  article est une réflexion sur les bonnes pratiques en termes de présentation de
   son activité au public
 ---
 
@@ -81,11 +81,11 @@ Le [code de déontologie des psychologues](https://fr.wikipedia.org/wiki/Code_de
 
 Même si j'approuve personnellement ces louables intentions, encore une fois, rien n'oblige à l'heure actuelle les détenteurs du titre de psychologue à se référer au code de déontologie. Les pratiques sont parfois bien éloignées du voeu pieux énoncé.
 
-Il est par ailleurs étonnant que les postures des psychologues à l'ère du numérique ne soient pas davantage mises en réflexion. Le numéro du *Journal des Psychologues* n°301 (2012), dont le titre *Des psychologues sur Internet* pourrait laisser penser à une avancée, n'aborde pas directement la question. Le numéro, consacré dans sa grande majorité aux *cyberthérapies*, me semble évacuer une dimension majeure et sans doute trop évidente pour être perçue&nbsp;: les psychologues utilisent de plus en plus Internet pour se faire connaître. Tout au plus, ce n'est déjà pas si mal, la conclusion du numéro invite à une reflexion globale sur la présence des psychologues sur Internet.
+Il est par ailleurs étonnant que les postures des psychologues à l'ère du numérique ne soient pas davantage mises en réflexion. Le numéro du *Journal des Psychologues* n°301 (2012), dont le titre *Des psychologues sur Internet* pourrait laisser penser à une avancée, n'aborde pas directement la question. Le numéro, consacré dans sa grande majorité aux *cyberthérapies*, me semble évacuer une dimension majeure et sans doute trop évidente pour être perçue&nbsp;: les psychologues utilisent de plus en plus Internet pour se faire connaître. Tout au plus, ce n'est déjà pas si mal, la conclusion du numéro invite à une réflexion globale sur la présence des psychologues sur Internet.
 
 > [...] se prémunir des « mésusages » de la psychologie implique d’en explorer les « usages » nouveaux qui sont appelés à prendre une place toujours plus importante dans le paysage psychologique. <cite>(Benoît Schneider)[^1]</cite>
 
-Depuis, peu d'avancées à ma connaissance. Je propose dans les lignes qui suivent des pistes de reflexion, en tentant d'articuler ma position de psychologue libéral et mon savoir-faire dans le domaine d'Internet&nbsp;&mdash;&nbsp;je rappelle au passage au lecteur que je suis psychologue et titulaire d'une licence en activité et techniques de communication, mention *ingénierie du E-learning et communication scientifique et culturelle*, ce qui en soit ne me confère aucune légitimité particulière, mais me donne au quotidien, à travers la réalisation de sites internet pour psychologues, l'occasion de penser autour de ces pratiques.
+Depuis, peu d'avancées à ma connaissance. Je propose dans les lignes qui suivent des pistes de réflexion, en tentant d'articuler ma position de psychologue libéral et mon savoir-faire dans le domaine d'Internet&nbsp;&mdash;&nbsp;je rappelle au passage au lecteur que je suis psychologue et titulaire d'une licence en activité et techniques de communication, mention *ingénierie du E-learning et communication scientifique et culturelle*, ce qui en soit ne me confère aucune légitimité particulière, mais me donne au quotidien, à travers la réalisation de sites internet pour psychologues, l'occasion de penser autour de ces pratiques.
 
 Il s'agira donc de tenter d'articuler éthique et technique, afin de proposer des pistes, à suivre ou à ne pas suivre...
 
@@ -101,7 +101,7 @@ En tant que psychologues, nous savons, ou sommes censés savoir, par expérience
 ### *Educere* vs *seducere*
 {: #educere}
 
-J'ose proposer l'hypothèse que la première interface de contact avec le futur patient/client vient faire office de fondation archéologique du transfert. Il me semble capital ici d'être pour le moins averti des potentiels effets de ce premier contact, qui engage, au-delà de la communication d'informations, le langage dans toute sa portée, y compris dans son éventuelle dimension de séduction &nbsp;&mdash;&nbsp;dans sa dimension éthymologique, *seducere*, c'est *mener à l'écart, attirer à soi*, par opposition à *educere*, qui propose un mouvement inverse de *nourrir et instruire*.
+J'ose proposer l'hypothèse que la première interface de contact avec le futur patient/client vient faire office de fondation archéologique du transfert. Il me semble capital ici d'être pour le moins averti des potentiels effets de ce premier contact, qui engage, au-delà de la communication d'informations, le langage dans toute sa portée, y compris dans son éventuelle dimension de séduction &nbsp;&mdash;&nbsp;dans sa dimension étymologique, *seducere*, c'est *mener à l'écart, attirer à soi*, par opposition à *educere*, qui propose un mouvement inverse de *nourrir et instruire*.
 
 > Dès lors, quand nous nous adressons, à travers une communication écrite et imagée, à nos hypothétiques futurs patients &mdash; les visiteurs de notre site internet &mdash; quels effets produisons-nous chez eux&nbsp;? Effet de séduction, ou mise en place de l'archéologie d'un transfert venant recueillir la parole et faire office de surface de projection&nbsp;?
 
@@ -110,7 +110,7 @@ En d'autres termes, le site internet, comme première interface de contact, inst
 ### Esthétique vs Cosmétique
 {: #esthetique_cosmetique}
 
-De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offrent à nous. Utiliser une solution toute faite, avec un design préconçu, et y intégrer du contenu, ou bien encore faire appel à une agence Web ou un freelance pour faire le travail. Or, il semble que la plupart des solutions évoquées néglige, la plupart du temps, la spécificité de notre profession. On ne fait pas un site pour un psychologue comme on fait un site pour un commerçant (même si le psychologue libéral fait commerce de son art).
+De nos jours, quand on veut réaliser un site internet, plusieurs choix s'offrent à nous. Utiliser une solution toute faite, avec un design préconçu, et y intégrer du contenu, ou bien encore faire appel à une agence Web ou un freelance pour faire le travail. Or, il semble que la plupart des solutions évoquées néglige, le plus souvent, la spécificité de notre profession. On ne fait pas un site pour un psychologue comme on fait un site pour un commerçant (même si le psychologue libéral fait commerce de son art).
 
 Nous vivons dans une société ou le pouvoir de l'image va grandissant, instaurant même à certains endroits une forme de dictature. "Ce qui est beau est bon". Tel est l'argument des publicitaires, qui savent user du pouvoir de séduction de l'image et du verbe. Ce déni de la dimension fragile de l'Humain, vire parfois à un véritable fétichisme qui vient voiler, ou plutôt parer, la réalité de notre finitude sous des oripeaux. Jeunesse éternelle.. Cette **haine de la castration**, de ce qui nous délite et nous sépare du monde, donne lieu à une mascarade souvent grotesque, mais oh combien séduisante. On recouvre la laideur ou la vieillesse &mdash; jusqu'au morts que l’on embaume &mdash; d'une poudre cosmétique afin d'en nier l'inexorable réalité. "Parce qu'on le vaut bien", dit la publicité.
 
@@ -126,7 +126,7 @@ Nous vivons dans une société ou le pouvoir de l'image va grandissant, instaura
 <svg data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.74 81.48"><title>cosmetic</title><path d="M61.67 81.47h36.07V2.16C86.59.63 76.56 8.61 74.61 17.05c-.41 1.76-.87 6.36-.87 6.36-.28.58-5.51 11.12-5.51 11.76a1.7 1.7 0 0 0 1.7 1.7h3.81v5.9a8.32 8.32 0 0 0 8.32 8.33h3.31v5.81C71.51 64 63.87 75.77 61.67 81.47zM31.64 28.48c0 3.4-5.15 3.4-5.15 0s5.15-3.4 5.15 0z"/><path d="M34.17 72.03V61.47c5.4-4.13 40.05-31.92 25.64-54.12-6.82-10.49-18.38-7.92-28.29-.09-11.71-10.55-22.3-8.63-27.87-.5-14.67 21.39 19.14 49.5 25.52 54.44v10.83c-6.58.8-11.7 4.64-12.44 9.44h29.9c-.74-4.8-5.87-8.65-12.46-9.44zm-7.52-20.48A102.63 102.63 0 0 1 15.5 39.89c4.47.46 3.32-3.6 1.19-3-3.63 1-6.56-6.41-2.2-7.59a2.26 2.26 0 0 1 2.5 1.84 1.47 1.47 0 0 0 1.82 1c2.83-.81-.61-6.89-5.08-5.69a5.41 5.41 0 0 0-4.22 4.44c-2.69-5.13-4.1-10.46-3-15.45 10.48-8.8 25.55-2 27.95 8.16.33 1.43.71 5.16.71 5.16l5 8.17a1.38 1.38 0 0 1-1.29 1.91h-3.16c-.1 7.84.89 13-7.38 12.73z"/></svg>
 </div>
 
-Cette forme de *propagande*, avec ses idéaux de performance et de victoire sur autrui, s'immisce parfois subrepticement dans nos discours, et malheureusement dans nos sites internet à destination d'un public en souffrance, ou tout au moins en recherche d'apaisement. Certains "collègues" &mdash; il suffit de faire quelques recherches sur le Net pour savoir de quoi je parle, ne comptez-pas sur moi pour faire de la délation &mdash; semblent à cet égard être tombés bien bas. Les *experts*, *sachants* en tout genre, promettent guérison du symptôme en mettant en avant, non leur technique, mais leur aura supposée. Ces *gurus* ont pourtant bien souvent tous les titres légitimant l'appellation de psychologue. Que reste-t-il de la psychologie&nbsp;?
+Cette forme de *propagande*, avec ses idéaux de performance et de victoire sur autrui, s'immisce parfois subrepticement dans nos discours, et malheureusement dans nos sites internet à destination d'un public en souffrance, ou tout au moins en recherche d'apaisement. Certains "collègues" &mdash; il suffit de faire quelques recherches sur le Net pour savoir de quoi je parle, ne comptez pas sur moi pour faire de la délation &mdash; semblent à cet égard être tombés bien bas. Les *experts*, *sachants* en tout genre, promettent guérison du symptôme en mettant en avant, non leur technique, mais leur aura supposée. Ces *gurus* ont pourtant bien souvent tous les titres légitimant l'appellation de psychologue. Que reste-t-il de la psychologie&nbsp;?
 
 > Ce discours [publicitaire], mystificateur, promet la satisfaction de tous les désirs à condition d’y mettre le prix; c’est un encensement de la toute-puissance du désir. (Dimitri Weyl, 2013)[^4]
 
@@ -162,7 +162,7 @@ Je lui accorde un crédit. Ce n'est pas parce que c'est beau que c'est bon, pas 
 ## *Educere*&nbsp;: faire éclore
 {:#faire_eclore}
 
-Le projet d'un site internet peut-il être d'éclairer le patient en lieu et place de l'aliéner&nbsp;? Le site internet comme lieu d'information peut il se situer comme un lieu d'éducation, de présentation de la psychologie, en accord avec notre déontologie&nbsp;? Et dès lors, comment mettre en place une telle chose&nbsp;?
+Le projet d'un site internet peut-il être d'éclairer le patient en lieu et place de l'aliéner&nbsp;? Le site internet comme lieu d'information peut-il se situer comme un lieu d'éducation, de présentation de la psychologie, en accord avec notre déontologie&nbsp;? Et dès lors, comment mettre en place une telle chose&nbsp;?
 
 > "Conformément à l’étymologie latine du mot (educere, « conduire hors de »), l’éducation consiste à ménager une sortie hors de l’état de « minorité » […] ; le but est d’accéder à la possibilité de l’autonomie, de penser par soi-même, selon le projet même des Lumières du XVIIIe siècle tel que le définissait Kant, comme accès à un état de « majorité », d’indépendance critique vis-à-vis des autorités"[^5].
 
@@ -182,7 +182,7 @@ L'architecture de contenu vise à poser des règles afin de faciliter l'accès �
 
 > Que vous le croyiez ou non, tout cela n'est pas laissé au hasard dans un site conçu dans le respect des bonnes pratiques du Web.
 
-Que penseriez-vous, en tant que visiteur d'un site de psychologue, si le contenu est disposé de façon confuse, difficile à trouver, que les choses ne fonctionnent pas le plus naturellement possible&nbsp;? Il est fort probable, que sans vous en rendre compte, l'athmosphère rencontrée vous ferait rapidement quitter ce site pour en chercher un autre plus accueillant. D'autant plus si vous êtes lancé dans une recherche assez imprécise (pourquoi aller chez ce psychologue alors qu'il y en a d'autres à côté...).
+Que penseriez-vous, en tant que visiteur d'un site de psychologue, si le contenu est disposé de façon confuse, difficile à trouver, que les choses ne fonctionnent pas le plus naturellement possible&nbsp;? Il est fort probable, que sans vous en rendre compte, l'atmosphère rencontrée vous ferait rapidement quitter ce site pour en chercher un autre plus accueillant. D'autant plus si vous êtes lancé dans une recherche assez imprécise (pourquoi aller chez ce psychologue alors qu'il y en a d'autres à côté...).
 
 J'en prendrai pour exemple le site internet de la Société Médicale Balint, dont j'ai l'honneur d'avoir été choisi pour développeur pour sa refonte. Il s'agit d'un site institutionnel, mais qui illustre bien la question de l'accessibilité et de la cohérence du contenu.
 
@@ -209,17 +209,17 @@ Durée de la vidéo: 25s
 ### Accessibilité : pour le Web aussi&nbsp;!
 {: #accessibilite}
 
-Vous avez mis &mdash; ou pas ! &mdash; votre cabinet de consultation aux normes &mdash; drastiques &mdash; d’accessibilité&nbsp;? Bravo, je vous en félicite. Mais qu’en est il de votre site internet&nbsp;?
+Vous avez mis &mdash; ou pas ! &mdash; votre cabinet de consultation aux normes &mdash; drastiques &mdash; d’accessibilité&nbsp;? Bravo, je vous en félicite. Mais qu’en est-il de votre site internet&nbsp;?
 
 > En théorie, n’importe qui peut utiliser Internet. En réalité, les personnes en situation de handicap en sont exclues.
 
-En comparaison avec d’autres espaces publics, Internet nous donne le choix d’interagir de nombreuses façons, avec différents appareils, avec une souris, le doigt, un clavier, et même avec la bouche pour les personnes atteintes de tétraplégie. Les mal-voyants peuvent convertir le texte en parole et l’on peut de nos jours dicter à son ordinateur tout genre de choses.
+En comparaison avec d’autres espaces publics, Internet nous donne le choix d’interagir de nombreuses façons, avec différents appareils, avec une souris, le doigt, un clavier, et même avec la bouche pour les personnes atteintes de tétraplégie. Les malvoyants peuvent convertir le texte en parole et l’on peut de nos jours dicter à son ordinateur tout genre de choses.
 
 En théorie…
 
 La réalité est toute autre, car les options permettant l’accessibilité sont le plus souvent omises par les développeurs. Je renvoie le lecteur vers l’article suivant, en anglais, mais qui est une excellente ressource : [le Web inaccessible : comment en sommes-nous arrivés à ce désastre](https://uxdesign.cc/the-inaccessible-web-how-we-got-into-this-mess-7cd3460b8e32#.n9zgs4rdz).
 
-> L'accessibilité d'un site internet n'est pas un option. Son absence n'est pas une simple gêne, les personnes en situation de handicap on besoin de cette option pour accéder à l'Internet.
+> L'accessibilité d'un site internet n'est pas un option. Son absence n'est pas une simple gêne, les personnes en situation de handicap ont besoin de cette option pour accéder à l'Internet.
 
 Pour cela, il faut que le développeur du site ait une formation spécifique à l'implémentation dans le code des options permettant l'accessibilité. Une option qui n'est pas native sur WordPress, Drupal et autres CMS qui la permettent mais qui n'est pas implémentée dans les thèmes proposés.
 
@@ -237,7 +237,7 @@ Alors, psychologues, pour votre site, pensez à l’accessibilité&nbsp;! [^6] C
 ### Réseaux sociaux, attention aux dérives
 {: #reseaux}
 
-Activer et entrentenir sa présence sur Internet est de nos jours une activité qui peut mettre en jeu une multitude de canaux. Du site internet en passant pas les réseaux sociaux comme Facebook ou Twitter, notre présence en ligne n'est jamais anodine, et les implications pour notre travail de psychologues existent.
+Activer et entretenir sa présence sur Internet est de nos jours une activité qui peut mettre en jeu une multitude de canaux. Du site internet en passant pas les réseaux sociaux comme Facebook ou Twitter, notre présence en ligne n'est jamais anodine, et les implications pour notre travail de psychologues existent.
 
 {::options parse_block_html="true" /}
 <div class="post-svg">
@@ -246,7 +246,7 @@ Activer et entrentenir sa présence sur Internet est de nos jours une activité 
 
 Une règle à suivre : ne jamais confondre identité personnelle et identité professionnelle. Notre activité de psychologue réclame, à fortiori quand une relation de type psychothérapeutique est impliquée, une certaine opacité qui facilite le transfert. En montrer un peu, mais pas trop. Mettez-vous des photos de vos vacances dans votre lieu de consultation&nbsp;? Je suppose que non. 
 
-> Donner accès à des informations relevant de l'intime sur les réseaux sociaux peut, au minimum, empêcher une relation transferentielle de se déployer, au pire venir entammer votre cadre.
+> Donner accès à des informations relevant de l'intime sur les réseaux sociaux peut, au minimum, empêcher une relation transferentielle de se déployer, au pire venir entamer votre cadre.
 
 Votre espace professionnel sur les réseaux sociaux ne devrait pas être infiltré d'informations trop personnelles.
 
@@ -264,16 +264,16 @@ Mais le plus important, et ce qui est de plus en plus pris en compte par Google 
 ## Conclusion
 {: #conclusion}
 
-Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable reflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
+Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable réflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
 
 ---
 {: .hr-icon} 
 
 [^1]: Schneider Benoît, « Une réflexion collective nécessaire », Le Journal des psychologues 8/2012 (n° 301) , p. 42-42 / DOI : 10.3917/jdp.301.0042.
 
-[^2]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interragir avec le site (forums, réseaux sociaux etc.), ce qui était impossible aux débuts du Web.
+[^2]: L'expression Web 2.0 signifie simplement la possibilité, via des bases de données, à l'utilisateur d'interagir avec le site (forums, réseaux sociaux, etc.), ce qui était impossible aux débuts du Web.
 
-[^3]: Dimitri Weyl, « L’omniprésence de la toutepuissance dans l’imagerie publicitaire - Un exemple paradigmatique : l’utilisation du corps féminin », *Recherches en Psychanalyse*, 16, 2013.
+[^3]: Dimitri Weyl, « L’omniprésence de la toute puissance dans l’imagerie publicitaire - Un exemple paradigmatique : l’utilisation du corps féminin », *Recherches en Psychanalyse*, 16, 2013.
 
 [^4]: ibid
 
