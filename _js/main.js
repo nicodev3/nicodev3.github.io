@@ -128,6 +128,6 @@
       .fromTo([$html, $css, $js], 4, {x: 260, y: -120}, {x: 520, y: 0, ease: Power4.easeInOut})
   });
 
-  TweenMax.to($pointer, 2, {cssRule: {top: "35%", rotation: '-40deg', ease: Power2.easeOut}});
+  TweenMax.to($pointer, 2, {cssRule: {top: "35%", rotation: '-40deg', ease:Power2.easeIn, delay: 4}});
 
 })(jQuery);

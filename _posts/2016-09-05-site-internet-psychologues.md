@@ -89,6 +89,9 @@ Depuis, peu d'avancées à ma connaissance. Je propose dans les lignes qui suive
 
 Il s'agira donc de tenter d'articuler éthique et technique, afin de proposer des pistes, à suivre ou à ne pas suivre...
 
+---
+{: .hr-icon} 
+
 ## *Seducere*&nbsp;: mener à l'écart
 {: #seducere}
 
@@ -158,6 +161,9 @@ Or, nous, psychologues, nous situons-nous du côté d'une société par certains
 J'avais récemment une conversation sur un forum avec une collègue qui m'opposait ce que je traduirai par la phrase suivante. "Ce n'est pas parce qu'un site est beau que le psychologue est bon". Elle précisait d'ailleurs que selon elle, les "bons" psychologues avaient souvent des sites très simples et réalisés à l'ancienne. 
 
 Je lui accorde un crédit. Ce n'est pas parce que c'est beau que c'est bon, pas plus que les pâtes Machintruc sont bonnes en raison de l'emballage coloré. **C'est bon quand c'est bien fait**. Mais qu'est-ce qu'un site "bien fait"&nbsp;? Cette vision peut sembler subjective au néophyte. Quelques pistes...
+
+---
+{: .hr-icon} 
 
 ## *Educere*&nbsp;: faire éclore
 {:#faire_eclore}
@@ -265,6 +271,8 @@ Mais le plus important, et ce qui est de plus en plus pris en compte par Google 
 {: #conclusion}
 
 Réaliser un site internet, c'est bien plus que juxtaposer du texte et des images. Cela demande une véritable réflexion sur ce qu'on a à dire, la façon dont on le dit, et à qui s'adresse le message. Dans nos pratiques de psychologues, la question du contenu semble primer sur la question des apparences, mais l'on voit que l'apparence d'un site facilite ou non l'accès au contenu. "Ce qui se conçoit bien s'énonce clairement - et les mots pour le dire parviennent aisément" (Nicolas Boileau). De la pensée à la conception, l'élaboration d'un site internet n'est donc pas une affaire si simple !
+
+Surtout, n'oublions pas que le contenu est roi. Le design et les fonctionnalités d'un site n'ont de valeur que pour faciliter l'accès à ce contenu.
 
 ---
 {: .hr-icon} 
