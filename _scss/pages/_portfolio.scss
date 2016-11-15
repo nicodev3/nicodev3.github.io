@@ -41,6 +41,9 @@
 
 .gal-thumb {
     position : relative;
+    box-shadow: 0 5px 5px -5px #777;
+    margin-bottom: 1em;
+    min-height: 23em;
 }
 
 .gal-thumb a img {
@@ -54,4 +57,6 @@
     font-weight: 400;
     color: color(primary-color-dark);
     margin-top: 1.5em;
+
+    hyphens: none;
 }
