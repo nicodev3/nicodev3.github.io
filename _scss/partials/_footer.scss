@@ -12,42 +12,50 @@
     margin-top : 100px;
 
     @include susy-breakpoint($tablet-portrait) {
-        margin-top : 50px;
+        margin-top : gutter();
+        padding-top: 3em;
     }
 }
 
-.contact-list ,
-.social-media-list {
-    @include push(1);
+.footer-container h2 {
+    color: color-lighter(primary-color-light, 3);
+    @include fz($h3-fz);
+}
+
+.footer-container ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.footer-container li {
+    list-style-type: none;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: color-lighter(primary-color-light, 4);
+}
+
+.footer-container p {
+    color: color-lighter(primary-color-light, 4);
+}
+
+
+
+.footer-block:first-of-type {
     @include susy-breakpoint($tablet-portrait) {
-        @include span(3);
+        @include span(4);
     }
 }
 
-.text {
-    color : #d5d5cf;
-
-    @include push(1);
+.footer-block:nth-of-type(2) {
     @include susy-breakpoint($tablet-portrait) {
-        margin-left : 0;
+        @include span(4);
+    }
+}
 
+.footer-block:last-of-type {
+    @include susy-breakpoint($tablet-portrait) {
         @include span(4 last);
     }
-}
-
-.contact-list ,
-.social-media-list {
-    padding-left : 0;
-    color : #a576a7;
-    list-style : none;
-}
-
-.social-media-list li {
-    line-height: 2;
-}
-
-.social-media-list a,
-.contact-list a {
-    color : color-lighter(accent-color, 6);
-    text-decoration: none;
 }

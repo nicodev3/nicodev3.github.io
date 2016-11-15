@@ -1,3 +1,12 @@
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
 .icon-thumb {
   fill: #fff;
   width: 6em;
@@ -10,4 +19,11 @@
   width: 1em;
   height: 1em;
   fill: #fff;
+}
+
+.icon--footer {
+    
+    width: 2.5em;
+    height: 2.5em;
+    opacity: .8;
 }
