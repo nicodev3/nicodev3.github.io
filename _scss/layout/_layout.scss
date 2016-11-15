@@ -102,3 +102,21 @@
 
     @include pad(gutter());
 }
+
+.g-block img {
+
+    @include susy-breakpoint($tablet-portrait) {
+        max-width : 30%;
+        height : auto;
+    }
+
+}
+
+.img-fl-r {
+    @include susy-breakpoint($tablet-portrait) {
+        margin-top : 2em;
+        margin-right : gutter();
+        margin-left : 2em;
+        float : right;
+    }
+}
