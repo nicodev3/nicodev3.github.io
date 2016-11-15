@@ -13,12 +13,6 @@
       $u                  = $('.lettre-u'),
       $x                  = $('.lettre-x'),
       $trois              = $('.trois'),
-      $pileLevel          = $('.pile-level'),
-      $masoneryBlockOne   = $('#masonery_block_1'),
-      $masoneryBlockTwo   = $('#masonery_block_2'),
-      $masoneryBlockThree = $('#masonery_block_3'),
-      $masoneryBlockFour  = $('#masonery_block_4'),
-      tlCompetences,
       $html               = $('#html'),
       $css                = $('#css'),
       $js                 = $('#js'),
@@ -44,14 +38,6 @@
       tlSiteOptimises,
       $pointer            = CSSRulePlugin.getRule('.plan-article:after');
 
-  tlCompetences = new TimelineMax({repeat: -1, repeatDelay: 4, yoyo: true});
-  tlCompetences
-    .staggerFromTo($pileLevel, 0.2, {fill: "#fff"}, {fill: '#C82F00'}, 0.4)
-    .to($masoneryBlockThree, 0.3, {y: 51, ease: Power3.easeIn}, '+=1')
-    .to($masoneryBlockTwo, 0.5, {fill: 'none'})
-    .to($masoneryBlockFour, 0.5, {y: 51, ease: Power3.easeIn}, '-=0.5')
-    .to($masoneryBlockOne, 0.5, {x: 62, ease: Power3.easeIn}, '-=0.5')
-    .staggerFromTo($('.compemeter'), 2, {widht: '0'}, {width: '100%', ease: Power3.easeInOut}, 0.3);
 
   tlSiteOptimises = new TimelineMax({
     delay: 3,
