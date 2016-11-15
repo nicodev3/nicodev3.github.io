@@ -43,7 +43,6 @@
     @include susy-breakpoint($tablet-portrait) {
         @include span(3 last);
         @include pad(gutter());
-        height: 100vh;
     }
 }
 
