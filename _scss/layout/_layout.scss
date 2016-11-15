@@ -114,9 +114,7 @@
 
 .img-fl-r {
     @include susy-breakpoint($tablet-portrait) {
-        margin-top : 2em;
-        margin-right : gutter();
-        margin-left : 2em;
         float : right;
+        margin: 1em gutter() 0 2em;
     }
 }
