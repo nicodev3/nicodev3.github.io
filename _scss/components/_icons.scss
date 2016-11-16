@@ -19,7 +19,13 @@
     width: 2.5em;
     height: 2.5em;
     opacity: .8;
+    fill: color-lighter(primary-color-light, 4);
 }
+
+.icon-mail {
+    fill: color-lighter(primary-color-light, 4);
+}
+
 
 .icon--center {
     display: block;
