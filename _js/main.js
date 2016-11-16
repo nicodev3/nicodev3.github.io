@@ -35,9 +35,13 @@
       $serpUp             = $('#serp_up'),
       $serpDown           = $('#serp_down'),
       $serpLine           = $('.serp-line--low'),
+      tlCompetences,
       tlSiteOptimises,
       $pointer            = CSSRulePlugin.getRule('.plan-article:after');
 
+  tlCompetences = new TimelineMax({repeat: -1, repeatDelay: 4, yoyo: true});
+  tlCompetences
+    .staggerFromTo($('.compemeter'), 2, {widht: '0'}, {width: '100%', ease: Power3.easeInOut}, 0.3);
 
   tlSiteOptimises = new TimelineMax({
     delay: 3,
