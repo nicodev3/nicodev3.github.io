@@ -8,13 +8,13 @@
 }
 .page-content-wrapper {
     background : linear-gradient(to bottom, color-lighter(primary-color-light, 9) 50%, color(primary-color-light));
-
-    @include pad(gutter());
+    margin-bottom: gutter();
+    padding: 0 gutter() gutter() gutter();
 
     // sticky footer
     &:after {
         display : block;
-        height : $footer-height;
+        height : $footer-height / 2;
         content : '';
     }
 }

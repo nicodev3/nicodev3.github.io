@@ -60,3 +60,30 @@
 
     hyphens: none;
 }
+
+.has-arrow-down {
+    background: color-lighter(primary-color-light, 4);
+    padding: .4em .8em;
+    color: #000;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 2em;
+
+    &:after, &:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: color-lighter(primary-color-light, 4);
+        border-width: 30px;
+        margin-left: -30px;
+    }
+}
