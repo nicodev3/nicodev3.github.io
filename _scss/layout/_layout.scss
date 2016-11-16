@@ -103,13 +103,11 @@
     @include pad(gutter());
 }
 
-.g-block img {
-
+.img-intext {
     @include susy-breakpoint($tablet-portrait) {
         max-width : 30%;
         height : auto;
     }
-
 }
 
 .img-fl-r {
