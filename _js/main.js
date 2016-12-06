@@ -39,7 +39,9 @@
       tlSiteOptimises,
       $pointer            = CSSRulePlugin.getRule('.plan-article:after');
 
+
   tlCompetences = new TimelineMax({repeat: -1, repeatDelay: 4, yoyo: true});
+
   tlCompetences
     .staggerFromTo($('.compemeter'), 2, {widht: '0'}, {width: '100%', ease: Power3.easeInOut}, 0.3);
 
@@ -118,6 +120,15 @@
       .fromTo([$html, $css, $js], 4, {x: 260, y: -120}, {x: 520, y: 0, ease: Power4.easeInOut})
   });
 
-  TweenMax.to($pointer, 2, {cssRule: {top: "35%", rotation: '-40deg', ease:Power2.easeIn, delay: 4}});
+ TweenMax.to($('#pointer'), 2, {cssRule: {top: "35%", rotation: '-40deg', ease:Power2.easeIn, delay: 4}});
+
+  var controller = new ScrollMagic.Controller();
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#trigger1"
+  })
+    .setTween($("#scroll-trigger"), 0.5, {scale: 1, ease: Bounce.easeOut}) // trigger a TweenMax.to tween
+    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+    .addTo(controller);
 
 })(jQuery);
