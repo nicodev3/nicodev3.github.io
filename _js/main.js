@@ -128,7 +128,7 @@
     triggerElement: "#trigger1"
   })
     .setTween($("#scroll-trigger"), 0.5, {scale: 1, ease: Bounce.easeOut}) // trigger a TweenMax.to tween
-    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+    //.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
     .addTo(controller);
 
 })(jQuery);
