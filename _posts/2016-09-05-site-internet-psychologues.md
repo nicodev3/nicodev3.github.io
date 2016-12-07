@@ -1,5 +1,6 @@
 ---
 title: Les psychologues sur Internet
+description: Les psychologues et leur site internet. Réflexion au sujet des bonnes pratiques.
 layout: post
 date: '2016-09-05'
 h1: Les psychologues et leur site internet

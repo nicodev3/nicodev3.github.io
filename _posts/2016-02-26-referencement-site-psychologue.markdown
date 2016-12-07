@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Psychologues, référencez votre site sur Google&nbsp;!
+description: Avoir un site internet c'est bien, qu'il soit visible sur les moteurs de recherche c'est mieux ! Tout ce que vous avez toujours voulu savoir sur... Google !
 date: 2016-01-26
 categories: "site internet, référencement"
 h1: Référencer son site sur Google

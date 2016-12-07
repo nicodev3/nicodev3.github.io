@@ -37,3 +37,11 @@
     height: 2.5em;
     fill: color-opa(accent-color, .7);
 }
+
+.icon-article {
+    display: inline !important;
+    margin: 0 1em 0 0 !important;
+    width: 1.2em !important;
+    height: 1.2em !important;
+    fill: color(primary-color);
+}

@@ -98,12 +98,23 @@
     line-height : 16px;
 }
 
-.post-meta {
-    margin : 0;
-    padding : 0;
+.post-header {
 
-    font-variant-numeric : oldstyle-nums;
-    font-feature-settings : 'onum';
+}
+.post-header p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    &:before {
+        content: '';
+        height: 100%;
+        width: 1px;
+        background: color(accent-color);
+        position: absolute;
+        left: 1.7em;
+    }
 }
 
 .footnote {
