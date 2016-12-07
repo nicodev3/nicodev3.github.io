@@ -47,7 +47,7 @@ Pour comprendre les **bases du référencement naturel**[^1], il est nécessaire
 ## Mais que veulent les moteurs de recherche&nbsp;?
 {: #que_veulent_les_moteurs}
 
-Vous êtes-vous déjà posé cette question ? Nous savons tous ce **que nous attendons** d'un moteur de recherche tel que Google, Bing, etc. Mais savez-vous ce que le moteur de recherche **attend de vous** ? Il est indispensable de connaître la raison d'être de Google pour mieux comprendre comment lui fournir **un contenu adéquat** (afin d'être bien référencé).
+Vous êtes-vous déjà posé cette question ? Nous savons tous ce **que nous attendons** d'un moteur de recherche tel que Google, Bing, etc. Mais savez-vous ce que le moteur de recherche **attend de vous**&nbsp;? Il est indispensable de connaître la raison d'être de Google pour mieux comprendre comment lui fournir **un contenu adéquat** (afin d'être bien référencé).
 
 ---
 {: .hr-icon} 
@@ -65,7 +65,7 @@ C'est à peu près la même chose pour Google. Lorsque vous saisissez une **requ
 
 Ainsi, Google doit-il s'assurer que votre site comporte certains ingrédients indispensables - **en réalité plus de 200 ingrédients entrent dans la composition du site idéal** tel que vu par les algorithmes de Google - à la satisfaction de ses utilisateurs.
 
-Quels sont donc ces ingrédients ? Il est impossible ici de tous les passer en revue. Toutefois, certains sont plus importants que d'autres pour Google. Nous allons voir lesquels.
+Quels sont donc ces ingrédients&nbsp;? Il est impossible ici de tous les passer en revue. Toutefois, certains sont plus importants que d'autres pour Google. Nous allons voir lesquels.
 
 <svg class="article-svg" id="svg-burger" xmlns="http://www.w3.org/2000/svg" width="71.13" height="100" viewBox="0 0 71.13 100">
   <title>burger</title>
@@ -93,7 +93,7 @@ Quels sont donc ces ingrédients ? Il est impossible ici de tous les passer en r
 
 Le contenu textuel de votre site est un indice fort de qualité pour Google car il est plus probable qu'un utilisateur soit satisfait si le contenu de votre site répond avec pertinence à sa requête. 
 
-Mais comment Google juge-t-il la qualité d'un contenu ? Les *robots d'indexation* (voir plus loin), qui sont des automates informatiques qui parcourent en permanence le web, visitent régulièrement votre site à la recherche d'informations.
+Mais comment Google juge-t-il la qualité d'un contenu&nbsp;? Les *robots d'indexation* (voir plus loin), qui sont des automates informatiques qui parcourent en permanence le web, visitent régulièrement votre site à la recherche d'informations.
 
 Ce petit gourmand aux doux noms de *Google Panda*, *Google Pinguin* - selon ses versions successives, raffole de certaines substances contenues dans le code de votre site.
 
@@ -108,7 +108,7 @@ En particulier, il absorbe de façon préférentielle des *mots clé* qu'il va c
 Pour mieux comprendre ce que sont ces **balises HTML**, voir mon article sur la [création d'un site Internet](http://nicodev3.github.io/2015/10/26/creation-site-internet/).
 
 
-> C'est pour ces raisons qu'il est important que vous ayez la main sur le code de votre site. Si vous avez réalisé votre site avec un CMS ou un outil de création en ligne, savez-vous où sont vos balises et pouvez-vous les modifier ? Certains CMS ont été réalisés par des développeurs n'ayant aucune connaissance du référencement, soyez prudent dans votre choix&nbsp;!
+> C'est pour ces raisons qu'il est important que vous ayez la main sur le code de votre site. Si vous avez réalisé votre site avec un CMS ou un outil de création en ligne, savez-vous où sont vos balises et pouvez-vous les modifier&nbsp;? Certains CMS ont été réalisés par des développeurs n'ayant aucune connaissance du référencement, soyez prudent dans votre choix&nbsp;!
 
 ---
 {: .hr-icon} 
@@ -158,7 +158,7 @@ Les seconds, **les liens pointant vers votre site**, sont les plus importants en
 
 Les robots, encore appelés *spiders* ou *bots*, sont des algorithmes informatiques dont la fonction est d'indexer des pages web, c'est-à-dire de les ranger dans une immense bibliothèque de contenus. Pour ce faire, les **robots d'indexation** naviguent en permanence sur le web (*crawl* en anglais veut dire *ramper*, on voit bien la métaphore avec *spider* et *web* : l'araignée tisse sa toile !), de lien en lien, et récoltent le contenu des pages pour les mettre dans cette bibliothèque (l'index des pages).
 
-Mais quel contenu est indexé ? Que peuvent voir les robots d'indexation ?
+Mais quel contenu est indexé&nbsp;? Que peuvent voir les robots d'indexation&nbsp;?
 
 ---
 {: .hr-icon} 
@@ -207,7 +207,7 @@ Deux facteurs, la *pertinence* et *la fraîcheur* sont analysés par l'algorithm
 
 - *qualité du contenu et intérêt de la part de l'utilisateur* :
     - qualité du contenu:  effort éditorial pour avoir un contenu lisible et adéquat avec la cible
-    - intérêt : l'utilisateur clique-t-il sur des liens dans le site ou retourne-t-il immédiatement sur Google ensuite ? En d'autre termes, la réponse donnée par Google satisfait-elle l'utilisateur ?
+    - intérêt : l'utilisateur clique-t-il sur des liens dans le site ou retourne-t-il immédiatement sur Google ensuite&nbsp;? En d'autre termes, la réponse donnée par Google satisfait-elle l'utilisateur&nbsp;?
 
 Avec l'outil Google analytics par exemple on peut voir: 
 
