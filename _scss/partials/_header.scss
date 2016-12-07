@@ -14,23 +14,13 @@
 
 .site-title {
     position: relative;
-    top: 1.5em;
+    top: 3em;
     left: 0;
-    font-size : 30px;
 
     &:hover {
         color : color(accent-color);
         text-decoration : none;
     }
-}
-
-.trois {
-    display : inline-block;
-    position : absolute;
-    left : 110px;
-    color : color(accent-color);
-    font-family : 'verdana';
-    font-size : .8em;
 }
 
 .trig {

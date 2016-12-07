@@ -10,8 +10,25 @@
 }
 
 .post-header {
-    padding-top : 3em;
-    overflow : auto;
+    background: color-lighter(primary-color, 9);
+    padding: 1em gutter();
+    margin-top: gutter();
+}
+
+.post-header p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    &:before {
+        content: '';
+        height: 100%;
+        width: 1px;
+        background: color(accent-color);
+        position: absolute;
+        left: 1.7em;
+    }
 }
 
 .post-content {
@@ -96,25 +113,6 @@
     padding-bottom : 1em;
     font-size : 1.5em;
     line-height : 16px;
-}
-
-.post-header {
-
-}
-.post-header p {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-
-    &:before {
-        content: '';
-        height: 100%;
-        width: 1px;
-        background: color(accent-color);
-        position: absolute;
-        left: 1.7em;
-    }
 }
 
 .footnote {
@@ -259,7 +257,6 @@
 
 .post-content h3 {
     margin : 2em 0 1em;
-    padding-left : .5em;
 
     @include fz($h4-fz);
 }
