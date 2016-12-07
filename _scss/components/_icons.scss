@@ -41,7 +41,10 @@
 .icon-article {
     display: inline !important;
     margin: 0 1em 0 0 !important;
-    width: 1.2rem !important;
-    height: 1.2rem !important;
-    fill: color(primary-color);
+    width: 2rem !important;
+    height: 2rem !important;
+    fill: #fff;
+    background: color(primary-color);
+    padding: .4em;
+    border-radius: 4px;
 }

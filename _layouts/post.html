@@ -5,9 +5,17 @@
 <article class="conteneur-post">
   <div class="post-content">
       <header class="post-header">
-          <p><svg class="icon icon-calendar icon-article"><use xlink:href="#icon-calendar"></use></svg> le {{ page.date | date: "%-d %b, %Y" }}{% if page.author %} par {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-          <p><svg class="icon icon-clock icon-article"><use xlink:href="#icon-clock"></use></svg> Temps de lecture&nbsp;: {{ page.temps }}</p>
-          <p><svg class="icon icon-glasses icon-article"><use xlink:href="#icon-glasses"></use></svg> Résumé&nbsp;: {{ page.excerpt }}</p>
+          <div class="post-header__item">
+              <svg class="icon icon-calendar icon-article"><use xlink:href="#icon-calendar"></use></svg>
+              <p>le {{ page.date | date: "%-d %b, %Y" }}{% if page.author %} par {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p></div>
+          <div class="post-header__item">
+              <svg class="icon icon-clock icon-article"><use xlink:href="#icon-clock"></use></svg>
+              <p>Temps de lecture&nbsp;: {{ page.temps }}</p>
+          </div>
+          <div class="post-header__item">
+              <svg class="icon icon-menu icon-article"><use xlink:href="#icon-menu"></use></svg>
+              <p>Résumé&nbsp;: {{ page.excerpt }}</p>
+          </div>
       </header>
     {{ content }}
   </div>

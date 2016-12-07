@@ -15,20 +15,15 @@
     margin-top: gutter();
 }
 
-.post-header p {
+.post-header__item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
+}
 
-    &:before {
-        content: '';
-        height: 100%;
-        width: 1px;
-        background: color(accent-color);
-        position: absolute;
-        left: 1.7em;
-    }
+.post-header p {
+    flex-shrink: 10;
 }
 
 .post-content {
