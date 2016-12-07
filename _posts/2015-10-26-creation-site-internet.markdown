@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Création d'un site Internet
+description: Tout savoir ou presque sur la composition d'un site internet.
 date: 2015-10-26
 categories: "site internet, création"
 h1: créer un site internet
