@@ -130,9 +130,9 @@
 }
 
 #disqus_thread {
-    margin-top : 2em;
-
-    @include pad(5%);
+    margin-top : gutter();
+    background: #fff;
+    padding: gutter();
     @include susy-breakpoint($tablet-portrait) {
         @include span(8 last);
     }
