@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:url" content="http://nicodev3.github.io/{{ page.url }}" />
+    <meta property="og:locale" content="fr_FR" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     {% if page.description %}
     <meta name="description" content="{{ page.description }}">
     {% endif %}
+
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <script src="//use.typekit.net/xac0gwv.js"></script>
     <script>try {
