@@ -5,7 +5,7 @@
 .conteneur-post {
     position : relative;
     width : 100%;
-    background : none;
+    margin-top: gutter();
     overflow : auto;
 }
 

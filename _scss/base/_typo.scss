@@ -29,13 +29,13 @@ h1 {
     bottom : 0;
     right: 0;
     left: 0;
-    width: 20em;
+    width: 35%;
     text-align: center;
     margin : 0 auto;
-    padding: 1em;
+    padding: .7em .5em;
     border-top-left-radius : 5px;
     border-top-right-radius : 5px;
-    background : color-lighter(primary-color-light, 8);;
+    background : #fafbfc;
     color : color(primary-color-dark);
     font-size : 1.2em;
 }

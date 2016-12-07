@@ -6,7 +6,8 @@
         @include container();
     }
 }
-.page-content-wrapper {
+.page-content-wrapper,
+.conteneur-post {
     background : linear-gradient(to bottom, color-lighter(primary-color-light, 9) 50%, color(primary-color-light));
     margin-bottom: gutter();
     padding: 0 gutter() gutter() gutter();
