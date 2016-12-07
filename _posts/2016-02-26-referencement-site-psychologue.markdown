@@ -59,7 +59,7 @@ Cela peut vous paraître évident, mais la mission première de Google est de sa
 
 Ainsi, si dans un restaurant vous commandez un plat, vous vous attendez à voir apparaître le plat que vous avez commandé, si possible dans des délais raisonnables. Vous attendez également que le plat que vous avez commandé vous soit servi chaud, avec des produits de qualité. Ainsi vous avez toutes les chances d'être satisfait et de revenir commander dans ce restaurant.
 
-C'est à peu près la même chose pour Google. Lorsque vous saisissez une **requête**, c'est à dire une recherche, vous attendez de lui qu'il vous serve un contenu pertinent satisfaisant vos attentes. Dans certains cas, il vous est par ailleurs impératif d'avoir un contenu récent. Si la réponse est donnée rapidement et que le contenu que vous consultez via le résultat de recherche vous plaît, vous êtes plutôt satisfait, et vous avez toutes les chances de préférer Google à Bing ou Duckduckgo...
+C'est à peu près la même chose pour Google. Lorsque vous saisissez une **requête**, c'est-à-dire une recherche, vous attendez de lui qu'il vous serve un contenu pertinent satisfaisant vos attentes. Dans certains cas, il vous est par ailleurs impératif d'avoir un contenu récent. Si la réponse est donnée rapidement et que le contenu que vous consultez via le résultat de recherche vous plaît, vous êtes plutôt satisfait, et vous avez toutes les chances de préférer Google à Bing ou Duckduckgo...
 
 > L'une des priorités de Google est de s'assurer que les sites vers lesquels il oriente ses utilisateurs vont leur apporter une satisfaction, et ce afin que l'utilisateur fasse confiance à Google comme moteur de recherche !
 
@@ -207,7 +207,7 @@ Deux facteurs, la *pertinence* et *la fraîcheur* sont analysés par l'algorithm
 
 - *qualité du contenu et intérêt de la part de l'utilisateur* :
     - qualité du contenu:  effort éditorial pour avoir un contenu lisible et adéquat avec la cible
-    - intérêt : l'utilisateur clique-t-il sur des liens dans le site ou retourne-t-il immédiatement sur Google ensuite&nbsp;? En d'autre termes, la réponse donnée par Google satisfait-elle l'utilisateur&nbsp;?
+    - intérêt : l'utilisateur clique-t-il sur des liens dans le site ou retourne-t-il immédiatement sur Google ensuite&nbsp;? En d'autres termes, la réponse donnée par Google satisfait-elle l'utilisateur&nbsp;?
 
 Avec l'outil Google analytics par exemple on peut voir: 
 
