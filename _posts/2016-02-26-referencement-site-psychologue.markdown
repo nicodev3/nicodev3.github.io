@@ -12,8 +12,6 @@ published: true
 excerpt: "Avoir un site internet, c'est bien. Avoir un site internet que peuvent trouver les utilisateurs, c'est mieux, voire indispensable !"
 ---
 
-# Référencer son site avec Google : les bonnes pratiques
-
 {::options parse_block_html="true" /}
 <div class="plan-article-fixed">
 <div class="plan-article">
