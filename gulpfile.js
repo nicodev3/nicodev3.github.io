@@ -99,7 +99,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 gulp.task('watch', function() {
     gulp.watch('_scss/**/*.scss', ['sass']);
     gulp.watch('_js/**/*.js', ['js']);
-    gulp.watch(['index.html', 'modeles-de-sites/index.html', '_layouts/*.html', '_posts/*', '_includes/*.html', 'tutoriels/*.html', 'portfolio/**/*.html', 'developpeur-web/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', 'modeles-de-sites/index.html', '_layouts/*.html', '_posts/*', '_includes/*.html', 'tutoriels/*.html', 'portfolio/**/*.html', 'developpeur-web/*.html', 'tarif-site-internet/*.html'], ['jekyll-rebuild']);
 });
 
 /**

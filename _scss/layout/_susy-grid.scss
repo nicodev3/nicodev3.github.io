@@ -34,3 +34,31 @@
   margin : 0;
   @include fz($h4-fz);
 }
+
+// -----------------------------------
+// @SUSY SPANS
+// -----------------------------------
+.row {
+    @include susy-clearfix();
+}
+.gallery-tarifs {
+    overflow: auto;
+}
+.gallery-tarifs .tarif-container {
+    @include susy-breakpoint($tablet-paysage) {
+        @include span(3.15 no-gutter);
+    }
+}
+
+.span-9 {
+    @include susy-breakpoint($tablet-paysage) {
+        @include span(9);
+    }
+}
+
+.span-3 {
+    @include susy-breakpoint($tablet-paysage) {
+        @include span(3 last);
+    }
+}
+
