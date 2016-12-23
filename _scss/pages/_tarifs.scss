@@ -1,0 +1,77 @@
+.tarif-container {
+    position : relative;
+    border-right : 1px solid #eee;
+    background : #fff;
+    text-align : center;
+
+    @include susy-breakpoint($tablet-portrait) {
+        min-height : 45em;
+    }
+
+    &:last-of-type {
+        border-right : none;
+    }
+}
+
+.tarif-container h3 {
+    font-family : $texte;
+    font-weight : 300;
+    text-transform : uppercase;
+
+    @include fz($h4-fz);
+}
+
+.tarif-montant p {
+    position : relative;
+    color : color-lighter(primary-text-color, 3);
+    font-style : normal;
+    font-weight : 300;
+
+    @include fz($h1-fz);
+    &:after {
+        position : absolute;
+        right : 0;
+        bottom : -.4em;
+        left : 0;
+        width : 50%;
+        height : 2px;
+        margin : 0 auto;
+        background : #000;
+        content : '';
+    }
+}
+
+.tarif-presta ul {
+    padding : 0;
+}
+
+.tarif-presta li {
+    font-size : .9em;
+    font-weight : 300;
+    line-height : 2;
+
+    list-style-type : none;
+
+    &:first-of-type {
+        margin-bottom : 1em;
+        color : color-lighter(primary-text-color, 3);
+        font-size : .8em;
+        text-transform : uppercase;
+    }
+}
+
+.tarif-surligne {
+    background: color-opa(accent-color, .1);
+    width: 65%;
+    text-align: center;
+    margin: 0 auto .2em;
+    padding: 0 1em;
+    line-height: 1;
+}
+
+.tarifs-aside {
+    @include susy-breakpoint($tablet-paysage) {
+        margin-top : gutter();
+        padding : 8em gutter() 0;
+    }
+}
