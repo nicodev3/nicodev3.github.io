@@ -5,6 +5,7 @@ description: Tout savoir ou presque sur la composition d'un site internet.
 date: 2015-10-26
 categories: "site internet, création"
 h1: créer un site internet
+description: Comment est conçu un site internet ? Comprendre la structure et le code d'un site. Par nicodev, création de sites internet.
 comments: true
 published: true
 excerpt: "Dans cet article, je vous propose de découvrir se qui se cache derrière un site Internet."
