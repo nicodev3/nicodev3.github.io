@@ -262,7 +262,7 @@ Votre espace professionnel sur les réseaux sociaux ne devrait pas être infiltr
 
 *Delivering fresh and relevant content*[^7], telle est la devise de Google, Bing et autres moteurs de recherche. Malheureusement, afin d'atteindre le saint Graal du positionnement dans le top 3 des résultats de Google, ou à minima la première page - n'oubliez pas qu'un site situé en seconde page n'a que peu de chances d'être consulté, ne parlons même pas du positionnement des pages suivantes - certains cèdent à la tentation du mot clé et du lien à tout va.
 
-Comme je vous l'ai détaillé dans l'article [Référencer son site avec Google : les bonnes pratiques](http://nicodev3.github.io/2016/01/26/referencement-site-psychologue/), les mots clé sont importants - leur présence, leur densité et leur emplacement dans la page -, de même que les liens pointant vers votre site, et des centaines d'autres choses.
+Comme je vous l'ai détaillé dans l'article [Référencer son site avec Google : les bonnes pratiques](https://nicodev3.github.io/2016/01/26/referencement-site-psychologue/), les mots clé sont importants - leur présence, leur densité et leur emplacement dans la page -, de même que les liens pointant vers votre site, et des centaines d'autres choses.
 
 Mais le plus important, et ce qui est de plus en plus pris en compte par Google au fur et à mesure que son algorithme progresse, est la justesse et la richesse de votre contenu pour l'internaute. Autrement dit, si votre site est truffé de mots clé, utilise des techniques de référencement *black hat* ou autres astuces comme des liens payants, vous avez toutes les chances d'apparaître en première page... pendant quelques semaines ou quelques mois, avant de disparaitre définitivement dans les bas fonds des résultats !
 

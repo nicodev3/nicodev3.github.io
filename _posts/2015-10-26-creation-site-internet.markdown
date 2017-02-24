@@ -69,7 +69,7 @@ Ce que fait le navigateur, c'est qu'il traduit littéralement le **code** pour l
 
 Vous avez du remarquer un mot étrange.. Le **code**.. Qu'est-ce que cette chose ? Si j'étais Tintin, j'appellerais le Capitaine Haddock pour nous éclairer ! **Le code est le langage interprété par le navigateur**.
 
-Mais c'est quoi ce code ? Ou se trouve-t-il ? C'est très simple, ou presque. Comme je l'ai déjà écrit dans l'article [hébergement et nom de domaine](http://nicodev3.github.io/2015/09/12/nom-de-domaine-hebergement/), le code est un langage sous forme de fichiers informatiques qui forme un ensemble de données lisibles par les ordinateurs. Ces deniers étant régis par le système binaire, ils ont besoin - les pauvres - de directives extrêmement structurées pour faire leur travail. Le code - les fichiers contenant le code - est stocké sur un serveur, un ordinateur distant qui permet à chaque internaute de lancer son navigateur pour l'explorer intelligiblement.
+Mais c'est quoi ce code ? Ou se trouve-t-il ? C'est très simple, ou presque. Comme je l'ai déjà écrit dans l'article [hébergement et nom de domaine](https://nicodev3.github.io/2015/09/12/nom-de-domaine-hebergement/), le code est un langage sous forme de fichiers informatiques qui forme un ensemble de données lisibles par les ordinateurs. Ces deniers étant régis par le système binaire, ils ont besoin - les pauvres - de directives extrêmement structurées pour faire leur travail. Le code - les fichiers contenant le code - est stocké sur un serveur, un ordinateur distant qui permet à chaque internaute de lancer son navigateur pour l'explorer intelligiblement.
 
 Ainsi, HTML, CSS, PHP, Javascript (entre autres), sont les langages que comprend votre ordinateur et que votre navigateur interprète.
 

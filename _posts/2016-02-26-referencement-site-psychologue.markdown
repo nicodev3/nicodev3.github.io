@@ -105,7 +105,7 @@ En particulier, il absorbe de façon préférentielle des *mots clé* qu'il va c
 - Les mots clé contenus dans la page (contenus dans les balises `<p>` de paragraphes, qui peuvent être accentués par des balises `<strong>` etc..).
 - Les balises `alt` des images
 
-Pour mieux comprendre ce que sont ces **balises HTML**, voir mon article sur la [création d'un site Internet](http://nicodev3.github.io/2015/10/26/creation-site-internet/).
+Pour mieux comprendre ce que sont ces **balises HTML**, voir mon article sur la [création d'un site Internet](https://nicodev3.github.io/2015/10/26/creation-site-internet/).
 
 
 > C'est pour ces raisons qu'il est important que vous ayez la main sur le code de votre site. Si vous avez réalisé votre site avec un CMS ou un outil de création en ligne, savez-vous où sont vos balises et pouvez-vous les modifier&nbsp;? Certains CMS ont été réalisés par des développeurs n'ayant aucune connaissance du référencement, soyez prudent dans votre choix&nbsp;!
