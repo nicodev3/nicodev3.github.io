@@ -4,6 +4,7 @@ layout: post
 date: '2015-09-12'
 categories: "site internet, hébergement"
 h1: Hébergement et nom de domaine
+description: Comprendre les notions d'hébergement et de nom de domaine d'un site internet. Par nicodev, création de sites internet.
 comments: true
 published: true
 excerpt: "Cet article vous aidera à mieux comprendre la différence entre nom de domain et hébergement, deux notions souvent confondues par les néophytes."
