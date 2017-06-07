@@ -9,6 +9,8 @@ twitter_username: nicodevaux
 github_username:  nicodev3
 author: Nicolas Devaux
 lang: fr_FR
+twitter:
+  username: nicodevaux
 
 defaults:
   -
