@@ -64,8 +64,16 @@ Le principe de proximité se réfère à la théorie gestaltise de la perception
 ## Consistence et répétition
 {: #consistence} 
 
+La composition des éléments d'un design et leur relations entre eux donnent une meilleure impression globale. Songez-donc à appliquer un pattern à votre design. Certains éléments graphiques doivent pouvoir se retrouver à divers endroits, donnant des indices visuels à l'utilisateur.
+
+De même, gardez de la consistance dans le choix des couleurs, formes et polices de caractère. Pas plus de trois couleurs différentes, deux polices de caractères, une sans-serif et une serif.
+
 ## Contraste: pensez à tout le monde !
 {: #contraste} 
+
+Vous connaissez le daltonisme. Mais savez-vous qu'il existe d'autres formes de particularités visuelles, comme la deutéranomalie, l'achromatopsie, la protanotopie, ainsi que de nombreuses autres ?
+
+Vos textes pourraient fort bien être inaccessibles à près de 8% de vos visiteurs... Sauf si vous prenez en compte cet élément d'accessibilité. Vous pouvez tester l'accessibilité de vos couleurs sur le site de la *Web Accessibility In Mind*, [WebAIM](http://webaim.org/resources/contrastchecker/).
 
 ## Couleurs : oh la belle rouge... (sans jeu de mots)
 {: #couleurs} 
