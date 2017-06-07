@@ -8,6 +8,7 @@ url: "https://nicodev3.github.io" # the base hostname & protocol for your site
 twitter_username: nicodevaux
 github_username:  nicodev3
 author: Nicolas Devaux
+lang: fr_FR
 
 defaults:
   -
