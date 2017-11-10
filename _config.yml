@@ -46,5 +46,5 @@ comments: true
 # Exclude directories and/or files from the conversion.
 exclude: [node_modules, gulpfile.js, package.json, Gemfile, Gemfile.lock]
 
-gems: 
+plugins:
   - jekyll-seo-tag
