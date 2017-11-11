@@ -42,8 +42,8 @@
 }
 
 .tarif-mensuel p {
-    font-style: italic;
-    font-size: .9em;
+    font-size : .9em;
+    font-style : italic;
 }
 
 .tarif-presta ul {
@@ -66,12 +66,12 @@
 }
 
 .tarif-surligne {
-    background: color-opa(accent-color, .1);
-    width: 65%;
-    text-align: center;
-    margin: 0 auto .2em;
-    padding: 0 1em;
-    line-height: 1;
+    width : 65%;
+    margin : 0 auto .2em;
+    padding : 0 1em;
+    background : color-opa(accent-color, .1);
+    line-height : 1;
+    text-align : center;
 }
 
 .tarifs-aside {
@@ -79,4 +79,40 @@
         margin-top : gutter();
         padding : 8em gutter() 0;
     }
+}
+
+.calcul-tarif {
+    margin: 0 .5rem;
+    padding : 1rem;
+    background-color : color-lighter(accent-color, 2);
+    color : #fff;
+    font-family : $sans-serif;
+}
+
+.calcul-tarif p:first-of-type {
+    margin : 0 0 1rem 0;
+    padding : 0;
+    text-transform : uppercase;
+}
+
+.calcul-tarif label {
+    float : left;
+}
+
+.calcul-tarif input {
+    width : 100px;
+    float : right;
+}
+
+.calcul-tarif span {
+    display : block;
+    margin-top : 1rem;
+    text-align : left;
+}
+
+.tarif-info {
+    text-transform: none;
+    text-align: left;
+    font-size: .7em;
+    margin: 2em 0 0 0;
 }
