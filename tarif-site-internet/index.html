@@ -29,17 +29,18 @@ permalink: /tarif-site-internet/
                 <a href="https://www.malt.fr/profile/nicolasdevaux1" data-id="583e90343ef87764eb937c4b" class="hopwork_button" data-width="big" data-colorscheme="orange">Hire me !</a>            </aside>
         </div>
         <h2>Mes tarifs</h2>
-        <p>Mes tarifs sont basés sur un forfait journalier et sont indiqués toutes taxes comprises.</p>
+        <p>Mes tarifs sont basés sur un forfait à l'heure et sont indiqués toutes taxes comprises. L'heure de travail est facturée 56 €</p>
         <div class="gallery-tarifs">
             <section class="tarif-container">
                 <div class="tarif-top">
                     <h3>Site Basic</h3>
+                    <p>8 heures de travail</p>
                 </div>
                 <div class="tarif-montant">
-                    <p>432<sup>€</sup></p>
+                    <p>${ tarifHoraire * 8 }<sup>€</sup></p>
                 </div>
                 <div class="tarif-mensuel">
-                    <p>ou 39<sup>€</sup> par mois x 12</p>
+                    <p>ou 36<sup>€</sup> par mois x 12</p>
                 </div>
                 <div class="tarif-presta">
                     <ul>
@@ -58,12 +59,13 @@ permalink: /tarif-site-internet/
             <section class="tarif-container">
                 <div class="tarif-top">
                     <h3>Site vitrine</h3>
+                    <p>24 heures de travail</p>
                 </div>
                 <div class="tarif-montant">
-                    <p>864<sup>€</sup></p>
+                    <p>${ tarifHoraire * 24 }<sup>€</sup></p>
                 </div>
                 <div class="tarif-mensuel">
-                    <p>ou 74<sup>€</sup> par mois x 12</p>
+                    <p>ou 108<sup>€</sup> par mois x 12</p>
                 </div>
                 <div class="tarif-presta">
                     <ul>
@@ -86,12 +88,13 @@ permalink: /tarif-site-internet/
             <section class="tarif-container">
                 <div class="tarif-top">
                     <h3>Site Pro</h3>
+                    <p>48 heures de travail</p>
                 </div>
                 <div class="tarif-montant">
-                    <p>1.296<sup>€</sup></p>
+                    <p>${ tarifHoraire * 48 }<sup>€</sup></p>
                 </div>
                 <div class="tarif-mensuel">
-                    <p>ou 110<sup>€</sup> par mois x 12</p>
+                    <p>ou 216<sup>€</sup> par mois x 12</p>
                 </div>
                 <div class="tarif-presta">
                     <ul>
@@ -132,7 +135,7 @@ permalink: /tarif-site-internet/
                             <input type="number" class="input" v-model.number="nombreJours" >
                         </div>
 
-                        <span> TARIF&nbsp;:&nbsp;${ calculTarif }&nbsp;€ </span>
+                        <span> TARIF&nbsp;:&nbsp;${ calculTarifNombreJours }&nbsp;€ </span>
                         <p class="tarif-info"><sup>*</sup>A partir du 9<sup>e</sup> jour le tarif journalier est dégressif. Me contacter pour davantage d'informations.</p>
                     </div>
                 </div>
@@ -154,10 +157,12 @@ permalink: /tarif-site-internet/
       el: '#app',
       data: {
         nombreJours: '',
-        totalPrice: 432
+        totalPrice: 432,
+          tarifHoraire: 54,
+          nombreHeures: ''
       },
       computed : {
-        calculTarif : function () {
+        calculTarifNombreJours : function () {
           return this.totalPrice * this.nombreJours;
         }
       }

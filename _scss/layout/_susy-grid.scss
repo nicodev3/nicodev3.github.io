@@ -2,7 +2,9 @@
 // containeur
 // -----------------------------------
 .gallery {
-  overflow : auto;
+    margin : 0;
+    padding : 0;
+    overflow : auto;
 }
 
 /**
@@ -10,29 +12,32 @@
  */
 .gallery__item--2 ,
 .gallery__item--3 {
-  padding : gutter();
+    padding : gutter();
 
-  @include susy-breakpoint($tablet-portrait) {
-    margin-bottom : gutter();
-  }
+    @include susy-breakpoint($tablet-portrait) {
+        margin-bottom : gutter();
+    }
+
+    list-style-type : none;
 }
 
 .gallery__item--2 {
-  @include susy-breakpoint($tablet-portrait) {
-    @include gallery(6);
-  }
+    @include susy-breakpoint($tablet-portrait) {
+        @include gallery(6);
+    }
 }
 
 .gallery__item--3 {
-  @include susy-breakpoint($tablet-portrait) {
-    @include gallery(4);
-  }
+    @include susy-breakpoint($tablet-portrait) {
+        @include gallery(4);
+    }
 }
 
-.gallery__item--1,
+.gallery__item--1 ,
 .gallery__item--2 h2 {
-  margin : 0;
-  @include fz($h4-fz);
+    margin : 0;
+
+    @include fz($h4-fz);
 }
 
 // -----------------------------------
@@ -42,7 +47,7 @@
     @include susy-clearfix();
 }
 .gallery-tarifs {
-    overflow: auto;
+    overflow : auto;
 }
 .gallery-tarifs .tarif-container {
     @include susy-breakpoint($tablet-paysage) {
@@ -61,4 +66,3 @@
         @include span(3 last);
     }
 }
-
