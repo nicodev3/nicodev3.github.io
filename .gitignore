@@ -7,3 +7,4 @@ nicodev.sublime-project
 nicodev.sublime-workspace
 bower_components/susy
 svg-optim/
+.DS_Store
