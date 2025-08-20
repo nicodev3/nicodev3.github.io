@@ -1,0 +1,52 @@
+[build]
+  # Commande de build
+  command = "bundle exec jekyll build"
+  
+  # Dossier de publication
+  publish = "_site"
+
+[build.environment]
+  # Variables d'environnement pour Jekyll
+  JEKYLL_ENV = "production"
+  JEKYLL_ENV = "production"
+
+# Redirections personnalisées (optionnel)
+[[redirects]]
+  from = "/feed.xml"
+  to = "/feed.xml"
+  status = 200
+
+# Headers pour optimiser les performances
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Headers pour les assets statiques
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

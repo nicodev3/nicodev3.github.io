@@ -1,10 +1,31 @@
-_site/*
-.sass-cache
-.idea
-node_modules
-_scss/.sass-cache
-nicodev.sublime-project
-nicodev.sublime-workspace
-bower_components/susy
-svg-optim/
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

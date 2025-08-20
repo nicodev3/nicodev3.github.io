@@ -1,5 +1,5 @@
 # Site settings
-title: 
+title: "Nicolas Devaux - Développeur Web Front-end"
 email: contact.nicodev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Nicolas Devaux est développeur Web front-end. Création, optimisation, refonte de sites internet, responsive design, optimisation SEO
@@ -29,22 +29,35 @@ kramdown:
   toc_levels:    1..6
   smart_quotes:  lsquo,rsquo,ldquo,rdquo
   use_coderay:   false
-
-kramdown:
-   input: GFM
+  input: GFM
 
 permalink: /:year/:month/:day/:title/
 
 comments: true
-# redcarpet:
-#   extensions:
-#     - hard_wrap
-#     - no_intra_emphasis
-#     - autolink
-#     - strikethrough
-#     - fenced_code_blocks
-# Exclude directories and/or files from the conversion.
-exclude: [node_modules, gulpfile.js, package.json, Gemfile, Gemfile.lock]
 
+# Exclude directories and/or files from the conversion.
+exclude: [node_modules, gulpfile.js, package.json, Gemfile, Gemfile.lock, netlify.toml]
+
+# Plugins pour Jekyll 4.x
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-mentions
+  - jekyll-gist
+  - jekyll-github-metadata
+
+# Configuration pour les métadonnées GitHub
+repository: nicodev3/nicodev3.github.io
+
+# Configuration pour le feed RSS
+feed:
+  path: feed.xml
+  limit: 10
+
+# Configuration pour le sitemap
+sitemap:
+  changefreq: weekly
+  priority: 0.5
