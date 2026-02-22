@@ -1,14 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import BlogCard from '../components/BlogCard.astro';
 
-// Import des articles de blog
-const postFiles = import.meta.glob('../content/blog/*.md', { eager: true });
-const posts = Object.values(postFiles) as any[];
+const posts = await getCollection('blog');
 
-// Trier les articles par date de publication (plus récent en premier)
 const sortedPosts = posts.sort((a, b) => {
-	const dateA = new Date(a.frontmatter.pubDate).getTime();
-	const dateB = new Date(b.frontmatter.pubDate).getTime();
+	const dateA = new Date(a.data.pubDate).getTime();
+	const dateB = new Date(b.data.pubDate).getTime();
 	return dateB - dateA;
 });
 ---
@@ -17,73 +17,26 @@ const sortedPosts = posts.sort((a, b) => {
 	title="Blog - Nicolas Devaux"
 	description="Articles et conseils sur la création de sites internet, le développement web et le référencement"
 >
-	<!-- Hero Section -->
-	<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center">
-				<h1 class="text-4xl md:text-6xl font-bold mb-6">
-					Blog
-				</h1>
-				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-					Conseils et articles sur la création de sites internet
-				</p>
-			</div>
-		</div>
-	</section>
+	<Hero 
+		title="Blog" 
+		subtitle="Conseils et articles sur la création de sites internet"
+	/>
 
-	<!-- Blog Posts Section -->
 	<section class="py-16 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{sortedPosts.map((post) => (
-					<article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-						<div class="relative">
-							<img 
-								src={post.frontmatter.image || "/images/development.jpg"} 
-								alt={post.frontmatter.title}
-								class="w-full h-48 object-cover"
-							/>
-							<div class="absolute top-4 left-4">
-								<span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-									{post.frontmatter.tags?.[0] || "Web"}
-								</span>
-							</div>
-						</div>
-						<div class="p-6">
-							<div class="flex items-center text-sm text-gray-500 mb-2">
-								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('fr-FR', {
-										year: 'numeric',
-										month: 'long',
-										day: 'numeric'
-									})}
-								</time>
-								<span class="mx-2">•</span>
-								<span>{post.frontmatter.author}</span>
-							</div>
-							<h2 class="text-xl font-semibold text-gray-900 mb-3">
-								<a href={`/blog/${post.file.split('/').pop()?.replace('.md', '')}`} class="hover:text-blue-600 transition-colors">
-									{post.frontmatter.title}
-								</a>
-							</h2>
-							<p class="text-gray-600 mb-4 line-clamp-3">
-								{post.frontmatter.description}
-							</p>
-							<div class="flex flex-wrap gap-2 mb-4">
-								{post.frontmatter.tags?.slice(0, 3).map((tag: string) => (
-									<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
-										{tag}
-									</span>
-								))}
-							</div>
-							<a 
-								href={`/blog/${post.file.split('/').pop()?.replace('.md', '')}`}
-								class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-							>
-								Lire l'article
-							</a>
-						</div>
-					</article>
+					<BlogCard
+						title={post.data.title}
+						description={post.data.description}
+						href={`/blog/${post.id}`}
+						image={post.data.image || "/images/development.jpg"}
+						imageAlt={post.data.title}
+						tag={post.data.tags?.[0] || "Web"}
+						pubDate={post.data.pubDate}
+						author={post.data.author}
+						tags={post.data.tags}
+					/>
 				))}
 			</div>
 		</div>

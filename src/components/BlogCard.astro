@@ -1,0 +1,68 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+	href: string;
+	image: string;
+	imageAlt: string;
+	tag?: string;
+	pubDate: string;
+	author: string;
+	tags?: string[];
+}
+
+const { title, description, href, image, imageAlt, tag, pubDate, author, tags } = Astro.props;
+---
+
+<article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+	<div class="relative">
+		<img
+			src={image}
+			alt={imageAlt}
+			class="w-full h-48 object-cover"
+		/>
+		{tag && (
+			<div class="absolute top-4 left-4">
+				<span class="bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+					{tag}
+				</span>
+			</div>
+		)}
+	</div>
+	<div class="p-6">
+		<div class="flex items-center text-sm text-gray-500 mb-2">
+			<time datetime={pubDate}>
+				{new Date(pubDate).toLocaleDateString('fr-FR', {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				})}
+			</time>
+			<span class="mx-2">•</span>
+			<span>{author}</span>
+		</div>
+		<h2 class="text-xl font-semibold text-gray-900 mb-3">
+			<a href={href} class="hover:text-teal-600 transition-colors">
+				{title}
+			</a>
+		</h2>
+		<p class="text-gray-600 mb-4 line-clamp-3">
+			{description}
+		</p>
+		{tags && tags.length > 0 && (
+			<div class="flex flex-wrap gap-2 mb-4">
+				{tags.slice(0, 3).map((tag: string) => (
+					<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
+						{tag}
+					</span>
+				))}
+			</div>
+		)}
+		<a
+			href={href}
+			class="inline-block bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors"
+		>
+			Lire l'article
+		</a>
+	</div>
+</article>

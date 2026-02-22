@@ -1,22 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import BulletList from '../components/BulletList.astro';
+import CtaSection from '../components/CtaSection.astro';
 ---
 
 <Layout 
 	title="Tarifs - Sites internet pour praticiens libéraux"
 	description="Tarifs transparents pour la création de sites internet sur mesure pour psychologues, médecins et praticiens libéraux"
 >
-	<!-- Hero Section -->
-	<section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-4xl font-bold text-gray-900 mb-6">
-				Tarifs transparents
-			</h1>
-			<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-				Forfait unique ou abonnement mensuel : choisissez la formule adaptée à vos besoins.
-			</p>
-		</div>
-	</section>
+	<Hero 
+		title="Tarifs transparents" 
+		subtitle="Forfait unique ou abonnement mensuel : choisissez la formule adaptée à vos besoins."
+		variant="light"
+	/>
 
 	<!-- Philosophie Section -->
 	<section class="py-16 bg-white">
@@ -30,37 +27,23 @@ import Layout from '../layouts/Layout.astro';
 					Contrairement à la plupart des prestataires qui cachent leurs tarifs, je prône la <strong>transparence totale</strong>. Votre budget doit être investi dans la qualité, pas dans des fonctionnalités inutiles ou des prestations opaques.
 				</p>
 				
-				<div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100">
+				<div class="bg-gradient-to-r from-stone-50 to-slate-50 p-8 rounded-xl border border-teal-100">
 					<h3 class="text-xl font-semibold text-gray-900 mb-4">Mes engagements qualité</h3>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div class="space-y-3">
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700"><strong>Visibilité :</strong> Référencement local, optimisation pour les recherches santé</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700"><strong>Perception :</strong> Design rassurant, navigation intuitive, accessibilité</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700"><strong>Technique :</strong> Sécurité RGPD, performance, conformité aux standards</span>
-							</div>
-						</div>
-						<div class="space-y-3">
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700"><strong>Contenu :</strong> Présentation de vos spécialités, articles de santé</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700"><strong>Services :</strong> Intégration Doctolib, prise de rendez-vous sécurisée</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700"><strong>Accompagnement :</strong> Je m'occupe de toutes vos modifications de contenu</span>
-							</div>
-						</div>
+						<BulletList 
+							items={[
+								"<strong>Visibilité :</strong> Référencement local, optimisation pour les recherches santé",
+								"<strong>Perception :</strong> Design rassurant, navigation intuitive, accessibilité",
+								"<strong>Technique :</strong> Sécurité RGPD, performance, conformité aux standards"
+							]} 
+						/>
+						<BulletList 
+							items={[
+								"<strong>Contenu :</strong> Présentation de vos spécialités, articles de santé",
+								"<strong>Services :</strong> Intégration Doctolib, prise de rendez-vous sécurisée",
+								"<strong>Accompagnement :</strong> Je m'occupe de toutes vos modifications de contenu"
+							]} 
+						/>
 					</div>
 				</div>
 				
@@ -95,43 +78,43 @@ import Layout from '../layouts/Layout.astro';
 							<div class="space-y-4 mb-8">
 								<div class="flex items-center">
 									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 									</svg>
 									<span class="text-gray-700">Site vitrine professionnel sur mesure</span>
 								</div>
 								<div class="flex items-center">
 									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 									</svg>
 									<span class="text-gray-700">Design responsive et optimisé SEO</span>
 								</div>
 								<div class="flex items-center">
 									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 									</svg>
 									<span class="text-gray-700">Intégration Doctolib</span>
 								</div>
 								<div class="flex items-center">
 									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 									</svg>
 									<span class="text-gray-700">Conformité RGPD</span>
 								</div>
 								<div class="flex items-center">
 									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 									</svg>
 									<span class="text-gray-700">Hébergement inclus la première année</span>
 								</div>
 								<div class="flex items-center">
 									<svg class="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
 									</svg>
 									<span class="text-gray-500">Modifications de contenu non incluses</span>
 								</div>
 								<div class="flex items-center">
 									<svg class="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
 									</svg>
 									<span class="text-gray-500">Support technique non inclus</span>
 								</div>
@@ -168,128 +151,128 @@ import Layout from '../layouts/Layout.astro';
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<!-- Pack Site Vitrine -->
 				<div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-					<div class="bg-blue-600 text-white p-8 text-center">
+					<div class="bg-teal-600 text-white p-8 text-center">
 						<h3 class="text-2xl font-bold">Pack Site Vitrine</h3>
 						<div class="text-4xl font-bold mt-4">59€</div>
-						<div class="text-blue-100 text-lg mt-2">par mois</div>
+						<div class="text-teal-100 text-lg mt-2">par mois</div>
 					</div>
 					<div class="p-8">
 						<div class="space-y-4 mb-8">
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Site vitrine professionnel sur mesure</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Design responsive et optimisé SEO</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Intégration Doctolib</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Conformité RGPD</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700"><strong>Modifications de contenu illimitées</strong></span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Support technique prioritaire</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Hébergement + nom de domaine inclus</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Mises à jour de sécurité automatiques</span>
 							</div>
 						</div>
 						
-						<div class="bg-blue-50 p-4 rounded-lg mb-6">
-							<p class="text-blue-800 text-sm text-center">
+						<div class="bg-teal-50 p-4 rounded-lg mb-6">
+							<p class="text-teal-800 text-sm text-center">
 								<strong>Idéal pour :</strong> Psychologues, médecins, thérapeutes qui veulent une présence web professionnelle sans se soucier de la technique
 							</p>
 						</div>
 						
-						<a href="/contact" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center">
+						<a href="/contact" class="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors block text-center">
 							Choisir ce pack
 						</a>
 					</div>
 				</div>
 
 				<!-- Pack Site + Blog -->
-				<div class="bg-white rounded-xl shadow-lg border-2 border-blue-500 overflow-hidden relative">
+				<div class="bg-white rounded-xl shadow-lg border-2 border-teal-500 overflow-hidden relative">
 					<div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-						<div class="bg-blue-600 text-white px-6 py-2 pt-8 rounded-full text-sm font-semibold">
+						<div class="bg-teal-600 text-white px-6 py-2 pt-8 rounded-full text-sm font-semibold">
 							Recommandé
 						</div>
 					</div>
-					<div class="bg-blue-600 text-white p-8 text-center">
+					<div class="bg-teal-600 text-white p-8 text-center">
 						<h3 class="text-2xl font-bold">Pack Site + Blog</h3>
 						<div class="text-4xl font-bold mt-4">89€</div>
-						<div class="text-blue-100 text-lg mt-2">par mois</div>
+						<div class="text-teal-100 text-lg mt-2">par mois</div>
 					</div>
 					<div class="p-8">
 						<div class="space-y-4 mb-8">
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700"><strong>Tout du Pack Site Vitrine</strong></span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700"><strong>2 articles par mois</strong> rédigés et publiés pour vous</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700">Articles de psychologie optimisés pour Google</span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700"><strong>Amélioration continue de votre visibilité</strong></span>
 							</div>
 							<div class="flex items-center">
 								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
 								</svg>
 								<span class="text-gray-700"><strong>Attraction de nouveaux patients</strong> via le contenu</span>
 							</div>
 						</div>
 						
-						<div class="bg-blue-50 p-4 rounded-lg mb-6">
-							<p class="text-blue-800 text-sm text-center">
+						<div class="bg-teal-50 p-4 rounded-lg mb-6">
+							<p class="text-teal-800 text-sm text-center">
 								<strong>Idéal pour :</strong> Professionnels qui veulent <strong>attirer plus de patients</strong> via la visibilité sur Google
 							</p>
 						</div>
 						
-						<a href="/contact" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center">
+						<a href="/contact" class="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors block text-center">
 							Choisir ce pack
 						</a>
 					</div>
@@ -303,9 +286,9 @@ import Layout from '../layouts/Layout.astro';
 				</h3>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div class="text-center">
-						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+						<div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0s1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659c-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/>
 							</svg>
 						</div>
 						<h4 class="font-semibold text-gray-900 mb-2">Budget maîtrisé</h4>
@@ -314,7 +297,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="text-center">
 						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
 							<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75L12 13.5z"/>
 							</svg>
 						</div>
 						<h4 class="font-semibold text-gray-900 mb-2">Je m'occupe de tout</h4>
@@ -323,7 +306,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="text-center">
 						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
 							<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15L15 9.75M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/>
 							</svg>
 						</div>
 						<h4 class="font-semibold text-gray-900 mb-2">Flexibilité totale</h4>
@@ -333,7 +316,7 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 			
 			<!-- Comparaison avec les plateformes -->
-			<div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100">
+			<div class="mt-16 bg-gradient-to-r from-stone-50 to-slate-50 p-8 rounded-xl border border-teal-100">
 				<h3 class="text-2xl font-bold text-center text-gray-900 mb-8">
 					Pourquoi choisir mes services plutôt qu'une plateforme ?
 				</h3>
@@ -400,9 +383,9 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 				</div>
 				
-				<div class="bg-blue-100 p-6 rounded-lg">
-					<h4 class="font-semibold text-blue-900 mb-3">Le vrai coût caché des plateformes :</h4>
-					<p class="text-blue-800">
+				<div class="bg-teal-100 p-6 rounded-lg">
+					<h4 class="font-semibold text-teal-900 mb-3">Le vrai coût caché des plateformes :</h4>
+					<p class="text-teal-800">
 						<strong>Votre temps = votre argent.</strong> Passer 20h à créer et maintenir votre site vous-même = 1000-2000€ de temps perdu. 
 						Mes services vous permettent de vous concentrer sur vos patients pendant que je m'occupe de votre visibilité web.
 					</p>
@@ -464,23 +447,11 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
-	<!-- CTA Section -->
-	<section class="py-16 bg-blue-600 text-white">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-3xl font-bold mb-4">
-				Prêt à créer votre site internet ?
-			</h2>
-			<p class="text-xl mb-8 opacity-90">
-				Discutons de votre projet et choisissons ensemble la formule qui correspond à vos besoins.
-			</p>
-			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-					Demander un devis gratuit
-				</a>
-				<a href="/portfolio" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-					Voir mes réalisations
-				</a>
-			</div>
-		</div>
-	</section>
+	<CtaSection 
+		title="Prêt à créer votre site internet ?"
+		description="Discutons de votre projet et choisissons ensemble la formule qui correspond à vos besoins."
+		primaryButton={{ text: "Demander un devis gratuit", href: "/contact" }}
+		secondaryButton={{ text: "Voir mes réalisations", href: "/portfolio" }}
+		maxWidth="4xl"
+	/>
 </Layout>

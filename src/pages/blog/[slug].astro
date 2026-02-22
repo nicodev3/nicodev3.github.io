@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
 
 // Récupérer le slug depuis l'URL
 export async function getStaticPaths() {
@@ -20,124 +21,44 @@ const { Content } = await entry.render();
 	title={`${entry.data.title} - Nicolas Devaux`}
 	description={entry.data.description}
 >
-	<!-- Hero Section -->
-	<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center">
-				<div class="flex items-center justify-center text-sm mb-4">
-					<time datetime={entry.data.pubDate}>
-						{new Date(entry.data.pubDate).toLocaleDateString('fr-FR', {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric'
-						})}
-					</time>
-					<span class="mx-2">•</span>
-					<span>{entry.data.author}</span>
-				</div>
-				<h1 class="text-4xl md:text-5xl font-bold mb-6">
-					{entry.data.title}
-				</h1>
-				<p class="text-xl mb-8 max-w-3xl mx-auto">
-					{entry.data.description}
-				</p>
-				<div class="flex flex-wrap justify-center gap-2">
-					{entry.data.tags?.map((tag: string) => (
-						<span class="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm">
-							{tag}
-						</span>
-					))}
-				</div>
-			</div>
+	<Hero title={entry.data.title} subtitle={entry.data.description} maxWidth="4xl">
+		<div slot="before" class="flex items-center justify-center text-sm mb-4">
+			<time datetime={entry.data.pubDate}>
+				{new Date(entry.data.pubDate).toLocaleDateString('fr-FR', {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				})}
+			</time>
+			<span class="mx-2">•</span>
+			<span>{entry.data.author}</span>
 		</div>
-	</section>
-
-	<!-- Table of Contents -->
-	<section class="py-8 bg-gray-50">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<nav class="toc-container bg-white border-l-4 border-blue-600 p-6 rounded-lg shadow-sm">
-				<h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
-					<svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-					</svg>
-					Plan de l'article
-				</h2>
-				<ul class="space-y-2">
-					<li>
-						<a href="#navigateur" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
-							Le navigateur : fenêtre sur le Web
-						</a>
-						<ul class="ml-4 mt-2 space-y-1">
-							<li>
-								<a href="#navigateurs" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									Les différents navigateurs
-								</a>
-							</li>
-							<li>
-								<a href="#interprete" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									Un interprète pour le Web
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#langages" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
-							Du code à la page : les langages du Web
-						</a>
-						<ul class="ml-4 mt-2 space-y-1">
-							<li>
-								<a href="#html" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									HTML : des balises pour structurer le Web
-								</a>
-							</li>
-							<li>
-								<a href="#css" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									CSS : mettre en forme le HTML
-								</a>
-							</li>
-							<li>
-								<a href="#javascript" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									JavaScript : donner vie au contenu
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#contenu" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
-							Du contenu, du contenu, encore du contenu !
-						</a>
-						<ul class="ml-4 mt-2 space-y-1">
-							<li>
-								<a href="#structure" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									Structurer les données
-								</a>
-							</li>
-							<li>
-								<a href="#ux" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									L'UX, une donnée à ne pas négliger
-								</a>
-							</li>
-							<li>
-								<a href="#accessibilite" class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 text-sm">
-									L'accessibilité, une nécessité, un challenge
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#conclusion" class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-semibold text-base">
-							Conclusion
-						</a>
-					</li>
-				</ul>
-			</nav>
+		<div slot="after" class="flex flex-wrap justify-center gap-2">
+			{entry.data.tags?.map((tag: string) => (
+				<span class="bg-white bg-opacity-20 text-gray-900 px-3 py-1 rounded-full text-sm">
+					{tag}
+				</span>
+			))}
 		</div>
-	</section>
+	</Hero>
 
 	<!-- Article Content -->
 	<article class="py-16 bg-white">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="prose prose-lg max-w-none">
+			<div class="prose prose-lg prose-slate max-w-none
+				prose-headings:font-heading prose-headings:font-bold prose-headings:text-gray-900
+				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-2
+				prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-teal-700
+				prose-p:text-gray-700 prose-p:leading-relaxed
+				prose-a:text-teal-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+				prose-strong:text-gray-900
+				prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-gray-700
+				prose-code:text-teal-700 prose-code:bg-teal-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
+				prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:shadow-lg
+				prose-ul:my-4 prose-li:my-1 prose-li:text-gray-700
+				prose-ol:my-4
+				prose-img:rounded-xl prose-img:shadow-md prose-img:mx-auto
+				prose-hr:border-gray-200">
 				<Content />
 			</div>
 		</div>
@@ -149,7 +70,7 @@ const { Content } = await entry.render();
 			<div class="text-center">
 				<a 
 					href="/blog"
-					class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+					class="inline-flex items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
 				>
 					← Retour au blog
 				</a>

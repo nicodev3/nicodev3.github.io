@@ -1,0 +1,29 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+	color?: 'teal' | 'green' | 'purple' | 'orange';
+	centered?: boolean;
+}
+
+const { title, description, color = 'teal', centered = true } = Astro.props;
+
+const colorClasses = {
+	teal: { bg: 'bg-teal-100', text: 'text-teal-600' },
+	green: { bg: 'bg-green-100', text: 'text-green-600' },
+	purple: { bg: 'bg-purple-100', text: 'text-purple-600' },
+	orange: { bg: 'bg-orange-100', text: 'text-orange-600' },
+}[color];
+---
+
+<div class={`bg-white p-6 rounded-lg shadow-lg ${centered ? 'text-center' : ''}`}>
+	<div class={`w-16 h-16 ${colorClasses.bg} rounded-full flex items-center justify-center ${centered ? 'mx-auto' : ''} mb-4`}>
+		<div class={colorClasses.text}>
+			<slot name="icon" />
+		</div>
+	</div>
+	<h3 class="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+	<p class={`text-gray-600 ${centered ? 'text-sm' : ''}`}>
+		{description}
+	</p>
+</div>

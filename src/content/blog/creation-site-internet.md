@@ -85,3 +85,11 @@ L'accessibilité web est essentielle pour permettre à tous les utilisateurs, y 
 Créer un site internet est un processus complexe qui nécessite de maîtriser plusieurs langages et de penser à l'expérience utilisateur. Mais avec les bons outils et une approche méthodique, c'est tout à fait accessible !
 
 N'hésitez pas à me contacter si vous souhaitez en savoir plus sur la création de sites internet.
+
+
+---
+
+## A lire aussi
+
+- [Combien coûte vraiment la création d’un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026)
+

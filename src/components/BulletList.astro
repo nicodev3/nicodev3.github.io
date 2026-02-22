@@ -1,0 +1,25 @@
+---
+export interface Props {
+	items: string[];
+	color?: 'teal' | 'green' | 'purple' | 'orange' | 'red';
+}
+
+const { items, color = 'teal' } = Astro.props;
+
+const dotColorClass = {
+	teal: 'bg-teal-500',
+	green: 'bg-green-500',
+	purple: 'bg-purple-500',
+	orange: 'bg-orange-500',
+	red: 'bg-red-500',
+}[color];
+---
+
+<div class="space-y-3">
+	{items.map((item) => (
+		<div class="flex items-start">
+			<div class={`w-2 h-2 ${dotColorClass} rounded-full mt-2 mr-3 flex-shrink-0`}></div>
+			<span class="text-gray-700" set:html={item} />
+		</div>
+	))}
+</div>

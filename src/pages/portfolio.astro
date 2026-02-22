@@ -1,22 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import CtaSection from '../components/CtaSection.astro';
 
 
 
 const psychologueProjects = [
+	{
+		title: "Cécile Coaching",
+		description: "Site vitrine pour coach professionnelle",
+		image: "/images/screenshots/cecilecoaching.fr.png",
+		url: "https://cecilecoaching.fr/",
+		location: "Paris"
+	},
 	{
 		title: "Séverine Reisser",
 		description: "Site vitrine professionnel pour psychologue",
 		image: "/images/screenshots/psychologue-leslilas.png",
 		url: "https://psychologue-leslilas.fr/",
 		location: "Les Lilas"
-	},
-	{
-		title: "Audrey Larcebau",
-		description: "Site vitrine moderne pour psychologue",
-		image: "/images/screenshots/psy-emdr-cotebasque.fr.png",
-		url: "https://psy-emdr-cotebasque.fr",
-		location: "Anglet"
 	},
 	{
 		title: "Laure Yaakoubi",
@@ -67,19 +69,10 @@ const psychologueProjects = [
 	title="Portfolio - Nicolas Devaux"
 	description="Découvrez mes réalisations en création de sites internet pour psychologues, associations et entreprises"
 >
-	<!-- Hero Section -->
-	<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center">
-				<h1 class="text-4xl md:text-6xl font-bold mb-6">
-					Mon Portfolio
-				</h1>
-				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-					Découvrez mes réalisations en création de sites internet sur mesure
-				</p>
-			</div>
-		</div>
-	</section>
+	<Hero 
+		title="Mon Portfolio" 
+		subtitle="Découvrez mes réalisations en création de sites internet sur mesure"
+	/>
 
 
 
@@ -133,20 +126,20 @@ const psychologueProjects = [
 					<h4 class="text-lg font-semibold text-gray-900 mb-4">Pourquoi cette approche ?</h4>
 					<div class="space-y-3 text-gray-600">
 						<div class="flex items-start space-x-3">
-							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-								<span class="text-blue-600 text-sm font-bold">1</span>
+							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-teal-600 text-sm font-bold">1</span>
 							</div>
 							<p>Votre site reflète votre identité professionnelle unique</p>
 						</div>
 						<div class="flex items-start space-x-3">
-							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-								<span class="text-blue-600 text-sm font-bold">2</span>
+							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-teal-600 text-sm font-bold">2</span>
 							</div>
 							<p>Le contenu est authentique et correspond à votre pratique</p>
 						</div>
 						<div class="flex items-start space-x-3">
-							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-								<span class="text-blue-600 text-sm font-bold">3</span>
+							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+								<span class="text-teal-600 text-sm font-bold">3</span>
 							</div>
 							<p>Vous maîtrisez votre communication en ligne</p>
 						</div>
@@ -158,13 +151,13 @@ const psychologueProjects = [
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{psychologueProjects.map((project) => (
 					<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
-						<div class="relative group">
+					<div class="relative group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
 							<img 
 								src={project.image} 
 								alt={project.title}
 								class="w-full h-48 object-cover"
 							/>
-							<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+							<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
 								<a 
 									href={project.url}
 									target="_blank"
@@ -184,8 +177,8 @@ const psychologueProjects = [
 							</p>
 							<div class="flex items-center text-sm text-gray-500 mb-4">
 								<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
 								</svg>
 								{project.location}
 							</div>
@@ -194,7 +187,7 @@ const psychologueProjects = [
 									href={project.url}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+									class="inline-block bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors"
 								>
 									Visiter le site
 								</a>
@@ -208,23 +201,10 @@ const psychologueProjects = [
 
 
 
-	<!-- CTA Section -->
-	<section class="py-16 bg-blue-600 text-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-3xl font-bold mb-4">
-				Vous avez un projet similaire ?
-			</h2>
-			<p class="text-xl mb-8 max-w-2xl mx-auto">
-				Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé.
-			</p>
-			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-					Me contacter
-				</a>
-				<a href="/tarifs" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-					Voir mes tarifs
-				</a>
-			</div>
-		</div>
-	</section>
+	<CtaSection 
+		title="Vous avez un projet similaire ?"
+		description="Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé."
+		primaryButton={{ text: "Me contacter", href: "/contact" }}
+		secondaryButton={{ text: "Voir mes tarifs", href: "/tarifs" }}
+	/>
 </Layout>
