@@ -13,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
 				Tarifs transparents
 			</h1>
 			<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-				Un modèle d'abonnement simple et flexible : votre site vitrine professionnel avec modifications illimitées.
+				Forfait unique ou abonnement mensuel : choisissez la formule adaptée à vos besoins.
 			</p>
 		</div>
 	</section>
@@ -58,7 +58,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="flex items-start">
 								<div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700"><strong>Accompagnement :</strong> Modifications illimitées, support technique continu</span>
+								<span class="text-gray-700"><strong>Accompagnement :</strong> Je m'occupe de toutes vos modifications de contenu</span>
 							</div>
 						</div>
 					</div>
@@ -74,19 +74,97 @@ import Layout from '../layouts/Layout.astro';
 	<!-- Tarifs Section -->
 	<section class="py-16 bg-gray-50">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-				Mes abonnements mensuels
+			<h2 class="text-3xl font-bold text-center text-gray-900 mb-4">
+				Mes formules
 			</h2>
-			
-			<div class="text-center mb-8">
-				<p class="text-lg text-gray-600">
-					Un modèle simple et flexible : pas de frais cachés, pas d'engagement long terme
-				</p>
-				<p class="text-sm text-gray-500 mt-2">
-					Tous les tarifs incluent la TVA et sont facturés mensuellement
-				</p>
+			<p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+				Tous les tarifs sont TTC. Les abonnements sont sans engagement et résiliables à tout moment.
+			</p>
+
+			<!-- Forfait unique -->
+			<div class="mb-12">
+				<h3 class="text-xl font-semibold text-gray-700 text-center mb-6 uppercase tracking-wide">Forfait unique — sans abonnement</h3>
+				<div class="max-w-md mx-auto">
+					<div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+						<div class="bg-gray-700 text-white p-8 text-center">
+							<h3 class="text-2xl font-bold">Forfait Création</h3>
+							<div class="text-4xl font-bold mt-4">490€</div>
+							<div class="text-gray-300 text-lg mt-2">paiement unique</div>
+						</div>
+						<div class="p-8">
+							<div class="space-y-4 mb-8">
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Site vitrine professionnel sur mesure</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Design responsive et optimisé SEO</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Intégration Doctolib</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Conformité RGPD</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+									<span class="text-gray-700">Hébergement inclus la première année</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+									</svg>
+									<span class="text-gray-500">Modifications de contenu non incluses</span>
+								</div>
+								<div class="flex items-center">
+									<svg class="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+									</svg>
+									<span class="text-gray-500">Support technique non inclus</span>
+								</div>
+							</div>
+
+							<div class="bg-gray-50 p-4 rounded-lg mb-6 border border-gray-200">
+								<p class="text-gray-600 text-sm text-center">
+									Modifications ultérieures facturées <strong>50€/h</strong> ou sur devis
+								</p>
+							</div>
+
+							<div class="bg-gray-100 p-4 rounded-lg mb-6">
+								<p class="text-gray-700 text-sm text-center">
+									<strong>Idéal pour :</strong> Professionnels qui souhaitent un site livré clé en main, sans engagement mensuel
+								</p>
+							</div>
+
+							<a href="/contact" class="w-full bg-gray-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors block text-center">
+								Demander un devis
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			
+
+			<!-- Séparateur -->
+			<div class="flex items-center gap-4 mb-12 max-w-5xl mx-auto">
+				<div class="flex-1 h-px bg-gray-300"></div>
+				<span class="text-gray-500 font-medium uppercase tracking-wide text-sm">Ou avec abonnement mensuel</span>
+				<div class="flex-1 h-px bg-gray-300"></div>
+			</div>
+
+			<!-- Abonnements -->
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<!-- Pack Site Vitrine -->
 				<div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
@@ -98,49 +176,49 @@ import Layout from '../layouts/Layout.astro';
 					<div class="p-8">
 						<div class="space-y-4 mb-8">
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Site vitrine professionnel sur mesure</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Design responsive et optimisé SEO</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Intégration Doctolib</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Conformité RGPD</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
-								<span class="text-gray-700"><strong>Modifications illimitées</strong></span>
+								<span class="text-gray-700"><strong>Modifications de contenu illimitées</strong></span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Support technique prioritaire</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Hébergement + nom de domaine inclus</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Mises à jour de sécurité automatiques</span>
@@ -149,15 +227,13 @@ import Layout from '../layouts/Layout.astro';
 						
 						<div class="bg-blue-50 p-4 rounded-lg mb-6">
 							<p class="text-blue-800 text-sm text-center">
-								<strong>Idéal pour :</strong> Psychologues, médecins, thérapeutes qui veulent une présence web professionnelle
+								<strong>Idéal pour :</strong> Psychologues, médecins, thérapeutes qui veulent une présence web professionnelle sans se soucier de la technique
 							</p>
 						</div>
 						
-						<div class="mt-6">
-							<a href="/contact" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center">
-								Choisir ce pack
-							</a>
-						</div>
+						<a href="/contact" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center">
+							Choisir ce pack
+						</a>
 					</div>
 				</div>
 
@@ -176,37 +252,31 @@ import Layout from '../layouts/Layout.astro';
 					<div class="p-8">
 						<div class="space-y-4 mb-8">
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700"><strong>Tout du Pack Site Vitrine</strong></span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
-								<span class="text-gray-700"><strong>2 articles par mois</strong> pour être visible sur Google</span>
+								<span class="text-gray-700"><strong>2 articles par mois</strong> rédigés et publiés pour vous</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700">Articles de santé optimisés pour Google</span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700"><strong>Amélioration continue de votre visibilité</strong></span>
 							</div>
 							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-								</svg>
-								<span class="text-gray-700">Plus de visibilité sur Google</span>
-							</div>
-							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								<span class="text-gray-700"><strong>Attraction de nouveaux patients</strong> via le contenu</span>
@@ -215,15 +285,13 @@ import Layout from '../layouts/Layout.astro';
 						
 						<div class="bg-blue-50 p-4 rounded-lg mb-6">
 							<p class="text-blue-800 text-sm text-center">
-								<strong>Idéal pour :</strong> Professionnels qui veulent <strong>attirer plus de patients</strong> via le contenu et la visibilité sur Google
+								<strong>Idéal pour :</strong> Professionnels qui veulent <strong>attirer plus de patients</strong> via la visibilité sur Google
 							</p>
 						</div>
 						
-						<div class="mt-6">
-							<a href="/contact" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center">
-								Choisir ce pack
-							</a>
-						</div>
+						<a href="/contact" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center">
+							Choisir ce pack
+						</a>
 					</div>
 				</div>
 			</div>
@@ -249,8 +317,8 @@ import Layout from '../layouts/Layout.astro';
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
 							</svg>
 						</div>
-						<h4 class="font-semibold text-gray-900 mb-2">Service continu</h4>
-						<p class="text-gray-600 text-sm">Modifications illimitées et support technique inclus</p>
+						<h4 class="font-semibold text-gray-900 mb-2">Je m'occupe de tout</h4>
+						<p class="text-gray-600 text-sm">Modifications de contenu, mises à jour, sécurité : tout est géré pour vous</p>
 					</div>
 					<div class="text-center">
 						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -292,7 +360,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="flex items-start">
 								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700">Support limité, pas de modifications</span>
+								<span class="text-gray-700">Support limité, modifications à votre charge</span>
 							</div>
 							<div class="flex items-start">
 								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -306,7 +374,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="space-y-3">
 							<div class="flex items-start">
 								<div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700">59-89€/mois tout inclus</span>
+								<span class="text-gray-700">490€ (forfait) ou 59-89€/mois tout inclus</span>
 							</div>
 							<div class="flex items-start">
 								<div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -322,7 +390,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="flex items-start">
 								<div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-								<span class="text-gray-700">Modifications illimitées incluses</span>
+								<span class="text-gray-700">Modifications de contenu assurées par mes soins</span>
 							</div>
 							<div class="flex items-start">
 								<div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -333,60 +401,11 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				
 				<div class="bg-blue-100 p-6 rounded-lg">
-					<h4 class="font-semibold text-blue-900 mb-3">💡 Le vrai coût caché des plateformes :</h4>
+					<h4 class="font-semibold text-blue-900 mb-3">Le vrai coût caché des plateformes :</h4>
 					<p class="text-blue-800">
-						<strong>Votre temps = votre argent.</strong> Passer 20h à créer votre site vous-même = 1000-2000€ de temps perdu. 
+						<strong>Votre temps = votre argent.</strong> Passer 20h à créer et maintenir votre site vous-même = 1000-2000€ de temps perdu. 
 						Mes services vous permettent de vous concentrer sur vos patients pendant que je m'occupe de votre visibilité web.
 					</p>
-				</div>
-			</div>
-			
-			<!-- Justification des tarifs -->
-			<div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100">
-				<h3 class="text-2xl font-bold text-center text-gray-900 mb-8">
-					Pourquoi ces tarifs ?
-				</h3>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-					<div class="bg-white p-6 rounded-lg shadow-sm text-center">
-						<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-							</svg>
-						</div>
-						<h4 class="font-semibold text-gray-900 mb-2">Hébergement</h4>
-						<div class="text-2xl font-bold text-blue-600">15€/mois</div>
-						<p class="text-gray-600 text-sm">Serveur sécurisé + nom de domaine</p>
-					</div>
-					
-					<div class="bg-white p-6 rounded-lg shadow-sm text-center">
-						<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-							<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-							</svg>
-						</div>
-						<h4 class="font-semibold text-gray-900 mb-2">Maintenance</h4>
-						<div class="text-2xl font-bold text-green-600">25€/mois</div>
-						<p class="text-gray-600 text-sm">Mises à jour + sécurité + support</p>
-					</div>
-					
-					<div class="bg-white p-6 rounded-lg shadow-sm text-center">
-						<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-							</svg>
-						</div>
-						<h4 class="font-semibold text-gray-900 mb-2">Modifications</h4>
-						<div class="text-2xl font-bold text-purple-600">19€/mois</div>
-						<p class="text-gray-600 text-sm">Modifications illimitées incluses</p>
-					</div>
-				</div>
-				
-				<div class="mt-8 text-center">
-					<div class="bg-blue-100 p-4 rounded-lg inline-block">
-						<p class="text-blue-900 font-semibold">
-							💡 <strong>Total : 59€/mois</strong> - Un tarif juste qui couvre tous les coûts réels
-						</p>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -401,16 +420,23 @@ import Layout from '../layouts/Layout.astro';
 			
 			<div class="space-y-6">
 				<div class="bg-gray-50 p-6 rounded-lg">
-					<h3 class="text-lg font-semibold text-gray-900 mb-3">Y a-t-il des frais d'installation ?</h3>
+					<h3 class="text-lg font-semibold text-gray-900 mb-3">Quelle est la différence entre le forfait unique et l'abonnement ?</h3>
 					<p class="text-gray-600">
-						Non, aucun frais caché. Le premier mois inclut la création complète de votre site. Vous commencez à payer seulement après la livraison de votre site.
+						Avec le <strong>forfait unique</strong>, je crée votre site et vous le livre clé en main. Toute modification ultérieure est facturée séparément (50€/h). Avec l'<strong>abonnement</strong>, je reste disponible pour toutes vos demandes de modification de contenu (textes, images, informations) sans frais supplémentaires, et j'assure également l'hébergement, la sécurité et le support technique.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-6 rounded-lg">
+					<h3 class="text-lg font-semibold text-gray-900 mb-3">Y a-t-il des frais d'installation pour l'abonnement ?</h3>
+					<p class="text-gray-600">
+						Non, aucun frais caché. La création de votre site est incluse dans l'abonnement. Vous commencez à payer seulement après la livraison de votre site.
 					</p>
 				</div>
 				
 				<div class="bg-gray-50 p-6 rounded-lg">
-					<h3 class="text-lg font-semibold text-gray-900 mb-3">Que signifie "modifications illimitées" ?</h3>
+					<h3 class="text-lg font-semibold text-gray-900 mb-3">Que signifie "modifications de contenu illimitées" ?</h3>
 					<p class="text-gray-600">
-						Une fois votre site livré, je reste disponible pour toutes les modifications de contenu (textes, images, informations) sans frais supplémentaires. Vous n'avez pas besoin d'apprendre à gérer un CMS complexe.
+						C'est moi qui effectue toutes les modifications sur votre site : mise à jour de vos horaires, changement de textes, ajout de photos, modification de vos informations de contact... Vous me contactez, je m'en occupe. Pas besoin d'apprendre à gérer quoi que ce soit.
 					</p>
 				</div>
 				
@@ -422,7 +448,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				
 				<div class="bg-gray-50 p-6 rounded-lg">
-					<h3 class="text-lg font-semibold text-gray-900 mb-3">Puis-je résilier à tout moment ?</h3>
+					<h3 class="text-lg font-semibold text-gray-900 mb-3">Puis-je résilier l'abonnement à tout moment ?</h3>
 					<p class="text-gray-600">
 						Oui, vous pouvez résilier votre abonnement à tout moment. Aucun engagement, aucune pénalité. Votre site reste en ligne jusqu'à la fin du mois en cours.
 					</p>
@@ -431,7 +457,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="bg-gray-50 p-6 rounded-lg">
 					<h3 class="text-lg font-semibold text-gray-900 mb-3">La visibilité sur Google est-elle incluse ?</h3>
 					<p class="text-gray-600">
-						Oui, tous mes sites sont optimisés pour être visibles sur Google. Avec le Pack Site + Blog, vous bénéficiez d'une amélioration continue de votre visibilité et d'articles pour attirer plus de patients.
+						Oui, tous mes sites sont optimisés pour être visibles sur Google. Avec le Pack Site + Blog, vous bénéficiez en plus de 2 articles de santé rédigés et publiés chaque mois pour améliorer continuellement votre référencement et attirer de nouveaux patients.
 					</p>
 				</div>
 			</div>
@@ -445,7 +471,7 @@ import Layout from '../layouts/Layout.astro';
 				Prêt à créer votre site internet ?
 			</h2>
 			<p class="text-xl mb-8 opacity-90">
-				Discutons de votre projet et choisissons ensemble le pack qui correspond à vos besoins.
+				Discutons de votre projet et choisissons ensemble la formule qui correspond à vos besoins.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<a href="/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
