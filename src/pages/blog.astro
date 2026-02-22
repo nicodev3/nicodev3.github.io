@@ -100,26 +100,54 @@ const sortedPosts = posts.sort((a, b) => {
 			</p>
 
 			<form
+				id="sib-form"
 				action="https://400f6541.sibforms.com/serve/MUIFAAvf3PNpwNtDHxCu16wOZk20H3GfDL5LSQlaPW9MO3uH6NBIIsHRgmyUKkwI2lTmD6jO73k1_haEBNUl2dhb9YT3_f1W-ysM2B9FTdgKoX84SC1oyxBU94Ygp58wDZKzFoyeW4ognmJplq_vbkEaFmxzuRvrNe7Hrc3nsWcejKSS6GKymiXnKZf2Ome5u8IUQGG5_9NGXHRecw=="
 				method="POST"
-				target="_blank"
-				class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+				data-type="subscription"
+				class="max-w-md mx-auto space-y-4"
 			>
-				<input
-					type="email"
-					name="EMAIL"
-					placeholder="Votre email"
-					required
-					class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-				/>
-				<button
-					type="submit"
-					class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-				>
-					S'abonner
-				</button>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<input
+						type="text"
+						id="EMAIL"
+						name="EMAIL"
+						autocomplete="off"
+						placeholder="Votre email"
+						required
+						class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+					/>
+					<button
+						type="submit"
+						form="sib-form"
+						class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+					>
+						S'abonner
+					</button>
+				</div>
+
+				<!-- reCAPTCHA requis par Brevo -->
+				<div
+					class="g-recaptcha flex justify-center"
+					id="sib-captcha"
+					data-sitekey="6LeifHQsAAAAALV0yXxAVZQmIQ-k2UKQl4NhpmuR"
+					data-callback="handleCaptchaResponse"
+				></div>
+
+				<!-- Champs cachés requis par Brevo -->
+				<input type="text" name="email_address_check" value="" class="hidden" />
+				<input type="hidden" name="locale" value="fr" />
 			</form>
+
 			<p class="text-sm text-gray-400 mt-4">Pas de spam. Désinscription possible à tout moment.</p>
 		</div>
 	</section>
+
+	<script>
+		function handleCaptchaResponse() {
+			const event = new Event('captchaChange');
+			document.getElementById('sib-captcha')?.dispatchEvent(event);
+		}
+	</script>
+	<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js?hl=fr"></script>
 </Layout>
