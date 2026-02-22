@@ -8,10 +8,5 @@ export default defineConfig({
     site: 'https://nicodev3.github.io',
     vite: {
         plugins: [tailwindcss()]
-    },
-    integrations: [
-        tailwindcss({
-            config: { path: './tailwind.config.js' }
-        })
-    ]
+    }
 });
