@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 
 // Import des articles de blog
-const posts = await Astro.glob('../content/blog/*.md');
+const postFiles = import.meta.glob('../content/blog/*.md', { eager: true });
+const posts = Object.values(postFiles) as any[];
 
 // Trier les articles par date de publication (plus récent en premier)
 const sortedPosts = posts.sort((a, b) => {
@@ -69,7 +70,7 @@ const sortedPosts = posts.sort((a, b) => {
 								{post.frontmatter.description}
 							</p>
 							<div class="flex flex-wrap gap-2 mb-4">
-								{post.frontmatter.tags?.slice(0, 3).map((tag) => (
+								{post.frontmatter.tags?.slice(0, 3).map((tag: string) => (
 									<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
 										{tag}
 									</span>
