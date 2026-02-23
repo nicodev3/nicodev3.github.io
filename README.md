@@ -119,11 +119,3 @@ Configuration dans `tailwind.config.mjs` :
 
 Ce projet est sous licence MIT.
 
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à :
-1. Fork le projet
-2. Créer une branche pour votre fonctionnalité
-3. Commiter vos changements
-4. Pousser vers la branche
-5. Ouvrir une Pull Request
