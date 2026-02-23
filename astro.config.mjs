@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://nicodev-astro.netlify.app',
+    site: 'https://nicodev.fr',
     vite: {
         plugins: [tailwindcss()]
     }
