@@ -18,6 +18,7 @@ const {
 const baseUrl = Astro.site ?? Astro.url.origin;
 const canonical = new URL(Astro.url.pathname, baseUrl).toString();
 const ogImage = image ? new URL(image, baseUrl).toString() : new URL('/images/development.jpg', baseUrl).toString();
+const fontsUrl = 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=optional';
 ---
 
 <!doctype html>
@@ -31,7 +32,9 @@ const ogImage = image ? new URL(image, baseUrl).toString() : new URL('/images/de
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+		<link rel="preload" href={fontsUrl} as="style" />
+		<link href={fontsUrl} rel="stylesheet" media="print" onload="this.media='all'" />
+		<noscript><link href={fontsUrl} rel="stylesheet" /></noscript>
 		<meta name="generator" content={Astro.generator} />
 
 		<meta property="og:type" content="website" />
