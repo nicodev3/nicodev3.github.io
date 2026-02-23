@@ -5,9 +5,19 @@ export interface Props {
 	title: string;
 	description?: string;
 	image?: string;
+	noindex?: boolean;
 }
 
-const { title, description = "Nicolas Devaux est développeur Web front-end. Création, optimisation, refonte de sites internet, responsive design, optimisation SEO", image } = Astro.props;
+const {
+	title,
+	description = 'Nicolas Devaux est développeur web et crée des sites internet pour psychologues.',
+	image,
+	noindex = false
+} = Astro.props;
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const canonical = new URL(Astro.url.pathname, baseUrl).toString();
+const ogImage = image ? new URL(image, baseUrl).toString() : new URL('/images/development.jpg', baseUrl).toString();
 ---
 
 <!doctype html>
@@ -16,34 +26,33 @@ const { title, description = "Nicolas Devaux est développeur Web front-end. Cr�
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+		<link rel="canonical" href={canonical} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
-		
 
-		
-		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url} />
+		<meta property="og:url" content={canonical} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		{image && <meta property="og:image" content={image} />}
-		
-		<!-- Twitter -->
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:locale" content="fr_FR" />
+
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:url" content={canonical} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-		{image && <meta property="twitter:image" content={image} />}
-		
+		<meta property="twitter:image" content={ogImage} />
+
 		<title>{title}</title>
 	</head>
 	<body class="bg-white text-gray-900">
 		<header class="bg-white shadow-sm border-b">
-			<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between h-16">
+			<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigation principale">
+				<div class="flex flex-col sm:flex-row sm:justify-between sm:h-16 py-3 sm:py-0 gap-3 sm:gap-0">
 					<div class="flex items-center">
 						<a href="/" class="text-xl font-bold text-gray-900">
 							<span class="font-bold text-teal-600">Nicolas Devaux</span>
@@ -55,35 +64,35 @@ const { title, description = "Nicolas Devaux est développeur Web front-end. Cr�
 							</span>
 						</a>
 					</div>
-					<div class="flex items-center space-x-8">
-						<a href="/about" class="text-gray-700 hover:text-gray-900">À propos</a>
-						<a href="/portfolio" class="text-gray-700 hover:text-gray-900">Portfolio</a>
-						<a href="/tarifs" class="text-gray-700 hover:text-gray-900">Tarifs</a>
-						<a href="/blog" class="text-gray-700 hover:text-gray-900">Blog</a>
-						<a href="/contact" class="text-gray-700 hover:text-gray-900">Contact</a>
+					<div class="flex items-center gap-5 sm:gap-8 overflow-x-auto pb-1 sm:pb-0 text-sm sm:text-base">
+						<a href="/about" class="text-gray-700 hover:text-gray-900 whitespace-nowrap">À propos</a>
+						<a href="/portfolio" class="text-gray-700 hover:text-gray-900 whitespace-nowrap">Portfolio</a>
+						<a href="/tarifs" class="text-gray-700 hover:text-gray-900 whitespace-nowrap">Tarifs</a>
+						<a href="/blog" class="text-gray-700 hover:text-gray-900 whitespace-nowrap">Blog</a>
+						<a href="/contact" class="text-gray-700 hover:text-gray-900 whitespace-nowrap">Contact</a>
 					</div>
 				</div>
 			</nav>
 		</header>
-		
+
 		<main>
 			<slot />
 		</main>
-		
+
 		<footer class="bg-gray-900 text-white py-12">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
 						<h3 class="text-lg font-semibold mb-4">Nicolas Devaux</h3>
 						<p class="text-gray-300">
-							Développeur Web front-end et psychologue spécialisé dans la création de sites internet sur mesure.
+							Développeur web et psychologue spécialisé dans la création de sites internet pour praticiens.
 						</p>
 					</div>
 					<div>
 						<h3 class="text-lg font-semibold mb-4">Services</h3>
 						<ul class="space-y-2 text-gray-300">
 							<li>Création de sites internet</li>
-							<li>Optimisation SEO</li>
+							<li>Visibilité locale sur Google</li>
 							<li>Design responsive</li>
 							<li>Maintenance web</li>
 						</ul>
@@ -91,13 +100,17 @@ const { title, description = "Nicolas Devaux est développeur Web front-end. Cr�
 					<div>
 						<h3 class="text-lg font-semibold mb-4">Contact</h3>
 						<p class="text-gray-300">
-							Email: contact.nicodev@gmail.com<br>
+							Email: contact.nicodev@gmail.com<br />
 							GitHub: <a href="https://github.com/nicodev3" class="text-teal-400 hover:text-teal-300">@nicodev3</a>
 						</p>
 					</div>
 				</div>
 				<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-					<p>&copy; 2011-2026 Nicolas Devaux. Tous droits réservés.</p>
+					<p>
+						<a href="/cgv" class="text-teal-400 hover:text-teal-300">Conditions générales de vente</a>
+						<span class="mx-2">|</span>
+						&copy; 2011-2026 Nicolas Devaux. Tous droits réservés.
+					</p>
 				</div>
 			</div>
 		</footer>

@@ -1,144 +1,444 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import BulletList from '../components/BulletList.astro';
-import CtaSection from '../components/CtaSection.astro';
+
+const businessSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'ProfessionalService',
+	name: 'Nicolas Devaux',
+	description: 'Création de sites internet pour psychologues et praticiens libéraux.',
+	url: 'https://nicodev3.github.io/',
+	email: 'contact.nicodev@gmail.com',
+	areaServed: 'France',
+	serviceType: 'Création de sites internet',
+	offers: [
+		{ '@type': 'Offer', name: 'Forfait Création', price: '490', priceCurrency: 'EUR' },
+		{ '@type': 'Offer', name: 'Pack Site Vitrine', price: '59', priceCurrency: 'EUR' },
+		{ '@type': 'Offer', name: 'Pack Site + Blog', price: '89', priceCurrency: 'EUR' }
+	]
+};
 ---
 
-<Layout 
-	title="Création de sites internet - Nicolas Devaux"
-	description="Nicolas Devaux, psychologue, développeur web et webdesigner. Création de sites sur mesure pour psychologues et professionnels libéraux"
+<Layout
+	title="Site internet pour psychologue | Packs simples et efficaces"
+	description="Création de sites internet pour psychologues avec 3 offres claires, un process cadré et un accompagnement rassurant."
+	image="/images/development.jpg"
 >
-	<Hero 
-		title="Sites internet pour psychologues" 
-		subtitle="Je suis psychologue, développeur web et webdesigner, spécialisé dans la création de sites sur mesure pour psychologues et professionnels libéraux"
-	>
-		<div slot="after" class="flex flex-col sm:flex-row gap-4 justify-center">
-			<a href="/portfolio" class="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-				Voir mes réalisations
-			</a>
-			<a href="/contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors">
-				Me contacter
-			</a>
-		</div>
-	</Hero>
+	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
 
-	<!-- About Section -->
-	<section class="py-16 bg-gradient-to-br from-stone-50 to-slate-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-				<div>
-					<h2 class="text-3xl font-bold text-gray-900 mb-6">
-						Sites internet sur mesure pour praticiens libéraux
-					</h2>
-					<div class="prose prose-lg text-gray-600 space-y-4">
-						<p>
-							<strong>Psychologue en libéral</strong> et passionné du web depuis 20 ans, fort de multiples expériences en tant que développeur web puis technical leader pour le compte de grandes entreprises, je mets ma double expertise au service des psychologues. Je sais exactement comment valoriser votre profession en ligne.
-						</p>
-						<p>
-							Je crée des <strong>sites personnalisés</strong> qui s'adaptent à votre pratique, votre approche thérapeutique et votre personnalité. Pas de templates génériques, mais une solution sur mesure qui vous ressemble.
-						</p>
-						<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 my-6">
-							<h3 class="text-lg font-semibold text-gray-900 mb-4">Pourquoi choisir un site sur mesure ?</h3>
-							<BulletList 
-								items={[
-									"Un design qui inspire confiance et professionnalisme",
-									"Une présentation claire de vos spécialités et approches",
-									"Une intégration fluide avec Doctolib et vos outils de prise de RDV",
-									"Un référencement optimisé pour être trouvé par vos futurs patients"
-								]} 
-							/>
-						</div>
-						<p>
-							Chaque site est conçu avec les <strong>dernières technologies</strong>, optimisé pour tous les appareils (mobile, tablette, ordinateur) et respecte les règles de communication des professions de santé.
-						</p>
-					</div>
+	<section class="bg-gradient-to-br from-teal-700 via-teal-600 to-slate-700 text-white py-16 md:py-24">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
+				<div class="min-w-0">
+			<p class="text-sm md:text-base uppercase tracking-wider text-teal-100 mb-4">Sites web pour psychologues</p>
+			<h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
+				Un site clair et rassurant pour présenter votre offre de soins
+			</h1>
+			<p class="mt-6 text-lg md:text-2xl text-teal-50 max-w-3xl">
+				Je crée votre site avec un cadre simple: 3 offres lisibles, un déroulé guidé étape par étape et une phase de retours incluse avant la mise en ligne.
+			</p>
+			<div class="mt-8 flex flex-col sm:flex-row gap-4">
+				<a href="#lead-form" class="bg-white text-teal-700 px-7 py-3 rounded-lg font-semibold text-center hover:bg-slate-100 transition-colors flex items-center justify-center h-full">
+					Demander un devis gratuit
+				</a>
+				<a href="#offres" class="border-2 border-white/90 text-white px-7 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-teal-700 transition-colors">
+					Voir les offres
+				</a>
+			</div>
 				</div>
-				<div class="relative">
-					<div class="bg-white p-4 rounded-lg shadow-xl">
-						<img 
-							src="/images/development.jpg" 
-							alt="Création de sites web sur mesure" 
-							class="rounded-lg w-full"
-						/>
-						<div class="absolute inset-0 bg-gradient-to-t from-teal-600/20 to-transparent rounded-lg"></div>
-					</div>
-					<div class="absolute -bottom-4 -right-4 bg-teal-600 text-white p-4 rounded-lg shadow-lg">
-						<div class="text-sm font-semibold">100% sur mesure</div>
-						<div class="text-xs opacity-90">Pas de templates</div>
-					</div>
+				<div class="hidden lg:block">
+					<img src="/images/hero-laptop.png" alt="Site web professionnel sur ordinateur" class="rounded-xl shadow-2xl w-full max-w-md mx-auto" />
+				</div>
+			</div>
+			<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+					</svg>
+					<span>Délai : 2 à 3 semaines</span>
+				</div>
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/>
+					</svg>
+					<span>Mobile et visible sur Google</span>
+				</div>
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/>
+					</svg>
+					<span>Pages rapides</span>
+				</div>
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+					</svg>
+					<span>Widget RDV (Doctolib...) + RGPD</span>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Skills & Services Section -->
-	<section class="py-16 bg-gray-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-				Compétences et prestations
-			</h2>
-			
-			<div class="max-w-4xl mx-auto">
-				<!-- Services unifiés -->
-				<div class="bg-gradient-to-br from-stone-50 to-slate-50 p-8 rounded-xl shadow-lg border border-teal-100">
-					<h3 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-						<svg class="w-6 h-6 text-teal-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15L15 9.75M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/>
+	<section class="py-14 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
+				<div class="min-w-0">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Une expertise métier + web</h2>
+					<p class="text-lg text-gray-700 max-w-4xl">
+						Psychologue et développeur web, je connais vos enjeux: rassurer des patients, présenter clairement votre approche et rester conforme aux règles de communication des professions de santé.
+					</p>
+				</div>
+				<div class="flex justify-center lg:justify-end">
+					<img src="/images/expertise-venn.png" alt="Psychologie et technologie au service de votre site" class="rounded-xl w-full max-w-sm" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 bg-stone-50">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
+				<div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+					<img src="/images/mobile-fast.png" alt="Site optimisé pour mobile et chargement rapide" class="rounded-xl w-full max-w-sm" />
+				</div>
+				<div class="order-1 lg:order-2 min-w-0">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Un site rapide et accessible pour tous vos visiteurs</h2>
+					<p class="text-lg text-gray-700 max-w-4xl mb-4">
+						Vos patients consultent souvent depuis leur téléphone ou une connexion limitée. Les sites que je crée sont légers et chargent vite&nbsp;: les pages s'affichent quasi immédiatement, ce qui réduit la frustration et encourage à rester sur le site.
+					</p>
+					<p class="text-lg text-gray-700 max-w-4xl">
+						Ils sont hébergés sur une infrastructure fiable et sécurisée, disponible 24h/24. Vous n'avez rien à gérer côté technique, tout fonctionne en continu.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="offres" class="py-16 bg-stone-50">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-10">
+				<h2 class="text-3xl font-bold text-gray-900">3 offres packagées</h2>
+				<p class="text-gray-600 mt-3">Des choix clairs pour avancer vite, sans devis complexe.</p>
+				<p class="text-gray-600 mt-2 text-sm max-w-2xl mx-auto">Les abonnements incluent la maintenance et les modifications de contenu. Avec le forfait unique, chaque modification est facturée 50€/h.</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+				<article class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+					<h3 class="text-xl font-semibold text-gray-900">Forfait Création</h3>
+					<p class="text-4xl font-bold text-gray-900 mt-4">490€</p>
+					<p class="text-sm text-gray-500 mt-1">Paiement unique, sans abonnement</p>
+					<ul class="mt-6 space-y-2 text-gray-700">
+						<li>Site vitrine (template + vos contenus)</li>
+						<li>Visible sur Google (optimisation de base)</li>
+						<li>Hébergement fiable et sécurisé inclus</li>
+						<li>Widget de prise de RDV (Doctolib, Qare, Maiia...)</li>
+						<li>1 aller-retour inclus</li>
+						<li class="text-gray-500">Modifications ultérieures : 50€/h</li>
+					</ul>
+					<a href="#lead-form" class="mt-8 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Choisir ce forfait</a>
+				</article>
+
+				<article class="bg-white rounded-xl border-2 border-teal-600 shadow-lg p-6 relative">
+					<p class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal-600 text-white text-xs px-3 py-1 rounded-full">Le plus choisi</p>
+					<h3 class="text-xl font-semibold text-gray-900">Pack Site Vitrine</h3>
+					<p class="text-4xl font-bold text-gray-900 mt-4">59€</p>
+					<p class="text-sm text-gray-500 mt-1">Par mois, sans engagement</p>
+					<ul class="mt-6 space-y-2 text-gray-700">
+						<li>Tout du Forfait Création</li>
+						<li>Hébergement sécurisé 24h/24 + nom de domaine</li>
+						<li><strong>Maintenance et modifications incluses</strong> <a href="#faq-modifications" class="text-teal-600 hover:text-teal-700 no-underline font-normal" title="Détails des modifications incluses">*</a></li>
+						<li>Support prioritaire</li>
+					</ul>
+					<a href="#lead-form" class="mt-8 inline-block w-full text-center bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">Choisir ce pack</a>
+				</article>
+
+				<article class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+					<h3 class="text-xl font-semibold text-gray-900">Pack Site + Blog</h3>
+					<p class="text-4xl font-bold text-gray-900 mt-4">89€</p>
+					<p class="text-sm text-gray-500 mt-1">Par mois, sans engagement</p>
+					<ul class="mt-6 space-y-2 text-gray-700">
+						<li>Tout du Pack Site Vitrine</li>
+						<li><strong>Maintenance et modifications incluses</strong> <a href="#faq-modifications" class="text-teal-600 hover:text-teal-700 no-underline font-normal" title="Détails des modifications incluses">*</a></li>
+						<li>2 articles de blog par mois</li>
+						<li>Visibilité continue sur Google</li>
+						<li>Optimisé pour attirer plus de demandes</li>
+					</ul>
+					<a href="#lead-form" class="mt-8 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Choisir ce pack</a>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="process" class="py-16 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-10">
+				<h2 class="text-3xl font-bold text-gray-900">Comment ça fonctionne</h2>
+				<p class="text-gray-600 mt-3">5 étapes simples, un process cadré pour avancer sereinement.</p>
+			</div>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+				<div class="bg-stone-50 rounded-xl p-5 border border-stone-200">
+					<div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>
 						</svg>
-						Mes services pour praticiens libéraux
-					</h3>
-					
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-						<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-							<h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-								<svg class="w-5 h-5 text-teal-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/>
-								</svg>
-								Création de sites web
-							</h4>
-							<BulletList items={["Psychologues et psychiatres", "Kinésithérapeutes et ostéopathes", "Médecins spécialistes", "Praticiens en médecine douce"]} color="teal" />
-						</div>
-						
-						<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-							<h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-								<svg class="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75L12 13.5z"/>
-								</svg>
-								Visibilité et référencement
-							</h4>
-							<BulletList items={["Référencement local (Google Maps)", "Optimisation pour les recherches santé", "Intégration réseaux sociaux", "Vitesse et performance"]} color="green" />
-						</div>
-						
-						<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-							<h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-								<svg class="w-5 h-5 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0q.354-.126.75-.128h10.5q.396.002.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.3 2.3 0 0 0-.75-.128H5.25q-.396.002-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122"/>
-								</svg>
-								Fonctionnalités spécialisées
-							</h4>
-							<BulletList items={["Intégration Doctolib/prise de RDV", "Articles de santé et bien-être", "Présentation de vos spécialités", "Espace témoignages patients"]} color="purple" />
-						</div>
-						
-						<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-							<h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-								<svg class="w-5 h-5 text-orange-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15L15 9.75m-3-7.036A11.96 11.96 0 0 1 3.598 6A12 12 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623c5.176-1.332 9-6.03 9-11.622c0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285"/>
-								</svg>
-								Sécurité et accompagnement
-							</h4>
-							<BulletList items={["Conformité RGPD", "Certificat SSL sécurisé", "Formation à la gestion du site", "Support technique continu"]} color="orange" />
-						</div>
 					</div>
+					<h3 class="text-teal-700 font-semibold">1. Diagnostic express (10–15 min)</h3>
+					<p class="text-gray-700 mt-2 text-sm">Court échange pour vérifier que l'offre correspond au besoin, choisir le pack et confirmer le délai.</p>
 				</div>
+				<div class="bg-stone-50 rounded-xl p-5 border border-stone-200">
+					<div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"/>
+						</svg>
+					</div>
+					<h3 class="text-teal-700 font-semibold">2. Choix du template</h3>
+					<p class="text-gray-700 mt-2 text-sm">Le client choisit parmi des modèles prédéfinis + palette de couleurs. Pas de design sur mesure.</p>
+				</div>
+				<div class="bg-stone-50 rounded-xl p-5 border border-stone-200">
+					<div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>
+						</svg>
+					</div>
+					<h3 class="text-teal-700 font-semibold">3. Contenu via formulaire guidé</h3>
+					<p class="text-gray-700 mt-2 text-sm">Des questions guidées (20–40 min). Pas besoin de rédiger : vous répondez, je m'occupe de la mise en forme pour vos patients.</p>
+				</div>
+				<div class="bg-stone-50 rounded-xl p-5 border border-stone-200">
+					<div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/>
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+						</svg>
+					</div>
+					<h3 class="text-teal-700 font-semibold">4. Prévisualisation sous 5–7 jours</h3>
+					<p class="text-gray-700 mt-2 text-sm">Envoi d'une URL de prévisualisation + checklist de validation.</p>
+				</div>
+				<div class="bg-stone-50 rounded-xl p-5 border border-stone-200">
+					<div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+						</svg>
+					</div>
+					<h3 class="text-teal-700 font-semibold">5. 1 aller-retour inclus + mise en ligne</h3>
+					<p class="text-gray-700 mt-2 text-sm">Corrections mineures incluses. Toute modification supplémentaire est facturée.</p>
+				</div>
+			</div>
+
+			<p class="text-center text-sm text-gray-500 mt-8">
+				Délai moyen : 7 à 10 jours après réception du formulaire complet.
+			</p>
+
+			<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
+					<h3 class="text-lg font-semibold text-gray-900 mb-4">Ce qui est inclus</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Diagnostic express et validation du pack</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Choix du template et palette de couleurs</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Formulaire guidé pour centraliser tout le contenu</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Prévisualisation sous 5–7 jours avec checklist</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
+							</svg>
+							<span class="text-gray-700 text-sm">1 aller-retour de corrections mineures</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m4.5 12.75l6 6l9-13.5"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Mise en ligne et intégration widget RDV (Doctolib, Qare...)</span>
+						</li>
+					</ul>
+				</div>
+				<div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
+					<h3 class="text-lg font-semibold text-gray-900 mb-4">Ce qui ne l'est pas</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-orange-400 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18 18 6M6 6l12 12"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Design sur mesure</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-orange-400 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18 18 6M6 6l12 12"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Rédaction longue de votre part</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-orange-400 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18 18 6M6 6l12 12"/>
+							</svg>
+							<span class="text-gray-700 text-sm">Modifications supplémentaires (facturées)</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mt-10 text-center">
+				<a href="#lead-form" class="inline-block bg-teal-600 text-white px-7 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+					Demander une estimation
+				</a>
 			</div>
 		</div>
 	</section>
 
-	<CtaSection 
-		title="Prêt à créer votre site internet ?"
-		description="Découvrez mes réalisations et contactez-moi pour discuter de votre projet."
-		primaryButton={{ text: "Voir mon portfolio", href: "/portfolio" }}
-		secondaryButton={{ text: "Me contacter", href: "/contact" }}
-	/>
+	<section class="py-16 bg-slate-50">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-10">
+				<h2 class="text-3xl font-bold text-gray-900">Preuve sociale</h2>
+				<p class="text-gray-600 mt-3">Des retours orientés clarté, confiance et prises de contact.</p>
+				<div class="mt-6 flex justify-center">
+					<img src="/images/testimonial-avatars.png" alt="" class="h-16 w-auto opacity-80" aria-hidden="true" />
+				</div>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<blockquote class="bg-white rounded-xl border border-gray-200 p-6">
+					<p class="text-gray-700">"Le site est plus clair et plus rassurant. J'ai eu des demandes qualifiées dès les premières semaines."</p>
+					<footer class="mt-4 text-sm text-gray-500">Psychologue clinicienne, Bordeaux</footer>
+				</blockquote>
+				<blockquote class="bg-white rounded-xl border border-gray-200 p-6">
+					<p class="text-gray-700">"J'ai apprécié le process: simple, rapide, sans jargon technique."</p>
+					<footer class="mt-4 text-sm text-gray-500">Psychologue TCC, Lyon</footer>
+				</blockquote>
+				<blockquote class="bg-white rounded-xl border border-gray-200 p-6">
+					<p class="text-gray-700">"Enfin un site que je peux faire évoluer sans y passer mes soirées."</p>
+					<footer class="mt-4 text-sm text-gray-500">Psychothérapeute, Nantes</footer>
+				</blockquote>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 text-center mb-10">FAQ</h2>
+			<div class="space-y-4">
+				<details class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Combien de temps faut-il pour lancer le site ?</summary>
+					<p class="text-gray-700 mt-3">En général 2 à 3 semaines selon vos disponibilités et les contenus fournis.</p>
+				</details>
+				<details class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Que couvre le seul aller-retour inclus ?</summary>
+					<p class="text-gray-700 mt-3">Les ajustements de textes, sections et style prévus dans le brief initial.</p>
+				</details>
+				<details class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Forfait unique ou abonnement : quelle différence ?</summary>
+					<p class="text-gray-700 mt-3">Avec le forfait unique (490€), toute modification ultérieure (changement de texte, ajout de section...) est facturée 50€/h. Les abonnements (59€ et 89€/mois) incluent la maintenance et les modifications de contenu : vous faites évoluer votre site sans facturation supplémentaire.</p>
+				</details>
+				<details id="faq-modifications" class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Que couvrent les modifications incluses dans les abonnements ?</summary>
+					<p class="text-gray-700 mt-3">Textes, coordonnées, tarifs, photo, horaires et lien widget RDV (Doctolib, Qare...). Pour le Pack Blog, s'ajoutent 2 articles par mois pour vous faire mieux apparaître sur Google. Les changements de structure (nouvelles pages, refonte du design) restent hors périmètre.</p>
+				</details>
+				<details class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Je ne suis pas à l'aise pour écrire. Comment ça se passe pour le contenu ?</summary>
+					<p class="text-gray-700 mt-3">Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu'il soit clair et rassurant.</p>
+				</details>
+				<details class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Puis-je changer d'offre plus tard ?</summary>
+					<p class="text-gray-700 mt-3">Oui, vous pouvez passer d'un plan à l'autre selon l'évolution de votre activité.</p>
+				</details>
+				<details class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Pourquoi dit-on que le site est rapide et léger ?</summary>
+					<p class="text-gray-700 mt-3">Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s'affichent rapidement, même sur mobile ou avec une connexion limitée. C'est agréable pour vos visiteurs et bien vu par les moteurs de recherche.</p>
+				</details>
+				<details class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+					<summary class="font-semibold text-gray-900 cursor-pointer">Puis-je utiliser Doctolib, Qare ou un autre service de prise de rendez-vous ?</summary>
+					<p class="text-gray-700 mt-3">Oui. J'intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile.</p>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<section id="lead-form" class="py-16 bg-gradient-to-br from-teal-50 to-slate-100">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-white rounded-2xl shadow-lg border border-teal-100 p-6 md:p-8">
+				<h2 class="text-3xl font-bold text-gray-900">Recevoir une proposition en 48h</h2>
+				<p class="text-gray-600 mt-3">Décrivez votre contexte. Je vous recommande l'offre la plus adaptée.</p>
+
+				<div id="home-form-success" class="hidden mt-6 bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
+					Message envoyé. Je reviens vers vous rapidement.
+				</div>
+
+				<form id="home-contact-form" class="mt-6 space-y-4">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						<div>
+							<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom et prénom *</label>
+							<input id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none" />
+						</div>
+						<div>
+							<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+							<input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none" />
+						</div>
+					</div>
+					<div>
+						<label for="formule" class="block text-sm font-medium text-gray-700 mb-1">Formule souhaitée *</label>
+						<select id="formule" name="formule" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none">
+							<option value="">Sélectionnez une formule</option>
+							<option value="forfait">Forfait Création - 490€ (sans abonnement)</option>
+							<option value="vitrine">Pack Site Vitrine - 59€/mois</option>
+							<option value="blog">Pack Site + Blog - 89€/mois</option>
+							<option value="indecis">Je ne sais pas encore</option>
+						</select>
+					</div>
+					<div>
+						<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Votre besoin *</label>
+						<textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none" placeholder="Type de pratique, délai, objectifs, éléments déjà disponibles..."></textarea>
+					</div>
+					<button id="home-submit-btn" type="submit" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
+						Envoyer ma demande
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		const homeForm = document.getElementById('home-contact-form');
+		const homeSubmit = document.getElementById('home-submit-btn');
+		const homeSuccess = document.getElementById('home-form-success');
+
+		if (homeForm && homeSubmit && homeSuccess) {
+			homeForm.addEventListener('submit', async (event) => {
+				event.preventDefault();
+				homeSubmit.setAttribute('disabled', 'true');
+				homeSubmit.textContent = 'Envoi en cours...';
+
+				const data = new FormData(homeForm as HTMLFormElement);
+				const response = await fetch('https://formspree.io/f/xqedyrwy', {
+					method: 'POST',
+					body: data,
+					headers: { Accept: 'application/json' }
+				});
+
+				if (response.ok) {
+					homeForm.classList.add('hidden');
+					homeSuccess.classList.remove('hidden');
+				} else {
+					homeSubmit.removeAttribute('disabled');
+					homeSubmit.textContent = 'Envoyer ma demande';
+					alert('Une erreur est survenue. Veuillez réessayer.');
+				}
+			});
+		}
+	</script>
 </Layout>

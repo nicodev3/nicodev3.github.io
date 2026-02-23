@@ -99,7 +99,7 @@ Les frais de structure et la multiplicité des intervenants expliquent ces monta
 - **Création par un pro** (si vous sous-traitez) : 500 € à 2 000 € pour une mise en page sur mesure
 - **Si vous le faites vous-même** : coût limité à l'abonnement, mais beaucoup de temps passé
 
-Au final, la première année peut atteindre 700 € à 2 500 € (abonnement + création). Les limites : templates génériques, SEO moins performant, pas d'intégration Doctolib, et souvent un travail conséquent à votre charge.
+Au final, la première année peut atteindre 700 € à 2 500 € (abonnement + création). Les limites : templates génériques, SEO moins performant, pas d'intégration du widget de prise de rendez-vous, et souvent un travail conséquent à votre charge.
 
 ### Freelance spécialisé : une alternative moins chère
 

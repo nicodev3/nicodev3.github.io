@@ -9,10 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.17.3",
     "puppeteer": "^24.16.2",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "typescript": "^5.9.3"
   }
 }
