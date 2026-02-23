@@ -1,6 +1,6 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
 
 
@@ -69,10 +69,67 @@ const psychologueProjects = [
 	title="Portfolio - Nicolas Devaux"
 	description="Découvrez mes réalisations en création de sites internet pour psychologues, associations et entreprises"
 >
-	<Hero 
-		title="Mon Portfolio" 
-		subtitle="Découvrez mes réalisations en création de sites internet sur mesure"
-	/>
+	<section class="bg-gradient-to-br from-teal-700 via-teal-600 to-slate-700 text-white py-16 md:py-24">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
+				<div class="min-w-0">
+					<p class="text-sm md:text-base uppercase tracking-wider text-teal-100 mb-4">Portfolio</p>
+					<h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
+						Des sites sur mesure pour psychologues et praticiens
+					</h1>
+					<p class="mt-6 text-lg md:text-2xl text-teal-50 max-w-3xl">
+						Découvrez mes réalisations en création de sites internet professionnels : psychologues, ostéopathes, coachs.
+					</p>
+					<div class="mt-8 flex flex-col sm:flex-row gap-4">
+						<a href="#sites-psychologues" class="bg-white text-teal-700 px-7 py-3 rounded-lg font-semibold text-center hover:bg-slate-100 transition-colors flex items-center justify-center h-full">
+							Voir les réalisations
+						</a>
+						<a href="/contact" class="border-2 border-white/90 text-white px-7 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-teal-700 transition-colors">
+							Me contacter
+						</a>
+					</div>
+				</div>
+				<div class="hidden lg:block">
+					<Image
+						src="/images/hero-laptop.webp"
+						alt="Site web professionnel sur ordinateur"
+						width={672}
+						height={420}
+						widths={[384, 448, 672]}
+						sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 448px"
+						class="rounded-xl shadow-2xl w-full max-w-md mx-auto"
+					/>
+				</div>
+			</div>
+			<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
+					</svg>
+					<span>Psychologues</span>
+				</div>
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/>
+					</svg>
+					<span>Mobile et rapide</span>
+				</div>
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/>
+					</svg>
+					<span>Design professionnel</span>
+				</div>
+				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
+					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+					</svg>
+					<span>Widget RDV intégré</span>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 
@@ -87,16 +144,16 @@ const psychologueProjects = [
 			<div class="max-w-4xl mx-auto mb-12">
 				<div class="prose prose-lg mx-auto">
 					<p class="text-xl text-gray-600 mb-6">
-						Psychologue en libéral et ancien <strong>Tech Lead</strong> pour des sites à fort trafic (century21.fr, lefigaro.fr), je combine une expertise technique de haut niveau avec une compréhension approfondie des enjeux de la pratique libérale en psychologie.
+						Psychologue en libéral et ancien <strong>Tech Lead</strong> pour des sites à fort trafic (century21.fr, lefigaro.fr), je combine une expertise technique de haut niveau avec une compréhension des enjeux de la pratique libérale en psychologie.
 					</p>
 					<p class="text-lg text-gray-600 mb-6">
-						Cette double compétence m'a naturellement amené à créer des <strong>sites internet pour des psychologues</strong> qui allient performance technique, design professionnel et contenu adapté aux spécificités de notre métier.
+						Cette double compétence m'a amené à créer des <strong>sites internet pour psychologues</strong> qui allient performance technique, design professionnel et contenu adapté aux spécificités de notre métier. Chaque site part d'un template que je décline selon vos choix de couleurs et de style.
 					</p>
 					<p class="text-lg text-gray-600 mb-6">
-						<strong>PARTICIPER</strong>. Parce qu'il s'agit bien de cela. Mes clients ne sont pas passifs. Je m'occupe des aspects techniques de la réalisation du site internet, et procède avec mon client/collègue à une co-construction de son contenu.
+						Vous choisissez parmi des modèles prédéfinis et une palette de couleurs, puis vous remplissez un formulaire guidé pour centraliser votre contenu. Pas de design sur mesure ni de rédaction longue de votre part&nbsp;: je m'occupe de la mise en forme pour vos patients.
 					</p>
 					<p class="text-lg text-gray-600">
-						En effet, un <strong>site internet de psychologue</strong>, ce n'est pas simplement une vitrine. C'est un outil de communication qui reflète votre identité professionnelle et votre approche thérapeutique. Il permet aux futurs patients de mieux vous connaître avant même la première consultation.
+						Un <strong>site internet de psychologue</strong> reste un outil de communication qui reflète votre identité professionnelle. Il permet aux futurs patients de mieux vous connaître avant même la première consultation.
 					</p>
 				</div>
 			</div>
@@ -105,43 +162,45 @@ const psychologueProjects = [
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
 				<div>
 					<h3 class="text-2xl font-semibold text-gray-900 mb-6">
-						Mon approche collaborative
+						Une approche guidée et cadrée
 					</h3>
 					<div class="space-y-4 text-gray-600">
 						<p>
-							Je ne crée pas des sites "clés en main" sans votre implication. Au contraire, je vous accompagne dans la réflexion sur votre identité professionnelle et la façon de la présenter en ligne.
+							Pas de design sur mesure : vous choisissez parmi des templates prédéfinis que je peux décliner selon vos préférences.
 						</p>
 						<p>
-							Ensemble, nous définissons :
+							Vous définissez :
 						</p>
 						<ul class="list-disc list-inside space-y-2 ml-4">
-							<li>Votre approche thérapeutique</li>
-							<li>Vos spécialités et domaines d'expertise</li>
-							<li>L'organisation de votre cabinet</li>
-							<li>Les informations pratiques pour vos patients</li>
+							<li>Le modèle de site qui vous convient</li>
+							<li>La palette de couleurs et quelques options de style</li>
+							<li>Votre contenu via un formulaire guidé (approche, spécialités, tarifs, horaires...)</li>
 						</ul>
+						<p>
+							Je m'occupe de la technique et de la mise en forme. Simple, rapide, sans jargon.
+						</p>
 					</div>
 				</div>
 				<div class="bg-white p-8 rounded-lg shadow-lg">
-					<h4 class="text-lg font-semibold text-gray-900 mb-4">Pourquoi cette approche ?</h4>
+					<h4 class="text-lg font-semibold text-gray-900 mb-4">Les avantages</h4>
 					<div class="space-y-3 text-gray-600">
 						<div class="flex items-start space-x-3">
 							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
 								<span class="text-teal-600 text-sm font-bold">1</span>
 							</div>
-							<p>Votre site reflète votre identité professionnelle unique</p>
+							<p>Un site professionnel en 2 à 3 semaines</p>
 						</div>
 						<div class="flex items-start space-x-3">
 							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
 								<span class="text-teal-600 text-sm font-bold">2</span>
 							</div>
-							<p>Le contenu est authentique et correspond à votre pratique</p>
+							<p>Un contenu authentique issu de vos réponses au formulaire</p>
 						</div>
 						<div class="flex items-start space-x-3">
 							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
 								<span class="text-teal-600 text-sm font-bold">3</span>
 							</div>
-							<p>Vous maîtrisez votre communication en ligne</p>
+							<p>Une personnalisation via couleurs et style, sans surcharge</p>
 						</div>
 					</div>
 				</div>
