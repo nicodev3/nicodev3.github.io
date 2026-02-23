@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import ProfessionsSection from '../components/ProfessionsSection.astro';
 
 export interface Props {
 	title: string;
@@ -10,7 +11,7 @@ export interface Props {
 
 const {
 	title,
-	description = 'Nicolas Devaux est développeur web et crée des sites internet pour psychologues.',
+	description = 'Nicolas Devaux crée des sites internet pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, praticiens en psychothérapie, thérapeutes et coachs.',
 	image,
 	noindex = false
 } = Astro.props;
@@ -82,13 +83,15 @@ const fontsUrl = 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;
 			<slot />
 		</main>
 
+		<ProfessionsSection />
+
 		<footer class="bg-gray-900 text-white py-12">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
 						<h3 class="text-lg font-semibold mb-4">Nicolas Devaux</h3>
 						<p class="text-gray-300">
-							Développeur web et psychologue spécialisé dans la création de sites internet pour praticiens.
+							Développeur web et psychologue. Sites pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, praticiens en psychothérapie, thérapeutes et coachs.
 						</p>
 					</div>
 					<div>
