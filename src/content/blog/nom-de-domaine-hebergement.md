@@ -8,8 +8,6 @@ image: "/images/development.jpg"
 tags: ["site internet", "hébergement", "nom de domaine", "débutant"]
 ---
 
-# Choisir son nom de domaine et son hébergeur
-
 Certains de mes clients, très souvent psychologues, et la plupart du temps néophytes dans le monde informatique, me demandent souvent quelles différences il y a entre **nom de domaine** et **hébergement**.
 
 **Comment choisir mon nom de domaine ?** **Quel hébergeur choisir ?** Il n'est pas facile de se repérer sans avoir compris à minima le fonctionnement d'Internet.

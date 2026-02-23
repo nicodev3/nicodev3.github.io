@@ -1,197 +1,367 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import SkillCard from '../components/SkillCard.astro';
-import CtaSection from '../components/CtaSection.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import SkillCard from "../components/SkillCard.astro";
+import CtaSection from "../components/CtaSection.astro";
+import { Image } from "astro:assets";
 ---
 
-<Layout 
-	title="À propos - Nicolas Devaux"
-	description="Psychologue devenu développeur web, je crée des sites internet pour psychologues et thérapeutes."
+<Layout
+  title="À propos - Nicolas Devaux"
+  description="Psychologue devenu développeur web, je crée des sites internet pour psychologues et thérapeutes."
 >
-	<Hero 
-		title="À propos" 
-		subtitle="Psychologue et développeur web, je crée des sites internet sur mesure"
-	/>
+  <Hero
+    title="À propos"
+    subtitle="Psychologue et développeur web, je crée des sites internet sur mesure"
+  />
 
-	<!-- About Section -->
-	<section class="py-16 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-				<div>
-					<h2 class="text-3xl font-bold text-gray-900 mb-6">
-						Mon parcours
-					</h2>
-					<div class="prose prose-lg text-gray-600 space-y-4">
-						<p>
-							Je suis <strong>Nicolas Devaux</strong>, <a href="https://nicolas-devaux-psychologue.fr" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800">psychologue à Sceaux</a> et développeur web, webdesigner, avec un parcours unique. Mon cheminement professionnel reflète une passion pour la technologie et une compréhension profonde des enjeux humains.
-						</p>
-						<p>
-							Formé au développement web en autodidacte puis à l'<a href="https://sfc.unistra.fr/formations/informatique_-_technologies-de-linternet_-_licence-professionnelle-developpement-web-communication-et-apprentissages_-_6187/" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800">Université de Strasbourg</a>, j'ai obtenu une <strong>Licence Professionnelle Activités et Techniques de Communication</strong> mention <strong>développeur web des systèmes d'information et multimédia</strong>.
-						</p>
-						<p>
-							Mon parcours académique est marqué par une double formation : je suis diplômé d'un <strong>bac+5 en psychologie</strong> et possède un <strong>diplôme d'État de psychomotricien</strong>. Cette expertise m'a conduit à me spécialiser dans la création de sites internet pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, coachs et praticiens en psychothérapie.
-						</p>
-						<p>
-							Depuis plus de 10 ans, je mets au service de mes clients cette double compétence&nbsp;: mon savoir-faire technique en développement web et ma compréhension des enjeux des professionnels du soin psychique. Je développe des <strong>sites internet</strong> qui allient performance technique et sensibilité aux besoins des psychologues, psychothérapeutes, coachs et autres praticiens.
-						</p>
-						<p>
-							Mon approche se distingue par une collaboration étroite avec mes clients, une attention particulière portée à l'expérience utilisateur et une expertise technique solide dans les technologies web modernes.
-						</p>
-					</div>
-				</div>
-				<div class="relative">
-					<img 
-						src="/images/development.jpg" 
-						alt="Nicolas Devaux - Développeur web" 
-						class="rounded-lg shadow-xl"
-					/>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- About Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Mon parcours</h2>
+          <div class="prose prose-lg text-gray-600 space-y-4">
+            <p>
+              Je suis <strong>Nicolas Devaux</strong>, <a
+                href="https://nicolas-devaux-psychologue.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-600 hover:text-teal-800"
+                >psychologue à Sceaux</a
+              > et développeur web, webdesigner, avec un parcours unique. Mon cheminement
+              professionnel reflète une passion pour la technologie et une compréhension
+              profonde des enjeux humains.
+            </p>
+            <p>
+              Formé au développement web en autodidacte puis à l'<a
+                href="https://sfc.unistra.fr/formations/informatique_-_technologies-de-linternet_-_licence-professionnelle-developpement-web-communication-et-apprentissages_-_6187/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-600 hover:text-teal-800"
+                >Université de Strasbourg</a
+              >, j'ai obtenu une <strong
+                >Licence Professionnelle Activités et Techniques de
+                Communication</strong
+              > mention <strong
+                >développeur web des systèmes d'information et multimédia</strong
+              >.
+            </p>
+            <p>
+              Mon parcours académique est marqué par une double formation : je
+              suis diplômé d'un <strong>bac+5 en psychologie</strong> et possède un
+              <strong>diplôme d'État de psychomotricien</strong>. Cette
+              expertise m'a conduit à me spécialiser dans la création de sites
+              internet pour psychologues, psychomotriciens, psychothérapeutes,
+              psychopraticiens, coachs et praticiens en psychothérapie.
+            </p>
+            <p>
+              Depuis plus de 10 ans, je mets au service de mes clients cette
+              double compétence&nbsp;: mon savoir-faire technique en
+              développement web et ma compréhension des enjeux des
+              professionnels du soin psychique. Je développe des <strong
+                >sites internet</strong
+              > qui allient performance technique et sensibilité aux besoins des psychologues,
+              psychothérapeutes, coachs et autres praticiens.
+            </p>
+            <p>
+              Mon approche se distingue par une collaboration étroite avec mes
+              clients, une attention particulière portée à l'expérience
+              utilisateur et une expertise technique solide dans les
+              technologies web modernes.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <Image
+            src="/images/development.jpg"
+            alt="Nicolas Devaux - Développeur web"
+            class="rounded-lg shadow-xl"
+            width={500}
+            height={500}
+            widths={[300, 400, 500]}
+            sizes="(max-width: 768px) 100vw, 500px"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<!-- Experience Section -->
-	<section class="py-16 bg-gray-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-				Mon expérience professionnelle
-			</h2>
-			
-			<div class="max-w-4xl mx-auto">
-				<div class="bg-white p-8 rounded-lg shadow-lg">
-					<div class="text-center mb-8">
-						<div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18c-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48 48 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A24 24 0 0 1 12 15.75a24 24 0 0 1-7.577-1.22a2 2 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48 48 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a49 49 0 0 0-7.5 0M12 12.75h.008v.008H12z"/>
-							</svg>
-						</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-2">
-							<strong>20 ans d'expérience</strong> en développement web
-						</h3>
-						<p class="text-gray-600">
-							Psychologue de formation et en activité, développeur web, je comprends les enjeux spécifiques des praticiens libéraux. Votre site internet doit refléter votre professionnalisme, rassurer vos patients et vous permettre d'être trouvé facilement.
-						</p>
-					</div>
-					
-					<div class="space-y-8">
-						<div class="border-l-4 border-teal-600 pl-6">
-							<h4 class="text-xl font-semibold text-gray-900 mb-2">
-								Tech Lead front-end - Le Figaro
-							</h4>
-							<p class="text-gray-600 mb-2">
-								Direction technique de projets d'envergure pour l'un des plus grands médias français
-							</p>
-							<p class="text-sm text-gray-500">
-								Management d'équipes de développement, architecture de solutions web complexes, optimisation des performances
-							</p>
-						</div>
-						
-						<div class="border-l-4 border-slate-600 pl-6">
-							<h4 class="text-xl font-semibold text-gray-900 mb-2">
-								Tech Lead front-end - Naxos
-							</h4>
-							<p class="text-gray-600 mb-2">
-								Direction technique de solutions digitales innovantes pour le secteur immobilier
-							</p>
-							<p class="text-sm text-gray-500">
-								Développement d'applications mobiles, sites web corporate, CRM immobilier, technologies Python/Django/Angular
-							</p>
-						</div>
+  <!-- Experience Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+        Mon expérience professionnelle
+      </h2>
 
-						<div class="border-l-4 border-orange-500 pl-6">
-							<h4 class="text-xl font-semibold text-gray-900 mb-2">
-								Développeur Web free-lance
-							</h4>
-							<p class="text-gray-600 mb-2">
-								Plusieurs années d'expérience en tant que free-lance auprès de clients variés : indépendants, TPE/PME, associations, grands comptes. Plus de 50 projets réalisés.
-							</p>
-							<p class="text-sm text-gray-500">
-								Création de sites sur mesure, accompagnement digital, référencement, conseil en identité numérique.<br/>
-								Retrouvez les avis de mes clients sur <a href="https://www.malt.fr/profile/nicolasdevaux1" target="_blank" rel="noopener noreferrer" class="text-teal-600 underline hover:text-teal-800">mon profil Malt</a>.
-							</p>
-						</div>
-						
-						<div class="border-l-4 border-emerald-600 pl-6">
-							<h4 class="text-xl font-semibold text-gray-900 mb-2">
-								Projets d'envergure
-							</h4>
-							<p class="text-gray-600 mb-2">
-								Participation à des projets majeurs nécessitant une expertise technique de haut niveau
-							</p>
-							<p class="text-sm text-gray-500">
-								Architecture scalable, optimisation des performances, gestion de la complexité technique
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <div class="text-center mb-8">
+            <div
+              class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-teal-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18c-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48 48 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A24 24 0 0 1 12 15.75a24 24 0 0 1-7.577-1.22a2 2 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48 48 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a49 49 0 0 0-7.5 0M12 12.75h.008v.008H12z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              <strong>20 ans d'expérience</strong> en développement web
+            </h3>
+            <p class="text-gray-600">
+              Psychologue de formation et en activité, développeur web, je
+              comprends les enjeux spécifiques des praticiens libéraux. Votre
+              site internet doit refléter votre professionnalisme, rassurer vos
+              patients et vous permettre d'être trouvé facilement.
+            </p>
+          </div>
 
-	<!-- Skills Section -->
-	<section class="py-16 bg-gray-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-				Mes compétences
-			</h2>
-			
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-				<SkillCard title="Développement Front-End" description="React, Vue.js, TypeScript, Next.js, Astro" color="teal">
-					<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25z"/>
-					</svg>
-				</SkillCard>
-				<SkillCard title="Architecture & Leadership" description="Tech Lead, Architecture web, Management d'équipes" color="green">
-					<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.1 9.1 0 0 0 3.741-.479q.01-.12.01-.241a3 3 0 0 0-4.692-2.478m.94 3.197l.001.031q0 .337-.037.666A11.94 11.94 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6 6 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.941-3.197m0 0A6 6 0 0 0 12 12.75a6 6 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72a9 9 0 0 0 3.74.477m.94-3.197a5.97 5.97 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0a3 3 0 0 1 6 0m6 3a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0m-13.5 0a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0"/>
-					</svg>
-				</SkillCard>
-				<SkillCard title="Performance & SEO" description="Optimisation, Core Web Vitals, Référencement naturel" color="purple">
-					<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 18L9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0l-5.94-2.281m5.94 2.28l-2.28 5.942"/>
-					</svg>
-				</SkillCard>
-				<SkillCard title="Expertise Métier" description="Psychologie, Psychomotricité, Professionnels libéraux" color="orange">
-					<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60 60 0 0 0-.491 6.347A48.6 48.6 0 0 1 12 20.904a48.6 48.6 0 0 1 8.232-4.41a61 61 0 0 0-.491-6.347m-15.482 0a51 51 0 0 0-2.658-.813A60 60 0 0 1 12 3.493a60 60 0 0 1 10.399 5.84q-1.345.372-2.658.814m-15.482 0A51 51 0 0 1 12 13.489a50.7 50.7 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55 55 0 0 1 12 8.443m-7.007 11.55A5.98 5.98 0 0 0 6.75 15.75v-1.5"/>
-					</svg>
-				</SkillCard>
-			</div>
-		</div>
-	</section>
+          <div class="space-y-8">
+            <div class="border-l-4 border-teal-600 pl-6">
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                Tech Lead front-end - Le Figaro
+              </h4>
+              <p class="text-gray-600 mb-2">
+                Direction technique de projets d'envergure pour l'un des plus
+                grands médias français
+              </p>
+              <p class="text-sm text-gray-500">
+                Management d'équipes de développement, architecture de solutions
+                web complexes, optimisation des performances
+              </p>
+            </div>
 
-	<!-- Philosophy Section -->
-	<section class="py-16 bg-white">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-				Ma philosophie
-			</h2>
-			
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				<SkillCard title="Qualité du contenu" description="Je privilégie la qualité du contenu et du design plutôt que la quantité. Chaque site est pensé pour répondre aux besoins spécifiques de mes clients." color="teal">
-					<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18v-5.25m0 0a6 6 0 0 0 1.5-.189m-1.5.189a6 6 0 0 1-1.5-.189m3.75 7.478a12.1 12.1 0 0 1-4.5 0m3.75 2.383a14.4 14.4 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
-					</svg>
-				</SkillCard>
-				<SkillCard title="Collaboration" description="Je travaille en étroite collaboration avec mes clients. Votre participation est essentielle pour créer un site qui vous ressemble vraiment." color="green">
-					<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.1 9.1 0 0 0 3.741-.479q.01-.12.01-.241a3 3 0 0 0-4.692-2.478m.94 3.197l.001.031q0 .337-.037.666A11.94 11.94 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6 6 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.941-3.197m0 0A6 6 0 0 0 12 12.75a6 6 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72a9 9 0 0 0 3.74.477m.94-3.197a5.97 5.97 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0a3 3 0 0 1 6 0m6 3a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0m-13.5 0a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0"/>
-					</svg>
-				</SkillCard>
-				<SkillCard title="Performance" description="Tous mes sites sont optimisés pour les performances et le référencement naturel. Un beau site doit aussi être efficace !" color="purple">
-					<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75L12 13.5z"/>
-					</svg>
-				</SkillCard>
-			</div>
-		</div>
-	</section>
+            <div class="border-l-4 border-slate-600 pl-6">
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                Tech Lead front-end - Naxos
+              </h4>
+              <p class="text-gray-600 mb-2">
+                Direction technique de solutions digitales innovantes pour le
+                secteur immobilier
+              </p>
+              <p class="text-sm text-gray-500">
+                Développement d'applications mobiles, sites web corporate, CRM
+                immobilier, technologies Python/Django/Angular
+              </p>
+            </div>
 
-	<CtaSection 
-		title="Prêt à créer votre site internet ?"
-		description="Discutons de votre projet et créons ensemble votre présence en ligne."
-		primaryButton={{ text: "Voir mes réalisations", href: "/portfolio" }}
-		secondaryButton={{ text: "Me contacter", href: "/contact" }}
-	/>
+            <div class="border-l-4 border-orange-500 pl-6">
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                Développeur Web free-lance
+              </h4>
+              <p class="text-gray-600 mb-2">
+                Plusieurs années d'expérience en tant que free-lance auprès de
+                clients variés : indépendants, TPE/PME, associations, grands
+                comptes. Plus de 50 projets réalisés.
+              </p>
+              <p class="text-sm text-gray-500">
+                Création de sites sur mesure, accompagnement digital,
+                référencement, conseil en identité numérique.<br />
+                Retrouvez les avis de mes clients sur <a
+                  href="https://www.malt.fr/profile/nicolasdevaux1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-teal-600 underline hover:text-teal-800"
+                  >mon profil Malt</a
+                >.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-emerald-600 pl-6">
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                Projets d'envergure
+              </h4>
+              <p class="text-gray-600 mb-2">
+                Participation à des projets majeurs nécessitant une expertise
+                technique de haut niveau
+              </p>
+              <p class="text-sm text-gray-500">
+                Architecture scalable, optimisation des performances, gestion de
+                la complexité technique
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+        Mes compétences
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <SkillCard
+          title="Développement Front-End"
+          description="React, Vue.js, TypeScript, Next.js, Astro"
+          color="teal"
+        >
+          <svg
+            slot="icon"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25z"
+            ></path>
+          </svg>
+        </SkillCard>
+        <SkillCard
+          title="Architecture & Leadership"
+          description="Tech Lead, Architecture web, Management d'équipes"
+          color="green"
+        >
+          <svg
+            slot="icon"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M18 18.72a9.1 9.1 0 0 0 3.741-.479q.01-.12.01-.241a3 3 0 0 0-4.692-2.478m.94 3.197l.001.031q0 .337-.037.666A11.94 11.94 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6 6 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.941-3.197m0 0A6 6 0 0 0 12 12.75a6 6 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72a9 9 0 0 0 3.74.477m.94-3.197a5.97 5.97 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0a3 3 0 0 1 6 0m6 3a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0m-13.5 0a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0"
+            ></path>
+          </svg>
+        </SkillCard>
+        <SkillCard
+          title="Performance & SEO"
+          description="Optimisation, Core Web Vitals, Référencement naturel"
+          color="purple"
+        >
+          <svg
+            slot="icon"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M2.25 18L9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0l-5.94-2.281m5.94 2.28l-2.28 5.942"
+            ></path>
+          </svg>
+        </SkillCard>
+        <SkillCard
+          title="Expertise Métier"
+          description="Psychologie, Psychomotricité, Professionnels libéraux"
+          color="orange"
+        >
+          <svg
+            slot="icon"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M4.26 10.147a60 60 0 0 0-.491 6.347A48.6 48.6 0 0 1 12 20.904a48.6 48.6 0 0 1 8.232-4.41a61 61 0 0 0-.491-6.347m-15.482 0a51 51 0 0 0-2.658-.813A60 60 0 0 1 12 3.493a60 60 0 0 1 10.399 5.84q-1.345.372-2.658.814m-15.482 0A51 51 0 0 1 12 13.489a50.7 50.7 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55 55 0 0 1 12 8.443m-7.007 11.55A5.98 5.98 0 0 0 6.75 15.75v-1.5"
+            ></path>
+          </svg>
+        </SkillCard>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+        Ma philosophie
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <SkillCard
+          title="Qualité du contenu"
+          description="Je privilégie la qualité du contenu et du design plutôt que la quantité. Chaque site est pensé pour répondre aux besoins spécifiques de mes clients."
+          color="teal"
+        >
+          <svg
+            slot="icon"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M12 18v-5.25m0 0a6 6 0 0 0 1.5-.189m-1.5.189a6 6 0 0 1-1.5-.189m3.75 7.478a12.1 12.1 0 0 1-4.5 0m3.75 2.383a14.4 14.4 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+            ></path>
+          </svg>
+        </SkillCard>
+        <SkillCard
+          title="Collaboration"
+          description="Je travaille en étroite collaboration avec mes clients. Votre participation est essentielle pour créer un site qui vous ressemble vraiment."
+          color="green"
+        >
+          <svg
+            slot="icon"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M18 18.72a9.1 9.1 0 0 0 3.741-.479q.01-.12.01-.241a3 3 0 0 0-4.692-2.478m.94 3.197l.001.031q0 .337-.037.666A11.94 11.94 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6 6 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.941-3.197m0 0A6 6 0 0 0 12 12.75a6 6 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72a9 9 0 0 0 3.74.477m.94-3.197a5.97 5.97 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0a3 3 0 0 1 6 0m6 3a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0m-13.5 0a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0"
+            ></path>
+          </svg>
+        </SkillCard>
+        <SkillCard
+          title="Performance"
+          description="Tous mes sites sont optimisés pour les performances et le référencement naturel. Un beau site doit aussi être efficace !"
+          color="purple"
+        >
+          <svg
+            slot="icon"
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="m3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75L12 13.5z"></path>
+          </svg>
+        </SkillCard>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Prêt à créer votre site internet ?"
+    description="Discutons de votre projet et créons ensemble votre présence en ligne."
+    primaryButton={{ text: "Voir mes réalisations", href: "/portfolio" }}
+    secondaryButton={{ text: "Me contacter", href: "/contact" }}
+  />
 </Layout>

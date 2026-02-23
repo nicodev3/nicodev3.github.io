@@ -1,4 +1,4 @@
-Objectif: augmenter les conversions du site https://nicodev-astro.netlify.app/ (offre création de sites pour psychologues) en réduisant le sur-mesure chronophage.
+Objectif: augmenter les conversions du site https://nicodev.fr (offre création de sites pour psychologues) en réduisant le sur-mesure chronophage.
 
 Contraintes:
 - Offres packagées (3 plans)

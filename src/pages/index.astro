@@ -8,7 +8,7 @@ const businessSchema = {
 	'@type': 'ProfessionalService',
 	name: 'Nicolas Devaux',
 	description: 'Création de sites internet pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, praticiens en psychothérapie, thérapeutes et coachs.',
-	url: 'https://nicodev-astro.netlify.app/',
+	url: 'https://nicodev.fr',
 	email: 'contact.nicodev@gmail.com',
 	areaServed: 'France',
 	slogan: 'Création de sites internet',
@@ -16,6 +16,77 @@ const businessSchema = {
 		{ '@type': 'Offer', name: 'Forfait Création', price: '490', priceCurrency: 'EUR' },
 		{ '@type': 'Offer', name: 'Pack Site Vitrine', price: '59', priceCurrency: 'EUR' },
 		{ '@type': 'Offer', name: 'Pack Site + Blog', price: '89', priceCurrency: 'EUR' }
+	]
+};
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: "Combien de temps faut-il pour lancer le site ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "En général 2 à 3 semaines selon vos disponibilités et les contenus fournis."
+			}
+		},
+		{
+			'@type': 'Question',
+			name: "Que couvre le seul aller-retour inclus ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Les ajustements de textes, sections et style prévus dans le brief initial."
+			}
+		},
+		{
+			'@type': 'Question',
+			name: "Forfait unique ou abonnement : quelle différence ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Avec le forfait unique (490€), toute modification ultérieure (changement de texte, ajout de section...) est facturée 50€/h. Les abonnements (59€ et 89€/mois) incluent la maintenance et les modifications de contenu : vous faites évoluer votre site sans facturation supplémentaire."
+			}
+		},
+		{
+			'@type': 'Question',
+			name: "Que couvrent les modifications incluses dans les abonnements ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Textes, coordonnées, tarifs, photo, horaires et lien widget RDV (Doctolib, Qare...). Pour le Pack Blog, s'ajoutent 2 articles par mois pour vous faire mieux apparaître sur Google. Les changements de structure (nouvelles pages, refonte du design) restent hors périmètre."
+			}
+		},
+		{
+			'@type': 'Question',
+			name: "Je ne suis pas à l'aise pour écrire. Comment ça se passe pour le contenu ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu'il soit clair et rassurant."
+			}
+		},
+		{
+			'@type': 'Question',
+			name: "Puis-je changer d'offre plus tard ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Oui, vous pouvez passer d'un plan à l'autre selon l'évolution de votre activité."
+			}
+		},
+		{
+			'@type': 'Question',
+			name: "Pourquoi dit-on que le site est rapide et léger ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s'affichent rapidement, même sur mobile ou avec une connexion limitée. C'est agréable pour vos visiteurs et bien vu par les moteurs de recherche."
+			}
+		},
+		{
+			'@type': 'Question',
+			name: "Puis-je utiliser Doctolib, Qare ou un autre service de prise de rendez-vous ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Oui. J'intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile."
+			}
+		}
 	]
 };
 ---
@@ -26,6 +97,7 @@ const businessSchema = {
 	image="/images/development.jpg"
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 	<section class="bg-gradient-to-br from-teal-700 via-teal-600 to-slate-700 text-white py-16 md:py-24">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

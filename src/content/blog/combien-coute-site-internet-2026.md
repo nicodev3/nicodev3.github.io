@@ -8,8 +8,6 @@ image: "/images/development.jpg"
 tags: ["psychologue", "prix site internet", "création site", "cabinet libéral", "budget web", "2026"]
 ---
 
-# Combien coûte vraiment la création d’un site internet pour un psychologue en 2026 ?
-
 *Temps de lecture : 9 minutes*
 
 Quand on exerce en libéral, la question est concrète : **combien investir pour un site utile, sérieux, et rentable ?**

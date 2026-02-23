@@ -8,8 +8,6 @@ image: "/images/navigateur.png"
 tags: ["site internet", "création", "développement web", "HTML", "CSS", "JavaScript"]
 ---
 
-# Création d'un site Internet
-
 Pour la plupart d'entre nous, un site internet est un ensemble de textes et de visuels, animés ou non, parfois de sons, accessible depuis un ordinateur, un téléphone, une tablette, et même paraît-il une montre.
 
 Pourtant, un site internet est bien plus que cela. Pardonnez ma référence à Saint-Exupéry, mais je préfère sa métaphore à celle du capot de la voiture... L'essentiel d'un site internet, ce qui le structure, qui nous permet de le voir, mais aussi et surtout ce qui lui donne son sens, est invisible pour les yeux.. Ou presque !

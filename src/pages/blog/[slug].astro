@@ -15,12 +15,37 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const canonical = new URL(Astro.url.pathname, baseUrl).toString();
+const imageUrl = entry.data.image
+	? new URL(entry.data.image.startsWith('/') ? entry.data.image : `/${entry.data.image}`, baseUrl).toString()
+	: undefined;
+const dateModified = entry.data.updatedDate ?? entry.data.pubDate;
+
+const blogPostingSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: entry.data.title,
+	author: {
+		'@type': 'Person',
+		name: entry.data.author
+	},
+	datePublished: entry.data.pubDate,
+	dateModified: dateModified,
+	description: entry.data.description,
+	url: canonical,
+	...(imageUrl && { image: imageUrl })
+};
 ---
 
 <Layout 
 	title={`${entry.data.title} - Nicolas Devaux`}
 	description={entry.data.description}
 >
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+	</Fragment>
 	<Hero title={entry.data.title} subtitle={entry.data.description} maxWidth="4xl">
 		<div slot="before" class="flex items-center justify-center text-sm mb-4">
 			<time datetime={entry.data.pubDate}>

@@ -8,8 +8,6 @@ image: "/images/development.jpg"
 tags: ["psychologues", "site internet", "déontologie", "accessibilité", "référencement", "éthique"]
 ---
 
-# Les psychologues et leur site internet
-
 *Temps de lecture : 10 minutes*
 
 **Résumé :** De plus en plus de psychologues se font connaître via un site internet. Cet article est une réflexion sur les bonnes pratiques en termes de présentation de son activité au public.
