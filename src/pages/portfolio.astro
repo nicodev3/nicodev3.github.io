@@ -1,9 +1,7 @@
----
-import { Image } from 'astro:assets';
+﻿---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
-
-
 
 const psychologueProjects = [
 	{
@@ -31,7 +29,7 @@ const psychologueProjects = [
 		title: "Delphine Cima",
 		description: "Site vitrine professionnel pour psychologue",
 		image: "/images/screenshots/psy-manosque.png",
-		url: "https://psychologue-manosque.net/", 
+		url: "https://psychologue-manosque.net/",
 		location: "Manosque"
 	},
 	{
@@ -69,173 +67,54 @@ const psychologueProjects = [
 	title="Portfolio - Nicolas Devaux"
 	description="Réalisations en création de sites pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, coachs, thérapeutes et praticiens en psychothérapie."
 >
-	<section class="bg-gradient-to-br from-teal-700 via-teal-600 to-slate-700 text-white py-16 md:py-24">
+	<Hero 
+		title="Portfolio" 
+		subtitle="Quelques réalisations pour psychologues, coachs et professionnels du soin"
+	/>
+
+	<section id="sites-psychologues" class="bg-white py-12 sm:py-16">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
-				<div class="min-w-0">
-					<p class="text-sm md:text-base uppercase tracking-wider text-teal-100 mb-4">Portfolio</p>
-					<h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
-						Des sites sur mesure pour psychologues et professionnels du soin psychique
-					</h1>
-					<p class="mt-6 text-lg md:text-2xl text-teal-50 max-w-3xl">
-						Découvrez mes réalisations : psychologues, psychothérapeutes, psychopraticiens, coachs, ostéopathes.
-					</p>
-					<div class="mt-8 flex flex-col sm:flex-row gap-4">
-						<a href="#sites-psychologues" class="bg-white text-teal-700 px-7 py-3 rounded-lg font-semibold text-center hover:bg-slate-100 transition-colors flex items-center justify-center h-full">
-							Voir les réalisations
-						</a>
-						<a href="/contact" class="border-2 border-white/90 text-white px-7 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-teal-700 transition-colors">
-							Me contacter
-						</a>
-					</div>
-				</div>
-				<div class="hidden lg:block">
-					<Image
-						src="/images/hero-laptop.webp"
-						alt="Site web professionnel sur ordinateur"
-						width={672}
-						height={420}
-						widths={[384, 448, 672]}
-						sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 448px"
-						class="rounded-xl shadow-2xl w-full max-w-md mx-auto"
-					/>
-				</div>
-			</div>
-			<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
-					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
-					</svg>
-					<span>Psychologues</span>
-				</div>
-				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
-					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/>
-					</svg>
-					<span>Mobile et rapide</span>
-				</div>
-				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
-					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/>
-					</svg>
-					<span>Design professionnel</span>
-				</div>
-				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
-					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
-					</svg>
-					<span>Widget RDV intégré</span>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<!-- Sites Psychologues Section -->
-	<section id="sites-psychologues" class="py-16 bg-gray-50">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+			<h2 class="mb-4 text-2xl font-bold leading-tight text-gray-900 sm:mb-6 sm:text-3xl">
 				Sites internet pour psychologues et professionnels du soin psychique
 			</h2>
-			
-			<!-- Introduction -->
-			<div class="max-w-4xl mx-auto mb-12">
-				<div class="prose prose-lg mx-auto">
-					<p class="text-xl text-gray-600 mb-6">
-						Psychologue en libéral et ancien <strong>Tech Lead</strong> pour des sites à fort trafic (century21.fr, lefigaro.fr), je combine une expertise technique de haut niveau avec une compréhension des enjeux des professionnels du soin psychique.
-					</p>
-					<p class="text-lg text-gray-600 mb-6">
-						J'accompagne les <strong>psychologues</strong>, <strong>psychomotriciens</strong>, <strong>psychothérapeutes</strong>, <strong>psychopraticiens</strong>, <strong>coachs</strong> et <strong>praticiens en psychothérapie</strong> dans la création de sites qui allient performance technique, design professionnel et contenu adapté à leur pratique. Chaque site part d'un template que je décline selon vos choix de couleurs et de style.
-					</p>
-					<p class="text-lg text-gray-600 mb-6">
-						Vous choisissez parmi des modèles prédéfinis et une palette de couleurs, puis vous remplissez un formulaire guidé pour centraliser votre contenu. Pas de design sur mesure ni de rédaction longue de votre part&nbsp;: je m'occupe de la mise en forme pour vos patients ou clients.
-					</p>
-					<p class="text-lg text-gray-600">
-						Un site internet professionnel reflète votre identité et permet aux futurs patients ou clients de mieux vous connaître avant même la première consultation.
-					</p>
-				</div>
-			</div>
+			<p class="mb-8 max-w-3xl text-base text-gray-600 sm:text-lg">
+				Beaucoup de projets présentés ici sont anciens, certains datent de plus de 10 ans. Plusieurs sites ne sont plus en ligne car les professionnels ont cessé leur activité.
+			</p>
+			<p class="mb-8 max-w-3xl text-gray-700">
+				Le style visuel varie selon l'année de création, mais la logique reste la même : un site clair, rassurant, optimisé pour le mobile et structuré pour le référencement local (psychologue + ville), avec intégration possible d'un widget de prise de rendez-vous.
+			</p>
 
-			<!-- Approach Section -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-				<div>
-					<h3 class="text-2xl font-semibold text-gray-900 mb-6">
-						Une approche guidée et cadrée
-					</h3>
-					<div class="space-y-4 text-gray-600">
-						<p>
-							Pas de design sur mesure : vous choisissez parmi des templates prédéfinis que je peux décliner selon vos préférences.
-						</p>
-						<p>
-							Vous définissez :
-						</p>
-						<ul class="list-disc list-inside space-y-2 ml-4">
-							<li>Le modèle de site qui vous convient</li>
-							<li>La palette de couleurs et quelques options de style</li>
-							<li>Votre contenu via un formulaire guidé (approche, spécialités, tarifs, horaires...)</li>
-						</ul>
-						<p>
-							Je m'occupe de la technique et de la mise en forme. Simple, rapide, sans jargon.
-						</p>
-					</div>
-				</div>
-				<div class="bg-white p-8 rounded-lg shadow-lg">
-					<h4 class="text-lg font-semibold text-gray-900 mb-4">Les avantages</h4>
-					<div class="space-y-3 text-gray-600">
-						<div class="flex items-start space-x-3">
-							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-								<span class="text-teal-600 text-sm font-bold">1</span>
-							</div>
-							<p>Un site professionnel en 2 à 3 semaines</p>
-						</div>
-						<div class="flex items-start space-x-3">
-							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-								<span class="text-teal-600 text-sm font-bold">2</span>
-							</div>
-							<p>Un contenu authentique issu de vos réponses au formulaire</p>
-						</div>
-						<div class="flex items-start space-x-3">
-							<div class="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-								<span class="text-teal-600 text-sm font-bold">3</span>
-							</div>
-							<p>Une personnalisation via couleurs et style, sans surcharge</p>
-						</div>
-					</div>
-				</div>
+			<div class="mb-10 rounded-xl border border-teal-100 bg-teal-50 p-5 sm:p-6">
+				<h3 class="mb-3 text-lg font-semibold text-gray-900">Ce que montrent ces réalisations</h3>
+				<ul class="space-y-2 text-sm text-gray-700 sm:text-base">
+					<li>Une présentation claire de l'approche et des spécialités du praticien</li>
+					<li>Une navigation simple pour rassurer et faciliter la prise de contact</li>
+					<li>Des bases SEO locales solides pour améliorer la visibilité sur Google</li>
+				</ul>
 			</div>
 
 			<!-- Projects Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
 				{psychologueProjects.map((project) => (
-					<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
-					<div class="relative group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
+					<article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
+						<div class="relative">
 							<img 
 								src={project.image} 
-								alt={project.title}
-								class="w-full h-48 object-cover"
+								alt={`Aperçu du site ${project.title}`}
+								class="h-44 w-full object-cover sm:h-48"
+								loading="lazy"
+								decoding="async"
 							/>
-							<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
-								<a 
-									href={project.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-								>
-									Voir le site
-								</a>
-							</div>
 						</div>
-						<div class="p-6 flex flex-col flex-grow border-t border-gray-200 bg-gray-50">
-							<h3 class="text-xl font-semibold text-gray-900 mb-2">
+						<div class="flex flex-grow flex-col border-t border-gray-200 bg-stone-50 p-5 sm:p-6">
+							<h3 class="mb-2 text-lg font-semibold text-gray-900 sm:text-xl">
 								{project.title}
 							</h3>
-							<p class="text-gray-600 mb-3">
+							<p class="mb-3 text-gray-600">
 								{project.description}
 							</p>
-							<div class="flex items-center text-sm text-gray-500 mb-4">
-								<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<div class="mb-4 flex items-center text-sm text-gray-500">
+								<svg class="mr-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
 								</svg>
@@ -246,19 +125,46 @@ const psychologueProjects = [
 									href={project.url}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="inline-block bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors"
+									class="inline-block rounded-lg bg-teal-800 px-4 py-2 font-semibold text-white transition-colors hover:bg-teal-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 focus-visible:ring-offset-2"
+									aria-label={`Visiter le site ${project.title} (nouvel onglet)`}
 								>
 									Visiter le site
 								</a>
 							</div>
 						</div>
-					</div>
+					</article>
 				))}
+			</div>
+
+			<div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+				<div class="rounded-xl border border-gray-200 bg-white p-6">
+					<h3 class="mb-4 text-lg font-semibold text-gray-900">Méthode de travail</h3>
+					<ol class="space-y-2 text-gray-700">
+						<li><strong>1.</strong> Diagnostic rapide pour cadrer le besoin</li>
+						<li><strong>2.</strong> Mise en place du site à partir d'un modèle pro personnalisé</li>
+						<li><strong>3.</strong> Aller-retour de validation puis mise en ligne</li>
+					</ol>
+				</div>
+				<div class="rounded-xl border border-gray-200 bg-stone-50 p-6">
+					<h3 class="mb-4 text-lg font-semibold text-gray-900">Ce que vous pouvez attendre</h3>
+					<p class="mb-4 text-gray-700">
+						Un site plus lisible pour vos futurs patients, une meilleure présence locale et des demandes de contact plus qualifiées.
+					</p>
+					<p class="text-gray-700">
+						Ces projets reposent sur les mêmes fondations que mes offres : Forfait Création (490€), Pack Site Vitrine (59€/mois) et Pack Site + Blog (89€/mois).
+					</p>
+					<div class="mt-5 flex flex-col gap-3 sm:flex-row">
+						<a href="/tarifs" class="inline-block rounded-lg border-2 border-teal-700 px-4 py-2 text-center font-semibold text-teal-800 transition-colors hover:bg-teal-50">
+							Voir les offres
+						</a>
+						<a href="/contact" class="inline-block rounded-lg bg-teal-800 px-4 py-2 text-center font-semibold text-white transition-colors hover:bg-teal-900">
+							Recevoir une proposition en 48h
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
-
 
 	<CtaSection 
 		title="Vous avez un projet similaire ?"

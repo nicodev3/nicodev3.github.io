@@ -40,10 +40,10 @@ const businessSchema = {
 			</p>
 			<div class="mt-8 flex flex-col sm:flex-row gap-4">
 				<a href="#lead-form" class="bg-white text-teal-700 px-7 py-3 rounded-lg font-semibold text-center hover:bg-slate-100 transition-colors flex items-center justify-center h-full">
-					Demander un devis gratuit
+					Obtenir ma proposition gratuite
 				</a>
 				<a href="#offres" class="border-2 border-white/90 text-white px-7 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-teal-700 transition-colors">
-					Voir les offres
+					Découvrir les offres
 				</a>
 			</div>
 				</div>
@@ -59,7 +59,8 @@ const businessSchema = {
 					/>
 				</div>
 			</div>
-			<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+			<p class="mt-6 text-sm text-teal-100">Quelques projets par mois pour garantir la qualité et le suivi.</p>
+			<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
 				<div class="bg-white/10 rounded-lg p-4 border border-white/20 flex items-center gap-3 hover:bg-white/15 transition-colors">
 					<svg class="w-5 h-5 text-teal-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
@@ -114,6 +115,42 @@ const businessSchema = {
 
 	<section class="py-16 bg-stone-50">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-6">Pourquoi beaucoup de psychologues ont peu de visibilité</h2>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div>
+					<p class="text-lg text-gray-700 mb-4">
+						En libéral, vous misez sur le bouche-à-oreille et les plateformes (Doctolib, annuaires). Ces canaux apparaissent dans les résultats Google, mais sans site dédié vous dépendez entièrement d'eux : présentation limitée, concurrence sur la fiche, pas d'espace pour détailler votre approche et rassurer avant la prise de rendez-vous.
+					</p>
+					<p class="text-gray-700">
+						Les futurs patients tapent ces recherches avant de consulter. Un site professionnel, optimisé pour le référencement local, vous positionne dans ces résultats et attire des personnes déjà à la recherche de votre profil.
+					</p>
+				</div>
+				<ul class="space-y-3 text-gray-700">
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-teal-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/>
+						</svg>
+						<span>Pas de site = invisible sur les recherches locales</span>
+					</li>
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-teal-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/>
+						</svg>
+						<span>Un site non optimisé = peu de chances d'apparaître en première page</span>
+					</li>
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-teal-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/>
+						</svg>
+						<span>Un site clair + SEO local = plus de demandes qualifiées</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
 				<div class="order-2 lg:order-1 flex justify-center lg:justify-start">
 					<Image
@@ -160,7 +197,8 @@ const businessSchema = {
 						<li>1 aller-retour inclus</li>
 						<li class="text-gray-500">Modifications ultérieures : 50€/h</li>
 					</ul>
-					<a href="#lead-form" class="mt-8 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Choisir ce forfait</a>
+					<p class="mt-4 text-sm text-teal-700 font-medium">Idéal pour une première présence web, tester le besoin en toute simplicité.</p>
+					<a href="#lead-form" class="mt-6 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Demander ce forfait</a>
 				</article>
 
 				<article class="bg-white rounded-xl border-2 border-teal-600 shadow-lg p-6 relative">
@@ -174,7 +212,8 @@ const businessSchema = {
 						<li><strong>Maintenance et modifications incluses</strong> <a href="#faq-modifications" class="text-teal-600 hover:text-teal-700 no-underline font-normal" title="Détails des modifications incluses">*</a></li>
 						<li>Support prioritaire</li>
 					</ul>
-					<a href="#lead-form" class="mt-8 inline-block w-full text-center bg-teal-800 text-white py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors">Choisir ce pack</a>
+					<p class="mt-4 text-sm text-teal-700 font-medium">Idéal pour une activité établie qui veut un site évolutif sans gérer la technique.</p>
+					<a href="#lead-form" class="mt-6 inline-block w-full text-center bg-teal-800 text-white py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors">Demander ce pack</a>
 				</article>
 
 				<article class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
@@ -188,7 +227,8 @@ const businessSchema = {
 						<li>Visibilité continue sur Google</li>
 						<li>Optimisé pour attirer plus de demandes</li>
 					</ul>
-					<a href="#lead-form" class="mt-8 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Choisir ce pack</a>
+					<p class="mt-4 text-sm text-teal-700 font-medium">Idéal pour maximiser la visibilité et attirer plus de patients via le référencement.</p>
+					<a href="#lead-form" class="mt-6 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Demander ce pack</a>
 				</article>
 			</div>
 		</div>
@@ -323,7 +363,7 @@ const businessSchema = {
 
 			<div class="mt-10 text-center">
 				<a href="#lead-form" class="inline-block bg-teal-800 text-white px-7 py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors">
-					Demander une estimation
+					Recevoir ma proposition personnalisée
 				</a>
 			</div>
 		</div>
@@ -337,7 +377,8 @@ const businessSchema = {
 					<p class="text-lg text-gray-700 mb-6">Vos futurs patients tapent souvent des recherches du type « psychologue » + leur ville ou quartier. Un site bien structuré vous aide à apparaître dans ces résultats.</p>
 
 					<div class="mb-8">
-						<h3 class="text-lg font-semibold text-gray-900 mb-4">Exemples de recherches</h3>
+						<h3 class="text-lg font-semibold text-gray-900 mb-4">Exemples concrets de recherches Google</h3>
+						<p class="text-gray-700 mb-4 text-sm">Ce que vos futurs patients tapent réellement :</p>
 						<div class="flex flex-wrap gap-2">
 							<span class="bg-teal-100 text-teal-800 px-3 py-1.5 rounded-lg text-sm">psychologue Sceaux</span>
 							<span class="bg-teal-100 text-teal-800 px-3 py-1.5 rounded-lg text-sm">psychologue Paris 15</span>
@@ -345,7 +386,10 @@ const businessSchema = {
 							<span class="bg-teal-100 text-teal-800 px-3 py-1.5 rounded-lg text-sm">psychologue TCC Bordeaux</span>
 							<span class="bg-teal-100 text-teal-800 px-3 py-1.5 rounded-lg text-sm">thérapie ACT Nantes</span>
 							<span class="bg-teal-100 text-teal-800 px-3 py-1.5 rounded-lg text-sm">psychologue adolescent Toulouse</span>
+							<span class="bg-teal-100 text-teal-800 px-3 py-1.5 rounded-lg text-sm">psychologue Montpellier centre</span>
+							<span class="bg-teal-100 text-teal-800 px-3 py-1.5 rounded-lg text-sm">psychologue en ligne</span>
 						</div>
+						<p class="text-sm text-gray-500 mt-4 italic">En zone très concurrentielle, le référencement peut prendre plusieurs mois. Les bases (structure, contenu, technique) sont posées dès la mise en ligne et favorisent une progression durable.</p>
 					</div>
 
 					<div>
@@ -421,10 +465,10 @@ const businessSchema = {
 						</ul>
 						<div class="flex flex-col sm:flex-row gap-3">
 							<a href="#lead-form" class="inline-block text-center bg-teal-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors">
-								Demander une estimation
+								Recevoir ma proposition sous 48h
 							</a>
 							<a href="#offres" class="inline-block text-center border-2 border-teal-600 text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors">
-								Voir les offres
+								Comparer les offres
 							</a>
 						</div>
 					</div>
@@ -515,8 +559,8 @@ Tout cela pour un rapport qualité/prix imbattable!"
 	<section id="lead-form" class="py-16 bg-gradient-to-br from-teal-50 to-slate-100">
 		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="bg-white rounded-2xl shadow-lg border border-teal-100 p-6 md:p-8">
-				<h2 class="text-3xl font-bold text-gray-900">Recevoir une proposition en 48h</h2>
-				<p class="text-gray-600 mt-3">Décrivez votre contexte. Je vous recommande l'offre la plus adaptée.</p>
+				<h2 class="text-3xl font-bold text-gray-900">Recevoir votre proposition personnalisée en 48h</h2>
+				<p class="text-gray-600 mt-3">Décrivez votre contexte en quelques mots. Je vous recommande l'offre la plus adaptée à votre situation.</p>
 
 				<div id="home-form-success" class="hidden mt-6 bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
 					Message envoyé. Je reviens vers vous rapidement.
@@ -553,7 +597,7 @@ Tout cela pour un rapport qualité/prix imbattable!"
 						<textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none" placeholder="Type de pratique, délai, objectifs, éléments déjà disponibles..."></textarea>
 					</div>
 					<button id="home-submit-btn" type="submit" class="w-full bg-teal-800 text-white py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
-						Envoyer ma demande
+						Recevoir ma proposition
 					</button>
 				</form>
 			</div>
@@ -586,7 +630,7 @@ Tout cela pour un rapport qualité/prix imbattable!"
 					homeSuccess.classList.remove('hidden');
 				} else {
 					homeSubmit.removeAttribute('disabled');
-					homeSubmit.textContent = 'Envoyer ma demande';
+					homeSubmit.textContent = 'Recevoir ma proposition';
 					alert('Une erreur est survenue. Veuillez réessayer.');
 				}
 			});
