@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
 
 const businessSchema = {
 	'@context': 'https://schema.org',
@@ -331,7 +332,7 @@ const businessSchema = {
 	<section class="py-16 bg-slate-50">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-10">
-				<h2 class="text-3xl font-bold text-gray-900">Preuve sociale</h2>
+				<h2 class="text-3xl font-bold text-gray-900">Témoignages</h2>
 				<p class="text-gray-600 mt-3">Des retours orientés clarté, confiance et prises de contact.</p>
 				<div class="mt-6 flex justify-center">
 					<Image
@@ -347,19 +348,23 @@ const businessSchema = {
 				</div>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<blockquote class="bg-white rounded-xl border border-gray-200 p-6">
-					<p class="text-gray-700">"Le site est plus clair et plus rassurant. J'ai eu des demandes qualifiées dès les premières semaines."</p>
-					<footer class="mt-4 text-sm text-gray-500">Psychologue clinicienne, Bordeaux</footer>
-				</blockquote>
-				<blockquote class="bg-white rounded-xl border border-gray-200 p-6">
-					<p class="text-gray-700">"J'ai apprécié le process: simple, rapide, sans jargon technique."</p>
-					<footer class="mt-4 text-sm text-gray-500">Psychologue TCC, Lyon</footer>
-				</blockquote>
-				<blockquote class="bg-white rounded-xl border border-gray-200 p-6">
-					<p class="text-gray-700">"Enfin un site que je peux faire évoluer sans y passer mes soirées."</p>
-					<footer class="mt-4 text-sm text-gray-500">Psychothérapeute, Nantes</footer>
-				</blockquote>
+				<TestimonialCard
+					quote="Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble."
+					highlight="des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité ... un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique !"
+					author="Delphine, Psychologue en libéral"
+				/>
+				<TestimonialCard
+					quote="Nicolas Devaux a conçu mon site internet lors de mon installation en libéral, afin de donner de la visibilité à mon activité.
+Je suis ravie de notre collaboration et du résultat. Il a su prendre en compte mes exigences, mes souhaits lors de la conception de mon site. Nicolas s'est montré egalement très disponible.
+Tout cela pour un rapport qualité/prix imbattable!"
+					author="Anne-Françoise, Psychologue clinicienne, Paris"
+				/>
+				<TestimonialCard
+					quote="Je suis très satisfaite de mon site. Nicolas a su allier tout son savoir faire avec mes désirs pour réaliser ce projet. Bien évidemment sa «double casquette» psychologue et webdesigner a été un atout important. Il a fait preuve d'écoute et d'une grande disponibilité. Vous pouvez lui faire confiance !"
+					author="Psychologue TCC, Lyon"
+				/>
 			</div>
+			<p class="text-center text-sm text-gray-500 mt-8">Voir tous les témoignages sur <a href="https://www.malt.fr/profile/nicolasdevaux1" target="_blank" rel="noopener noreferrer" class="text-teal-600 underline hover:text-teal-800">mon profil Malt</a>.</p>
 		</div>
 	</section>
 
