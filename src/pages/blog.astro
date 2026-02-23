@@ -29,7 +29,7 @@ const sortedPosts = posts.sort((a, b) => {
 					<BlogCard
 						title={post.data.title}
 						description={post.data.description}
-						href={`/blog/${post.id}`}
+						href={`/blog/${post.id.replace(/\.md$/, '')}`}
 						image={post.data.image || "/images/development.jpg"}
 						imageAlt={post.data.title}
 						tag={post.data.tags?.[0] || "Web"}
