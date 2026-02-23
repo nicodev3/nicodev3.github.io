@@ -28,7 +28,12 @@ import FormField from '../components/FormField.astro';
 					<p class="text-green-700">Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
 				</div>
 
-				<form id="contact-form" class="space-y-6">
+				<form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+						<input type="hidden" name="form-name" value="contact" />
+						<p class="hidden" aria-hidden="true">
+							<label for="contact-bot-field">Ne pas remplir</label>
+							<input id="contact-bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off" />
+						</p>
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<FormField id="firstName" name="firstName" label="Prénom *" type="text" required />
 							<FormField id="lastName" name="lastName" label="Nom *" type="text" required />
@@ -81,11 +86,14 @@ import FormField from '../components/FormField.astro';
 						submitBtn.disabled = true;
 						submitBtn.textContent = 'Envoi en cours...';
 
-						const data = new FormData(form);
-						const response = await fetch('https://formspree.io/f/xqedyrwy', {
+						const formData = new FormData(form);
+						const params = new URLSearchParams();
+						formData.forEach((value, key) => params.append(key, typeof value === 'string' ? value : (value as File).name));
+
+						const response = await fetch(document.location.pathname, {
 							method: 'POST',
-							body: data,
-							headers: { Accept: 'application/json' },
+							body: params.toString(),
+							headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 						});
 
 						if (response.ok) {
