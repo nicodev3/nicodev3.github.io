@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 
 <Layout 
 	title="Contact - Création site internet pour psychologue | Nicolas Devaux"
-	description="Contactez-moi pour votre projet de site internet : devis gratuit pour psychologues, coachs et thérapeutes. Création de sites sur mesure, réponse sous 48h."
+	description="Contactez-moi pour votre projet de site internet pour psychologue. Devis gratuit, création sur mesure, réponse sous 48h."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -58,23 +58,12 @@ const breadcrumbSchema = {
 						<FormField id="profession" name="profession" label="Votre profession *" required variant="select">
 							<option value="">Sélectionnez votre profession</option>
 							<option value="psychologue">Psychologue</option>
-							<option value="psychotherapeute">Psychothérapeute</option>
-							<option value="psychopraticien">Psychopraticien</option>
-							<option value="praticien-psychotherapie">Praticien en psychothérapie</option>
-							<option value="coach">Coach</option>
-							<option value="psychomotricien">Psychomotricien</option>
-							<option value="therapeute">Thérapeute</option>
-							<option value="kinesitherapeute">Kinésithérapeute</option>
-							<option value="osteopathe">Ostéopathe</option>
-							<option value="autre-praticien">Autre praticien libéral</option>
-							<option value="autre">Autre</option>
 						</FormField>
 						
-						<FormField id="formule" name="formule" label="Formule souhaitée *" required variant="select">
-							<option value="">Sélectionnez une formule</option>
-							<option value="forfait">Forfait Création — 490€ (sans abonnement)</option>
-							<option value="vitrine">Pack Site Vitrine — 59€/mois</option>
-							<option value="blog">Pack Site + Blog — 89€/mois</option>
+						<FormField id="formule" name="formule" label="Offre souhaitée *" required variant="select">
+							<option value="">Sélectionnez une offre</option>
+							<option value="serenite">Offre Sérénité — 29€/mois</option>
+							<option value="visibilite-confiance">Offre Visibilité &amp; Confiance — 49€/mois</option>
 							<option value="indecis">Je ne sais pas encore</option>
 						</FormField>
 						
@@ -176,42 +165,37 @@ const breadcrumbSchema = {
 						</div>
 					</div>
 					
-					<!-- Rappel des formules -->
+					<!-- Rappel des offres -->
 					<div class="mt-12">
 						<h3 class="text-xl font-semibold text-gray-900 mb-6">
-							Rappel des formules
+							Rappel des offres
 						</h3>
 						
 						<div class="space-y-4">
 							<div class="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-400">
 								<h4 class="font-medium text-gray-900 mb-1">
-									Forfait Création — 490€
+									Sérénité — 29€/mois
 								</h4>
 								<p class="text-gray-600 text-sm">
-									Site livré clé en main, hébergement Netlify inclus. Modifications ultérieures facturées 50€/h.
+									Un site en ligne en continu, votre adresse internet gérée pour vous, sécurité, sauvegardes,
+									1 modification simple par mois (texte ou photo) et support par email.
 								</p>
 							</div>
 							
 							<div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
 								<h4 class="font-medium text-gray-900 mb-1">
-									Pack Site Vitrine — 59€/mois
+									Visibilité &amp; Confiance — 49€/mois
 								</h4>
 								<p class="text-gray-600 text-sm">
-									Site + hébergement + modifications de contenu illimitées + support. Sans engagement.
-								</p>
-							</div>
-							
-							<div class="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-600">
-								<h4 class="font-medium text-gray-900 mb-1">
-									Pack Site + Blog — 89€/mois
-								</h4>
-								<p class="text-gray-600 text-sm">
-									Tout du Pack Vitrine + 2 articles de blog thématiques rédigés et publiés chaque mois pour améliorer votre visibilité sur Google.
+									Tout ce qui est inclus dans l’offre Sérénité, avec en plus un accompagnement pour votre
+									visibilité sur Google, votre fiche Google, une vérification annuelle du site, une relecture
+									RGPD, 2 modifications simples par mois et une modernisation légère tous les 2 ans.
 								</p>
 							</div>
 
 							<p class="text-sm text-gray-500 pt-2">
-								Vous hésitez entre les formules ? Décrivez votre situation dans le formulaire, je vous conseille gratuitement.
+								Vous hésitez entre les offres ? Décrivez simplement votre situation dans le formulaire,
+								je vous indique ce qui semble le plus adapté.
 							</p>
 						</div>
 					</div>

@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
+import OffersSection from '../components/OffersSection.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
@@ -9,7 +10,7 @@ const businessSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'ProfessionalService',
 	name: 'Nicolas Devaux',
-	description: 'Création de sites internet pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, praticiens en psychothérapie, thérapeutes et coachs.',
+	description: 'Création de sites internet pour psychologues.',
 	url: baseUrl,
 	email: 'contact.nicodev@gmail.com',
 	telephone: '+33629341367',
@@ -112,7 +113,7 @@ const websiteSchema = {
 	name: 'Nicolas Devaux',
 	alternateName: 'Nicodev',
 	url: baseUrl,
-	description: 'Création de sites internet pour psychologues et professionnels du soin psychique.'
+	description: 'Création de sites internet pour psychologues.'
 };
 
 const breadcrumbSchema = {
@@ -138,12 +139,12 @@ const breadcrumbSchema = {
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
 				<div class="min-w-0">
-			<p class="text-sm md:text-base uppercase tracking-wider text-teal-100 mb-4">Sites web pour psychologues et professionnels du soin psychique</p>
+			<p class="text-sm md:text-base uppercase tracking-wider text-teal-100 mb-4">Sites web pour psychologues</p>
 			<h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
 				Un site clair et rassurant pour présenter votre offre de soins
 			</h1>
 			<p class="mt-6 text-lg md:text-2xl text-teal-50 max-w-3xl">
-				Je crée votre site avec un cadre simple: 3 offres lisibles, un déroulé guidé étape par étape et une phase de retours incluse avant la mise en ligne.
+				Je crée des sites internet pour psychologues, clairs et rassurants, pour présenter votre pratique simplement. L'objectif est de vous aider à être plus visible localement sur Google, à expliquer votre approche et à faciliter la prise de rendez-vous, avec une méthode structurée.
 			</p>
 			<div class="mt-8 flex flex-col sm:flex-row gap-4">
 				<a href="#lead-form" class="bg-white text-teal-700 px-7 py-3 rounded-lg font-semibold text-center hover:bg-slate-100 transition-colors flex items-center justify-center h-full">
@@ -202,7 +203,7 @@ const breadcrumbSchema = {
 				<div class="min-w-0">
 					<h2 class="text-3xl font-bold text-gray-900 mb-6">Une expertise métier + web</h2>
 					<p class="text-lg text-gray-700 max-w-4xl">
-						Psychologue et développeur web, je connais vos enjeux : rassurer des patients, présenter clairement votre approche et rester conforme aux règles de communication selon votre profession (psychologues, psychothérapeutes, coachs, etc.).
+						Conçu par un psychologue, pour les besoins concrets des psychologues. Psychologue en activité, je crée des sites internet depuis plus de 20 ans en parallèle de ma pratique libérale, avec le titre de psychologue (Master 2 de psychologie) et une Licence Professionnelle ATC (LPATC) en développement web. J'ai aussi exercé comme créateur de sites web en freelance et comme Tech Lead pour des grands comptes.
 					</p>
 				</div>
 				<div class="flex justify-center lg:justify-end">
@@ -283,63 +284,7 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	<section id="offres" class="py-16 bg-stone-50">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center mb-10">
-				<h2 class="text-3xl font-bold text-gray-900">3 offres packagées</h2>
-				<p class="text-gray-600 mt-3">Des choix clairs pour avancer vite, sans devis complexe.</p>
-				<p class="text-gray-600 mt-2 text-sm max-w-2xl mx-auto">Les abonnements incluent la maintenance et les modifications de contenu. Avec le forfait unique, chaque modification est facturée 50€/h.</p>
-			</div>
-
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-				<article class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-					<h3 class="text-xl font-semibold text-gray-900">Forfait Création</h3>
-					<p class="text-4xl font-bold text-gray-900 mt-4">490€</p>
-					<p class="text-sm text-gray-500 mt-1">Paiement unique, sans abonnement</p>
-					<ul class="mt-6 space-y-2 text-gray-700">
-						<li>Site vitrine (template + vos contenus)</li>
-						<li>Visible sur Google (optimisation de base)</li>
-						<li>Hébergement fiable et sécurisé inclus</li>
-						<li>Widget de prise de RDV (Doctolib, Qare, Maiia...)</li>
-						<li>1 aller-retour inclus</li>
-						<li class="text-gray-500">Modifications ultérieures : 50€/h</li>
-					</ul>
-					<p class="mt-4 text-sm text-teal-700 font-medium">Idéal pour une première présence web, tester le besoin en toute simplicité.</p>
-					<a href="#lead-form" class="mt-6 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Demander ce forfait</a>
-				</article>
-
-				<article class="bg-white rounded-xl border-2 border-teal-600 shadow-lg p-6 relative">
-					<p class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal-800 text-white text-xs px-3 py-1 rounded-full">Le plus choisi</p>
-					<h3 class="text-xl font-semibold text-gray-900">Pack Site Vitrine</h3>
-					<p class="text-4xl font-bold text-gray-900 mt-4">59€</p>
-					<p class="text-sm text-gray-500 mt-1">Par mois, sans engagement</p>
-					<ul class="mt-6 space-y-2 text-gray-700">
-						<li>Tout du Forfait Création</li>
-						<li>Hébergement sécurisé 24h/24 + nom de domaine</li>
-						<li><strong>Maintenance et modifications incluses</strong> <a href="#faq-modifications" class="text-teal-600 hover:text-teal-700 no-underline font-normal" title="Détails des modifications incluses">*</a></li>
-						<li>Support prioritaire</li>
-					</ul>
-					<p class="mt-4 text-sm text-teal-700 font-medium">Idéal pour une activité établie qui veut un site évolutif sans gérer la technique.</p>
-					<a href="#lead-form" class="mt-6 inline-block w-full text-center bg-teal-800 text-white py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors">Demander ce pack</a>
-				</article>
-
-				<article class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-					<h3 class="text-xl font-semibold text-gray-900">Pack Site + Blog</h3>
-					<p class="text-4xl font-bold text-gray-900 mt-4">89€</p>
-					<p class="text-sm text-gray-500 mt-1">Par mois, sans engagement</p>
-					<ul class="mt-6 space-y-2 text-gray-700">
-						<li>Tout du Pack Site Vitrine</li>
-						<li><strong>Maintenance et modifications incluses</strong> <a href="#faq-modifications" class="text-teal-600 hover:text-teal-700 no-underline font-normal" title="Détails des modifications incluses">*</a></li>
-						<li>2 articles de blog par mois</li>
-						<li>Visibilité continue sur Google</li>
-						<li>Optimisé pour attirer plus de demandes</li>
-					</ul>
-					<p class="mt-4 text-sm text-teal-700 font-medium">Idéal pour maximiser la visibilité et attirer plus de patients via le référencement.</p>
-					<a href="#lead-form" class="mt-6 inline-block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors">Demander ce pack</a>
-				</article>
-			</div>
-		</div>
-	</section>
+	<OffersSection />
 
 	<section id="process" class="py-16 bg-white">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

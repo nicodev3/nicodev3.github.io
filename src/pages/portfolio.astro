@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
@@ -89,27 +89,21 @@ const psychologueProjects = [
 
 <Layout 
 	title="Réalisations sites internet psychologues | Nicolas Devaux"
-	description="Réalisations en création de sites pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, coachs, thérapeutes et praticiens en psychothérapie."
+	description="Réalisations de sites internet : portfolio historique. Positionnement actuel : création de sites exclusivement pour psychologues."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero 
 		title="Portfolio" 
-		subtitle="Quelques réalisations pour psychologues, coachs et professionnels du soin"
+		subtitle="Quelques réalisations (psychologues et autres secteurs)"
 	/>
 
 	<section id="sites-psychologues" class="bg-white py-12 sm:py-16">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="mb-4 text-2xl font-bold leading-tight text-gray-900 sm:mb-6 sm:text-3xl">
-				Sites internet pour psychologues et professionnels du soin psychique
+				Portfolio de réalisations
 			</h2>
-			<p class="mb-8 max-w-3xl text-base text-gray-600 sm:text-lg">
-				Beaucoup de projets présentés ici sont anciens, certains datent de plus de 10 ans. Plusieurs sites ne sont plus en ligne car les professionnels ont cessé leur activité.
-			</p>
-			<p class="mb-8 max-w-3xl text-gray-700">
-				Le style visuel varie selon l'année de création, mais la logique reste la même : un site clair, rassurant, optimisé pour le mobile et structuré pour le référencement local (psychologue + ville), avec intégration possible d'un widget de prise de rendez-vous.
-			</p>
 
 			<div class="mb-10 rounded-xl border border-teal-100 bg-teal-50 p-5 sm:p-6">
 				<h3 class="mb-3 text-lg font-semibold text-gray-900">Ce que montrent ces réalisations</h3>
@@ -118,6 +112,18 @@ const psychologueProjects = [
 					<li>Une navigation simple pour rassurer et faciliter la prise de contact</li>
 					<li>Des bases SEO locales solides pour améliorer la visibilité sur Google</li>
 				</ul>
+			</div>
+
+			<div class="mb-8 max-w-3xl rounded-lg bg-gray-50 border border-gray-100 px-5 py-4 text-sm text-gray-400 italic">
+				<p class="mb-2">
+					Note&nbsp;: Beaucoup des projets ci-dessous sont anciens (parfois plus de 10 ans) et certains sites ne sont plus en ligne (cessation d'activité de leur auteur).
+				</p>
+				<p class="mb-2">
+					Ce portfolio garde la trace de toutes mes réalisations passées. Aujourd'hui, j'accompagne exclusivement les psychologues.
+				</p>
+				<p>
+					Le style évolue selon l'époque, mais la méthode reste celle d’un site clair, rassurant, optimisé mobile et pensé pour la visibilité locale (psychologue + ville), avec la possibilité d'intégrer un outil de prise de rendez-vous.
+				</p>
 			</div>
 
 			<!-- Projects Grid -->

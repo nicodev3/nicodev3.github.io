@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import BulletList from '../components/BulletList.astro';
 import CtaSection from '../components/CtaSection.astro';
+import OffersSection from '../components/OffersSection.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -16,8 +17,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout 
-	title="Tarifs - Sites internet pour praticiens libéraux | Nicolas Devaux"
-	description="Tarifs transparents pour création de sites internet : psychologues, psychomotriciens, coachs, thérapeutes. Forfait unique 490€ ou abonnements à partir de 59€/mois."
+	title="Tarifs - Sites internet pour psychologues | Nicolas Devaux"
+	description="Tarifs transparents pour création de sites internet pour psychologues. Forfait unique 490€ ou abonnements à partir de 59€/mois."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -27,6 +28,8 @@ const breadcrumbSchema = {
 		subtitle="Forfait unique ou abonnement mensuel : choisissez la formule adaptée à vos besoins."
 		variant="light"
 	/>
+
+	<OffersSection />
 
 	<!-- Philosophie Section -->
 	<section class="py-16 bg-white">
@@ -226,7 +229,7 @@ const breadcrumbSchema = {
 						
 						<div class="bg-teal-50 p-4 rounded-lg mb-6">
 							<p class="text-teal-800 text-sm text-center">
-								<strong>Idéal pour :</strong> Psychologues, thérapeutes et praticiens du soin psychique qui veulent une présence web professionnelle sans se soucier de la technique
+								<strong>Idéal pour :</strong> Psychologues qui veulent une présence web professionnelle sans se soucier de la technique
 							</p>
 						</div>
 						
