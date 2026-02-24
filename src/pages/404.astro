@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout
+	title="Page non trouvée | Nicolas Devaux"
+	description="La page demandée n'existe pas. Retrouvez la création de sites internet pour psychologues, le portfolio et les moyens de contact."
+	noindex={true}
+>
+	<Hero
+		title="Page non trouvée"
+		subtitle="Désolé, cette page n'existe pas ou a été déplacée."
+		variant="light"
+	/>
+
+	<section class="py-16 bg-white">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<p class="mb-10 text-gray-600">
+				Vous pouvez revenir à l'accueil, consulter mes réalisations ou me contacter pour votre projet de site internet.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a
+					href="/"
+					class="inline-flex items-center justify-center rounded-lg bg-teal-800 px-6 py-3 font-semibold text-white transition-colors hover:bg-teal-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 focus-visible:ring-offset-2"
+				>
+					Accueil
+				</a>
+				<a
+					href="/portfolio"
+					class="inline-flex items-center justify-center rounded-lg border-2 border-teal-700 px-6 py-3 font-semibold text-teal-800 transition-colors hover:bg-teal-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 focus-visible:ring-offset-2"
+				>
+					Portfolio
+				</a>
+				<a
+					href="/contact"
+					class="inline-flex items-center justify-center rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold text-gray-800 transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2"
+				>
+					Contact
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>
