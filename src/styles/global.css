@@ -1,9 +1,12 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@import "@fontsource-variable/lora";
+@import "@fontsource-variable/source-sans-3";
+
 @theme {
-    --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
-    --font-heading: "Lora", Georgia, serif;
+    --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Lora Variable", Georgia, serif;
 }
 
 /* Styles globaux personnalisés */

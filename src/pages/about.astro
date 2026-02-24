@@ -4,12 +4,25 @@ import Hero from "../components/Hero.astro";
 import SkillCard from "../components/SkillCard.astro";
 import CtaSection from "../components/CtaSection.astro";
 import { Image } from "astro:assets";
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'À propos', item: new URL('/about', baseUrl).toString() }
+	]
+};
 ---
 
 <Layout
   title="Psychologue et développeur web | Nicolas Devaux"
   description="Psychologue devenu développeur web, je crée des sites internet pour psychologues et thérapeutes."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
   <Hero
     title="À propos"
     subtitle="Psychologue et développeur web, je crée des sites internet sur mesure"
@@ -361,7 +374,7 @@ import { Image } from "astro:assets";
   <CtaSection
     title="Prêt à créer votre site internet ?"
     description="Discutons de votre projet et créons ensemble votre présence en ligne."
-    primaryButton={{ text: "Voir mes réalisations", href: "/portfolio" }}
-    secondaryButton={{ text: "Me contacter", href: "/contact" }}
+    primaryButton={{ text: "Voir mes réalisations", href: "/portfolio/" }}
+    secondaryButton={{ text: "Me contacter", href: "/contact/" }}
   />
 </Layout>

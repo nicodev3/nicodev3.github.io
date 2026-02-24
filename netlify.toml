@@ -2,6 +2,36 @@
   command = "npm run build"
   publish = "dist"
 
+# Redirections vers URLs avec trailing slash (Astro trailingSlash: 'always')
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/portfolio"
+  to = "/portfolio/"
+  status = 301
+[[redirects]]
+  from = "/tarifs"
+  to = "/tarifs/"
+  status = 301
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+[[redirects]]
+  from = "/cgv"
+  to = "/cgv/"
+  status = 301
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/:splat/"
+  status = 301
+
 [build.environment]
   NODE_VERSION = "18"
 
@@ -35,5 +65,10 @@
 
 [[headers]]
   for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000"

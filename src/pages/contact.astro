@@ -2,12 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import FormField from '../components/FormField.astro';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Contact', item: new URL('/contact', baseUrl).toString() }
+	]
+};
 ---
 
 <Layout 
 	title="Contact - Création site internet pour psychologue | Nicolas Devaux"
 	description="Contactez-moi pour votre projet de site internet : devis gratuit pour psychologues, coachs et thérapeutes. Création de sites sur mesure, réponse sous 48h."
 >
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
 	<Hero title="Contactez-moi" subtitle="Discutons de votre projet de site internet" />
 
 	<!-- Contact Section -->

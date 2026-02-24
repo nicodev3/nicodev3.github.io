@@ -137,4 +137,12 @@ En 2026, un site de psychologue peut être simple, efficace et raisonnable en bu
 
 > Le bon budget est celui qui soutient votre pratique, votre éthique et votre visibilité locale.
 
-Si vous le souhaitez, je peux aussi préparer un modèle de cahier des charges pour demander des devis comparables.
+Si vous le souhaitez, je peux aussi préparer un modèle de cahier des charges pour demander des devis comparables. [Contactez-moi](/contact/) pour en discuter ou consultez directement mes [tarifs](/tarifs/).
+
+---
+
+## À lire aussi
+
+- [Création d'un site Internet](/blog/creation-site-internet/) — comprendre les technologies d'un site web en 2026
+- [Les psychologues et leur site internet](/blog/site-internet-psychologues/) — réflexion sur les bonnes pratiques
+- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/) — guide pour débutants

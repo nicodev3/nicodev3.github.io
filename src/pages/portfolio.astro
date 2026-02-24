@@ -3,6 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
 
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Portfolio', item: new URL('/portfolio', baseUrl).toString() }
+	]
+};
+
 const psychologueProjects = [
 	{
 		title: "Cécile Coaching",
@@ -81,6 +91,9 @@ const psychologueProjects = [
 	title="Réalisations sites internet psychologues | Nicolas Devaux"
 	description="Réalisations en création de sites pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, coachs, thérapeutes et praticiens en psychothérapie."
 >
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
 	<Hero 
 		title="Portfolio" 
 		subtitle="Quelques réalisations pour psychologues, coachs et professionnels du soin"
@@ -168,10 +181,10 @@ const psychologueProjects = [
 						Ces projets reposent sur les mêmes fondations que mes offres : Forfait Création (490€), Pack Site Vitrine (59€/mois) et Pack Site + Blog (89€/mois).
 					</p>
 					<div class="mt-5 flex flex-col gap-3 sm:flex-row">
-						<a href="/tarifs" class="inline-block rounded-lg border-2 border-teal-700 px-4 py-2 text-center font-semibold text-teal-800 transition-colors hover:bg-teal-50">
+						<a href="/tarifs/" class="inline-block rounded-lg border-2 border-teal-700 px-4 py-2 text-center font-semibold text-teal-800 transition-colors hover:bg-teal-50">
 							Voir les offres
 						</a>
-						<a href="/contact" class="inline-block rounded-lg bg-teal-800 px-4 py-2 text-center font-semibold text-white transition-colors hover:bg-teal-900">
+						<a href="/contact/" class="inline-block rounded-lg bg-teal-800 px-4 py-2 text-center font-semibold text-white transition-colors hover:bg-teal-900">
 							Recevoir une proposition en 48h
 						</a>
 					</div>
@@ -183,7 +196,7 @@ const psychologueProjects = [
 	<CtaSection 
 		title="Vous avez un projet similaire ?"
 		description="Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé."
-		primaryButton={{ text: "Me contacter", href: "/contact" }}
-		secondaryButton={{ text: "Voir mes tarifs", href: "/tarifs" }}
+		primaryButton={{ text: "Me contacter", href: "/contact/" }}
+		secondaryButton={{ text: "Voir mes tarifs", href: "/tarifs/" }}
 	/>
 </Layout>

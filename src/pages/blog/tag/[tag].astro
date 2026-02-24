@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Hero from '../../../components/Hero.astro';
+import BlogCard from '../../../components/BlogCard.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	const tagSet = new Set<string>();
+	posts.forEach((post) => {
+		post.data.tags?.forEach((tag: string) => tagSet.add(tag));
+	});
+	return Array.from(tagSet).map((tag) => ({
+		params: { tag },
+		props: { tag }
+	}));
+}
+
+const { tag } = Astro.props;
+const posts = await getCollection('blog');
+
+const filteredPosts = posts
+	.filter((post) => post.data.tags?.some((t: string) => t === tag))
+	.sort((a, b) => {
+		const dateA = new Date(a.data.pubDate).getTime();
+		const dateB = new Date(b.data.pubDate).getTime();
+		return dateB - dateA;
+	});
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Blog', item: new URL('/blog', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 3, name: `Tag: ${tag}`, item: new URL(`/blog/tag/${encodeURIComponent(tag)}`, baseUrl).toString() }
+	]
+};
+---
+
+<Layout
+	title={`Articles tagués "${tag}" - Blog | Nicolas Devaux`}
+	description={`Tous les articles du blog classés par le tag "${tag}" : conseils création de site, SEO, développement web pour psychologues.`}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+	<Hero
+		title={`Tag : ${tag}`}
+		subtitle={`${filteredPosts.length} article${filteredPosts.length > 1 ? 's' : ''} trouvé${filteredPosts.length > 1 ? 's' : ''}`}
+	/>
+
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="mb-8">
+				<a href="/blog/" class="text-teal-600 hover:text-teal-700 font-medium inline-flex items-center gap-2">
+					← Retour au blog
+				</a>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{filteredPosts.map((post) => (
+					<BlogCard
+						title={post.data.title}
+						description={post.data.description}
+						href={`/blog/${post.id.replace(/\.md$/, '')}/`}
+						image={post.data.image || '/images/development.jpg'}
+						imageAlt={post.data.title}
+						tag={post.data.tags?.[0] || 'Web'}
+						pubDate={post.data.pubDate}
+						author={post.data.author}
+						tags={post.data.tags}
+					/>
+				))}
+			</div>
+			{filteredPosts.length === 0 && (
+				<p class="text-gray-600 text-center py-12">Aucun article avec ce tag pour le moment.</p>
+			)}
+		</div>
+	</section>
+</Layout>

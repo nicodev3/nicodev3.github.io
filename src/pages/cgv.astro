@@ -1,5 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Conditions Générales de Vente', item: new URL('/cgv', baseUrl).toString() }
+	]
+};
 ---
 
 <Layout
@@ -7,6 +17,9 @@ import Layout from '../layouts/Layout.astro';
 	description="Conditions générales de vente pour les prestations de création de sites internet."
 	noindex={true}
 >
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
 	<section class="py-16 bg-gradient-to-br from-teal-700/5 to-slate-100">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h1 class="text-3xl md:text-4xl font-bold text-gray-900">Conditions Générales de Vente</h1>

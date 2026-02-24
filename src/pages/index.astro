@@ -3,13 +3,29 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 
+const baseUrl = Astro.site ?? Astro.url.origin;
+
 const businessSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'ProfessionalService',
 	name: 'Nicolas Devaux',
 	description: 'Création de sites internet pour psychologues, psychomotriciens, psychothérapeutes, psychopraticiens, praticiens en psychothérapie, thérapeutes et coachs.',
-	url: 'https://nicodev.fr',
+	url: baseUrl,
 	email: 'contact.nicodev@gmail.com',
+	telephone: '+33629341367',
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: '63 rue Houdan',
+		postalCode: '92330',
+		addressLocality: 'Sceaux',
+		addressRegion: 'Île-de-France',
+		addressCountry: 'FR'
+	},
+	priceRange: '59€ - 490€',
+	sameAs: [
+		'https://www.malt.fr/profile/nicolasdevaux1',
+		'https://github.com/nicodev3'
+	],
 	areaServed: 'France',
 	slogan: 'Création de sites internet',
 	makesOffer: [
@@ -89,6 +105,23 @@ const faqSchema = {
 		}
 	]
 };
+
+const websiteSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: 'Nicolas Devaux',
+	alternateName: 'Nicodev',
+	url: baseUrl,
+	description: 'Création de sites internet pour psychologues et professionnels du soin psychique.'
+};
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: baseUrl + '/' }
+	]
+};
 ---
 
 <Layout
@@ -98,6 +131,8 @@ const faqSchema = {
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
 	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+	<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 	<section class="bg-gradient-to-br from-teal-700 via-teal-600 to-slate-700 text-white py-16 md:py-24">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

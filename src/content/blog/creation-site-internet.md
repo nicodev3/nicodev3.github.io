@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Création d'un site Internet"
 description: "Comprendre comment se compose un site web moderne en 2026 : technologies, performance, accessibilité et SEO."
 pubDate: "2015-10-26"
@@ -126,9 +126,11 @@ Si vous partez de zéro, commencez simple:
 4. une base technique propre
 5. une amélioration continue
 
+Vous avez un projet de site ? Consultez mes [tarifs](/tarifs/) et [contactez-moi](/contact/) pour en parler.
+
 ---
 
 ## A lire aussi
 
-- [Combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026)
-- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement)
+- [Combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/)
+- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/)

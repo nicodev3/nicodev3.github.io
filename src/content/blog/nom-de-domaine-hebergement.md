@@ -67,4 +67,12 @@ Pour un site de psychologue ou une petite entreprise, l'hébergement mutualisé 
 
 Le choix du nom de domaine et de l'hébergeur sont des étapes importantes dans la création de votre site internet. Prenez le temps de bien réfléchir à ces choix, ils auront un impact sur votre présence en ligne.
 
-N'hésitez pas à me contacter si vous avez des questions sur ces sujets !
+N'hésitez pas à [me contacter](/contact/) si vous avez des questions sur ces sujets ! Vous pouvez aussi consulter mes [tarifs](/tarifs/) pour un projet de création de site.
+
+---
+
+## À lire aussi
+
+- [Création d'un site Internet](/blog/creation-site-internet/) — les briques techniques du web moderne
+- [Combien coûte un site pour psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) — budget et fourchettes réalistes
+- [Les psychologues et leur site internet](/blog/site-internet-psychologues/) — bonnes pratiques déontologiques et éthiques

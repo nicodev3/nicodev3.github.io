@@ -142,6 +142,16 @@ Réaliser un site internet, c'est bien plus que juxtaposer du texte et des image
 
 Surtout, n'oublions pas que le contenu est roi. Le design et les fonctionnalités d'un site n'ont de valeur que pour faciliter l'accès à ce contenu.
 
+Vous souhaitez créer ou refondre votre site ? Consultez mes [tarifs](/tarifs/) ou [contactez-moi](/contact/) pour en discuter.
+
+---
+
+## À lire aussi
+
+- [Création d'un site Internet](/blog/creation-site-internet/) — comprendre les briques techniques d'un site web
+- [Combien coûte un site pour psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) — fourchettes de prix et budget réaliste
+- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/) — notions de base pour bien démarrer
+
 ---
 
 **Notes :**
