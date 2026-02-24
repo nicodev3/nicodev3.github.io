@@ -7,7 +7,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "optimize-images": "node scripts/optimize-images.mjs"
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "optimize-images:webp": "node scripts/optimize-images.mjs --webp",
+    "convert-screenshots-webp": "node scripts/convert-screenshots-webp.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

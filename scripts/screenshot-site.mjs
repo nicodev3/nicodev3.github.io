@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const url = process.argv[2] || 'https://cecilecoaching.fr/';
-const outputPath = process.argv[3] || join(__dirname, '..', 'public', 'images', 'screenshots', 'cecilecoaching.fr.png');
+const outputPath = process.argv[3] || join(__dirname, '..', 'public', 'images', 'screenshots', 'cecilecoaching.fr.webp');
 
 async function main() {
 	await mkdir(dirname(outputPath), { recursive: true });
@@ -26,7 +26,7 @@ async function main() {
 		const page = await browser.newPage();
 		await page.setViewport({ width: 1280, height: 800 });
 		await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
-		await page.screenshot({ path: outputPath, fullPage: false });
+		await page.screenshot({ path: outputPath, type: 'webp', quality: 80, fullPage: false });
 		console.log(`Capture enregistrée : ${outputPath}`);
 	} finally {
 		await browser.close();

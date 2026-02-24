@@ -18,26 +18,34 @@ node scripts/screenshot-site.mjs <URL> [chemin_sortie]
 ```
 
 - **URL** : l'adresse du site à capturer (ex. `https://psychologue-sorgues.com/`)
-- **chemin_sortie** (optionnel) : chemin relatif ou absolu du fichier PNG. Par défaut : `public/images/screenshots/cecilecoaching.fr.png`
+- **chemin_sortie** (optionnel) : chemin relatif ou absolu du fichier WebP. Par défaut : `public/images/screenshots/cecilecoaching.fr.webp`
 
 ## Exemples
 
 ### Un seul site
 
 ```bash
-node scripts/screenshot-site.mjs "https://psychologue-sorgues.com/" "public/images/screenshots/psychologue-sorgues.png"
+node scripts/screenshot-site.mjs "https://psychologue-sorgues.com/" "public/images/screenshots/psychologue-sorgues.webp"
 ```
 
 ### Convention de nommage
 
 Les fichiers sont stockés dans `public/images/screenshots/`.  
-Nom suggéré : `psychologue-<ville>.png` ou un nom basé sur le domaine (ex. `cecilecoaching.fr.png`).
+Nom suggéré : `psychologue-<ville>.webp` ou un nom basé sur le domaine (ex. `cecilecoaching.fr.webp`).
+
+### Convertir les anciennes captures PNG/JPG en WebP
+
+Pour convertir les images existantes en WebP et mettre à jour `portfolio.astro` :
+
+```bash
+npm run convert-screenshots-webp
+```
 
 ## Ajouter une nouvelle entrée au portfolio
 
 1. **Créer le screenshot** :
    ```bash
-   node scripts/screenshot-site.mjs "https://exemple-site.fr/" "public/images/screenshots/exemple-site.png"
+   node scripts/screenshot-site.mjs "https://exemple-site.fr/" "public/images/screenshots/exemple-site.webp"
    ```
 
 2. **Mettre à jour `src/pages/portfolio.astro`** : ajouter un objet dans le tableau `psychologueProjects` :
@@ -45,7 +53,7 @@ Nom suggéré : `psychologue-<ville>.png` ou un nom basé sur le domaine (ex. `c
    {
      title: "Nom du professionnel",
      description: "Site vitrine pour psychologue",
-     image: "/images/screenshots/exemple-site.png",
+     image: "/images/screenshots/exemple-site.webp",
      url: "https://exemple-site.fr/",
      location: "Ville"
    },
@@ -55,7 +63,7 @@ Nom suggéré : `psychologue-<ville>.png` ou un nom basé sur le domaine (ex. `c
 
 Le script utilise :
 - **Viewport** : 1280 × 800 px
-- **Format** : PNG
+- **Format** : WebP (qualité 80)
 - **Zone** : zone visible uniquement (pas de capture full-page)
 
 Pour modifier ces paramètres, éditer `scripts/screenshot-site.mjs`.

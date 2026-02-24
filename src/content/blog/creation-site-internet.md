@@ -1,93 +1,134 @@
----
+﻿---
 title: "Création d'un site Internet"
-description: "Tout savoir ou presque sur la composition d'un site internet. Comprendre la structure et le code d'un site."
+description: "Comprendre comment se compose un site web moderne en 2026 : technologies, performance, accessibilité et SEO."
 pubDate: "2015-10-26"
-updatedDate: "2024-08-20"
+updatedDate: "2026-02-23"
 author: "Nicolas Devaux"
 image: "/images/navigateur.png"
-tags: ["site internet", "création", "développement web", "HTML", "CSS", "JavaScript"]
+tags: ["site internet", "création", "développement web", "HTML", "CSS", "JavaScript", "2026"]
 ---
 
-Pour la plupart d'entre nous, un site internet est un ensemble de textes et de visuels, animés ou non, parfois de sons, accessible depuis un ordinateur, un téléphone, une tablette, et même paraît-il une montre.
+Pour beaucoup de personnes, un site internet est surtout une vitrine: du texte, des images, quelques boutons, un formulaire de contact.
 
-Pourtant, un site internet est bien plus que cela. Pardonnez ma référence à Saint-Exupéry, mais je préfère sa métaphore à celle du capot de la voiture... L'essentiel d'un site internet, ce qui le structure, qui nous permet de le voir, mais aussi et surtout ce qui lui donne son sens, est invisible pour les yeux.. Ou presque !
+En réalité, un site web moderne repose sur plusieurs couches techniques qui travaillent ensemble: structure, design, interactivité, performance, sécurité, accessibilité, référencement.
 
-> "L'essentiel est invisible pour les yeux"
+## Le navigateur : toujours la porte d'entrée
 
-Je vous invite à un petit tour d'horizon du monde du développement. N'ayez crainte, je tenterai de vous tenir la main tout au long de ce parcours jonché de mots étranges et d'algorithmes effrayants !
-
-Nous partirons de la surface pour aller vers les profondeurs. Mais je suis certain que mes amis psychologues en ont l'habitude...
-
-## Le navigateur : fenêtre sur le Web
-
-Voilà un drôle de nom pour *surfer* sur le net. Pourtant, nous le verrons, Internet est plein de métaphores assez amusantes - bien que cet océan ne soit pas toujours de tout repos.
+Le navigateur (Chrome, Firefox, Safari, Edge) reste l'outil qui interprète le code pour afficher vos pages.
 
 ![Navigateur web](/images/navigateur.png)
 
-### Les différents navigateurs
+Ce point n'a pas changé, mais les attentes, elles, ont beaucoup évolué:
 
-Le *navigateur*, c'est le logiciel que vous utilisez pour vous rendre sur Internet. `Internet Explorer` (on retrouve la métaphore de l'exploration !), `Mozilla Firefox`, `Google Chrome`, sont les principaux armateurs de cette flotte.
+- un site doit être rapide sur mobile
+- un site doit être lisible par tous
+- un site doit être sécurisé par défaut
+- un site doit être bien compris par les moteurs de recherche
 
-Ce fier capitaine vous entraîne sur la toile, c'est lui qui vous permet de voir les pages que vous consultez. Sans lui, tout cela ne serait qu'une succession de lignes de code difficilement compréhensibles (sauf pour les robots d'indexation, comme nous le verrons plus loin).
+## Les briques de base du Web
 
-Notons au passage que les différents navigateurs n'affichent pas nécessairement le contenu des pages de la même façon, surtout pour les plus anciens d'entre eux. Il est donc important d'avoir un navigateur à jour pour bénéficier des dernières fonctionnalités d'Internet.
+### HTML : la structure
 
-### Un interprète pour le Web
+Le HTML organise le contenu: titres, paragraphes, listes, liens, images, formulaires.
 
-Ce que fait le navigateur, c'est qu'il traduit littéralement le **code** pour l'afficher sous forme lisible et immédiatement compréhensible à l'œil humain.
+En 2026, le HTML sémantique est indispensable: `header`, `main`, `section`, `article`, `nav`, `footer`, etc. C'est essentiel pour l'accessibilité et le SEO.
 
-> "Le code est un langage interprété par le navigateur"
+### CSS : la présentation
 
-Vous avez dû remarquer un mot étrange.. Le **code**.. Qu'est-ce que cette chose ? Si j'étais Tintin, j'appellerais le Capitaine Haddock pour nous éclairer ! **Le code est le langage interprété par le navigateur**.
+Le CSS gère la mise en forme: typographie, couleurs, espacements, responsive, animations.
 
-Mais c'est quoi ce code ? Où se trouve-t-il ? C'est très simple, ou presque. Comme je l'ai déjà écrit dans l'article [hébergement et nom de domaine](/blog/nom-de-domaine-hebergement), le code est un langage sous forme de fichiers informatiques qui forme un ensemble de données lisibles par les ordinateurs. Ces derniers étant régis par le système binaire, ils ont besoin - les pauvres - de directives extrêmement structurées pour faire leur travail. Le code - les fichiers contenant le code - est stocké sur un serveur, un ordinateur distant qui permet à chaque internaute de lancer son navigateur pour l'explorer intelligiblement.
+Aujourd'hui, on utilise beaucoup:
 
-Ainsi, HTML, CSS, PHP, JavaScript (entre autres), sont les langages que comprend votre ordinateur et que votre navigateur interprète.
+- les variables CSS (`--couleur-principale`)
+- Grid et Flexbox pour les layouts
+- les media queries pour l'adaptation mobile
+- des animations sobres et utiles
 
-## Du code à la page : les langages du Web
+### JavaScript / TypeScript : l'interactivité
 
-Le navigateur, votre interprète, a besoin d'un langage qu'il comprend afin de vous restituer visuellement les pages que vous souhaitez voir. Nous allons avancer pas à pas. Le premier langage permet au navigateur de vous restituer du contenu textuel, ce que vous lisez en ce moment-même ! Ce langage est le `HTML` (Hypertext Markup Language ou Langage de marquage de données en français).
+JavaScript permet les interactions côté navigateur: menus, filtres, formulaires dynamiques, composants interactifs.
 
-### HTML : des balises pour structurer le Web
+En 2026, TypeScript est devenu la norme dans la plupart des projets professionnels pour réduire les erreurs et fiabiliser le code.
 
-Le langage HTML est relativement simple à comprendre et à apprendre. Il structure les données selon un code bien précis de balises. Dans la courte vidéo ci-dessous, vous pourrez voir un aperçu du fonctionnement du langage HTML.
+## Ce qui a vraiment changé en 2026
 
-Comme vous avez pu vous en apercevoir si vous avez visionné la vidéo, le résultat est purement textuel, et ne comporte aucune mise en forme de positionnement des éléments ni de couleurs. Les éléments sont simplement empilés les uns au-dessus des autres.
+### 1. Le rendu hybride est devenu la norme
 
-Si vous avez connu les débuts d'Internet, cela doit vous rappeler des souvenirs ! Pour ajouter une mise en forme au contenu HTML brut, nous avons besoin d'un autre langage : le CSS.
+On ne choisit plus seulement entre "site statique" et "site dynamique".
 
-### CSS : mettre en forme le HTML
+La majorité des projets combinent:
 
-CSS (Cascading Style Sheet, ou feuille de styles en cascade) est un langage qui permet la mise en forme du contenu généré par le HTML. Si nous reprenons notre exemple de la courte vidéo ci-dessus, nous pouvons ajouter quelques changements visuels.
+- pages pré-rendues (rapides et SEO-friendly)
+- composants interactifs chargés seulement si nécessaire
+- contenus dynamiques ciblés (formulaire, espace client, réservation, etc.)
 
-### JavaScript : donner vie au contenu
+### 2. La performance est un critère business
 
-JavaScript est le langage qui permet d'ajouter de l'interactivité à vos pages web. C'est grâce à lui que vous pouvez avoir des animations, des formulaires dynamiques, et toutes sortes d'interactions utilisateur.
+Un site lent fait perdre des visiteurs.
 
-## Du contenu, du contenu, encore du contenu !
+Les indicateurs Core Web Vitals (dont `LCP`, `CLS`, `INP`) restent des références fortes pour la qualité perçue, l'expérience utilisateur et la visibilité SEO.
 
-### Structurer les données
+Concrètement, cela implique:
 
-Un site internet ne se résume pas à du code. Le contenu est roi ! Il faut structurer vos données de manière logique et accessible.
+- optimisation des images (formats modernes)
+- chargement différé des scripts non critiques
+- limitation des dépendances inutiles
+- hébergement et cache correctement configurés
 
-### L'UX, une donnée à ne pas négliger
+### 3. L'accessibilité n'est plus optionnelle
 
-L'expérience utilisateur (UX) est cruciale pour le succès de votre site. Une interface intuitive et agréable à utiliser fera toute la différence.
+Un site professionnel doit être utilisable par tous: navigation clavier, contrastes corrects, alternatives textuelles, structure de titres cohérente, libellés de formulaires explicites.
 
-### L'accessibilité, une nécessité, un challenge
+C'est un enjeu éthique, légal et commercial.
 
-L'accessibilité web est essentielle pour permettre à tous les utilisateurs, y compris ceux en situation de handicap, d'accéder à votre contenu.
+### 4. Le SEO est plus sémantique et plus contextuel
 
-## Conclusion
+Le référencement ne repose plus uniquement sur des mots-clés.
 
-Créer un site internet est un processus complexe qui nécessite de maîtriser plusieurs langages et de penser à l'expérience utilisateur. Mais avec les bons outils et une approche méthodique, c'est tout à fait accessible !
+Il faut:
 
-N'hésitez pas à me contacter si vous souhaitez en savoir plus sur la création de sites internet.
+- répondre clairement aux intentions de recherche
+- produire un contenu utile et structuré
+- travailler le maillage interne
+- soigner les données structurées quand pertinent
+- maintenir des pages rapides et accessibles
 
+### 5. La sécurité et la confidentialité dès la conception
+
+Même pour un "petit" site vitrine, on doit prévoir:
+
+- HTTPS partout
+- mises à jour régulières
+- protection anti-spam des formulaires
+- minimisation des données collectées
+- conformité RGPD sur les formulaires et outils tiers
+
+## Faut-il encore choisir entre CMS et développement sur mesure ?
+
+La bonne réponse dépend de votre objectif.
+
+- **CMS** (WordPress, etc.): pertinent pour publier vite et gérer du contenu en autonomie
+- **Développement sur mesure** (ou site statique/hybride moderne): pertinent pour la performance, la sobriété technique, la maintenance maîtrisée
+
+Le meilleur choix est celui qui reste maintenable dans le temps, avec un coût réaliste.
+
+## En résumé
+
+Créer un site internet en 2026, ce n'est pas seulement "faire une belle page".
+
+C'est concevoir un outil utile, rapide, accessible, visible et durable.
+
+Si vous partez de zéro, commencez simple:
+
+1. une structure claire
+2. des contenus utiles
+3. un design lisible
+4. une base technique propre
+5. une amélioration continue
 
 ---
 
 ## A lire aussi
 
-- [Combien coûte vraiment la création d’un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026)
-
+- [Combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026)
+- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement)
