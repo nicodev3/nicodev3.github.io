@@ -1,7 +1,18 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
+import { Image } from 'astro:assets';
+import cecilecoachingImage from '../assets/images/screenshots/cecilecoaching.fr.webp';
+import severineReisserImage from '../assets/images/screenshots/psychologue-leslilas.webp';
+import marieJoseeGrassoImage from '../assets/images/screenshots/psychologue-sorgues.webp';
+import delphineCimaImage from '../assets/images/screenshots/psy-manosque.webp';
+import marieClaireBruneauImage from '../assets/images/screenshots/mcbruneau-psychologue-blois.fr.webp';
+import emanuelleFalliganImage from '../assets/images/screenshots/psy-sarrebourg.webp';
+import stephanieRequetImage from '../assets/images/screenshots/psy-andrezieux.webp';
+import thomasMouriesImage from '../assets/images/screenshots/osteopathe-toulouse-mouries.webp';
+import audreyLarcebauImage from '../assets/images/screenshots/psy-emdr-cotebasque.webp';
+import geraldineAdamImage from '../assets/images/screenshots/cours-pilates-fullpage.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -17,70 +28,70 @@ const psychologueProjects = [
 	{
 		title: "Cécile Coaching",
 		description: "Site vitrine pour coach professionnelle",
-		image: "/images/screenshots/cecilecoaching.fr.webp",
+		image: cecilecoachingImage,
 		url: "https://cecilecoaching.fr/",
 		location: "Paris"
 	},
 	{
 		title: "Séverine Reisser",
 		description: "Site vitrine professionnel pour psychologue",
-		image: "/images/screenshots/psychologue-leslilas.webp",
+		image: severineReisserImage,
 		url: "https://psychologue-leslilas.fr/",
 		location: "Les Lilas"
 	},
 	{
 		title: "Marie-Josée Grasso",
 		description: "Site vitrine pour psychologue",
-		image: "/images/screenshots/psychologue-sorgues.webp",
+		image: marieJoseeGrassoImage,
 		url: "https://psychologue-sorgues.com/",
 		location: "Sorgues"
 	},
 	{
 		title: "Delphine Cima",
 		description: "Site vitrine professionnel pour psychologue",
-		image: "/images/screenshots/psy-manosque.webp",
+		image: delphineCimaImage,
 		url: "https://psychologue-manosque.net/",
 		location: "Manosque"
 	},
 	{
 		title: "Marie-Claire Bruneau",
 		description: "Site vitrine professionnel pour psychologue",
-		image: "/images/screenshots/mcbruneau-psychologue-blois.fr",
+		image: marieClaireBruneauImage,
 		url: "https://mcbruneau-psychologue-blois.fr/",
 		location: "Blois"
 	},
 	{
 		title: "Emanuelle FALLIGAN",
 		description: "Site vitrine professionnel pour psychologue",
-		image: "/images/screenshots/psy-sarrebourg.webp",
+		image: emanuelleFalliganImage,
 		url: "https://psychologue-sarrebourg.fr/",
 		location: "Sarrebourg"
 	},
 	{
 		title: "Stéphanie REQUET-CATINEAN",
 		description: "Site vitrine moderne pour psychologue",
-		image: "/images/screenshots/psy-andrezieux.webp",
+		image: stephanieRequetImage,
 		url: "https://psychologue-andrezieux-boutheon.fr/",
 		location: "Andrézieux-Bouthéon"
 	},
 	{
 		title: "Thomas Mouries",
 		description: "Site vitrine pour ostéopathe D.O avec spécialisations",
-		image: "/images/screenshots/osteopathe-toulouse-mouries.webp",
+		image: thomasMouriesImage,
 		url: "https://osteopathe-toulouse-mouries.fr/",
 		location: "Toulouse"
 	},
 	{
 		title: "Audrey Larcebau",
 		description: "Site vitrine pour psychologue spécialisée en EMDR",
-		image: "/images/screenshots/psy-emdr-cotebasque.webp",
+		image: audreyLarcebauImage,
 		url: "https://psy-emdr-cotebasque.fr/",
 		location: "Côtebasque"
 	},
 	{
 		title: "Géraldine Adam",
 		description: "Site vitrine pour coach sportif spécialisée en Pilates",
-		image: "/images/screenshots/cours-pilates-fullpage.webp",
+		image: geraldineAdamImage,
 		url: "https://cours-pilates.fr/",
 		location: "Sceaux"
 	},
@@ -131,12 +142,14 @@ const psychologueProjects = [
 				{psychologueProjects.map((project) => (
 					<article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
 						<div class="relative">
-							<img 
-								src={project.image} 
+							<Image
+								src={project.image}
 								alt={`Aperçu du site ${project.title}`}
 								class="h-44 w-full object-cover sm:h-48"
 								loading="lazy"
 								decoding="async"
+								width={800}
+								height={450}
 							/>
 						</div>
 						<div class="flex flex-grow flex-col border-t border-gray-200 bg-stone-50 p-5 sm:p-6">

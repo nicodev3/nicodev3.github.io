@@ -3,6 +3,10 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import OffersSection from '../components/OffersSection.astro';
+import heroLaptop from '../assets/images/hero-laptop.webp';
+import expertiseVenn from '../assets/images/expertise-venn.webp';
+import mobileFast from '../assets/images/mobile-fast.webp';
+import testimonialAvatars from '../assets/images/testimonial-avatars.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
@@ -157,7 +161,7 @@ const breadcrumbSchema = {
 				</div>
 				<div class="hidden lg:block">
 					<Image
-						src="/images/hero-laptop.webp"
+						src={heroLaptop}
 						alt="Site web professionnel sur ordinateur"
 						width={672}
 						height={420}
@@ -208,7 +212,7 @@ const breadcrumbSchema = {
 				</div>
 				<div class="flex justify-center lg:justify-end">
 					<Image
-						src="/images/expertise-venn.webp"
+						src={expertiseVenn}
 						alt="Psychologie et technologie au service de votre site"
 						width={665}
 						height={363}
@@ -262,7 +266,7 @@ const breadcrumbSchema = {
 			<div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
 				<div class="order-2 lg:order-1 flex justify-center lg:justify-start">
 					<Image
-						src="/images/mobile-fast.webp"
+						src={mobileFast}
 						alt="Site optimisé pour mobile et chargement rapide"
 						width={665}
 						height={363}
@@ -536,7 +540,7 @@ const breadcrumbSchema = {
 				<p class="text-gray-600 mt-3">Des retours orientés clarté, confiance et prises de contact.</p>
 				<div class="mt-6 flex justify-center">
 					<Image
-						src="/images/testimonial-avatars.webp"
+						src={testimonialAvatars}
 						alt=""
 						width={256}
 						height={64}

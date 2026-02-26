@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import SkillCard from "../components/SkillCard.astro";
 import CtaSection from "../components/CtaSection.astro";
 import { Image } from "astro:assets";
+import developmentImage from "../assets/images/development.jpg";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -85,7 +86,7 @@ const breadcrumbSchema = {
         </div>
         <div class="relative">
           <Image
-            src="/images/development.jpg"
+            src={developmentImage}
             alt="Nicolas Devaux - Développeur web"
             class="rounded-lg shadow-xl"
             width={500}
