@@ -34,7 +34,8 @@ const canonical = new URL(Astro.url.pathname, baseUrl).toString();
 const imageUrl = entry.data.image
 	? new URL(entry.data.image.startsWith('/') ? entry.data.image : `/${entry.data.image}`, baseUrl).toString()
 	: undefined;
-const dateModified = entry.data.updatedDate ?? entry.data.pubDate;
+const updatedDate = (entry.data as any).updateDate ?? entry.data.updatedDate;
+const dateModified = updatedDate ?? entry.data.pubDate;
 
 const blogPostingSchema = {
 	'@context': 'https://schema.org',
@@ -85,16 +86,33 @@ const breadcrumbSchema = {
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero title={entry.data.title} subtitle={entry.data.description} maxWidth="4xl">
-		<div slot="before" class="flex items-center justify-center text-sm mb-4">
-			<time datetime={entry.data.pubDate}>
-				{new Date(entry.data.pubDate).toLocaleDateString('fr-FR', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric'
-				})}
-			</time>
-			<span class="mx-2">•</span>
+		<div slot="before" class="flex flex-wrap items-center justify-center gap-2 text-sm mb-4">
+			<span>
+				<time datetime={entry.data.pubDate}>
+					{new Date(entry.data.pubDate).toLocaleDateString('fr-FR', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}
+				</time>
+			</span>
+			<span>•</span>
 			<span>{entry.data.author}</span>
+			{updatedDate && updatedDate !== entry.data.pubDate && (
+				<>
+					<span>•</span>
+					<span>
+						Mis à jour le{' '}
+						<time datetime={updatedDate}>
+							{new Date(updatedDate).toLocaleDateString('fr-FR', {
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric'
+							})}
+						</time>
+					</span>
+				</>
+			)}
 		</div>
 		<div slot="after" class="flex flex-wrap justify-center gap-2">
 			{entry.data.tags?.map((t: string) => (
