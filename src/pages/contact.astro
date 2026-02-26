@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-import FormField from '../components/FormField.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -37,81 +37,7 @@ const breadcrumbSchema = {
 						Envoyez-moi un message
 					</h2>
 					
-					<div id="form-success" class="hidden bg-surface border border-border rounded-xl p-8 text-center">
-					<svg class="w-12 h-12 text-foreground mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15L15 9.75M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/>
-					</svg>
-					<h3 class="text-xl font-semibold text-foreground mb-2">Message envoyé !</h3>
-					<p class="text-muted">Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
-				</div>
-
-				<form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
-						<input type="hidden" name="form-name" value="contact" />
-						<p class="hidden" aria-hidden="true">
-							<label for="contact-bot-field">Ne pas remplir</label>
-							<input id="contact-bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off" />
-						</p>
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-							<FormField id="firstName" name="firstName" label="Prénom *" type="text" required />
-							<FormField id="lastName" name="lastName" label="Nom *" type="text" required />
-						</div>
-						
-						<FormField id="email" name="email" label="Email *" type="email" required />
-						<FormField id="phone" name="phone" label="Téléphone" type="tel" />
-
-						<FormField id="profession" name="profession" label="Votre profession *" required variant="select">
-							<option value="">Sélectionnez votre profession</option>
-							<option value="psychologue">Psychologue</option>
-						</FormField>
-						
-						<FormField id="formule" name="formule" label="Offre souhaitée *" required variant="select">
-							<option value="">Sélectionnez une offre</option>
-							<option value="serenite">Offre Sérénité — 29€/mois</option>
-							<option value="visibilite-confiance">Offre Visibilité &amp; Confiance — 49€/mois</option>
-							<option value="indecis">Je ne sais pas encore</option>
-						</FormField>
-						
-						<FormField id="message" name="message" label="Votre projet *" required variant="textarea" placeholder="Décrivez votre activité, vos besoins, vos objectifs..." rows={6} />
-						
-					<button 
-						type="submit"
-						id="submit-btn"
-						class="w-full bg-primary text-on-primary py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
-					>
-						Envoyer le message
-					</button>
-				</form>
-
-				<script>
-					const form = document.getElementById('contact-form') as HTMLFormElement;
-					const successMsg = document.getElementById('form-success') as HTMLElement;
-					const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
-
-					form.addEventListener('submit', async (e) => {
-						e.preventDefault();
-						submitBtn.disabled = true;
-						submitBtn.textContent = 'Envoi en cours...';
-
-						const formData = new FormData(form);
-						const params = new URLSearchParams();
-						formData.forEach((value, key) => params.append(key, typeof value === 'string' ? value : (value as File).name));
-
-						const response = await fetch(document.location.pathname, {
-							method: 'POST',
-							body: params.toString(),
-							headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-						});
-
-						if (response.ok) {
-							form.classList.add('hidden');
-							successMsg.classList.remove('hidden');
-						} else {
-							submitBtn.disabled = false;
-							submitBtn.textContent = 'Envoyer le message';
-							alert('Une erreur est survenue. Veuillez réessayer ou me contacter par email.');
-						}
-					});
-				</script>
+				<ContactForm />
 				</div>
 				
 				<!-- Contact Info -->
