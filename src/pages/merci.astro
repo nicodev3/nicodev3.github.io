@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Merci pour votre message - Nicolas Devaux"
+	description="Votre message a bien été envoyé. Je vous répondrai dans les 48h."
+	noindex={true}
+>
+	<section class="py-24 bg-surface min-h-[60vh] flex items-center">
+		<div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="bg-background rounded-2xl shadow-lg border border-border p-8 md:p-12">
+				<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+					<svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+					</svg>
+				</div>
+				<h1 class="text-3xl font-bold text-foreground">Message envoyé !</h1>
+				<p class="mt-4 text-muted text-lg">
+					Merci pour votre demande. Je vous réponds dans les <strong class="text-foreground">48h</strong>.
+				</p>
+				<p class="mt-2 text-muted">
+					En attendant, n'hésitez pas à consulter les offres disponibles.
+				</p>
+				<a
+					href="/"
+					class="inline-block mt-8 bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+				>
+					Retour à l'accueil
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Politique de confidentialité', item: new URL('/politique-confidentialite/', baseUrl).toString() }
+	]
+};
+---
+
+<Layout
+	title="Politique de confidentialité et cookies - Nicolas Devaux"
+	description="Politique de confidentialité, gestion des données personnelles et des cookies du site nicodev.fr."
+	noindex={true}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<section class="py-16 bg-surface">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-3xl md:text-4xl font-bold text-foreground">Politique de confidentialité et cookies</h1>
+			<p class="mt-4 text-muted">Dernière mise à jour : 26 février 2026</p>
+		</div>
+	</section>
+
+	<section class="py-12 bg-background">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-headings:text-foreground prose-p:text-muted">
+
+			<h2>1. Responsable du traitement</h2>
+			<p>
+				Le responsable du traitement des données personnelles collectées sur ce site est :<br />
+				<strong>Nicolas Devaux</strong>, auto-entrepreneur – développeur web<br />
+				Email : <a href="mailto:contact.nicodev@gmail.com">contact.nicodev@gmail.com</a><br />
+				Site : <a href="https://nicodev.fr">https://nicodev.fr</a>
+			</p>
+
+			<h2>2. Données collectées et finalités</h2>
+			<p>Les données personnelles collectées sur ce site sont les suivantes :</p>
+			<ul>
+				<li><strong>Formulaire de contact / prise de rendez-vous</strong> : nom, prénom, adresse e-mail, numéro de téléphone, message. Ces données sont utilisées pour répondre à vos demandes et, le cas échéant, établir un devis ou un contrat de prestation.</li>
+				<li><strong>Données de navigation (cookies analytiques)</strong> : pages visitées, durée de session, source de trafic. Ces données sont collectées uniquement après votre consentement, via Google Analytics (GA4), dans le but d'améliorer le site.</li>
+			</ul>
+			<p>Aucune donnée n'est collectée à des fins de prospection commerciale sans consentement préalable.</p>
+
+			<h2>3. Base légale des traitements</h2>
+			<ul>
+				<li><strong>Exécution du contrat</strong> : traitement des données nécessaires à la réalisation des prestations commandées.</li>
+				<li><strong>Consentement</strong> : dépôt de cookies analytiques (Google Analytics / GA4) — vous pouvez retirer votre consentement à tout moment.</li>
+				<li><strong>Intérêt légitime</strong> : sécurité du site, prévention des abus.</li>
+				<li><strong>Obligation légale</strong> : conservation des données de facturation (5 ans).</li>
+			</ul>
+
+			<h2>4. Cookies et traceurs</h2>
+			<p>Un cookie est un petit fichier texte déposé sur votre terminal lors de la visite d'un site. Ce site utilise les catégories de cookies suivantes :</p>
+
+			<h3>Cookies strictement nécessaires</h3>
+			<p>Ces cookies sont indispensables au fonctionnement du site (gestion du consentement cookies via tarteaucitron.js). Ils ne nécessitent pas votre consentement.</p>
+			<ul>
+				<li><strong>tarteaucitron</strong> : mémorise vos choix de consentement. Durée : 365 jours.</li>
+			</ul>
+
+			<h3>Cookies de mesure d'audience (soumis à consentement)</h3>
+			<p>Ces cookies sont déposés uniquement si vous les acceptez via le bandeau de consentement.</p>
+			<ul>
+				<li>
+					<strong>Google Analytics 4 (GA4)</strong> — éditeur : Google LLC, États-Unis.<br />
+					Finalité : mesure d'audience anonymisée (pages vues, sources de trafic, durée de session).<br />
+					Données transmises : identifiant anonyme, données de navigation.<br />
+					Transfert hors UE : oui, vers les États-Unis — encadré par les clauses contractuelles types de la Commission européenne.<br />
+					Durée : jusqu'à 2 ans.<br />
+					<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité Google</a> — <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Opt-out Google Analytics</a>
+				</li>
+			</ul>
+
+			<h3>Gérer vos préférences</h3>
+			<p>Vous pouvez modifier vos choix à tout moment en cliquant sur le bouton ci-dessous ou sur l'icône de gestion des cookies présente en bas de chaque page.</p>
+			<p>
+				<button
+					onclick="tarteaucitron.userInterface.openPanel();"
+					class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium cursor-pointer hover:opacity-90 transition-opacity"
+				>
+					Gérer mes préférences de cookies
+				</button>
+			</p>
+
+			<h2>5. Durée de conservation des données</h2>
+			<ul>
+				<li>Données de contact / devis : 3 ans à compter du dernier contact.</li>
+				<li>Données contractuelles et de facturation : 5 ans (obligation légale).</li>
+				<li>Données de navigation (cookies GA4) : jusqu'à 2 ans (paramètre Google Analytics).</li>
+				<li>Cookie de consentement tarteaucitron : 365 jours.</li>
+			</ul>
+
+			<h2>6. Destinataires des données</h2>
+			<p>Les données personnelles sont destinées au seul responsable de traitement. Elles peuvent être transmises aux sous-traitants techniques suivants, dans le strict cadre de l'exécution des services :</p>
+			<ul>
+				<li><strong>Netlify, Inc.</strong> (hébergement) — <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
+				<li><strong>Google LLC</strong> (Google Analytics GA4) — uniquement avec votre consentement — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
+			</ul>
+			<p>Aucune donnée n'est vendue ou cédée à des tiers à des fins commerciales.</p>
+
+			<h2>7. Transferts hors Union européenne</h2>
+			<p>Google Analytics peut transférer des données vers les États-Unis. Ces transferts sont encadrés par les clauses contractuelles types (CCT) adoptées par la Commission européenne, conformément à l'article 46 du RGPD.</p>
+
+			<h2>8. Vos droits</h2>
+			<p>Conformément au RGPD (articles 15 à 22), vous disposez des droits suivants :</p>
+			<ul>
+				<li><strong>Droit d'accès</strong> : obtenir une copie de vos données.</li>
+				<li><strong>Droit de rectification</strong> : corriger des données inexactes.</li>
+				<li><strong>Droit à l'effacement</strong> (« droit à l'oubli »).</li>
+				<li><strong>Droit à la limitation du traitement</strong>.</li>
+				<li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré.</li>
+				<li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données.</li>
+				<li><strong>Droit de retirer votre consentement</strong> à tout moment (notamment pour les cookies).</li>
+			</ul>
+			<p>Pour exercer ces droits, contactez : <a href="mailto:contact.nicodev@gmail.com">contact.nicodev@gmail.com</a>. Une réponse vous sera apportée dans un délai d'un mois. En cas de réclamation non satisfaite, vous pouvez saisir la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
+
+			<h2>9. Sécurité</h2>
+			<p>Des mesures techniques et organisationnelles appropriées sont mises en œuvre pour protéger vos données contre tout accès non autorisé, perte ou divulgation (connexion HTTPS, hébergement sécurisé via Netlify).</p>
+
+			<h2>10. Modifications</h2>
+			<p>Cette politique peut être mise à jour pour refléter des évolutions légales ou techniques. La date de dernière mise à jour est indiquée en haut de page. Nous vous invitons à la consulter régulièrement.</p>
+
+		</div>
+	</section>
+</Layout>
