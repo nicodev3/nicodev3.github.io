@@ -108,9 +108,10 @@ const psychologueProjects = [
 	<Hero 
 		title="Portfolio" 
 		subtitle="Quelques réalisations (psychologues et autres secteurs)"
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Portfolio' }]}
 	/>
 
-	<section id="sites-psychologues" class="bg-background py-12 sm:py-16">
+	<section id="sites-psychologues" class="bg-white py-12 sm:py-16">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl">
 				Portfolio de réalisations
@@ -140,19 +141,19 @@ const psychologueProjects = [
 			<!-- Projects Grid -->
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
 				{psychologueProjects.map((project) => (
-					<article class="flex flex-col overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
-						<div class="relative">
+					<article class="flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
+						<div class="relative aspect-video w-full">
 							<Image
 								src={project.image}
 								alt={`Aperçu du site ${project.title}`}
-								class="h-44 w-full object-cover sm:h-48"
+								class="h-full w-full object-contain"
 								loading="lazy"
 								decoding="async"
 								width={800}
 								height={450}
 							/>
 						</div>
-						<div class="flex flex-grow flex-col border-t border-border bg-surface p-5 sm:p-6">
+						<div class="flex flex-grow flex-col border-t border-border bg-white p-5 sm:p-6">
 							<h3 class="mb-2 text-lg font-semibold text-foreground sm:text-xl">
 								{project.title}
 							</h3>

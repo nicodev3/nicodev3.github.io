@@ -37,9 +37,10 @@ const sortedPosts = posts.sort((a, b) => {
 	<Hero 
 		title="Blog" 
 		subtitle="Conseils et articles sur la création de sites internet"
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Blog' }]}
 	/>
 
-	<section class="py-16 bg-background">
+	<section class="py-16 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			{allTags.length > 0 && (
 				<nav class="mb-10" aria-label="Filtrer par tag">

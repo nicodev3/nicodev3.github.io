@@ -85,7 +85,16 @@ const breadcrumbSchema = {
 		<script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
-	<Hero title={entry.data.title} subtitle={entry.data.description} maxWidth="4xl">
+	<Hero 
+		title={entry.data.title} 
+		subtitle={entry.data.description} 
+		maxWidth="4xl"
+		breadcrumb={[
+			{ label: 'Accueil', href: '/' },
+			{ label: 'Blog', href: '/blog/' },
+			{ label: entry.data.title }
+		]}
+	>
 		<div slot="before" class="flex flex-wrap items-center justify-center gap-2 text-sm mb-4">
 			<span>
 				<time datetime={entry.data.pubDate}>
@@ -124,7 +133,7 @@ const breadcrumbSchema = {
 	</Hero>
 
 	<!-- Article Content -->
-	<article class="py-16 bg-background">
+	<article class="py-16 bg-white">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="prose prose-lg max-w-none
 				prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground
@@ -165,7 +174,7 @@ const breadcrumbSchema = {
 
 	<!-- Articles similaires -->
 	{relatedPosts.length > 0 && (
-		<section class="py-16 bg-surface">
+		<section class="py-16 bg-white">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl font-semibold text-foreground mb-6">À lire aussi</h2>
 				<ul class="space-y-3">
@@ -186,7 +195,7 @@ const breadcrumbSchema = {
 	)}
 
 	<!-- Navigation -->
-	<section class="py-16 bg-background">
+	<section class="py-16 bg-surface">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center">
 				<a 

@@ -5,14 +5,16 @@ export interface Props {
 	primaryButton: { text: string; href: string };
 	secondaryButton: { text: string; href: string };
 	maxWidth?: '4xl' | '6xl' | '7xl';
+	background?: 'surface' | 'white' | 'background';
 }
 
-const { title, description, primaryButton, secondaryButton, maxWidth = '7xl' } = Astro.props;
+const { title, description, primaryButton, secondaryButton, maxWidth = '7xl', background = 'surface' } = Astro.props;
 
 const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7xl' }[maxWidth];
+const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 ---
 
-<section class="py-16 bg-surface border-y border-border">
+<section class={`py-16 ${bgClass} border-y border-border`}>
 	<div class={`${maxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 text-center`}>
 		<h2 class="text-3xl font-bold mb-4 text-foreground">
 			{title}

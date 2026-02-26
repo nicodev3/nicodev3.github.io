@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import SkillCard from '../../components/SkillCard.astro';
+import OfferCard from '../../components/OfferCard.astro';
+import FormField from '../../components/FormField.astro';
+
+if (!import.meta.env.DEV) {
+	return Astro.redirect('/');
+}
+---
+
+<Layout
+	title="Styleguide interne | Dev"
+	description="Page de reference interne pour les composants et tokens visuels"
+	noindex={true}
+>
+	<Hero
+		title="Styleguide interne"
+		subtitle="Reference visuelle privee pour le developpement"
+		variant="light"
+		maxWidth="6xl"
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Styleguide interne' }]}
+	/>
+
+	<section class="bg-white py-12 border-b border-border">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+			<div>
+				<h2 class="text-2xl font-bold text-foreground mb-2">Tokens couleur</h2>
+				<p class="text-muted">Palette issue de <code>global.css</code>.</p>
+			</div>
+			<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+				<div class="rounded-xl border border-border overflow-hidden">
+					<div class="h-20 bg-primary"></div>
+					<div class="p-3 text-sm">
+						<strong>primary</strong><br />
+						#FF634A<br />
+						<code>bg-primary</code> · <code>text-on-primary</code>
+					</div>
+				</div>
+				<div class="rounded-xl border border-border overflow-hidden">
+					<div class="h-20 bg-foreground"></div>
+					<div class="p-3 text-sm">
+						<strong>foreground</strong><br />
+						#0F2A2A<br />
+						<code>bg-foreground</code> · <code>text-foreground</code>
+					</div>
+				</div>
+				<div class="rounded-xl border border-border overflow-hidden">
+					<div class="h-20 bg-background"></div>
+					<div class="p-3 text-sm">
+						<strong>background</strong><br />
+						#FAFAFA<br />
+						<code>bg-background</code>
+					</div>
+				</div>
+				<div class="rounded-xl border border-border overflow-hidden">
+					<div class="h-20 bg-surface"></div>
+					<div class="p-3 text-sm">
+						<strong>surface</strong><br />
+						#FAFAFA<br />
+						<code>bg-surface</code> · <code>text-muted</code>
+					</div>
+				</div>
+				<div class="rounded-xl border border-border overflow-hidden">
+					<div class="h-20 bg-white"></div>
+					<div class="p-3 text-sm">
+						<strong>neutral-0</strong><br />
+						#FFFFFF<br />
+						<code>bg-white</code> · <code>text-on-primary</code>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-background py-12 border-b border-border">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+			<div>
+				<h2 class="text-2xl font-bold text-foreground mb-2">Typographie</h2>
+				<p class="text-muted">Titres en Lora, texte courant en Source Sans 3.</p>
+			</div>
+			<div class="rounded-2xl border border-border bg-white p-6">
+				<h1 class="text-4xl font-bold mb-2">Titre H1 de reference</h1>
+				<h2 class="text-3xl font-bold mb-2">Titre H2 de reference</h2>
+				<h3 class="text-2xl font-bold mb-4">Titre H3 de reference</h3>
+				<p class="text-base text-muted mb-2">Texte courant pour verifier la lisibilite sur plusieurs longueurs de phrase.</p>
+				<p class="text-sm text-muted">Texte secondaire pour les aides, labels et descriptions.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-white py-12 border-b border-border">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+			<div>
+				<h2 class="text-2xl font-bold text-foreground mb-2">Elements UI</h2>
+			</div>
+			<div class="rounded-2xl border border-border bg-background p-6">
+				<div class="flex flex-wrap gap-3 mb-6">
+					<a href="#" class="bg-primary text-on-primary px-5 py-2 rounded-lg font-semibold">Bouton principal</a>
+					<a href="#" class="border-2 border-primary text-foreground px-5 py-2 rounded-lg font-semibold">Bouton secondaire</a>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<SkillCard title="SkillCard" description="Exemple de carte competence.">
+						<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m6-6H6"></path>
+						</svg>
+					</SkillCard>
+					<OfferCard
+						name="Offre test"
+						price="190 EUR"
+						description="Bloc de reference visuelle"
+						features={['Bloc hero', 'Section services', 'Formulaire contact']}
+						buttonLabel="Action"
+						buttonHref="#"
+						recommended={true}
+						badgeText="Demo"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-background py-12">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+			<div>
+				<h2 class="text-2xl font-bold text-foreground mb-2">Formulaires</h2>
+			</div>
+			<form class="rounded-2xl border border-border bg-white p-6 grid grid-cols-1 md:grid-cols-2 gap-4" aria-label="Exemple formulaire styleguide">
+				<FormField id="name" name="name" label="Nom" placeholder="Votre nom" />
+				<FormField id="email" name="email" label="Email" type="email" placeholder="vous@email.fr" />
+				<div class="md:col-span-2">
+					<FormField id="message" name="message" label="Message" variant="textarea" rows={4} placeholder="Votre message" />
+				</div>
+			</form>
+		</div>
+	</section>
+</Layout>

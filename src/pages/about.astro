@@ -27,10 +27,11 @@ const breadcrumbSchema = {
   <Hero
     title="À propos"
     subtitle="Psychologue et développeur web, je crée des sites internet sur mesure"
+    breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]}
   />
 
   <!-- About Section -->
-  <section class="py-16 bg-background">
+  <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
@@ -107,7 +108,7 @@ const breadcrumbSchema = {
       </h2>
 
       <div class="max-w-4xl mx-auto">
-        <div class="bg-background p-8 rounded-lg shadow-lg border border-border">
+        <div class="bg-white p-8 rounded-lg shadow-lg border border-border">
           <div class="text-center mb-8">
             <div
               class="w-16 h-16 bg-surface rounded-full flex items-center justify-center mx-auto mb-4"
@@ -208,7 +209,7 @@ const breadcrumbSchema = {
   </section>
 
   <!-- Skills Section -->
-  <section class="py-16 bg-surface">
+  <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center text-foreground mb-12">
         Mes compétences
@@ -296,7 +297,7 @@ const breadcrumbSchema = {
   </section>
 
   <!-- Philosophy Section -->
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-surface">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center text-foreground mb-12">
         Ma philosophie
@@ -368,5 +369,6 @@ const breadcrumbSchema = {
     description="Discutons de votre projet et créons ensemble votre présence en ligne."
     primaryButton={{ text: "Voir mes réalisations", href: "/portfolio/" }}
     secondaryButton={{ text: "Me contacter", href: "/contact/" }}
+    background="white"
   />
 </Layout>

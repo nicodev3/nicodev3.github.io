@@ -1,8 +1,15 @@
 ---
 import OfferCard from './OfferCard.astro';
+
+export interface Props {
+	background?: 'surface' | 'white' | 'background';
+}
+
+const { background = 'surface' } = Astro.props;
+const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 ---
 
-<section id="offres" class="bg-surface py-16 sm:py-20">
+<section id="offres" class={`${bgClass} py-16 sm:py-20`}>
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<header class="mx-auto max-w-3xl text-center">
 			<h2 class="text-3xl font-bold text-foreground sm:text-4xl">

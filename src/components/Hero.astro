@@ -4,21 +4,22 @@ export interface Props {
 	subtitle?: string;
 	variant?: 'full' | 'light';
 	maxWidth?: '4xl' | '6xl' | '7xl';
+	breadcrumb?: { label: string; href?: string }[];
 }
 
-const { title, subtitle, variant = 'full', maxWidth = '7xl' } = Astro.props;
+const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb } = Astro.props;
 
 const sectionClass = variant === 'full'
-	? 'bg-surface text-foreground py-20'
-	: 'py-16 bg-surface';
+	? 'bg-surface text-foreground py-24 md:py-28 border-b border-border'
+	: 'py-20 md:py-24 bg-surface border-b border-border';
 
 const titleClass = variant === 'full'
 	? 'text-4xl md:text-6xl font-bold mb-6 text-foreground'
 	: 'text-4xl font-bold text-foreground mb-6';
 
 const subtitleClass = variant === 'full'
-	? 'text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-muted'
-	: 'text-xl text-muted max-w-3xl mx-auto';
+	? 'text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-muted tracking-wide'
+	: 'text-xl text-muted max-w-3xl mx-auto tracking-wide';
 
 const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7xl' }[maxWidth];
 ---
@@ -26,10 +27,33 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 <section class={sectionClass}>
 	<div class={`${maxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 ${variant === 'light' ? 'text-center' : ''}`}>
 		<div class="text-center">
+			{breadcrumb && breadcrumb.length > 0 && (
+				<nav aria-label="Fil d'Ariane" class="mb-6">
+					<ol class="flex flex-wrap justify-center gap-x-2 text-sm text-muted">
+						{breadcrumb.map((item, index) => (
+							<li class="flex items-center gap-x-2">
+								{index > 0 && (
+									<span aria-hidden="true" class="text-border">/</span>
+								)}
+								{item.href ? (
+									<a href={item.href} class="hover:text-foreground transition-colors">
+										{item.label}
+									</a>
+								) : (
+									<span class="text-foreground">{item.label}</span>
+								)}
+							</li>
+						))}
+					</ol>
+				</nav>
+			)}
 			<slot name="before" />
 			<h1 class={titleClass}>
 				{title}
 			</h1>
+			<div class="flex justify-center mb-6">
+				<div class="h-1 w-16 rounded-full bg-primary" aria-hidden="true" />
+			</div>
 			{subtitle && (
 				<p class={subtitleClass}>
 					{subtitle}

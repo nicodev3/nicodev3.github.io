@@ -49,9 +49,14 @@ const breadcrumbSchema = {
 	<Hero
 		title={`Tag : ${tag}`}
 		subtitle={`${filteredPosts.length} article${filteredPosts.length > 1 ? 's' : ''} trouvé${filteredPosts.length > 1 ? 's' : ''}`}
+		breadcrumb={[
+			{ label: 'Accueil', href: '/' },
+			{ label: 'Blog', href: '/blog/' },
+			{ label: `Tag : ${tag}` }
+		]}
 	/>
 
-	<section class="py-16 bg-background">
+	<section class="py-16 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="mb-8">
 				<a href="/blog/" class="text-foreground hover:text-primary font-medium inline-flex items-center gap-2">

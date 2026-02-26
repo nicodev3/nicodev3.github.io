@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /dev/
 
 Sitemap: https://nicodev.fr/sitemap-index.xml
