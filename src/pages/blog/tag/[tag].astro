@@ -51,10 +51,10 @@ const breadcrumbSchema = {
 		subtitle={`${filteredPosts.length} article${filteredPosts.length > 1 ? 's' : ''} trouvé${filteredPosts.length > 1 ? 's' : ''}`}
 	/>
 
-	<section class="py-16 bg-white">
+	<section class="py-16 bg-opaline-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="mb-8">
-				<a href="/blog/" class="text-teal-600 hover:text-teal-700 font-medium inline-flex items-center gap-2">
+				<a href="/blog/" class="text-foreground hover:text-accent font-medium inline-flex items-center gap-2">
 					← Retour au blog
 				</a>
 			</div>
@@ -75,7 +75,7 @@ const breadcrumbSchema = {
 				))}
 			</div>
 			{filteredPosts.length === 0 && (
-				<p class="text-gray-600 text-center py-12">Aucun article avec ce tag pour le moment.</p>
+				<p class="text-mutedText text-center py-12">Aucun article avec ce tag pour le moment.</p>
 			)}
 		</div>
 	</section>

@@ -8,12 +8,12 @@ export interface Props {
 const { quote, highlight, author } = Astro.props;
 ---
 
-<blockquote class="bg-white rounded-xl border border-gray-200 p-6">
-	<p class="text-gray-700">{quote}</p>
+<blockquote class="bg-opaline-50 rounded-xl border border-opaline-200 p-6">
+	<p class="text-mutedText">{quote}</p>
 	{highlight && (
-		<p class="text-gray-700 mt-3 italic">
+		<p class="text-mutedText mt-3 italic">
 			<span class="font-medium not-italic">Le + :</span> {highlight}
 		</p>
 	)}
-	<footer class="mt-4 text-sm text-gray-500">{author}</footer>
+	<footer class="mt-4 text-sm text-mutedText">{author}</footer>
 </blockquote>

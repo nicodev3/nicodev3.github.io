@@ -116,7 +116,7 @@ const breadcrumbSchema = {
 		</div>
 		<div slot="after" class="flex flex-wrap justify-center gap-2">
 			{entry.data.tags?.map((t: string) => (
-				<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="bg-white bg-opacity-20 hover:bg-opacity-30 text-gray-900 px-3 py-1 rounded-full text-sm transition-colors">
+				<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="bg-opaline-100 hover:bg-opaline-200 text-foreground px-3 py-1 rounded-full text-sm transition-colors">
 					{t}
 				</a>
 			))}
@@ -124,39 +124,39 @@ const breadcrumbSchema = {
 	</Hero>
 
 	<!-- Article Content -->
-	<article class="py-16 bg-white">
+	<article class="py-16 bg-opaline-50">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="prose prose-lg prose-slate max-w-none
-				prose-headings:font-heading prose-headings:font-bold prose-headings:text-gray-900
-				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-2
-				prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-teal-700
-				prose-p:text-gray-700 prose-p:leading-relaxed
-				prose-a:text-teal-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-				prose-strong:text-gray-900
-				prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-teal-50 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-gray-700
-				prose-code:text-teal-700 prose-code:bg-teal-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
-				prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:shadow-lg
-				prose-ul:my-4 prose-li:my-1 prose-li:text-gray-700
+			<div class="prose prose-lg max-w-none
+				prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground
+				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-opaline-200 prose-h2:pb-2
+				prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-foreground
+				prose-p:text-mutedText prose-p:leading-relaxed
+				prose-a:text-foreground prose-a:font-medium prose-a:no-underline hover:prose-a:text-accent
+				prose-strong:text-foreground
+				prose-blockquote:border-l-4 prose-blockquote:border-opaline-200 prose-blockquote:bg-opaline-100 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-mutedText
+				prose-code:text-foreground prose-code:bg-opaline-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
+				prose-pre:bg-foreground prose-pre:text-opaline-50 prose-pre:rounded-xl prose-pre:shadow-lg
+				prose-ul:my-4 prose-li:my-1 prose-li:text-mutedText
 				prose-ol:my-4
 				prose-img:rounded-xl prose-img:shadow-md prose-img:mx-auto
-				prose-hr:border-gray-200">
+				prose-hr:border-opaline-200">
 				<Content />
 			</div>
 		</div>
 	</article>
 
 	<!-- Liens internes : tarifs et contact -->
-	<section class="py-12 bg-teal-50 border-t border-teal-100">
+	<section class="py-12 bg-opaline-100 border-t border-opaline-200">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-xl font-semibold text-gray-900 mb-4">Un projet de site web ?</h2>
-			<p class="text-gray-700 mb-6">
-				Vous cherchez un site professionnel pour votre cabinet ? Consultez mes <a href="/tarifs/" class="text-teal-600 font-medium hover:underline">tarifs</a> ou <a href="/contact/" class="text-teal-600 font-medium hover:underline">contactez-moi</a> pour en discuter.
+			<h2 class="text-xl font-semibold text-foreground mb-4">Un projet de site web ?</h2>
+			<p class="text-mutedText mb-6">
+				Vous cherchez un site professionnel pour votre cabinet ? Consultez mes <a href="/tarifs/" class="text-foreground font-medium hover:text-accent">tarifs</a> ou <a href="/contact/" class="text-foreground font-medium hover:text-accent">contactez-moi</a> pour en discuter.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<a href="/tarifs/" class="inline-flex items-center bg-teal-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-teal-700 transition-colors">
+				<a href="/tarifs/" class="inline-flex items-center bg-accent text-on-accent px-5 py-2.5 rounded-lg font-medium hover:opacity-90 transition-colors">
 					Voir les tarifs
 				</a>
-				<a href="/contact/" class="inline-flex items-center bg-white text-teal-700 border-2 border-teal-600 px-5 py-2.5 rounded-lg font-medium hover:bg-teal-50 transition-colors">
+				<a href="/contact/" class="inline-flex items-center bg-opaline-50 text-foreground border-2 border-accent px-5 py-2.5 rounded-lg font-medium hover:bg-opaline-100 transition-colors">
 					Me contacter
 				</a>
 			</div>
@@ -165,16 +165,16 @@ const breadcrumbSchema = {
 
 	<!-- Articles similaires -->
 	{relatedPosts.length > 0 && (
-		<section class="py-16 bg-gray-50">
+		<section class="py-16 bg-opaline-100">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 class="text-xl font-semibold text-gray-900 mb-6">À lire aussi</h2>
+				<h2 class="text-xl font-semibold text-foreground mb-6">À lire aussi</h2>
 				<ul class="space-y-3">
 					{relatedPosts.map((post) => (
 						<li>
-							<a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="group flex items-start gap-3 text-gray-700 hover:text-teal-600">
-								<span class="text-teal-500 group-hover:text-teal-600 mt-0.5">→</span>
+							<a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="group flex items-start gap-3 text-mutedText hover:text-accent">
+								<span class="text-foreground group-hover:text-accent mt-0.5">→</span>
 								<span class="font-medium group-hover:underline">{post.data.title}</span>
-								<span class="text-sm text-gray-500">
+								<span class="text-sm text-mutedText">
 									{new Date(post.data.pubDate).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
 								</span>
 							</a>
@@ -186,12 +186,12 @@ const breadcrumbSchema = {
 	)}
 
 	<!-- Navigation -->
-	<section class="py-16 bg-white">
+	<section class="py-16 bg-opaline-50">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center">
 				<a 
 					href="/blog/"
-					class="inline-flex items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+					class="inline-flex items-center bg-accent text-on-accent px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
 				>
 					← Retour au blog
 				</a>

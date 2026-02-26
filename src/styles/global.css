@@ -7,6 +7,19 @@
 @theme {
     --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
     --font-heading: "Lora Variable", Georgia, serif;
+
+    /* Palette Opaline */
+    --color-opaline-50: #F4F4F6;
+    --color-opaline-100: #E7E7E7;
+    --color-opaline-200: #D2D2D4;
+    --color-accent: #FF634A;
+
+    /* Texte (WCAG) */
+    --color-foreground: #0F172A;
+    --color-mutedText: #334155;
+
+    /* Texte sur accent (boutons CTA) - nécessaire WCAG */
+    --color-on-accent: #FFFFFF;
 }
 
 /* Styles globaux personnalisés */
@@ -40,17 +53,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .toc-container ul li a:hover {
-    border-left-color: #0d9488;
-    background-color: #f8fafc;
+    border-left-color: var(--color-accent);
+    background-color: var(--color-opaline-50);
     padding-left: 1rem;
 }
 
 .toc-container ul ul li a {
-    border-left: 1px solid #e2e8f0;
+    border-left: 1px solid var(--color-opaline-200);
 }
 
 .toc-container ul ul li a:hover {
-    border-left-color: #0f766e;
+    border-left-color: var(--color-accent);
 }
 
 
@@ -68,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #0d9488;
+    background-color: var(--color-accent);
     transition: width 0.3s ease;
 }
 
