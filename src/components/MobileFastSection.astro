@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import mobileFast from '../assets/images/mobile-fast.webp';
+---
+
+<section class="py-16 bg-surface-alt">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
+			<div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+				<Image
+					src={mobileFast}
+					alt="Site optimisé pour mobile et chargement rapide"
+					width={665}
+					height={363}
+					widths={[384, 530, 665]}
+					sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 665px"
+					class="rounded-xl w-full max-w-sm"
+				/>
+			</div>
+			<div class="order-1 lg:order-2 min-w-0">
+				<h2 class="text-3xl font-bold text-foreground mb-6">Un site rapide et accessible pour tous vos visiteurs</h2>
+				<p class="text-lg text-muted max-w-4xl mb-4">
+					Vos patients consultent souvent depuis leur téléphone ou une connexion limitée. Les sites que je crée sont légers et chargent vite&nbsp;: les pages s'affichent quasi immédiatement, ce qui réduit la frustration et encourage à rester sur le site.
+				</p>
+				<p class="text-lg text-muted max-w-4xl">
+					Ils sont hébergés sur une infrastructure fiable et sécurisée, disponible 24h/24. Vous n'avez rien à gérer côté technique, tout fonctionne en continu.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

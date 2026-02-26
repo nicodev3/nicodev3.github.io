@@ -1,0 +1,39 @@
+---
+const faqItems = [
+	{
+		question: "Combien de temps faut-il pour lancer le site ?",
+		answer: "En général 1 à 2 semaines selon vos disponibilités et les contenus fournis."
+	},
+	{
+		id: "faq-modifications",
+		question: "Que couvrent les modifications incluses dans les offres ?",
+		answer: "L'offre Sérénité inclut 1 modification simple par mois (texte ou photo). L'offre Visibilité & Confiance inclut les modifications de contenu ainsi qu'une modernisation du site tous les ans. Les changements de structure (refonte complète du design) restent hors périmètre."
+	},
+	{
+		question: "Je ne suis pas à l'aise pour écrire. Comment ça se passe pour le contenu ?",
+		answer: "Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu'il soit clair et rassurant."
+	},
+	{
+		question: "Pourquoi dit-on que le site est rapide et léger ?",
+		answer: "Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s'affichent rapidement, même sur mobile ou avec une connexion limitée. C'est agréable pour vos visiteurs et bien vu par les moteurs de recherche."
+	},
+	{
+		question: "Puis-je utiliser Doctolib, Qare ou un autre service de prise de rendez-vous ?",
+		answer: "Oui. J'intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile."
+	}
+];
+---
+
+<section class="py-16 bg-surface-alt">
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-3xl font-bold text-foreground text-center mb-10">FAQ</h2>
+		<div class="space-y-4">
+			{faqItems.map((item) => (
+				<details {...(item.id && { id: item.id })} class="bg-surface rounded-lg p-5 border border-border">
+					<summary class="font-semibold text-foreground cursor-pointer">{item.question}</summary>
+					<p class="text-muted mt-3">{item.answer}</p>
+				</details>
+			))}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,35 @@
+---
+const warningIcon = "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z";
+
+const items = [
+	"Pas de site = invisible sur les recherches locales",
+	"Un site non optimisé = peu de chances d'apparaître en première page",
+	"Un site clair + SEO local = plus de demandes qualifiées"
+];
+---
+
+<section class="py-16 bg-surface">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-3xl font-bold text-foreground mb-6">Pourquoi beaucoup de psychologues ont peu de visibilité</h2>
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div>
+				<p class="text-lg text-muted mb-4">
+					En libéral, vous misez sur le bouche-à-oreille et les plateformes (Doctolib, annuaires). Ces canaux apparaissent dans les résultats Google, mais sans site dédié vous dépendez entièrement d'eux : présentation limitée, concurrence sur la fiche, pas d'espace pour détailler votre approche et rassurer avant la prise de rendez-vous.
+				</p>
+				<p class="text-muted">
+					Les futurs patients tapent ces recherches avant de consulter. Un site professionnel, optimisé pour le référencement local, vous positionne dans ces résultats et attire des personnes déjà à la recherche de votre profil.
+				</p>
+			</div>
+			<ul class="space-y-3 text-muted">
+				{items.map((item) => (
+					<li class="flex items-start">
+						<svg class="w-5 h-5 text-foreground mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={warningIcon} />
+						</svg>
+						<span>{item}</span>
+					</li>
+				))}
+			</ul>
+		</div>
+	</div>
+</section>

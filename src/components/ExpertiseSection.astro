@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import expertiseVenn from '../assets/images/nicodev.png';
+---
+
+<section class="py-14 bg-surface-alt">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
+			<div class="min-w-0">
+				<h2 class="text-3xl font-bold text-foreground mb-6">Une expertise métier + web</h2>
+				<p class="text-lg text-muted max-w-4xl">
+					Conçu par un psychologue, pour les besoins concrets des psychologues. Psychologue en libéral depuis plus de 15 ans et développeur web, je connais vos enjeux : rassurer des patients, présenter clairement votre approche et rester conforme aux règles de communication selon votre profession.
+				</p>
+			</div>
+			<div class="flex justify-center lg:justify-end">
+				<Image
+					src={expertiseVenn}
+					alt="Psychologie et technologie au service de votre site"
+					width={665}
+					height={363}
+					widths={[384, 530, 665]}
+					sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 665px"
+					class="rounded-xl w-full max-w-sm"
+				/>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,90 @@
+---
+const checkIcon = "m4.5 12.75l6 6l9-13.5";
+const circleCheckIcon = "M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z";
+
+const searchExamples = [
+	"psychologue Sceaux",
+	"psychologue Paris 15",
+	"psychologue anxiété Lyon",
+	"psychologue TCC Bordeaux",
+	"thérapie ACT Nantes",
+	"psychologue adolescent Toulouse",
+	"psychologue Montpellier centre",
+	"psychologue en ligne"
+];
+
+const setupItems = [
+	"Structure de pages claire (Accueil / Approche / Tarifs / Contact)",
+	"Titres et contenus optimisés (psychologue + ville + spécialités)",
+	"Balises meta (title, description) et Open Graph",
+	"Performance (site rapide) et mobile-first",
+	"Plan de site, robots et indexation",
+	"Intégration Google Search Console (si proposée)",
+	"Données structurées (schema) adaptées au profil"
+];
+
+const benefitsItems = [
+	"Meilleure visibilité locale sur Google",
+	"Visiteurs plus qualifiés (recherche ciblée)",
+	"Plus de demandes de contact et de rendez-vous"
+];
+---
+
+<section id="seo-local" class="py-16 bg-surface-alt">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			<div>
+				<h2 class="text-3xl font-bold text-foreground mb-6">Référencement local : apparaître quand on cherche un psychologue près de chez soi</h2>
+				<p class="text-lg text-muted mb-6">Vos futurs patients tapent souvent des recherches du type «&nbsp;psychologue&nbsp;» + leur ville ou quartier. Un site bien structuré vous aide à apparaître dans ces résultats.</p>
+
+				<div class="mb-8">
+					<h3 class="text-lg font-semibold text-foreground mb-4">Exemples concrets de recherches Google</h3>
+					<p class="text-muted mb-4 text-sm">Ce que vos futurs patients tapent réellement :</p>
+					<div class="flex flex-wrap gap-2">
+						{searchExamples.map((example) => (
+							<span class="bg-surface text-foreground px-3 py-1.5 rounded-lg text-sm">{example}</span>
+						))}
+					</div>
+					<p class="text-sm text-muted mt-4 italic">En zone très concurrentielle, le référencement peut prendre plusieurs mois. Les bases (structure, contenu, technique) sont posées dès la mise en ligne et favorisent une progression durable.</p>
+				</div>
+
+				<div>
+					<h3 class="text-lg font-semibold text-foreground mb-4">Ce que je mets en place</h3>
+					<ul class="space-y-3">
+						{setupItems.map((item) => (
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-foreground mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={checkIcon} />
+								</svg>
+								<span class="text-muted">{item}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+			<div class="lg:sticky lg:top-8">
+				<div class="bg-background rounded-xl border border-border shadow-sm p-6">
+					<h3 class="text-lg font-semibold text-foreground mb-4">Ce que ça change pour vous</h3>
+					<ul class="space-y-3 mb-8">
+						{benefitsItems.map((item) => (
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-foreground mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={circleCheckIcon} />
+								</svg>
+								<span class="text-muted">{item}</span>
+							</li>
+						))}
+					</ul>
+					<div class="flex flex-col sm:flex-row gap-3">
+						<a href="#lead-form" class="inline-block text-center bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors">
+							Recevoir ma proposition sous 48h
+						</a>
+						<a href="#offres" class="inline-block text-center border-2 border-primary text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-background transition-colors">
+							Comparer les offres
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
