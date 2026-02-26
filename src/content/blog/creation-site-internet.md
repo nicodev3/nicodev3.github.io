@@ -1,10 +1,10 @@
----
+﻿---
 title: "Création d'un site Internet"
 description: "Comprendre comment se compose un site web moderne en 2026 : technologies, performance, accessibilité et SEO."
 pubDate: "2015-10-26"
 updatedDate: "2026-02-23"
 author: "Nicolas Devaux"
-image: "/images/navigateur.png"
+image: "/images/creation-site-internet.webp"
 tags: ["site internet", "création", "développement web", "HTML", "CSS", "JavaScript", "2026"]
 ---
 

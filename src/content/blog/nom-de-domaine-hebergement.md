@@ -4,7 +4,7 @@ description: "Comprendre les notions d'hébergement et de nom de domaine d'un si
 pubDate: "2015-09-12"
 updatedDate: "2024-08-20"
 author: "Nicolas Devaux"
-image: "/images/development.jpg"
+image: "/images/nom-domaine-hebergement.webp"
 tags: ["site internet", "hébergement", "nom de domaine", "débutant"]
 ---
 

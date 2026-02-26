@@ -11,9 +11,10 @@ export interface Props {
 	pubDate: string;
 	author: string;
 	tags?: string[];
+	updatedDate?: string;
 }
 
-const { title, description, href, image, imageAlt, tag, pubDate, author, tags } = Astro.props;
+const { title, description, href, image, imageAlt, tag, pubDate, author, tags, updatedDate } = Astro.props;
 ---
 
 <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -34,16 +35,30 @@ const { title, description, href, image, imageAlt, tag, pubDate, author, tags } 
 		)}
 	</div>
 	<div class="p-6">
-		<div class="flex items-center text-sm text-gray-500 mb-2">
-			<time datetime={pubDate}>
-				{new Date(pubDate).toLocaleDateString('fr-FR', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric'
-				})}
-			</time>
-			<span class="mx-2">•</span>
-			<span>{author}</span>
+		<div class="flex flex-col gap-1 text-sm text-gray-500 mb-2">
+			<div class="flex items-center">
+				<time datetime={pubDate}>
+					{new Date(pubDate).toLocaleDateString('fr-FR', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}
+				</time>
+				<span class="mx-2">•</span>
+				<span>{author}</span>
+			</div>
+			{updatedDate && (
+				<div class="text-xs text-gray-500">
+					Mis à jour le{' '}
+					<time datetime={updatedDate}>
+						{new Date(updatedDate).toLocaleDateString('fr-FR', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric'
+						})}
+					</time>
+				</div>
+			)}
 		</div>
 		<h2 class="text-xl font-semibold text-gray-900 mb-3">
 			<a href={href} class="hover:text-teal-600 transition-colors">

@@ -1,9 +1,10 @@
----title: "Site internet pour psychologue en 2026 : guide complet SEO et éthique"
+---
+title: "Site internet pour psychologue en 2026 : guide complet SEO et éthique"
 description: "Comment créer un site de psychologue visible sur Google en 2026 : structure, SEO local, accessibilité, cadre RGPD et bonnes pratiques de conversion."
 pubDate: "2016-09-05"
 updatedDate: "2026-02-26"
 author: "Nicolas Devaux"
-image: "/images/development.jpg"
+image: "/images/site-psychologue.webp"
 tags: ["psychologue", "site internet", "seo local", "accessibilité", "rgpd", "création site"]
 ---
 
