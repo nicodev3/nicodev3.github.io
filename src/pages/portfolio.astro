@@ -110,22 +110,22 @@ const psychologueProjects = [
 		subtitle="Quelques réalisations (psychologues et autres secteurs)"
 	/>
 
-	<section id="sites-psychologues" class="bg-opaline-50 py-12 sm:py-16">
+	<section id="sites-psychologues" class="bg-background py-12 sm:py-16">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl">
 				Portfolio de réalisations
 			</h2>
 
-			<div class="mb-10 rounded-xl border border-opaline-200 bg-opaline-100 p-5 sm:p-6">
+			<div class="mb-10 rounded-xl border border-border bg-surface p-5 sm:p-6">
 				<h3 class="mb-3 text-lg font-semibold text-foreground">Ce que montrent ces réalisations</h3>
-				<ul class="space-y-2 text-sm text-mutedText sm:text-base">
+				<ul class="space-y-2 text-sm text-muted sm:text-base">
 					<li>Une présentation claire de l'approche et des spécialités du praticien</li>
 					<li>Une navigation simple pour rassurer et faciliter la prise de contact</li>
 					<li>Des bases SEO locales solides pour améliorer la visibilité sur Google</li>
 				</ul>
 			</div>
 
-			<div class="mb-8 max-w-3xl rounded-lg bg-opaline-100 border border-opaline-200 px-5 py-4 text-sm text-mutedText italic">
+			<div class="mb-8 max-w-3xl rounded-lg bg-surface border border-border px-5 py-4 text-sm text-muted italic">
 				<p class="mb-2">
 					Note&nbsp;: Beaucoup des projets ci-dessous sont anciens (parfois plus de 10 ans) et certains sites ne sont plus en ligne (cessation d'activité de leur auteur).
 				</p>
@@ -140,7 +140,7 @@ const psychologueProjects = [
 			<!-- Projects Grid -->
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
 				{psychologueProjects.map((project) => (
-					<article class="flex flex-col overflow-hidden rounded-lg border border-opaline-200 bg-opaline-50 shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
+					<article class="flex flex-col overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
 						<div class="relative">
 							<Image
 								src={project.image}
@@ -152,14 +152,14 @@ const psychologueProjects = [
 								height={450}
 							/>
 						</div>
-						<div class="flex flex-grow flex-col border-t border-opaline-200 bg-opaline-100 p-5 sm:p-6">
+						<div class="flex flex-grow flex-col border-t border-border bg-surface p-5 sm:p-6">
 							<h3 class="mb-2 text-lg font-semibold text-foreground sm:text-xl">
 								{project.title}
 							</h3>
-							<p class="mb-3 text-mutedText">
+							<p class="mb-3 text-muted">
 								{project.description}
 							</p>
-							<div class="mb-4 flex items-center text-sm text-mutedText">
+							<div class="mb-4 flex items-center text-sm text-muted">
 								<svg class="mr-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
@@ -171,7 +171,7 @@ const psychologueProjects = [
 									href={project.url}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="inline-block rounded-lg bg-accent px-4 py-2 font-semibold text-on-accent transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+									class="inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
 									aria-label={`Visiter le site ${project.title} (nouvel onglet)`}
 								>
 									Visiter le site
@@ -183,27 +183,27 @@ const psychologueProjects = [
 			</div>
 
 			<div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
-				<div class="rounded-xl border border-opaline-200 bg-opaline-50 p-6">
+				<div class="rounded-xl border border-border bg-background p-6">
 					<h3 class="mb-4 text-lg font-semibold text-foreground">Méthode de travail</h3>
-					<ol class="space-y-2 text-mutedText">
+					<ol class="space-y-2 text-muted">
 						<li><strong>1.</strong> Diagnostic rapide pour cadrer le besoin</li>
 						<li><strong>2.</strong> Mise en place du site à partir d'un modèle pro personnalisé</li>
 						<li><strong>3.</strong> Aller-retour de validation puis mise en ligne</li>
 					</ol>
 				</div>
-				<div class="rounded-xl border border-opaline-200 bg-opaline-100 p-6">
+				<div class="rounded-xl border border-border bg-surface p-6">
 					<h3 class="mb-4 text-lg font-semibold text-foreground">Ce que vous pouvez attendre</h3>
-					<p class="mb-4 text-mutedText">
+					<p class="mb-4 text-muted">
 						Un site plus lisible pour vos futurs patients, une meilleure présence locale et des demandes de contact plus qualifiées.
 					</p>
-					<p class="text-mutedText">
+					<p class="text-muted">
 						Ces projets reposent sur les mêmes fondations que mes offres : Forfait Création (490€), Pack Site Vitrine (59€/mois) et Pack Site + Blog (89€/mois).
 					</p>
 					<div class="mt-5 flex flex-col gap-3 sm:flex-row">
-						<a href="/tarifs/" class="inline-block rounded-lg border-2 border-accent px-4 py-2 text-center font-semibold text-foreground transition-colors hover:bg-opaline-50">
+						<a href="/tarifs/" class="inline-block rounded-lg border-2 border-primary px-4 py-2 text-center font-semibold text-foreground transition-colors hover:bg-background">
 							Voir les offres
 						</a>
-						<a href="/contact/" class="inline-block rounded-lg bg-accent px-4 py-2 text-center font-semibold text-on-accent transition-colors hover:opacity-90">
+						<a href="/contact/" class="inline-block rounded-lg bg-primary px-4 py-2 text-center font-semibold text-on-primary transition-colors hover:opacity-90">
 							Recevoir une proposition en 48h
 						</a>
 					</div>

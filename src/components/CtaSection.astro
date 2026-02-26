@@ -12,24 +12,24 @@ const { title, description, primaryButton, secondaryButton, maxWidth = '7xl' } =
 const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7xl' }[maxWidth];
 ---
 
-<section class="py-16 bg-opaline-100 border-y border-opaline-200">
+<section class="py-16 bg-surface border-y border-border">
 	<div class={`${maxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 text-center`}>
 		<h2 class="text-3xl font-bold mb-4 text-foreground">
 			{title}
 		</h2>
-		<p class="text-xl mb-8 max-w-2xl mx-auto text-mutedText">
+		<p class="text-xl mb-8 max-w-2xl mx-auto text-muted">
 			{description}
 		</p>
 		<div class="flex flex-col sm:flex-row gap-4 justify-center">
 			<a
 				href={primaryButton.href}
-				class="bg-accent text-on-accent px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
+				class="bg-primary text-on-primary px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
 			>
 				{primaryButton.text}
 			</a>
 			<a
 				href={secondaryButton.href}
-				class="border-2 border-accent text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-opaline-50 transition-colors"
+				class="border-2 border-primary text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-background transition-colors"
 			>
 				{secondaryButton.text}
 			</a>

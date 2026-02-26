@@ -60,27 +60,27 @@ const ogImage = image ? new URL(image, baseUrl).toString() : new URL('/images/de
 		<title>{title}</title>
 		<slot name="head" />
 	</head>
-	<body class="bg-opaline-50 text-foreground">
-		<header class="bg-opaline-50 shadow-sm border-b border-opaline-200">
+	<body class="bg-background text-foreground">
+		<header class="bg-background shadow-sm border-b border-border">
 			<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigation principale">
 				<div class="flex flex-col sm:flex-row sm:justify-between sm:h-16 py-3 sm:py-0 gap-3 sm:gap-0">
 					<div class="flex items-center">
 						<a href="/" class="text-xl font-bold text-foreground">
-							<span class="font-bold text-foreground hover:text-accent">Nicolas Devaux</span>
-							<span class="mx-2 text-mutedText">/</span>
+							<span class="font-bold text-foreground hover:text-primary">Nicolas Devaux</span>
+							<span class="mx-2 text-muted">/</span>
 							<span class="inline-flex items-center gap-1">
-								<span class="inline-block px-2 py-0.5 rounded-full bg-opaline-100 text-foreground text-xs font-semibold">psychologue</span>
-								<span class="text-mutedText text-xl align-middle">+</span>
-								<span class="inline-block px-2 py-0.5 rounded-full bg-opaline-100 text-foreground text-xs font-semibold">développeur web</span>
+								<span class="inline-block px-2 py-0.5 rounded-full bg-surface text-foreground text-xs font-semibold">psychologue</span>
+								<span class="text-muted text-xl align-middle">+</span>
+								<span class="inline-block px-2 py-0.5 rounded-full bg-surface text-foreground text-xs font-semibold">développeur web</span>
 							</span>
 						</a>
 					</div>
 					<div class="flex items-center gap-5 sm:gap-8 overflow-x-auto pb-1 sm:pb-0 text-sm sm:text-base">
-						<a href="/portfolio/" class="text-mutedText hover:text-foreground whitespace-nowrap">Portfolio</a>
-						<a href="/tarifs/" class="text-mutedText hover:text-foreground whitespace-nowrap">Tarifs</a>
-						<a href="/about/" class="text-mutedText hover:text-foreground whitespace-nowrap">À propos</a>
-						<a href="/contact/" class="text-mutedText hover:text-foreground whitespace-nowrap">Contact</a>
-						<a href="/blog/" class="text-mutedText hover:text-foreground whitespace-nowrap">Blog</a>
+						<a href="/portfolio/" class="text-muted hover:text-foreground whitespace-nowrap">Portfolio</a>
+						<a href="/tarifs/" class="text-muted hover:text-foreground whitespace-nowrap">Tarifs</a>
+						<a href="/about/" class="text-muted hover:text-foreground whitespace-nowrap">À propos</a>
+						<a href="/contact/" class="text-muted hover:text-foreground whitespace-nowrap">Contact</a>
+						<a href="/blog/" class="text-muted hover:text-foreground whitespace-nowrap">Blog</a>
 					</div>
 				</div>
 			</nav>
@@ -92,18 +92,18 @@ const ogImage = image ? new URL(image, baseUrl).toString() : new URL('/images/de
 
 		<ProfessionsSection />
 
-		<footer class="bg-foreground text-opaline-50 py-12">
+		<footer class="bg-foreground text-on-foreground py-12">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
 						<h3 class="text-lg font-semibold mb-4">Nicolas Devaux</h3>
-						<p class="text-opaline-50">
+						<p class="text-on-foreground">
 							Développeur web et psychologue spécialisé dans la création de sites internet pour psychologues.
 						</p>
 					</div>
 					<div>
 						<h3 class="text-lg font-semibold mb-4">Services</h3>
-						<ul class="space-y-2 text-opaline-50">
+						<ul class="space-y-2 text-on-foreground">
 							<li>Création de sites internet</li>
 							<li>Visibilité locale sur Google</li>
 							<li>Design responsive</li>
@@ -112,15 +112,15 @@ const ogImage = image ? new URL(image, baseUrl).toString() : new URL('/images/de
 					</div>
 					<div>
 						<h3 class="text-lg font-semibold mb-4">Contact</h3>
-						<p class="text-opaline-50">
+						<p class="text-on-foreground">
 							Email: contact.nicodev@gmail.com<br />
-							GitHub: <a href="https://github.com/nicodev3" class="text-opaline-50 hover:text-opaline-100">@nicodev3</a>
+							GitHub: <a href="https://github.com/nicodev3" class="text-on-foreground hover:opacity-80">@nicodev3</a>
 						</p>
 					</div>
 				</div>
-				<div class="border-t border-opaline-200 mt-8 pt-8 text-center text-opaline-50">
+				<div class="border-t border-border mt-8 pt-8 text-center text-on-foreground">
 					<p>
-						<a href="/cgv/" class="text-opaline-50 hover:text-opaline-100">Conditions générales de vente</a>
+						<a href="/cgv/" class="text-on-foreground hover:opacity-80">Conditions générales de vente</a>
 						<span class="mx-2">|</span>
 						&copy; 2011-2026 Nicolas Devaux. Tous droits réservés.
 					</p>

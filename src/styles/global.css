@@ -8,18 +8,22 @@
     --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
     --font-heading: "Lora Variable", Georgia, serif;
 
-    /* Palette Opaline */
-    --color-opaline-50: #F4F4F6;
-    --color-opaline-100: #E7E7E7;
-    --color-opaline-200: #D2D2D4;
-    --color-accent: #FF634A;
+    /* 5 couleurs de base */
+    --color-primary: #FF634A;
+    --color-neutral-0: #FFFFFF;
+    --color-neutral-50: #F4F4F6;
+    --color-neutral-600: #334155;
+    --color-neutral-900: #0F2A2A;
 
-    /* Texte (WCAG) */
-    --color-foreground: #0F172A;
-    --color-mutedText: #334155;
-
-    /* Texte sur accent (boutons CTA) - nécessaire WCAG */
-    --color-on-accent: #FFFFFF;
+    /* Variables sémantiques (alias) */
+    --color-on-primary: var(--color-neutral-0);
+    --color-background: var(--color-neutral-50);
+    --color-surface: var(--color-neutral-50);
+    --color-foreground: var(--color-neutral-900);
+    --color-on-foreground: var(--color-neutral-50);
+    --color-muted: var(--color-neutral-600);
+    --color-surface-alt: color-mix(in srgb, var(--color-foreground) 12%, var(--color-background));
+    --color-border: var(--color-surface-alt);
 }
 
 /* Styles globaux personnalisés */
@@ -35,56 +39,56 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Styles pour le plan de l'article */
 
-.toc-container {
+.c-toc-container {
     position: relative;
     transition: all 0.3s ease;
 }
 
-.toc-container:hover {
+.c-toc-container:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.toc-container ul li a {
+.c-toc-container ul li a {
     position: relative;
     padding-left: 0.5rem;
     border-left: 2px solid transparent;
     transition: all 0.2s ease;
 }
 
-.toc-container ul li a:hover {
-    border-left-color: var(--color-accent);
-    background-color: var(--color-opaline-50);
+.c-toc-container ul li a:hover {
+    border-left-color: var(--color-primary);
+    background-color: var(--color-background);
     padding-left: 1rem;
 }
 
-.toc-container ul ul li a {
-    border-left: 1px solid var(--color-opaline-200);
+.c-toc-container ul ul li a {
+    border-left: 1px solid var(--color-border);
 }
 
-.toc-container ul ul li a:hover {
-    border-left-color: var(--color-accent);
+.c-toc-container ul ul li a:hover {
+    border-left-color: var(--color-primary);
 }
 
 
 /* Animation pour les liens du plan */
 
-.toc-container a {
+.c-toc-container a {
     position: relative;
     overflow: hidden;
 }
 
-.toc-container a::before {
+.c-toc-container a::before {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
     transition: width 0.3s ease;
 }
 
-.toc-container a:hover::before {
+.c-toc-container a:hover::before {
     width: 100%;
 }

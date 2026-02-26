@@ -116,7 +116,7 @@ const breadcrumbSchema = {
 		</div>
 		<div slot="after" class="flex flex-wrap justify-center gap-2">
 			{entry.data.tags?.map((t: string) => (
-				<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="bg-opaline-100 hover:bg-opaline-200 text-foreground px-3 py-1 rounded-full text-sm transition-colors">
+				<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="bg-surface hover:bg-surface-alt text-foreground px-3 py-1 rounded-full text-sm transition-colors">
 					{t}
 				</a>
 			))}
@@ -124,39 +124,39 @@ const breadcrumbSchema = {
 	</Hero>
 
 	<!-- Article Content -->
-	<article class="py-16 bg-opaline-50">
+	<article class="py-16 bg-background">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="prose prose-lg max-w-none
 				prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground
-				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-opaline-200 prose-h2:pb-2
+				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
 				prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-foreground
-				prose-p:text-mutedText prose-p:leading-relaxed
-				prose-a:text-foreground prose-a:font-medium prose-a:no-underline hover:prose-a:text-accent
+				prose-p:text-muted prose-p:leading-relaxed
+				prose-a:text-foreground prose-a:font-medium prose-a:no-underline hover:prose-a:text-primary
 				prose-strong:text-foreground
-				prose-blockquote:border-l-4 prose-blockquote:border-opaline-200 prose-blockquote:bg-opaline-100 prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-mutedText
-				prose-code:text-foreground prose-code:bg-opaline-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
-				prose-pre:bg-foreground prose-pre:text-opaline-50 prose-pre:rounded-xl prose-pre:shadow-lg
-				prose-ul:my-4 prose-li:my-1 prose-li:text-mutedText
+				prose-blockquote:border-l-4 prose-blockquote:border-border prose-blockquote:bg-surface prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-muted
+				prose-code:text-foreground prose-code:bg-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
+				prose-pre:bg-foreground prose-pre:text-on-foreground prose-pre:rounded-xl prose-pre:shadow-lg
+				prose-ul:my-4 prose-li:my-1 prose-li:text-muted
 				prose-ol:my-4
 				prose-img:rounded-xl prose-img:shadow-md prose-img:mx-auto
-				prose-hr:border-opaline-200">
+				prose-hr:border-border">
 				<Content />
 			</div>
 		</div>
 	</article>
 
 	<!-- Liens internes : tarifs et contact -->
-	<section class="py-12 bg-opaline-100 border-t border-opaline-200">
+	<section class="py-12 bg-surface border-t border-border">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-xl font-semibold text-foreground mb-4">Un projet de site web ?</h2>
-			<p class="text-mutedText mb-6">
-				Vous cherchez un site professionnel pour votre cabinet ? Consultez mes <a href="/tarifs/" class="text-foreground font-medium hover:text-accent">tarifs</a> ou <a href="/contact/" class="text-foreground font-medium hover:text-accent">contactez-moi</a> pour en discuter.
+			<p class="text-muted mb-6">
+				Vous cherchez un site professionnel pour votre cabinet ? Consultez mes <a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a> ou <a href="/contact/" class="text-foreground font-medium hover:text-primary">contactez-moi</a> pour en discuter.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<a href="/tarifs/" class="inline-flex items-center bg-accent text-on-accent px-5 py-2.5 rounded-lg font-medium hover:opacity-90 transition-colors">
+				<a href="/tarifs/" class="inline-flex items-center bg-primary text-on-primary px-5 py-2.5 rounded-lg font-medium hover:opacity-90 transition-colors">
 					Voir les tarifs
 				</a>
-				<a href="/contact/" class="inline-flex items-center bg-opaline-50 text-foreground border-2 border-accent px-5 py-2.5 rounded-lg font-medium hover:bg-opaline-100 transition-colors">
+				<a href="/contact/" class="inline-flex items-center bg-background text-foreground border-2 border-primary px-5 py-2.5 rounded-lg font-medium hover:bg-surface transition-colors">
 					Me contacter
 				</a>
 			</div>
@@ -165,16 +165,16 @@ const breadcrumbSchema = {
 
 	<!-- Articles similaires -->
 	{relatedPosts.length > 0 && (
-		<section class="py-16 bg-opaline-100">
+		<section class="py-16 bg-surface">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl font-semibold text-foreground mb-6">À lire aussi</h2>
 				<ul class="space-y-3">
 					{relatedPosts.map((post) => (
 						<li>
-							<a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="group flex items-start gap-3 text-mutedText hover:text-accent">
-								<span class="text-foreground group-hover:text-accent mt-0.5">→</span>
+							<a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="group flex items-start gap-3 text-muted hover:text-primary">
+								<span class="text-foreground group-hover:text-primary mt-0.5">→</span>
 								<span class="font-medium group-hover:underline">{post.data.title}</span>
-								<span class="text-sm text-mutedText">
+								<span class="text-sm text-muted">
 									{new Date(post.data.pubDate).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
 								</span>
 							</a>
@@ -186,12 +186,12 @@ const breadcrumbSchema = {
 	)}
 
 	<!-- Navigation -->
-	<section class="py-16 bg-opaline-50">
+	<section class="py-16 bg-background">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center">
 				<a 
 					href="/blog/"
-					class="inline-flex items-center bg-accent text-on-accent px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
+					class="inline-flex items-center bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
 				>
 					← Retour au blog
 				</a>

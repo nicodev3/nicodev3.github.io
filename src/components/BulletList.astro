@@ -9,8 +9,8 @@ const { items } = Astro.props;
 <div class="space-y-3">
 	{items.map((item) => (
 		<div class="flex items-start">
-			<div class="w-2 h-2 bg-opaline-200 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-			<span class="text-mutedText" set:html={item} />
+			<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 flex-shrink-0"></div>
+			<span class="text-muted" set:html={item} />
 		</div>
 	))}
 </div>

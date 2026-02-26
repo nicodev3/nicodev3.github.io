@@ -39,14 +39,14 @@ const sortedPosts = posts.sort((a, b) => {
 		subtitle="Conseils et articles sur la création de sites internet"
 	/>
 
-	<section class="py-16 bg-opaline-50">
+	<section class="py-16 bg-background">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			{allTags.length > 0 && (
 				<nav class="mb-10" aria-label="Filtrer par tag">
-				<h2 class="text-sm font-semibold text-mutedText uppercase tracking-wider mb-3">Parcourir par thématique</h2>
+				<h2 class="text-sm font-semibold text-muted uppercase tracking-wider mb-3">Parcourir par thématique</h2>
 				<div class="flex flex-wrap gap-2">
 					{allTags.map((t) => (
-						<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="inline-flex items-center px-4 py-2 rounded-full bg-opaline-100 text-foreground hover:bg-opaline-200 font-medium text-sm transition-colors">
+						<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="inline-flex items-center px-4 py-2 rounded-full bg-surface text-foreground hover:bg-surface-alt font-medium text-sm transition-colors">
 								{t}
 							</a>
 						))}
@@ -69,11 +69,11 @@ const sortedPosts = posts.sort((a, b) => {
 					/>
 				))}
 			</div>
-			<div class="mt-16 pt-12 border-t border-opaline-200 text-center">
-				<p class="text-mutedText mb-4">Un projet de site web pour votre cabinet ?</p>
+			<div class="mt-16 pt-12 border-t border-border text-center">
+				<p class="text-muted mb-4">Un projet de site web pour votre cabinet ?</p>
 				<div class="flex flex-wrap justify-center gap-4">
-					<a href="/tarifs/" class="text-foreground font-medium hover:text-accent">Voir mes tarifs</a>
-					<a href="/contact/" class="text-foreground font-medium hover:text-accent">Me contacter</a>
+					<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">Voir mes tarifs</a>
+					<a href="/contact/" class="text-foreground font-medium hover:text-primary">Me contacter</a>
 				</div>
 			</div>
 		</div>

@@ -13,11 +13,11 @@ export interface Props {
 const { name, price, description, features, buttonLabel, buttonHref, recommended = false, badgeText } = Astro.props;
 
 const baseClasses =
-	'relative flex flex-col rounded-2xl border bg-opaline-50 p-6 sm:p-8 shadow-sm transition-transform transition-shadow duration-200';
+	'relative flex flex-col rounded-2xl border bg-background p-6 sm:p-8 shadow-sm transition-transform transition-shadow duration-200';
 
 const recommendedClasses = recommended
-	? ' border-accent shadow-md ring-1 ring-opaline-200 scale-[1.01]'
-	: ' border-opaline-200 bg-opaline-50 hover:shadow-md';
+	? ' border-primary shadow-md ring-1 ring-surface-alt scale-[1.01]'
+	: ' border-border bg-background hover:shadow-md';
 
 const cardClass = `${baseClasses} ${recommendedClasses}`;
 ---
@@ -25,7 +25,7 @@ const cardClass = `${baseClasses} ${recommendedClasses}`;
 <article class={cardClass}>
 	{recommended && badgeText && (
 		<div class="absolute -top-4 left-1/2 -translate-x-1/2">
-			<div class="rounded-full bg-accent px-4 py-1 text-xs font-semibold uppercase tracking-wide text-on-accent shadow">
+			<div class="rounded-full bg-primary px-4 py-1 text-xs font-semibold uppercase tracking-wide text-on-primary shadow">
 				{badgeText}
 			</div>
 		</div>
@@ -35,15 +35,15 @@ const cardClass = `${baseClasses} ${recommendedClasses}`;
 		<h3 class="text-xl font-semibold text-foreground sm:text-2xl">{name}</h3>
 		<p class="mt-2 text-3xl font-bold text-foreground sm:text-4xl">
 			{price}
-			<span class="ml-1 text-base font-normal text-mutedText">/mois</span>
+			<span class="ml-1 text-base font-normal text-muted">/mois</span>
 		</p>
-		<p class="mt-3 text-sm text-mutedText sm:text-base">{description}</p>
+		<p class="mt-3 text-sm text-muted sm:text-base">{description}</p>
 	</header>
 
-	<ul class="mb-8 space-y-3 text-sm text-mutedText sm:text-base">
+	<ul class="mb-8 space-y-3 text-sm text-muted sm:text-base">
 		{features.map((feature) => (
 			<li class="flex gap-3">
-				<span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-opaline-100 text-foreground">
+				<span class="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-surface text-foreground">
 					<svg
 						class="h-3 w-3"
 						fill="none"
@@ -62,7 +62,7 @@ const cardClass = `${baseClasses} ${recommendedClasses}`;
 	<div class="mt-auto">
 		<a
 			href={buttonHref}
-			class="flex w-full items-center justify-center rounded-lg bg-accent px-5 py-3 text-center text-sm font-semibold text-on-accent transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-opaline-50"
+			class="flex w-full items-center justify-center rounded-lg bg-primary px-5 py-3 text-center text-sm font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 		>
 			{buttonLabel}
 		</a>
