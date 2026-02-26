@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# tarteaucitron (copié depuis node_modules par le plugin Vite)
+public/tarteaucitron/
+
 # dependencies
 node_modules/
 
