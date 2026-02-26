@@ -74,18 +74,6 @@ const ogImage = image
 
     <title>{title}</title>
     <slot name="head" />
-    <script
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y75K3GN27H"></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-Y75K3GN27H");
-    </script>
   </head>
   <body class="bg-background text-foreground">
     <Header />
