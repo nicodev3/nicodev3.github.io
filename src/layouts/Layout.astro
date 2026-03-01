@@ -33,6 +33,7 @@ const ogImage = image
 
 const umamiId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL;
+const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : "";
 ---
 
 <!doctype html>
@@ -109,7 +110,7 @@ const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL;
     {umamiId && umamiUrl && (
       <script
         defer
-        src={`${umamiUrl}/script.js`}
+        src={umamiScriptSrc}
         data-website-id={umamiId}
       ></script>
     )}
