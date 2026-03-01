@@ -30,6 +30,9 @@ const canonical = new URL(Astro.url.pathname, baseUrl).toString();
 const ogImage = image
   ? new URL(image, baseUrl).toString()
   : new URL("/images/development.jpg", baseUrl).toString();
+
+const umamiId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
+const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL;
 ---
 
 <!doctype html>
@@ -103,6 +106,13 @@ const ogImage = image
 
     <title>{title}</title>
     <slot name="head" />
+    {umamiId && umamiUrl && (
+      <script
+        defer
+        src={`${umamiUrl}/script.js`}
+        data-website-id={umamiId}
+      ></script>
+    )}
   </head>
   <body class="bg-background text-foreground">
     <Header />
