@@ -1,222 +1,290 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import CtaSection from '../components/CtaSection.astro';
-import { Image } from 'astro:assets';
-import cecilecoachingImage from '../assets/images/screenshots/cecilecoaching.fr.webp';
-import severineReisserImage from '../assets/images/screenshots/psychologue-leslilas.webp';
-import marieJoseeGrassoImage from '../assets/images/screenshots/psychologue-sorgues.webp';
-import delphineCimaImage from '../assets/images/screenshots/psy-manosque.webp';
-import marieClaireBruneauImage from '../assets/images/screenshots/mcbruneau-psychologue-blois.fr.webp';
-import emanuelleFalliganImage from '../assets/images/screenshots/psy-sarrebourg.webp';
-import stephanieRequetImage from '../assets/images/screenshots/psy-andrezieux.webp';
-import thomasMouriesImage from '../assets/images/screenshots/osteopathe-toulouse-mouries.webp';
-import audreyLarcebauImage from '../assets/images/screenshots/psy-emdr-cotebasque.webp';
-import geraldineAdamImage from '../assets/images/screenshots/cours-pilates-fullpage.webp';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import CtaSection from "../components/CtaSection.astro";
+import { Image } from "astro:assets";
+import cecilecoachingImage from "../assets/images/screenshots/cecilecoaching.fr.webp";
+import severineReisserImage from "../assets/images/screenshots/psychologue-leslilas.webp";
+import marieJoseeGrassoImage from "../assets/images/screenshots/psychologue-sorgues.webp";
+import delphineCimaImage from "../assets/images/screenshots/psy-manosque.webp";
+import marieClaireBruneauImage from "../assets/images/screenshots/mcbruneau-psychologue-blois.fr.webp";
+import emanuelleFalliganImage from "../assets/images/screenshots/psy-sarrebourg.webp";
+import stephanieRequetImage from "../assets/images/screenshots/psy-andrezieux.webp";
+import thomasMouriesImage from "../assets/images/screenshots/osteopathe-toulouse-mouries.webp";
+import audreyLarcebauImage from "../assets/images/screenshots/psy-emdr-cotebasque.webp";
+import geraldineAdamImage from "../assets/images/screenshots/cours-pilates-fullpage.webp";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
-	'@context': 'https://schema.org',
-	'@type': 'BreadcrumbList',
-	itemListElement: [
-		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
-		{ '@type': 'ListItem', position: 2, name: 'Portfolio', item: new URL('/portfolio', baseUrl).toString() }
-	]
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: new URL("/", baseUrl).toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Portfolio",
+      item: new URL("/portfolio", baseUrl).toString(),
+    },
+  ],
 };
 
 const psychologueProjects = [
-	{
-		title: "Cécile Coaching",
-		description: "Site vitrine pour coach professionnelle",
-		image: cecilecoachingImage,
-		url: "https://cecilecoaching.fr/",
-		location: "Paris"
-	},
-	{
-		title: "Séverine Reisser",
-		description: "Site vitrine professionnel pour psychologue",
-		image: severineReisserImage,
-		url: "https://psychologue-leslilas.fr/",
-		location: "Les Lilas"
-	},
-	{
-		title: "Marie-Josée Grasso",
-		description: "Site vitrine pour psychologue",
-		image: marieJoseeGrassoImage,
-		url: "https://psychologue-sorgues.com/",
-		location: "Sorgues"
-	},
-	{
-		title: "Delphine Cima",
-		description: "Site vitrine professionnel pour psychologue",
-		image: delphineCimaImage,
-		url: "https://psychologue-manosque.net/",
-		location: "Manosque"
-	},
-	{
-		title: "Marie-Claire Bruneau",
-		description: "Site vitrine professionnel pour psychologue",
-		image: marieClaireBruneauImage,
-		url: "https://mcbruneau-psychologue-blois.fr/",
-		location: "Blois"
-	},
-	{
-		title: "Emanuelle FALLIGAN",
-		description: "Site vitrine professionnel pour psychologue",
-		image: emanuelleFalliganImage,
-		url: "https://psychologue-sarrebourg.fr/",
-		location: "Sarrebourg"
-	},
-	{
-		title: "Stéphanie REQUET-CATINEAN",
-		description: "Site vitrine moderne pour psychologue",
-		image: stephanieRequetImage,
-		url: "https://psychologue-andrezieux-boutheon.fr/",
-		location: "Andrézieux-Bouthéon"
-	},
-	{
-		title: "Thomas Mouries",
-		description: "Site vitrine pour ostéopathe D.O avec spécialisations",
-		image: thomasMouriesImage,
-		url: "https://osteopathe-toulouse-mouries.fr/",
-		location: "Toulouse"
-	},
-	{
-		title: "Audrey Larcebau",
-		description: "Site vitrine pour psychologue spécialisée en EMDR",
-		image: audreyLarcebauImage,
-		url: "https://psy-emdr-cotebasque.fr/",
-		location: "Côtebasque"
-	},
-	{
-		title: "Géraldine Adam",
-		description: "Site vitrine pour coach sportif spécialisée en Pilates",
-		image: geraldineAdamImage,
-		url: "https://cours-pilates.fr/",
-		location: "Sceaux"
-	},
+  {
+    title: "Cécile Coaching",
+    description: "Site vitrine pour coach professionnelle",
+    image: cecilecoachingImage,
+    url: "https://cecilecoaching.fr/",
+    location: "Paris",
+  },
+  {
+    title: "Séverine Reisser",
+    description: "Site vitrine pour psychologue",
+    image: severineReisserImage,
+    url: "https://psychologue-leslilas.fr/",
+    location: "Les Lilas",
+  },
+  {
+    title: "Marie-Josée Grasso",
+    description: "Site vitrine pour psychologue",
+    image: marieJoseeGrassoImage,
+    url: "https://psychologue-sorgues.com/",
+    location: "Sorgues",
+  },
+  {
+    title: "Delphine Cima",
+    description: "Site vitrine pour psychologue",
+    image: delphineCimaImage,
+    url: "https://psychologue-manosque.net/",
+    location: "Manosque",
+  },
+  {
+    title: "Marie-Claire Bruneau",
+    description: "Site vitrine pour psychologue",
+    image: marieClaireBruneauImage,
+    url: "https://mcbruneau-psychologue-blois.fr/",
+    location: "Blois",
+  },
+  {
+    title: "Emanuelle FALLIGAN",
+    description: "Site vitrine pour psychologue",
+    image: emanuelleFalliganImage,
+    url: "https://psychologue-sarrebourg.fr/",
+    location: "Sarrebourg",
+  },
+  {
+    title: "Stéphanie REQUET-CATINEAN",
+    description: "Site vitrine pour psychologue",
+    image: stephanieRequetImage,
+    url: "https://psychologue-andrezieux-boutheon.fr/",
+    location: "Andrézieux-Bouthéon",
+  },
+  {
+    title: "Audrey Larcebau",
+    description: "Site vitrine pour psychologue spécialisée en EMDR",
+    image: audreyLarcebauImage,
+    url: "https://psy-emdr-cotebasque.fr/",
+    location: "Côtebasque",
+  },
+  {
+    title: "Géraldine Adam",
+    description: "Site vitrine pour coach sportif spécialisée en Pilates",
+    image: geraldineAdamImage,
+    url: "https://cours-pilates.fr/",
+    location: "Sceaux",
+  },
+  {
+    title: "Thomas Mouries",
+    description: "Site vitrine pour ostéopathe D.O avec spécialisations",
+    image: thomasMouriesImage,
+    url: "https://osteopathe-toulouse-mouries.fr/",
+    location: "Toulouse",
+  },
 ];
 ---
 
-<Layout 
-	title="Réalisations sites internet psychologues | Nicolas Devaux"
-	description="Réalisations de sites internet : portfolio historique. Positionnement actuel : création de sites exclusivement pour psychologues."
+<Layout
+  title="Réalisations sites internet psychologues | Nicolas Devaux"
+  description="Réalisations de sites internet : portfolio historique. Positionnement actuel : création de sites exclusivement pour psychologues."
 >
-	<Fragment slot="head">
-		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-	</Fragment>
-	<Hero 
-		title="Portfolio" 
-		subtitle="Quelques réalisations (psychologues et autres secteurs)"
-		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Portfolio' }]}
-	/>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  </Fragment>
+  <Hero
+    title="Portfolio"
+    subtitle="Quelques réalisations (psychologues et autres secteurs)"
+    breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Portfolio" }]}
+  />
 
-	<section id="sites-psychologues" class="bg-white py-12 sm:py-16">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl">
-				Portfolio de réalisations
-			</h2>
+  <section id="sites-psychologues" class="bg-white py-12 sm:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2
+        class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl"
+      >
+        Portfolio de réalisations
+      </h2>
 
-			<div class="mb-10 rounded-xl border border-border bg-surface p-5 sm:p-6">
-				<h3 class="mb-3 text-lg font-semibold text-foreground">Ce que montrent ces réalisations</h3>
-				<ul class="space-y-2 text-sm text-muted sm:text-base">
-					<li>Une présentation claire de l'approche et des spécialités du praticien</li>
-					<li>Une navigation simple pour rassurer et faciliter la prise de contact</li>
-					<li>Des bases SEO locales solides pour améliorer la visibilité sur Google</li>
-				</ul>
-			</div>
+      <div class="mb-10 rounded-xl border border-border bg-surface p-5 sm:p-6">
+        <h3 class="mb-3 text-lg font-semibold text-foreground">
+          Ce que montrent ces réalisations
+        </h3>
+        <ul class="space-y-2 text-sm text-muted sm:text-base">
+          <li>
+            Une présentation claire de l'approche et des spécialités du
+            praticien
+          </li>
+          <li>
+            Une navigation simple pour rassurer et faciliter la prise de contact
+          </li>
+          <li>
+            Des bases SEO locales solides pour améliorer la visibilité sur
+            Google
+          </li>
+        </ul>
+      </div>
 
-			<div class="mb-8 max-w-3xl rounded-lg bg-surface border border-border px-5 py-4 text-sm text-muted italic">
-				<p class="mb-2">
-					Note&nbsp;: Beaucoup des projets ci-dessous sont anciens (parfois plus de 10 ans) et certains sites ne sont plus en ligne (cessation d'activité de leur auteur).
-				</p>
-				<p class="mb-2">
-					Ce portfolio garde la trace de toutes mes réalisations passées. Aujourd'hui, j'accompagne exclusivement les psychologues.
-				</p>
-				<p>
-					Le style évolue selon l'époque, mais la méthode reste celle d’un site clair, rassurant, optimisé mobile et pensé pour la visibilité locale (psychologue + ville), avec la possibilité d'intégrer un outil de prise de rendez-vous.
-				</p>
-			</div>
+      <div
+        class="mb-8 max-w-3xl rounded-lg bg-surface border border-border px-5 py-4 text-sm text-muted italic"
+      >
+        <p class="mb-2">
+          Note&nbsp;: Beaucoup des projets ci-dessous sont anciens (parfois plus
+          de 10 ans) et certains sites ne sont plus en ligne (cessation
+          d'activité de leur auteur).
+        </p>
+        <p class="mb-2">
+          Ce portfolio garde la trace de toutes mes réalisations passées.
+          Aujourd'hui, j'accompagne exclusivement les psychologues.
+        </p>
+        <p>
+          Le style évolue selon l'époque, mais la méthode reste celle d’un site
+          clair, rassurant, optimisé mobile et pensé pour la visibilité locale
+          (psychologue + ville), avec la possibilité d'intégrer un outil de
+          prise de rendez-vous.
+        </p>
+      </div>
 
-			<!-- Projects Grid -->
-			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-				{psychologueProjects.map((project) => (
-					<article class="flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
-						<div class="relative aspect-video w-full">
-							<Image
-								src={project.image}
-								alt={`Aperçu du site ${project.title}`}
-								class="h-full w-full object-contain"
-								loading="lazy"
-								decoding="async"
-								width={800}
-								height={450}
-							/>
-						</div>
-						<div class="flex flex-grow flex-col border-t border-border bg-white p-5 sm:p-6">
-							<h3 class="mb-2 text-lg font-semibold text-foreground sm:text-xl">
-								{project.title}
-							</h3>
-							<p class="mb-3 text-muted">
-								{project.description}
-							</p>
-							<div class="mb-4 flex items-center text-sm text-muted">
-								<svg class="mr-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
-								</svg>
-								{project.location}
-							</div>
-							<div class="mt-auto">
-								<a 
-									href={project.url}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-									aria-label={`Visiter le site ${project.title} (nouvel onglet)`}
-								>
-									Visiter le site
-								</a>
-							</div>
-						</div>
-					</article>
-				))}
-			</div>
+      <!-- Projects Grid -->
+      <div
+        class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+      >
+        {
+          psychologueProjects.map((project) => (
+            <article class="flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
+              <div class="relative aspect-video w-full">
+                <Image
+                  src={project.image}
+                  alt={`Aperçu du site ${project.title}`}
+                  class="h-full w-full object-contain"
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={450}
+                />
+              </div>
+              <div class="flex flex-grow flex-col border-t border-border bg-white p-5 sm:p-6">
+                <h3 class="mb-2 text-lg font-semibold text-foreground sm:text-xl">
+                  {project.title}
+                </h3>
+                <p class="mb-3 text-muted">{project.description}</p>
+                <div class="mb-4 flex items-center text-sm text-muted">
+                  <svg
+                    class="mr-1 h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"
+                    />
+                  </svg>
+                  {project.location}
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    aria-label={`Visiter le site ${project.title} (nouvel onglet)`}
+                  >
+                    Visiter le site
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
 
-			<div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
-				<div class="rounded-xl border border-border bg-background p-6">
-					<h3 class="mb-4 text-lg font-semibold text-foreground">Méthode de travail</h3>
-					<ol class="space-y-2 text-muted">
-						<li><strong>1.</strong> Diagnostic rapide pour cadrer le besoin</li>
-						<li><strong>2.</strong> Mise en place du site à partir d'un modèle pro personnalisé</li>
-						<li><strong>3.</strong> Aller-retour de validation puis mise en ligne</li>
-					</ol>
-				</div>
-				<div class="rounded-xl border border-border bg-surface p-6">
-					<h3 class="mb-4 text-lg font-semibold text-foreground">Ce que vous pouvez attendre</h3>
-					<p class="mb-4 text-muted">
-						Un site plus lisible pour vos futurs patients, une meilleure présence locale et des demandes de contact plus qualifiées.
-					</p>
-					<p class="text-muted">
-						Ces projets reposent sur les mêmes fondations que mes offres : Forfait Création (490€), Pack Site Vitrine (59€/mois) et Pack Site + Blog (89€/mois).
-					</p>
-					<div class="mt-5 flex flex-col gap-3 sm:flex-row">
-						<a href="/tarifs/" class="inline-block rounded-lg border-2 border-primary px-4 py-2 text-center font-semibold text-foreground transition-colors hover:bg-background">
-							Voir les offres
-						</a>
-						<a href="/contact/" class="inline-block rounded-lg bg-primary px-4 py-2 text-center font-semibold text-on-primary transition-colors hover:opacity-90">
-							Recevoir une proposition en 48h
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div class="rounded-xl border border-border bg-background p-6">
+          <h3 class="mb-4 text-lg font-semibold text-foreground">
+            Méthode de travail
+          </h3>
+          <ol class="space-y-2 text-muted">
+            <li><strong>1.</strong> Diagnostic rapide pour cadrer le besoin</li>
+            <li>
+              <strong>2.</strong> Mise en place du site à partir d'un modèle pro personnalisé
+            </li>
+            <li>
+              <strong>3.</strong> Aller-retour de validation puis mise en ligne
+            </li>
+          </ol>
+        </div>
+        <div class="rounded-xl border border-border bg-surface p-6">
+          <h3 class="mb-4 text-lg font-semibold text-foreground">
+            Ce que vous pouvez attendre
+          </h3>
+          <p class="mb-4 text-muted">
+            Un site plus lisible pour vos futurs patients, une meilleure
+            présence locale et des demandes de contact plus qualifiées.
+          </p>
+          <p class="text-muted">
+            Ces projets reposent sur les mêmes fondations que mes offres :
+            Forfait Création (490€), Pack Site Vitrine (59€/mois) et Pack Site +
+            Blog (89€/mois).
+          </p>
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="/tarifs/"
+              class="inline-block rounded-lg border-2 border-primary px-4 py-2 text-center font-semibold text-foreground transition-colors hover:bg-background"
+            >
+              Voir les offres
+            </a>
+            <a
+              href="/contact/"
+              class="inline-block rounded-lg bg-primary px-4 py-2 text-center font-semibold text-on-primary transition-colors hover:opacity-90"
+            >
+              Recevoir une proposition en 48h
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<CtaSection 
-		title="Vous avez un projet similaire ?"
-		description="Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé."
-		primaryButton={{ text: "Me contacter", href: "/contact/" }}
-		secondaryButton={{ text: "Voir mes tarifs", href: "/tarifs/" }}
-	/>
+  <CtaSection
+    title="Vous avez un projet similaire ?"
+    description="Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé."
+    primaryButton={{ text: "Me contacter", href: "/contact/" }}
+    secondaryButton={{ text: "Voir mes tarifs", href: "/tarifs/" }}
+  />
 </Layout>
