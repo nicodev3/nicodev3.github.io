@@ -75,7 +75,7 @@ Pour une activité de psychologue, le local est central. Vous devez aligner vos 
 Bonnes pratiques :
 - ville/zone d'intervention clairement indiquée,
 - même nom, adresse, téléphone partout,
-- fiche Google Business Profile complète et tenue à jour,
+- fiche Google Business Profile complète et tenue à jour (voir le [guide complet pour créer et optimiser votre fiche](/blog/google-business-profile-psychologue/)),
 - avis gérés avec éthique (pas d'incitation agressive).
 
 Ressource utile : [améliorer son classement local Google](https://support.google.com/business/answer/7091/improve-your-local-ranking-on-google).
@@ -205,6 +205,7 @@ Un site de psychologue efficace en 2026 est un site clair, utile et sobre. Le SE
 Si vous souhaitez créer ou refondre votre site, commencez par un audit simple puis avancez étape par étape.
 
 À lire aussi :
+- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
 - [Création d'un site Internet](/blog/creation-site-internet/)
 - [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/)
 esses universitaires de Perpignan, 2011 (généré le 29 septembre 2016). Disponible sur Internet : <http://books.openedition.org/pupvd/413>. ISBN : 9782354122249.

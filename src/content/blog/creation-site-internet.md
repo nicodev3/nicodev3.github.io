@@ -132,5 +132,6 @@ Vous avez un projet de site ? Consultez mes [tarifs](/tarifs/) et [contactez-moi
 
 ## A lire aussi
 
+- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide référencement local pour psychologues
 - [Combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/)
 - [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/)
