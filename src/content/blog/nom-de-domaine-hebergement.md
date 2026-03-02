@@ -73,6 +73,7 @@ N'hésitez pas à [me contacter](/contact/) si vous avez des questions sur ces s
 
 ## À lire aussi
 
+- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide référencement local pour psychologues
 - [Création d'un site Internet](/blog/creation-site-internet/) — les briques techniques du web moderne
 - [Combien coûte un site pour psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) — budget et fourchettes réalistes
 - [Les psychologues et leur site internet](/blog/site-internet-psychologues/) — bonnes pratiques déontologiques et éthiques

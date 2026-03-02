@@ -143,6 +143,7 @@ Si vous le souhaitez, je peux aussi préparer un modèle de cahier des charges p
 
 ## À lire aussi
 
+- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
 - [Création d'un site Internet](/blog/creation-site-internet/) — comprendre les technologies d'un site web en 2026
 - [Les psychologues et leur site internet](/blog/site-internet-psychologues/) — réflexion sur les bonnes pratiques
 - [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/) — guide pour débutants
