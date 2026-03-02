@@ -10,11 +10,16 @@ const features = [
 ];
 ---
 
-<section class="bg-surface text-foreground py-16 md:py-24">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="hero-home text-foreground py-16 md:py-20">
+	<div class="hero-layer hero-layer--wash" aria-hidden="true"></div>
+	<div class="hero-layer hero-layer--grain" aria-hidden="true"></div>
+	<div class="hero-orb hero-orb--left" aria-hidden="true"></div>
+	<div class="hero-orb hero-orb--right" aria-hidden="true"></div>
+
+	<div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
 			<div class="min-w-0">
-				<p class="text-sm md:text-base uppercase tracking-wider text-muted mb-4">Sites web pour psychologues</p>
+				<p class="text-sm md:text-lg uppercase tracking-wider text-muted mb-4">Sites web pour psychologues</p>
 				<h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl text-foreground">
 					Un site clair et rassurant pour présenter votre offre de soins
 				</h1>
@@ -54,3 +59,78 @@ const features = [
 		</div>
 	</div>
 </section>
+
+<style>
+	.hero-home {
+		position: relative;
+		overflow: hidden;
+		isolation: isolate;
+		border-bottom: 1px solid var(--color-border);
+		background-color: var(--color-surface);
+		background-image:
+			linear-gradient(
+				135deg,
+				color-mix(in srgb, var(--color-primary) 10%, var(--color-surface)) 0%,
+				var(--color-surface) 48%,
+				color-mix(in srgb, var(--color-foreground) 7%, var(--color-surface)) 100%
+			);
+	}
+
+	.hero-layer {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+	}
+
+	.hero-layer--wash {
+		background:
+			radial-gradient(circle at 15% 14%, color-mix(in srgb, var(--color-primary) 16%, transparent) 0, transparent 44%),
+			radial-gradient(circle at 84% 20%, color-mix(in srgb, var(--color-foreground) 11%, transparent) 0, transparent 47%);
+		opacity: 0.75;
+	}
+
+	.hero-layer--grain {
+		background-image:
+			linear-gradient(to right, color-mix(in srgb, var(--color-border) 22%, transparent) 1px, transparent 1px),
+			linear-gradient(to bottom, color-mix(in srgb, var(--color-border) 20%, transparent) 1px, transparent 1px);
+		background-size: 34px 34px;
+		mask-image: linear-gradient(to bottom, black 45%, transparent 100%);
+		opacity: 0.22;
+	}
+
+	.hero-orb {
+		position: absolute;
+		width: 18rem;
+		height: 18rem;
+		border-radius: 9999px;
+		filter: blur(48px);
+		opacity: 0.35;
+		pointer-events: none;
+	}
+
+	.hero-orb--left {
+		top: -4.5rem;
+		left: -5rem;
+		background: color-mix(in srgb, var(--color-primary) 42%, transparent);
+	}
+
+	.hero-orb--right {
+		top: -5.5rem;
+		right: -5rem;
+		background: color-mix(in srgb, var(--color-foreground) 20%, transparent);
+	}
+
+	@media (max-width: 768px) {
+		.hero-layer--grain {
+			background-size: 24px 24px;
+			opacity: 0.16;
+		}
+
+		.hero-orb {
+			width: 12rem;
+			height: 12rem;
+			filter: blur(32px);
+			opacity: 0.28;
+		}
+	}
+</style>

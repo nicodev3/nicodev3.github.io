@@ -24,6 +24,9 @@
     --color-muted: var(--color-neutral-600);
     --color-surface-alt: color-mix(in srgb, var(--color-foreground) 12%, var(--color-background));
     --color-border: var(--color-surface-alt);
+    --color-link: #0B5FA5;
+    --color-link-hover: #084E88;
+    --color-link-on-dark: #9ED0FF;
 }
 
 /* Styles globaux personnalisés */
@@ -34,6 +37,27 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+}
+
+a:not([class]) {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+    text-decoration-thickness: 0.08em;
+}
+
+a:not([class]):hover {
+    color: var(--color-link-hover);
+}
+
+a:not([class]):focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.bg-foreground a:not([class]) {
+    color: var(--color-link-on-dark);
 }
 
 
