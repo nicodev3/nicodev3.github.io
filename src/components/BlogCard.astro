@@ -15,6 +15,7 @@ export interface Props {
 }
 
 const { title, description, href, image, imageAlt, tag, pubDate, author, tags, updatedDate } = Astro.props;
+const toTagHref = (value: string) => `/blog/tag/${encodeURIComponent(value.toLowerCase())}/`;
 ---
 
 <article class="bg-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-border">
@@ -28,7 +29,7 @@ const { title, description, href, image, imageAlt, tag, pubDate, author, tags, u
 		/>
 		{tag && (
 			<div class="absolute top-4 left-4">
-				<a href={`/blog/tag/${encodeURIComponent(tag)}/`} class="bg-surface text-foreground hover:bg-surface-alt px-3 py-1 rounded-full text-sm font-medium transition-colors">
+				<a href={toTagHref(tag)} class="bg-surface text-foreground hover:bg-surface-alt px-3 py-1 rounded-full text-sm font-medium transition-colors">
 					{tag}
 				</a>
 			</div>
@@ -71,7 +72,7 @@ const { title, description, href, image, imageAlt, tag, pubDate, author, tags, u
 		{tags && tags.length > 0 && (
 			<div class="flex flex-wrap gap-2 mb-4">
 				{tags.slice(0, 3).map((t: string) => (
-					<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="bg-surface text-foreground hover:bg-surface-alt px-2 py-1 rounded text-sm transition-colors">
+					<a href={toTagHref(t)} class="bg-surface text-foreground hover:bg-surface-alt px-2 py-1 rounded text-sm transition-colors">
 						{t}
 					</a>
 				))}

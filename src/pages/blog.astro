@@ -5,6 +5,7 @@ import Hero from '../components/Hero.astro';
 import BlogCard from '../components/BlogCard.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
+const toTagHref = (value: string) => `/blog/tag/${encodeURIComponent(value.toLowerCase())}/`;
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -47,7 +48,7 @@ const sortedPosts = posts.sort((a, b) => {
 				<h2 class="text-sm font-semibold text-muted uppercase tracking-wider mb-3">Parcourir par thématique</h2>
 				<div class="flex flex-wrap gap-2">
 					{allTags.map((t) => (
-						<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="inline-flex items-center px-4 py-2 rounded-full bg-surface text-foreground hover:bg-surface-alt font-medium text-sm transition-colors">
+						<a href={toTagHref(t)} class="inline-flex items-center px-4 py-2 rounded-full bg-surface text-foreground hover:bg-surface-alt font-medium text-sm transition-colors">
 								{t}
 							</a>
 						))}

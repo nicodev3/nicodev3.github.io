@@ -6,21 +6,26 @@ import BlogCard from '../../../components/BlogCard.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
-	const tagSet = new Set<string>();
+	const tagMap = new Map<string, string>();
 	posts.forEach((post) => {
-		post.data.tags?.forEach((tag: string) => tagSet.add(tag));
+		post.data.tags?.forEach((tag: string) => {
+			const slug = tag.toLowerCase();
+			if (!tagMap.has(slug)) {
+				tagMap.set(slug, tag);
+			}
+		});
 	});
-	return Array.from(tagSet).map((tag) => ({
-		params: { tag },
-		props: { tag }
+	return Array.from(tagMap.entries()).map(([tagSlug, tagLabel]) => ({
+		params: { tag: tagSlug },
+		props: { tagSlug, tagLabel }
 	}));
 }
 
-const { tag } = Astro.props;
+const { tagSlug, tagLabel } = Astro.props;
 const posts = await getCollection('blog');
 
 const filteredPosts = posts
-	.filter((post) => post.data.tags?.some((t: string) => t === tag))
+	.filter((post) => post.data.tags?.some((t: string) => t.toLowerCase() === tagSlug))
 	.sort((a, b) => {
 		const dateA = new Date(a.data.pubDate).getTime();
 		const dateB = new Date(b.data.pubDate).getTime();
@@ -34,25 +39,25 @@ const breadcrumbSchema = {
 	itemListElement: [
 		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
 		{ '@type': 'ListItem', position: 2, name: 'Blog', item: new URL('/blog', baseUrl).toString() },
-		{ '@type': 'ListItem', position: 3, name: `Tag: ${tag}`, item: new URL(`/blog/tag/${encodeURIComponent(tag)}`, baseUrl).toString() }
+		{ '@type': 'ListItem', position: 3, name: `Tag: ${tagLabel}`, item: new URL(`/blog/tag/${encodeURIComponent(tagSlug)}/`, baseUrl).toString() }
 	]
 };
 ---
 
 <Layout
-	title={`Articles tagués "${tag}" - Blog | Nicolas Devaux`}
-	description={`Tous les articles du blog classés par le tag "${tag}" : conseils création de site, SEO, développement web pour psychologues.`}
+	title={`Articles tagués "${tagLabel}" - Blog | Nicolas Devaux`}
+	description={`Tous les articles du blog classés par le tag "${tagLabel}" : conseils création de site, SEO, développement web pour psychologues.`}
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero
-		title={`Tag : ${tag}`}
+		title={`Tag : ${tagLabel}`}
 		subtitle={`${filteredPosts.length} article${filteredPosts.length > 1 ? 's' : ''} trouvé${filteredPosts.length > 1 ? 's' : ''}`}
 		breadcrumb={[
 			{ label: 'Accueil', href: '/' },
 			{ label: 'Blog', href: '/blog/' },
-			{ label: `Tag : ${tag}` }
+			{ label: `Tag : ${tagLabel}` }
 		]}
 	/>
 

@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
+const toTagHref = (value: string) => `/blog/tag/${encodeURIComponent(value.toLowerCase())}/`;
 
 // Récupérer le slug depuis l'URL
 export async function getStaticPaths() {
@@ -125,7 +126,7 @@ const breadcrumbSchema = {
 		</div>
 		<div slot="after" class="flex flex-wrap justify-center gap-2">
 			{entry.data.tags?.map((t: string) => (
-				<a href={`/blog/tag/${encodeURIComponent(t)}/`} class="bg-surface hover:bg-surface-alt text-foreground px-3 py-1 rounded-full text-sm transition-colors">
+				<a href={toTagHref(t)} class="bg-surface hover:bg-surface-alt text-foreground px-3 py-1 rounded-full text-sm transition-colors">
 					{t}
 				</a>
 			))}
