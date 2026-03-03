@@ -1,7 +1,5 @@
-/2015/09/12/nom-de-domaine-hebergement/        /blog/nom-de-domaine-hebergement/        301!
-/2015/10/26/creation-site-internet/           /blog/creation-site-internet/             301!
-/2016/09/05/site-internet-psychologues/       /blog/site-internet-psychologues/         301!
-/portfolio/site-internet-psychologues         /blog/site-internet-psychologues/         301!
-
-# l’ancienne page "référencement" n’existe visiblement plus telle quelle :
-/2016/01/26/referencement-site-psychologue/   /blog/google-business-profile-psychologue/ 301!
+/2015/09/12/nom-de-domaine-hebergement/ /blog/nom-de-domaine-hebergement/ 301
+/portfolio/site-internet-psychologues /portfolio/ 301
+/2016/09/05/site-internet-psychologues/ /blog/site-internet-psychologues/ 301
+/2016/01/26/referencement-site-psychologue/ /blog/site-internet-psychologues/ 301
+/2015/10/26/creation-site-internet/ /blog/creation-site-internet/ 301
