@@ -36,11 +36,7 @@ Par exemple, si vous êtes psychologue à Saint-Malo, il serait plus judicieux d
 
 ### Où acheter son nom de domaine ?
 
-Il existe de très nombreux bureaux d'enregistrement de nom de domaine. Ces *registrars* ou *registraires* en français sont des revendeurs de noms de domaine. Les plus connus sont [Gandi](https://www.gandi.net/?lang=fr), ou encore [OVH](https://www.ovh.com/fr/). 
-
-Je recommande toutefois d'acheter le nom de domaine chez l'hébergeur où vous allez déposer le code de votre site, afin de faciliter les choses.
-
-Pour mes clients, je fais souvent appel à [Planet Hoster](https://www.planethoster.net/fr/), qui est un excellent hébergeur. Le service après vente notamment est très réactif en cas de questions ou de pannes.
+Il existe de très nombreux bureaux d'enregistrement de nom de domaine. Ces *registrars* ou *registraires* en français sont des revendeurs de noms de domaine.
 
 ## L'hébergement
 

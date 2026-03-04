@@ -16,8 +16,6 @@ En réalité, un site web moderne repose sur plusieurs couches techniques qui tr
 
 Le navigateur (Chrome, Firefox, Safari, Edge) reste l'outil qui interprète le code pour afficher vos pages.
 
-![Navigateur web](/images/navigateur.png)
-
 Ce point n'a pas changé, mais les attentes, elles, ont beaucoup évolué:
 
 - un site doit être rapide sur mobile

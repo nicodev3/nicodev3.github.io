@@ -207,5 +207,3 @@ Si vous souhaitez créer ou refondre votre site, commencez par un audit simple p
 À lire aussi :
 - [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
 - [Création d'un site Internet](/blog/creation-site-internet/)
-- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/)
-esses universitaires de Perpignan, 2011 (généré le 29 septembre 2016). Disponible sur Internet : <http://books.openedition.org/pupvd/413>. ISBN : 9782354122249.
