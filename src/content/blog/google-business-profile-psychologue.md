@@ -3,7 +3,7 @@ title: "Psychologue : comment créer et optimiser sa fiche Google Business Profi
 description: "Guide pas-à-pas pour créer, vérifier et optimiser votre fiche Google Business Profile en tant que psychologue. Apparaissez dans les résultats locaux et sur Google Maps."
 pubDate: "2026-03-02"
 author: "Nicolas Devaux"
-image: "/images/google-business-profile-psychologue.webp"
+image: "/images/seo-google-my-business.webp"
 tags: ["psychologue", "google business profile", "seo local", "référencement local", "fiche établissement", "visibilité google", "2026"]
 ---
 
