@@ -20,6 +20,13 @@ const copyTarteaucitron = {
   },
 };
 
+const noindexPages = new Set([
+  'https://nicodev.fr/merci/',
+  'https://nicodev.fr/cgv/',
+  'https://nicodev.fr/politique-confidentialite/',
+  'https://nicodev.fr/dev/styleguide/',
+]);
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nicodev.fr',
@@ -29,5 +36,9 @@ export default defineConfig({
       plugins: [tailwindcss(), copyTarteaucitron]
   },
 
-  integrations: [sitemap()]
+  integrations: [
+    sitemap({
+      filter: (page) => !noindexPages.has(page),
+    }),
+  ]
 });
