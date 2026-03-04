@@ -61,7 +61,7 @@ const sortedPosts = posts.sort((a, b) => {
 						title={post.data.title}
 						description={post.data.description}
 						href={`/blog/${post.id.replace(/\.md$/, '')}/`}
-						image={post.data.image || "/images/development.jpg"}
+						image={post.data.image || "/images/development.webp"}
 						imageAlt={post.data.title}
 						tag={post.data.tags?.[0] || "Web"}
 						pubDate={post.data.pubDate}

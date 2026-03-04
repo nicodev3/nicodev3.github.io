@@ -29,7 +29,7 @@ const baseUrl = Astro.site ?? Astro.url.origin;
 const canonical = new URL(Astro.url.pathname, baseUrl).toString();
 const ogImage = image
   ? new URL(image, baseUrl).toString()
-  : new URL("/images/development.jpg", baseUrl).toString();
+  : new URL("/images/development.webp", baseUrl).toString();
 
 const umamiId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL;
