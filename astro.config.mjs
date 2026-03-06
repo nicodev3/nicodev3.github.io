@@ -27,6 +27,11 @@ const noindexPages = new Set([
   'https://nicodev.fr/dev/styleguide/',
 ]);
 
+const isTagPage = (page) => {
+  const pathname = new URL(page).pathname;
+  return pathname.startsWith('/blog/tag/');
+};
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nicodev.fr',
@@ -38,7 +43,7 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      filter: (page) => !noindexPages.has(page),
+      filter: (page) => !noindexPages.has(page) && !isTagPage(page),
     }),
   ]
 });

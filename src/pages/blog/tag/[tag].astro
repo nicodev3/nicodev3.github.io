@@ -47,6 +47,7 @@ const breadcrumbSchema = {
 <Layout
 	title={`Articles tagués "${tagLabel}" - Blog | Nicolas Devaux`}
 	description={`Tous les articles du blog classés par le tag "${tagLabel}" : conseils création de site, SEO, développement web pour psychologues.`}
+	noindex={true}
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
