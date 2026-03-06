@@ -1,28 +1,64 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import SkillCard from "../components/SkillCard.astro";
-import CtaSection from "../components/CtaSection.astro";
-import { Image } from "astro:assets";
-import developmentImage from "../assets/images/development.jpg";
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SkillCard from '../components/SkillCard.astro';
+import CtaSection from '../components/CtaSection.astro';
+import { Image } from 'astro:assets';
+import developmentImage from '../assets/images/development.jpg';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
+const aboutUrl = new URL('/about/', baseUrl).toString();
+
 const breadcrumbSchema = {
-	'@context': 'https://schema.org',
-	'@type': 'BreadcrumbList',
-	itemListElement: [
-		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
-		{ '@type': 'ListItem', position: 2, name: 'À propos', item: new URL('/about', baseUrl).toString() }
-	]
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: new URL('/', baseUrl).toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'À propos',
+      item: aboutUrl,
+    },
+  ],
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Nicolas Devaux',
+  jobTitle: 'Psychologue et développeur web',
+  description: 'Psychologue à Sceaux et développeur web, je crée des sites internet sur mesure pour psychologues et professionnels de santé.',
+  url: aboutUrl,
+  image: new URL('/images/development.webp', baseUrl).toString(),
+  knowsAbout: ['développement web', 'sites internet pour psychologues', 'SEO', 'performance web'],
+  sameAs: [
+    'https://www.malt.fr/profile/nicolasdevaux1',
+    'https://github.com/nicodev3',
+    'https://nicolas-devaux-psychologue.fr',
+  ],
 };
 ---
 
 <Layout
   title="Psychologue et développeur web | Nicolas Devaux"
-  description="Psychologue devenu développeur web, je crée des sites internet pour psychologues."
+  description="Psychologue à Sceaux et développeur web, je crée des sites internet pour psychologues. 20 ans d'expérience. Sites sur mesure, SEO et performance."
+  image="/images/development.webp"
 >
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personSchema)}
+    />
   </Fragment>
   <Hero
     title="À propos"
@@ -38,57 +74,50 @@ const breadcrumbSchema = {
           <h2 class="text-3xl font-bold text-foreground mb-6">Mon parcours</h2>
           <div class="prose prose-lg text-muted space-y-4">
             <p>
-              Je suis <strong>Nicolas Devaux</strong>, <a
+              Je suis <a
                 href="https://nicolas-devaux-psychologue.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-foreground hover:text-primary"
                 >psychologue à Sceaux</a
-              > et développeur web, webdesigner, avec un parcours unique. Mon cheminement
-              professionnel reflète une passion pour la technologie et une compréhension
-              profonde des enjeux humains.
+              > et développeur web. Mon cheminement professionnel reflète une passion pour la technologie
+              et une compréhension profonde des enjeux humains.
             </p>
             <p>
-              Formé au développement web en autodidacte puis à l'<a
+              Mon parcours académique est marqué par une double formation : je suis titulaire du
+              titre de psychologue et d'une licence professionnelle Activités et Techniques de
+              Communication, spécialité développeur web de systèmes d'information et multimédias
+              (sciences humaines et sociales) obtenue à l'<a
                 href="https://sfc.unistra.fr/formations/informatique_-_technologies-de-linternet_-_licence-professionnelle-developpement-web-communication-et-apprentissages_-_6187/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-foreground hover:text-primary"
                 >Université de Strasbourg</a
-              >, j'ai obtenu une <strong
-                >Licence Professionnelle Activités et Techniques de
-                Communication</strong
-              > mention <strong
-                >développeur web des systèmes d'information et multimédia</strong
               >.
             </p>
             <p>
-              Mon parcours académique est marqué par une double formation : je
-              suis titulaire du <strong>titre de psychologue (Master 2 de psychologie)</strong>
-              et d'une <strong>Licence Professionnelle ATC (LPATC)</strong> en développement web.
-              Cette expertise m'a conduit à me spécialiser dans la création de sites
-              internet pour psychologues.
+              Cette double expertise m'a conduit à me spécialiser dans la création de
+              <a href="/portfolio/">sites internet pour psychologues</a>.
             </p>
             <p>
-              Depuis plus de 10 ans, je mets au service de mes clients cette
-              double compétence&nbsp;: mon savoir-faire technique en
-              développement web et ma compréhension des enjeux des
-              psychologues en libéral. Je développe des <strong
+              Depuis plus de 20 ans, je mets au service de mes clients cette double
+              compétence&nbsp;: mon savoir-faire technique en développement web et ma compréhension
+              des enjeux des psychologues en libéral. Je développe des <strong
                 >sites internet</strong
               > qui allient performance technique et sensibilité aux besoins des psychologues.
             </p>
             <p>
-              Mon approche se distingue par une collaboration étroite avec mes
-              clients, une attention particulière portée à l'expérience
-              utilisateur et une expertise technique solide dans les
-              technologies web modernes.
+              Mon approche se distingue par une collaboration étroite avec mes clients, une
+              attention particulière portée à l'expérience utilisateur et une expertise technique
+              solide dans les technologies web modernes. Découvrez mes <a href="/portfolio/"
+                >réalisations</a
+              >, mes <a href="/tarifs/">tarifs</a> ou <a href="/contact/">contactez-moi</a> pour
+              discuter de votre projet.
             </p>
           </div>
         </div>
         <div class="relative">
           <Image
             src={developmentImage}
-            alt="Nicolas Devaux - Développeur web"
+            alt="Nicolas Devaux - Développeur web spécialisé sites pour psychologues"
             class="rounded-lg shadow-xl"
             width={500}
             height={500}
@@ -131,10 +160,9 @@ const breadcrumbSchema = {
               <strong>20 ans d'expérience</strong> en développement web
             </h3>
             <p class="text-muted">
-              Psychologue de formation et en activité, développeur web, je
-              comprends les enjeux spécifiques des psychologues libéraux. Votre
-              site internet doit refléter votre professionnalisme, rassurer vos
-              patients et vous permettre d'être trouvé facilement.
+              Psychologue de formation et en activité, développeur web, je comprends les enjeux
+              spécifiques des psychologues libéraux. Votre site internet doit refléter votre
+              professionnalisme, rassurer vos patients et vous permettre d'être trouvé facilement.
             </p>
           </div>
 
@@ -144,12 +172,11 @@ const breadcrumbSchema = {
                 Tech Lead front-end - Le Figaro
               </h4>
               <p class="text-muted mb-2">
-                Direction technique de projets d'envergure pour l'un des plus
-                grands médias français
+                Direction technique de projets d'envergure pour l'un des plus grands médias français
               </p>
               <p class="text-sm text-muted">
-                Management d'équipes de développement, architecture de solutions
-                web complexes, optimisation des performances
+                Management d'équipes de développement, architecture de solutions web complexes,
+                optimisation des performances
               </p>
             </div>
 
@@ -158,48 +185,41 @@ const breadcrumbSchema = {
                 Tech Lead front-end - Naxos
               </h4>
               <p class="text-muted mb-2">
-                Direction technique de solutions digitales innovantes pour le
-                secteur immobilier
+                Direction technique de solutions digitales innovantes pour le secteur immobilier
               </p>
               <p class="text-sm text-muted">
-                Développement d'applications mobiles, sites web corporate, CRM
-                immobilier, technologies Python/Django/Angular
+                Développement d'applications mobiles, sites web corporate, CRM immobilier,
+                technologies Python/Django/Angular
               </p>
             </div>
 
             <div class="border-l-4 border-border pl-6">
-              <h4 class="text-xl font-semibold text-foreground mb-2">
-                Développeur Web free-lance
-              </h4>
+              <h4 class="text-xl font-semibold text-foreground mb-2">Développeur Web free-lance</h4>
               <p class="text-muted mb-2">
-                Plusieurs années d'expérience en tant que free-lance auprès de
-                clients variés : indépendants, TPE/PME, associations, grands
-                comptes. Plus de 50 projets réalisés.
+                Plusieurs années d'expérience en tant que free-lance auprès de clients variés :
+                indépendants, TPE/PME, associations, grands comptes. Plus de 50 projets réalisés.
               </p>
               <p class="text-sm text-muted">
-                Création de sites sur mesure, accompagnement digital,
-                référencement, conseil en identité numérique.<br />
+                Création de sites sur mesure, accompagnement digital, référencement, conseil en
+                identité numérique.<br />
                 Retrouvez les avis de mes clients sur <a
                   href="https://www.malt.fr/profile/nicolasdevaux1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-foreground underline hover:text-primary"
                   >mon profil Malt</a
                 >.
               </p>
             </div>
 
             <div class="border-l-4 border-border pl-6">
-              <h4 class="text-xl font-semibold text-foreground mb-2">
-                Projets d'envergure
-              </h4>
+              <h4 class="text-xl font-semibold text-foreground mb-2">Projets d'envergure</h4>
               <p class="text-muted mb-2">
-                Participation à des projets majeurs nécessitant une expertise
-                technique de haut niveau
+                Participation à des projets majeurs nécessitant une expertise technique de haut
+                niveau
               </p>
               <p class="text-sm text-muted">
-                Architecture scalable, optimisation des performances, gestion de
-                la complexité technique
+                Architecture scalable, optimisation des performances, gestion de la complexité
+                technique
               </p>
             </div>
           </div>
@@ -211,9 +231,7 @@ const breadcrumbSchema = {
   <!-- Skills Section -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-foreground mb-12">
-        Mes compétences
-      </h2>
+      <h2 class="text-3xl font-bold text-center text-foreground mb-12">Mes compétences</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <SkillCard
@@ -299,9 +317,7 @@ const breadcrumbSchema = {
   <!-- Philosophy Section -->
   <section class="py-16 bg-surface">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-foreground mb-12">
-        Ma philosophie
-      </h2>
+      <h2 class="text-3xl font-bold text-center text-foreground mb-12">Ma philosophie</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <SkillCard
@@ -357,7 +373,8 @@ const breadcrumbSchema = {
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.5"
-              d="m3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75L12 13.5z"></path>
+              d="m3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75L12 13.5z"
+            ></path>
           </svg>
         </SkillCard>
       </div>
@@ -367,8 +384,8 @@ const breadcrumbSchema = {
   <CtaSection
     title="Prêt à créer votre site internet ?"
     description="Discutons de votre projet et créons ensemble votre présence en ligne."
-    primaryButton={{ text: "Voir mes réalisations", href: "/portfolio/" }}
-    secondaryButton={{ text: "Me contacter", href: "/contact/" }}
+    primaryButton={{ text: 'Voir mes réalisations', href: '/portfolio/' }}
+    secondaryButton={{ text: 'Me contacter', href: '/contact/' }}
     background="white"
   />
 </Layout>

@@ -1,20 +1,16 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-
 @import "@fontsource-variable/lora";
 @import "@fontsource-variable/source-sans-3";
-
 @theme {
     --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
     --font-heading: "Lora Variable", Georgia, serif;
-
     /* 5 couleurs de base */
     --color-primary: #FF634A;
     --color-neutral-0: #FFFFFF;
     --color-neutral-50: #FAFAFA;
     --color-neutral-600: #334155;
     --color-neutral-900: #0F2A2A;
-
     /* Variables sémantiques (alias) */
     --color-on-primary: var(--color-neutral-0);
     --color-background: var(--color-neutral-50);
@@ -24,10 +20,11 @@
     --color-muted: var(--color-neutral-600);
     --color-surface-alt: color-mix(in srgb, var(--color-foreground) 12%, var(--color-background));
     --color-border: var(--color-surface-alt);
-    --color-link: #0B5FA5;
-    --color-link-hover: #084E88;
+    --color-link: #0050AD;
+    --color-link-hover: #0047A1;
     --color-link-on-dark: #9ED0FF;
 }
+
 
 /* Styles globaux personnalisés */
 
@@ -35,19 +32,27 @@ body {
     @apply font-sans;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @apply font-heading;
 }
 
 a:not([class]) {
     color: var(--color-link);
     text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-primary) 45%, currentColor);
     text-underline-offset: 0.16em;
     text-decoration-thickness: 0.08em;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
 }
 
 a:not([class]):hover {
     color: var(--color-link-hover);
+    text-decoration-color: var(--color-primary);
 }
 
 a:not([class]):focus-visible {
