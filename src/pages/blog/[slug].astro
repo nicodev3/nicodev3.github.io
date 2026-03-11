@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
 const toTagHref = (value: string) => `/blog/tag/${encodeURIComponent(value.toLowerCase())}/`;
 
 // Récupérer le slug depuis l'URL
@@ -15,7 +16,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 
 // Articles similaires (même tag ou récents, hors l'article actuel)
 const allPosts = await getCollection('blog');
@@ -150,6 +151,7 @@ const breadcrumbSchema = {
 				prose-ol:my-4
 				prose-img:rounded-xl prose-img:shadow-md prose-img:mx-auto
 				prose-hr:border-border">
+				<TableOfContents headings={headings} />
 				<Content />
 			</div>
 		</div>

@@ -76,6 +76,8 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
       content={noindex ? "noindex, nofollow" : "index, follow"}
     />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="fr" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Blog - Nicolas Devaux" href="/rss.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
@@ -86,6 +88,11 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
     <meta property="og:image" content={ogImage} />
     <meta property="og:site_name" content="Nicolas Devaux" />
     <meta property="og:locale" content="fr_FR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     {
       ogType === "article" && articlePublishedTime && (
         <meta
@@ -147,6 +154,12 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
             <h3 class="text-lg font-semibold mb-4">Contact</h3>
             <p class="text-on-foreground">
               Email: contact.nicodev@gmail.com<br />
+              LinkedIn: <a
+                href="https://www.linkedin.com/in/nicodev3/"
+                class="text-on-foreground hover:opacity-80"
+                target="_blank"
+                rel="noopener noreferrer">Nicolas Devaux</a
+              ><br />
               GitHub: <a
                 href="https://github.com/nicodev3"
                 class="text-on-foreground hover:opacity-80">@nicodev3</a

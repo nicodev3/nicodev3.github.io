@@ -2,8 +2,42 @@
 import { Image } from 'astro:assets';
 import TestimonialCard from './TestimonialCard.astro';
 import testimonialAvatars from '../assets/images/testimonial-avatars.webp';
+
+const testimonials = [
+	{
+		quote: "Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble.",
+		highlight: "des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité ... un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique !",
+		author: "Delphine, Psychologue en libéral",
+		authorName: "Delphine"
+	},
+	{
+		quote: "Nicolas Devaux a conçu mon site internet lors de mon installation en libéral, afin de donner de la visibilité à mon activité. Je suis ravie de notre collaboration et du résultat. Il a su prendre en compte mes exigences, mes souhaits lors de la conception de mon site. Nicolas s'est montré egalement très disponible. Tout cela pour un rapport qualité/prix imbattable!",
+		author: "Anne-Françoise, Psychologue clinicienne, Paris",
+		authorName: "Anne-Françoise"
+	},
+	{
+		quote: "Je suis très satisfaite de mon site. Nicolas a su allier tout son savoir faire avec mes désirs pour réaliser ce projet. Bien évidemment sa «double casquette» psychologue et webdesigner a été un atout important. Il a fait preuve d'écoute et d'une grande disponibilité. Vous pouvez lui faire confiance !",
+		author: "Psychologue TCC, Lyon",
+		authorName: "Psychologue TCC"
+	}
+];
+
+const reviewSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'LocalBusiness',
+	name: 'Nicolas Devaux',
+	url: 'https://nicodev.fr',
+	review: testimonials.map((t) => ({
+		'@type': 'Review',
+		reviewBody: t.highlight ? `${t.quote} ${t.highlight}` : t.quote,
+		author: { '@type': 'Person', name: t.authorName },
+		reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+		itemReviewed: { '@type': 'LocalBusiness', name: 'Nicolas Devaux' }
+	}))
+};
 ---
 
+<script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
 <section class="py-16 bg-surface-alt">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-10">
@@ -23,21 +57,13 @@ import testimonialAvatars from '../assets/images/testimonial-avatars.webp';
 			</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-			<TestimonialCard
-				quote="Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble."
-				highlight="des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité ... un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique !"
-				author="Delphine, Psychologue en libéral"
-			/>
-			<TestimonialCard
-				quote="Nicolas Devaux a conçu mon site internet lors de mon installation en libéral, afin de donner de la visibilité à mon activité.
-Je suis ravie de notre collaboration et du résultat. Il a su prendre en compte mes exigences, mes souhaits lors de la conception de mon site. Nicolas s'est montré egalement très disponible.
-Tout cela pour un rapport qualité/prix imbattable!"
-				author="Anne-Françoise, Psychologue clinicienne, Paris"
-			/>
-			<TestimonialCard
-				quote="Je suis très satisfaite de mon site. Nicolas a su allier tout son savoir faire avec mes désirs pour réaliser ce projet. Bien évidemment sa «double casquette» psychologue et webdesigner a été un atout important. Il a fait preuve d'écoute et d'une grande disponibilité. Vous pouvez lui faire confiance !"
-				author="Psychologue TCC, Lyon"
-			/>
+			{testimonials.map((t) => (
+				<TestimonialCard
+					quote={t.quote}
+					highlight={t.highlight}
+					author={t.author}
+				/>
+			))}
 		</div>
 		<p class="text-center text-sm text-muted mt-8">Voir tous les témoignages sur <a href="https://www.malt.fr/profile/nicolasdevaux1" target="_blank" rel="noopener noreferrer" class="text-foreground underline hover:text-primary">mon profil Malt</a>.</p>
 	</div>
