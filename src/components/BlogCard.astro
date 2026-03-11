@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { toTagHref } from '../utils/blog';
 
 export interface Props {
 	title: string;
@@ -15,7 +16,6 @@ export interface Props {
 }
 
 const { title, description, href, image, imageAlt, tag, pubDate, author, tags, updatedDate } = Astro.props;
-const toTagHref = (value: string) => `/blog/tag/${encodeURIComponent(value.toLowerCase())}/`;
 ---
 
 <article class="bg-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-border">

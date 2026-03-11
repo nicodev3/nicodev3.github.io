@@ -3,9 +3,9 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import BlogCard from '../components/BlogCard.astro';
+import { toTagHref } from '../utils/blog';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
-const toTagHref = (value: string) => `/blog/tag/${encodeURIComponent(value.toLowerCase())}/`;
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -60,7 +60,7 @@ const sortedPosts = posts.sort((a, b) => {
 					<BlogCard
 						title={post.data.title}
 						description={post.data.description}
-						href={`/blog/${post.id.replace(/\.md$/, '')}/`}
+						href={`/blog/${post.id}/`}
 						image={post.data.image || "/images/development.webp"}
 						imageAlt={post.data.title}
 						tag={post.data.tags?.[0] || "Web"}

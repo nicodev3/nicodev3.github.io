@@ -3,13 +3,14 @@ import { getCollection } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import Hero from '../../../components/Hero.astro';
 import BlogCard from '../../../components/BlogCard.astro';
+import { slugifyTag } from '../../../utils/blog';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	const tagMap = new Map<string, string>();
 	posts.forEach((post) => {
 		post.data.tags?.forEach((tag: string) => {
-			const slug = tag.toLowerCase();
+			const slug = slugifyTag(tag);
 			if (!tagMap.has(slug)) {
 				tagMap.set(slug, tag);
 			}
@@ -25,7 +26,7 @@ const { tagSlug, tagLabel } = Astro.props;
 const posts = await getCollection('blog');
 
 const filteredPosts = posts
-	.filter((post) => post.data.tags?.some((t: string) => t.toLowerCase() === tagSlug))
+	.filter((post) => post.data.tags?.some((t: string) => slugifyTag(t) === tagSlug))
 	.sort((a, b) => {
 		const dateA = new Date(a.data.pubDate).getTime();
 		const dateB = new Date(b.data.pubDate).getTime();
@@ -74,7 +75,7 @@ const breadcrumbSchema = {
 					<BlogCard
 						title={post.data.title}
 						description={post.data.description}
-						href={`/blog/${post.id.replace(/\.md$/, '')}/`}
+						href={`/blog/${post.id}/`}
 						image={post.data.image || '/images/development.webp'}
 						imageAlt={post.data.title}
 						tag={post.data.tags?.[0] || 'Web'}

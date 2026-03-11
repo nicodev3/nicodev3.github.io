@@ -1,21 +1,21 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
-const toTagHref = (value: string) => `/blog/tag/${encodeURIComponent(value.toLowerCase())}/`;
+import { toTagHref } from '../../utils/blog';
 
 // Récupérer le slug depuis l'URL
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	
 	return posts.map((post) => ({
-		params: { slug: post.id.replace(/\.md$/, '') },
+		params: { slug: post.id },
 		props: { entry: post }
 	}));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 // Articles similaires (même tag ou récents, hors l'article actuel)
 const allPosts = await getCollection('blog');
@@ -181,7 +181,7 @@ const breadcrumbSchema = {
 				<ul class="space-y-3">
 					{relatedPosts.map((post) => (
 						<li>
-							<a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="group flex items-start gap-3 text-muted hover:text-primary">
+							<a href={`/blog/${post.id}/`} class="group flex items-start gap-3 text-muted hover:text-primary">
 								<span class="text-foreground group-hover:text-primary mt-0.5">→</span>
 								<span class="font-medium group-hover:underline">{post.data.title}</span>
 								<span class="text-sm text-muted">
