@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npx -y node@22.12.0 ./node_modules/astro/bin/astro.mjs build"
   publish = "dist"
 
 # Redirections vers URLs avec trailing slash (Astro trailingSlash: 'always')
@@ -33,7 +33,7 @@
   status = 301
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22.12.0"
 
 [[headers]]
   for = "/*"
