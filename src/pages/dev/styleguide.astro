@@ -35,7 +35,15 @@ if (!import.meta.env.DEV) {
 					<div class="p-3 text-sm">
 						<strong>primary</strong><br />
 						#FF634A<br />
-						<code>bg-primary</code> · <code>text-on-primary</code>
+						<code>bg-primary</code> · <code>text-primary</code>
+					</div>
+				</div>
+				<div class="rounded-xl border border-border overflow-hidden">
+					<div class="h-20 bg-primary-foreground"></div>
+					<div class="p-3 text-sm">
+						<strong>primary-foreground</strong><br />
+						#B83A28<br />
+						<code>bg-primary-foreground</code> · <code>text-on-primary</code> (contraste WCAG AA)
 					</div>
 				</div>
 				<div class="rounded-xl border border-border overflow-hidden">
@@ -97,7 +105,7 @@ if (!import.meta.env.DEV) {
 			</div>
 			<div class="rounded-2xl border border-border bg-background p-6">
 				<div class="flex flex-wrap gap-3 mb-6">
-					<a href="#" class="bg-primary text-on-primary px-5 py-2 rounded-lg font-semibold">Bouton principal</a>
+					<a href="#" class="bg-primary-foreground text-on-primary px-5 py-2 rounded-lg font-semibold">Bouton principal</a>
 					<a href="#" class="border-2 border-primary text-foreground px-5 py-2 rounded-lg font-semibold">Bouton secondaire</a>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">

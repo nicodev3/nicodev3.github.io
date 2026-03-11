@@ -7,6 +7,8 @@
     --font-heading: "Lora Variable", Georgia, serif;
     /* 5 couleurs de base */
     --color-primary: #FF634A;
+    /* Variante plus foncée pour texte sur fond clair (contraste ≥ 4.5:1 WCAG AA) */
+    --color-primary-foreground: #B83A28;
     --color-neutral-0: #FFFFFF;
     --color-neutral-50: #FAFAFA;
     --color-neutral-600: #334155;
