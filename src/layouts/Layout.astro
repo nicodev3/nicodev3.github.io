@@ -39,35 +39,6 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
 <!doctype html>
 <html lang="fr">
   <head>
-    <script src="/tarteaucitron/tarteaucitron.js" is:inline></script>
-    <script is:inline>
-      tarteaucitron.init({
-        "privacyUrl": "/politique-confidentialite/",
-        "bodyPosition": "top",
-        "hashtag": "#tarteaucitron",
-        "cookieName": "tarteaucitron",
-        "orientation": "bottom",
-        "groupServices": false,
-        "showDetailsOnClick": true,
-        "serviceDefaultState": "wait",
-        "showAlertSmall": false,
-        "cookieslist": false,
-        "closePopup": false,
-        "showIcon": true,
-        "iconPosition": "BottomLeft",
-        "DenyAllCta": true,
-        "AcceptAllCta": true,
-        "highPrivacy": true,
-        "removeCredit": false,
-        "moreInfoLink": true,
-        "googleConsentMode": true,
-        "mandatory": true,
-        "mandatoryCta": false
-      });
-
-      tarteaucitron.user.gtagUa = 'G-Y75K3GN27H';
-      (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
-    </script>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

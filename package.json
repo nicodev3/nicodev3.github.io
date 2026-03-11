@@ -26,7 +26,6 @@
     "astro": "^6.0.3",
     "puppeteer": "^24.16.2",
     "tailwindcss": "^4.1.12",
-    "tarteaucitronjs": "^1.30.0",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
