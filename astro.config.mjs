@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -21,6 +21,26 @@ const isTagPage = (page) => {
 export default defineConfig({
   site: 'https://nicodev.fr',
   trailingSlash: 'always',
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Source Sans 3',
+      cssVariable: '--font-source-sans-3',
+      weights: ['200 900'],
+      styles: ['normal', 'italic'],
+      subsets: ['latin', 'latin-ext'],
+      fallbacks: ['system-ui', 'sans-serif'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Lora',
+      cssVariable: '--font-lora',
+      weights: ['400 700'],
+      styles: ['normal', 'italic'],
+      subsets: ['latin', 'latin-ext'],
+      fallbacks: ['Georgia', 'serif'],
+    },
+  ],
 
   vite: {
       plugins: [tailwindcss()]

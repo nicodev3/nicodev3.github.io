@@ -1,10 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@import "@fontsource-variable/lora";
-@import "@fontsource-variable/source-sans-3";
 @theme {
-    --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
-    --font-heading: "Lora Variable", Georgia, serif;
+    --font-sans: var(--font-source-sans-3);
+    --font-heading: var(--font-lora);
     /* 5 couleurs de base */
     --color-primary: #FF634A;
     /* Variante plus foncée pour texte sur fond clair (contraste ≥ 4.5:1 WCAG AA) */
