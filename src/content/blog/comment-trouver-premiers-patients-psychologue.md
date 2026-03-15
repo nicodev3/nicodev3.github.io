@@ -3,7 +3,7 @@ title: "Comment trouver ses premiers patients quand on s’installe comme psycho
 description: "Trouver ses premiers patients comme psychologue en libéral : bouche-à-oreille, réseau, Doctolib, Google et site internet pour construire une visibilité locale solide."
 pubDate: "2026-03-15"
 author: "Nicolas Devaux"
-image: "/images/premiers-patients-psychologue.webp"
+image: "/images/installation-psychologue-liberal.webp"
 tags: ["psychologue", "installation libérale", "visibilité locale", "site internet", "doctolib", "référencement local"]
 ---
 
