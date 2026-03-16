@@ -1,0 +1,54 @@
+---
+export interface Props {
+  title?: string;
+  score?: number | string;
+  metrics?: string[];
+}
+
+const {
+  title,
+  score = 100,
+  metrics = ["Performances", "Accessibilite", "Bonnes pratiques", "SEO"],
+} = Astro.props;
+---
+
+<div class="w-full border-t border-border bg-surface p-3 sm:p-2">
+  <div
+    class="rounded-md border border-border bg-white px-2 py-3 shadow-sm sm:px-1.5"
+    aria-label={title ? `Scores PageSpeed du site ${title}` : "Scores PageSpeed"}
+  >
+    <div class="mb-3 flex items-center justify-between gap-2">
+      <p class="text-xs font-medium text-foreground sm:text-sm">
+        Scores Google PageSpeed Insights
+      </p>
+      <div class="group relative flex shrink-0 items-center">
+        <button
+          type="button"
+          class="flex h-5 w-5 items-center justify-center rounded-full border border-border text-[11px] font-semibold text-muted transition-colors hover:border-primary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          aria-label="Informations sur le score Google PageSpeed Insights"
+        >
+          i
+        </button>
+        <div class="pointer-events-none absolute right-0 top-full z-10 mt-2 w-56 rounded-md border border-border bg-white p-3 text-left text-[11px] leading-snug text-muted opacity-0 shadow-lg transition-opacity duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100 sm:w-64 sm:text-xs">
+          <p>
+            Ce score evalue la rapidite, l'accessibilite, les bonnes pratiques et le SEO technique du site.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-x-3 gap-y-3 sm:grid-cols-4 sm:gap-x-3.5">
+      {
+        metrics.map((metric) => (
+          <div class="flex min-w-0 flex-col items-center justify-start gap-1.5 text-center">
+            <div class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-lime-500 text-sm font-semibold leading-none text-lime-700 sm:h-10 sm:w-10 sm:text-base">
+              {score}
+            </div>
+            <span class="whitespace-nowrap text-[10px] font-medium leading-snug text-foreground sm:text-[11px]">
+              {metric}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

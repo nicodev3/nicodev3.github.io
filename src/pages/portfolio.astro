@@ -3,17 +3,17 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CtaSection from "../components/CtaSection.astro";
 import { Image } from "astro:assets";
-import cecilecoachingImage from "../assets/images/screenshots/cecilecoaching.fr.webp";
+import cecilecoachingImage from "../assets/images/screenshots/cecilecoaching.webp";
 import severineReisserImage from "../assets/images/screenshots/psychologue-leslilas.webp";
 import marieJoseeGrassoImage from "../assets/images/screenshots/psychologue-sorgues.webp";
-import delphineCimaImage from "../assets/images/screenshots/psy-manosque.webp";
-import marieClaireBruneauImage from "../assets/images/screenshots/mcbruneau-psychologue-blois.fr.webp";
-import emanuelleFalliganImage from "../assets/images/screenshots/psy-sarrebourg.webp";
-import stephanieRequetImage from "../assets/images/screenshots/psy-andrezieux.webp";
+import delphineCimaImage from "../assets/images/screenshots/psychologue-manosque.webp";
+import marieClaireBruneauImage from "../assets/images/screenshots/mcbruneau-psychologue-blois.webp";
+import emanuelleFalliganImage from "../assets/images/screenshots/psychologue-sarrebourg.webp";
+import stephanieRequetImage from "../assets/images/screenshots/psychologue-andrezieux-boutheon.webp";
 import thomasMouriesImage from "../assets/images/screenshots/osteopathe-toulouse-mouries.webp";
 import audreyLarcebauImage from "../assets/images/screenshots/psy-emdr-cotebasque.webp";
 import geraldineAdamImage from "../assets/images/screenshots/cours-pilates-fullpage.webp";
-import montpellierPsychologueImage from "../assets/images/screenshots/montpellier-psychologue.pro.webp";
+import montpellierPsychologueImage from "../assets/images/screenshots/montpellier-psychologue.webp";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -34,6 +34,13 @@ const breadcrumbSchema = {
     },
   ],
 };
+
+const pageSpeedMetrics = [
+  "Performances",
+  "Accessibilite",
+  "Bonnes pratiques",
+  "SEO",
+];
 
 const psychologueProjects = [
   {
@@ -186,16 +193,37 @@ const psychologueProjects = [
         {
           psychologueProjects.map((project) => (
             <article class="flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
-              <div class="relative aspect-video w-full">
+              <div class="relative aspect-video w-full overflow-hidden bg-surface">
                 <Image
                   src={project.image}
                   alt={`Aperçu du site ${project.title}`}
-                  class="h-full w-full object-contain"
+                  class="h-full w-full object-cover object-top"
                   loading="lazy"
                   decoding="async"
                   width={800}
                   height={450}
                 />
+              </div>
+              <div class="w-full border-t border-border bg-surface p-3 sm:p-4">
+                <div
+                  class="rounded-md border border-border bg-white p-3 shadow-sm sm:px-4"
+                  aria-label={`Scores PageSpeed du site ${project.title}`}
+                >
+                  <div class="grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-4 sm:gap-x-5">
+                    {
+                      pageSpeedMetrics.map((metric) => (
+                        <div class="flex min-w-0 flex-col items-center justify-start gap-1.5 text-center">
+                          <div class="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-lime-500 text-base font-semibold leading-none text-lime-700 sm:h-12 sm:w-12 sm:text-lg">
+                            100
+                          </div>
+                          <span class="whitespace-nowrap text-[11px] font-medium leading-snug text-foreground sm:text-xs">
+                            {metric}
+                          </span>
+                        </div>
+                      ))
+                    }
+                  </div>
+                </div>
               </div>
               <div class="flex flex-grow flex-col border-t border-border bg-white p-5 sm:p-6">
                 <h3 class="mb-2 text-lg font-semibold text-foreground sm:text-xl">

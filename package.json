@@ -17,13 +17,13 @@
     "convert-screenshots-webp": "node scripts/convert-screenshots-webp.mjs"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.7",
+    "@astrojs/check": "^0.9.8",
     "@astrojs/sitemap": "^3.7.1",
     "@fontsource-variable/lora": "^5.2.8",
     "@fontsource-variable/source-sans-3": "^5.2.9",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.12",
-    "astro": "^6.0.3",
+    "astro": "^6.0.5",
     "puppeteer": "^24.16.2",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.3"
