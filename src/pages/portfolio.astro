@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CtaSection from "../components/CtaSection.astro";
+import PageSpeedScores from "../components/PageSpeedScores.astro";
 import { Image } from "astro:assets";
 import cecilecoachingImage from "../assets/images/screenshots/cecilecoaching.webp";
 import severineReisserImage from "../assets/images/screenshots/psychologue-leslilas.webp";
@@ -34,13 +35,6 @@ const breadcrumbSchema = {
     },
   ],
 };
-
-const pageSpeedMetrics = [
-  "Performances",
-  "Accessibilite",
-  "Bonnes pratiques",
-  "SEO",
-];
 
 const psychologueProjects = [
   {
@@ -186,6 +180,32 @@ const psychologueProjects = [
         </p>
       </div>
 
+      <div class="mb-10 rounded-xl border border-border bg-surface px-5 py-5 sm:px-6">
+        <h3 class="mb-3 text-lg font-semibold text-foreground">
+          Performances techniques des sites
+        </h3>
+        <p class="mb-3 text-sm text-muted sm:text-base">
+          Tous les sites que je conçois sont pensés pour charger rapidement, être lisibles sur
+          mobile et respecter les bonnes pratiques techniques recommandées par Google.
+        </p>
+        <p class="mb-4 text-sm text-muted sm:text-base">
+          Les scores ci-dessous sont un exemple de ce que peut donner un site bien optimisé sur
+          <span class="whitespace-nowrap">PageSpeed Insights</span>. Pour votre propre site, vous
+          pouvez lancer un test en quelques secondes.
+        </p>
+        <div class="mb-4">
+          <PageSpeedScores title="Exemple de scores pour un site de psychologue" />
+        </div>
+        <a
+          href="https://pagespeed.web.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center text-sm font-semibold text-primary underline underline-offset-4 hover:no-underline"
+        >
+          Testez les performances de votre site sur Google PageSpeed
+        </a>
+      </div>
+
       <!-- Projects Grid -->
       <div
         class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
@@ -203,27 +223,6 @@ const psychologueProjects = [
                   width={800}
                   height={450}
                 />
-              </div>
-              <div class="w-full border-t border-border bg-surface p-3 sm:p-4">
-                <div
-                  class="rounded-md border border-border bg-white p-3 shadow-sm sm:px-4"
-                  aria-label={`Scores PageSpeed du site ${project.title}`}
-                >
-                  <div class="grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-4 sm:gap-x-5">
-                    {
-                      pageSpeedMetrics.map((metric) => (
-                        <div class="flex min-w-0 flex-col items-center justify-start gap-1.5 text-center">
-                          <div class="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-lime-500 text-base font-semibold leading-none text-lime-700 sm:h-12 sm:w-12 sm:text-lg">
-                            100
-                          </div>
-                          <span class="whitespace-nowrap text-[11px] font-medium leading-snug text-foreground sm:text-xs">
-                            {metric}
-                          </span>
-                        </div>
-                      ))
-                    }
-                  </div>
-                </div>
               </div>
               <div class="flex flex-grow flex-col border-t border-border bg-white p-5 sm:p-6">
                 <h3 class="mb-2 text-lg font-semibold text-foreground sm:text-xl">
