@@ -3,7 +3,16 @@ import FormField from './FormField.astro';
 ---
 
 <div id="contact-form-wrapper">
-	<form id="contact-form" name="contact" method="POST" action="/merci" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+	<form
+		id="contact-form"
+		name="contact"
+		method="POST"
+		action="/merci"
+		data-netlify="true"
+		netlify-honeypot="bot-field"
+		data-umami-event="contact_form_submit"
+		class="space-y-6"
+	>
 		<input type="hidden" name="form-name" value="contact" />
 		<p class="hidden" aria-hidden="true">
 			<label for="contact-bot-field">Ne pas remplir</label>

@@ -12,23 +12,23 @@ export interface Props {
 
 const steps: ProcessStep[] = [
 	{
-		title: "1. Diagnostic express (10–15 min)",
-		description: "Court échange pour vérifier que l'offre correspond au besoin, choisir le pack et confirmer le délai.",
+		title: "1. Diagnostic gratuit (10–15 min)",
+		description: "Échange court pour comprendre votre contexte, vérifier que l'offre est adaptée et répondre à vos questions.",
 		icon: "M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
 	},
 	{
 		title: "2. Choix du template",
-		description: "Le client choisit parmi des modèles prédéfinis + palette de couleurs. Pas de design sur mesure.",
+		description: "Vous choisissez parmi des modèles sobres, avec une palette de couleurs adaptée à votre façon de travailler.",
 		icon: "M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"
 	},
 	{
 		title: "3. Contenu via formulaire guidé",
-		description: "Des questions guidées (20–40 min). Pas besoin de rédiger : vous répondez, je m'occupe de la mise en forme pour vos patients.",
+		description: "Des questions simples (20–40 min). Pas besoin de rédiger : vous répondez, je structure le texte pour vos patients.",
 		icon: "M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
 	},
 	{
 		title: "4. Prévisualisation sous 5–7 jours",
-		description: "Envoi d'une URL de prévisualisation + checklist de validation.",
+		description: "Envoi d'une URL de prévisualisation + checklist de validation, pour ajuster sereinement si besoin.",
 		icon: [
 			"M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z",
 			"M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
@@ -36,7 +36,7 @@ const steps: ProcessStep[] = [
 	},
 	{
 		title: "5. 1 aller-retour inclus + mise en ligne",
-		description: "Corrections mineures incluses. Toute modification supplémentaire est facturée.",
+		description: "Un aller-retour d'ajustements inclus, puis mise en ligne de votre site, prêt pour vos futurs patients.",
 		icon: "M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
 	}
 ];
@@ -64,8 +64,8 @@ const { ctaHref = "#lead-form", ctaLabel = "Recevoir ma proposition personnalis�
 <section id="process" class="py-16 bg-surface-alt">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-10">
-			<h2 class="text-3xl font-bold text-foreground">Comment ça fonctionne</h2>
-			<p class="text-muted mt-3">5 étapes simples, un process cadré pour avancer sereinement.</p>
+		<h2 class="text-3xl font-bold text-foreground">Un processus simple, sans charge technique</h2>
+		<p class="text-muted mt-3">5 étapes claires, peu de temps à y consacrer, et aucun aspect technique à gérer de votre côté.</p>
 		</div>
 
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">

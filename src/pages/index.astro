@@ -10,6 +10,7 @@ import MobileFastSection from '../components/MobileFastSection.astro';
 import VisibiliteSection from '../components/VisibiliteSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
+import DifferenciationDiySection from '../components/DifferenciationDiySection.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
@@ -136,17 +137,19 @@ const breadcrumbSchema = {
 
 	<HeroSection />
 
+	<DifferenciationDiySection />
+
 	<ExpertiseSection />
 
 	<VisibiliteSection />
 
-	<MobileFastSection />
+	<ProcessSection />
 
 	<OffersSection />
 
-	<ProcessSection />
-
 	<SeoLocalSection />
+
+	<MobileFastSection />
 
 	<TestimonialsSection />
 

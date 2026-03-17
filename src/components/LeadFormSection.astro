@@ -3,10 +3,21 @@
 <section id="lead-form" class="py-16 bg-surface-alt">
 	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="bg-background rounded-2xl shadow-lg border border-border p-6 md:p-8">
-			<h2 class="text-3xl font-bold text-foreground">Recevoir votre proposition personnalisée en 48h</h2>
-			<p class="text-muted mt-3">Décrivez votre contexte en quelques mots. Je vous recommande l'offre la plus adaptée à votre situation.</p>
+			<h2 class="text-3xl font-bold text-foreground">Demander un diagnostic gratuit de votre visibilité</h2>
+			<p class="text-muted mt-3">
+				Décrivez votre contexte en quelques mots. Je fais le point sur votre visibilité actuelle et vous recommande
+				l’offre la plus adaptée, sans engagement.
+			</p>
 
-			<form name="lead" method="POST" action="/merci" data-netlify="true" netlify-honeypot="bot-field" class="mt-6 space-y-4">
+			<form
+				name="lead"
+				method="POST"
+				action="/merci"
+				data-netlify="true"
+				netlify-honeypot="bot-field"
+				data-umami-event="lead_form_submit"
+				class="mt-6 space-y-4"
+			>
 				<input type="hidden" name="form-name" value="lead" />
 				<p class="hidden" aria-hidden="true">
 					<label for="bot-field">Ne pas remplir</label>
@@ -23,7 +34,7 @@
 					</div>
 				</div>
 				<div>
-				<label for="formule" class="block text-sm font-medium text-muted mb-1">Offre souhaitée *</label>
+				<label for="formule" class="block text-sm font-medium text-muted mb-1">Offre envisagée *</label>
 				<select id="formule" name="formule" required class="w-full border border-border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
 						<option value="">Sélectionnez une offre</option>
 						<option value="serenite">Offre Sérénité — 29€/mois</option>
@@ -32,11 +43,11 @@
 					</select>
 				</div>
 				<div>
-					<label for="message" class="block text-sm font-medium text-muted mb-1">Votre besoin *</label>
+					<label for="message" class="block text-sm font-medium text-muted mb-1">Votre situation actuelle *</label>
 					<textarea id="message" name="message" rows="5" required class="w-full border border-border rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Type de pratique, délai, objectifs, éléments déjà disponibles..."></textarea>
 				</div>
 				<button type="submit" class="w-full bg-primary-foreground text-on-primary py-3 rounded-lg font-semibold hover:opacity-90 transition-colors">
-					Recevoir ma proposition
+					Demander mon diagnostic gratuit
 				</button>
 			</form>
 		</div>

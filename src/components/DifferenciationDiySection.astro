@@ -1,0 +1,76 @@
+---
+const diyItems = [
+	"Beaucoup de temps passé à comprendre l'outil (Wix, WordPress, Hostinger...)",
+	"Textes à rédiger seul, avec le risque d'un ton trop commercial ou, au contraire, trop flou",
+	"Référencement local rarement optimisé (psychologue + ville + spécialités)",
+	"Maintenance, mises à jour et sécurité à gérer soi-même",
+	"Résultat correct visuellement, mais sans garantie que le site vous apporte des demandes"
+];
+
+const nicodevItems = [
+	"Accompagnement pensé pour les psychologues et thérapeutes, avec une posture respectueuse de votre éthique",
+	"Contenus structurés pour vos patients à partir de réponses simples à un formulaire guidé",
+	"Site optimisé pour votre visibilité locale (psychologue + ville + spécialités)",
+	"Aucune gestion technique : hébergement, nom de domaine, sécurité et mises à jour pris en charge",
+	"Suivi dans la durée via l'abonnement, pour un site qui reste à jour et continue de fonctionner"
+];
+---
+
+<section class="py-16 bg-background border-b border-border">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<header class="max-w-3xl mb-10">
+			<h2 class="text-3xl font-bold text-foreground mb-4">
+				Le problème n’est pas d’avoir un site, mais d’avoir un site qui fonctionne
+			</h2>
+			<p class="text-lg text-muted">
+				Vous pourriez créer un site vous-même avec un outil grand public. Mais pour un psychologue ou thérapeute,
+				l’enjeu n’est pas seulement d’«&nbsp;avoir un site&nbsp;»&nbsp;: c’est d’être visible, rassurant, conforme à votre
+				posture professionnelle, sans y passer des heures.
+			</p>
+		</header>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div class="bg-surface rounded-2xl border border-border p-6">
+				<h3 class="text-xl font-semibold text-foreground mb-3">
+					Faire son site soi-même (Wix, WordPress, Hostinger…)
+				</h3>
+				<ul class="space-y-3 text-sm text-muted">
+					{diyItems.map((item) => (
+						<li class="flex items-start gap-2">
+							<span class="mt-1 inline-block size-1.5 rounded-full bg-foreground/40"></span>
+							<span>{item}</span>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<div class="bg-surface rounded-2xl border border-primary/40 p-6">
+				<h3 class="text-xl font-semibold text-foreground mb-3">
+					Être accompagné avec nicodev.fr
+				</h3>
+				<ul class="space-y-3 text-sm text-muted">
+					{nicodevItems.map((item) => (
+						<li class="flex items-start gap-2">
+							<span class="mt-1 inline-block size-1.5 rounded-full bg-primary"></span>
+							<span>{item}</span>
+						</li>
+					))}
+				</ul>
+			</div>
+		</div>
+
+		<div class="mt-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+			<p class="text-sm text-muted max-w-2xl">
+				Un abonnement peut sembler plus cher qu’un hébergement low cost. Mais si le site ne génère pas de
+				demandes, le vrai coût est le temps perdu et les patients qui ne vous trouvent jamais.
+			</p>
+			<a
+				href="#lead-form"
+				class="inline-flex justify-center items-center bg-primary-foreground text-on-primary px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap hover:opacity-90 transition-colors"
+			>
+				Évaluer votre situation gratuitement
+			</a>
+		</div>
+	</div>
+</section>
+

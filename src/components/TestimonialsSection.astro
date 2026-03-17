@@ -4,25 +4,38 @@ import TestimonialCard from './TestimonialCard.astro';
 import testimonialAvatars from '../assets/images/testimonial-avatars.webp';
 ---
 
-<section class="py-16 bg-surface-alt">
+<section class="relative overflow-hidden py-20 bg-surface-alt">
+	<div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-primary/10/10 to-transparent blur-3xl" />
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-10">
-			<h2 class="text-3xl font-bold text-foreground">Témoignages</h2>
-			<p class="text-muted mt-3">Des retours orientés clarté, confiance et prises de contact.</p>
-			<div class="mt-6 flex justify-center">
+		<div class="text-center mb-14">
+			<div class="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs font-medium text-muted shadow-sm backdrop-blur-sm">
+				<span class="h-1.5 w-1.5 rounded-full bg-primary" />
+				<span>Des psychologues déjà accompagnés</span>
+			</div>
+			<h2 class="mt-5 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
+				Ils ont choisi un site pensé pour leur pratique
+			</h2>
+			<p class="mx-auto mt-4 max-w-2xl text-sm md:text-base text-muted">
+				Des psychologues en libéral qui voulaient un site simple, professionnel, sans charge technique, pour se concentrer sur leurs patients.
+			</p>
+			<div class="mt-7 flex justify-center">
 				<Image
 					src={testimonialAvatars}
 					alt=""
 					width={256}
 					height={64}
-					widths={[128, 256]}
-					sizes="256px"
-					class="h-16 w-auto opacity-80"
+					widths={[128, 256, 384]}
+					sizes="(min-width: 768px) 256px, 192px"
+					class="h-16 w-auto opacity-90 drop-shadow-sm"
 					aria-hidden="true"
 				/>
 			</div>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div class="relative">
+			<div class="pointer-events-none absolute -left-10 top-0 h-24 w-24 -rotate-12 rounded-full bg-primary/10 blur-2xl" />
+			<div class="pointer-events-none absolute -right-10 bottom-0 h-28 w-28 rotate-12 rounded-full bg-accent/10 blur-2xl" />
+		</div>
+		<div class="relative grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7 lg:gap-8">
 			<TestimonialCard
 				quote="Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble."
 				highlight="des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité ... un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique !"
@@ -39,6 +52,20 @@ Tout cela pour un rapport qualité/prix imbattable!"
 				author="Psychologue TCC, Lyon"
 			/>
 		</div>
-		<p class="text-center text-sm text-muted mt-8">Voir tous les témoignages sur <a href="https://www.malt.fr/profile/nicolasdevaux1" target="_blank" rel="noopener noreferrer" class="text-foreground underline hover:text-primary">mon profil Malt</a>.</p>
+		<div class="mt-10 flex flex-col items-center gap-3 text-center">
+			<p class="text-xs font-medium uppercase tracking-[0.18em] text-muted">
+				Transparence sur les retours
+			</p>
+			<p class="max-w-xl text-sm text-muted">
+				Vous pouvez aussi consulter d’autres avis détaillés sur
+				<a
+					href="https://www.malt.fr/profile/nicolasdevaux1"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary"
+					>mon profil Malt</a
+				>.
+			</p>
+		</div>
 	</div>
 </section>

@@ -13,10 +13,11 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<header class="mx-auto max-w-3xl text-center">
 			<h2 class="text-3xl font-bold text-foreground sm:text-4xl">
-				Un site professionnel, sans complexité technique
+				Une offre simple, tout compris, sans charge technique
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				Je m’occupe de tout pour que vous puissiez vous concentrer sur votre pratique.
+				Un abonnement clair pour un site professionnel qui fonctionne&nbsp;: je m’occupe de tout (hébergement, nom de
+				domaine, sécurité, mises en ligne et mises à jour) pour que vous puissiez vous concentrer sur vos patients.
 			</p>
 		</header>
 
@@ -24,38 +25,54 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 			<OfferCard
 				name="Sérénité"
 				price="29€"
-				description="Un site fiable, sécurisé et toujours accessible, sans rien avoir à gérer."
+				description="Un site fiable et conforme, sans rien avoir à gérer côté technique."
 				features={[
 					'Votre site reste en ligne et accessible en permanence',
-					'L\'adresse de votre site (votre-domaine.fr) est incluse et gérée pour vous',
+					"L'adresse de votre site (votre-domaine.fr) est incluse et gérée pour vous",
 					'Sécurité et protection intégrées',
 					'Sauvegardes régulières',
 					'1 modification simple par mois (texte ou photo)',
 					'Support par email',
 					'Mentions légales et informations obligatoires incluses'
 				]}
-				buttonLabel="Choisir l’offre Sérénité"
+				buttonLabel="Parler de l’offre Sérénité"
 				buttonHref="/contact/"
 			/>
 
 			<OfferCard
 				name="Visibilité & Confiance"
 				price="49€"
-				description="Pour renforcer votre présence en ligne et maintenir un site clair, rapide et conforme."
+				description="Pour renforcer votre visibilité locale et garder un site clair, rapide et rassurant dans le temps."
 				features={[
-					'Tout le contenu de l’offre Sérénité',
+					"Tout le contenu de l’offre Sérénité",
 					'Amélioration de votre visibilité sur Google*',
 					'Mise en place de votre fiche Google My Business',
 					'Vérification mensuelle des performances du site avec rapport détaillé',
-					'Modifications de contenu incluses (changements de tarifs, ajouts/retraits de pages, textes..)',
+					'Modifications de contenu incluses (changements de tarifs, ajouts/retraits de pages, textes...)',
 					'Modernisation du site tous les ans'
 				]}
-				buttonLabel="Choisir l’offre Visibilité"
+				buttonLabel="Parler de l’offre Visibilité"
 				buttonHref="/contact/"
 				recommended={true}
 				badgeText="Recommandée"
 			/>
 		</div>
+		<div class="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-4 text-sm text-muted sm:mt-10 sm:p-5 sm:text-base">
+			<p class="font-medium text-foreground">
+				Un site professionnel, simple, sans gestion technique.
+			</p>
+			<p class="mt-1">
+				Vous n’avez rien à gérer côté web (hébergement, nom de domaine, mises à jour, sauvegardes, réglages)&nbsp;:
+				tout est pris en charge pour vous dans l’abonnement.
+			</p>
+			<p class="mt-2 font-medium text-foreground">
+				Formule sans engagement&nbsp;:
+			</p>
+			<p class="mt-1">
+				vous pouvez arrêter l’abonnement à tout moment, sans frais cachés ni petite ligne en bas de page.
+			</p>
+		</div>
+
 		<p class="mt-4 text-xs text-muted sm:text-sm">
 			* Les solutions techniques pour un référencement local optimal sont mises en place avec soin, mais les résultats Google peuvent prendre du temps à apparaître, surtout
 			dans les villes très concurrentielles. Votre site sur la première page n’est pas garantie immédiatement. Une vérification mensuelle est incluse pour vous assurer que tout est en ordre.

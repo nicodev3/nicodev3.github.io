@@ -8,12 +8,34 @@ export interface Props {
 const { quote, highlight, author } = Astro.props;
 ---
 
-<blockquote class="bg-background rounded-xl border border-border p-6">
-	<p class="text-muted">{quote}</p>
+<blockquote
+	class="group relative flex h-full flex-col rounded-2xl border border-border/70 bg-background/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5"
+>
+	<div class="pointer-events-none absolute inset-x-6 top-0 h-16 bg-gradient-to-b from-primary/5 to-transparent opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
+	<div class="relative">
+		<div class="mb-4 inline-flex items-center gap-2 text-xs font-medium text-primary/80">
+			<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
+				<span class="text-lg leading-none">“</span>
+			</span>
+			<span class="uppercase tracking-[0.18em] text-[0.65rem] text-muted">Témoignage client</span>
+		</div>
+		<p class="text-sm leading-relaxed text-foreground/90">
+			{quote}
+		</p>
+	</div>
 	{highlight && (
-		<p class="text-muted mt-3 italic">
-			<span class="font-medium not-italic">Le + :</span> {highlight}
+		<p class="mt-4 rounded-lg bg-surface-alt/60 px-4 py-3 text-sm leading-relaxed text-muted italic">
+			<span class="mr-1 inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-primary not-italic">
+				Le +
+			</span>
+			<span class="align-middle not-italic">{highlight}</span>
 		</p>
 	)}
-	<footer class="mt-4 text-sm text-muted">{author}</footer>
+	<footer class="mt-5 flex items-center gap-3 text-sm text-muted">
+		<div class="h-9 w-9 rounded-full bg-gradient-to-tr from-primary/70 via-primary to-primary/60 opacity-90 shadow-sm ring-2 ring-background/90" />
+		<div class="flex flex-col text-left">
+			<span class="font-medium text-foreground">{author}</span>
+			<span class="text-xs text-muted">Psychologue accompagnée avec un site clé en main</span>
+		</div>
+	</footer>
 </blockquote>
