@@ -30,14 +30,16 @@ L'objectif n'est pas forcément de trouver la solution la moins chère sur le pa
 
 Si votre objectif est simplement d'avoir un site propre pour présenter votre pratique, **vous n'avez pas besoin de prévoir le budget d'une agence**.
 
-Dans la plupart des cas, un psychologue qui crée lui-même son site passe par une plateforme ou un modèle prêt à l'emploi. Le coût réaliste ressemble plutôt à ceci :
+Dans la plupart des cas, un psychologue qui crée lui-même son site passe par une plateforme ou un modèle prêt à l'emploi. Certaines offres d'appel peuvent sembler très basses, mais pour un rendu pro (sans publicité + nom de domaine), attendez plutôt **~10 € à 20 € / mois** en facturation annuelle, selon le builder. Ce tarif ne reflète pas toujours le coût réel une fois le projet lancé.
 
-- **abonnement plateforme** : 15 € à 45 € / mois,
+Le coût réaliste ressemble plutôt à ceci :
+
+- **abonnement plateforme** : environ 10 € à 45 € / mois selon l'offre de départ, les options et le mode de facturation (souvent plus bas en annuel),
 - **nom de domaine** : 10 € à 30 € / an,
 - **éventuels outils annexes** : 0 € à 20 € / mois,
 - **votre temps** : plusieurs heures, parfois plusieurs jours.
 
-En pratique, **un site fait soi-même revient souvent entre 200 € et 700 € la première année**, si vous ne payez personne pour le créer.
+En pratique, **un site fait soi-même peut démarrer à un coût très bas**, mais revient souvent entre **120 € et 500 € la première année** si vous ne payez personne pour le créer.
 
 Ce budget reste raisonnable, mais il faut accepter les contreparties :
 - choisir un modèle,
@@ -116,12 +118,9 @@ Pour un psychologue qui veut faire simple, tous ces postes ne sont pas obligatoi
 
 ## Freelance, agence, plateforme, ou solution accompagnée ?
 
-| Solution | Budget de départ | Temps à y consacrer | Visibilité / rendu | Pour qui ? |
-| --- | --- | --- | --- | --- |
-| **Plateforme en autonomie** | **200 € à 700 € / an** | Élevé | Variable, souvent limité si vous débutez | Vous voulez payer le moins possible et tout gérer vous-même |
-| **Freelance / prestation classique** | **1 000 € à 3 000 €** | Faible à modéré | Bon si la prestation est bien cadrée | Vous voulez déléguer davantage avec un budget intermédiaire |
-| **Agence web** | **Plusieurs milliers d'euros** | Faible | Bon à très bon, mais souvent surdimensionné pour un cabinet simple | Vous voulez une prestation plus large que le simple site vitrine |
-| **Mes offres** | **59 € / mois** ou **89 € / mois** | Faible | Professionnel, pensé pour les psychologues | Vous cherchez un compromis entre budget maîtrisé, rendu sérieux et accompagnement |
+<div class="not-prose mt-6 rounded-2xl border border-border bg-surface p-6"><div class="grid grid-cols-1 gap-4 md:grid-cols-2"><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Plateforme en autonomie</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">à partir d'environ 10 €/mois</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> élevé</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> variable (structure, mobile, réglages SEO à gérer)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous acceptez d'apprendre et de gérer les détails</p></div><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Freelance / prestation classique</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">1000 à 3000&nbsp;€</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible à modéré</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> bon potentiel SEO local si la structure et le contenu sont prévus dès le départ (puis suivi à prévoir)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous déléguez avec un cadrage clair</p></div><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Agence web</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">plusieurs milliers d'euros</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> très bon, mais souvent surdimensionné pour un cabinet simple</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous cherchez une prestation plus complète (stratégie, identité, etc.)</p></div><div class="rounded-xl border border-primary/30 bg-primary/5 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Mes offres</h3><span class="inline-flex rounded-full bg-primary-foreground text-on-primary px-3 py-1 text-xs font-semibold">29 € / 49 €</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Offres :</strong> <span class="font-semibold text-foreground">Sérénité</span> (29 € / mois) ou <span class="font-semibold text-foreground">Visibilité &amp; Confiance</span> (49 € / mois)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible (je m'occupe de l'essentiel)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> professionnel, pensé psychologues (hébergement + accompagnement + suivi)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous voulez un budget prévisible et moins de charge mentale</p></div></div></div>
+
+> Repère : quel que soit le format, la création n'est pas tout. Si votre objectif est d'être trouvé sur Google, prévoyez un minimum de maintenance technique et (selon la concurrence locale) un peu de SEO éditorial.
 
 ### Agences web : pas forcément adaptées à un besoin simple
 
@@ -136,9 +135,9 @@ On peut bien sûr trouver des agences à plusieurs milliers d'euros, mais cela c
 
 Autrement dit, **ce n'est pas le budget normal d'un site de psychologue classique**. Pour un besoin simple, il est raisonnable d'attendre des tarifs bien plus bas.
 
-### Plateformes de création (Wix, Squarespace, Jimdo, etc.) : 150 € à 2 500 € la première année
+### Plateformes de création (Wix, Squarespace, Jimdo, etc.) : parfois très peu chères au départ
 
-- **Abonnement** : 15 € à 45 € / mois selon les options
+- **Abonnement** : parfois dès **~10 € / mois** en facturation annuelle, puis souvent plus selon les options
 - **Domaine** : souvent inclus la première année
 - **Création par un pro** (si vous sous-traitez) : 500 € à 2 000 € pour une mise en page sur mesure
 - **Si vous le faites vous-même** : coût limité à l'abonnement, mais beaucoup de temps passé
@@ -162,8 +161,8 @@ Entre le "tout seul" et le "site sur devis à plusieurs milliers d'euros", il ex
 
 **Dans mes offres**, vous pouvez avoir :
 
-- un **pack site vitrine à 59 € / mois**,
-- un **pack site + blog à 89 € / mois**.
+- un **offre Sérénité à 29 € / mois**,
+- un **offre Visibilité & Confiance à 49 € / mois**.
 
 Concrètement, cela permet de rester dans un budget accessible tout en évitant :
 - de partir d'une page blanche,
@@ -181,18 +180,18 @@ Les freelances proposent en général des tarifs plus accessibles que les agence
 
 ### Option 1 : vous faites l'essentiel vous-même
 
-- abonnement plateforme : **240 € / an**
+- abonnement plateforme : **36 € à 240 € / an**
 - nom de domaine : **15 € / an**
 - outils complémentaires éventuels : **0 € à 120 € / an**
 
-**Total de lancement : souvent 255 € à 375 € la première année**
+**Total de lancement : souvent 50 € à 375 € la première année**
 
 Le vrai coût ici, c'est surtout votre temps, avec un risque supplémentaire : investir plusieurs heures pour un résultat qui reste peu visible ou trop amateur.
 
 ### Option 2 : vous voulez un cadre pro sans gros budget
 
-- pack site vitrine : **59 € / mois**
-- pack site + blog : **89 € / mois**
+- offre Sérénité : **29 € / mois**
+- offre Visibilité & Confiance : **49 € / mois**
 
 Selon la formule choisie, vous bénéficiez d'un cadre professionnel avec hébergement, accompagnement et suivi dans la durée.
 Vous gardez un budget prévisible, sans devoir apprendre toute la partie technique, ni porter seul la qualité finale du rendu.
