@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import DiagnosticForm from '../components/DiagnosticForm.astro';
 import ContactForm from '../components/ContactForm.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -28,24 +29,39 @@ const breadcrumbSchema = {
 	/>
 
 	<!-- Contact Section -->
-	<section class="py-16 bg-white">
+	<section id="diagnostic" class="py-16 bg-surface-alt">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-3xl">
+				<h2 class="text-3xl font-bold text-foreground mb-4">
+					Demander un diagnostic gratuit
+				</h2>
+				<p class="text-muted mb-8">
+					Décrivez votre situation de visibilité : je fais le point sur ce qui bloque vos demandes et je vous oriente vers
+					l’offre la plus adaptée, sans engagement.
+				</p>
+
+				<DiagnosticForm />
+			</div>
+		</div>
+	</section>
+
+	<section id="devis" class="py-16 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 				<!-- Contact Form -->
 				<div>
 					<h2 class="text-3xl font-bold text-foreground mb-8">
-						Envoyez-moi un message
+						Demander un devis personnalisé
 					</h2>
-					
-				<ContactForm />
+					<ContactForm />
 				</div>
-				
+
 				<!-- Contact Info -->
 				<div>
 					<h2 class="text-3xl font-bold text-foreground mb-8">
 						Mes coordonnées
 					</h2>
-					
+
 					<div class="space-y-8">
 						<div class="flex items-start space-x-4">
 							<div class="w-12 h-12 bg-surface rounded-lg flex items-center justify-center flex-shrink-0">
@@ -62,7 +78,7 @@ const breadcrumbSchema = {
 								</p>
 							</div>
 						</div>
-						
+
 						<div class="flex items-start space-x-4">
 							<div class="w-12 h-12 bg-surface rounded-lg flex items-center justify-center flex-shrink-0">
 								<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +94,7 @@ const breadcrumbSchema = {
 								</p>
 							</div>
 						</div>
-						
+
 						<div class="flex items-start space-x-4">
 							<div class="w-12 h-12 bg-surface rounded-lg flex items-center justify-center flex-shrink-0">
 								<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,13 +110,13 @@ const breadcrumbSchema = {
 							</div>
 						</div>
 					</div>
-					
+
 					<!-- Rappel des offres -->
 					<div class="mt-12">
 						<h3 class="text-xl font-semibold text-foreground mb-6">
 							Rappel des offres
 						</h3>
-						
+
 						<div class="space-y-4">
 							<div class="bg-surface p-4 rounded-lg border-l-4 border-border">
 								<h4 class="font-medium text-foreground mb-1">
@@ -111,7 +127,7 @@ const breadcrumbSchema = {
 									1 modification simple par mois (texte ou photo) et support par email.
 								</p>
 							</div>
-							
+
 							<div class="bg-surface p-4 rounded-lg border-l-4 border-border">
 								<h4 class="font-medium text-foreground mb-1">
 									Visibilité &amp; Confiance — 49€/mois

@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import OffersSection from '../components/OffersSection.astro';
 import ProcessSection from '../components/ProcessSection.astro';
 import SeoLocalSection from '../components/SeoLocalSection.astro';
-import LeadFormSection from '../components/LeadFormSection.astro';
 import FaqSection from '../components/FaqSection.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import MobileFastSection from '../components/MobileFastSection.astro';
@@ -11,6 +10,7 @@ import VisibiliteSection from '../components/VisibiliteSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
 import DifferenciationDiySection from '../components/DifferenciationDiySection.astro';
+import CtaSection from '../components/CtaSection.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
@@ -155,5 +155,10 @@ const breadcrumbSchema = {
 
 	<FaqSection />
 
-	<LeadFormSection />
+	<CtaSection
+		title="Recevoir mon diagnostic gratuit"
+		description="Quelques questions pour comprendre votre situation et vous orienter vers l'offre la plus adaptée, sans engagement."
+		primaryButton={{ text: "Je demande mon diagnostic", href: "/contact/#diagnostic" }}
+		secondaryButton={{ text: "Voir mes tarifs", href: "/tarifs/" }}
+	/>
 </Layout>
