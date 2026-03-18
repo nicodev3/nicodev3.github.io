@@ -2,7 +2,7 @@
 title: "Combien coûte vraiment la création d’un site internet pour un psychologue en 2026 ?"
 description: "Prix d’un site internet de psychologue en 2026 : fourchettes réalistes, coûts cachés et budget selon votre pratique en libéral."
 pubDate: "2026-02-22"
-updatedDate: "2026-02-22"
+updatedDate: "2026-03-18"
 author: "Nicolas Devaux"
 image: "/images/development.webp"
 tags: ["psychologue", "prix site internet", "création site", "cabinet libéral", "budget web", "2026"]
@@ -10,21 +10,51 @@ tags: ["psychologue", "prix site internet", "création site", "cabinet libéral"
 
 *Temps de lecture : 9 minutes*
 
-Quand on exerce en libéral, la question est concrète : **combien investir pour un site utile, sérieux, et rentable ?**
+Quand on exerce en libéral, la question est concrète : **combien investir pour un site utile, sérieux, et rassurant, sans mettre plusieurs milliers d'euros ?**
 
-En 2026, on voit de tout : des offres à quelques centaines d’euros, et des projets à plusieurs milliers. L’écart s’explique surtout par trois éléments :
+En 2026, on voit de tout : des outils à petit budget si vous faites une partie du travail vous-même, et des prestations beaucoup plus chères si vous déléguez entièrement.
+
+Pour un psychologue, la vraie question n'est donc pas seulement "combien coûte un site ?", mais plutôt :
+
+> **combien va me coûter un site si je veux rester autonome, éviter les frais inutiles, et garder une image professionnelle ?**
+
+L'écart de prix s'explique surtout par trois éléments :
 
 1. le niveau de personnalisation,
 2. la qualité du contenu,
 3. le niveau d’accompagnement après la mise en ligne.
 
-L’objectif n’est pas de trouver le prix le plus bas, mais le bon équilibre entre budget, image professionnelle et acquisition de nouveaux patients.
+L'objectif n'est pas forcément de trouver la solution la moins chère sur le papier, mais le bon équilibre entre budget, temps passé, image professionnelle et simplicité au quotidien.
 
-## Fourchettes de prix réalistes en 2026
+## Combien ça coûte si vous le faites vous-même ?
+
+Si votre objectif est simplement d'avoir un site propre pour présenter votre pratique, **vous n'avez pas besoin de prévoir le budget d'une agence**.
+
+Dans la plupart des cas, un psychologue qui crée lui-même son site passe par une plateforme ou un modèle prêt à l'emploi. Le coût réaliste ressemble plutôt à ceci :
+
+- **abonnement plateforme** : 15 € à 45 € / mois,
+- **nom de domaine** : 10 € à 30 € / an,
+- **éventuels outils annexes** : 0 € à 20 € / mois,
+- **votre temps** : plusieurs heures, parfois plusieurs jours.
+
+En pratique, **un site fait soi-même revient souvent entre 200 € et 700 € la première année**, si vous ne payez personne pour le créer.
+
+Ce budget reste raisonnable, mais il faut accepter les contreparties :
+- choisir un modèle,
+- rédiger les textes,
+- faire la mise en page,
+- gérer les réglages techniques,
+- corriger vous-même les petits problèmes.
+
+Et surtout, **mettre un site en ligne ne veut pas dire qu'il sera visible sur Google ni qu'il inspirera immédiatement confiance**.
+
+Beaucoup de sites faits soi-même ont un point commun : ils semblent corrects pour leur créateur, mais ils restent difficiles à trouver, peu convaincants sur mobile, ou donnent une impression trop générique. Ce n'est pas forcément parce que l'outil est mauvais, mais parce qu'il y a beaucoup de détails discrets à bien régler pour obtenir un résultat vraiment professionnel.
+
+## Fourchettes de prix réalistes si vous déléguez à un professionnel
 
 ### 1) Site "carte de visite" (1 page)
 
-**Budget moyen : 500 € à 1 800 €**
+**Budget moyen : 400 € à 1 200 €**
 
 Adapté si vous voulez simplement afficher :
 - votre présentation,
@@ -36,7 +66,7 @@ C’est souvent un point de départ, mais limité pour le référencement local 
 
 ### 2) Site vitrine professionnel (4 à 10 pages)
 
-**Budget moyen : 2 000 € à 7 000 €**
+**Budget moyen : 900 € à 2 500 €**
 
 C’est le format le plus pertinent pour un cabinet libéral.
 
@@ -49,9 +79,11 @@ On peut y intégrer :
 
 ### 3) Site avancé avec stratégie de contenu
 
-**Budget moyen : 5 000 € à 12 000 €**
+**Budget moyen : 2 500 € à 5 000 €**
 
 Pour les praticiens qui veulent développer une vraie visibilité (SEO local, articles réguliers, tunnel de prise de rendez-vous, optimisation conversion).
+
+Pour un psychologue, ce troisième cas reste déjà au-dessus du besoin habituel. **Dans la majorité des cas, un site simple, clair et professionnel n'a pas besoin d'un budget aussi élevé.**
 
 ## Ce qui fait monter (ou baisser) le prix
 
@@ -67,6 +99,8 @@ Les principaux écarts viennent de :
 
 Un site peu cher peut suffire au départ. Mais un site mal structuré coûte ensuite en temps, en refonte, et en visibilité perdue.
 
+Le piège, c'est qu'un site peut paraître "terminé" alors qu'il ne remplit pas vraiment son rôle : être trouvé, rassurer, et donner envie de prendre contact.
+
 ## Les coûts oubliés (très fréquents)
 
 Le coût de création n’est pas le coût total.
@@ -78,17 +112,29 @@ Ajoutez généralement :
 - **rédaction ou optimisation de contenu** : selon volume,
 - **SEO mensuel** (si concurrence locale forte) : 150 € à 600 € / mois.
 
-## Freelance, agence, ou solution autonome ?
+Pour un psychologue qui veut faire simple, tous ces postes ne sont pas obligatoires au départ. On peut très bien commencer avec un site sobre, quelques pages claires, un nom de domaine et un hébergement correct.
 
-### Agences web : 3 000 € à 15 000 € et plus
+## Freelance, agence, plateforme, ou solution accompagnée ?
 
-Les agences proposent des sites de qualité, avec équipe dédiée (chef de projet, graphiste, développeur, rédacteur). En contrepartie, le budget est souvent élevé :
+| Solution | Budget de départ | Temps à y consacrer | Visibilité / rendu | Pour qui ? |
+| --- | --- | --- | --- | --- |
+| **Plateforme en autonomie** | **200 € à 700 € / an** | Élevé | Variable, souvent limité si vous débutez | Vous voulez payer le moins possible et tout gérer vous-même |
+| **Freelance / prestation classique** | **1 000 € à 3 000 €** | Faible à modéré | Bon si la prestation est bien cadrée | Vous voulez déléguer davantage avec un budget intermédiaire |
+| **Agence web** | **Plusieurs milliers d'euros** | Faible | Bon à très bon, mais souvent surdimensionné pour un cabinet simple | Vous voulez une prestation plus large que le simple site vitrine |
+| **Mes offres** | **59 € / mois** ou **89 € / mois** | Faible | Professionnel, pensé pour les psychologues | Vous cherchez un compromis entre budget maîtrisé, rendu sérieux et accompagnement |
 
-- **Site carte de visite** : 1 500 € à 3 500 €
-- **Site vitrine professionnel** : 4 000 € à 10 000 €
-- **Site avec stratégie de contenu** : 6 000 € à 15 000 € et plus
+### Agences web : pas forcément adaptées à un besoin simple
 
-Les frais de structure et la multiplicité des intervenants expliquent ces montants. Idéal si vous voulez tout déléguer, mais l'investissement est conséquent.
+Les agences proposent des sites de qualité, avec équipe dédiée (chef de projet, graphiste, développeur, rédacteur). Mais pour un psychologue qui a surtout besoin d'un site vitrine sobre, ce modèle est souvent disproportionné.
+
+On peut bien sûr trouver des agences à plusieurs milliers d'euros, mais cela concerne plutôt :
+
+- un niveau de sur-mesure important,
+- une identité visuelle poussée,
+- une stratégie de contenu complète,
+- ou un accompagnement marketing plus large.
+
+Autrement dit, **ce n'est pas le budget normal d'un site de psychologue classique**. Pour un besoin simple, il est raisonnable d'attendre des tarifs bien plus bas.
 
 ### Plateformes de création (Wix, Squarespace, Jimdo, etc.) : 150 € à 2 500 € la première année
 
@@ -97,47 +143,89 @@ Les frais de structure et la multiplicité des intervenants expliquent ces monta
 - **Création par un pro** (si vous sous-traitez) : 500 € à 2 000 € pour une mise en page sur mesure
 - **Si vous le faites vous-même** : coût limité à l'abonnement, mais beaucoup de temps passé
 
-Au final, la première année peut atteindre 700 € à 2 500 € (abonnement + création). Les limites : templates génériques, SEO moins performant, pas d'intégration du widget de prise de rendez-vous, et souvent un travail conséquent à votre charge.
+Si vous le faites vous-même, c'est souvent la solution la moins chère au départ. Mais il faut garder en tête qu'un site construit seul n'est pas automatiquement bien présenté, bien organisé, ni vraiment visible.
 
-### Freelance spécialisé : une alternative moins chère
+Les limites sont fréquentes :
 
-Les freelances proposent en général des tarifs plus accessibles que les agences, tout en offrant un accompagnement personnalisé. C'est souvent le meilleur compromis pour un cabinet libéral.
+- rendu visuel générique ou peu rassurant,
+- structure de pages peu convaincante pour un futur patient,
+- visibilité limitée dans les résultats de recherche,
+- détails de configuration oubliés,
+- réglages techniques à gérer seul,
+- travail non négligeable de votre côté.
 
-**Chez moi** : site vitrine professionnel sur mesure à **490 €** (forfait unique) ou **59 € à 89 € / mois** (hébergement, modifications de contenu et support inclus). Soit bien en dessous des fourchettes habituelles des agences et des plateformes quand on inclut la création par un pro, avec une qualité professionnelle et une compréhension des enjeux des psychologues. Vérifiez toujours les modalités de suivi et de maintenance selon vos besoins.
+En clair, **on paie moins en argent, mais on prend souvent le risque d'obtenir un site qui "existe" sans vraiment soutenir la visibilité du cabinet ni donner une impression très professionnelle.**
 
-## Budget type pour un psychologue en libéral
+### Solution accompagnée : garder un petit budget sans tout faire seul
 
-Exemple réaliste :
+Entre le "tout seul" et le "site sur devis à plusieurs milliers d'euros", il existe une option plus simple : **partir sur une base professionnelle déjà pensée pour les psychologues, avec accompagnement**.
 
-- conception + design + développement : **3 200 €**
-- optimisation des contenus principaux : **800 €**
-- SEO local initial : **600 €**
-- nom de domaine + hébergement (1 an) : **220 €**
+**Dans mes offres**, vous pouvez avoir :
 
-**Total de lancement : 4 820 €**
+- un **pack site vitrine à 59 € / mois**,
+- un **pack site + blog à 89 € / mois**.
 
-Puis, en rythme de croisière :
-- maintenance : **70 € / mois**
-- publication/optimisation SEO : **200 € / mois**
+Concrètement, cela permet de rester dans un budget accessible tout en évitant :
+- de partir d'une page blanche,
+- de passer des heures sur la technique,
+- de bricoler un design générique,
+- de payer les tarifs d'une agence.
+
+Autrement dit, **si vous cherchez une solution économique mais sérieuse, ma formule est souvent plus rassurante qu'un outil 100 % autonome, et bien moins coûteuse qu'une prestation classique.**
+
+### Freelance sur mesure : souvent entre les deux
+
+Les freelances proposent en général des tarifs plus accessibles que les agences, tout en offrant un accompagnement personnalisé. Pour un site vitrine de psychologue sans complexité particulière, c'est souvent dans cette catégorie que l'on trouve les budgets les plus cohérents.
+
+## Budget type selon votre manière de faire
+
+### Option 1 : vous faites l'essentiel vous-même
+
+- abonnement plateforme : **240 € / an**
+- nom de domaine : **15 € / an**
+- outils complémentaires éventuels : **0 € à 120 € / an**
+
+**Total de lancement : souvent 255 € à 375 € la première année**
+
+Le vrai coût ici, c'est surtout votre temps, avec un risque supplémentaire : investir plusieurs heures pour un résultat qui reste peu visible ou trop amateur.
+
+### Option 2 : vous voulez un cadre pro sans gros budget
+
+- pack site vitrine : **59 € / mois**
+- pack site + blog : **89 € / mois**
+
+Selon la formule choisie, vous bénéficiez d'un cadre professionnel avec hébergement, accompagnement et suivi dans la durée.
+Vous gardez un budget prévisible, sans devoir apprendre toute la partie technique, ni porter seul la qualité finale du rendu.
+
+### Option 3 : vous déléguez une prestation classique
+
+- conception + design + développement : **900 € à 2 500 €**
+- contenus / optimisation : **0 € à 800 €**
+- SEO local initial : **0 € à 500 €**
+- nom de domaine + hébergement : **100 € à 250 € / an**
+
+**Total de lancement : souvent autour de 1 000 € à 3 000 €**
+
+Au-delà, on sort souvent du besoin simple d'un cabinet libéral standard.
 
 ## Comment décider de votre budget
 
 Posez-vous ces 4 questions :
 
-1. Combien de nouveaux patients souhaitez-vous générer par mois ?
-2. Quelle est la valeur moyenne d’un accompagnement sur 3 à 6 mois ?
-3. En combien de mois voulez-vous rentabiliser le site ?
-4. Avez-vous du temps pour produire du contenu, ou faut-il déléguer ?
+1. Voulez-vous surtout économiser de l'argent, ou économiser du temps ?
+2. Êtes-vous prêt à rédiger et mettre à jour le site vous-même ?
+3. Avez-vous besoin d'un simple site vitrine, ou d'une vraie stratégie de visibilité ?
+4. Préférez-vous apprendre un outil, ou déléguer le minimum nécessaire ?
 
 Ces réponses donnent rapidement une enveloppe cohérente.
 
 ## Conclusion
 
-En 2026, un site de psychologue peut être simple, efficace et raisonnable en budget, à condition de clarifier vos objectifs.
+En 2026, un site de psychologue peut rester simple, efficace et raisonnable en budget. Et pour un besoin standard, il n'y a généralement aucune raison de prendre comme référence des devis très élevés.
 
-> Le bon budget est celui qui soutient votre pratique, votre éthique et votre visibilité locale.
+> Pour un psychologue, un site vitrine clair et professionnel devrait en général rester dans un budget mesuré, surtout si le besoin technique est simple.
 
-Si vous le souhaitez, je peux aussi préparer un modèle de cahier des charges pour demander des devis comparables. [Contactez-moi](/contact/) pour en discuter ou consultez directement mes [tarifs](/tarifs/).
+Si vous cherchez justement une option simple, professionnelle et abordable pour votre cabinet, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/).
 
 ---
 
