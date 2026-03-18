@@ -31,4 +31,38 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 	</section>
+
+	<script is:inline>
+		(() => {
+			const source = document.location.search ? new URLSearchParams(document.location.search).get('source') : null;
+			const eventName =
+				source === 'diagnostic'
+					? 'diagnostic_form_success'
+					: source === 'contact'
+						? 'contact_form_success'
+						: 'form_success';
+
+			const trackSuccess = () => {
+				if (window.umami && typeof window.umami.track === 'function') {
+					window.umami.track(eventName, source ? { source } : undefined);
+					return true;
+				}
+
+				return false;
+			};
+
+			if (trackSuccess()) {
+				return;
+			}
+
+			let attempts = 0;
+			const intervalId = window.setInterval(() => {
+				attempts += 1;
+
+				if (trackSuccess() || attempts >= 20) {
+					window.clearInterval(intervalId);
+				}
+			}, 300);
+		})();
+	</script>
 </Layout>

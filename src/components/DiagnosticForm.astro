@@ -10,7 +10,7 @@ import FormField from './FormField.astro';
 		id="diagnostic-form"
 		name="diagnostic"
 		method="POST"
-		action="/merci"
+		action="/merci?source=diagnostic"
 		data-netlify="true"
 		netlify-honeypot="bot-field"
 		data-umami-event="diagnostic_form_submit"
@@ -23,23 +23,23 @@ import FormField from './FormField.astro';
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<FormField id="firstName" name="firstName" label="Prénom *" type="text" required />
-			<FormField id="lastName" name="lastName" label="Nom *" type="text" required />
+			<FormField id="diagnostic-firstName" name="firstName" label="Prénom *" type="text" required />
+			<FormField id="diagnostic-lastName" name="lastName" label="Nom *" type="text" required />
 		</div>
 
-		<FormField id="email" name="email" label="Email *" type="email" required />
+		<FormField id="diagnostic-email" name="email" label="Email *" type="email" required />
 
-		<FormField id="profession" name="profession" label="Votre profession *" required variant="select">
+		<FormField id="diagnostic-profession" name="profession" label="Votre profession *" required variant="select">
 			<option value="">Sélectionnez votre profession</option>
 			<option value="psychologue">Psychologue</option>
 		</FormField>
 
-		<FormField id="city" name="city" label="Ville (ou zone) *" required placeholder="Paris 15, Sceaux, ... " />
+		<FormField id="diagnostic-city" name="city" label="Ville (ou zone) *" required placeholder="Paris 15, Sceaux, ... " />
 
-		<FormField id="website" name="website" label="Site internet (si vous en avez un)" type="text" placeholder="https://votre-site.fr" />
+		<FormField id="diagnostic-website" name="website" label="Site internet (si vous en avez un)" type="text" placeholder="https://votre-site.fr" />
 
 		<FormField
-			id="visibilityStatus"
+			id="diagnostic-visibilityStatus"
 			name="visibilityStatus"
 			label="Votre situation actuelle (visibilité) *"
 			required
@@ -52,7 +52,7 @@ import FormField from './FormField.astro';
 			<option value="je-ne-sais-pas">Je ne sais pas encore</option>
 		</FormField>
 
-		<FormField id="mainObjective" name="mainObjective" label="Votre objectif principal *" required variant="select">
+		<FormField id="diagnostic-mainObjective" name="mainObjective" label="Votre objectif principal *" required variant="select">
 			<option value="">Sélectionnez votre objectif</option>
 			<option value="google-local">Être plus visible sur Google local</option>
 			<option value="confiance-contenu">Rassurer davantage (contenu + pages claires)</option>
@@ -61,7 +61,7 @@ import FormField from './FormField.astro';
 		</FormField>
 
 		<FormField
-			id="message"
+			id="diagnostic-message"
 			name="message"
 			label="Votre contexte (quelques mots) *"
 			required
@@ -72,7 +72,7 @@ import FormField from './FormField.astro';
 
 		<button
 			type="submit"
-			class="w-full bg-primary-foreground text-on-primary py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-colors"
+			class="w-full rounded-lg bg-primary-foreground px-6 py-3 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 		>
 			Demander mon diagnostic gratuit
 		</button>

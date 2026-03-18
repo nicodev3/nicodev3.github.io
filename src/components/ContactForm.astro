@@ -2,12 +2,12 @@
 import FormField from './FormField.astro';
 ---
 
-<div id="contact-form-wrapper">
+<div id="contact-form-wrapper" class="bg-background rounded-2xl shadow-lg border border-border p-6 md:p-8">
 	<form
 		id="contact-form"
 		name="contact"
 		method="POST"
-		action="/merci"
+		action="/merci?source=contact"
 		data-netlify="true"
 		netlify-honeypot="bot-field"
 		data-umami-event="contact_form_submit"
@@ -19,30 +19,30 @@ import FormField from './FormField.astro';
 			<input id="contact-bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off" />
 		</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<FormField id="firstName" name="firstName" label="Prénom *" type="text" required />
-			<FormField id="lastName" name="lastName" label="Nom *" type="text" required />
+			<FormField id="contact-firstName" name="firstName" label="Prénom *" type="text" required />
+			<FormField id="contact-lastName" name="lastName" label="Nom *" type="text" required />
 		</div>
 
-		<FormField id="email" name="email" label="Email *" type="email" required />
-		<FormField id="phone" name="phone" label="Téléphone" type="tel" />
+		<FormField id="contact-email" name="email" label="Email *" type="email" required />
+		<FormField id="contact-phone" name="phone" label="Téléphone" type="tel" />
 
-		<FormField id="profession" name="profession" label="Votre profession *" required variant="select">
+		<FormField id="contact-profession" name="profession" label="Votre profession *" required variant="select">
 			<option value="">Sélectionnez votre profession</option>
 			<option value="psychologue">Psychologue</option>
 		</FormField>
 
-		<FormField id="formule" name="formule" label="Offre souhaitée *" required variant="select">
+		<FormField id="contact-formule" name="formule" label="Offre souhaitée *" required variant="select">
 			<option value="">Sélectionnez une offre</option>
 			<option value="serenite">Offre Sérénité — 29€/mois</option>
 			<option value="visibilite-confiance">Offre Visibilité &amp; Confiance — 49€/mois</option>
 			<option value="indecis">Je ne sais pas encore</option>
 		</FormField>
 
-		<FormField id="message" name="message" label="Votre projet *" required variant="textarea" placeholder="Décrivez votre activité, vos besoins, vos objectifs..." rows={6} />
+		<FormField id="contact-message" name="message" label="Votre projet *" required variant="textarea" placeholder="Décrivez votre activité, vos besoins, vos objectifs..." rows={6} />
 
 		<button
 			type="submit"
-			class="w-full bg-primary-foreground text-on-primary py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-colors"
+			class="w-full rounded-lg bg-primary-foreground px-6 py-3 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 		>
 			Envoyer le message
 		</button>
