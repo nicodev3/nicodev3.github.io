@@ -1,5 +1,14 @@
 ---
 import FormField from './FormField.astro';
+
+const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_CONTACT?.trim();
+if (import.meta.env.PROD && !formspreeUrl) {
+	throw new Error('PUBLIC_FORMSPREE_CONTACT doit être défini (URL Formspree, ex. https://formspree.io/f/…)');
+}
+
+const redirectUrl = import.meta.env.SITE
+	? new URL('/merci/?source=contact', import.meta.env.SITE).href
+	: undefined;
 ---
 
 <div id="contact-form-wrapper" class="bg-background rounded-2xl shadow-lg border border-border p-6 md:p-8">
@@ -7,16 +16,16 @@ import FormField from './FormField.astro';
 		id="contact-form"
 		name="contact"
 		method="POST"
-		action="/merci?source=contact"
-		data-netlify="true"
-		netlify-honeypot="bot-field"
+		action={formspreeUrl}
 		data-umami-event="contact_form_submit"
 		class="space-y-6"
 	>
 		<input type="hidden" name="form-name" value="contact" />
+		{redirectUrl && <input type="hidden" name="_next" value={redirectUrl} />}
+		<input type="hidden" name="_subject" value="[nicodev.fr] Message contact" />
 		<p class="hidden" aria-hidden="true">
-			<label for="contact-bot-field">Ne pas remplir</label>
-			<input id="contact-bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off" />
+			<label for="contact-gotcha">Ne pas remplir</label>
+			<input id="contact-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
 		</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<FormField id="contact-firstName" name="firstName" label="Prénom *" type="text" required />

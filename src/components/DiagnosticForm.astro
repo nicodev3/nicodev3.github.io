@@ -1,5 +1,14 @@
 ---
 import FormField from './FormField.astro';
+
+const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_DIAGNOSTIC?.trim();
+if (import.meta.env.PROD && !formspreeUrl) {
+	throw new Error('PUBLIC_FORMSPREE_DIAGNOSTIC doit être défini (URL Formspree, ex. https://formspree.io/f/…)');
+}
+
+const redirectUrl = import.meta.env.SITE
+	? new URL('/merci/?source=diagnostic', import.meta.env.SITE).href
+	: undefined;
 ---
 
 <div
@@ -10,16 +19,16 @@ import FormField from './FormField.astro';
 		id="diagnostic-form"
 		name="diagnostic"
 		method="POST"
-		action="/merci?source=diagnostic"
-		data-netlify="true"
-		netlify-honeypot="bot-field"
+		action={formspreeUrl}
 		data-umami-event="diagnostic_form_submit"
 		class="space-y-6"
 	>
 		<input type="hidden" name="form-name" value="diagnostic" />
+		{redirectUrl && <input type="hidden" name="_next" value={redirectUrl} />}
+		<input type="hidden" name="_subject" value="[nicodev.fr] Demande diagnostic gratuit" />
 		<p class="hidden" aria-hidden="true">
-			<label for="diagnostic-bot-field">Ne pas remplir</label>
-			<input id="diagnostic-bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off" />
+			<label for="diagnostic-gotcha">Ne pas remplir</label>
+			<input id="diagnostic-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
