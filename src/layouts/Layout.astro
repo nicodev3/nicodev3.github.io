@@ -32,8 +32,10 @@ const ogImage = image
   ? new URL(image, baseUrl).toString()
   : new URL("/images/development.webp", baseUrl).toString();
 
-const umamiId = import.meta.env.UMAMI_WEBSITE_ID;
-const umamiUrl = import.meta.env.UMAMI_URL;
+const umamiId =
+  import.meta.env.UMAMI_WEBSITE_ID ??
+  import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
+const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL ?? import.meta.env.UMAMI_URL;
 const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : "";
 ---
 
