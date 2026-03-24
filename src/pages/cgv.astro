@@ -1,4 +1,5 @@
 ---
+import ObfuscatedEmail from '../components/ObfuscatedEmail.astro';
 import Layout from '../layouts/Layout.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -37,7 +38,7 @@ const breadcrumbSchema = {
 			<h2>Article 2 – Identification du prestataire</h2>
 			<p>
 				Les prestations sont assurées par <strong>Nicolas Devaux</strong>, auto-entrepreneur exerçant l'activité de création de sites internet.<br />
-				Email : contact.nicodev@gmail.com
+				Email : <ObfuscatedEmail />
 			</p>
 
 			<h2>Article 3 – Description des prestations</h2>
@@ -68,14 +69,14 @@ const breadcrumbSchema = {
 
 			<h2>Article 10 – Données personnelles et cookies</h2>
 			<p>
-				Le prestataire, <strong>Nicolas Devaux</strong> (contact.nicodev@gmail.com), agit en qualité de responsable de traitement au sens du Règlement (UE) 2016/679 (RGPD).
+				Le prestataire, <strong>Nicolas Devaux</strong> (<ObfuscatedEmail />), agit en qualité de responsable de traitement au sens du Règlement (UE) 2016/679 (RGPD).
 			</p>
 			<p><strong>Données collectées :</strong> dans le cadre des prestations, les données suivantes peuvent être collectées : nom, prénom, adresse e-mail, numéro de téléphone, informations relatives au projet. Ces données sont nécessaires à l'exécution du contrat.</p>
 			<p><strong>Finalités :</strong> les données sont utilisées pour la gestion de la relation client, l'exécution des prestations, la facturation et, le cas échéant, l'envoi d'informations relatives aux services (avec consentement préalable).</p>
 			<p><strong>Durée de conservation :</strong> les données sont conservées pendant la durée de la relation contractuelle, puis archivées pendant 5 ans conformément aux obligations légales (comptabilité, litiges).</p>
 			<p><strong>Destinataires :</strong> les données ne sont pas cédées à des tiers à des fins commerciales. Elles peuvent être transmises à des sous-traitants techniques (hébergeur Netlify, outil d'analyse d'audience Google Analytics) dans le strict cadre de l'exécution des services.</p>
 			<p><strong>Cookies et traceurs :</strong> le site utilise des cookies de mesure d'audience (Google Analytics / GA4). Ces cookies ne sont déposés qu'après recueil de votre consentement via le bandeau prévu à cet effet. Vous pouvez retirer votre consentement à tout moment en cliquant sur le lien « Gestion des cookies » présent en bas de page. Pour plus d'informations, consultez notre <a href="/politique-confidentialite/">Politique de confidentialité et cookies</a>.</p>
-			<p><strong>Droits des personnes :</strong> conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition concernant vos données personnelles. Pour exercer ces droits, contactez : <a href="mailto:contact.nicodev@gmail.com">contact.nicodev@gmail.com</a>. En cas de réclamation non résolue, vous pouvez saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
+			<p><strong>Droits des personnes :</strong> conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition concernant vos données personnelles. Pour exercer ces droits, contactez : <ObfuscatedEmail />. En cas de réclamation non résolue, vous pouvez saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
 
 			<h2>Article 11 – Responsabilité</h2>
 			<p>La responsabilité du prestataire est limitée au montant des sommes effectivement versées par le client pour la prestation en cause. Le prestataire ne saurait être tenu responsable des dommages indirects. En cas de force majeure, les obligations sont suspendues.</p>

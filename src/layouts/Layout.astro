@@ -1,6 +1,7 @@
 ---
 import { Font } from "astro:assets";
 import "../styles/global.css";
+import ObfuscatedEmail from "../components/ObfuscatedEmail.astro";
 import Header from "../components/Header.astro";
 import ProfessionsSection from "../components/ProfessionsSection.astro";
 
@@ -134,7 +135,7 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
           <div>
             <h3 class="text-lg font-semibold mb-4">Contact</h3>
             <p class="text-on-foreground">
-              Email: contact.nicodev@gmail.com<br />
+              Email: <ObfuscatedEmail class="text-on-foreground hover:opacity-80" /><br />
               GitHub: <a
                 href="https://github.com/nicodev3"
                 class="text-on-foreground hover:opacity-80">@nicodev3</a

@@ -1,0 +1,25 @@
+---
+export interface Props {
+	class?: string;
+	label?: string;
+}
+
+const { class: className = '', label } = Astro.props;
+
+const userCodes = [99, 111, 110, 116, 97, 99, 116, 46, 110, 105, 99, 111, 100, 101, 118];
+const domainCodes = [103, 109, 97, 105, 108, 46, 99, 111, 109];
+const email = `${String.fromCharCode(...userCodes)}@${String.fromCharCode(...domainCodes)}`;
+const visibleLabel = label ?? email;
+const fallbackLabel = label ?? 'contact [at] nicodev [dot] gmail [dot] com';
+---
+
+<a href="#" class={className} data-obfuscated-email>{fallbackLabel}</a>
+<script is:inline define:vars={{ userCodes, domainCodes, visibleLabel }}>
+	const anchor = document.currentScript?.previousElementSibling;
+	if (anchor instanceof HTMLAnchorElement) {
+		const email = `${String.fromCharCode(...userCodes)}@${String.fromCharCode(...domainCodes)}`;
+		anchor.href = `mailto:${email}`;
+		anchor.textContent = visibleLabel || email;
+		anchor.setAttribute('aria-label', `Envoyer un email a ${email}`);
+	}
+</script>

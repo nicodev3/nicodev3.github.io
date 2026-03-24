@@ -1,4 +1,5 @@
 ---
+import ObfuscatedEmail from '../components/ObfuscatedEmail.astro';
 import Layout from '../layouts/Layout.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -35,7 +36,7 @@ const breadcrumbSchema = {
 			<p>
 				Le responsable du traitement des données personnelles collectées sur ce site est :<br />
 				<strong>Nicolas Devaux</strong>, auto-entrepreneur – développeur web<br />
-				Email : <a href="mailto:contact.nicodev@gmail.com">contact.nicodev@gmail.com</a><br />
+				Email : <ObfuscatedEmail /><br />
 				Site : <a href="https://nicodev.fr">https://nicodev.fr</a>
 			</p>
 
@@ -92,7 +93,7 @@ const breadcrumbSchema = {
 				<li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données.</li>
 				<li><strong>Droit de retirer votre consentement</strong> à tout moment (notamment pour les cookies).</li>
 			</ul>
-			<p>Pour exercer ces droits, contactez : <a href="mailto:contact.nicodev@gmail.com">contact.nicodev@gmail.com</a>. Une réponse vous sera apportée dans un délai d'un mois. En cas de réclamation non satisfaite, vous pouvez saisir la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
+			<p>Pour exercer ces droits, contactez : <ObfuscatedEmail />. Une réponse vous sera apportée dans un délai d'un mois. En cas de réclamation non satisfaite, vous pouvez saisir la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
 
 			<h2>9. Sécurité</h2>
 			<p>Des mesures techniques et organisationnelles appropriées sont mises en œuvre pour protéger vos données contre tout accès non autorisé, perte ou divulgation (connexion HTTPS, hébergement sécurisé via Netlify).</p>
