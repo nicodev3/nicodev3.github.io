@@ -1,6 +1,6 @@
 ---
 import { Font } from "astro:assets";
-import "../styles/global.css";
+import globalStylesUrl from "../styles/global.css?url";
 import ObfuscatedEmail from "../components/ObfuscatedEmail.astro";
 import Header from "../components/Header.astro";
 import ProfessionsSection from "../components/ProfessionsSection.astro";
@@ -44,8 +44,10 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href={globalStylesUrl} as="style" />
+    <link rel="stylesheet" href={globalStylesUrl} />
+    <meta name="description" content={description} />
     <meta
       name="robots"
       content={noindex ? "noindex, nofollow" : "index, follow"}
@@ -63,17 +65,11 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
     <meta property="og:locale" content="fr_FR" />
     <Font
       cssVariable="--font-source-sans-3"
-      preload={[
-        { weight: "200 900", style: "normal", subset: "latin" },
-        { weight: "200 900", style: "normal", subset: "latin-ext" },
-      ]}
+      preload={[{ weight: "400", style: "normal", subset: "latin" }]}
     />
     <Font
       cssVariable="--font-lora"
-      preload={[
-        { weight: "400 700", style: "normal", subset: "latin" },
-        { weight: "400 700", style: "normal", subset: "latin-ext" },
-      ]}
+      preload={[{ weight: "700", style: "normal", subset: "latin" }]}
     />
     {
       ogType === "article" && articlePublishedTime && (

@@ -1,9 +1,12 @@
 ---
+import PageSpeedScores from "./PageSpeedScores.astro";
+
 const diyItems = [
 	"Beaucoup de temps passé à comprendre l'outil (Wix, WordPress, Hostinger...)",
 	"Textes à rédiger seul, avec le risque d'un ton trop commercial ou, au contraire, trop flou",
 	"Référencement local rarement optimisé (psychologue + ville + spécialités)",
 	"Maintenance, mises à jour et sécurité à gérer soi-même",
+	"Erreurs fréquentes de design et de contenu, d'accessibilité et de référencement naturel",
 	"Résultat correct visuellement, mais sans garantie que le site vous apporte des demandes"
 ];
 
@@ -37,7 +40,7 @@ const nicodevItems = [
 				<ul class="space-y-3 text-sm text-muted">
 					{diyItems.map((item) => (
 						<li class="flex items-start gap-2">
-							<span class="mt-1 inline-block size-1.5 rounded-full bg-foreground/40"></span>
+							<span class="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-foreground/40"></span>
 							<span>{item}</span>
 						</li>
 					))}
@@ -51,11 +54,37 @@ const nicodevItems = [
 				<ul class="space-y-3 text-sm text-muted">
 					{nicodevItems.map((item) => (
 						<li class="flex items-start gap-2">
-							<span class="mt-1 inline-block size-1.5 rounded-full bg-primary"></span>
+							<span class="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
 							<span>{item}</span>
 						</li>
 					))}
 				</ul>
+
+				<div class="mt-6 rounded-xl border border-border bg-background p-4 sm:p-5">
+					<h4 class="mb-2 text-base font-semibold text-foreground">
+						Performances techniques
+					</h4>
+					<p class="mb-2 text-sm text-muted">
+						Les sites sont pensés pour charger rapidement, être confortables sur mobile et respecter les
+						bonnes pratiques recommandées par Google.
+					</p>
+					<p class="mb-3 text-sm text-muted">
+						Les scores ci-dessous illustrent ce qu’on peut obtenir sur PageSpeed Insights pour un site bien
+						optimisé — vous pouvez tester le vôtre en quelques secondes.
+					</p>
+					<div class="mb-3">
+						<PageSpeedScores title="Exemple de scores pour un site de psychologue" />
+					</div>
+					<a
+						href="https://pagespeed.web.dev/"
+						target="_blank"
+						rel="noopener noreferrer"
+						data-umami-event="pagespeed_test_link_click"
+						class="inline-flex items-center text-sm font-semibold text-primary underline underline-offset-4 hover:no-underline"
+					>
+						Testez les performances de votre site sur Google PageSpeed
+					</a>
+				</div>
 			</div>
 		</div>
 
