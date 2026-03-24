@@ -26,10 +26,9 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
       name: 'Source Sans 3',
       cssVariable: '--font-source-sans-3',
-      /* Graisses réellement utilisées (évite une VF 200–900 inutilement lourde) */
-      weights: ['400', '500', '600', '700'],
+      /* Une VF 400–700 = un seul .woff2 (évite 4 requêtes par graisse statique) */
+      weights: ['400 700'],
       styles: ['normal'],
-      /* Français : le sous-ensemble latin suffit (évite latin-ext + fichiers doublés) */
       subsets: ['latin'],
       fallbacks: ['system-ui', 'sans-serif'],
     },
@@ -37,7 +36,7 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
       name: 'Lora',
       cssVariable: '--font-lora',
-      weights: ['400', '600', '700'],
+      weights: ['400 700'],
       styles: ['normal'],
       subsets: ['latin'],
       fallbacks: ['Georgia', 'serif'],
