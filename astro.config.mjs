@@ -12,6 +12,7 @@ const noindexPages = new Set([
   'https://nicodev.fr/dev/styleguide/',
 ]);
 
+/** @param {string} page */
 const isTagPage = (page) => {
   const pathname = new URL(page).pathname;
   return pathname.startsWith('/blog/tag/');
@@ -49,6 +50,7 @@ export default defineConfig({
 
   integrations: [
     sitemap({
+      /** @param {string} page */
       filter: (page) => !noindexPages.has(page) && !isTagPage(page),
     }),
   ]
