@@ -33,7 +33,7 @@ const personSchema = {
   '@type': 'Person',
   name: 'Nicolas Devaux',
   jobTitle: 'Psychologue et développeur web',
-  description: 'Psychologue à Sceaux et développeur web, je crée des sites internet sur mesure pour psychologues et professionnels de santé.',
+  description: 'Psychologue à Sceaux et développeur web, je crée des sites internet sur mesure pour psychologues.',
   url: aboutUrl,
   image: new URL('/images/development.webp', baseUrl).toString(),
   knowsAbout: ['développement web', 'sites internet pour psychologues', 'SEO', 'performance web'],
@@ -62,7 +62,7 @@ const personSchema = {
   </Fragment>
   <Hero
     title="À propos"
-    subtitle="Psychologue et développeur web, je crée des sites internet sur mesure"
+    subtitle="Psychologue et développeur web, je crée des sites internet avec une approche sobre, attentive et artisanale"
     breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]}
   />
 
@@ -103,6 +103,11 @@ const personSchema = {
               des enjeux des psychologues en libéral. Je développe des <strong
                 >sites internet</strong
               > qui allient performance technique et sensibilité aux besoins des psychologues.
+            </p>
+            <p>
+              Nicodev n'est pas une usine à sites. Je préfère faire peu de projets, mais les suivre
+              avec attention, pour proposer à mes collègues psychologues des sites utiles, lisibles
+              et vraiment adaptés à leur pratique.
             </p>
             <p>
               Mon approche se distingue par une collaboration étroite avec mes clients, une
@@ -322,7 +327,7 @@ const personSchema = {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <SkillCard
           title="Qualité du contenu"
-          description="Je privilégie la qualité du contenu et du design plutôt que la quantité. Chaque site est pensé pour répondre aux besoins spécifiques de mes clients."
+          description="Je privilégie la qualité du contenu et du design plutôt que la quantité. Chaque site est pensé avec soin pour répondre aux besoins spécifiques de mes clients."
         >
           <svg
             slot="icon"
@@ -340,8 +345,8 @@ const personSchema = {
           </svg>
         </SkillCard>
         <SkillCard
-          title="Collaboration"
-          description="Je travaille en étroite collaboration avec mes clients. Votre participation est essentielle pour créer un site qui vous ressemble vraiment."
+          title="Approche artisanale"
+          description="Je ne produis pas des sites à la chaîne. Je préfère suivre peu de projets, avec un échange direct, pour livrer des sites solides et adaptés."
         >
           <svg
             slot="icon"

@@ -18,8 +18,8 @@ export interface Props {
 const { title, description, href, image, imageAlt, tag, pubDate, author, tags, updatedDate } = Astro.props;
 ---
 
-<article class="bg-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-border">
-	<div class="relative">
+<article class="bg-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-border grid grid-rows-[auto_minmax(0,1fr)] min-h-0 self-stretch h-full">
+	<div class="relative min-h-0">
 		<Image
 			src={image}
 			alt={imageAlt}
@@ -35,7 +35,7 @@ const { title, description, href, image, imageAlt, tag, pubDate, author, tags, u
 			</div>
 		)}
 	</div>
-	<div class="p-6">
+	<div class="p-6 flex flex-col min-h-0 h-full">
 		<div class="flex flex-col gap-1 text-sm text-muted mb-2">
 			<div class="flex items-center">
 				<time datetime={pubDate}>
@@ -80,7 +80,7 @@ const { title, description, href, image, imageAlt, tag, pubDate, author, tags, u
 		)}
 		<a
 			href={href}
-			class="inline-block bg-primary-foreground text-on-primary px-4 py-2 rounded-lg hover:opacity-90 transition-colors"
+			class="mt-auto w-fit shrink-0 inline-flex items-center justify-center bg-primary-foreground text-on-primary px-4 py-2 rounded-lg hover:opacity-90 transition-colors"
 		>
 			Lire l'article
 		</a>
