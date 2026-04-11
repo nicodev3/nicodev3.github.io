@@ -95,6 +95,12 @@ const breadcrumbSchema = {
 			{ label: 'Blog', href: '/blog/' },
 			{ label: entry.data.title }
 		]}
+		{...(entry.data.image
+			? {
+					coverImage: entry.data.image,
+					coverImageAlt: `Illustration de l'article : ${entry.data.title}`,
+				}
+			: {})}
 	>
 		<div slot="before" class="flex flex-wrap items-center justify-center gap-2 text-sm mb-4">
 			<span>

@@ -5,13 +5,23 @@ export interface Props {
 	variant?: 'full' | 'light';
 	maxWidth?: '4xl' | '6xl' | '7xl';
 	breadcrumb?: { label: string; href?: string }[];
+	/** Image de couverture (URL publique, ex. /images/foo.webp) — dégradé de lisibilité appliqué automatiquement */
+	coverImage?: string;
+	coverImageAlt?: string;
 }
 
-const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb } = Astro.props;
+const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb, coverImage, coverImageAlt } = Astro.props;
 
-const sectionClass = variant === 'full'
-	? 'hero-shell hero-shell--full text-foreground py-16 md:py-20 border-b border-border'
-	: 'hero-shell hero-shell--light text-foreground py-14 md:py-16 border-b border-border';
+const hasCover = Boolean(coverImage);
+
+const sectionClass = [
+	hasCover ? 'hero-shell--with-cover' : '',
+	variant === 'full'
+		? 'hero-shell hero-shell--full text-foreground py-16 md:py-20 border-b border-border'
+		: 'hero-shell hero-shell--light text-foreground py-14 md:py-16 border-b border-border',
+]
+	.filter(Boolean)
+	.join(' ');
 
 const titleClass = variant === 'full'
 	? 'text-4xl md:text-6xl font-bold mb-6 text-foreground'
@@ -25,13 +35,28 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 ---
 
 <section class={sectionClass}>
-	<div class="hero-layer hero-layer--wash" aria-hidden="true"></div>
-	<div class="hero-layer hero-layer--grain" aria-hidden="true"></div>
-	<div class="hero-orb hero-orb--left" aria-hidden="true"></div>
-	<div class="hero-orb hero-orb--right" aria-hidden="true"></div>
+	{hasCover && coverImage && (
+		<div class="hero-layer hero-layer--photo">
+			<img
+				src={coverImage}
+				alt={coverImageAlt ?? ''}
+				class="hero-cover-img"
+				loading="eager"
+				decoding="async"
+				fetchpriority="high"
+				width="1600"
+				height="900"
+			/>
+		</div>
+	)}
+	{hasCover && <div class="hero-layer hero-layer--scrim" aria-hidden="true"></div>}
+	<div class:list={['hero-layer hero-layer--wash', { 'hero-layer--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
+	<div class:list={['hero-layer hero-layer--grain', { 'hero-layer--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
+	<div class:list={['hero-orb hero-orb--left', { 'hero-orb--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
+	<div class:list={['hero-orb hero-orb--right', { 'hero-orb--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
 
 	<div class={`${maxWidthClass} relative z-10 mx-auto px-4 sm:px-6 lg:px-8 ${variant === 'light' ? 'text-center' : ''}`}>
-		<div class="text-center">
+		<div class:list={['text-center break-words', { 'hero-copy hero-copy--on-cover': hasCover }]}>
 			{breadcrumb && breadcrumb.length > 0 && (
 				<nav aria-label="Fil d'Ariane" class="mb-6">
 					<ol class="flex flex-wrap justify-center gap-x-2 text-sm text-muted">
@@ -75,6 +100,96 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 		overflow: hidden;
 		isolation: isolate;
 		background-color: var(--color-surface);
+	}
+
+	.hero-shell--with-cover {
+		min-height: min(52vh, 28rem);
+	}
+
+	.hero-shell--with-cover.hero-shell--full,
+	.hero-shell--with-cover.hero-shell--light {
+		background-image: none;
+	}
+
+	.hero-layer--photo {
+		z-index: 0;
+		/* Évite les bords délavés quand l’image est floutée + agrandie */
+		overflow: hidden;
+	}
+
+	.hero-cover-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+		transform: scale(1.07);
+		transform-origin: center center;
+		filter: blur(10px);
+	}
+
+	.hero-layer--scrim {
+		z-index: 1;
+		/* Assomplit légèrement l’image ; la lisibilité du texte repose sur .hero-copy--on-cover */
+		background:
+			radial-gradient(
+				ellipse 120% 85% at 50% 45%,
+				color-mix(in srgb, var(--color-surface) 22%, transparent) 0%,
+				color-mix(in srgb, var(--color-surface) 48%, transparent) 62%,
+				color-mix(in srgb, var(--color-surface) 38%, transparent) 100%
+			);
+	}
+
+	@media (max-width: 768px) {
+		.hero-cover-img {
+			transform: scale(1.06);
+			filter: blur(8px);
+		}
+
+		.hero-layer--scrim {
+			background: linear-gradient(
+				180deg,
+				color-mix(in srgb, var(--color-surface) 18%, transparent) 0%,
+				color-mix(in srgb, var(--color-surface) 52%, transparent) 55%,
+				color-mix(in srgb, var(--color-surface) 35%, transparent) 100%
+			);
+		}
+	}
+
+	.hero-copy--on-cover {
+		position: relative;
+		z-index: 2;
+		margin-inline: auto;
+		width: fit-content;
+		max-width: 100%;
+		padding: clamp(1.35rem, 4vw, 2.75rem) clamp(1.15rem, 3.5vw, 2.25rem);
+		border-radius: 1.25rem;
+		background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+		backdrop-filter: blur(12px) saturate(1.1);
+		-webkit-backdrop-filter: blur(12px) saturate(1.1);
+		border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+		box-shadow:
+			0 1px 0 color-mix(in srgb, var(--color-neutral-0) 55%, transparent),
+			0 18px 48px color-mix(in srgb, var(--color-foreground) 12%, transparent);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.hero-copy--on-cover {
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			background: color-mix(in srgb, var(--color-surface) 97%, transparent);
+		}
+	}
+
+	.hero-layer--hidden-when-cover,
+	.hero-orb--hidden-when-cover {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+
+	.hero-shell--with-cover .hero-copy--on-cover h1 {
+		text-shadow: none;
 	}
 
 	.hero-shell--full {
