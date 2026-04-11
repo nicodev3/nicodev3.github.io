@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
+import BlogShare from '../../components/BlogShare.astro';
 import { toTagHref } from '../../utils/blog';
 
 // Récupérer le slug depuis l'URL
@@ -130,12 +131,17 @@ const breadcrumbSchema = {
 				</>
 			)}
 		</div>
-		<div slot="after" class="flex flex-wrap justify-center gap-2">
-			{entry.data.tags?.map((t: string) => (
-				<a href={toTagHref(t)} class="bg-surface hover:bg-surface-alt text-foreground px-3 py-1 rounded-full text-sm transition-colors">
-					{t}
-				</a>
-			))}
+		<div slot="after" class="flex w-full max-w-4xl flex-col items-center gap-3">
+			{entry.data.tags && entry.data.tags.length > 0 && (
+				<div class="flex flex-wrap justify-center gap-2">
+					{entry.data.tags.map((t: string) => (
+						<a href={toTagHref(t)} class="bg-surface hover:bg-surface-alt text-foreground px-3 py-1 rounded-full text-sm transition-colors">
+							{t}
+						</a>
+					))}
+				</div>
+			)}
+			<BlogShare url={canonical} title={entry.data.title} />
 		</div>
 	</Hero>
 
