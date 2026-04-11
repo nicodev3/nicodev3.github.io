@@ -3,6 +3,7 @@ title: "Psychologue : faut-il avoir un site internet en plus de Doctolib ?"
 description: "Site internet psychologue Doctolib : différences, avantages, limites et complémentarité pour améliorer la visibilité Google d'un cabinet de psychologie."
 pubDate: "2026-03-12"
 author: "Nicolas Devaux"
+image: "../../assets/images/blog/site-web-doctolib.webp"
 tags: ["psychologue", "doctolib", "site internet", "seo local", "référencement"]
 ---
 

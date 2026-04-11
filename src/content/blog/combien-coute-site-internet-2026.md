@@ -4,7 +4,7 @@ description: "Prix d’un site internet de psychologue en 2026 : fourchettes ré
 pubDate: "2026-02-22"
 updatedDate: "2026-03-18"
 author: "Nicolas Devaux"
-image: "/images/development.webp"
+image: "../../assets/images/blog/development.webp"
 tags: ["psychologue", "prix site internet", "création site", "cabinet libéral", "budget web", "2026"]
 ---
 

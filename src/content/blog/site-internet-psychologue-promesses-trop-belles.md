@@ -3,7 +3,7 @@ title: "Sites internet pour psychologues : attention aux promesses trop belles p
 description: "Certaines offres de création de site internet pour psychologue promettent une visibilité rapide. Voici comment évaluer ces promesses avec nuance."
 pubDate: "2026-03-28"
 author: "Nicolas Devaux"
-image: "/images/site-psychologue.webp"
+image: "../../assets/images/blog/site-psychologue.webp"
 tags: ["psychologue", "site internet", "référencement", "seo local", "doctolib", "visibilité google"]
 ---
 

@@ -4,7 +4,7 @@ description: "Comprendre comment se compose un site web moderne en 2026 : techno
 pubDate: "2015-10-26"
 updatedDate: "2026-02-23"
 author: "Nicolas Devaux"
-image: "/images/creation-site-internet.webp"
+image: "../../assets/images/blog/creation-site-internet.webp"
 tags: ["site internet", "création", "2026"]
 ---
 

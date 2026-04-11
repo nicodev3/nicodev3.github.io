@@ -5,6 +5,7 @@ import SkillCard from '../components/SkillCard.astro';
 import CtaSection from '../components/CtaSection.astro';
 import { Image } from 'astro:assets';
 import developmentImage from '../assets/images/development.jpg';
+import defaultOgWebp from '../assets/images/blog/development.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const aboutUrl = new URL('/about/', baseUrl).toString();
@@ -35,7 +36,7 @@ const personSchema = {
   jobTitle: 'Psychologue et développeur web',
   description: 'Psychologue à Sceaux et développeur web, je crée des sites internet sur mesure pour psychologues.',
   url: aboutUrl,
-  image: new URL('/images/development.webp', baseUrl).toString(),
+  image: new URL(defaultOgWebp.src, baseUrl).toString(),
   knowsAbout: ['développement web', 'sites internet pour psychologues', 'SEO', 'performance web'],
   sameAs: [
     'https://www.malt.fr/profile/nicolasdevaux1',
@@ -48,7 +49,7 @@ const personSchema = {
 <Layout
   title="Psychologue et développeur web | Nicolas Devaux"
   description="Psychologue à Sceaux et développeur web, je crée des sites internet pour psychologues. 20 ans d'expérience. Sites sur mesure, SEO et performance."
-  image="/images/development.webp"
+  image={defaultOgWebp}
 >
   <Fragment slot="head">
     <script

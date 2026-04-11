@@ -4,7 +4,7 @@ description: "Comment créer un site de psychologue visible sur Google en 2026 :
 pubDate: "2016-09-05"
 updatedDate: "2026-02-26"
 author: "Nicolas Devaux"
-image: "/images/site-psychologue.webp"
+image: "../../assets/images/blog/site-psychologue.webp"
 tags: ["psychologue", "site internet", "seo local", "accessibilité", "rgpd", "création site"]
 ---
 

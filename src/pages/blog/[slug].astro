@@ -34,7 +34,7 @@ const relatedPosts = allPosts
 const baseUrl = Astro.site ?? Astro.url.origin;
 const canonical = new URL(Astro.url.pathname, baseUrl).toString();
 const imageUrl = entry.data.image
-	? new URL(entry.data.image.startsWith('/') ? entry.data.image : `/${entry.data.image}`, baseUrl).toString()
+	? new URL(entry.data.image.src, baseUrl).toString()
 	: undefined;
 const updatedDate = (entry.data as any).updateDate ?? entry.data.updatedDate;
 const dateModified = updatedDate ?? entry.data.pubDate;

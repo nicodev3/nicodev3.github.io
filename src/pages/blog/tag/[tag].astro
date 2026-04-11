@@ -4,6 +4,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Hero from '../../../components/Hero.astro';
 import BlogCard from '../../../components/BlogCard.astro';
 import { slugifyTag } from '../../../utils/blog';
+import defaultBlogCover from '../../../assets/images/blog/development.webp';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -76,7 +77,7 @@ const breadcrumbSchema = {
 						title={post.data.title}
 						description={post.data.description}
 						href={`/blog/${post.id}/`}
-						image={post.data.image || '/images/development.webp'}
+						image={post.data.image ?? defaultBlogCover}
 						imageAlt={post.data.title}
 						tag={post.data.tags?.[0] || 'Web'}
 						pubDate={post.data.pubDate}

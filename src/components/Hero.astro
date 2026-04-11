@@ -1,18 +1,22 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 export interface Props {
 	title: string;
 	subtitle?: string;
 	variant?: 'full' | 'light';
 	maxWidth?: '4xl' | '6xl' | '7xl';
 	breadcrumb?: { label: string; href?: string }[];
-	/** Image de couverture (URL publique, ex. /images/foo.webp) — dégradé de lisibilité appliqué automatiquement */
-	coverImage?: string;
+	/** Image de couverture (asset optimisé ou URL publique /…) — dégradé de lisibilité appliqué automatiquement */
+	coverImage?: string | ImageMetadata;
 	coverImageAlt?: string;
 }
 
 const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb, coverImage, coverImageAlt } = Astro.props;
 
 const hasCover = Boolean(coverImage);
+const coverIsAsset = typeof coverImage === 'object' && coverImage !== null && 'src' in coverImage && 'width' in coverImage;
 
 const sectionClass = [
 	hasCover ? 'hero-shell--with-cover' : '',
@@ -37,16 +41,29 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 <section class={sectionClass}>
 	{hasCover && coverImage && (
 		<div class="hero-layer hero-layer--photo">
-			<img
-				src={coverImage}
-				alt={coverImageAlt ?? ''}
-				class="hero-cover-img"
-				loading="eager"
-				decoding="async"
-				fetchpriority="high"
-				width="1600"
-				height="900"
-			/>
+			{coverIsAsset ? (
+				<Image
+					src={coverImage}
+					alt={coverImageAlt ?? ''}
+					class="hero-cover-img"
+					loading="eager"
+					decoding="async"
+					fetchpriority="high"
+					width={1600}
+					height={900}
+				/>
+			) : (
+				<img
+					src={coverImage as string}
+					alt={coverImageAlt ?? ''}
+					class="hero-cover-img"
+					loading="eager"
+					decoding="async"
+					fetchpriority="high"
+					width="1600"
+					height="900"
+				/>
+			)}
 		</div>
 	)}
 	{hasCover && <div class="hero-layer hero-layer--scrim" aria-hidden="true"></div>}
