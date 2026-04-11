@@ -1,0 +1,371 @@
+---
+import fs from "node:fs/promises";
+import Layout from "../../../layouts/Layout.astro";
+
+const isDev = import.meta.env.DEV;
+const chapterPath = new URL(
+  "../../../../docs/lead-magnets/sinstaller-en-liberal-comme-psychologue/guide-installation-en-liberal-pour-psychologues.md",
+  import.meta.url,
+);
+
+let markdown = "";
+
+if (isDev) {
+  markdown = await fs.readFile(chapterPath, "utf-8");
+}
+
+const escapeHtml = (value) =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+
+const slugify = (value) =>
+  value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+
+const renderInline = (value) =>
+  escapeHtml(value)
+    .replace(
+      /\[([^\]]+)\]\((#[^)]+)\)/g,
+      '<a href="$2" class="font-medium text-teal-700 underline decoration-teal-300 underline-offset-4 hover:text-teal-900">$1</a>',
+    )
+    .replace(
+      /`([^`]+)`/g,
+      '<code class="rounded bg-slate-100 px-1.5 py-0.5 text-[0.95em] text-slate-800">$1</code>',
+    )
+    .replace(
+      /\*\*([^*]+)\*\*/g,
+      '<strong class="font-semibold text-slate-900">$1</strong>',
+    )
+    .replace(
+      /\*([^*]+)\*/g,
+      '<em>$1</em>',
+    );
+
+const buildNavigation = (source) => {
+  const lines = source.split(/\r?\n/);
+  const items = [];
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    const match = line.match(/^(#{1,2})\s+(.*)$/);
+    if (!match) continue;
+
+    const level = match[1].length;
+    const text = match[2].trim();
+
+    if (level === 1 && text !== "Guide de l'installation en libéral pour psychologues") {
+      items.push({
+        level,
+        text,
+        id: slugify(text),
+      });
+    }
+  }
+
+  return items;
+};
+
+const renderMarkdown = (source) => {
+  const lines = source.split(/\r?\n/);
+  const html = [];
+  let paragraph = [];
+  let listItems = [];
+  let orderedItems = [];
+  let boxType = null;
+  let boxLines = [];
+
+  const flushParagraph = () => {
+    if (!paragraph.length) return;
+    html.push(`<p>${renderInline(paragraph.join(" "))}</p>`);
+    paragraph = [];
+  };
+
+  const flushList = () => {
+    if (!listItems.length) return;
+    html.push(
+      `<ul>${listItems.map((item) => `<li>${renderInline(item)}</li>`).join("")}</ul>`,
+    );
+    listItems = [];
+  };
+
+  const flushOrdered = () => {
+    if (!orderedItems.length) return;
+    html.push(
+      `<ol>${orderedItems.map((item) => `<li>${renderInline(item)}</li>`).join("")}</ol>`,
+    );
+    orderedItems = [];
+  };
+
+  const flushBox = () => {
+    if (!boxType) return;
+    const styles = {
+      ATTENTION:
+        "border-amber-300 bg-amber-50 text-amber-950",
+      ASTUCE:
+        "border-teal-300 bg-teal-50 text-teal-950",
+      INFO:
+        "border-sky-300 bg-sky-50 text-sky-950",
+    };
+
+    html.push(
+      `<aside class="my-6 rounded-2xl border px-5 py-4 ${styles[boxType] ?? styles.INFO}"><p class="mb-2 text-sm font-bold uppercase tracking-[0.18em]">${boxType}</p><p>${renderInline(
+        boxLines.join(" "),
+      )}</p></aside>`,
+    );
+
+    boxType = null;
+    boxLines = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (line === "[ENCADRE_ATTENTION]") {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      boxType = "ATTENTION";
+      continue;
+    }
+
+    if (line === "[ENCADRE_ASTUCE]") {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      boxType = "ASTUCE";
+      continue;
+    }
+
+    if (line === "[ENCADRE_INFO]") {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      boxType = "INFO";
+      continue;
+    }
+
+    if (
+      line === "[/ENCADRE_ATTENTION]" ||
+      line === "[/ENCADRE_ASTUCE]" ||
+      line === "[/ENCADRE_INFO]"
+    ) {
+      flushBox();
+      continue;
+    }
+
+    if (boxType) {
+      if (line) boxLines.push(line);
+      continue;
+    }
+
+    if (!line) {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      continue;
+    }
+
+    if (line.startsWith("[ILLUSTRATION :") && line.endsWith("]")) {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      html.push(
+        `<div class="my-8 rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 px-6 py-8 text-center text-slate-700"><p class="mb-2 text-sm font-semibold uppercase tracking-[0.18em]">Illustration</p><p>${renderInline(
+          line.slice(15, -1).trim(),
+        )}</p></div>`,
+      );
+      continue;
+    }
+
+    if (line.startsWith("# ")) {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      const text = line.slice(2);
+      const isMainGuideTitle =
+        text === "Guide de l'installation en libéral pour psychologues";
+      if (!isMainGuideTitle) {
+        html.push(
+          '<hr class="chapter-separator" role="presentation" aria-hidden="true" />',
+        );
+      }
+      html.push(`<h1 id="${slugify(text)}" class="scroll-mt-40">${renderInline(text)}</h1>`);
+      continue;
+    }
+
+    if (line.startsWith("## ")) {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      const text = line.slice(3);
+      html.push(`<h2 id="${slugify(text)}" class="scroll-mt-40">${renderInline(text)}</h2>`);
+      continue;
+    }
+
+    if (line.startsWith("### ")) {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      const text = line.slice(4);
+      html.push(`<h3 id="${slugify(text)}" class="scroll-mt-40">${renderInline(text)}</h3>`);
+      continue;
+    }
+
+    if (line.match(/^\d+\.\s+/)) {
+      flushParagraph();
+      flushList();
+      orderedItems.push(line.replace(/^\d+\.\s+/, ""));
+      continue;
+    }
+
+    if (line.startsWith("- ")) {
+      flushParagraph();
+      flushOrdered();
+      listItems.push(line.slice(2));
+      continue;
+    }
+
+    paragraph.push(line);
+  }
+
+  flushParagraph();
+  flushList();
+  flushOrdered();
+  flushBox();
+
+  return html.join("\n");
+};
+
+const navigation = isDev ? buildNavigation(markdown) : [];
+const renderedHtml = isDev ? renderMarkdown(markdown) : "";
+---
+
+<Layout
+  title="Prévisualisation locale - Guide de l'installation en libéral pour psychologues"
+  description="Prévisualisation locale du guide PDF."
+  noindex={true}
+>
+  {
+    isDev ? (
+      <div
+        slot="body-fixed"
+        class="fixed inset-x-0 top-0 z-[100] border-b border-slate-200 bg-white/95 py-3 shadow-sm backdrop-blur"
+      >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+            Table des matières
+          </p>
+          <nav aria-label="Table des matières du guide">
+            <ul class="flex flex-wrap gap-2 text-sm">
+              {
+                navigation.map((item) => (
+                  <li>
+                    <a
+                      href={`#${item.id}`}
+                      class="block rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-slate-700 transition hover:border-teal-200 hover:bg-teal-50 hover:text-teal-800"
+                    >
+                      {item.text}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </div>
+      </div>
+    ) : null
+  }
+
+  <section class:list={["bg-slate-100 pb-16", isDev ? "pt-0" : "py-16"]}>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {
+        isDev ? (
+          <>
+            <div class="pt-28 sm:pt-32">
+              <div class="mb-8 rounded-2xl border border-teal-200 bg-teal-50 px-5 py-4 text-teal-950">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em]">
+                  Preview locale
+                </p>
+                <p class="mt-2 text-sm">
+                  Cette page lit le fichier Markdown depuis <code>docs/lead-magnets</code> en développement uniquement.
+                </p>
+              </div>
+
+              <article
+                class="guide-preview prose prose-slate mx-auto max-w-4xl rounded-3xl bg-white px-6 py-10 shadow-sm sm:px-10"
+                set:html={renderedHtml}
+              />
+            </div>
+          </>
+        ) : (
+          <div class="rounded-3xl bg-white px-8 py-10 shadow-sm">
+            <h1 class="text-3xl font-bold text-slate-900">Prévisualisation indisponible</h1>
+            <p class="mt-4 text-slate-700">
+              Cette route est réservée au développement local et n’affiche pas le contenu du guide en production.
+            </p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .guide-preview :global(h2 + ol) {
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .guide-preview :global(h2 + ol li) {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .guide-preview :global(h2 + ol li p) {
+    margin: 0;
+  }
+
+  /* Séparateur entre chapitres (# Chapitre N — …) */
+  .guide-preview :global(hr.chapter-separator) {
+    margin: 2.75rem 0;
+    max-width: 100%;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(148 163 184 / 0.25) 15%,
+      rgb(13 148 136 / 0.45) 50%,
+      rgb(148 163 184 / 0.25) 85%,
+      transparent
+    );
+    position: relative;
+    overflow: visible;
+  }
+
+  .guide-preview :global(hr.chapter-separator)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 9999px;
+    background: rgb(15 118 110);
+    box-shadow:
+      0 0 0 3px rgb(255 255 255),
+      0 0 0 4px rgb(13 148 136 / 0.25);
+  }
+</style>

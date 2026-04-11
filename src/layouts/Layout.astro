@@ -108,6 +108,9 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
   <body class="bg-background text-foreground">
     <Header />
 
+    <!-- Contenu `position:fixed` relatif au viewport (évite un ancêtre transform/filter qui casse fixed dans <main>) -->
+    <slot name="body-fixed" />
+
     <main>
       <slot />
     </main>
