@@ -17,6 +17,25 @@ const defaultLinks: NavLink[] = [
 ];
 
 const { links = defaultLinks } = Astro.props;
+
+/** Chemin sans slash final sauf racine. */
+function normalizePath(p: string): string {
+	if (p === '/' || p === '') return '/';
+	return p.replace(/\/+$/, '') || '/';
+}
+
+const currentPath = normalizePath(Astro.url.pathname);
+
+function navLinkIsActive(href: string): boolean {
+	const target = normalizePath(href);
+	if (target === '/blog') {
+		return currentPath === '/blog' || currentPath.startsWith('/blog/');
+	}
+	if (target === '/portfolio') {
+		return currentPath === '/portfolio' || currentPath.startsWith('/portfolio/');
+	}
+	return currentPath === target || currentPath.startsWith(`${target}/`);
+}
 ---
 
 <header class="bg-white shadow-sm border-b border-border">
@@ -34,9 +53,21 @@ const { links = defaultLinks } = Astro.props;
 				</a>
 			</div>
 			<div class="flex items-center gap-5 sm:gap-8 overflow-x-auto pb-1 sm:pb-0 text-sm sm:text-base">
-				{links.map((link) => (
-					<a href={link.href} class="text-muted hover:text-foreground whitespace-nowrap">{link.label}</a>
-				))}
+				{links.map((link) => {
+					const active = navLinkIsActive(link.href);
+					return (
+						<a
+							href={link.href}
+							class:list={[
+								'whitespace-nowrap transition-colors',
+								active ? 'font-medium text-primary' : 'text-muted hover:text-primary',
+							]}
+							aria-current={active ? 'page' : undefined}
+						>
+							{link.label}
+						</a>
+					);
+				})}
 			</div>
 		</div>
 	</nav>

@@ -3,7 +3,6 @@ import type { ImageMetadata } from "astro";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import CtaSection from "../components/CtaSection.astro";
-import PageSpeedScores from "../components/PageSpeedScores.astro";
 import { Image } from "astro:assets";
 import cecilecoachingImage from "../assets/images/screenshots/cecilecoaching.webp";
 import severineReisserImage from "../assets/images/screenshots/psychologue-leslilas.webp";
@@ -181,66 +180,9 @@ const psychologueProjects: PortfolioProject[] = [
         Portfolio de réalisations
       </h2>
 
-      <div class="mb-10 rounded-xl border border-border bg-surface p-5 sm:p-6">
-        <h3 class="mb-3 text-lg font-semibold text-foreground">
-          Ce que montrent ces réalisations
-        </h3>
-        <ul class="space-y-2 text-sm text-muted sm:text-base">
-          <li>
-            Une présentation claire de l'approche et des spécialités du
-            praticien
-          </li>
-          <li>
-            Une navigation simple pour rassurer et faciliter la prise de contact
-          </li>
-          <li>
-            Des bases SEO locales solides pour améliorer la visibilité sur
-            Google
-          </li>
-        </ul>
-      </div>
-
-      <div class="mb-10 rounded-xl border border-border bg-surface px-5 py-5 sm:px-6">
-        <h3 class="mb-3 text-lg font-semibold text-foreground">
-          Performances techniques des sites
-        </h3>
-        <p class="mb-3 text-sm text-muted sm:text-base">
-          Tous les sites que je conçois sont pensés pour charger rapidement, être lisibles sur
-          mobile et respecter les bonnes pratiques techniques recommandées par Google.
-        </p>
-        <p class="mb-4 text-sm text-muted sm:text-base">
-          Les scores ci-dessous sont un exemple de ce que peut donner un site bien optimisé sur
-          <span class="whitespace-nowrap">PageSpeed Insights</span>. Pour votre propre site, vous
-          pouvez lancer un test en quelques secondes.
-        </p>
-        <div class="mb-4">
-          <PageSpeedScores title="Exemple de scores pour un site de psychologue" />
-        </div>
-        <a
-          href="https://pagespeed.web.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="pagespeed_test_link_click"
-          class="inline-flex items-center text-sm font-semibold text-primary underline underline-offset-4 hover:no-underline"
-        >
-          Testez les performances de votre site sur Google PageSpeed
-        </a>
-      </div>
-
-      <aside
-        class="mb-6 max-w-3xl border-l border-border pl-3 text-xs leading-relaxed text-muted sm:text-[0.8125rem]"
-        aria-label="Note sur les réalisations"
-      >
-        <p class="mb-2">
-          <span class="font-medium text-muted">Note.</span> Beaucoup des projets
-          ci-dessous sont anciens. Certains sites que j'ai conçus il y a plus de 10 ans ne
-          sont plus en ligne (cessation d'activité de leur auteur). Si vous remarquez qu'il n'y a pas beaucoup de réalisations récentes, c'est parce que j'ai longtemps été occupé dans mes fonctions de tech lead ! (en plus des quelques patients que j'ai conservés à mon cabinet) Aujourd'hui, je fais revivre nicodev.fr et je conçois des sites pour psychologues.
-        </p>
-      </aside>
-
       <!-- Projects Grid -->
       <div
-        class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+        class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
       >
         {
           psychologueProjects.map((project) => (
@@ -320,6 +262,45 @@ const psychologueProjects: PortfolioProject[] = [
             </article>
           ))
         }
+      </div>
+
+      <aside
+        class="mb-8 max-w-3xl border-l border-border pl-3 text-xs leading-relaxed text-muted sm:text-[0.8125rem]"
+        aria-label="Note sur les réalisations"
+      >
+        <p class="mb-2">
+          <span class="font-medium text-muted">Note.</span> Beaucoup des projets
+          présentés sur cette page sont anciens. Certains sites que j'ai conçus il y a plus de 10 ans ne
+          sont plus en ligne (cessation d'activité de leur auteur). Si vous remarquez qu'il n'y a pas beaucoup de réalisations récentes, c'est parce que j'ai longtemps été occupé dans mes fonctions de tech lead ! (en plus des quelques patients que j'ai conservés à mon cabinet) Aujourd'hui, je fais revivre nicodev.fr et je conçois des sites pour psychologues.
+        </p>
+      </aside>
+
+      <div class="mb-10 rounded-xl border border-border bg-surface p-5 sm:p-6">
+        <h3 class="mb-3 text-lg font-semibold text-foreground">
+          Ce que montrent ces réalisations
+        </h3>
+        <ul class="space-y-2 text-sm text-muted sm:text-base">
+          <li>
+            Une présentation claire de l'approche et des spécialités du
+            praticien
+          </li>
+          <li>
+            Une navigation simple pour rassurer et faciliter la prise de contact
+          </li>
+          <li>
+            Des bases SEO locales solides pour améliorer la visibilité sur
+            Google
+          </li>
+        </ul>
+        <p class="mt-4 text-sm text-muted sm:text-base">
+          Pour le détail des performances techniques (rapidité mobile, critères Google), voir la
+          section dédiée sur la page{" "}
+          <a
+            href="/tarifs/#performances-pagespeed"
+            class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+            >Tarifs</a
+          >.
+        </p>
       </div>
 
       <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">

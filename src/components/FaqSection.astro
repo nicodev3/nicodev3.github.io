@@ -49,9 +49,9 @@ const faqItems = [
 ---
 
 <section class="py-16 bg-surface">
-	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-		<h2 class="text-3xl font-bold text-foreground text-center mb-10">FAQ</h2>
-		<div class="space-y-4">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<h2 class="mb-10 text-3xl font-bold text-foreground">FAQ</h2>
+		<div class="max-w-4xl space-y-4">
 			{faqItems.map((item) => (
 				<details {...(item.id && { id: item.id })} class="bg-surface rounded-lg p-5 border border-border">
 					<summary class="font-semibold text-foreground cursor-pointer">{item.question}</summary>

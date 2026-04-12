@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import BulletList from '../components/BulletList.astro';
 import CtaSection from '../components/CtaSection.astro';
 import OffersSection from '../components/OffersSection.astro';
+import PageSpeedScores from '../components/PageSpeedScores.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -30,6 +31,36 @@ const breadcrumbSchema = {
 	/>
 
 	<OffersSection background="white" />
+
+	<section class="border-t border-border bg-white py-10 sm:py-12">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+			<div class="rounded-2xl border border-border bg-muted/10 p-6 sm:p-8">
+				<h2 class="mb-4 text-lg font-semibold text-foreground sm:text-xl">
+					Pourquoi un abonnement mensuel ?
+				</h2>
+				<p class="mb-4 text-sm text-muted sm:text-base">
+					En plus du site, un abonnement couvre tout ce dont vous avez besoin pour rester en ligne sereinement. Voici ce que vous éviteriez de gérer séparément :
+				</p>
+				<ul class="space-y-2 text-sm text-muted sm:text-base">
+					<li class="flex items-center gap-2">
+						<span class="mt-0.5 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
+						<strong class="text-foreground">Hébergement</strong> — environ 8 à 15 €/mois pour un hébergement fiable et sécurisé
+					</li>
+					<li class="flex items-center gap-2">
+						<span class="mt-0.5 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
+						<strong class="text-foreground">Nom de domaine</strong> — environ 10 à 15 €/an (soit 1 à 1,25 €/mois) pour votre adresse internet
+					</li>
+					<li class="flex items-center gap-2">
+						<span class="mt-0.5 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
+						<strong class="text-foreground">Maintenance SEO</strong> — suivi et optimisation pour le référencement local peuvent rapidement représenter 100 €/mois ou plus chez un prestataire
+					</li>
+				</ul>
+				<p class="mt-4 text-sm text-muted sm:text-base">
+					L'abonnement regroupe hébergement, domaine, mises à jour, sauvegardes et (pour l'offre Visibilité) le suivi SEO, sans surprise ni facture multiple. Vous gardez le contrôle sans la charge technique.
+				</p>
+			</div>
+		</div>
+	</section>
 
 	<!-- Philosophie Section -->
 	<section class="py-16 bg-surface">
@@ -64,6 +95,36 @@ const breadcrumbSchema = {
 							]} 
 						/>
 					</div>
+				</div>
+
+				<div
+					id="performances-pagespeed"
+					class="not-prose mt-10 scroll-mt-24 rounded-xl border border-border bg-white p-6 sm:p-8"
+				>
+					<h3 class="mb-3 text-xl font-semibold text-foreground">
+						Performances techniques (Google PageSpeed)
+					</h3>
+					<p class="mb-3 text-sm text-muted sm:text-base">
+						En complément du design et du contenu, les sites sont pensés pour charger vite sur
+						mobile et respecter les critères techniques que Google utilise aussi pour le
+						référencement. Les scores ci-dessous illustrent ce qu&apos;un site bien optimisé peut
+						obtenir sur PageSpeed Insights (exemple type).
+					</p>
+					<p class="mb-4 text-sm text-muted sm:text-base">
+						Pour votre site actuel, vous pouvez lancer un test gratuit en quelques secondes.
+					</p>
+					<div class="mb-4">
+						<PageSpeedScores title="Exemple de scores pour un site de psychologue" />
+					</div>
+					<a
+						href="https://pagespeed.web.dev/"
+						target="_blank"
+						rel="noopener noreferrer"
+						data-umami-event="pagespeed_test_link_click"
+						class="inline-flex items-center text-sm font-semibold text-primary underline underline-offset-4 hover:no-underline"
+					>
+						Testez les performances de votre site sur Google PageSpeed
+					</a>
 				</div>
 				
 				<p>
