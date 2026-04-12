@@ -160,5 +160,39 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
         </div>
       </div>
     </footer>
+
+    <script is:inline>
+      (function () {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        function initScrollReveal() {
+          var sections = document.querySelectorAll("main > section");
+          if (!sections.length) return;
+          var first = document.querySelector("main > section:first-of-type");
+          for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.add("scroll-reveal");
+          }
+          var io = new IntersectionObserver(
+            function (entries, obs) {
+              for (var j = 0; j < entries.length; j++) {
+                var e = entries[j];
+                if (e.isIntersecting) {
+                  e.target.classList.add("scroll-reveal--visible");
+                  obs.unobserve(e.target);
+                }
+              }
+            },
+            { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.02 }
+          );
+          for (var k = 0; k < sections.length; k++) {
+            if (sections[k] !== first) io.observe(sections[k]);
+          }
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initScrollReveal, { once: true });
+        } else {
+          initScrollReveal();
+        }
+      })();
+    </script>
   </body>
 </html>

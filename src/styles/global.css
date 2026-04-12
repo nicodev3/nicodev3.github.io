@@ -64,3 +64,16 @@ a:not([class]):focus-visible {
 .bg-foreground a:not([class]) {
     color: var(--color-link-on-dark);
 }
+
+/* Scroll reveal : fade-in 0,4s sur les <section> directes de <main> (JS ajoute les classes) */
+@media (prefers-reduced-motion: no-preference) {
+    main>section.scroll-reveal {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    main>section.scroll-reveal:first-of-type,
+    main>section.scroll-reveal.scroll-reveal--visible {
+        opacity: 1;
+    }
+}

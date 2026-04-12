@@ -21,8 +21,23 @@ const features = [
 			<div class="min-w-0">
 				<p class="text-sm md:text-lg uppercase tracking-wider text-muted mb-4">Sites web pour psychologues</p>
 				<h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl text-foreground">
-					Gagnez en visibilité avec un site internet pensé pour les psychologues.
+					Gagnez en visibilité avec un site internet pensé pour les{' '}
+					<span class="italic text-[#722F37]">psychologues</span>.
 				</h1>
+				<div class="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-2">
+					<p class="inline-flex w-fit max-w-full items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1.5 text-xs font-medium text-foreground shadow-sm backdrop-blur-sm sm:text-sm">
+						<span class="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+						<span>Déjà une dizaine de psychologues accompagnés</span>
+					</p>
+					<p class="text-sm text-muted sm:text-base">
+						<a
+							href="#temoignages"
+							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+						>
+							Avis de collègues à Brest, Paris, Lyon…
+						</a>
+					</p>
+				</div>
 				<p class="mt-6 text-lg md:text-2xl text-muted max-w-3xl">
 					Un site professionnel, simple, sans gestion technique, conçu pour présenter votre pratique avec clarté, rassurer vos futurs patients et faciliter la prise de rendez-vous.
 				</p>
@@ -32,12 +47,12 @@ const features = [
 				<p class="mt-4 max-w-3xl rounded-xl border border-border bg-background/80 px-4 py-3 text-sm md:text-base text-muted">
 					Nicodev n’est pas une usine à sites. Je préfère accompagner peu de projets, avec attention, pour créer des sites de qualité vraiment adaptés aux besoins de mes collègues psychologues.
 				</p>
-				<div class="mt-8 flex flex-col sm:flex-row gap-4">
+				<div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
 					<a href="/contact/#diagnostic" class="bg-primary-foreground text-on-primary px-7 py-3 rounded-lg font-semibold text-center hover:opacity-90 transition-colors flex items-center justify-center h-full">
 						Demander un diagnostic gratuit
 					</a>
-					<a href="/portfolio/" class="border-2 border-border text-foreground px-7 py-3 rounded-lg font-semibold text-center hover:bg-background transition-colors">
-						Voir un exemple de site
+					<a href="#comment-ca-marche" class="text-center font-semibold text-muted hover:text-foreground underline-offset-4 hover:underline transition-colors px-2 py-3 sm:py-0">
+						Comment ça marche ?
 					</a>
 				</div>
 			</div>
@@ -55,13 +70,19 @@ const features = [
 				/>
 			</div>
 		</div>
-		<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+		<div class="mt-8 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
 			{features.map((feature) => (
-				<div class="bg-background rounded-lg p-4 border border-border flex items-center gap-3 hover:bg-surface transition-colors">
-					<svg class="w-5 h-5 text-muted flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<div class="hero-feature-card group flex items-center gap-3">
+					<svg
+						class="hero-feature-card__icon h-5 w-5 shrink-0"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						aria-hidden="true"
+					>
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={feature.icon} />
 					</svg>
-					<span>{feature.label}</span>
+					<span class="hero-feature-card__label">{feature.label}</span>
 				</div>
 			))}
 		</div>
@@ -139,6 +160,59 @@ const features = [
 			height: 12rem;
 			filter: blur(32px);
 			opacity: 0.28;
+		}
+	}
+
+	/* Glassmorphism — tuiles arguments (fond clair du hero visible à travers) */
+	.hero-feature-card {
+		border-radius: 0.875rem;
+		padding: 0.9rem 1rem;
+		color: color-mix(in srgb, #fff 94%, transparent);
+		background: color-mix(in srgb, var(--color-foreground) 76%, transparent);
+		border: 1px solid color-mix(in srgb, #fff 16%, transparent);
+		box-shadow:
+			0 1px 0 color-mix(in srgb, #fff 12%, transparent) inset,
+			0 12px 40px color-mix(in srgb, var(--color-foreground) 22%, transparent);
+		backdrop-filter: blur(14px);
+		-webkit-backdrop-filter: blur(14px);
+		transition:
+			border-color 0.2s ease,
+			background-color 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	.hero-feature-card:hover {
+		background: color-mix(in srgb, var(--color-foreground) 84%, transparent);
+		border-color: color-mix(in srgb, #fff 26%, transparent);
+		box-shadow:
+			0 1px 0 color-mix(in srgb, #fff 16%, transparent) inset,
+			0 16px 44px color-mix(in srgb, var(--color-foreground) 28%, transparent);
+	}
+
+	.hero-feature-card__icon {
+		color: color-mix(in srgb, #fff 68%, transparent);
+		transition: color 0.2s ease;
+	}
+
+	.hero-feature-card:hover .hero-feature-card__icon {
+		color: color-mix(in srgb, #fff 88%, transparent);
+	}
+
+	.hero-feature-card__label {
+		line-height: 1.35;
+		font-weight: 500;
+		letter-spacing: 0.01em;
+	}
+
+	@media (prefers-reduced-transparency: reduce) {
+		.hero-feature-card {
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			background: color-mix(in srgb, var(--color-foreground) 92%, var(--color-surface));
+		}
+
+		.hero-feature-card:hover {
+			background: color-mix(in srgb, var(--color-foreground) 96%, var(--color-surface));
 		}
 	}
 </style>

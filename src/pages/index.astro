@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import OffersSection from '../components/OffersSection.astro';
 import ProcessSection from '../components/ProcessSection.astro';
@@ -10,8 +11,29 @@ import VisibiliteSection from '../components/VisibiliteSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
 import DifferenciationDiySection from '../components/DifferenciationDiySection.astro';
+import BlogHomeSection from '../components/BlogHomeSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import defaultOgWebp from '../assets/images/blog/development.webp';
+
+const allBlogPosts = await getCollection('blog');
+const preferredBlogIds = [
+	'comment-trouver-premiers-patients-psychologue',
+	'google-business-profile-psychologue',
+	'site-internet-psychologues'
+] as const;
+const byBlogId = new Map(allBlogPosts.map((p) => [p.id, p]));
+const homeBlogPosts = [];
+for (const id of preferredBlogIds) {
+	const post = byBlogId.get(id);
+	if (post) homeBlogPosts.push(post);
+}
+const byDateDesc = [...allBlogPosts].sort(
+	(a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+for (const post of byDateDesc) {
+	if (homeBlogPosts.length >= 3) break;
+	if (!homeBlogPosts.some((p) => p.id === post.id)) homeBlogPosts.push(post);
+}
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
@@ -141,6 +163,8 @@ const breadcrumbSchema = {
 	<ExpertiseSection />
 
 	<VisibiliteSection />
+
+	<BlogHomeSection posts={homeBlogPosts} />
 
 	<ProcessSection />
 

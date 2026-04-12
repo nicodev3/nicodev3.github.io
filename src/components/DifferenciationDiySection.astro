@@ -1,26 +1,49 @@
 ---
-import PageSpeedScores from "./PageSpeedScores.astro";
+const comparisonRows = [
+	{
+		label: "Outil & temps",
+		diy: "Beaucoup de temps passé à comprendre l'outil (Wix, WordPress, Hostinger...)",
+		nicodev:
+			"Accompagnement pensé pour les psychologues, avec une posture respectueuse de votre éthique"
+	},
+	{
+		label: "Rédaction & ton",
+		diy: "Textes à rédiger seul, avec le risque d'un ton trop commercial ou, au contraire, trop flou",
+		nicodev: "Contenus structurés pour vos patients à partir de réponses simples à un formulaire guidé"
+	},
+	{
+		label: "Visibilité locale",
+		diy: "Référencement local rarement optimisé (psychologue + ville + spécialités)",
+		nicodev: "Site optimisé pour votre visibilité locale (psychologue + ville + spécialités)"
+	},
+	{
+		label: "Technique & sécurité",
+		diy: "Maintenance, mises à jour et sécurité à gérer soi-même",
+		nicodev:
+			"Aucune gestion technique : hébergement, nom de domaine, sécurité et mises à jour pris en charge"
+	},
+	{
+		label: "Qualité & cohérence",
+		diy: "Erreurs fréquentes de design et de contenu, d'accessibilité et de référencement naturel",
+		nicodev:
+			"Structure, sobriété et bonnes pratiques intégrées dès la conception — pas une chaîne de gadgets à empiler seul."
+	},
+	{
+		label: "Dans la durée",
+		diy: "Résultat correct visuellement, mais sans garantie que le site vous apporte des demandes",
+		nicodev:
+			"Suivi dans la durée via l'abonnement, pour un site qui reste à jour et continue de fonctionner"
+	}
+] as const;
 
-const diyItems = [
-	"Beaucoup de temps passé à comprendre l'outil (Wix, WordPress, Hostinger...)",
-	"Textes à rédiger seul, avec le risque d'un ton trop commercial ou, au contraire, trop flou",
-	"Référencement local rarement optimisé (psychologue + ville + spécialités)",
-	"Maintenance, mises à jour et sécurité à gérer soi-même",
-	"Erreurs fréquentes de design et de contenu, d'accessibilité et de référencement naturel",
-	"Résultat correct visuellement, mais sans garantie que le site vous apporte des demandes"
-];
-
-const nicodevItems = [
-	"Accompagnement pensé pour les psychologues, avec une posture respectueuse de votre éthique",
-	"Contenus structurés pour vos patients à partir de réponses simples à un formulaire guidé",
-	"Site optimisé pour votre visibilité locale (psychologue + ville + spécialités)",
-	"Aucune gestion technique : hébergement, nom de domaine, sécurité et mises à jour pris en charge",
-	"Suivi dans la durée via l'abonnement, pour un site qui reste à jour et continue de fonctionner"
-];
+const iconCross =
+	"M6 18 18 6M6 6l12 12";
+const iconCheck =
+	"m4.5 12.75l6 6l9-13.5";
 ---
 
 <section class="py-16 bg-background border-b border-border">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+	<div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 		<header class="max-w-3xl mb-10">
 			<h2 class="text-3xl font-bold text-foreground mb-4">
 				Le problème n’est pas d’avoir un site, mais d’avoir un site qui fonctionne
@@ -32,64 +55,74 @@ const nicodevItems = [
 			</p>
 		</header>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-			<div class="bg-surface rounded-2xl border border-border p-6">
-				<h3 class="text-xl font-semibold text-foreground mb-3">
-					Faire son site soi-même (Wix, WordPress, Hostinger…)
-				</h3>
-				<ul class="space-y-3 text-sm text-muted">
-					{diyItems.map((item) => (
-						<li class="flex items-start gap-2">
-							<span class="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-foreground/40"></span>
-							<span>{item}</span>
-						</li>
-					))}
-				</ul>
+		<div class="w-full overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
+			<div class="border-b border-border bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-surface))] px-4 py-3 sm:px-5">
+				<p class="text-sm font-medium text-muted">Comparaison rapide</p>
+				<p class="font-heading text-lg font-semibold text-foreground">Faire seul vs. nicodev</p>
 			</div>
-
-			<div class="bg-surface rounded-2xl border border-primary/40 p-6">
-				<h3 class="text-xl font-semibold text-foreground mb-3">
-					Être accompagné avec nicodev.fr
-				</h3>
-				<ul class="space-y-3 text-sm text-muted">
-					{nicodevItems.map((item) => (
-						<li class="flex items-start gap-2">
-							<span class="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
-							<span>{item}</span>
-						</li>
-					))}
-				</ul>
-
-				<div class="mt-6 rounded-xl border border-border bg-background p-4 sm:p-5">
-					<h4 class="mb-2 text-base font-semibold text-foreground">
-						Performances techniques
-					</h4>
-					<p class="mb-2 text-sm text-muted">
-						Les sites sont pensés pour charger rapidement, être confortables sur mobile et respecter les
-						bonnes pratiques recommandées par Google.
-					</p>
-					<p class="mb-3 text-sm text-muted">
-						Les scores ci-dessous illustrent ce qu’on peut obtenir sur PageSpeed Insights pour un site bien
-						optimisé — vous pouvez tester le vôtre en quelques secondes.
-					</p>
-					<div class="mb-3">
-						<PageSpeedScores title="Exemple de scores pour un site de psychologue" />
-					</div>
-					<a
-						href="https://pagespeed.web.dev/"
-						target="_blank"
-						rel="noopener noreferrer"
-						data-umami-event="pagespeed_test_link_click"
-						class="inline-flex items-center text-sm font-semibold text-primary-foreground underline underline-offset-4 hover:no-underline hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-					>
-						Testez les performances de votre site avec PageSpeed Insights (Google)
-						<span class="sr-only"> — s’ouvre dans un nouvel onglet</span>
-					</a>
-				</div>
+			<div class="w-full overflow-x-auto">
+				<table class="diy-compare-table w-full min-w-0 table-fixed text-left text-sm">
+					<caption class="sr-only">
+						Comparaison entre créer son site en autonomie avec un outil grand public et être accompagné par
+						nicodev.fr : inconvénients et avantages ligne par ligne.
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col" class="diy-compare-th diy-compare-th--muted">Critère</th>
+							<th scope="col" class="diy-compare-th diy-compare-th--diy">
+								<span class="block font-heading text-foreground">En autonomie</span>
+								<span class="mt-0.5 block text-xs font-normal text-muted">Wix, WordPress, Hostinger…</span>
+							</th>
+							<th scope="col" class="diy-compare-th diy-compare-th--nico">
+								<span class="block font-heading text-foreground">Avec nicodev.fr</span>
+								<span class="mt-0.5 block text-xs font-normal text-primary-foreground">Sites pour psychologues</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						{comparisonRows.map((row) => (
+							<tr class="diy-compare-tr">
+								<th scope="row" class="diy-compare-rowlabel">
+									{row.label}
+								</th>
+								<td class="diy-compare-td diy-compare-td--diy">
+									<span class="diy-compare-cell">
+										<span class="diy-compare-icon diy-compare-icon--bad" aria-hidden="true">
+											<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													stroke-width="1.5"
+													d={iconCross}
+												/>
+											</svg>
+										</span>
+										<span class="text-muted">{row.diy}</span>
+									</span>
+								</td>
+								<td class="diy-compare-td diy-compare-td--nico">
+									<span class="diy-compare-cell">
+										<span class="diy-compare-icon diy-compare-icon--good" aria-hidden="true">
+											<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													stroke-width="1.5"
+													d={iconCheck}
+												/>
+											</svg>
+										</span>
+										<span class="text-muted">{row.nicodev}</span>
+									</span>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
 			</div>
 		</div>
 
-		<div class="mt-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+		<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 			<p class="text-sm text-muted max-w-2xl">
 				Un abonnement peut sembler plus cher qu’un hébergement low cost. Mais si le site ne génère pas de
 				demandes, le vrai coût est le temps perdu et les patients qui ne vous trouvent jamais.
@@ -104,3 +137,88 @@ const nicodevItems = [
 	</div>
 </section>
 
+<style>
+	.diy-compare-table {
+		border-collapse: collapse;
+	}
+
+	.diy-compare-th,
+	.diy-compare-rowlabel,
+	.diy-compare-td {
+		padding: 0.85rem 1rem;
+		vertical-align: top;
+		border-bottom: 1px solid var(--color-border);
+		overflow-wrap: anywhere;
+	}
+
+	.diy-compare-th {
+		font-size: 0.6875rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--color-muted);
+	}
+
+	.diy-compare-th--diy {
+		width: 39%;
+		background: color-mix(in srgb, #dc2626 7%, var(--color-surface));
+	}
+
+	.diy-compare-th--nico {
+		width: 39%;
+		background: color-mix(in srgb, #16a34a 8%, var(--color-surface));
+	}
+
+	.diy-compare-th--muted {
+		width: 22%;
+		min-width: 6.5rem;
+	}
+
+	.diy-compare-tr:last-child .diy-compare-rowlabel,
+	.diy-compare-tr:last-child .diy-compare-td {
+		border-bottom: none;
+	}
+
+	.diy-compare-rowlabel {
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--color-foreground);
+		line-height: 1.35;
+		background: color-mix(in srgb, var(--color-foreground) 3%, var(--color-surface));
+	}
+
+	.diy-compare-td--diy {
+		background: color-mix(in srgb, #dc2626 4.5%, var(--color-surface));
+	}
+
+	.diy-compare-td--nico {
+		background: color-mix(in srgb, #16a34a 5%, var(--color-surface));
+	}
+
+	.diy-compare-cell {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.65rem;
+	}
+
+	.diy-compare-icon {
+		display: inline-flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		width: 1.625rem;
+		height: 1.625rem;
+		margin-top: 0.06rem;
+		border-radius: 9999px;
+	}
+
+	.diy-compare-icon--bad {
+		color: #b91c1c;
+		background: color-mix(in srgb, #fecaca 58%, transparent);
+	}
+
+	.diy-compare-icon--good {
+		color: #166534;
+		background: color-mix(in srgb, #bbf7d0 65%, transparent);
+	}
+</style>

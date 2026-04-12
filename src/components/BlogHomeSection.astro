@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BlogCard from './BlogCard.astro';
+import defaultBlogCover from '../assets/images/blog/development.webp';
+
+interface Props {
+	posts: CollectionEntry<'blog'>[];
+}
+
+const { posts } = Astro.props;
+---
+
+<section id="blog" class="py-16 bg-white border-y border-border/60" aria-labelledby="blog-home-heading">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl mb-10">
+			<p class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">Blog</p>
+			<h2 id="blog-home-heading" class="text-3xl font-bold text-foreground">
+				Des réponses aux questions que vous posez avant même de choisir un prestataire
+			</h2>
+			<p class="mt-4 text-lg text-muted">
+				Installation, premiers patients, visibilité Google, site vs Doctolib… Des articles rédigés pour les psychologues en libéral, pour clarifier les sujets que vous cherchez sur le web — souvent longtemps avant de demander un devis.
+			</p>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch [&>*]:min-h-0">
+			{posts.map((post) => (
+				<BlogCard
+					title={post.data.title}
+					description={post.data.description}
+					href={`/blog/${post.id}/`}
+					image={post.data.image ?? defaultBlogCover}
+					imageAlt={post.data.title}
+					tag={post.data.tags?.[0] ?? 'Psychologues'}
+					pubDate={post.data.pubDate}
+					updatedDate={post.data.updatedDate}
+					author={post.data.author}
+					tags={post.data.tags}
+				/>
+			))}
+		</div>
+		<div class="mt-12 text-center">
+			<a
+				href="/blog/"
+				class="inline-flex items-center justify-center font-semibold text-foreground underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+			>
+				Voir tous les articles
+			</a>
+		</div>
+	</div>
+</section>
