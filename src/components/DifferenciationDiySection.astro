@@ -60,7 +60,7 @@ const iconCheck =
 				<p class="text-sm font-medium text-muted">Comparaison rapide</p>
 				<p class="font-heading text-lg font-semibold text-foreground">Faire seul vs. nicodev</p>
 			</div>
-			<div class="w-full overflow-x-auto">
+			<div class="hidden w-full overflow-x-auto md:block">
 				<table class="diy-compare-table w-full min-w-0 table-fixed text-left text-sm">
 					<caption class="sr-only">
 						Comparaison entre créer son site en autonomie avec un outil grand public et être accompagné par
@@ -85,7 +85,7 @@ const iconCheck =
 								<th scope="row" class="diy-compare-rowlabel">
 									{row.label}
 								</th>
-								<td class="diy-compare-td diy-compare-td--diy">
+								<td class="diy-compare-td diy-compare-td--diy" data-col="En autonomie">
 									<span class="diy-compare-cell">
 										<span class="diy-compare-icon diy-compare-icon--bad" aria-hidden="true">
 											<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ const iconCheck =
 										<span class="text-muted">{row.diy}</span>
 									</span>
 								</td>
-								<td class="diy-compare-td diy-compare-td--nico">
+								<td class="diy-compare-td diy-compare-td--nico" data-col="Avec nicodev.fr">
 									<span class="diy-compare-cell">
 										<span class="diy-compare-icon diy-compare-icon--good" aria-hidden="true">
 											<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,6 +119,53 @@ const iconCheck =
 						))}
 					</tbody>
 				</table>
+			</div>
+			<div class="space-y-5 p-4 md:hidden">
+				{comparisonRows.map((row) => (
+					<article class="border-b border-border/70 pb-4 last:border-b-0 last:pb-0">
+						<h3 class="px-1 pb-2 text-sm font-semibold text-foreground">
+							{row.label}
+						</h3>
+						<div class="space-y-2.5">
+							<div class="rounded-lg bg-[color-mix(in_srgb,#f97316_9%,var(--color-surface))] p-3">
+								<p class="mb-2 text-[0.6875rem] font-semibold uppercase tracking-[0.06em] text-muted">
+									En autonomie
+								</p>
+								<span class="diy-compare-cell">
+									<span class="diy-compare-icon diy-compare-icon--bad" aria-hidden="true">
+										<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="1.5"
+												d={iconCross}
+											/>
+										</svg>
+									</span>
+									<span class="text-muted">{row.diy}</span>
+								</span>
+							</div>
+							<div class="rounded-lg bg-[color-mix(in_srgb,#0ea5e9_9%,var(--color-surface))] p-3">
+								<p class="mb-2 text-[0.6875rem] font-semibold uppercase tracking-[0.06em] text-muted">
+									Avec nicodev.fr
+								</p>
+								<span class="diy-compare-cell">
+									<span class="diy-compare-icon diy-compare-icon--good" aria-hidden="true">
+										<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="1.5"
+												d={iconCheck}
+											/>
+										</svg>
+									</span>
+									<span class="text-muted">{row.nicodev}</span>
+								</span>
+							</div>
+						</div>
+					</article>
+				))}
 			</div>
 		</div>
 
@@ -161,12 +208,12 @@ const iconCheck =
 
 	.diy-compare-th--diy {
 		width: 39%;
-		background: color-mix(in srgb, #dc2626 7%, var(--color-surface));
+		background: color-mix(in srgb, #f97316 11%, var(--color-surface));
 	}
 
 	.diy-compare-th--nico {
 		width: 39%;
-		background: color-mix(in srgb, #16a34a 8%, var(--color-surface));
+		background: color-mix(in srgb, #0ea5e9 11%, var(--color-surface));
 	}
 
 	.diy-compare-th--muted {
@@ -188,11 +235,11 @@ const iconCheck =
 	}
 
 	.diy-compare-td--diy {
-		background: color-mix(in srgb, #dc2626 4.5%, var(--color-surface));
+		background: color-mix(in srgb, #f97316 8.5%, var(--color-surface));
 	}
 
 	.diy-compare-td--nico {
-		background: color-mix(in srgb, #16a34a 5%, var(--color-surface));
+		background: color-mix(in srgb, #0ea5e9 8.5%, var(--color-surface));
 	}
 
 	.diy-compare-cell {
@@ -213,12 +260,13 @@ const iconCheck =
 	}
 
 	.diy-compare-icon--bad {
-		color: #b91c1c;
-		background: color-mix(in srgb, #fecaca 58%, transparent);
+		color: #c2410c;
+		background: color-mix(in srgb, #fdba74 48%, transparent);
 	}
 
 	.diy-compare-icon--good {
-		color: #166534;
-		background: color-mix(in srgb, #bbf7d0 65%, transparent);
+		color: #0369a1;
+		background: color-mix(in srgb, #7dd3fc 48%, transparent);
 	}
+
 </style>
