@@ -8,6 +8,11 @@ interface Props {
 }
 
 const { posts } = Astro.props;
+const POSTS_PER_SLIDE = 3;
+const postSlides: CollectionEntry<'blog'>[][] = [];
+for (let i = 0; i < posts.length; i += POSTS_PER_SLIDE) {
+	postSlides.push(posts.slice(i, i + POSTS_PER_SLIDE));
+}
 ---
 
 <section id="blog" class="py-16 bg-white border-y border-border/60" aria-labelledby="blog-home-heading">
@@ -15,27 +20,62 @@ const { posts } = Astro.props;
 		<div class="max-w-3xl mb-10">
 			<p class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">Blog</p>
 			<h2 id="blog-home-heading" class="text-3xl font-bold text-foreground">
-				Des réponses aux questions que vous posez avant même de choisir un prestataire
+				Des réponses aux questions que vous posez peut-être concernant votre présence sur Internet en tant que psychologue libéral
 			</h2>
 			<p class="mt-4 text-lg text-muted">
 				Installation, premiers patients, visibilité Google, site vs Doctolib… Des articles rédigés pour les psychologues en libéral, pour clarifier les sujets que vous cherchez sur le web — souvent longtemps avant de demander un devis.
 			</p>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch [&>*]:min-h-0">
-			{posts.map((post) => (
-				<BlogCard
-					title={post.data.title}
-					description={post.data.description}
-					href={`/blog/${post.id}/`}
-					image={post.data.image ?? defaultBlogCover}
-					imageAlt={post.data.title}
-					tag={post.data.tags?.[0] ?? 'Psychologues'}
-					pubDate={post.data.pubDate}
-					updatedDate={post.data.updatedDate}
-					author={post.data.author}
-					tags={post.data.tags}
-				/>
-			))}
+		<div class="relative lg:px-10 xl:px-14" data-carousel-root>
+			<div
+				class="flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+				data-carousel-track
+				aria-label="Articles du blog"
+			>
+				{postSlides.map((slide) => (
+					<div class="snap-start shrink-0 w-full">
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch *:min-h-0">
+							{slide.map((post) => (
+								<BlogCard
+									title={post.data.title}
+									description={post.data.description}
+									href={`/blog/${post.id}/`}
+									image={post.data.image ?? defaultBlogCover}
+									imageAlt={post.data.title}
+									tag={post.data.tags?.[0] ?? 'Psychologues'}
+									pubDate={post.data.pubDate}
+									updatedDate={post.data.updatedDate}
+									author={post.data.author}
+									tags={post.data.tags}
+								/>
+							))}
+						</div>
+					</div>
+				))}
+			</div>
+			<button
+				type="button"
+				class="absolute left-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white shadow-md ring-2 ring-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:left-2 lg:-left-5 xl:-left-6"
+				aria-label="Voir les articles précédents"
+				data-carousel-prev
+			>
+				<span aria-hidden="true">←</span>
+			</button>
+			<button
+				type="button"
+				class="absolute right-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white shadow-md ring-2 ring-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:right-2 lg:-right-5 xl:-right-6"
+				aria-label="Voir les articles suivants"
+				data-carousel-next
+			>
+				<span aria-hidden="true">→</span>
+			</button>
+			<div class="mt-4 flex items-center justify-center" data-carousel-controls>
+				<p class="text-sm text-muted tabular-nums" aria-live="polite">
+					<span data-carousel-current>1</span>
+					<span aria-hidden="true"> / </span>
+					<span data-carousel-total>{postSlides.length}</span>
+				</p>
+			</div>
 		</div>
 		<div class="mt-12 text-center">
 			<a
@@ -47,3 +87,42 @@ const { posts } = Astro.props;
 		</div>
 	</div>
 </section>
+
+<script>
+	const carouselRoot = document.querySelector('[data-carousel-root]');
+	const carouselTrack = carouselRoot?.querySelector('[data-carousel-track]');
+	const prevButton = carouselRoot?.querySelector('[data-carousel-prev]');
+	const nextButton = carouselRoot?.querySelector('[data-carousel-next]');
+	const currentLabel = carouselRoot?.querySelector('[data-carousel-current]');
+
+	if (
+		carouselTrack instanceof HTMLElement &&
+		prevButton instanceof HTMLButtonElement &&
+		nextButton instanceof HTMLButtonElement &&
+		currentLabel instanceof HTMLElement
+	) {
+		const getScrollStep = () => carouselTrack.clientWidth;
+
+		const updateButtons = () => {
+			const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+			const rawIndex = Math.round(carouselTrack.scrollLeft / Math.max(getScrollStep(), 1)) + 1;
+			const maxIndex = Math.max(Math.ceil(carouselTrack.scrollWidth / Math.max(getScrollStep(), 1)), 1);
+			const clampedIndex = Math.min(Math.max(rawIndex, 1), maxIndex);
+			prevButton.disabled = carouselTrack.scrollLeft <= 8;
+			nextButton.disabled = carouselTrack.scrollLeft >= maxScroll - 8;
+			currentLabel.textContent = String(clampedIndex);
+		};
+
+		prevButton.addEventListener('click', () => {
+			carouselTrack.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+		});
+
+		nextButton.addEventListener('click', () => {
+			carouselTrack.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+		});
+
+		carouselTrack.addEventListener('scroll', updateButtons, { passive: true });
+		window.addEventListener('resize', updateButtons);
+		updateButtons();
+	}
+</script>

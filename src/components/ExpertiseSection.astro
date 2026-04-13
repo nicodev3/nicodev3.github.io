@@ -1,25 +1,30 @@
 ---
 import { Image } from "astro:assets";
-import expertiseVenn from "../assets/images/nicodev.webp";
+import developmentImage from "../assets/images/development.webp";
 ---
 
-<section class="py-16 bg-surface-alt">
+<section class="expertise-section py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
       <div class="min-w-0">
+        <p class="expertise-kicker mb-3">Un accompagnement entre professionnels</p>
         <h2 class="text-3xl font-bold text-foreground mb-6">
-          Pensé pour les psychologues
+          J'accompagne les psychologues dans leur communication digitale et leur visibilité sur Internet
         </h2>
         <div class="text-lg text-muted max-w-3xl">
           <p class="mb-5 text-base font-medium leading-snug text-foreground md:text-lg">
-            Nicodev n’est pas une usine à sites : peu de projets, avec attention, pour des sites vraiment adaptés aux
-            besoins de mes collègues psychologues.
+            Je ne travaille pas comme une usine à sites : je prends peu de projets, avec attention, pour proposer des
+            sites vraiment adaptés aux besoins de mes confrères psychologues.
           </p>
           <p class="mb-8 md:mb-10 text-base md:text-lg leading-relaxed">
-            Conçu par un psychologue en libéral et développeur web, ce travail vise une présence sobre et
-            professionnelle, loin du site «&nbsp;marketing&nbsp;» et des gabarits génériques&nbsp;: contenu repris, relu
-            et ajusté avec soin pour votre pratique réelle, dans le respect de votre posture clinique et pour rassurer
-            vos futurs patients.
+            En tant que psychologue en libéral et <a
+              href="/about/#references-professionnelles"
+              title="Voir mes références professionnelles et mon expérience de tech lead"
+              class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+              >développeur web</a
+            >, je construis une présence claire, rassurante et professionnelle : je reprends, relis et ajuste chaque
+            contenu avec soin pour votre pratique réelle, dans le respect de votre posture clinique et pour orienter vos
+            futurs patients avec simplicité.
           </p>
           <ul class="space-y-3 md:space-y-4 text-base md:text-lg">
             <li>• Ton et vocabulaire adaptés à votre pratique, sans promesses irréalistes.</li>
@@ -30,16 +35,58 @@ import expertiseVenn from "../assets/images/nicodev.webp";
         </div>
       </div>
       <div class="flex justify-center lg:justify-end">
-        <Image
-          src={expertiseVenn}
-          alt="Psychologie et technologie au service de votre site"
-          width={665}
-          height={363}
-          widths={[384, 530, 665]}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 665px"
-          class="rounded-xl w-full max-w-sm"
-        />
+        <figure class="expertise-visual">
+          <Image
+            src={developmentImage}
+            alt="Psychologue et développeur web au service des confrères"
+            width={640}
+            height={426}
+            widths={[384, 530, 640]}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 640px"
+            class="rounded-2xl w-full max-w-md"
+          />
+          <figcaption class="expertise-caption">20 ans d'expérience web, dont des postes de tech lead.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .expertise-section {
+    border-block: 1px solid var(--color-border);
+    background:
+      radial-gradient(circle at 10% 18%, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 42%),
+      radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--color-foreground) 8%, transparent), transparent 38%),
+      linear-gradient(180deg, color-mix(in srgb, var(--color-surface) 88%, white), var(--color-surface));
+  }
+
+  .expertise-kicker {
+    width: fit-content;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-foreground);
+    background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+    border-radius: 9999px;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .expertise-visual {
+    margin: 0;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    background: color-mix(in srgb, white 70%, var(--color-surface));
+    border: 1px solid color-mix(in srgb, var(--color-border) 70%, white);
+    box-shadow: 0 18px 40px color-mix(in srgb, var(--color-foreground) 14%, transparent);
+  }
+
+  .expertise-caption {
+    margin-top: 0.75rem;
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    text-align: center;
+  }
+</style>

@@ -25,11 +25,13 @@ for (const id of preferredBlogIds) {
 	const post = byBlogId.get(id);
 	if (post) homeBlogPosts.push(post);
 }
+const HOME_BLOG_POSTS_LIMIT = 9;
+
 const byDateDesc = [...allBlogPosts].sort(
 	(a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 );
 for (const post of byDateDesc) {
-	if (homeBlogPosts.length >= 3) break;
+	if (homeBlogPosts.length >= HOME_BLOG_POSTS_LIMIT) break;
 	if (!homeBlogPosts.some((p) => p.id === post.id)) homeBlogPosts.push(post);
 }
 
