@@ -8,11 +8,6 @@ interface Props {
 }
 
 const { posts } = Astro.props;
-const POSTS_PER_SLIDE = 3;
-const postSlides: CollectionEntry<'blog'>[][] = [];
-for (let i = 0; i < posts.length; i += POSTS_PER_SLIDE) {
-	postSlides.push(posts.slice(i, i + POSTS_PER_SLIDE));
-}
 ---
 
 <section id="blog" class="py-16 bg-white border-y border-border/60" aria-labelledby="blog-home-heading">
@@ -32,30 +27,26 @@ for (let i = 0; i < posts.length; i += POSTS_PER_SLIDE) {
 				data-carousel-track
 				aria-label="Articles du blog"
 			>
-				{postSlides.map((slide) => (
-					<div class="snap-start shrink-0 w-full">
-						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch *:min-h-0">
-							{slide.map((post) => (
-								<BlogCard
-									title={post.data.title}
-									description={post.data.description}
-									href={`/blog/${post.id}/`}
-									image={post.data.image ?? defaultBlogCover}
-									imageAlt={post.data.title}
-									tag={post.data.tags?.[0] ?? 'Psychologues'}
-									pubDate={post.data.pubDate}
-									updatedDate={post.data.updatedDate}
-									author={post.data.author}
-									tags={post.data.tags}
-								/>
-							))}
-						</div>
+				{posts.map((post) => (
+					<div class="snap-start shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
+						<BlogCard
+							title={post.data.title}
+							description={post.data.description}
+							href={`/blog/${post.id}/`}
+							image={post.data.image ?? defaultBlogCover}
+							imageAlt={post.data.title}
+							tag={post.data.tags?.[0] ?? 'Psychologues'}
+							pubDate={post.data.pubDate}
+							updatedDate={post.data.updatedDate}
+							author={post.data.author}
+							tags={post.data.tags}
+						/>
 					</div>
 				))}
 			</div>
 			<button
 				type="button"
-				class="absolute left-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white shadow-md ring-2 ring-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:left-2 lg:-left-5 xl:-left-6"
+				class="absolute left-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary/60 text-white shadow-md ring-2 ring-white/70 transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:left-2 sm:bg-primary/70 lg:-left-5 lg:bg-primary xl:-left-6"
 				aria-label="Voir les articles précédents"
 				data-carousel-prev
 			>
@@ -63,7 +54,7 @@ for (let i = 0; i < posts.length; i += POSTS_PER_SLIDE) {
 			</button>
 			<button
 				type="button"
-				class="absolute right-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white shadow-md ring-2 ring-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:right-2 lg:-right-5 xl:-right-6"
+				class="absolute right-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary/60 text-white shadow-md ring-2 ring-white/70 transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:right-2 sm:bg-primary/70 lg:-right-5 lg:bg-primary xl:-right-6"
 				aria-label="Voir les articles suivants"
 				data-carousel-next
 			>
@@ -73,7 +64,7 @@ for (let i = 0; i < posts.length; i += POSTS_PER_SLIDE) {
 				<p class="text-sm text-muted tabular-nums" aria-live="polite">
 					<span data-carousel-current>1</span>
 					<span aria-hidden="true"> / </span>
-					<span data-carousel-total>{postSlides.length}</span>
+					<span data-carousel-total>{posts.length}</span>
 				</p>
 			</div>
 		</div>
@@ -94,12 +85,14 @@ for (let i = 0; i < posts.length; i += POSTS_PER_SLIDE) {
 	const prevButton = carouselRoot?.querySelector('[data-carousel-prev]');
 	const nextButton = carouselRoot?.querySelector('[data-carousel-next]');
 	const currentLabel = carouselRoot?.querySelector('[data-carousel-current]');
+	const totalLabel = carouselRoot?.querySelector('[data-carousel-total]');
 
 	if (
 		carouselTrack instanceof HTMLElement &&
 		prevButton instanceof HTMLButtonElement &&
 		nextButton instanceof HTMLButtonElement &&
-		currentLabel instanceof HTMLElement
+		currentLabel instanceof HTMLElement &&
+		totalLabel instanceof HTMLElement
 	) {
 		const getScrollStep = () => carouselTrack.clientWidth;
 
@@ -111,6 +104,7 @@ for (let i = 0; i < posts.length; i += POSTS_PER_SLIDE) {
 			prevButton.disabled = carouselTrack.scrollLeft <= 8;
 			nextButton.disabled = carouselTrack.scrollLeft >= maxScroll - 8;
 			currentLabel.textContent = String(clampedIndex);
+			totalLabel.textContent = String(maxIndex);
 		};
 
 		prevButton.addEventListener('click', () => {
