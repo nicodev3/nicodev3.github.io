@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Check } from '@lucide/astro';
 import developmentImage from "../assets/images/development.webp";
 ---
 
@@ -26,11 +27,31 @@ import developmentImage from "../assets/images/development.webp";
             contenu avec soin pour votre pratique réelle, dans le respect de votre posture clinique et pour orienter vos
             futurs patients avec simplicité.
           </p>
-          <ul class="space-y-3 md:space-y-4 text-base md:text-lg">
-            <li>• Ton et vocabulaire adaptés à votre pratique, sans promesses irréalistes.</li>
-            <li>• Mise en avant claire de votre approche, de vos spécialisations et de vos modalités pratiques.</li>
-            <li>• Pages pensées pour faciliter la prise de contact, sans pression ni discours commercial.</li>
-            <li>• Attention portée à la confidentialité et au cadre déontologique de votre profession.</li>
+          <ul class="expertise-list">
+            <li class="expertise-list-item">
+              <span class="expertise-list-item__icon" aria-hidden="true">
+                <Check class="expertise-check-icon" stroke-width={2.2} />
+              </span>
+              <span>Ton et vocabulaire adaptés à votre pratique, sans promesses irréalistes.</span>
+            </li>
+            <li class="expertise-list-item">
+              <span class="expertise-list-item__icon" aria-hidden="true">
+                <Check class="expertise-check-icon" stroke-width={2.2} />
+              </span>
+              <span>Mise en avant claire de votre approche, de vos spécialisations et de vos modalités pratiques.</span>
+            </li>
+            <li class="expertise-list-item">
+              <span class="expertise-list-item__icon" aria-hidden="true">
+                <Check class="expertise-check-icon" stroke-width={2.2} />
+              </span>
+              <span>Pages pensées pour faciliter la prise de contact, sans pression ni discours commercial.</span>
+            </li>
+            <li class="expertise-list-item">
+              <span class="expertise-list-item__icon" aria-hidden="true">
+                <Check class="expertise-check-icon" stroke-width={2.2} />
+              </span>
+              <span>Attention portée à la confidentialité et au cadre déontologique de votre profession.</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -88,5 +109,50 @@ import developmentImage from "../assets/images/development.webp";
     font-size: 0.8125rem;
     color: var(--color-muted);
     text-align: center;
+  }
+
+  .expertise-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .expertise-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--color-muted);
+  }
+
+  .expertise-list-item__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35rem;
+    height: 1.35rem;
+    margin-top: 0.1rem;
+    border-radius: 9999px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .expertise-check-icon {
+    width: 0.85rem;
+    height: 0.85rem;
+    display: block;
+    stroke-width: 2.2;
+  }
+
+  @media (min-width: 768px) {
+    .expertise-list {
+      gap: 0.875rem;
+    }
+
+    .expertise-list-item {
+      font-size: 1.0625rem;
+    }
   }
 </style>

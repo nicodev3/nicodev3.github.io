@@ -21,9 +21,10 @@
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource-variable/lora": "^5.2.8",
     "@fontsource-variable/source-sans-3": "^5.2.9",
+    "@lucide/astro": "^1.8.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.12",
-    "astro": "^6.1.5",
+    "astro": "^6.1.7",
     "puppeteer": "^24.16.2",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.3"
