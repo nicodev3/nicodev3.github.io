@@ -8,10 +8,9 @@ export interface Props {
 const { mode = 'devis' } = Astro.props;
 
 const isDevisMode = mode === 'devis';
-const defaultDevisFormspreeUrl = 'https://formspree.io/f/xeevrdko';
 const formspreeUrl = (
 	isDevisMode
-		? import.meta.env.PUBLIC_FORMSPREE_DEVIS || defaultDevisFormspreeUrl
+		? import.meta.env.PUBLIC_FORMSPREE_DEVIS
 		: import.meta.env.PUBLIC_FORMSPREE_CONTACT
 )?.trim();
 if (import.meta.env.PROD && !formspreeUrl) {
@@ -48,6 +47,7 @@ const reassuranceText = isDevisMode
 		action={formspreeUrl}
 		data-umami-event={submitEvent}
 		data-umami-start-event={startEvent}
+		data-success-url={redirectUrl}
 		class="space-y-6"
 	>
 		<input type="hidden" name="form-name" value={formName} />
@@ -92,6 +92,7 @@ const reassuranceText = isDevisMode
 		>
 			{submitLabel}
 		</button>
+		<p id="contact-form-feedback" class="hidden text-sm text-red-700" role="alert" aria-live="polite"></p>
 		<p class="text-center text-xs text-muted">{reassuranceText}</p>
 	</form>
 </div>
@@ -102,6 +103,9 @@ const reassuranceText = isDevisMode
 		if (!form) return;
 		const startEvent = form.getAttribute('data-umami-start-event');
 		const submitEvent = form.getAttribute('data-umami-event');
+		const successUrl = form.getAttribute('data-success-url');
+		const feedback = document.getElementById('contact-form-feedback');
+		const submitButton = form.querySelector('button[type="submit"]');
 
 		let started = false;
 		const trackStart = () => {
@@ -114,9 +118,43 @@ const reassuranceText = isDevisMode
 
 		form.addEventListener('focusin', trackStart, { once: true });
 		form.addEventListener('change', trackStart, { once: true });
-		form.addEventListener('submit', () => {
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			if (feedback) {
+				feedback.textContent = '';
+				feedback.classList.add('hidden');
+			}
+			if (submitButton) submitButton.setAttribute('disabled', 'disabled');
 			if (submitEvent && window.umami && typeof window.umami.track === 'function') {
 				window.umami.track(submitEvent);
+			}
+
+			try {
+				const response = await fetch(form.action, {
+					method: 'POST',
+					body: new FormData(form),
+					headers: {
+						Accept: 'application/json'
+					}
+				});
+
+				if (!response.ok) {
+					throw new Error('Submission failed');
+				}
+
+				if (successUrl) {
+					window.location.href = successUrl;
+					return;
+				}
+
+				form.reset();
+			} catch (_) {
+				if (feedback) {
+					feedback.textContent = "Une erreur est survenue. Merci de reessayer dans un instant.";
+					feedback.classList.remove('hidden');
+				}
+			} finally {
+				if (submitButton) submitButton.removeAttribute('disabled');
 			}
 		});
 	})();
