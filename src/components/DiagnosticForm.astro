@@ -108,6 +108,7 @@ const startEvent = 'lead_start_diagnostic';
 		const form = document.getElementById('diagnostic-form');
 		if (!form) return;
 		const startEvent = form.getAttribute('data-umami-start-event');
+		const submitEvent = form.getAttribute('data-umami-event');
 
 		let started = false;
 		const trackStart = () => {
@@ -120,6 +121,11 @@ const startEvent = 'lead_start_diagnostic';
 
 		form.addEventListener('focusin', trackStart, { once: true });
 		form.addEventListener('change', trackStart, { once: true });
+		form.addEventListener('submit', () => {
+			if (submitEvent && window.umami && typeof window.umami.track === 'function') {
+				window.umami.track(submitEvent);
+			}
+		});
 	})();
 </script>
 

@@ -7,12 +7,21 @@ export interface Props {
 
 const { mode = 'devis' } = Astro.props;
 
-const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_CONTACT?.trim();
+const isDevisMode = mode === 'devis';
+const defaultDevisFormspreeUrl = 'https://formspree.io/f/xeevrdko';
+const formspreeUrl = (
+	isDevisMode
+		? import.meta.env.PUBLIC_FORMSPREE_DEVIS || defaultDevisFormspreeUrl
+		: import.meta.env.PUBLIC_FORMSPREE_CONTACT
+)?.trim();
 if (import.meta.env.PROD && !formspreeUrl) {
-	throw new Error('PUBLIC_FORMSPREE_CONTACT doit être défini (URL Formspree, ex. https://formspree.io/f/…)');
+	throw new Error(
+		isDevisMode
+			? 'PUBLIC_FORMSPREE_DEVIS doit être défini (URL Formspree, ex. https://formspree.io/f/…)'
+			: 'PUBLIC_FORMSPREE_CONTACT doit être défini (URL Formspree, ex. https://formspree.io/f/…)',
+	);
 }
 
-const isDevisMode = mode === 'devis';
 const redirectUrl = import.meta.env.SITE
 	? new URL(isDevisMode ? '/merci/devis/' : '/merci/contact/', import.meta.env.SITE).href
 	: undefined;
@@ -92,6 +101,7 @@ const reassuranceText = isDevisMode
 		const form = document.getElementById('contact-form');
 		if (!form) return;
 		const startEvent = form.getAttribute('data-umami-start-event');
+		const submitEvent = form.getAttribute('data-umami-event');
 
 		let started = false;
 		const trackStart = () => {
@@ -104,5 +114,10 @@ const reassuranceText = isDevisMode
 
 		form.addEventListener('focusin', trackStart, { once: true });
 		form.addEventListener('change', trackStart, { once: true });
+		form.addEventListener('submit', () => {
+			if (submitEvent && window.umami && typeof window.umami.track === 'function') {
+				window.umami.track(submitEvent);
+			}
+		});
 	})();
 </script>
