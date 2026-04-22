@@ -22,13 +22,16 @@
     "@fontsource-variable/lora": "^5.2.8",
     "@fontsource-variable/source-sans-3": "^5.2.9",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.12",
-    "astro": "^6.1.5",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.8",
     "puppeteer": "^24.16.2",
-    "tailwindcss": "^4.1.12",
+    "tailwindcss": "^4.2.4",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "sharp": "^0.34.5"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
