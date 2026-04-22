@@ -1,9 +1,11 @@
 ---
+import { CalendarCheck2, Clock3, PhoneCall, Smartphone } from '@lucide/astro';
+
 const features = [
-	{ icon: "M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z", label: "Délai : 2 à 3 semaines" },
-	{ icon: "M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3", label: "Mobile et visible sur Google" },
-	{ icon: "m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z", label: "Pages rapides" },
-	{ icon: "M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5", label: "Widget RDV (Doctolib...) + RGPD" }
+	{ icon: Clock3, label: 'Délai : 1 à 2 semaines' },
+	{ icon: Smartphone, label: 'Mobile et visible sur Google' },
+	{ icon: PhoneCall, label: 'Prise de contact facilitée' },
+	{ icon: CalendarCheck2, label: 'Widget RDV (Doctolib...) + RGPD' }
 ];
 ---
 
@@ -24,15 +26,15 @@ const features = [
 			</h1>
 
 			<p class="hero-lead text-muted text-pretty">
-				Site professionnel, léger, sans charge technique : présenter votre pratique, rassurer et orienter vers le rendez-vous. Psychologue développeur, je connais votre métier — vous recevez vos patients, je m’occupe du site et de votre visibilité.
+				Site professionnel pensé pour les psychologues : présenter votre pratique, rassurer vos futurs patients et orienter vers le rendez-vous. Psychologue développeur, je connais votre métier — vous recevez vos patients, je m’occupe du site et de votre visibilité.
 			</p>
 
 			<div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
 				<a
-					href="/contact/#diagnostic"
+					href="/#offres"
 					class="inline-flex items-center justify-center rounded-lg bg-primary-foreground px-6 py-3 text-center text-[0.9375rem] font-semibold text-on-primary transition-opacity hover:opacity-90 sm:px-7 sm:text-base"
 				>
-					Demander un diagnostic gratuit
+					Voir les solutions
 				</a>
 				<a
 					href="#comment-ca-marche"
@@ -43,13 +45,13 @@ const features = [
 			</div>
 
 			<p class="hero-trust mt-4 text-muted">
-				<span class="text-foreground/80">Déjà une dizaine de psychologues accompagnés</span>
+				<span class="text-foreground/80">Des psychologues accompagnés depuis 2016</span>
 				<span class="mx-1.5 text-muted/50" aria-hidden="true">·</span>
 				<a
 					href="#temoignages"
 					class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
 				>
-					Avis à Brest, Paris, Lyon…
+					Avis à Bayonne, Paris, Lyon…
 				</a>
 			</p>
 		</div>
@@ -57,15 +59,7 @@ const features = [
 		<div class="mt-9 grid grid-cols-1 gap-3 text-sm sm:mt-10 sm:grid-cols-2 sm:gap-4 lg:mt-11 lg:grid-cols-4">
 			{features.map((feature) => (
 				<div class="hero-feature-card group flex items-center gap-3">
-					<svg
-						class="hero-feature-card__icon h-5 w-5 shrink-0"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						aria-hidden="true"
-					>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={feature.icon} />
-					</svg>
+					<feature.icon class="hero-feature-card__icon h-5 w-5 shrink-0" aria-hidden="true" stroke-width={1.8} />
 					<span class="hero-feature-card__label">{feature.label}</span>
 				</div>
 			))}
