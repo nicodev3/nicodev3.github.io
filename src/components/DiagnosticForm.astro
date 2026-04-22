@@ -7,8 +7,10 @@ if (import.meta.env.PROD && !formspreeUrl) {
 }
 
 const redirectUrl = import.meta.env.SITE
-	? new URL('/merci/?source=diagnostic', import.meta.env.SITE).href
+	? new URL('/merci/diagnostic/', import.meta.env.SITE).href
 	: undefined;
+
+const startEvent = 'lead_start_diagnostic';
 ---
 
 <div
@@ -20,7 +22,8 @@ const redirectUrl = import.meta.env.SITE
 		name="diagnostic"
 		method="POST"
 		action={formspreeUrl}
-		data-umami-event="diagnostic_form_submit"
+		data-umami-event="lead_submit_diagnostic"
+		data-umami-start-event={startEvent}
 		class="space-y-6"
 	>
 		<input type="hidden" name="form-name" value="diagnostic" />
@@ -82,10 +85,9 @@ const redirectUrl = import.meta.env.SITE
 		<FormField
 			id="diagnostic-message"
 			name="message"
-			label="Votre contexte (quelques mots) *"
-			required
+			label="Votre contexte (quelques mots)"
 			variant="textarea"
-			placeholder="Type de pratique, délai souhaité, éléments déjà disponibles (si vous en avez), et ce que vous attendez des demandes de contact."
+			placeholder="Votre message si vous souhaitez me préciser quelque chose"
 			rows={6}
 		/>
 
@@ -93,8 +95,31 @@ const redirectUrl = import.meta.env.SITE
 			type="submit"
 			class="w-full rounded-lg bg-primary-foreground px-6 py-3 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 		>
-			Demander mon diagnostic gratuit
+			Recevoir mon diagnostic sous 48h
 		</button>
+		<p class="text-center text-xs text-muted">
+			Sans engagement. Vous recevez un retour concret avec priorités d'action.
+		</p>
 	</form>
 </div>
+
+<script is:inline>
+	(() => {
+		const form = document.getElementById('diagnostic-form');
+		if (!form) return;
+		const startEvent = form.getAttribute('data-umami-start-event');
+
+		let started = false;
+		const trackStart = () => {
+			if (started) return;
+			started = true;
+			if (startEvent && window.umami && typeof window.umami.track === 'function') {
+				window.umami.track(startEvent);
+			}
+		};
+
+		form.addEventListener('focusin', trackStart, { once: true });
+		form.addEventListener('change', trackStart, { once: true });
+	})();
+</script>
 

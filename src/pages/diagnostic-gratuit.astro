@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import DiagnosticForm from '../components/DiagnosticForm.astro';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Diagnostic gratuit', item: new URL('/diagnostic-gratuit/', baseUrl).toString() }
+	]
+};
+---
+
+<Layout
+	title="Diagnostic gratuit site psychologue | Nicolas Devaux"
+	description="Obtenez un diagnostic gratuit de votre visibilite web : points bloquants, priorites, et orientation vers la formule la plus adaptee."
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Diagnostic gratuit"
+		subtitle="Faites le point sur votre visibilite web avant de lancer un projet."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Diagnostic gratuit' }]}
+	/>
+
+	<section class="py-16 bg-surface-alt">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<div>
+					<h2 class="text-3xl font-bold text-foreground mb-4">Demander mon diagnostic</h2>
+					<p class="text-muted mb-8">
+						Expliquez votre situation actuelle, votre niveau de visibilite et votre objectif principal. Vous obtenez un retour utile
+						pour prioriser les bonnes actions.
+					</p>
+					<p class="text-sm text-muted mb-6">
+						Temps estime : 4 a 6 minutes. Retour sous 48h.
+					</p>
+					<DiagnosticForm />
+				</div>
+				<div class="space-y-6">
+					<div class="rounded-xl border border-border bg-white p-6">
+						<h3 class="text-xl font-semibold text-foreground mb-3">Ce diagnostic inclut</h3>
+						<ul class="space-y-2 text-muted">
+							<li>Un regard externe sur ce qui freine vos demandes.</li>
+							<li>Des priorites concretes pour ameliorer votre presence en ligne.</li>
+							<li>Une orientation vers la formule la plus adaptee.</li>
+						</ul>
+					</div>
+					<div class="rounded-xl border border-border bg-white p-6">
+						<h3 class="text-xl font-semibold text-foreground mb-3">Ce diagnostic n'est pas</h3>
+						<p class="text-muted">
+							Un audit technique exhaustif de plusieurs heures. L'objectif est de vous aider a prendre la bonne decision rapidement
+							avec une base claire.
+						</p>
+					</div>
+					<div class="rounded-xl border border-border bg-white p-6">
+						<h3 class="text-xl font-semibold text-foreground mb-3">Vous etes deja decide ?</h3>
+						<p class="text-muted mb-4">
+							Si votre besoin est deja cadre, vous pouvez passer directement a la demande de devis.
+						</p>
+						<a href="/devis/" data-umami-event="lead_click_cta_devis_from_diagnostic" class="inline-flex items-center rounded-lg border border-border px-4 py-2 text-foreground hover:bg-surface transition-colors">
+							Acceder a la page devis
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script is:inline>
+		(() => {
+			if (window.umami && typeof window.umami.track === 'function') {
+				window.umami.track('lead_view_diagnostic');
+			}
+		})();
+	</script>
+</Layout>

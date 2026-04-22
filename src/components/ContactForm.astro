@@ -1,28 +1,49 @@
 ---
 import FormField from './FormField.astro';
 
+export interface Props {
+	mode?: 'contact' | 'devis';
+}
+
+const { mode = 'devis' } = Astro.props;
+
 const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_CONTACT?.trim();
 if (import.meta.env.PROD && !formspreeUrl) {
 	throw new Error('PUBLIC_FORMSPREE_CONTACT doit être défini (URL Formspree, ex. https://formspree.io/f/…)');
 }
 
+const isDevisMode = mode === 'devis';
 const redirectUrl = import.meta.env.SITE
-	? new URL('/merci/?source=contact', import.meta.env.SITE).href
+	? new URL(isDevisMode ? '/merci/devis/' : '/merci/contact/', import.meta.env.SITE).href
 	: undefined;
+
+const formName = isDevisMode ? 'devis' : 'contact';
+const submitEvent = isDevisMode ? 'lead_submit_devis' : 'lead_submit_contact_simple';
+const startEvent = isDevisMode ? 'lead_start_devis' : 'lead_start_contact_simple';
+const subject = isDevisMode ? '[nicodev.fr] Demande de devis' : '[nicodev.fr] Message de contact';
+const messageLabel = isDevisMode ? 'Votre projet *' : 'Votre message *';
+const messagePlaceholder = isDevisMode
+	? 'Décrivez votre activité, vos besoins, vos objectifs...'
+	: 'Précisez votre demande (question, disponibilité, besoin particulier...)';
+const submitLabel = isDevisMode ? 'Recevoir mon devis sous 48h' : 'Envoyer mon message (réponse sous 48h)';
+const reassuranceText = isDevisMode
+	? "Sans engagement. Vous recevez une recommandation claire adaptée à votre situation."
+	: 'Aucune inscription à une newsletter. Votre message reste strictement confidentiel.';
 ---
 
 <div id="contact-form-wrapper" class="bg-background rounded-2xl shadow-lg border border-border p-6 md:p-8">
 	<form
 		id="contact-form"
-		name="contact"
+		name={formName}
 		method="POST"
 		action={formspreeUrl}
-		data-umami-event="contact_form_submit"
+		data-umami-event={submitEvent}
+		data-umami-start-event={startEvent}
 		class="space-y-6"
 	>
-		<input type="hidden" name="form-name" value="contact" />
+		<input type="hidden" name="form-name" value={formName} />
 		{redirectUrl && <input type="hidden" name="_next" value={redirectUrl} />}
-		<input type="hidden" name="_subject" value="[nicodev.fr] Message contact" />
+		<input type="hidden" name="_subject" value={subject} />
 		<p class="hidden" aria-hidden="true">
 			<label for="contact-gotcha">Ne pas remplir</label>
 			<input id="contact-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
@@ -35,20 +56,53 @@ const redirectUrl = import.meta.env.SITE
 		<FormField id="contact-email" name="email" label="Email *" type="email" required />
 		<FormField id="contact-phone" name="phone" label="Téléphone" type="tel" />
 
-		<FormField id="contact-formule" name="formule" label="Offre souhaitée *" required variant="select">
-			<option value="">Sélectionnez une offre</option>
-			<option value="serenite">Offre Sérénité — 29€/mois</option>
-			<option value="visibilite-confiance">Offre Visibilité &amp; Confiance — 49€/mois</option>
-			<option value="indecis">Je ne sais pas encore</option>
-		</FormField>
+		{
+			isDevisMode && (
+				<FormField id="contact-formule" name="formule" label="Offre souhaitée *" required variant="select">
+					<option value="">Sélectionnez une offre</option>
+					<option value="serenite">Offre Sérénité — 29€/mois</option>
+					<option value="visibilite-confiance">Offre Visibilité &amp; Confiance — 49€/mois</option>
+					<option value="indecis">Je ne sais pas encore</option>
+				</FormField>
+			)
+		}
 
-		<FormField id="contact-message" name="message" label="Votre projet *" required variant="textarea" placeholder="Décrivez votre activité, vos besoins, vos objectifs..." rows={6} />
+		<FormField
+			id="contact-message"
+			name="message"
+			label={messageLabel}
+			required
+			variant="textarea"
+			placeholder={messagePlaceholder}
+			rows={6}
+		/>
 
 		<button
 			type="submit"
 			class="w-full rounded-lg bg-primary-foreground px-6 py-3 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 		>
-			Envoyer le message
+			{submitLabel}
 		</button>
+		<p class="text-center text-xs text-muted">{reassuranceText}</p>
 	</form>
 </div>
+
+<script is:inline>
+	(() => {
+		const form = document.getElementById('contact-form');
+		if (!form) return;
+		const startEvent = form.getAttribute('data-umami-start-event');
+
+		let started = false;
+		const trackStart = () => {
+			if (started) return;
+			started = true;
+			if (startEvent && window.umami && typeof window.umami.track === 'function') {
+				window.umami.track(startEvent);
+			}
+		};
+
+		form.addEventListener('focusin', trackStart, { once: true });
+		form.addEventListener('change', trackStart, { once: true });
+	})();
+</script>

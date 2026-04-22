@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+	title="Merci pour votre demande de devis | Nicolas Devaux"
+	description="Votre demande de devis a bien ete envoyee. Reponse sous 48h avec une recommandation adaptee."
+	noindex={true}
+>
+	<section class="py-24 bg-surface min-h-[60vh] flex items-center">
+		<div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="bg-background rounded-2xl shadow-lg border border-border p-8 md:p-12">
+				<h1 class="text-3xl font-bold text-foreground">Demande de devis envoyee</h1>
+				<p class="mt-4 text-muted text-lg">
+					Merci pour votre demande. Je vous envoie un retour personnalise sous 48h ouvrees.
+				</p>
+				<a href="/tarifs/" class="inline-block mt-8 bg-primary-foreground text-on-primary px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+					Revoir les offres
+				</a>
+			</div>
+		</div>
+	</section>
+	<script is:inline>
+		(() => {
+			if (window.umami && typeof window.umami.track === 'function') {
+				window.umami.track('lead_success_devis');
+			}
+		})();
+	</script>
+</Layout>

@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Devis', item: new URL('/devis/', baseUrl).toString() }
+	]
+};
+---
+
+<Layout
+	title="Demande de devis site psychologue | Nicolas Devaux"
+	description="Demandez un devis personnalise pour votre site internet de psychologue. Reponse sous 48h avec recommandation de formule adaptee."
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Demander un devis personnalise"
+		subtitle="Decrivez votre besoin pour recevoir une proposition adaptee a votre pratique."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devis' }]}
+	/>
+
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<div>
+					<h2 class="text-3xl font-bold text-foreground mb-4">Votre demande de devis</h2>
+					<p class="text-muted mb-8">
+						Vous indiquez votre contexte et vos objectifs. Je vous reponds avec une recommandation claire, le cadre de travail, et
+						la formule la plus pertinente pour votre situation.
+					</p>
+					<p class="text-sm text-muted mb-6">
+						Temps estime : 3 a 5 minutes. Aucun engagement.
+					</p>
+					<ContactForm mode="devis" />
+				</div>
+				<div class="space-y-6">
+					<div class="rounded-xl border border-border bg-surface p-6">
+						<h3 class="text-xl font-semibold text-foreground mb-3">Ce que vous recevez</h3>
+						<ul class="space-y-2 text-muted">
+							<li>Une recommandation sur la formule la plus adaptee.</li>
+							<li>Un cadrage du perimetre et des livrables.</li>
+							<li>Une estimation claire avec prochaine etape concrete.</li>
+						</ul>
+					</div>
+					<div class="rounded-xl border border-border bg-surface p-6">
+						<h3 class="text-xl font-semibold text-foreground mb-3">Delais</h3>
+						<p class="text-muted">
+							Je reponds en general sous 48h ouvrees. Si votre demande est urgente, precisez-le dans le message.
+						</p>
+					</div>
+					<div class="rounded-xl border border-border bg-surface p-6">
+						<h3 class="text-xl font-semibold text-foreground mb-3">Plutot besoin d'un diagnostic ?</h3>
+						<p class="text-muted mb-4">
+							Si vous hésitez sur la bonne direction, commencez par un diagnostic gratuit de votre situation actuelle.
+						</p>
+						<a href="/diagnostic-gratuit/" data-umami-event="lead_click_cta_diagnostic_from_devis" class="inline-flex items-center rounded-lg border border-border px-4 py-2 text-foreground hover:bg-white transition-colors">
+							Voir la page diagnostic gratuit
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script is:inline>
+		(() => {
+			if (window.umami && typeof window.umami.track === 'function') {
+				window.umami.track('lead_view_devis');
+			}
+		})();
+	</script>
+</Layout>
