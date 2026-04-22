@@ -14,7 +14,7 @@ if (isDev) {
   markdown = await fs.readFile(chapterPath, "utf-8");
 }
 
-const escapeHtml = (value) =>
+const escapeHtml = (value: string): string =>
   value
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -22,7 +22,7 @@ const escapeHtml = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 
-const slugify = (value) =>
+const slugify = (value: string): string =>
   value
     .toLowerCase()
     .normalize("NFD")
@@ -32,7 +32,7 @@ const slugify = (value) =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
-const renderInline = (value) =>
+const renderInline = (value: string): string =>
   escapeHtml(value)
     .replace(
       /\[([^\]]+)\]\((#[^)]+)\)/g,
@@ -51,7 +51,13 @@ const renderInline = (value) =>
       '<em>$1</em>',
     );
 
-const buildNavigation = (source) => {
+const renderImage = (altText: string, src: string): string => {
+  const safeAlt = escapeHtml(altText);
+  const safeSrc = escapeHtml(src);
+  return `<figure class="my-8"><img src="${safeSrc}" alt="${safeAlt}" loading="lazy" decoding="async" class="w-full rounded-2xl border border-slate-200 bg-white shadow-sm" /><figcaption class="mt-3 text-sm text-slate-600">${safeAlt}</figcaption></figure>`;
+};
+
+const buildNavigation = (source: string) => {
   const lines = source.split(/\r?\n/);
   const items = [];
 
@@ -75,14 +81,14 @@ const buildNavigation = (source) => {
   return items;
 };
 
-const renderMarkdown = (source) => {
+const renderMarkdown = (source: string): string => {
   const lines = source.split(/\r?\n/);
-  const html = [];
-  let paragraph = [];
-  let listItems = [];
-  let orderedItems = [];
-  let boxType = null;
-  let boxLines = [];
+  const html: string[] = [];
+  let paragraph: string[] = [];
+  let listItems: string[] = [];
+  let orderedItems: string[] = [];
+  let boxType: "ATTENTION" | "ASTUCE" | "INFO" | null = null;
+  let boxLines: string[] = [];
 
   const flushParagraph = () => {
     if (!paragraph.length) return;
@@ -187,6 +193,17 @@ const renderMarkdown = (source) => {
       continue;
     }
 
+    const imageMatch = line.match(/^!\[(.*)\]\((.+)\)$/);
+    if (imageMatch) {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      const altText = imageMatch[1].trim();
+      const src = imageMatch[2].trim();
+      html.push(renderImage(altText, src));
+      continue;
+    }
+
     if (line.startsWith("# ")) {
       flushParagraph();
       flushList();
@@ -259,7 +276,7 @@ const renderedHtml = isDev ? renderMarkdown(markdown) : "";
     isDev ? (
       <div
         slot="body-fixed"
-        class="fixed inset-x-0 top-0 z-[100] border-b border-slate-200 bg-white/95 py-3 shadow-sm backdrop-blur"
+        class="fixed inset-x-0 top-0 z-100 border-b border-slate-200 bg-white/95 py-3 shadow-sm backdrop-blur"
       >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">

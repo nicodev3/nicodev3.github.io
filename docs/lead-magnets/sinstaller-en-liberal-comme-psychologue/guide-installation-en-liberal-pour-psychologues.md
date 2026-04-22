@@ -1625,7 +1625,8 @@ Le coût d’un cabinet n’est jamais seulement son loyer. Le vrai budget, c’
 
 ## Un cabinet type : ce qu’on veut y trouver
 
-[ILLUSTRATION : plan schématique d'un cabinet type avec les éléments clés annotés]
+![Plan schematique d un cabinet type de psychologue avec entree discrete, espace d attente, bureau de consultation, confidentialite acoustique et sanitaires.](/images/guides/plan-cabinet-type-psychologue.png)
+*Illustration de reference du zonage d un cabinet type. A adapter a la configuration reelle du local.*
 
 Les éléments clés à avoir en tête sont :
 

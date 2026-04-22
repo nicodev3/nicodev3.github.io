@@ -18,9 +18,13 @@ tags:
 
 *Temps de lecture : environ 8 minutes*
 
-S’installer en libéral, ce n’est pas seulement « ouvrir un cabinet ». C’est enchaîner des décisions qui touchent à la fois ton cadre clinique, ton organisation, des formalités administratives et une façon de vivre ton métier au quotidien. Quand tout arrive en même temps, il est facile de se sentir débordé avant même d’avoir reçu un premier patient.
+S’installer en libéral, ce n’est pas seulement « ouvrir un cabinet ». C’est prendre des décisions qui touchent à la fois ton cadre clinique, ton organisation, des formalités administratives et une façon de vivre ton métier au quotidien. Quand tout arrive en même temps, il est facile de se sentir débordé avant même d’avoir reçu un premier patient.
 
 Cet article ne remplace ni un conseil juridique, ni un conseil fiscal ou social personnalisé. Il propose surtout **une grille de lecture** : les grands blocs à anticiper, dans un ordre qui t’aide à avancer sans tout mélanger. L’objectif est que tu saches **ce qui mérite ton attention en premier**, et où creuser ensuite si tu veux aller plus loin.
+
+Si tu veux gagner du temps, je peux t’envoyer le **guide complet d’installation** par mail (version longue, structurée, avec checklists, erreurs classiques et exemples concrets).
+
+👉 Écris-moi via [la page contact](/contact/) en commençant ton message par **« Guide installation libéral psy »**.
 
 ## Avant les formulaires : clarifier le projet
 
@@ -29,6 +33,17 @@ Le libéral attire pour de bonnes raisons : cadre qui te ressemble, lien plus di
 Avant de penser statut ou local, il est utile de rendre ton projet **lisible pour toi-même** : publics que tu souhaites recevoir, modalités (cabinet, visio, les deux), orientation que tu es prêt à assumer publiquement, rythme que tu vises. Ce n’est pas une question de « marketing agressif » : c’est ce qui permet à des patients, à des confrères ou à des prescripteurs de comprendre rapidement **à qui tu t’adresses** — et ce qui t’aide à ne pas diluer ton énergie sur des attentes floues.
 
 Beaucoup de psychologues gagnent en sérénité en envisageant aussi une **montée en charge progressive** (par exemple cumul avec un salariat) plutôt qu’un basculement brutal. Ce n’est pas la seule voie, mais c’est souvent celle qui limite le choc des premiers mois.
+
+### Points de vérification préalables
+
+Avant toute démarche, valide ces 4 points :
+
+- ta **population cible prioritaire** (et celle que tu n’accueilles pas) ;
+- ton **format de pratique** (cabinet, visio, hybride) ;
+- ton **volume réaliste** de créneaux sur 3 mois ;
+- ton **seuil de viabilité** (charges fixes + minimum de sécurité perso).
+
+Dans le guide PDF que j'ai réalisé, je détaille une version complète de cette check-list avec un canevas prêt à remplir.
 
 ## Les démarches administratives : deux portes à ouvrir, dans le bon ordre
 
@@ -39,31 +54,38 @@ Sur le papier, tout se mélange : santé, entreprise, protection sociale, fiscal
 3. **Déclarer ton activité indépendante** sur le guichet unique (INPI / procédures en ligne), ce qui lance l’immatriculation et te donne les identifiants d’activité (SIREN, SIRET, code APE…).
 4. **Anticiper ce qui s’enchaîne** : organismes sociaux, échéancier des cotisations, assurance **responsabilité civile professionnelle**, compte dédié à l’activité, demandes comme l’ACRE lorsque tu y as droit, mentions obligatoires sur tes documents si tu es en entreprise individuelle.
 
-L’erreur fréquente n’est pas « de ne pas être assez intelligent pour s’y retrouver ». C’est de **commencer les dossiers sans pièces à jour**, ou de traiter plusieurs blocs en parallèle sans repère — et de se retrouver bloqué au milieu d’un guichet en ligne au pire moment.
-
-Le détail des étapes, des pièces et des points de vigilance mérite un support plus long qu’un article : c’est précisément le genre de contenu qu’un **guide structuré** peut porter sans que tu aies à tout reconstituer à partir de fils de discussion épars.
-
 ## Statut juridique : souvent l’entreprise individuelle, puis micro ou réel
 
 Pour une installation **seule**, le point de départ le plus fréquent reste l’**entreprise individuelle**. Ce n’est pas la seule option juridique possible, mais c’est souvent le cadre le plus cohérent quand l’activité repose essentiellement sur ton travail personnel.
 
-Ensuite, la question qui revient le plus souvent n’est pas « société ou pas » au premier jour, mais plutôt : **micro-BNC** ou **déclaration contrôlée (réel)** ? En résumé très court :
+Ensuite, la question qui revient le plus souvent n’est pas « société ou pas » au premier jour, mais plutôt : **micro-BNC** ou **déclaration contrôlée (réel)** ? En résumé très court :
 
 - le **micro** simplifie la vie : logique de chiffre d’affaires, abattement forfaitaire, moins de granularité sur les frais réels ;
 - le **réel** correspond mieux lorsque les charges et investissements deviennent significatifs, ou lorsque la structure de ton activité rend le forfait peu représentatif.
 
 Les seuils, les plafonds et les règles évoluent : l’important ici est de comprendre **la logique** (ce que tu « achètes » en simplicité, ce que tu gagnes en précision) et de valider les chiffres applicables **à ta situation et à ton année** avec un professionnel ou les sources officielles.
 
+> 💡 **À retenir** : ton meilleur statut “sur le papier” n’est pas forcément le meilleur pour ton contexte réel (charges, rythme de montée, activités annexes, projections à 12 mois).
+
 ## Fiscalité et charges : ce que tu encaisses n’est pas ce qu’il te reste
 
-En libéral, tu raisonne en **honoraires** et en **BNC** : pas de fiche de paie « net » prête à l’emploi. Il faut distinguer recettes, charges, cotisations sociales, impôt — et, selon les prestations, des questions de **TVA** (avec des régimes d’exonération possibles pour certaines activités cliniques, et d’autres prestations qui peuvent rester dans un autre régime).
+En libéral, tu raisonnes en **honoraires** et en **BNC** : pas de fiche de paie « net » prête à l’emploi. Il faut distinguer recettes, charges, cotisations sociales et impôt — et regarder de près le cas particulier de la **TVA**, souvent mal compris chez les psychologues.
 
-Deux idées simples à garder si tu ne veux pas te faire surprendre :
+Le principe est contre-intuitif : en tant que profession libérale, tu es **assujetti·e à la TVA par défaut**. Ce qui change la donne, c’est que certaines prestations peuvent en être **exonérées** :
 
-- **Ne pas confondre** « ne pas facturer de TVA » pour des raisons différentes (exonération vs franchise en base) : ce n’est pas le même cadre juridique, et ce n’est pas la même mention à prévoir.
-- **Anticiper des charges « silencieuses »** qui ne dépendent pas du nombre de séances dans le mois (par exemple la CFE après la première année d’activité, selon les règles applicables à ton cas).
+- les **actes cliniques de soins à la personne** (suivis, psychothérapies, bilans à visée thérapeutique…) relèvent de l’exonération prévue par l’**article 261 du CGI** ;
+- à l’inverse, des activités comme la **formation**, la **supervision hors cadre de soin**, le **conseil aux organisations**, les **expertises rémunérées** ou des **ateliers de bien-être** ne rentrent pas toujours dans ce cadre et peuvent rester soumises à TVA.
 
-Là encore, un article de blog ne peut pas tenir lieu de feuille de route chiffrée personnalisée. Il peut en revanche t’aider à **savoir quelles questions poser** avant de signer quoi que ce soit ou avant d’arrondir tes marges « à vue de nez ».
+Autrement dit, l’exonération ne découle pas automatiquement du titre de psychologue : elle dépend **de la nature concrète de chaque prestation**. Un même cabinet peut donc avoir des actes exonérés et d’autres taxables.
+
+Deux pièges fréquents à éviter :
+
+- **Confondre exonération et franchise en base**. Les deux font que tu ne factures pas de TVA, mais pour des raisons juridiques différentes — et la mention à porter sur la facture n’est pas la même (exonération au titre de l’art. 261 CGI pour les soins, ou `TVA non applicable, art. 293 B du CGI` pour la franchise en base sur les activités soumises mais sous seuil).
+- **Oublier les charges « silencieuses »** qui ne dépendent pas du nombre de séances dans le mois (typiquement la **CFE**, qui arrive en général dès la deuxième année d’activité, selon les règles applicables à ta commune et à ta situation).
+
+Pour aller plus loin sur ces sujets (TVA, CFE, cotisations, régime fiscal), je peux t’envoyer par mail le **guide complet au format PDF**. Tu y retrouveras des exemples chiffrés, les mentions exactes à faire figurer sur tes factures et les points de vigilance à valider avec ton expert-comptable.
+
+👉 [**Demander le guide par mail**](/contact/)
 
 ## Le cabinet : un choix clinique autant qu’économique
 
@@ -73,23 +95,63 @@ Ce qui revient souvent comme bon compromis au démarrage : un **vrai lieu profes
 
 Si tu sous-loues, le sujet n’est pas seulement le prix : c’est la **solidité du cadre** (autorisation dans le bail principal, accord écrit, assurance, responsabilités claires). Un cabinet « pas cher » mais juridiquement flou peut coûter très cher ensuite.
 
+Dans le guide complet, tu retrouves une matrice de comparaison simple pour trancher entre domicile, sous-location et bail pro selon ton profil.
+
 ## Se rendre visible : utile, encadré, sans promesse miracle
 
-Tu peux rendre ton activité repérable **sans** adopter une communication de type « solution miracle en cinq séances ». Le cadre déontologique impose de la mesure : information sobre, liée à ton titre, sans témoignages patients utilisés comme argument commercial ni promesses de résultats.
+Tu peux rendre ton activité repérable **sans** adopter une communication de type « solution miracle en cinq séances ». Le **Code de déontologie des psychologues** (version actualisée de 2021) encadre précisément ce point, dans son chapitre V *Diffusion de la psychologie*.
+
+Son **article 32** est explicite : « *La·le psychologue diffuse au public une information sur son activité professionnelle **avec mesure** et **en référence à son titre**, y compris lorsqu’elle·il a recours à la publicité pour son exercice libéral.* » La publicité n’est donc pas interdite, mais elle est encadrée.
+
+Concrètement, plusieurs principes en découlent :
+
+- **mesure et référence au titre** (art. 32) : tu communiques en t’appuyant sur ton titre de psychologue, tes qualifications réelles et tes champs d’intervention — pas sur des promesses, des superlatifs ou une mise en scène commerciale ;
+- **rigueur et circonspection sur les méthodes** (art. 31) : tu présentes tes méthodes et outils avec prudence, sans en exagérer la portée ni laisser entendre qu’ils règlent mécaniquement tel ou tel trouble ;
+- **responsabilité dans l’image de la profession** (art. 30) : ce que tu diffuses publiquement (site, réseaux sociaux, fiche locale, interviews) engage aussi l’image de l’ensemble de la profession ;
+- **secret professionnel et confidentialité** (principe 2 et art. 7, renvoyant aux articles 226-13 et 226-14 du code pénal) : pas de **témoignages patients** utilisés comme argument commercial, même anonymisés, ni d’« avant/après » cliniques ;
+- **protection du titre** (loi n° 85-772 du 25 juillet 1985, art. 44) : seul l’usage du titre de psychologue, par une personne inscrite sur les listes **ADELI**, est autorisé — d’où l’importance de faire figurer ton numéro sur tes documents professionnels (art. 18).
+
+Ce cadre n’est pas un frein à la visibilité : c’est ce qui rend ta communication **crédible** auprès des patients et des prescripteurs. Une présentation sobre et précise (« j’accompagne les adultes en période de transition professionnelle ou personnelle, avec une approche X ») fonctionne mieux, sur la durée, qu’un argumentaire marketing.
 
 Dans les faits, beaucoup de psychologues combinent :
 
 - une **fiche locale** (souvent Google Business Profile) pour être trouvé « près de chez soi » ;
 - un **site internet** pour expliquer ton approche, ton public, tes modalités et rassurer avant le premier contact ;
-- éventuellement une **plateforme de rendez-vous** (Doctolib ou autre selon ton cadre), utile pour l’accès mais rarement suffisante à elle seule pour dire qui tu es cliniquement.
+- éventuellement une **plateforme de rendez-vous** (Doctolib ou autre), utile pour l’accès mais rarement suffisante à elle seule pour dire qui tu es cliniquement et pour rassurer les patients.
 
 La cohérence des informations (**nom, adresse, téléphone**) entre ces canaux compte beaucoup pour le référencement local. Ce n’est pas du « SEO obscure » : c’est de la clarté pour les humains et pour les moteurs.
+
+### Ce qui attire vraiment les premières prises de contact
+
+Pas besoin d’en faire trop. En pratique, les profils qui convertissent bien ont surtout :
+
+- une proposition claire en 2-3 lignes ;
+- des informations pratiques immédiatement visibles ;
+- un ton rassurant, sans promesse excessive ;
+- un parcours de contact simple (email + téléphone + formulaire clair).
+
+Le guide par mail inclut un modèle de structure de page d’accueil orientée “premier contact”.
 
 ## Accueillir les premiers patients : le cadre avant la technique
 
 Les premiers rendez-vous posent souvent **le cadre** autant que la demande : durée, fréquence, tarif, annulations, confidentialité, modalités de prise de contact. Plus c’est dit tôt et simplement, moins tu perds d’énergie à recoller des malentendus plus tard.
 
 Côté outils (agenda, dossier patient, facturation), le piège classique est de confondre des usages : **un agenda n’est pas un dossier patient**, une messagerie pratique n’est pas forcément un outil clinique conforme à ce que tu stockes comme données. Si tu traites des données sensibles, la prudence sur l’hébergement et la conformité n’est pas une option « pour les gros cabinets ».
+
+## Plan d’action sur 30 jours (aperçu)
+
+Pour éviter la dispersion, pense en sprints :
+
+- **Semaine 1** : cadrage du projet + choix du mode de démarrage ;
+- **Semaine 2** : démarches administratives + base assurantielle ;
+- **Semaine 3** : cadre de pratique (lieu, outils, organisation) ;
+- **Semaine 4** : **mise en ligne du site professionnel** + visibilité locale + ouverture progressive des créneaux.
+
+Le **site internet** mérite d’être préparé en parallèle des autres chantiers, pas relégué « pour plus tard » : c’est souvent le premier point de contact réel avec les patients, et il structure ensuite toute la communication (fiche Google, Doctolib, cartes de visite, mails). Un site sobre, bien pensé, qui présente clairement ton titre, ton approche, tes publics et tes modalités fait davantage pour ta crédibilité que n’importe quelle campagne publicitaire — et c’est aussi ce qui te rend **indépendant des plateformes** sur la durée.
+
+> 💡 Si tu veux gagner du temps sur cette étape, j’accompagne spécifiquement les psychologues dans la **création de leur site** : contenu, structure, référencement local, conformité (mentions légales, RGPD, cadre déontologique). Tu peux voir les offres sur la [page tarifs](/tarifs/) ou demander un [diagnostic gratuit](/diagnostic-gratuit/) de ta situation actuelle.
+
+Tu veux la version détaillée du plan 30 jours (priorités quotidiennes, documents à préparer, points de vigilance) ? Je te l’envoie par mail.
 
 ## Ce que cet article ne remplace pas
 
@@ -101,8 +163,23 @@ Tu n’y trouveras pas :
 
 Tu y trouves en revanche une **structure** : préparer le projet, enchaîner les démarches, choisir un cadre juridico-fiscal avec de l’aide, anticiper les charges, choisir un lieu cohérent, devenir visible avec sérieux, poser un accueil solide.
 
-## Envie d’aller plus loin ?
+## Recevoir le guide complet par mail
 
-Si tu veux un support qui enchaîne ces blocs avec **plus de repères concrets**, d’exemples et de points de vigilance (sans remplacer un conseil individualisé), j’ai rédigé un **guide plus long** autour de cette même trame. Tu peux [me contacter](/contact/) pour me dire ce que tu recherches (format, contexte d’installation) ou pour être tenu informé lorsque la version téléchargeable est disponible selon l’offre en cours.
+Si tu veux avancer plus vite avec un plan clair, je peux t’envoyer gratuitement le **guide complet d’installation en libéral pour psychologues**.
+
+### Ce que tu reçois
+
+- une check-list complète (ordre des démarches + pièces à préparer) ;
+- un comparatif simple des options de démarrage ;
+- les erreurs fréquentes à éviter les 3 premiers mois ;
+- un plan d’action détaillé pour passer de l’idée aux premiers rendez-vous.
+
+### Comment le demander
+
+1. Va sur [la page contact](/contact/).
+2. Commence ton message par : **« Guide installation libéral psy »**.
+3. Indique ton contexte en 2 lignes (début, reprise, cumul salariat, visio, cabinet, etc.).
+
+Je te réponds par mail avec la meilleure version du guide selon ta situation.
 
 En résumé : s’installer en libéral, ce n’est pas une course à remplir tous les champs le plus vite possible. C’est un enchaînement d’étapes où **l’ordre et la clarté** valent souvent plus qu’un surplus d’information brut. Une fois la carte en tête, chaque chapitre mérite l’attention calmement — et tu n’as pas besoin de tout savoir avant de faire le premier pas utile.

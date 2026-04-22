@@ -10,6 +10,7 @@ const noindexPages = new Set([
   'https://nicodev.fr/cgv/',
   'https://nicodev.fr/politique-confidentialite/',
   'https://nicodev.fr/dev/styleguide/',
+  'https://nicodev.fr/dev/guide-installation-psychologues/',
 ]);
 
 /** @param {string} page */
