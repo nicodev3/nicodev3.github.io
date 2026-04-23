@@ -10,7 +10,7 @@ tags: ["psychologue", "prix site internet", "création site", "cabinet libéral"
 
 *Temps de lecture : 9 minutes*
 
-Quand on exerce en libéral, la question est concrète : **combien investir pour un site utile, sérieux, et rassurant, sans mettre plusieurs milliers d'euros ?**
+Quand on exerce en libéral, la question est concrète : **combien investir pour un site utile, sérieux, et rassurant, sans exploser le budget ?**
 
 En 2026, on voit de tout : des outils à petit budget si vous faites une partie du travail vous-même, et des prestations beaucoup plus chères si vous déléguez entièrement.
 
@@ -37,7 +37,7 @@ Le coût réaliste ressemble plutôt à ceci :
 - **abonnement plateforme** : environ 10 € à 45 € / mois selon l'offre de départ, les options et le mode de facturation (souvent plus bas en annuel),
 - **nom de domaine** : 10 € à 30 € / an,
 - **éventuels outils annexes** : 0 € à 20 € / mois,
-- **votre temps** : plusieurs heures, parfois plusieurs jours.
+- **votre temps** : plusieurs jours, parfois plusieurs semaines.
 
 En pratique, **un site fait soi-même peut démarrer à un coût très bas**, mais revient souvent entre **120 € et 500 € la première année** si vous ne payez personne pour le créer.
 
@@ -79,13 +79,7 @@ On peut y intégrer :
 - FAQ,
 - blog pour le référencement naturel local.
 
-### 3) Site avancé avec stratégie de contenu
-
-**Budget moyen : 2 500 € à 5 000 €**
-
-Pour les praticiens qui veulent développer une vraie visibilité (SEO local, articles réguliers, tunnel de prise de rendez-vous, optimisation conversion).
-
-Pour un psychologue, ce troisième cas reste déjà au-dessus du besoin habituel. **Dans la majorité des cas, un site simple, clair et professionnel n'a pas besoin d'un budget aussi élevé.**
+Pour un besoin vitrine classique, la fourchette ci-dessus couvre déjà l'essentiel des cas.
 
 ## Ce qui fait monter (ou baisser) le prix
 
@@ -118,22 +112,15 @@ Pour un psychologue qui veut faire simple, tous ces postes ne sont pas obligatoi
 
 ## Freelance, agence, plateforme, ou solution accompagnée ?
 
-<div class="not-prose mt-6 rounded-2xl border border-border bg-surface p-6"><div class="grid grid-cols-1 gap-4 md:grid-cols-2"><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Plateforme en autonomie</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">à partir d'environ 10 €/mois</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> élevé</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> variable (structure, mobile, réglages SEO à gérer)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous acceptez d'apprendre et de gérer les détails</p></div><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Freelance / prestation classique</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">1000 à 3000&nbsp;€</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible à modéré</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> bon potentiel SEO local si la structure et le contenu sont prévus dès le départ (puis suivi à prévoir)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous déléguez avec un cadrage clair</p></div><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Agence web</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">plusieurs milliers d'euros</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> très bon, mais souvent surdimensionné pour un cabinet simple</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous cherchez une prestation plus complète (stratégie, identité, etc.)</p></div><div class="rounded-xl border border-primary/30 bg-primary/5 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Mes offres</h3><span class="inline-flex rounded-full bg-primary-foreground text-on-primary px-3 py-1 text-xs font-semibold">29 € / 49 €</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Offres :</strong> <span class="font-semibold text-foreground">Sérénité</span> (29 € / mois) ou <span class="font-semibold text-foreground">Visibilité &amp; Confiance</span> (49 € / mois)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible (je m'occupe de l'essentiel)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> professionnel, pensé psychologues (hébergement + accompagnement + suivi)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous voulez un budget prévisible et moins de charge mentale</p></div></div></div>
+<div class="not-prose mt-6 rounded-2xl border border-border bg-surface p-6"><div class="grid grid-cols-1 gap-4 md:grid-cols-2"><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Plateforme en autonomie</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">à partir d'environ 10 €/mois</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> élevé</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> variable (structure, mobile, réglages SEO à gérer)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous acceptez d'apprendre et de gérer les détails</p></div><div class="rounded-xl border border-border bg-white/60 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Freelance / prestation classique</h3><span class="inline-flex rounded-full bg-muted/10 px-3 py-1 text-xs font-semibold text-muted">1000 à 3000&nbsp;€</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible à modéré</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> bon potentiel SEO local si la structure et le contenu sont prévus dès le départ (puis suivi à prévoir)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous déléguez avec un cadrage clair</p></div><div class="rounded-xl border border-primary/30 bg-primary/5 p-5"><div class="flex items-start justify-between gap-4"><h3 class="text-base font-semibold text-foreground">Mes offres</h3><span class="inline-flex rounded-full bg-primary-foreground text-on-primary px-3 py-1 text-xs font-semibold">29 € / 49 €</span></div><p class="mt-3 text-sm text-muted"><strong class="text-foreground">Offres :</strong> <span class="font-semibold text-foreground">Sérénité</span> (29 € / mois) ou <span class="font-semibold text-foreground">Visibilité &amp; Confiance</span> (49 € / mois)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Temps :</strong> faible (je m'occupe de l'essentiel)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Rendu / visibilité :</strong> professionnel, pensé psychologues (hébergement + accompagnement + suivi)</p><p class="mt-1 text-sm text-muted"><strong class="text-foreground">Idéal si :</strong> vous voulez un budget prévisible et moins de charge mentale</p></div></div></div>
 
 > Repère : quel que soit le format, la création n'est pas tout. Si votre objectif est d'être trouvé sur Google, prévoyez un minimum de maintenance technique et (selon la concurrence locale) un peu de SEO éditorial.
 
-### Agences web : pas forcément adaptées à un besoin simple
+### Agences web : rarement nécessaires pour un site vitrine simple
 
-Les agences proposent des sites de qualité, avec équipe dédiée (chef de projet, graphiste, développeur, rédacteur). Mais pour un psychologue qui a surtout besoin d'un site vitrine sobre, ce modèle est souvent disproportionné.
+Les agences peuvent faire du très bon travail, mais pour un site vitrine de psychologue (présentation, spécialités, contact), ce n'est généralement pas le format le plus pertinent.
 
-On peut bien sûr trouver des agences à plusieurs milliers d'euros, mais cela concerne plutôt :
-
-- un niveau de sur-mesure important,
-- une identité visuelle poussée,
-- une stratégie de contenu complète,
-- ou un accompagnement marketing plus large.
-
-Autrement dit, **ce n'est pas le budget normal d'un site de psychologue classique**. Pour un besoin simple, il est raisonnable d'attendre des tarifs bien plus bas.
+Dans ce guide, je me concentre volontairement sur les options adaptées à un besoin vitrine standard et à un budget mesuré.
 
 ### Plateformes de création (Wix, Squarespace, Jimdo, etc.) : parfois très peu chères au départ
 
@@ -157,7 +144,7 @@ En clair, **on paie moins en argent, mais on prend souvent le risque d'obtenir u
 
 ### Solution accompagnée : garder un petit budget sans tout faire seul
 
-Entre le "tout seul" et le "site sur devis à plusieurs milliers d'euros", il existe une option plus simple : **partir sur une base professionnelle déjà pensée pour les psychologues, avec accompagnement**.
+Entre le "tout seul" et la prestation classique, il existe une option plus simple : **partir sur une base professionnelle déjà pensée pour les psychologues, avec accompagnement**.
 
 **Dans mes offres**, vous pouvez avoir :
 
