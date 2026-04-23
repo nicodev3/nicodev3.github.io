@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro';
 import SkillCard from '../components/SkillCard.astro';
 import CtaSection from '../components/CtaSection.astro';
 import { Image } from 'astro:assets';
-import developmentImage from '../assets/images/development.jpg';
+import developmentImage from '../assets/images/nicodev.webp';
 import defaultOgWebp from '../assets/images/blog/development.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -80,40 +80,20 @@ const personSchema = {
                 target="_blank"
                 rel="noopener noreferrer"
                 >psychologue à Sceaux</a
-              > et développeur web. Mon cheminement professionnel reflète une passion pour la technologie
-              et une compréhension profonde des enjeux humains.
+              > et développeur web.
             </p>
             <p>
-              Mon parcours académique est marqué par une double formation : je suis titulaire du
-              titre de psychologue et d'une licence professionnelle Activités et Techniques de
-              Communication, spécialité développeur web de systèmes d'information et multimédias
-              (sciences humaines et sociales) obtenue à l'<a
+              Ma double formation (psychologie et développement web à l'<a
                 href="https://sfc.unistra.fr/formations/informatique_-_technologies-de-linternet_-_licence-professionnelle-developpement-web-communication-et-apprentissages_-_6187/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Université de Strasbourg</a
-              >.
+              >) me permet de créer des <a href="/portfolio/">sites internet pour psychologues</a>
+              à la fois performants, lisibles et adaptés à la pratique clinique.
             </p>
             <p>
-              Cette double expertise m'a conduit à me spécialiser dans la création de
-              <a href="/portfolio/">sites internet pour psychologues</a>.
-            </p>
-            <p>
-              Depuis plus de 20 ans, je mets au service de mes clients cette double
-              compétence&nbsp;: mon savoir-faire technique en développement web et ma compréhension
-              des enjeux des psychologues en libéral. Je développe des <strong
-                >sites internet</strong
-              > qui allient performance technique et sensibilité aux besoins des psychologues.
-            </p>
-            <p>
-              Nicodev n'est pas une usine à sites. Je préfère faire peu de projets, mais les suivre
-              avec attention, pour proposer à mes collègues psychologues des sites utiles, lisibles
-              et vraiment adaptés à leur pratique.
-            </p>
-            <p>
-              Mon approche se distingue par une collaboration étroite avec mes clients, une
-              attention particulière portée à l'expérience utilisateur et une expertise technique
-              solide dans les technologies web modernes. Découvrez mes <a href="/portfolio/"
+              Je privilégie une approche artisanale : peu de projets, un accompagnement attentif,
+              et une collaboration directe. Découvrez mes <a href="/portfolio/"
                 >réalisations</a
               >, mes <a href="/tarifs/">tarifs</a> ou <a href="/contact/">contactez-moi</a> pour
               discuter de votre projet.
@@ -124,11 +104,11 @@ const personSchema = {
           <Image
             src={developmentImage}
             alt="Nicolas Devaux - Développeur web spécialisé sites pour psychologues"
-            class="rounded-lg shadow-xl"
-            width={500}
-            height={500}
-            widths={[300, 400, 500]}
-            sizes="(max-width: 768px) 100vw, 500px"
+            class="about-photo shadow-xl object-cover mx-auto"
+            width={280}
+            height={280}
+            widths={[180, 240, 280]}
+            sizes="(max-width: 768px) 70vw, 280px"
           />
         </div>
       </div>
@@ -163,19 +143,20 @@ const personSchema = {
               </svg>
             </div>
             <h3 class="text-2xl font-bold text-foreground mb-2">
-              <strong>20 ans d'expérience</strong> en développement web
+              <strong>20 ans d'expérience</strong> en développement de sites et en tant que psychologue
             </h3>
             <p class="text-muted">
-              Psychologue de formation et en activité, développeur web, je comprends les enjeux
-              spécifiques des psychologues libéraux. Votre site internet doit refléter votre
-              professionnalisme, rassurer vos patients et vous permettre d'être trouvé facilement.
+              De 1996 à 2020, j'ai exercé comme psychomotricien puis psychologue, en institution et en cabinet libéral depuis 2008. Cette expérience de terrain nourrit ma
+              compréhension fine des besoins des psychologues libéraux. Aujourd'hui, je suis psychologue en libéral, dans un service de Santé Etudiante et je crée des sites internet pour psychologues.
             </p>
           </div>
 
           <div class="space-y-8">
+            <h4 class="text-lg font-semibold text-foreground">Mon expérience en tant que développeur</h4>
+
             <div class="border-l-4 border-border pl-6">
               <h4 class="text-xl font-semibold text-foreground mb-2">
-                Tech Lead front-end - Le Figaro
+                Tech Lead front-end - Le Figaro (2024-2025)
               </h4>
               <p class="text-muted mb-2">
                 Direction technique de projets d'envergure pour l'un des plus grands médias français
@@ -188,7 +169,7 @@ const personSchema = {
 
             <div class="border-l-4 border-border pl-6">
               <h4 class="text-xl font-semibold text-foreground mb-2">
-                Tech Lead front-end - Naxos
+                Tech Lead front-end - Naxos (2020-2024)
               </h4>
               <p class="text-muted mb-2">
                 Direction technique de solutions digitales innovantes pour le secteur immobilier
@@ -200,7 +181,9 @@ const personSchema = {
             </div>
 
             <div class="border-l-4 border-border pl-6">
-              <h4 class="text-xl font-semibold text-foreground mb-2">Développeur Web free-lance</h4>
+              <h4 class="text-xl font-semibold text-foreground mb-2">
+                Développeur Web free-lance (depuis 2005)
+              </h4>
               <p class="text-muted mb-2">
                 Plusieurs années d'expérience en tant que free-lance auprès de clients variés :
                 indépendants, TPE/PME, associations, grands comptes. Plus de 50 projets réalisés.
@@ -214,18 +197,6 @@ const personSchema = {
                   rel="noopener noreferrer"
                   >mon profil Malt</a
                 >.
-              </p>
-            </div>
-
-            <div class="border-l-4 border-border pl-6">
-              <h4 class="text-xl font-semibold text-foreground mb-2">Projets d'envergure</h4>
-              <p class="text-muted mb-2">
-                Participation à des projets majeurs nécessitant une expertise technique de haut
-                niveau
-              </p>
-              <p class="text-sm text-muted">
-                Architecture scalable, optimisation des performances, gestion de la complexité
-                technique
               </p>
             </div>
           </div>
@@ -394,4 +365,13 @@ const personSchema = {
     secondaryButton={{ text: 'Me contacter', href: '/contact/' }}
     background="white"
   />
+
+  <style>
+    .about-photo {
+      border-radius: 54% 46% 43% 57% / 47% 53% 47% 53%;
+      box-shadow:
+        0 10px 22px rgba(15, 23, 42, 0.1),
+        0 3px 8px rgba(15, 23, 42, 0.06);
+    }
+  </style>
 </Layout>
