@@ -56,7 +56,7 @@ const sortedPosts = posts.sort((a, b) => {
 					</div>
 				</nav>
 			)}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch [&>*]:min-h-0">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch *:min-h-0">
 				{sortedPosts.map((post) => (
 					<BlogCard
 						title={post.data.title}
@@ -75,6 +75,7 @@ const sortedPosts = posts.sort((a, b) => {
 			<div class="mt-16 pt-12 border-t border-border text-center">
 				<p class="text-muted mb-4">Un projet de site web pour votre cabinet ?</p>
 				<div class="flex flex-wrap justify-center gap-4">
+					<a href="/exemples-sites-psychologue/" class="text-foreground font-medium hover:text-primary">Voir des exemples de sites</a>
 					<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">Voir mes tarifs</a>
 					<a href="/contact/" class="text-foreground font-medium hover:text-primary">Me contacter</a>
 				</div>

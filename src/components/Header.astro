@@ -9,6 +9,7 @@ export interface Props {
 }
 
 const defaultLinks: NavLink[] = [
+	{ href: '/exemples-sites-psychologue/', label: 'Exemples' },
 	{ href: '/portfolio/', label: 'Portfolio' },
 	{ href: '/tarifs/', label: 'Tarifs' },
 	{ href: '/about/', label: 'À propos' },
@@ -33,6 +34,9 @@ function navLinkIsActive(href: string): boolean {
 	}
 	if (target === '/portfolio') {
 		return currentPath === '/portfolio' || currentPath.startsWith('/portfolio/');
+	}
+	if (target === '/exemples-sites-psychologue') {
+		return currentPath === '/exemples-sites-psychologue' || currentPath.startsWith('/exemples-sites-psychologue/');
 	}
 	return currentPath === target || currentPath.startsWith(`${target}/`);
 }

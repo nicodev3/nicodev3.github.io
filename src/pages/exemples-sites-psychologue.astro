@@ -1,0 +1,131 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: new URL("/", baseUrl).toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Exemples de sites psychologues",
+      item: new URL("/exemples-sites-psychologue/", baseUrl).toString(),
+    },
+  ],
+};
+
+const demos = [
+  {
+    title: "Template A - Sage",
+    description:
+      "Version sobre et rassurante, pensée pour une lecture fluide sur mobile et une prise de contact simple.",
+    url: "https://demo-a-sage.nicodev.fr/",
+  },
+  {
+    title: "Template A - Teal",
+    description:
+      "Même structure orientée conversion, avec une identité visuelle plus fraîche et contrastée.",
+    url: "https://demo-a-teal.nicodev.fr/",
+  },
+  {
+    title: "Template B - Mist",
+    description:
+      "Variante avec une présentation enrichie (profil, tarifs, sections éditoriales) pour un site vitrine plus complet.",
+    url: "https://demo-b-mist.nicodev.fr/",
+  },
+  {
+    title: "Template B - Mocha",
+    description:
+      "Déclinaison chaleureuse de la version B, adaptée à un positionnement humain et professionnel.",
+    url: "https://demo-b-mocha.nicodev.fr/",
+  },
+];
+---
+
+<Layout
+  title="Exemples de sites internet pour psychologues | Nicolas Devaux"
+  description="Découvrez 4 exemples de templates de sites internet pour psychologues : structure claire, design professionnel et orientation prise de contact."
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  </Fragment>
+
+  <Hero
+    title="Exemples de sites pour psychologues"
+    subtitle="4 démos pour visualiser le rendu, la structure des pages et l'expérience proposée à vos futurs patients."
+    breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Exemples de sites psychologues" }]}
+  />
+
+  <section class="bg-white py-12 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto mb-10 max-w-3xl text-center">
+        <h2 class="mb-4 text-2xl font-bold text-foreground sm:text-3xl">
+          Comparez les rendus en quelques clics
+        </h2>
+        <p class="text-muted sm:text-lg">
+          Chaque démo présente une base professionnelle conçue pour inspirer
+          confiance, faciliter la lecture et encourager la prise de rendez-vous.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {
+          demos.map((demo) => (
+            <article class="flex flex-col rounded-xl border border-border bg-surface p-6 shadow-sm">
+              <h3 class="mb-3 text-xl font-semibold text-foreground">{demo.title}</h3>
+              <p class="mb-5 text-muted">{demo.description}</p>
+              <div class="mt-auto">
+                <a
+                  href={demo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block rounded-lg bg-primary-foreground px-4 py-2 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  aria-label={`Voir la démo ${demo.title} (nouvel onglet)`}
+                >
+                  Voir la démo
+                </a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface py-12 sm:py-16">
+    <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+      <h2 class="mb-4 text-2xl font-bold text-foreground sm:text-3xl">
+        Vous voulez la même qualité pour votre cabinet ?
+      </h2>
+      <p class="mx-auto mb-8 max-w-2xl text-muted sm:text-lg">
+        Je vous aide à partir d'une base solide puis à l'adapter à votre
+        pratique, vos spécialités et votre manière de travailler.
+      </p>
+      <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/contact/"
+          class="inline-block rounded-lg bg-primary-foreground px-5 py-2.5 font-semibold text-on-primary transition-colors hover:opacity-90"
+        >
+          Me contacter
+        </a>
+        <a
+          href="/tarifs/"
+          class="inline-block rounded-lg border-2 border-primary px-5 py-2.5 font-semibold text-foreground transition-colors hover:bg-background"
+        >
+          Voir mes tarifs
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
