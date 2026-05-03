@@ -17,6 +17,7 @@ export interface Props {
 }
 
 const { title, description, href, image, imageAlt, tag, pubDate, author, tags, updatedDate } = Astro.props;
+const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 ---
 
 <article class="bg-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-border grid grid-rows-[auto_minmax(0,1fr)] min-h-0 self-stretch h-full">
@@ -30,7 +31,10 @@ const { title, description, href, image, imageAlt, tag, pubDate, author, tags, u
 		/>
 		{tag && (
 			<div class="absolute top-4 left-4">
-				<a href={toTagHref(tag)} class="bg-surface text-foreground hover:bg-surface-alt px-3 py-1 rounded-full text-sm font-medium transition-colors">
+				<a
+					href={toTagHref(tag)}
+					class="inline-flex max-w-[min(calc(100%-2rem),14rem)] items-center truncate rounded-full border border-white/50 bg-surface/95 px-3 py-1 text-sm font-medium text-foreground shadow-md backdrop-blur-sm transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+				>
 					{tag}
 				</a>
 			</div>
@@ -64,17 +68,22 @@ const { title, description, href, image, imageAlt, tag, pubDate, author, tags, u
 		</div>
 		<h2 class="text-xl font-semibold text-foreground mb-3">
 			<a href={href} class="hover:text-primary transition-colors">
-				{title}
+				{displayTitle}
 			</a>
 		</h2>
 		<p class="text-muted mb-4 line-clamp-3">
 			{description}
 		</p>
 		{tags && tags.length > 0 && (
-			<div class="flex flex-wrap gap-2 mb-4">
+			<div class="flex flex-wrap gap-2 mb-4" role="list" aria-label="Thématiques de l’article">
 				{tags.slice(0, 3).map((t: string) => (
-					<a href={toTagHref(t)} class="bg-surface text-foreground hover:bg-surface-alt px-2 py-1 rounded text-sm transition-colors">
-						{t}
+					<a
+						href={toTagHref(t)}
+						role="listitem"
+						title={t}
+						class="inline-flex max-w-[min(100%,12rem)] shrink-0 items-center rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted shadow-sm transition-colors hover:border-primary hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+					>
+						<span class="truncate">{t}</span>
 					</a>
 				))}
 			</div>
