@@ -1,6 +1,6 @@
 ---
 title: "Psychologue : comment apparaître en premier sur Google dans sa ville ?"
-description: "Le guide pilier SEO local pour psychologues : fiche Google, site, pages locales, avis et backlinks pour attirer des patients qualifiés."
+description: "Le guide pilier SEO local pour psychologues : fiche Google, site, pages locales, données structurées, avis et backlinks pour attirer des patients qualifiés."
 pubDate: "2026-05-03"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-premier-google-ville.webp"
@@ -112,6 +112,19 @@ Un site de psychologue efficace n’a pas pour objectif de « vendre à tout pri
 - Informations pratiques (lieu, tarifs, visio, accès).
 - Questions fréquentes locales.
 - Appels à l'action visibles (téléphone, formulaire, prise de RDV).
+
+### Les données structurées : un levier technique (souvent oublié)
+
+Les visiteurs ne les voient pas, mais Google peut les exploiter : ce sont des **données structurées** (au format schema.org, souvent en JSON-LD dans le code de la page). Elles décrivent de façon explicite votre activité : type de professionnel, nom du cabinet, adresse, téléphone, zone desservie, parfois vos horaires ou vos pages principales.
+
+Pour un psychologue en local, l’intérêt est double :
+
+- **moins d’ambiguïté** pour le moteur entre vous, votre lieu d’exercice et vos pages « contact » ou « psychologue + ville » ;
+- **meilleure cohérence** avec ce que vous affichez déjà sur votre fiche Google Business Profile, si les informations sont alignées.
+
+Ce n’est pas une baguette magique : les données structurées **complètent** un site clair et une fiche complète. En revanche, les erreurs ou les blocs mal renseignés peuvent être ignorés, voire source de confusion. D’où l’intérêt d’une mise en place **propre et validée** (par exemple via les outils Google pour les enrichissements / la Search Console).
+
+Si vous ne souhaitez pas toucher au code ni au vocabulaire technique (schema.org, types `LocalBusiness` / `ProfessionalService`, etc.), c’est précisément le genre de chantier qu’il est pertinent de **confier à quelqu’un qui le fait au quotidien** — en gardant un contenu visible sobre et conforme à votre déontologie. Vous pouvez en parler lors d’un [diagnostic gratuit](/diagnostic-gratuit/) de votre visibilité locale.
 
 ## Étape 3 : créer des pages locales sans tomber dans le contenu dupliqué
 
