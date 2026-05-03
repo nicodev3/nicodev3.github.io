@@ -5,7 +5,7 @@ pubDate: "2015-10-26"
 updatedDate: "2026-02-23"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-internet.webp"
-tags: ["site internet", "création", "2026"]
+tags: ["site internet"]
 ---
 
 Pour beaucoup de personnes, un site internet est surtout une vitrine: du texte, des images, quelques boutons, un formulaire de contact.

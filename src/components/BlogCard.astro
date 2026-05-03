@@ -9,19 +9,18 @@ export interface Props {
 	href: string;
 	image: ImageMetadata;
 	imageAlt: string;
-	tag?: string;
 	pubDate: string;
 	author: string;
 	tags?: string[];
 	updatedDate?: string;
 }
 
-const { title, description, href, image, imageAlt, tag, pubDate, author, tags, updatedDate } = Astro.props;
+const { title, description, href, image, imageAlt, pubDate, author, tags, updatedDate } = Astro.props;
 const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 ---
 
 <article class="bg-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-border grid grid-rows-[auto_minmax(0,1fr)] min-h-0 self-stretch h-full">
-	<div class="relative min-h-0">
+	<div class="min-h-0">
 		<Image
 			src={image}
 			alt={imageAlt}
@@ -29,16 +28,6 @@ const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 			width={800}
 			height={450}
 		/>
-		{tag && (
-			<div class="absolute top-4 left-4">
-				<a
-					href={toTagHref(tag)}
-					class="inline-flex max-w-[min(calc(100%-2rem),14rem)] items-center truncate rounded-full border border-white/50 bg-surface/95 px-3 py-1 text-sm font-medium text-foreground shadow-md backdrop-blur-sm transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-				>
-					{tag}
-				</a>
-			</div>
-		)}
 	</div>
 	<div class="p-6 flex flex-col min-h-0 h-full">
 		<div class="flex flex-col gap-1 text-sm text-muted mb-2">
