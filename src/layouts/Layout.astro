@@ -6,6 +6,7 @@ import ObfuscatedEmail from "../components/ObfuscatedEmail.astro";
 import Header from "../components/Header.astro";
 import ProfessionsSection from "../components/ProfessionsSection.astro";
 import defaultOgImage from "../assets/images/blog/development.webp";
+import { MessageCircle } from "@lucide/astro";
 
 export interface Props {
   title: string;
@@ -110,6 +111,12 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
 
     <!-- Contenu `position:fixed` relatif au viewport (évite un ancêtre transform/filter qui casse fixed dans <main>) -->
     <slot name="body-fixed" />
+
+    <!-- Bouton flottant WhatsApp -->
+    <a href="https://wa.me/33629341367" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-[#25D366] text-white rounded-full inline-flex items-center gap-2 px-4 h-12 min-w-[170px] shadow-lg hover:scale-105 transition-transform z-50" aria-label="Discuter sur WhatsApp">
+            <MessageCircle size={20} class="text-white" />
+      <span class="text-sm font-semibold">Discuter sur WhatsApp</span>
+    </a>
 
     <main>
       <slot />
