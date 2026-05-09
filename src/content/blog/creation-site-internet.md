@@ -1,12 +1,14 @@
 ﻿---
-title: "Création d'un site Internet"
-description: "Comprendre comment se compose un site web moderne en 2026 : technologies, performance, accessibilité et SEO."
+title: "Création de site web en 2026 : ce qu’un psychologue doit savoir sur la technique"
+description: "HTML, CSS, performance, accessibilité et SEO : les bases d’un site moderne, avant de passer au guide dédié aux psychologues (structure, éthique, visibilité locale)."
 pubDate: "2015-10-26"
-updatedDate: "2026-02-23"
+updatedDate: "2026-05-09"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-internet.webp"
 tags: ["site internet"]
 ---
+
+Pour une **vision complète orientée cabinet** (structure des pages, SEO local, cadre déontologique, RGPD), voir le guide [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/). L’article ci-dessous pose les **bases techniques communes** à tout site professionnel.
 
 Pour beaucoup de personnes, un site internet est surtout une vitrine: du texte, des images, quelques boutons, un formulaire de contact.
 

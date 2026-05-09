@@ -1,0 +1,71 @@
+---
+import ObfuscatedEmail from '../components/ObfuscatedEmail.astro';
+import Layout from '../layouts/Layout.astro';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Mentions légales', item: new URL('/mentions-legales/', baseUrl).toString() },
+	],
+};
+---
+
+<Layout
+	title="Mentions légales | Nicolas Devaux"
+	description="Mentions légales du site nicodev.fr : éditeur, hébergement, propriété intellectuelle et contact."
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<section class="py-16 bg-surface">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-3xl md:text-4xl font-bold text-foreground">Mentions légales</h1>
+			<p class="mt-4 text-muted">Dernière mise à jour : 9 mai 2026</p>
+		</div>
+	</section>
+
+	<section class="py-12 bg-background">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-headings:text-foreground prose-p:text-muted">
+			<h2>1. Éditeur du site</h2>
+			<p>
+				Le site <strong>nicodev.fr</strong> est édité par :<br />
+				<strong>Nicolas Devaux</strong>, micro-entrepreneur / auto-entrepreneur<br />
+				Activité : développement web, création de sites internet<br />
+				Adresse : 63 rue Houdan, 92330 Sceaux, France<br />
+				Email : <ObfuscatedEmail /><br />
+				Directeur de la publication : Nicolas Devaux
+			</p>
+			<p>
+				Les mentions obligatoires complémentaires (notamment numéro SIRET, identification à l'activité et, le cas échéant, numéro de TVA intracommunautaire) figurent sur les devis, contrats et factures.
+			</p>
+
+			<h2>2. Hébergement</h2>
+			<p>
+				Le site est hébergé et diffusé via l'infrastructure de <strong>Cloudflare, Inc.</strong><br />
+				101 Townsend Street<br />
+				San Francisco, CA 94107<br />
+				États-Unis<br />
+				Site web : <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">cloudflare.com</a>
+			</p>
+
+			<h2>3. Propriété intellectuelle</h2>
+			<p>
+				L'ensemble des éléments du site (structure, textes, images, logos, charte graphique, etc.) est la propriété de Nicolas Devaux ou fait l'objet d'une autorisation d'utilisation. Toute reproduction ou représentation, totale ou partielle, sans autorisation écrite préalable est interdite et constituerait une contrefaçon au sens du Code de la propriété intellectuelle.
+			</p>
+
+			<h2>4. Données personnelles</h2>
+			<p>
+				Le traitement des données personnelles collectées via ce site est décrit dans la <a href="/politique-confidentialite/">politique de confidentialité et cookies</a>.
+			</p>
+
+			<h2>5. Conditions de vente</h2>
+			<p>
+				Les prestations facturées sont régies par les <a href="/cgv/">conditions générales de vente</a>.
+			</p>
+		</div>
+	</section>
+</Layout>

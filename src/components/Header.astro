@@ -125,10 +125,15 @@ function navLinkIsActive(href: string): boolean {
 			</div>
 		</div>
 	</nav>
+</header>
 
+	<!--
+		Tiroir hors de <header> : .site-header utilise backdrop-filter, qui crée un bloc de
+		contenement et casse position:fixed des descendants (overlay collé au bandeau au lieu du viewport).
+	-->
 	<div
 		id="mobile-nav-drawer"
-		class="mobile-nav-drawer md:hidden fixed inset-0 z-50 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
+		class="mobile-nav-drawer md:hidden fixed inset-0 z-[100] flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu de navigation"
@@ -188,7 +193,6 @@ function navLinkIsActive(href: string): boolean {
 			</a>
 		</div>
 	</div>
-</header>
 
 <script>
 	let mobileNavTeardown: (() => void) | undefined;
@@ -196,101 +200,9 @@ function navLinkIsActive(href: string): boolean {
 	let navScrollSpyTeardown: (() => void) | undefined;
 	let diagnosticPeerSuppressionTeardown: (() => void) | undefined;
 
-	function normalizeClientPath(p: string): string {
-		if (!p || p === '/') return '/';
-		const trimmed = p.replace(/\/+$/, '');
-		return trimmed === '' ? '/' : trimmed;
-	}
-
-	/** Repères de page d’accueil → chemin nav correspondant (sans slash final sauf racine). */
-	const HOME_SCROLL_SLICES: Array<{ id: string; nav: string | null }> = [
-		{ id: 'site-hero', nav: null },
-		{ id: 'accueil-differentiation', nav: '/about' },
-		{ id: 'expertise-contact', nav: '/about' },
-		{ id: 'blog', nav: '/blog' },
-		{ id: 'comment-ca-marche', nav: '/about' },
-		{ id: 'offres', nav: '/tarifs' },
-		{ id: 'seo-local', nav: '/tarifs' },
-		{ id: 'temoignages', nav: '/portfolio' },
-		{ id: 'faq', nav: '/portfolio' },
-		{ id: 'contact-accueil', nav: '/contact' },
-	];
-
+	/** Scrollspy désactivé sur l’accueil : évite d’attribuer `aria-current` à une autre route tant que l’URL reste `/`. */
 	function setupHomeNavScrollspy(): () => void {
-		if (normalizeClientPath(window.location.pathname) !== '/') {
-			return () => {};
-		}
-
-		const ac = new AbortController();
-		const { signal } = ac;
-
-		function headerOffsetPx(): number {
-			const h = document.querySelector<HTMLElement>('[data-site-header]');
-			return (h?.getBoundingClientRect().height ?? 72) + 12;
-		}
-
-		function computeActiveNavPath(): string | null {
-			const scrollLine = window.scrollY + headerOffsetPx();
-			let activeNav: string | null = null;
-			for (const slice of HOME_SCROLL_SLICES) {
-				const el = document.getElementById(slice.id);
-				if (!el) continue;
-				const top = el.getBoundingClientRect().top + window.scrollY;
-				if (top <= scrollLine) activeNav = slice.nav;
-			}
-			return activeNav;
-		}
-
-		function syncNavScrollspy() {
-			const header = document.querySelector('[data-site-header]');
-			if (!header) return;
-
-			const activeNav = computeActiveNavPath();
-
-			header.querySelectorAll<HTMLAnchorElement>('a[data-main-nav]').forEach((a) => {
-				const path = normalizeClientPath(new URL(a.href).pathname);
-				const isSpy = activeNav !== null && path === normalizeClientPath(activeNav);
-
-				const inDrawer = !!a.closest('[data-mobile-nav-drawer]');
-
-				if (!inDrawer) {
-					if (isSpy) {
-						a.dataset.active = 'true';
-						a.setAttribute('aria-current', 'location');
-					} else {
-						delete a.dataset.active;
-						a.removeAttribute('aria-current');
-					}
-				} else if (isSpy) {
-					a.classList.add('font-semibold', 'text-primary', 'bg-surface');
-					a.classList.remove('text-foreground');
-					a.setAttribute('aria-current', 'location');
-				} else {
-					a.classList.remove('font-semibold', 'text-primary', 'bg-surface');
-					a.classList.add('text-foreground');
-					a.removeAttribute('aria-current');
-				}
-			});
-		}
-
-		let ticking = false;
-		function scheduleSync() {
-			if (ticking) return;
-			ticking = true;
-			requestAnimationFrame(() => {
-				ticking = false;
-				syncNavScrollspy();
-			});
-		}
-
-		scheduleSync();
-
-		window.addEventListener('scroll', scheduleSync, { passive: true, signal });
-		window.addEventListener('resize', scheduleSync, { passive: true, signal });
-
-		return () => {
-			ac.abort();
-		};
+		return () => {};
 	}
 
 	function setupHeaderChrome() {

@@ -195,11 +195,14 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
         <div
           class="border-t border-border mt-8 pt-8 text-center text-on-foreground"
         >
-          <p>
+          <p class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            <a href="/mentions-legales/" class={footerLinkClass}>Mentions légales</a>
+            <span class="text-on-foreground/60" aria-hidden="true">|</span>
+            <a href="/politique-confidentialite/" class={footerLinkClass}>Politique de confidentialité</a>
+            <span class="text-on-foreground/60" aria-hidden="true">|</span>
             <a href="/cgv/" class={footerLinkClass}>Conditions générales de vente</a>
-            <span class="mx-2">|</span>
-            &copy; 2011-2026 Nicolas Devaux. Tous droits réservés.
           </p>
+          <p class="mt-4">&copy; 2011-2026 Nicolas Devaux. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

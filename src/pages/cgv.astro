@@ -8,8 +8,8 @@ const breadcrumbSchema = {
 	'@type': 'BreadcrumbList',
 	itemListElement: [
 		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
-		{ '@type': 'ListItem', position: 2, name: 'Conditions Générales de Vente', item: new URL('/cgv', baseUrl).toString() }
-	]
+		{ '@type': 'ListItem', position: 2, name: 'Conditions Générales de Vente', item: new URL('/cgv/', baseUrl).toString() },
+	],
 };
 ---
 
@@ -24,7 +24,7 @@ const breadcrumbSchema = {
 	<section class="py-16 bg-surface">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h1 class="text-3xl md:text-4xl font-bold text-foreground">Conditions Générales de Vente</h1>
-			<p class="mt-4 text-muted">Dernière mise à jour : 26 février 2026</p>
+			<p class="mt-4 text-muted">Dernière mise à jour : 9 mai 2026</p>
 		</div>
 	</section>
 
@@ -32,7 +32,7 @@ const breadcrumbSchema = {
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-headings:text-foreground prose-p:text-muted">
 			<h2>Article 1 – Objet et champ d'application</h2>
 			<p>
-				Les présentes Conditions Générales de Vente (CGV) régissent les prestations de création de sites internet proposées par Nicolas Devaux à ses clients. Toute commande ou souscription implique l'acceptation sans réserve des présentes conditions.
+				Les présentes Conditions Générales de Vente (CGV) régissent les prestations de création et de maintenance de sites internet proposées par Nicolas Devaux à ses clients. Toute commande ou souscription implique l'acceptation sans réserve des présentes conditions.
 			</p>
 
 			<h2>Article 2 – Identification du prestataire</h2>
@@ -42,50 +42,96 @@ const breadcrumbSchema = {
 			</p>
 
 			<h2>Article 3 – Description des prestations</h2>
-			<p>Le prestataire propose trois formules :</p>
+			<p>Le prestataire propose deux formules d'abonnement mensuel (détails et périmètre à jour sur la page <a href="/tarifs/">Tarifs</a>) :</p>
 			<ul>
-				<li><strong>Pack Site Vitrine (59€/mois)</strong> : comprend le Forfait Création, hébergement, nom de domaine, maintenance et modifications de contenu, support prioritaire.</li>
-				<li><strong>Pack Site + Blog (89€/mois)</strong> : comprend le Pack Site Vitrine, deux articles de blog par mois, visibilité continue sur Google.</li>
+				<li>
+					<strong>Offre « Sérénité » (29 € TTC / mois)</strong> : site professionnel, accompagnement à la rédaction, hébergement et nom de domaine gérés, sécurité et sauvegardes, une modification simple de contenu par mois dans les conditions précisées sur le site.
+				</li>
+				<li>
+					<strong>Offre « Visibilité &amp; Confiance » (49 € TTC / mois)</strong> : inclut les éléments de l'offre Sérénité, avec des prestations complémentaires de visibilité et de contenu (articles de blog, suivi des performances, modernisation périodique, etc.) telles que décrites sur le site.
+				</li>
 			</ul>
+			<p>Les prestations hors périmètre décrit (refonte structurelle majeure, création de fonctionnalités sur mesure non prévues au brief, etc.) font l'objet d'un devis séparé ou d'une facturation au temps passé dans les conditions de l'article 6.</p>
 
-			<h2>Article 4 – Tarifs et modalités de paiement</h2>	
-			<p>Les tarifs en vigueur sont ceux indiqués sur le site au moment de la commande : 29€/mois pour le Pack Site Vitrine, 49€/mois pour le Pack Site + Blog. Tous les montants sont indiqués TTC.</p>
-			<p>Le forfait unique est réglé avant le début des travaux. Les abonnements sont facturés mensuellement. Les modifications demandées au-delà de l'aller-retour inclus (Forfait Création) sont facturées à 50€/heure ou sur devis.</p>
+			<h2>Article 4 – Tarifs et modalités de paiement</h2>
+			<p>
+				Les tarifs en vigueur sont ceux affichés sur le site au jour de la souscription : <strong>29 € TTC / mois</strong> pour l'offre Sérénité et <strong>49 € TTC / mois</strong> pour l'offre Visibilité &amp; Confiance. Tous les montants sont exprimés TTC.
+			</p>
+			<p>
+				La création et la mise en ligne initiale du site sont <strong>incluses dans l'abonnement</strong>. Sauf convention écrite contraire, la facturation de l'abonnement prend effet après la livraison du site conformément aux modalités communiquées lors de la souscription (aucun frais d'installation distinct de ces formules n'est facturé dans le cadre standard décrit sur le site).
+			</p>
+			<p>
+				L'abonnement est facturé mensuellement. Les prestations complémentaires ou les dépassements de périmètre sont facturés sur la base de <strong>50 € TTC / heure</strong> ou sur devis accepté par le client.
+			</p>
 
 			<h2>Article 5 – Délais et livraison</h2>
-			<p>Le délai indicatif de livraison est de deux à trois semaines à compter de la validation du brief et de la réception des contenus. Le livrable consiste en un site en ligne, fonctionnel et accessible. Des retards indépendants de la volonté du prestataire (force majeure, retard du client dans la fourniture des éléments) ne donnent pas lieu à pénalités.</p>
+			<p>
+				Le délai indicatif de mise en ligne est en général de <strong>deux à trois semaines</strong> à compter de la validation du brief et de la réception des contenus nécessaires ; ce délai peut être plus court lorsque les éléments sont fournis rapidement. Le livrable consiste en un site en ligne, fonctionnel et accessible. Des retards indépendants de la volonté du prestataire (force majeure, retard du client dans la fourniture des éléments) ne donnent pas lieu à pénalités.
+			</p>
 
-			<h2>Article 6 – Aller-retour inclus</h2>
-			<p>Le Forfait Création inclut un seul cycle de corrections (aller-retour) portant sur les ajustements de textes, sections et style prévus dans le brief initial. Toute demande de modification au-delà de ce cadre est facturée à 50€/heure. Les abonnements incluent les modifications de contenu dans le cadre défini.</p>
+			<h2>Article 6 – Corrections initiales et modifications dans le temps</h2>
+			<p>
+				La livraison inclut un cycle de corrections (aller-retour) portant sur les ajustements de textes, sections et style prévus dans le brief initial. Toute demande nettement hors de ce cadre ou ultérieure hors du périmètre des offres est facturée dans les conditions de l'article 4.
+			</p>
+			<p>
+				Les modifications de contenu incluses dans les abonnements sont celles décrites sur le site pour chaque formule (ex. textes, coordonnées, tarifs, photo, widget de rendez-vous pour l'offre concernée). Les changements de structure lourds (nouvelles pages majeures, refonte complète du design) restent hors périmètre sauf devis accepté.
+			</p>
 
 			<h2>Article 7 – Durée et résiliation</h2>
-			<p>Les abonnements sont souscrits sans engagement. Le client peut résilier à tout moment, moyennant un préavis de 30 jours. En cas de résiliation, le site restera en ligne jusqu'à l'échéance de la période facturée. Le nom de domaine reste la propriété du prestataire et ne fait pas l'objet d'un transfert au client ; il peut être conservé par le prestataire ou laissé à expiration.</p>
+			<p>
+				Les abonnements sont <strong>sans engagement de durée</strong>. Le client peut résilier à tout moment en adressant une demande au prestataire (par email aux coordonnées indiquées à l'article 2). La résiliation prend effet à l'expiration de la <strong>période mensuelle déjà facturée</strong>, sans pénalité ni frais réservés au titre de la seule résiliation. Les services associés (hébergement, maintenance, support) cessent à cette échéance selon les modalités précisées lors de la relation contractuelle.
+			</p>
+			<p>
+				Le nom de domaine associé à l'abonnement est acheté et géré par le prestataire dans le cadre du service ; en l'absence de transfert convenu par écrit et selon les modalités techniques réalisables, il peut être conservé par le prestataire ou laissé à expiration après résiliation.
+			</p>
 
 			<h2>Article 8 – Propriété intellectuelle</h2>
-			<p>Les droits sur le site livré (contenus fournis par le client, structure et design spécifiques au projet) sont cédés au client à la livraison. Le prestataire conserve les droits sur les éléments génériques (code réutilisable, templates, frameworks) sauf accord écrit contraire.</p>
+			<p>
+				Les droits sur le site livré (contenus fournis par le client, structure et design spécifiques au projet) sont cédés au client à la livraison dans la mesure nécessaire à l'exploitation du site pour son activité. Le prestataire conserve les droits sur les éléments génériques (code réutilisable, templates, frameworks) sauf accord écrit contraire.
+			</p>
 
 			<h2>Article 9 – Hébergement et nom de domaine</h2>
-			<p>L'hébergement est assuré via Netlify. Pour les abonnements, le nom de domaine est inclus : il est acheté et géré par le prestataire. En cas de résiliation de l'abonnement, le domaine reste au prestataire ou expire ; aucun transfert n'est prévu au profit du client.</p>
+			<p>
+				L'hébergement du site est assuré via <strong>Cloudflare</strong> (réseau de diffusion et hébergement adapté aux sites statiques ou équivalent selon la configuration en vigueur). Pour les abonnements incluant le nom de domaine, celui-ci est enregistré et géré par le prestataire. Les modalités de sortie ou de transfert du nom de domaine font l'objet d'un accord distinct lorsque cela est juridiquement et techniquement possible.
+			</p>
 
 			<h2>Article 10 – Données personnelles et cookies</h2>
 			<p>
-				Le prestataire, <strong>Nicolas Devaux</strong> (<ObfuscatedEmail />), agit en qualité de responsable de traitement au sens du Règlement (UE) 2016/679 (RGPD).
+				Le prestataire, <strong>Nicolas Devaux</strong> (<ObfuscatedEmail />), agit en qualité de responsable de traitement au sens du Règlement (UE) 2016/679 (RGPD) pour les données collectées dans le cadre du site vitrine et des échanges commerciaux.
 			</p>
-			<p><strong>Données collectées :</strong> dans le cadre des prestations, les données suivantes peuvent être collectées : nom, prénom, adresse e-mail, numéro de téléphone, informations relatives au projet. Ces données sont nécessaires à l'exécution du contrat.</p>
-			<p><strong>Finalités :</strong> les données sont utilisées pour la gestion de la relation client, l'exécution des prestations, la facturation et, le cas échéant, l'envoi d'informations relatives aux services (avec consentement préalable).</p>
-			<p><strong>Durée de conservation :</strong> les données sont conservées pendant la durée de la relation contractuelle, puis archivées pendant 5 ans conformément aux obligations légales (comptabilité, litiges).</p>
-			<p><strong>Destinataires :</strong> les données ne sont pas cédées à des tiers à des fins commerciales. Elles peuvent être transmises à des sous-traitants techniques (hébergeur Netlify, outil d'analyse d'audience Google Analytics) dans le strict cadre de l'exécution des services.</p>
-			<p><strong>Cookies et traceurs :</strong> le site utilise des cookies de mesure d'audience (Google Analytics / GA4). Ces cookies ne sont déposés qu'après recueil de votre consentement via le bandeau prévu à cet effet. Vous pouvez retirer votre consentement à tout moment en cliquant sur le lien « Gestion des cookies » présent en bas de page. Pour plus d'informations, consultez notre <a href="/politique-confidentialite/">Politique de confidentialité et cookies</a>.</p>
-			<p><strong>Droits des personnes :</strong> conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition concernant vos données personnelles. Pour exercer ces droits, contactez : <ObfuscatedEmail />. En cas de réclamation non résolue, vous pouvez saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">CNIL</a>.</p>
+			<p>
+				<strong>Données traitées dans le cadre des prestations pour les clients :</strong> nom, prénom, adresse électronique, numéro de téléphone le cas échéant, informations relatives au projet et aux contenus — dans la mesure nécessaire à l'exécution du contrat et à la facturation.
+			</p>
+			<p>
+				<strong>Finalités :</strong> gestion de la relation contractuelle, réalisation des prestations, facturation, obligations légales.
+			</p>
+			<p>
+				<strong>Durée de conservation :</strong> pendant la durée de la relation puis selon les durées précisées dans la <a href="/politique-confidentialite/">politique de confidentialité</a> (données contractuelles et comptables : obligations légales, typiquement conservation des pièces justificatives pendant la durée requise).
+			</p>
+			<p>
+				<strong>Destinataires et sous-traitants :</strong> les données peuvent être confiées à des prestataires techniques strictement nécessaires (notamment hébergement via Cloudflare, mesure d'audience via une instance <strong>Umami</strong> auto-hébergée lorsque celle-ci est activée, dans les conditions décrites dans la politique de confidentialité). Il n'est pas fait usage de <strong>Google Analytics</strong> dans la configuration actuelle décrite sur le site.
+			</p>
+			<p>
+				<strong>Cookies et traceurs :</strong> le site ne dépose pas de cookies publicitaires. La mesure d'audience mise en œuvre via Umami vise des statistiques agrégées conformément à la <a href="/politique-confidentialite/">politique de confidentialité et cookies</a>, sans bandeau de consentement cookies dans la mesure où aucun traceur soumis au régime du consentement préalable n'est utilisé pour la configuration décrite sur cette politique.
+			</p>
+			<p>
+				<strong>Droits des personnes :</strong> droits d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition — à exercer via <ObfuscatedEmail />. Réclamation possible auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">CNIL</a>.
+			</p>
 
 			<h2>Article 11 – Responsabilité</h2>
-			<p>La responsabilité du prestataire est limitée au montant des sommes effectivement versées par le client pour la prestation en cause. Le prestataire ne saurait être tenu responsable des dommages indirects. En cas de force majeure, les obligations sont suspendues.</p>
+			<p>
+				La responsabilité du prestataire est limitée au montant des sommes effectivement versées par le client pour la prestation en cause sur les douze derniers mois. Le prestataire ne saurait être tenu responsable des dommages indirects. En cas de force majeure, les obligations sont suspendues.
+			</p>
 
 			<h2>Article 12 – Droit applicable et litiges</h2>
-			<p>Les présentes CGV sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents. Une tentative de médiation pourra être proposée avant toute action judiciaire.</p>
+			<p>
+				Les présentes CGV sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents. Une tentative de médiation pourra être proposée avant toute action judiciaire.
+			</p>
 
 			<h2>Article 13 – Acceptation</h2>
-			<p>L'acceptation des présentes CGV résulte de la commande ou de la souscription à l'une des formules proposées. Elles prévalent sur tout document du client à caractère contradictoire.</p>
+			<p>
+				L'acceptation des présentes CGV résulte de la commande ou de la souscription à l'une des formules proposées. Elles prévalent sur tout document du client à caractère contradictoire.
+			</p>
 		</div>
 	</section>
 </Layout>
