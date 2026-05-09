@@ -194,12 +194,7 @@ const portfolioHeroSubtitle =
         class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
       >
         {
-          projects.map((project, index) => {
-            const featuredBefore = projects
-              .slice(0, index)
-              .filter((p) => !p.archiveTier).length;
-            const isAboveFold = !project.archiveTier && featuredBefore < 3;
-            return (
+          projects.map((project) => (
             <article
               class="portfolio-ref-card group flex flex-col overflow-hidden bg-white"
               data-portfolio-item
@@ -214,9 +209,8 @@ const portfolioHeroSubtitle =
                   fallbackFormat="webp"
                   widths={[340, 680, 1020]}
                   sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px"
-                  loading={isAboveFold ? "eager" : "lazy"}
+                  loading="lazy"
                   decoding="async"
-                  fetchpriority={isAboveFold ? "high" : undefined}
                   width={1020}
                   height={765}
                   pictureAttributes={{
@@ -308,8 +302,7 @@ const portfolioHeroSubtitle =
                 </div>
               </div>
             </article>
-            );
-          })
+          ))
         }
       </div>
 
