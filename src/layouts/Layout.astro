@@ -6,6 +6,7 @@ import ObfuscatedEmail from "../components/ObfuscatedEmail.astro";
 import Header from "../components/Header.astro";
 import ProfessionsSection from "../components/ProfessionsSection.astro";
 import defaultOgImage from "../assets/images/blog/development.webp";
+import { MessageCircle } from "@lucide/astro";
 
 export interface Props {
   title: string;
@@ -115,6 +116,12 @@ const footerServiceLinkClass =
     <!-- Contenu `position:fixed` relatif au viewport (évite un ancêtre transform/filter qui casse fixed dans <main>) -->
     <slot name="body-fixed" />
 
+    <!-- Bouton flottant WhatsApp -->
+    <a href="https://wa.me/33629341367" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-[#25D366] text-white rounded-full inline-flex items-center gap-2 px-4 h-12 min-w-[170px] shadow-lg hover:scale-105 transition-transform z-50" aria-label="Discuter sur WhatsApp">
+            <MessageCircle size={20} class="text-white" />
+      <span class="text-sm font-semibold">Discuter sur WhatsApp</span>
+    </a>
+
     <main>
       <slot />
     </main>
@@ -155,13 +162,38 @@ const footerServiceLinkClass =
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-4">Contact</h3>
-            <p class="text-on-foreground">
-              Email: <ObfuscatedEmail class="text-on-foreground hover:opacity-80" /><br />
-              GitHub: <a
-                href="https://github.com/nicodev3"
-                class="text-on-foreground hover:opacity-80">@nicodev3</a
+            <div class="space-y-3 text-on-foreground">
+              <p>
+                Email:
+                <ObfuscatedEmail class="text-on-foreground hover:opacity-80" />
+              </p>
+              <p>
+                GitHub:
+                <a
+                  href="https://github.com/nicodev3"
+                  class="text-on-foreground hover:opacity-80">@nicodev3</a
+                >
+              </p>
+              <p>
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/nicodev3/"
+                  class="text-on-foreground hover:opacity-80"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/nicodev3</a
+                >
+              </p>
+              <a
+                href="https://wa.me/33629341367"
+                class="inline-flex items-center rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-[#0f2918] transition hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-foreground"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contacter Nicolas Devaux sur WhatsApp"
               >
-            </p>
+                💬 Me contacter sur WhatsApp
+              </a>
+            </div>
           </div>
         </div>
         <div
