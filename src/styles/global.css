@@ -133,6 +133,44 @@ a:not([class]):focus-visible {
     color: var(--color-link-on-dark);
 }
 
+/*
+ * Pied de page foncé : pas de underline permanent ; trait révélé au survol (background-size),
+ * glissement gauche → droite (pattern type Stripe / Linear).
+ */
+footer .footer-animated-underline {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    padding-bottom: 0.08em;
+    transition:
+        background-size 0.22s ease,
+        opacity 0.18s ease;
+}
+
+footer .footer-animated-underline:hover {
+    background-size: 100% 1px;
+    opacity: 0.9;
+}
+
+footer .footer-animated-underline:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--color-on-foreground) 82%, transparent);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    footer .footer-animated-underline {
+        transition-duration: 0.01ms;
+    }
+
+    footer .footer-animated-underline:hover {
+        transition-duration: 0.01ms;
+    }
+}
+
 /* Scroll reveal : fade-in 0,4s sur les <section> directes de <main> (JS ajoute les classes) */
 @media (prefers-reduced-motion: no-preference) {
     main>section.scroll-reveal {

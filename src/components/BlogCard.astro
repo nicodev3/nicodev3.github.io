@@ -12,10 +12,9 @@ export interface Props {
 	pubDate: string;
 	author: string;
 	tags?: string[];
-	updatedDate?: string;
 }
 
-const { title, description, href, image, imageAlt, pubDate, author, tags, updatedDate } = Astro.props;
+const { title, description, href, image, imageAlt, pubDate, author, tags } = Astro.props;
 const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 ---
 
@@ -30,30 +29,16 @@ const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 		/>
 	</div>
 	<div class="p-6 flex flex-col min-h-0 h-full">
-		<div class="flex flex-col gap-1 text-sm text-muted mb-2">
-			<div class="flex items-center">
-				<time datetime={pubDate}>
-					{new Date(pubDate).toLocaleDateString('fr-FR', {
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric'
-					})}
-				</time>
-				<span class="mx-2">•</span>
-				<span>{author}</span>
-			</div>
-			{updatedDate && (
-				<div class="text-xs text-muted">
-					Mis à jour le{' '}
-					<time datetime={updatedDate}>
-						{new Date(updatedDate).toLocaleDateString('fr-FR', {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric'
-						})}
-					</time>
-				</div>
-			)}
+		<div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm text-muted mb-2">
+			<time datetime={pubDate}>
+				{new Date(pubDate).toLocaleDateString('fr-FR', {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				})}
+			</time>
+			<span aria-hidden="true">•</span>
+			<span>{author}</span>
 		</div>
 		<h2 class="text-xl font-semibold text-foreground mb-3">
 			<a href={href} class="hover:text-primary transition-colors">

@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { ArrowRight } from '@lucide/astro';
 import BlogCard from './BlogCard.astro';
 import defaultBlogCover from '../assets/images/blog/development.webp';
 
@@ -40,7 +41,6 @@ const { posts } = Astro.props;
 							image={post.data.image ?? defaultBlogCover}
 							imageAlt={post.data.title}
 							pubDate={post.data.pubDate}
-							updatedDate={post.data.updatedDate}
 							author={post.data.author}
 							tags={post.data.tags}
 						/>
@@ -83,12 +83,17 @@ const { posts } = Astro.props;
 			</div>
 		</div>
 
-		<div class="mt-12 text-center">
+		<div class="mt-12 flex justify-center">
 			<a
 				href="/blog/"
-				class="inline-flex items-center justify-center font-semibold text-foreground underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+				class="group inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-base font-semibold text-primary-foreground shadow-sm outline-none transition-[border-color,background-color,box-shadow,color] duration-200 ease-out hover:border-primary/40 hover:bg-surface hover:text-primary-900 hover:shadow-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white"
 			>
 				Voir tous les articles
+				<ArrowRight
+					class="h-4 w-4 shrink-0 transition-transform duration-200 ease-out motion-safe:group-hover:translate-x-1"
+					stroke-width={1.5}
+					aria-hidden="true"
+				/>
 			</a>
 		</div>
 	</div>

@@ -45,9 +45,8 @@ const umamiId =
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL ?? import.meta.env.UMAMI_URL;
 const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : "";
 
-/** Pied de page : liens réels avec même traitement visuel (évite les faux-liens). */
-const footerServiceLinkClass =
-  'text-on-foreground underline underline-offset-4 decoration-white/35 hover:opacity-80 hover:decoration-white/55 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80';
+/** Pied de page : soulignement animé au survol (voir `.footer-animated-underline` dans global.css). */
+const footerLinkClass = "footer-animated-underline text-on-foreground";
 ---
 
 <!doctype html>
@@ -142,19 +141,19 @@ const footerServiceLinkClass =
             <h3 class="text-lg font-semibold mb-4">Services</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/#offres" class={footerServiceLinkClass}>Création de sites internet</a>
+                <a href="/#offres" class={footerLinkClass}>Création de sites internet</a>
               </li>
               <li>
-                <a href="/#seo-local" class={footerServiceLinkClass}>Visibilité locale sur Google</a>
+                <a href="/#seo-local" class={footerLinkClass}>Visibilité locale sur Google</a>
               </li>
               <li>
-                <a href="/#faq-performance-mobile" class={footerServiceLinkClass}>Design responsive</a>
+                <a href="/#faq-performance-mobile" class={footerLinkClass}>Design responsive</a>
               </li>
               <li>
-                <a href="/tarifs/#faq-modifications" class={footerServiceLinkClass}>Maintenance web</a>
+                <a href="/tarifs/#faq-modifications" class={footerLinkClass}>Maintenance web</a>
               </li>
               <li>
-                <a href="/exemples-sites-psychologue/" class={footerServiceLinkClass}
+                <a href="/exemples-sites-psychologue/" class={footerLinkClass}
                   >Exemples de sites psychologues</a
                 >
               </li>
@@ -165,20 +164,17 @@ const footerServiceLinkClass =
             <div class="space-y-3 text-on-foreground">
               <p>
                 Email:
-                <ObfuscatedEmail class="text-on-foreground hover:opacity-80" />
+                <ObfuscatedEmail class={footerLinkClass} />
               </p>
               <p>
                 GitHub:
-                <a
-                  href="https://github.com/nicodev3"
-                  class="text-on-foreground hover:opacity-80">@nicodev3</a
-                >
+                <a href="https://github.com/nicodev3" class={footerLinkClass}>@nicodev3</a>
               </p>
               <p>
                 LinkedIn:
                 <a
                   href="https://www.linkedin.com/in/nicodev3/"
-                  class="text-on-foreground hover:opacity-80"
+                  class={footerLinkClass}
                   target="_blank"
                   rel="noopener noreferrer"
                   >linkedin.com/in/nicodev3</a
@@ -200,9 +196,7 @@ const footerServiceLinkClass =
           class="border-t border-border mt-8 pt-8 text-center text-on-foreground"
         >
           <p>
-            <a href="/cgv/" class="text-on-foreground hover:opacity-80"
-              >Conditions générales de vente</a
-            >
+            <a href="/cgv/" class={footerLinkClass}>Conditions générales de vente</a>
             <span class="mx-2">|</span>
             &copy; 2011-2026 Nicolas Devaux. Tous droits réservés.
           </p>

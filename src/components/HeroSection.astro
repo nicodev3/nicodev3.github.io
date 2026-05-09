@@ -30,14 +30,16 @@ const features = [
 ---
 
 <section id="site-hero" class="hero-home section-y text-foreground">
-	<div class="hero-layer hero-layer--wash" aria-hidden="true"></div>
-	<div class="hero-layer hero-layer--grain" aria-hidden="true"></div>
-	<div class="hero-orb hero-orb--left" aria-hidden="true"></div>
-	<div class="hero-orb hero-orb--right" aria-hidden="true"></div>
+	<div class="hero-atmosphere" aria-hidden="true">
+		<div class="hero-layer hero-layer--wash"></div>
+		<div class="hero-layer hero-layer--grain"></div>
+		<div class="hero-orb hero-orb--left"></div>
+		<div class="hero-orb hero-orb--right"></div>
+	</div>
 
 	<div class="shell-layout relative z-10">
 		<div class="hero-copy shell-prose mx-auto w-full text-center">
-			<p class="hero-eyebrow type-eyebrow text-muted">
+			<p class="hero-eyebrow type-eyebrow">
 				Sites web pour psychologues
 			</p>
 			<h1 class="hero-title text-foreground text-balance">
@@ -104,29 +106,35 @@ const features = [
 		overflow: hidden;
 		isolation: isolate;
 		border-bottom: 1px solid var(--color-border);
-		background-color: var(--color-surface);
-		background-image:
-			linear-gradient(
-				135deg,
-				color-mix(in srgb, var(--color-primary-500) 10%, var(--color-surface)) 0%,
-				var(--color-surface) 48%,
-				color-mix(in srgb, var(--color-foreground) 7%, var(--color-surface)) 100%
-			);
+		/* Fond plat aligné sur les sections suivantes ; la chaleur ne vient que des calques masqués */
+		background-color: var(--color-background);
 	}
 
-	/* Fermeture visuelle du hero : fondu vers le fond des sections suivantes */
-	.hero-home::after {
-		content: '';
+	/*
+	 * Décor concentré en haut avec fondu long vers le bas : évite la coupe horizontale « à mi-gradient »
+	 * au joint de section (même token --color-background que la suite).
+	 */
+	.hero-atmosphere {
 		position: absolute;
-		inset-inline: 0;
-		bottom: 0;
-		height: 3.25rem;
+		inset: 0;
+		z-index: 0;
 		pointer-events: none;
-		z-index: 1;
-		background: linear-gradient(
+		overflow: hidden;
+		mask-image: linear-gradient(
 			to bottom,
-			transparent,
-			color-mix(in srgb, var(--color-background) 92%, var(--color-foreground) 8%)
+			black 0%,
+			black min(32%, 12rem),
+			rgba(0, 0, 0, 0.65) min(58%, 26rem),
+			rgba(0, 0, 0, 0.2) min(82%, 38rem),
+			transparent 100%
+		);
+		-webkit-mask-image: linear-gradient(
+			to bottom,
+			black 0%,
+			black min(32%, 12rem),
+			rgba(0, 0, 0, 0.65) min(58%, 26rem),
+			rgba(0, 0, 0, 0.2) min(82%, 38rem),
+			transparent 100%
 		);
 	}
 
@@ -138,9 +146,17 @@ const features = [
 
 	.hero-layer--wash {
 		background:
-			radial-gradient(circle at 15% 14%, color-mix(in srgb, var(--color-primary-500) 16%, transparent) 0, transparent 44%),
-			radial-gradient(circle at 84% 20%, color-mix(in srgb, var(--color-foreground) 11%, transparent) 0, transparent 47%);
-		opacity: 0.75;
+			radial-gradient(
+				circle at 18% min(18%, 9rem),
+				color-mix(in srgb, var(--color-primary-500) 17%, transparent) 0,
+				transparent min(52%, 22rem)
+			),
+			radial-gradient(
+				circle at 82% min(16%, 8rem),
+				color-mix(in srgb, var(--color-foreground) 10%, transparent) 0,
+				transparent min(48%, 20rem)
+			);
+		opacity: 0.78;
 	}
 
 	.hero-layer--grain {
@@ -148,7 +164,7 @@ const features = [
 			linear-gradient(to right, color-mix(in srgb, var(--color-border) 22%, transparent) 1px, transparent 1px),
 			linear-gradient(to bottom, color-mix(in srgb, var(--color-border) 20%, transparent) 1px, transparent 1px);
 		background-size: 34px 34px;
-		mask-image: linear-gradient(to bottom, black 45%, transparent 100%);
+		mask-image: linear-gradient(to bottom, black 0%, black 36%, transparent 96%);
 		opacity: 0.22;
 	}
 
@@ -190,6 +206,8 @@ const features = [
 
 	.hero-eyebrow {
 		margin-bottom: 0.625rem;
+		/* WCAG AA corps réduit : éviter text-muted sur fond pêche / lavé */
+		color: var(--color-foreground);
 	}
 
 	@media (min-width: 768px) {
