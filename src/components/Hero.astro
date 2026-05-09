@@ -19,10 +19,10 @@ const hasCover = Boolean(coverImage);
 const coverIsAsset = typeof coverImage === 'object' && coverImage !== null && 'src' in coverImage && 'width' in coverImage;
 
 const sectionClass = [
-	hasCover ? 'hero-shell--with-cover' : '',
+	hasCover ? 'hero-shell--with-cover border-b border-border' : '',
 	variant === 'full'
-		? 'hero-shell hero-shell--full text-foreground py-16 md:py-20 border-b border-border'
-		: 'hero-shell hero-shell--light text-foreground py-14 md:py-16 border-b border-border',
+		? 'hero-shell hero-shell--full text-foreground py-16 md:py-20'
+		: 'hero-shell hero-shell--light text-foreground py-14 md:py-16',
 ]
 	.filter(Boolean)
 	.join(' ');
@@ -80,7 +80,12 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 						{breadcrumb.map((item, index) => (
 							<li class="flex items-center gap-x-2">
 								{index > 0 && (
-									<span aria-hidden="true" class="text-border">/</span>
+									<span
+										aria-hidden="true"
+										class="select-none text-[0.8125em] font-normal leading-none text-muted/50"
+									>
+										/
+									</span>
 								)}
 								{item.href ? (
 									<a href={item.href} class="hover:text-foreground transition-colors">
@@ -207,7 +212,23 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 		text-shadow: none;
 	}
 
-	.hero-shell--full {
+	/*
+	 * Le dégradé teinté est appliqué via ::before pour pouvoir le faire fondre
+	 * vers le bas avec un mask-image — sans hard cut entre le hero et la
+	 * section suivante. Le fond solide --color-surface reste derrière.
+	 */
+	.hero-shell--full::before,
+	.hero-shell--light::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		-webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+		mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+	}
+
+	.hero-shell--full::before {
 		background-image:
 			linear-gradient(
 				135deg,
@@ -217,7 +238,7 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 			);
 	}
 
-	.hero-shell--light {
+	.hero-shell--light::before {
 		background-image:
 			linear-gradient(
 				145deg,
@@ -225,6 +246,12 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 				var(--color-surface) 56%,
 				color-mix(in srgb, var(--color-foreground) 5%, var(--color-surface)) 100%
 			);
+	}
+
+	/* La photo de couverture remplace le dégradé : on supprime le ::before. */
+	.hero-shell--with-cover.hero-shell--full::before,
+	.hero-shell--with-cover.hero-shell--light::before {
+		content: none;
 	}
 
 	.hero-layer {
@@ -238,15 +265,23 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 			radial-gradient(circle at 15% 14%, color-mix(in srgb, var(--color-primary) 16%, transparent) 0, transparent 44%),
 			radial-gradient(circle at 84% 20%, color-mix(in srgb, var(--color-foreground) 11%, transparent) 0, transparent 47%);
 		opacity: 0.75;
+		-webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+		mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
 	}
 
+	/*
+	 * Grain organique généré via feTurbulence (SVG inline) — pattern Stripe / Linear / Vercel.
+	 * Le `mix-blend-mode: multiply` intègre le bruit aux teintes du dégradé sans sur-assombrir.
+	 * Mask-image fade en bas pour rester cohérent avec la disparition du dégradé.
+	 */
 	.hero-layer--grain {
-		background-image:
-			linear-gradient(to right, color-mix(in srgb, var(--color-border) 22%, transparent) 1px, transparent 1px),
-			linear-gradient(to bottom, color-mix(in srgb, var(--color-border) 20%, transparent) 1px, transparent 1px);
-		background-size: 34px 34px;
-		mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-		opacity: 0.22;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.55 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+		background-size: 200px 200px;
+		background-repeat: repeat;
+		mix-blend-mode: multiply;
+		opacity: 0.18;
+		-webkit-mask-image: linear-gradient(to bottom, black 35%, transparent 100%);
+		mask-image: linear-gradient(to bottom, black 35%, transparent 100%);
 	}
 
 	.hero-orb {
@@ -273,8 +308,8 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 
 	@media (max-width: 768px) {
 		.hero-layer--grain {
-			background-size: 24px 24px;
-			opacity: 0.16;
+			background-size: 160px 160px;
+			opacity: 0.14;
 		}
 
 		.hero-orb {

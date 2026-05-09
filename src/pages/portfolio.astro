@@ -1,31 +1,33 @@
 ---
 import type { ImageMetadata } from "astro";
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
+import PortfolioHero from "../components/PortfolioHero.astro";
 import CtaSection from "../components/CtaSection.astro";
-import { Image } from "astro:assets";
-import cecilecoachingImage from "../assets/images/screenshots/cecilecoaching.webp";
+import { Picture } from "astro:assets";
 import severineReisserImage from "../assets/images/screenshots/psychologue-leslilas.webp";
 import marieJoseeGrassoImage from "../assets/images/screenshots/psychologue-sorgues.webp";
 import delphineCimaImage from "../assets/images/screenshots/psychologue-manosque.webp";
 import marieClaireBruneauImage from "../assets/images/screenshots/mcbruneau-psychologue-blois.webp";
 import emanuelleFalliganImage from "../assets/images/screenshots/psychologue-sarrebourg.webp";
 import stephanieRequetImage from "../assets/images/screenshots/psychologue-andrezieux-boutheon.webp";
-import thomasMouriesImage from "../assets/images/screenshots/osteopathe-toulouse-mouries.webp";
 import audreyLarcebauImage from "../assets/images/screenshots/psy-emdr-cotebasque.webp";
-import geraldineAdamImage from "../assets/images/screenshots/cours-pilates-fullpage.webp";
 import montpellierPsychologueImage from "../assets/images/screenshots/montpellier-psychologue.webp";
 import psychologueUzesImage from "../assets/images/screenshots/psychologue-uzes.webp";
 import emmanuelleRoucheImage from "../assets/images/screenshots/emmarouche-psycho34.webp";
+import cecileCoachingImage from "../assets/images/screenshots/cecilecoaching.webp";
+import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 type PortfolioProject = {
   title: string;
-  description: string;
   image: ImageMetadata;
   url: string;
   location: string;
   year: number;
+  /** Affiche « Refonte en 2026 » dans les métadonnées de la carte. */
+  refonte2026?: boolean;
+  /** Texte alternatif HTML si « Aperçu du site » est trop générique (SEO / a11y). */
+  imageAlt?: string;
 };
 
 const breadcrumbSchema = {
@@ -50,40 +52,46 @@ const breadcrumbSchema = {
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
 const psychologueProjects: PortfolioProject[] = [
   {
-    title: "Cécile Coaching",
-    description: "Site vitrine pour coach professionnelle",
-    image: cecilecoachingImage,
-    url: "https://cecilecoaching.fr/",
-    location: "Paris",
-    year: 2026,
-  },
-  {
     title: "Sabine Lacas",
-    description: "Site vitrine pour psychologue",
     image: psychologueUzesImage,
     url: "https://psychologue-uzes.fr/",
     location: "Uzes",
     year: 2018,
+    refonte2026: true,
+  },
+  {
+    title: "Marie-Josée Grasso",
+    image: marieJoseeGrassoImage,
+    url: "https://psychologue-sorgues.com/",
+    location: "Sorgues",
+    year: 2016,
+    refonte2026: true,
+  },
+  {
+    title: "Emma Rouche",
+    image: emmanuelleRoucheImage,
+    url: "https://emmarouche-psycho34.com/",
+    location: "Castelnau-le-Lez",
+    year: 2016,
+    refonte2026: true,
+  },
+  {
+    title: "Laure Meslé Yaakoubi",
+    image: montpellierPsychologueImage,
+    url: "https://montpellier-psychologue.pro/",
+    location: "Montpellier",
+    year: 2016,
+    refonte2026: true,
   },
   {
     title: "Séverine Reisser",
-    description: "Site vitrine pour psychologue",
     image: severineReisserImage,
     url: "https://psychologue-leslilas.fr/",
     location: "Les Lilas",
     year: 2019,
   },
   {
-    title: "Marie-Josée Grasso",
-    description: "Site vitrine pour psychologue",
-    image: marieJoseeGrassoImage,
-    url: "https://psychologue-sorgues.com/",
-    location: "Sorgues",
-    year: 2016,
-  },
-  {
     title: "Delphine Cima",
-    description: "Site vitrine pour psychologue",
     image: delphineCimaImage,
     url: "https://psychologue-manosque.net/",
     location: "Manosque",
@@ -91,23 +99,13 @@ const psychologueProjects: PortfolioProject[] = [
   },
   {
     title: "Marie-Claire Bruneau",
-    description: "Site vitrine pour psychologue",
     image: marieClaireBruneauImage,
     url: "https://mcbruneau-psychologue-blois.fr/",
     location: "Blois",
     year: 2017,
   },
   {
-    title: "Emma Rouche",
-    description: "Site vitrine pour psychologue",
-    image: emmanuelleRoucheImage,
-    url: "https://emmarouche-psycho34.com/",
-    location: "Castelnau-le-Lez",
-    year: 2016,
-  },
-  {
     title: "Emanuelle FALLIGAN",
-    description: "Site vitrine pour psychologue",
     image: emanuelleFalliganImage,
     url: "https://psychologue-sarrebourg.fr/",
     location: "Sarrebourg",
@@ -115,45 +113,41 @@ const psychologueProjects: PortfolioProject[] = [
   },
   {
     title: "Stéphanie REQUET-CATINEAN",
-    description: "Site vitrine pour psychologue",
     image: stephanieRequetImage,
     url: "https://psychologue-andrezieux-boutheon.fr/",
     location: "Andrézieux-Bouthéon",
     year: 2016,
   },
   {
-    title: "Laure Meslé Yaakoubi",
-    description: "Site vitrine pour psychologue",
-    image: montpellierPsychologueImage,
-    url: "https://montpellier-psychologue.pro/",
-    location: "Montpellier",
-    year: 2016,
-  },
-  {
     title: "Audrey Larcebau",
-    description: "Site vitrine pour psychologue spécialisée en EMDR",
     image: audreyLarcebauImage,
     url: "https://psy-emdr-cotebasque.fr/",
     location: "Côtebasque",
     year: 2016,
   },
-  {
-    title: "Géraldine Adam",
-    description: "Site vitrine pour coach sportif spécialisée en Pilates",
-    image: geraldineAdamImage,
-    url: "https://cours-pilates.fr/",
-    location: "Sceaux",
-    year: 2015,
-  },
-  {
-    title: "Thomas Mouries",
-    description: "Site vitrine pour ostéopathe D.O avec spécialisations",
-    image: thomasMouriesImage,
-    url: "https://osteopathe-toulouse-mouries.fr/",
-    location: "Toulouse",
-    year: 2018,
-  },
 ];
+
+/** Archives : conception d’origine avant 2019 sans refonte récente — masquées par défaut. */
+const archiveTier = (p: PortfolioProject) => !p.refonte2026 && p.year < 2019;
+
+const projects = psychologueProjects.map((p) => ({
+  ...p,
+  archiveTier: archiveTier(p),
+}));
+
+const conceptionYears = psychologueProjects.map((p) => p.year);
+const conceptionYearMin = Math.min(...conceptionYears);
+const conceptionYearMax = Math.max(...conceptionYears);
+
+const portfolioYears = psychologueProjects.flatMap((p) =>
+  p.refonte2026 ? [p.year, 2026] : [p.year],
+);
+const portfolioYearMin = Math.min(...portfolioYears);
+const portfolioYearMax = Math.max(...portfolioYears);
+const portfolioEyebrow = `Références · ${portfolioYearMin}–${portfolioYearMax}`;
+const portfolioHeroTitle = "Sites pour psychologues. Voici ce que j’optimise.";
+const portfolioHeroSubtitle =
+  "Clarté de l’offre, présence locale Google et première prise de contact — le même socle technique pour chaque mise en ligne.";
 ---
 
 <Layout
@@ -166,43 +160,79 @@ const psychologueProjects: PortfolioProject[] = [
       set:html={JSON.stringify(breadcrumbSchema)}
     />
   </Fragment>
-  <Hero
-    title="Portfolio"
-    subtitle="Quelques réalisations de sites internet"
+  <PortfolioHero
+    eyebrow={portfolioEyebrow}
+    title={portfolioHeroTitle}
+    subtitle={portfolioHeroSubtitle}
     breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Portfolio" }]}
-  />
+  >
+    <p slot="context" class="m-0">
+      Les références ci-dessous sont en majorité des conceptions d’origine entre{" "}
+      <span class="whitespace-nowrap font-medium text-foreground">
+        {conceptionYearMin} et {conceptionYearMax}
+      </span>
+      : certains sites ne sont plus en ligne (arrêt d’activité, reconversion). Les livraisons les plus récentes sont souvent couvertes par une confidentialité —{" "}
+      <a href="/contact/">écrivez-moi</a>
+      {" "}pour en parler.
+    </p>
+  </PortfolioHero>
 
   <section id="sites-psychologues" class="bg-white py-12 sm:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2
         class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl"
       >
-        Portfolio de réalisations
+        Références en ligne
       </h2>
+      <p class="mb-8 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
+        Affichage par défaut : sites encore suivis ou{" "}
+        <span class="font-medium text-foreground">refondus en 2026</span>. Utilisez « Tout l’historique » pour voir également les archives ({conceptionYearMin}–{conceptionYearMax}).
+      </p>
 
       <!-- Projects Grid -->
       <div
         class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
       >
         {
-          psychologueProjects.map((project) => (
-            <article class="flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow hover:shadow-md">
-              <div class="relative aspect-video w-full overflow-hidden bg-surface">
-                <Image
+          projects.map((project, index) => {
+            const featuredBefore = projects
+              .slice(0, index)
+              .filter((p) => !p.archiveTier).length;
+            const isAboveFold = !project.archiveTier && featuredBefore < 3;
+            return (
+            <article
+              class="portfolio-ref-card group flex flex-col overflow-hidden bg-white"
+              data-portfolio-item
+              data-portfolio-archive={project.archiveTier ? "true" : "false"}
+              hidden={project.archiveTier}
+            >
+              <div class="portfolio-ref-card__media relative flex aspect-4/3 w-full items-center justify-center overflow-hidden bg-surface px-2 py-2 sm:px-2.5 sm:py-2.5">
+                <Picture
                   src={project.image}
-                  alt={`Aperçu du site ${project.title}`}
-                  class="h-full w-full object-cover object-top"
-                  loading="lazy"
+                  alt={project.imageAlt ?? `Aperçu du site ${project.title}`}
+                  formats={["avif", "webp"]}
+                  fallbackFormat="webp"
+                  widths={[340, 680, 1020]}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px"
+                  loading={isAboveFold ? "eager" : "lazy"}
                   decoding="async"
-                  width={800}
-                  height={450}
+                  fetchpriority={isAboveFold ? "high" : undefined}
+                  width={1020}
+                  height={765}
+                  pictureAttributes={{
+                    class: "contents",
+                  }}
+                  class="max-h-full max-w-full object-contain object-center"
                 />
               </div>
-              <div class="flex flex-grow flex-col border-t border-border bg-white p-5 sm:p-6">
-                <h3 class="mb-2 text-lg font-semibold text-foreground sm:text-xl">
+              <div class="portfolio-ref-card__body flex grow flex-col border-t border-[rgba(15,42,42,0.07)] bg-white p-5 sm:p-6">
+                <h3 class="relative mb-4 w-fit max-w-full pb-0.5 text-lg font-semibold text-foreground sm:text-xl">
                   {project.title}
+                  <span
+                    class="pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 bg-primary transition-transform duration-200 ease-out group-hover:scale-x-100 group-focus-within:scale-x-100"
+                    aria-hidden="true"
+                  />
                 </h3>
-                <p class="mb-3 text-muted">{project.description}</p>
                 <div class="mb-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
                   <div class="flex items-center">
                     <svg
@@ -246,32 +276,91 @@ const psychologueProjects: PortfolioProject[] = [
                       Conception {project.year}
                     </time>
                   </div>
+                  {
+                    project.refonte2026 && (
+                      <div class="flex items-center font-medium text-foreground">
+                        <RefreshCw
+                          class="mr-1 h-4 w-4 shrink-0 text-primary"
+                          stroke-width={1.5}
+                          aria-hidden="true"
+                        />
+                        <time datetime="2026">Refonte en 2026</time>
+                      </div>
+                    )
+                  }
                 </div>
-                <div class="mt-auto">
+                <div class="mt-auto pt-1">
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn-primary-solid inline-block rounded-lg px-5 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                    aria-label={`Visiter le site ${project.title} (nouvel onglet)`}
+                    class="portfolio-ref-card__link inline-flex items-center gap-1.5 text-sm font-semibold text-foreground underline decoration-primary/35 underline-offset-[6px] transition-[color,text-decoration-color] hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
+                    aria-label={`Voir le site ${project.title} (nouvel onglet)`}
                   >
-                    Visiter le site
+                    Voir le site
+                    <span
+                      class="translate-x-0 transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-focus-within:translate-x-0.5"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
                   </a>
                 </div>
               </div>
             </article>
-          ))
+            );
+          })
         }
+      </div>
+
+      <div class="mb-6 max-w-3xl">
+        <p class="mb-4 text-sm leading-relaxed text-muted sm:text-base">
+          <span class="font-medium text-foreground">Référence complémentaire.</span>{" "}
+          Site vitrine pour{" "}
+          <a
+            href="https://cecilecoaching.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+          >
+            Cécile Coaching — coaching professionnel à Paris
+          </a>
+          .
+        </p>
+        <figure class="overflow-hidden rounded-[10px] border border-[rgba(15,42,42,0.08)] bg-surface shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(15,42,42,0.08)] max-w-xl">
+          <a
+            href="https://cecilecoaching.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex aspect-4/3 items-center justify-center overflow-hidden bg-surface px-2 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            aria-label="Voir le site Cécile Coaching (nouvel onglet)"
+          >
+            <Picture
+              src={cecileCoachingImage}
+              alt="Capture d'écran de la page d'accueil de Cécile Coaching, coach professionnelle APA à Paris"
+              formats={["avif", "webp"]}
+              fallbackFormat="webp"
+              widths={[340, 680]}
+              sizes="(max-width: 640px) 100vw, 480px"
+              loading="lazy"
+              decoding="async"
+              width={680}
+              height={510}
+              pictureAttributes={{
+                class: "contents",
+              }}
+              class="max-h-full max-w-full object-contain object-center"
+            />
+          </a>
+        </figure>
       </div>
 
       <aside
         class="mb-8 max-w-3xl border-l border-border pl-3 text-xs leading-relaxed text-muted sm:text-[0.8125rem]"
-        aria-label="Note sur les réalisations"
+        aria-label="Complément sur le parcours"
       >
-        <p class="mb-2">
-          <span class="font-medium text-muted">Note.</span> Beaucoup des projets
-          présentés sur cette page sont anciens. Certains sites que j'ai conçus il y a plus de 10 ans ne
-          sont plus en ligne (cessation d'activité de leur auteur). Si vous remarquez qu'il n'y a pas beaucoup de réalisations récentes, c'est parce que j'ai longtemps été occupé dans mes fonctions de tech lead ! (en plus des quelques patients que j'ai conservés à mon cabinet) Aujourd'hui, je fais revivre nicodev.fr et je conçois des sites pour psychologues.
+        <p class="m-0">
+          <span class="font-medium text-muted">Complément.</span> Pendant plusieurs années, l’activité freelance était secondaire (fonctions tech lead). Je refonds aujourd’hui nicodev.fr et une offre dédiée aux psychologues — le cadre ci-dessus rappelle déjà pourquoi ce portfolio mélange archives et projets suivis.
         </p>
       </aside>
 
@@ -357,3 +446,37 @@ const psychologueProjects: PortfolioProject[] = [
     secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
   />
 </Layout>
+
+<style>
+  .portfolio-ref-card {
+    border-radius: 10px;
+    border: 1px solid rgba(15, 42, 42, 0.08);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.04),
+      0 8px 24px -8px rgba(15, 42, 42, 0.08);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .portfolio-ref-card:hover,
+  .portfolio-ref-card:focus-within {
+    transform: translateY(-1px);
+    border-color: rgba(15, 42, 42, 0.14);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.05),
+      0 14px 32px -10px rgba(15, 42, 42, 0.12);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .portfolio-ref-card {
+      transition-duration: 0.01ms;
+    }
+
+    .portfolio-ref-card:hover,
+    .portfolio-ref-card:focus-within {
+      transform: none;
+    }
+  }
+</style>

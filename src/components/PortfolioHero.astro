@@ -1,0 +1,234 @@
+---
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+export interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  breadcrumb?: BreadcrumbItem[];
+}
+const { eyebrow, title, subtitle, breadcrumb } = Astro.props;
+---
+
+<section
+  class="portfolio-hero-shell relative isolate overflow-hidden border-b border-border text-foreground"
+  aria-labelledby="portfolio-hero-heading"
+>
+  <div class="portfolio-hero-wash pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="portfolio-hero-grain pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="portfolio-hero-orb portfolio-hero-orb--left pointer-events-none absolute" aria-hidden="true"></div>
+  <div class="portfolio-hero-orb portfolio-hero-orb--right pointer-events-none absolute" aria-hidden="true"></div>
+
+  <div class="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-14 lg:px-8 lg:py-16">
+    {
+      breadcrumb && breadcrumb.length > 0 && (
+        <nav aria-label="Fil d'Ariane" class="mb-5 md:mb-6">
+          <ol class="flex flex-wrap items-center gap-x-2 text-sm text-muted">
+            {breadcrumb.map((item, index) => (
+              <li class="flex items-center gap-x-2">
+                {index > 0 && (
+                  <span
+                    aria-hidden="true"
+                    class="select-none text-[0.8125em] font-normal leading-none text-muted/50"
+                  >
+                    /
+                  </span>
+                )}
+                {item.href ? (
+                  <a href={item.href} class="transition-colors hover:text-foreground">
+                    {item.label}
+                  </a>
+                ) : (
+                  <span class="text-foreground">{item.label}</span>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
+
+    <p class="type-eyebrow mb-4 text-muted">
+      {eyebrow}
+    </p>
+
+    <h1
+      id="portfolio-hero-heading"
+      class="portfolio-hero-title mb-5 max-w-[22ch] font-heading text-[2.125rem] font-semibold leading-[1.08] tracking-tight text-foreground sm:max-w-[28ch] sm:text-[2.5rem] md:max-w-[32ch] md:text-[clamp(2.75rem,4.8vw,4.25rem)] md:leading-[1.06]"
+    >
+      {title}
+    </h1>
+
+    {
+      subtitle && (
+        <p class="mb-6 max-w-2xl text-base leading-relaxed text-muted md:text-lg md:leading-relaxed">
+          {subtitle}
+        </p>
+      )
+    }
+
+    {
+      Astro.slots.has("context") && (
+        <div
+          class="portfolio-hero-context mb-8 max-w-2xl rounded-r-lg border-l-[3px] border-primary px-4 py-3.5 text-sm leading-relaxed text-foreground shadow-sm sm:px-5 sm:text-[0.9375rem] sm:leading-relaxed md:max-w-3xl"
+        >
+          <slot name="context" />
+        </div>
+      )
+    }
+
+    <div
+      class="portfolio-filter-cluster mb-8 flex flex-wrap gap-2 md:gap-2.5"
+      role="toolbar"
+      aria-label="Filtrer les réalisations — par défaut sites suivis ou refondus récemment ; option pour tout l’historique"
+    >
+      <button
+        type="button"
+        class="portfolio-filter-btn rounded-full border border-border bg-background px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        data-portfolio-filter="featured"
+        data-active="true"
+        aria-pressed="true"
+      >
+        Récents & refontes
+      </button>
+      <button
+        type="button"
+        class="portfolio-filter-btn rounded-full border border-border bg-background px-3.5 py-2 text-sm font-medium text-foreground transition-colors hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        data-portfolio-filter="all"
+        aria-pressed="false"
+      >
+        Tout l’historique
+      </button>
+    </div>
+
+    <div class="h-px w-full bg-border" aria-hidden="true"></div>
+  </div>
+</section>
+
+<style>
+  .portfolio-hero-context {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-background));
+  }
+
+  .portfolio-hero-context :global(a) {
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .portfolio-hero-context :global(a:hover) {
+    text-decoration-thickness: 2px;
+  }
+
+  .portfolio-hero-shell {
+    background-color: var(--color-surface);
+    background-image:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--color-primary) 10%, var(--color-surface)) 0%,
+        var(--color-surface) 50%,
+        color-mix(in srgb, var(--color-foreground) 7%, var(--color-surface)) 100%
+      );
+  }
+
+  .portfolio-hero-wash {
+    background:
+      radial-gradient(circle at 15% 14%, color-mix(in srgb, var(--color-primary) 16%, transparent) 0, transparent 44%),
+      radial-gradient(circle at 84% 20%, color-mix(in srgb, var(--color-foreground) 11%, transparent) 0, transparent 47%);
+    opacity: 0.75;
+  }
+
+  .portfolio-hero-grain {
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, var(--color-border) 22%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--color-border) 20%, transparent) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: linear-gradient(to bottom, black 52%, transparent 100%);
+    opacity: 0.2;
+  }
+
+  .portfolio-hero-orb {
+    width: 18rem;
+    height: 18rem;
+    border-radius: var(--radius-full);
+    filter: blur(48px);
+    opacity: 0.35;
+  }
+
+  .portfolio-hero-orb--left {
+    top: -4.5rem;
+    left: -5rem;
+    background: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  }
+
+  .portfolio-hero-orb--right {
+    top: -5.5rem;
+    right: -5rem;
+    background: color-mix(in srgb, var(--color-foreground) 20%, transparent);
+  }
+
+  .portfolio-filter-btn[data-active="true"] {
+    border-color: color-mix(in srgb, var(--color-primary) 65%, var(--color-border));
+    background-color: color-mix(in srgb, var(--color-primary) 12%, var(--color-background));
+    color: var(--color-foreground);
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-hero-grain {
+      background-size: 24px 24px;
+      opacity: 0.14;
+    }
+
+    .portfolio-hero-orb {
+      width: 12rem;
+      height: 12rem;
+      filter: blur(32px);
+      opacity: 0.28;
+    }
+  }
+</style>
+
+<script>
+  function initPortfolioFilters() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>("[data-portfolio-filter]");
+    const articles = document.querySelectorAll<HTMLElement>("[data-portfolio-item]");
+    if (!buttons.length || !articles.length) return;
+
+    const setActive = (active: HTMLButtonElement) => {
+      for (const btn of buttons) {
+        const on = btn === active;
+        btn.dataset.active = on ? "true" : "false";
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+      }
+    };
+
+    const apply = (key: string) => {
+      for (const el of articles) {
+        const archive = el.dataset.portfolioArchive === "true";
+        const show = key === "all" ? true : !archive;
+        el.hidden = !show;
+      }
+    };
+
+    const initial =
+      document.querySelector<HTMLButtonElement>(
+        '[data-portfolio-filter][data-active="true"]',
+      ) ?? buttons[0];
+    apply(initial?.dataset.portfolioFilter ?? "featured");
+
+    for (const btn of buttons) {
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.portfolioFilter ?? "featured";
+        setActive(btn);
+        apply(key);
+      });
+    }
+  }
+
+  initPortfolioFilters();
+  document.addEventListener("astro:page-load", initPortfolioFilters);
+</script>

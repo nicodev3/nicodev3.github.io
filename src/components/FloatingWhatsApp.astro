@@ -1,0 +1,114 @@
+---
+import { MessageCircle } from "@lucide/astro";
+
+/** Numéro sans espaces ni + (cohérent avec footer / wa.me). */
+const waHref = "https://wa.me/33629341367";
+---
+
+<a
+  id="whatsapp-fab"
+  href={waHref}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-fab fixed z-30 flex size-12 items-center justify-center rounded-full bg-primary-foreground text-on-primary shadow-md outline-none ring-offset-2 ring-offset-background transition-[transform,opacity,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+  aria-label="Écrire sur WhatsApp"
+>
+  <MessageCircle size={22} stroke-width={1.75} class="shrink-0" aria-hidden="true" />
+</a>
+
+<style is:global>
+  .whatsapp-fab {
+    bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+    right: max(1rem, env(safe-area-inset-right, 0px));
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.06),
+      0 8px 20px -6px rgba(15, 42, 42, 0.14);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .whatsapp-fab:not([data-scrolled="true"]) {
+      animation: whatsapp-fab-intro 2s ease-out 1 both;
+    }
+  }
+
+  .whatsapp-fab[data-scrolled="true"] {
+    opacity: 0.52;
+    transform: scale(0.94);
+    pointer-events: auto;
+  }
+
+  .whatsapp-fab[data-scrolled="true"]:hover,
+  .whatsapp-fab[data-scrolled="true"]:focus-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @keyframes whatsapp-fab-intro {
+    0% {
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        0 8px 20px -6px rgba(15, 42, 42, 0.14),
+        0 0 0 0 color-mix(in srgb, var(--color-primary-foreground) 40%, transparent);
+    }
+    55% {
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        0 8px 20px -6px rgba(15, 42, 42, 0.14),
+        0 0 0 12px transparent;
+    }
+    100% {
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        0 8px 20px -6px rgba(15, 42, 42, 0.14);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .whatsapp-fab {
+      animation: none !important;
+      transition-duration: 0.01ms;
+    }
+
+    .whatsapp-fab[data-scrolled="true"] {
+      opacity: 0.75;
+      transform: none;
+    }
+
+    .whatsapp-fab[data-scrolled="true"]:hover,
+    .whatsapp-fab[data-scrolled="true"]:focus-visible {
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  function initWhatsAppFab() {
+    const el = document.getElementById("whatsapp-fab");
+    if (!(el instanceof HTMLElement) || el.dataset.bound === "true") return;
+    el.dataset.bound = "true";
+
+    const threshold = 140;
+    let ticking = false;
+
+    function sync() {
+      const node = document.getElementById("whatsapp-fab");
+      if (!node) return;
+      node.dataset.scrolled =
+        window.scrollY > threshold ? "true" : "false";
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(sync);
+      }
+    }
+
+    sync();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  initWhatsAppFab();
+  document.addEventListener("astro:page-load", initWhatsAppFab);
+</script>

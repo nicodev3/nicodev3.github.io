@@ -6,7 +6,7 @@ import ObfuscatedEmail from "../components/ObfuscatedEmail.astro";
 import Header from "../components/Header.astro";
 import ProfessionsSection from "../components/ProfessionsSection.astro";
 import defaultOgImage from "../assets/images/blog/development.webp";
-import { MessageCircle } from "@lucide/astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 
 export interface Props {
   title: string;
@@ -115,11 +115,7 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
     <!-- Contenu `position:fixed` relatif au viewport (évite un ancêtre transform/filter qui casse fixed dans <main>) -->
     <slot name="body-fixed" />
 
-    <!-- Bouton flottant WhatsApp -->
-    <a href="https://wa.me/33629341367" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-[#25D366] text-white rounded-full inline-flex items-center gap-2 px-4 h-12 min-w-[170px] shadow-lg hover:scale-105 transition-transform z-50" aria-label="Discuter sur WhatsApp">
-            <MessageCircle size={20} class="text-white" />
-      <span class="text-sm font-semibold">Discuter sur WhatsApp</span>
-    </a>
+    <FloatingWhatsApp />
 
     <main>
       <slot />
@@ -131,7 +127,15 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
       <div class="shell-layout">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 class="text-lg font-semibold mb-4">Nicolas Devaux</h3>
+            <h3 class="mb-4 font-sans text-xl font-bold leading-tight tracking-tight">
+              <a
+                href="/"
+                class="text-on-foreground transition-colors hover:text-on-foreground/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/55 focus-visible:ring-offset-2 focus-visible:ring-offset-foreground rounded-sm"
+                aria-label="Nicolas Devaux — retour à l’accueil"
+              >
+                NICO<span class="text-primary-300">DEV</span>
+              </a>
+            </h3>
             <p class="text-on-foreground">
               Développeur web et psychologue spécialisé dans la création de
               sites internet pour psychologues.
@@ -182,12 +186,12 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
               </p>
               <a
                 href="https://wa.me/33629341367"
-                class="inline-flex items-center rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-[#0f2918] transition hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-foreground"
+                class="inline-flex items-center justify-center rounded-lg border border-on-foreground/35 bg-transparent px-4 py-2 text-sm font-semibold text-on-foreground transition hover:border-on-foreground/55 hover:bg-white/8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contacter Nicolas Devaux sur WhatsApp"
               >
-                💬 Me contacter sur WhatsApp
+                WhatsApp
               </a>
             </div>
           </div>

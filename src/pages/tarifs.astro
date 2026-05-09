@@ -5,6 +5,7 @@ import BulletList from '../components/BulletList.astro';
 import CtaSection from '../components/CtaSection.astro';
 import OffersSection from '../components/OffersSection.astro';
 import PageSpeedScores from '../components/PageSpeedScores.astro';
+import FaqSection from '../components/FaqSection.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -15,6 +16,54 @@ const breadcrumbSchema = {
 		{ '@type': 'ListItem', position: 2, name: 'Tarifs', item: new URL('/tarifs/', baseUrl).toString() }
 	]
 };
+
+const platformCons = [
+	'15-40€/mois + 500-2000€ de création',
+	'Vous devez tout faire vous-même',
+	'Templates génériques, pas personnalisés',
+	"Pas d'optimisation pour Google",
+	'Support limité, modifications à votre charge',
+	"Pas d'intégration du widget de prise de RDV"
+];
+
+const servicePros = [
+	'29-49€/mois tout inclus',
+	"Je m'occupe de tout pour vous",
+	'Échange direct avec le développeur qui réalise vraiment votre site',
+	'Base professionnelle + adaptation attentive à votre pratique',
+	'Optimisé pour être visible sur Google',
+	'Modifications de contenu assurées par mes soins',
+	'Intégration du widget de prise de RDV incluse'
+];
+
+const tarifsFaqItems = [
+	{
+		question: "Y a-t-il des frais d'installation pour l'abonnement ?",
+		answer:
+			"Non, aucun frais caché. La création de votre site est incluse dans l'abonnement. Vous commencez à payer seulement après la livraison de votre site."
+	},
+	{
+		id: 'faq-modifications',
+		question: "Que signifie « modifications de contenu incluses » (offre Visibilité) ?",
+		answer:
+			"C'est moi qui effectue les modifications de contenu : textes (présentation, tarifs, spécialités), coordonnées, horaires, photo, lien widget RDV. L'offre Visibilité inclut ces modifications. L'offre Sérénité inclut 1 modification simple par mois (texte ou photo). Les changements de structure (nouvelles pages, refonte du design) restent hors périmètre. Vous me contactez, je m'en occupe."
+	},
+	{
+		question: "Combien de temps pour créer mon site ?",
+		answer:
+			"En général deux à trois semaines selon vos disponibilités et les contenus à fournir ; parfois un peu moins si tout arrive vite. Je travaille en étroite collaboration avec vous pour respecter votre calendrier."
+	},
+	{
+		question: "Puis-je résilier l'abonnement à tout moment ?",
+		answer:
+			"Oui, vous pouvez résilier à tout moment. Aucun engagement de durée ni pénalité liée à la seule résiliation : les prestations continuent jusqu'à la fin de la période mensuelle déjà facturée."
+	},
+	{
+		question: "La visibilité sur Google est-elle incluse ?",
+		answer:
+			"Oui, tous mes sites sont optimisés pour être visibles sur Google. Avec l'offre Visibilité & Confiance, vous bénéficiez en plus de la mise en place de votre fiche Google My Business, d'une vérification mensuelle des performances du site et d'une modernisation annuelle pour améliorer votre visibilité et attirer de nouveaux patients."
+	}
+];
 ---
 
 <Layout 
@@ -32,7 +81,7 @@ const breadcrumbSchema = {
 
 	<OffersSection background="white" />
 
-	<section class="border-t border-border bg-white py-10 sm:py-12">
+	<section class="section-y border-t border-border bg-white">
 		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 			<div class="rounded-lg border border-border bg-muted/10 p-6 sm:p-8">
 				<h2 class="mb-4 text-lg font-semibold text-foreground sm:text-xl">
@@ -42,17 +91,17 @@ const breadcrumbSchema = {
 					En plus du site, un abonnement couvre tout ce dont vous avez besoin pour rester en ligne sereinement. Voici ce que vous éviteriez de gérer séparément :
 				</p>
 				<ul class="space-y-2 text-sm text-muted sm:text-base">
-					<li class="flex items-center gap-2">
-						<span class="mt-0.5 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
-						<strong class="text-foreground">Hébergement</strong> — environ 8 à 15 €/mois pour un hébergement fiable et sécurisé
+					<li class="flex items-baseline gap-2">
+						<span class="inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
+						<span><strong class="text-foreground">Hébergement</strong> — environ 8 à 15 €/mois pour un hébergement fiable et sécurisé</span>
 					</li>
-					<li class="flex items-center gap-2">
-						<span class="mt-0.5 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
-						<strong class="text-foreground">Nom de domaine</strong> — environ 10 à 15 €/an (soit 1 à 1,25 €/mois) pour votre adresse internet
+					<li class="flex items-baseline gap-2">
+						<span class="inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
+						<span><strong class="text-foreground">Nom de domaine</strong> — environ 10 à 15 €/an (soit 1 à 1,25 €/mois) pour votre adresse internet</span>
 					</li>
-					<li class="flex items-center gap-2">
-						<span class="mt-0.5 inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
-						<strong class="text-foreground">Maintenance SEO</strong> — suivi et optimisation pour le référencement local peuvent rapidement représenter 100 €/mois ou plus chez un prestataire
+					<li class="flex items-baseline gap-2">
+						<span class="inline-block size-1.5 shrink-0 rounded-full bg-primary"></span>
+						<span><strong class="text-foreground">Maintenance SEO</strong> — suivi et optimisation pour le référencement local peuvent rapidement représenter 100 €/mois ou plus chez un prestataire</span>
 					</li>
 				</ul>
 				<p class="mt-4 text-sm text-muted sm:text-base">
@@ -63,70 +112,72 @@ const breadcrumbSchema = {
 	</section>
 
 	<!-- Philosophie Section -->
-	<section class="py-16 bg-surface">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+	<section class="section-y bg-surface">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl font-bold text-foreground mb-8 text-center">
 				La qualité web au service de votre activité
 			</h2>
-			
-			<div class="prose prose-lg text-muted space-y-6">
+
+			<div class="prose prose-lg mx-auto text-muted space-y-6">
 				<p>
 					Contrairement à la plupart des prestataires qui cachent leurs tarifs, je prône la <strong>transparence totale</strong>. Votre budget doit être investi dans la qualité, pas dans des fonctionnalités inutiles ou des prestations opaques.
 				</p>
 				<p>
 					Je ne fonctionne pas comme une usine à sites. Je préfère faire peu de sites, mais les faire bien, avec une attention réelle portée au contenu, à la lisibilité et aux besoins concrets des psychologues que j’accompagne.
 				</p>
-				
-				<div class="bg-surface p-8 rounded-lg border border-border">
-					<h3 class="text-xl font-semibold text-foreground mb-4">Mes engagements qualité</h3>
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<BulletList 
-							items={[
-								"<strong>Visibilité :</strong> Référencement local, optimisation pour les recherches psychologue",
-								"<strong>Perception :</strong> Design rassurant, navigation intuitive, accessibilité",
-								"<strong>Technique :</strong> Sécurité RGPD, performance, conformité aux standards"
-							]} 
-						/>
-						<BulletList 
-							items={[
-								"<strong>Contenu :</strong> Présentation de vos spécialités, articles de blog thématiques",
-								"<strong>Services :</strong> Intégration du widget de prise de RDV (Doctolib, Qare, Maiia...), prise de rendez-vous sécurisée",
-								"<strong>Accompagnement :</strong> Je m'occupe de toutes vos modifications de contenu"
-							]} 
-						/>
-					</div>
-				</div>
+			</div>
 
-				<div
-					id="performances-pagespeed"
-					class="not-prose mt-10 scroll-mt-24 rounded-lg border border-border bg-white p-6 sm:p-8"
-				>
-					<h3 class="mb-3 text-xl font-semibold text-foreground">
-						Performances techniques (Google PageSpeed)
-					</h3>
-					<p class="mb-3 text-sm text-muted sm:text-base">
-						En complément du design et du contenu, les sites sont pensés pour charger vite sur
-						mobile et respecter les critères techniques que Google utilise aussi pour le
-						référencement. Les scores ci-dessous illustrent ce qu&apos;un site bien optimisé peut
-						obtenir sur PageSpeed Insights (exemple type).
-					</p>
-					<p class="mb-4 text-sm text-muted sm:text-base">
-						Pour votre site actuel, vous pouvez lancer un test gratuit en quelques secondes.
-					</p>
-					<div class="mb-4">
-						<PageSpeedScores title="Exemple de scores pour un site de psychologue" />
-					</div>
-					<a
-						href="https://pagespeed.web.dev/"
-						target="_blank"
-						rel="noopener noreferrer"
-						data-umami-event="pagespeed_test_link_click"
-						class="inline-flex items-center text-sm font-semibold text-primary underline underline-offset-4 hover:no-underline"
-					>
-						Testez les performances de votre site sur Google PageSpeed
-					</a>
+			<div class="mt-10 rounded-lg border border-border bg-white p-6 sm:p-8">
+				<h3 class="text-xl font-semibold text-foreground mb-4">Mes engagements qualité</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<BulletList 
+						items={[
+							"<strong>Visibilité :</strong> Référencement local, optimisation pour les recherches psychologue",
+							"<strong>Perception :</strong> Design rassurant, navigation intuitive, accessibilité",
+							"<strong>Technique :</strong> Sécurité RGPD, performance, conformité aux standards"
+						]} 
+					/>
+					<BulletList 
+						items={[
+							"<strong>Contenu :</strong> Présentation de vos spécialités, articles de blog thématiques",
+							"<strong>Services :</strong> Intégration du widget de prise de RDV (Doctolib, Qare, Maiia...), prise de rendez-vous sécurisée",
+							"<strong>Accompagnement :</strong> Je m'occupe de toutes vos modifications de contenu"
+						]} 
+					/>
 				</div>
-				
+			</div>
+
+			<div
+				id="performances-pagespeed"
+				class="mt-10 scroll-mt-24 rounded-lg border border-border bg-white p-6 sm:p-8"
+			>
+				<h3 class="mb-3 text-xl font-semibold text-foreground">
+					Performances techniques (Google PageSpeed)
+				</h3>
+				<p class="mb-3 text-sm text-muted sm:text-base">
+					En complément du design et du contenu, les sites sont pensés pour charger vite sur
+					mobile et respecter les critères techniques que Google utilise aussi pour le
+					référencement. Les scores ci-dessous illustrent ce qu&apos;un site bien optimisé peut
+					obtenir sur PageSpeed Insights (exemple type).
+				</p>
+				<p class="mb-4 text-sm text-muted sm:text-base">
+					Pour votre site actuel, vous pouvez lancer un test gratuit en quelques secondes.
+				</p>
+				<div class="mb-4">
+					<PageSpeedScores title="Exemple de scores pour un site de psychologue" />
+				</div>
+				<a
+					href="https://pagespeed.web.dev/"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-umami-event="pagespeed_test_link_click"
+					class="inline-flex items-center text-sm font-semibold text-primary underline underline-offset-4 hover:no-underline"
+				>
+					Testez les performances de votre site sur Google PageSpeed
+				</a>
+			</div>
+
+			<div class="prose prose-lg mx-auto text-muted mt-10">
 				<p>
 					Les sites s’appuient sur une base professionnelle sobre, puis sont ajustés avec soin selon votre identité, votre pratique et vos besoins. Ils sont optimisés pour tous les appareils et respectent les règles de communication des professions réglementées. La qualité demande du temps, et mes tarifs en sont le reflet exact.
 				</p>
@@ -135,7 +186,7 @@ const breadcrumbSchema = {
 	</section>
 
 	<!-- Complément : comparaison avec les plateformes (les formules détaillées sont dans OffersSection ci-dessus) -->
-	<section id="tarifs-offres" class="scroll-mt-28 py-16 bg-white">
+	<section id="tarifs-offres" class="section-y scroll-mt-28 bg-white">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="bg-surface p-8 rounded-lg border border-border">
 				<h3 class="text-2xl font-bold text-center text-foreground mb-8">
@@ -145,66 +196,57 @@ const breadcrumbSchema = {
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
 					<div>
 						<h4 class="text-lg font-semibold text-foreground mb-4">Avec Wix, Squarespace, etc. :</h4>
-						<div class="space-y-3">
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">15-40€/mois + 500-2000€ de création</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Vous devez tout faire vous-même</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Templates génériques, pas personnalisés</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Pas d'optimisation pour Google</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Support limité, modifications à votre charge</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Pas d'intégration du widget de prise de RDV</span>
-							</div>
-						</div>
+						<ul class="space-y-3">
+							{platformCons.map((item) => (
+								<li class="flex items-start gap-3">
+									<span
+										aria-hidden="true"
+										class="mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-700"
+									>
+										<svg
+											class="size-3"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="3"
+											stroke-linecap="round"
+										>
+											<path d="M6 6l12 12M18 6L6 18" />
+										</svg>
+									</span>
+									<span class="sr-only">Non&nbsp;:</span>
+									<span class="text-muted">{item}</span>
+								</li>
+							))}
+						</ul>
 					</div>
-					
+
 					<div>
 						<h4 class="text-lg font-semibold text-foreground mb-4">Avec mes services :</h4>
-						<div class="space-y-3">
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">29-49€/mois tout inclus</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Je m'occupe de tout pour vous</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Échange direct avec le développeur qui réalise vraiment votre site</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Base professionnelle + adaptation attentive à votre pratique</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Optimisé pour être visible sur Google</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Modifications de contenu assurées par mes soins</span>
-							</div>
-							<div class="flex items-start">
-								<div class="w-2 h-2 bg-surface-alt rounded-full mt-2 mr-3 shrink-0"></div>
-								<span class="text-muted">Intégration du widget de prise de RDV incluse</span>
-							</div>
-						</div>
+						<ul class="space-y-3">
+							{servicePros.map((item) => (
+								<li class="flex items-start gap-3">
+									<span
+										aria-hidden="true"
+										class="mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700"
+									>
+										<svg
+											class="size-3"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="3"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M5 12l4 4L19 7" />
+										</svg>
+									</span>
+									<span class="sr-only">Oui&nbsp;:</span>
+									<span class="text-muted">{item}</span>
+								</li>
+							))}
+						</ul>
 					</div>
 				</div>
 				
@@ -225,51 +267,14 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	<!-- FAQ Section -->
-	<section class="py-16 bg-surface">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-center text-foreground mb-12">
-				Questions fréquentes
-			</h2>
-			
-			<div class="space-y-6">
-				<div class="bg-surface p-6 rounded-lg border border-border">
-					<h3 class="text-lg font-semibold text-foreground mb-3">Y a-t-il des frais d'installation pour l'abonnement ?</h3>
-					<p class="text-muted">
-						Non, aucun frais caché. La création de votre site est incluse dans l'abonnement. Vous commencez à payer seulement après la livraison de votre site.
-					</p>
-				</div>
-				
-				<div id="faq-modifications" class="bg-surface p-6 rounded-lg border border-border">
-					<h3 class="text-lg font-semibold text-foreground mb-3">Que signifie "modifications de contenu incluses" (offre Visibilité) ?</h3>
-					<p class="text-muted">
-						C'est moi qui effectue les modifications de contenu : textes (présentation, tarifs, spécialités), coordonnées, horaires, photo, lien widget RDV. L'offre Visibilité inclut ces modifications. L'offre Sérénité inclut 1 modification simple par mois (texte ou photo). Les changements de structure (nouvelles pages, refonte du design) restent hors périmètre. Vous me contactez, je m'en occupe.
-					</p>
-				</div>
-				
-				<div class="bg-surface p-6 rounded-lg border border-border">
-					<h3 class="text-lg font-semibold text-foreground mb-3">Combien de temps pour créer mon site ?</h3>
-					<p class="text-muted">
-						En général deux à trois semaines selon vos disponibilités et les contenus à fournir ; parfois un peu moins si tout arrive vite. Je travaille en étroite collaboration avec vous pour respecter votre calendrier.
-					</p>
-				</div>
-				
-				<div class="bg-surface p-6 rounded-lg border border-border">
-					<h3 class="text-lg font-semibold text-foreground mb-3">Puis-je résilier l'abonnement à tout moment ?</h3>
-					<p class="text-muted">
-						Oui, vous pouvez résilier à tout moment. Aucun engagement de durée ni pénalité liée à la seule résiliation : les prestations continuent jusqu'à la fin de la période mensuelle déjà facturée.
-					</p>
-				</div>
-				
-				<div class="bg-surface p-6 rounded-lg border border-border">
-					<h3 class="text-lg font-semibold text-foreground mb-3">La visibilité sur Google est-elle incluse ?</h3>
-					<p class="text-muted">
-						Oui, tous mes sites sont optimisés pour être visibles sur Google. Avec l'offre Visibilité & Confiance, vous bénéficiez en plus de la mise en place de votre fiche Google My Business, d'une vérification mensuelle des performances du site et d'une modernisation annuelle pour améliorer votre visibilité et attirer de nouveaux patients.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+	<FaqSection
+		items={tarifsFaqItems}
+		title="Questions fréquentes"
+		sectionId="faq-tarifs"
+		headingId="faq-tarifs-heading"
+		background="surface"
+		headingAlign="center"
+	/>
 
 	<CtaSection
 		title="Prêt à créer votre site internet ?"

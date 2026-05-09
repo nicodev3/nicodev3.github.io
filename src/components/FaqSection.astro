@@ -1,7 +1,22 @@
 ---
 import { ChevronRight } from '@lucide/astro';
 
-const faqItems = [
+export interface FaqItem {
+	id?: string;
+	question: string;
+	answer: string;
+}
+
+export interface Props {
+	items?: FaqItem[];
+	title?: string;
+	sectionId?: string;
+	headingId?: string;
+	background?: 'white' | 'surface';
+	headingAlign?: 'left' | 'center';
+}
+
+const defaultItems: FaqItem[] = [
 	{
 		question: "Combien de temps faut-il pour lancer le site ?",
 		answer: "En général deux à trois semaines selon vos disponibilités et le temps nécessaire pour compléter le formulaire de contenu ; cela peut être un peu plus rapide lorsque les éléments sont fournis vite."
@@ -50,13 +65,31 @@ const faqItems = [
 			"Le site et les services associés (hébergement, mises à jour, support) sont arrêtés à la fin de la période payée. Vous pouvez demander un export simple des contenus principaux (textes) pour les conserver."
 	}
 ];
+
+const {
+	items = defaultItems,
+	title = 'FAQ',
+	sectionId = 'faq',
+	headingId = 'faq-heading',
+	background = 'white',
+	headingAlign = 'left'
+} = Astro.props;
+
+const sectionBgClass = background === 'surface' ? 'bg-surface' : 'bg-white';
+const headingAlignClass = headingAlign === 'center' ? 'text-center' : '';
 ---
 
-<section id="faq" class="section-y scroll-mt-28 border-b border-border bg-white" aria-labelledby="faq-heading">
+<section
+	id={sectionId}
+	class={`section-y scroll-mt-28 border-b border-border ${sectionBgClass}`}
+	aria-labelledby={headingId}
+>
 	<div class="shell-layout">
-		<h2 id="faq-heading" class="mb-10 text-3xl font-bold text-foreground">FAQ</h2>
+		<h2 id={headingId} class:list={['mb-10 text-3xl font-bold text-foreground', headingAlignClass]}>
+			{title}
+		</h2>
 		<div class="faq-accordion mx-auto max-w-[72ch] overflow-hidden rounded-lg border border-border bg-background divide-y divide-border">
-			{faqItems.map((item) => (
+			{items.map((item) => (
 				<details {...(item.id && { id: item.id })} class:list={['faq-details', item.id && 'scroll-mt-28']}>
 					<summary
 						class="flex cursor-pointer list-none items-start gap-3 px-4 py-6 transition-colors hover:bg-surface-alt sm:px-5 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset"
