@@ -5,13 +5,13 @@ export interface Props {
 	background?: 'surface' | 'white' | 'background';
 }
 
-const { background = 'surface' } = Astro.props;
+const { background = 'white' } = Astro.props;
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 ---
 
-<section id="offres" class={`${bgClass} py-16 sm:py-20`}>
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<header class="mx-auto max-w-3xl text-center">
+<section id="offres" class={`section-y scroll-mt-28 border-b border-border ${bgClass}`}>
+	<div class="shell-layout">
+		<header class="shell-prose mx-auto text-center">
 			<h2 class="text-3xl font-bold text-foreground sm:text-4xl">
 				Une offre simple, tout compris, sans charge technique
 			</h2>
@@ -22,7 +22,7 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 			</p>
 		</header>
 
-		<div class="mt-10 grid grid-cols-1 gap-6 lg:mt-12 lg:grid-cols-2">
+		<div class="mt-10 grid grid-cols-1 gap-6 pt-8 sm:pt-10 lg:mt-12 lg:grid-cols-2 lg:gap-8">
 			<OfferCard
 				name="Sérénité"
 				price="29€"
@@ -38,7 +38,7 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 					'Conforme RGPD',
 					'Sauvegardes régulières'
 				]}
-				buttonLabel="Parler de l’offre Sérénité"
+				buttonLabel="Demander un devis — Sérénité"
 				buttonHref="/devis/"
 			/>
 
@@ -55,13 +55,13 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 					'Modifications de contenu incluses (changements de tarifs, ajouts/retraits de pages, textes...)',
 					'Modernisation du site tous les ans'
 				]}
-				buttonLabel="Parler de l’offre Visibilité"
+				buttonLabel="Demander un devis — Visibilité &amp; Confiance"
 				buttonHref="/devis/"
 				recommended={true}
 				badgeText="Recommandée"
 			/>
 		</div>
-		<div class="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-4 text-sm text-muted sm:mt-10 sm:p-5 sm:text-base">
+		<div class="mt-8 rounded-lg border border-primary/30 bg-primary/5 p-4 text-sm text-muted sm:mt-10 sm:p-5 sm:text-base">
 			<p class="font-medium text-foreground">
 				Un site professionnel, simple, sans gestion technique.
 			</p>
@@ -92,7 +92,7 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 			dans les villes très concurrentielles. Votre site sur la première page n’est pas garantie immédiatement. Une vérification mensuelle est incluse pour vous assurer que tout est en ordre.
 		</p>
 
-		<div class="mt-10 rounded-2xl border border-border bg-background p-5 shadow-sm sm:mt-12 sm:p-6">
+		<div class="mt-10 rounded-lg border border-border bg-background p-5 shadow-sm sm:mt-12 sm:p-6">
 			<h3 class="mb-3 text-base font-semibold text-foreground sm:text-lg">
 				Pourquoi cette solution est différente
 			</h3>

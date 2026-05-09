@@ -30,8 +30,8 @@ const benefitsItems = [
 ];
 ---
 
-<section id="seo-local" class="py-16 bg-surface">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="seo-local" class="section-y scroll-mt-28 border-b border-border bg-surface">
+	<div class="shell-layout">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 			<div>
 				<h2 class="text-3xl font-bold text-foreground mb-6">Référencement local : apparaître quand on cherche un psychologue près de chez soi</h2>
@@ -42,7 +42,7 @@ const benefitsItems = [
 					<p class="text-muted mb-4 text-sm">Ce que vos futurs patients tapent réellement :</p>
 					<div class="flex flex-wrap gap-2">
 						{searchExamples.map((example) => (
-							<span class="bg-surface text-foreground px-3 py-1.5 rounded-lg text-sm">{example}</span>
+							<span class="bg-surface text-foreground px-3 py-1.5 rounded-sm text-sm">{example}</span>
 						))}
 					</div>
 					<p class="text-sm text-muted mt-4 border-l-2 border-border pl-3">En zone très concurrentielle, le référencement peut prendre plusieurs mois. Les bases (structure, contenu, technique) sont posées dès la mise en ligne et favorisent une progression durable.</p>
@@ -63,7 +63,7 @@ const benefitsItems = [
 				</div>
 			</div>
 			<div class="lg:sticky lg:top-8">
-				<div class="bg-background rounded-xl border border-border shadow-sm p-6">
+				<div class="bg-background rounded-lg border border-border shadow-sm p-6">
 					<h3 class="text-lg font-semibold text-foreground mb-4">Ce que ça change pour vous</h3>
 					<ul class="space-y-3 mb-8">
 						{benefitsItems.map((item) => (
@@ -76,11 +76,11 @@ const benefitsItems = [
 						))}
 					</ul>
 					<div class="flex flex-col sm:flex-row gap-3">
-						<a href="/devis/" class="inline-block text-center bg-primary-foreground text-on-primary px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors">
-							Recevoir ma proposition sous 48h
+						<a href="/diagnostic-gratuit/" class="btn-primary-solid inline-block rounded-lg px-5 py-3 text-center">
+							Demander un diagnostic gratuit
 						</a>
-						<a href="#offres" class="inline-block text-center border-2 border-primary text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-background transition-colors">
-							Comparer les offres
+						<a href="/tarifs/" class="btn-outline-accent inline-block rounded-lg border-2 border-primary px-5 py-3 text-center text-foreground hover:bg-background">
+							Voir les tarifs
 						</a>
 					</div>
 				</div>

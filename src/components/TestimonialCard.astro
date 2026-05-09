@@ -2,13 +2,31 @@
 export interface Props {
 	quote: string;
 	author: string;
+	/** 0–2 : palette de cercle distincte pour chaque carte */
+	variant?: number;
 }
 
-const { quote, author } = Astro.props;
+const { quote, author, variant = 0 } = Astro.props;
+
+const firstName = author.split(',')[0]?.trim() ?? '';
+const initial =
+	firstName.length > 0 ? firstName.charAt(0).toLocaleUpperCase('fr-FR') : '?';
+
+const VARIANT_CLASSES = [
+	'bg-primary/20 text-primary-foreground shadow-sm ring-2 ring-primary/25',
+	'bg-[color-mix(in_srgb,var(--color-link)_16%,var(--color-background))] text-[color:var(--color-link)] shadow-sm ring-2 ring-[color-mix(in_srgb,var(--color-link)_38%,transparent)]',
+	'bg-[color-mix(in_srgb,var(--color-foreground)_12%,var(--color-background))] text-foreground shadow-sm ring-2 ring-foreground/18',
+] as const;
+
+const paletteIdx = Math.min(Math.max(variant, 0), VARIANT_CLASSES.length - 1);
+const avatarPalette = VARIANT_CLASSES[paletteIdx];
+
+const avatarLabel =
+	firstName.length > 0 ? `Initiale « ${initial} », ${firstName}` : `Initiale « ${initial} »`;
 ---
 
 <blockquote
-	class="group relative flex h-full flex-col rounded-2xl border border-border/70 bg-background/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5"
+	class="group relative flex h-full flex-col rounded-lg border border-border/70 bg-background/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md"
 >
 	<div class="pointer-events-none absolute inset-x-6 top-0 h-16 bg-gradient-to-b from-primary/5 to-transparent opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
 	<div class="relative">
@@ -16,14 +34,23 @@ const { quote, author } = Astro.props;
 			<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
 				<span class="text-lg leading-none">“</span>
 			</span>
-			<span class="uppercase tracking-[0.18em] text-[0.65rem] text-muted">Témoignage client</span>
+			<span class="type-eyebrow text-muted">Témoignage client</span>
 		</div>
 		<p class="text-sm leading-relaxed text-foreground/90 mb-5">
 			{quote}
 		</p>
 	</div>
 	<footer class="mt-auto flex items-center gap-3 text-sm text-muted">
-		<div class="h-9 w-9 rounded-full bg-gradient-to-tr from-primary/70 via-primary to-primary/60 opacity-90 shadow-sm ring-2 ring-background/90" />
+		<div
+			class:list={[
+				'flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold tracking-tight ring-offset-2 ring-offset-background',
+				avatarPalette,
+			]}
+			role="img"
+			aria-label={avatarLabel}
+		>
+			{initial}
+		</div>
 		<div class="flex flex-col text-left">
 			<span class="font-medium text-foreground">{author}</span>
 			<span class="text-xs text-muted">Psychologue accompagnée avec un site clé en main</span>

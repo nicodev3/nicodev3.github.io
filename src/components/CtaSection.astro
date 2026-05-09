@@ -4,34 +4,41 @@ export interface Props {
 	description: string;
 	primaryButton: { text: string; href: string };
 	secondaryButton: { text: string; href: string };
-	maxWidth?: '4xl' | '6xl' | '7xl';
 	background?: 'surface' | 'white' | 'background';
+	/** Ancre pour navigation sur la page (ex. accueil). */
+	anchorId?: string;
 }
 
-const { title, description, primaryButton, secondaryButton, maxWidth = '7xl', background = 'surface' } = Astro.props;
+const {
+	title,
+	description,
+	primaryButton,
+	secondaryButton,
+	background = 'surface',
+	anchorId,
+} = Astro.props;
 
-const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7xl' }[maxWidth];
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 ---
 
-<section class={`py-16 ${bgClass} border-y border-border`}>
-	<div class={`${maxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 text-center`}>
+<section id={anchorId} class:list={['section-y', bgClass, 'border-t border-border', anchorId && 'scroll-mt-28']}>
+	<div class="shell-layout text-center">
 		<h2 class="text-3xl font-bold mb-4 text-foreground">
 			{title}
 		</h2>
-		<p class="text-xl mb-8 max-w-2xl mx-auto text-muted">
+		<p class="shell-prose text-xl mb-8 mx-auto text-muted">
 			{description}
 		</p>
 		<div class="flex flex-col sm:flex-row gap-4 justify-center">
 			<a
 				href={primaryButton.href}
-				class="bg-primary-foreground text-on-primary px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
+				class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3"
 			>
 				{primaryButton.text}
 			</a>
 			<a
 				href={secondaryButton.href}
-				class="border-2 border-primary text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-background transition-colors"
+				class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary px-5 py-3 text-foreground hover:bg-background"
 			>
 				{secondaryButton.text}
 			</a>

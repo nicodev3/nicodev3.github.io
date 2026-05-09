@@ -27,26 +27,60 @@ if (!import.meta.env.DEV) {
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 			<div>
 				<h2 class="text-2xl font-bold text-foreground mb-2">Tokens couleur</h2>
-				<p class="text-muted">Palette issue de <code>global.css</code>.</p>
+				<p class="text-muted">
+					Palette et typo dans <code>global.css</code> ; rayons et ombres dans <code>src/styles/design-tokens.css</code>.
+					Rayons&nbsp;: <code>rounded-sm</code> (8px, contrôles / chips compacts), <code>rounded-lg</code> et alias <code
+						>rounded-md</code>–<code>rounded-4xl</code> (14px, surfaces), <code>rounded-full</code> (pilules).
+				</p>
 			</div>
-			<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-				<div class="rounded-xl border border-border overflow-hidden">
+			<p class="text-sm text-muted">
+				<code>primary</code> = <code>primary-500</code> · <code>primary-foreground</code> = <code>primary-700</code> (boutons pleins,
+				texte terracotta foncé).
+			</p>
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+				<div class="rounded-lg border border-border overflow-hidden">
+					<div class="h-20 bg-primary-50"></div>
+					<div class="p-3 text-sm">
+						<strong>primary-50</strong><br />
+						<code>bg-primary-50</code>
+					</div>
+				</div>
+				<div class="rounded-lg border border-border overflow-hidden">
+					<div class="h-20 bg-primary-100"></div>
+					<div class="p-3 text-sm">
+						<strong>primary-100</strong><br />
+						<code>bg-primary-100</code>
+					</div>
+				</div>
+				<div class="rounded-lg border border-border overflow-hidden">
+					<div class="h-20 bg-primary-300"></div>
+					<div class="p-3 text-sm">
+						<strong>primary-300</strong><br />
+						<code>bg-primary-300</code>
+					</div>
+				</div>
+				<div class="rounded-lg border border-border overflow-hidden">
 					<div class="h-20 bg-primary"></div>
 					<div class="p-3 text-sm">
-						<strong>primary</strong><br />
-						#FF634A<br />
-						<code>bg-primary</code> · <code>text-primary</code>
+						<strong>primary-500</strong><br />
+						<code>bg-primary</code>
 					</div>
 				</div>
-				<div class="rounded-xl border border-border overflow-hidden">
+				<div class="rounded-lg border border-border overflow-hidden">
 					<div class="h-20 bg-primary-foreground"></div>
 					<div class="p-3 text-sm">
-						<strong>primary-foreground</strong><br />
-						#B83A28<br />
-						<code>bg-primary-foreground</code> · <code>text-on-primary</code> (contraste WCAG AA)
+						<strong>primary-700</strong><br />
+						<code>bg-primary-foreground</code>
 					</div>
 				</div>
-				<div class="rounded-xl border border-border overflow-hidden">
+				<div class="rounded-lg border border-border overflow-hidden">
+					<div class="h-20 bg-primary-900"></div>
+					<div class="p-3 text-sm">
+						<strong>primary-900</strong><br />
+						<code>bg-primary-900</code>
+					</div>
+				</div>
+				<div class="rounded-lg border border-border overflow-hidden">
 					<div class="h-20 bg-foreground"></div>
 					<div class="p-3 text-sm">
 						<strong>foreground</strong><br />
@@ -54,7 +88,7 @@ if (!import.meta.env.DEV) {
 						<code>bg-foreground</code> · <code>text-foreground</code>
 					</div>
 				</div>
-				<div class="rounded-xl border border-border overflow-hidden">
+				<div class="rounded-lg border border-border overflow-hidden">
 					<div class="h-20 bg-background"></div>
 					<div class="p-3 text-sm">
 						<strong>background</strong><br />
@@ -62,7 +96,7 @@ if (!import.meta.env.DEV) {
 						<code>bg-background</code>
 					</div>
 				</div>
-				<div class="rounded-xl border border-border overflow-hidden">
+				<div class="rounded-lg border border-border overflow-hidden">
 					<div class="h-20 bg-surface"></div>
 					<div class="p-3 text-sm">
 						<strong>surface</strong><br />
@@ -70,7 +104,7 @@ if (!import.meta.env.DEV) {
 						<code>bg-surface</code> · <code>text-muted</code>
 					</div>
 				</div>
-				<div class="rounded-xl border border-border overflow-hidden">
+				<div class="rounded-lg border border-border overflow-hidden">
 					<div class="h-20 bg-white"></div>
 					<div class="p-3 text-sm">
 						<strong>neutral-0</strong><br />
@@ -86,9 +120,15 @@ if (!import.meta.env.DEV) {
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 			<div>
 				<h2 class="text-2xl font-bold text-foreground mb-2">Typographie</h2>
-				<p class="text-muted">Titres en Lora, texte courant en Source Sans 3.</p>
+				<p class="text-muted">
+					Titres en Lora, texte courant en Source Sans 3. Échelle indicative&nbsp;: caption <code class="text-foreground">12</code>,
+					small <code class="text-foreground">14</code>, corps <code class="text-foreground">16</code>, chapô <code class="text-foreground">18</code>,
+					puis <code class="text-foreground">20–44px</code> pour les niveaux de titre (tokens <code class="text-foreground">text-*</code> dans{' '}
+					<code class="text-foreground">global.css</code>). Eyebrows&nbsp;: classe <code class="text-foreground">type-eyebrow</code>.
+				</p>
+				<p class="type-eyebrow text-muted mb-2">Exemple de ligne type-eyebrow</p>
 			</div>
-			<div class="rounded-2xl border border-border bg-white p-6">
+			<div class="rounded-lg border border-border bg-white p-6">
 				<h1 class="text-4xl font-bold mb-2">Titre H1 de reference</h1>
 				<h2 class="text-3xl font-bold mb-2">Titre H2 de reference</h2>
 				<h3 class="text-2xl font-bold mb-4">Titre H3 de reference</h3>
@@ -103,12 +143,12 @@ if (!import.meta.env.DEV) {
 			<div>
 				<h2 class="text-2xl font-bold text-foreground mb-2">Elements UI</h2>
 			</div>
-			<div class="rounded-2xl border border-border bg-background p-6">
+			<div class="rounded-lg border border-border bg-background p-6">
 				<div class="flex flex-wrap gap-3 mb-6">
-					<a href="#" class="bg-primary-foreground text-on-primary px-5 py-2 rounded-lg font-semibold">Bouton principal</a>
-					<a href="#" class="border-2 border-primary text-foreground px-5 py-2 rounded-lg font-semibold">Bouton secondaire</a>
+					<a href="#" class="btn-primary-solid rounded-lg px-5 py-3">Bouton principal</a>
+					<a href="#" class="btn-outline-accent rounded-lg border-2 border-primary px-5 py-3 text-foreground">Bouton secondaire</a>
 				</div>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="grid grid-cols-1 gap-6 pt-10 md:grid-cols-2 md:gap-8">
 					<SkillCard title="SkillCard" description="Exemple de carte competence.">
 						<svg slot="icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m6-6H6"></path>
@@ -134,7 +174,7 @@ if (!import.meta.env.DEV) {
 			<div>
 				<h2 class="text-2xl font-bold text-foreground mb-2">Formulaires</h2>
 			</div>
-			<form class="rounded-2xl border border-border bg-white p-6 grid grid-cols-1 md:grid-cols-2 gap-4" aria-label="Exemple formulaire styleguide">
+			<form class="rounded-lg border border-border bg-white p-6 grid grid-cols-1 md:grid-cols-2 gap-4" aria-label="Exemple formulaire styleguide">
 				<FormField id="name" name="name" label="Nom" placeholder="Votre nom" />
 				<FormField id="email" name="email" label="Email" type="email" placeholder="vous@email.fr" />
 				<div class="md:col-span-2">

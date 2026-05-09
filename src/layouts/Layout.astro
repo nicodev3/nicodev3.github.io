@@ -43,6 +43,10 @@ const umamiId =
   import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL ?? import.meta.env.UMAMI_URL;
 const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : "";
+
+/** Pied de page : liens réels avec même traitement visuel (évite les faux-liens). */
+const footerServiceLinkClass =
+  'text-on-foreground underline underline-offset-4 decoration-white/35 hover:opacity-80 hover:decoration-white/55 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80';
 ---
 
 <!doctype html>
@@ -118,7 +122,7 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
     <ProfessionsSection />
 
     <footer class="bg-foreground text-on-foreground py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="shell-layout">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 class="text-lg font-semibold mb-4">Nicolas Devaux</h3>
@@ -129,13 +133,21 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-4">Services</h3>
-            <ul class="space-y-2 text-on-foreground">
-              <li>Création de sites internet</li>
-              <li>Visibilité locale sur Google</li>
-              <li>Design responsive</li>
-              <li>Maintenance web</li>
+            <ul class="space-y-2">
               <li>
-                <a href="/exemples-sites-psychologue/" class="hover:opacity-80"
+                <a href="/#offres" class={footerServiceLinkClass}>Création de sites internet</a>
+              </li>
+              <li>
+                <a href="/#seo-local" class={footerServiceLinkClass}>Visibilité locale sur Google</a>
+              </li>
+              <li>
+                <a href="/#faq-performance-mobile" class={footerServiceLinkClass}>Design responsive</a>
+              </li>
+              <li>
+                <a href="/tarifs/#faq-modifications" class={footerServiceLinkClass}>Maintenance web</a>
+              </li>
+              <li>
+                <a href="/exemples-sites-psychologue/" class={footerServiceLinkClass}
                   >Exemples de sites psychologues</a
                 >
               </li>

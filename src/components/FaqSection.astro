@@ -1,4 +1,6 @@
 ---
+import { ChevronRight } from '@lucide/astro';
+
 const faqItems = [
 	{
 		question: "Combien de temps faut-il pour lancer le site ?",
@@ -14,6 +16,7 @@ const faqItems = [
 		answer: "Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu'il soit clair et rassurant."
 	},
 	{
+		id: 'faq-performance-mobile',
 		question: "Pourquoi dit-on que le site est rapide et léger ?",
 		answer: "Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s'affichent rapidement, même sur mobile ou avec une connexion limitée. C'est agréable pour vos visiteurs et bien vu par les moteurs de recherche."
 	},
@@ -22,6 +25,7 @@ const faqItems = [
 		answer: "Je ne fonctionne pas comme une usine à sites. Je préfère suivre peu de projets, avec un échange direct, pour adapter chaque site à la pratique, au ton et aux besoins réels du psychologue. Il y a une base de travail sobre et éprouvée, mais elle est toujours retravaillée avec attention."
 	},
 	{
+		id: 'faq-doctolib-rdv',
 		question: "Puis-je utiliser Doctolib, Qare ou un autre service de prise de rendez-vous ?",
 		answer: "Oui. J'intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile."
 	},
@@ -48,16 +52,63 @@ const faqItems = [
 ];
 ---
 
-<section class="py-16 bg-surface">
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<h2 class="mb-10 text-3xl font-bold text-foreground">FAQ</h2>
-		<div class="max-w-4xl space-y-4">
+<section id="faq" class="section-y scroll-mt-28 border-b border-border bg-white" aria-labelledby="faq-heading">
+	<div class="shell-layout">
+		<h2 id="faq-heading" class="mb-10 text-3xl font-bold text-foreground">FAQ</h2>
+		<div class="faq-accordion mx-auto max-w-[72ch] overflow-hidden rounded-lg border border-border bg-background divide-y divide-border">
 			{faqItems.map((item) => (
-				<details {...(item.id && { id: item.id })} class="bg-surface rounded-lg p-5 border border-border">
-					<summary class="font-semibold text-foreground cursor-pointer">{item.question}</summary>
-					<p class="text-muted mt-3">{item.answer}</p>
+				<details {...(item.id && { id: item.id })} class:list={['faq-details', item.id && 'scroll-mt-28']}>
+					<summary
+						class="flex cursor-pointer list-none items-start gap-3 px-4 py-6 transition-colors hover:bg-surface-alt sm:px-5 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset"
+					>
+						<span
+							class="faq-chevron mt-0.5 inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/12 text-primary-foreground ring-1 ring-primary/25 transition-transform duration-200 ease-out motion-reduce:transition-none"
+							aria-hidden="true"
+						>
+							<ChevronRight class="size-4.5" stroke-width={2.2} />
+						</span>
+						<span class="min-w-0 flex-1 pt-0.5 text-left text-base font-semibold leading-snug text-foreground">
+							{item.question}
+						</span>
+					</summary>
+					<div class="px-4 pb-6 pt-0 sm:px-5">
+						<p class="ml-10 border-t border-border pt-5 text-sm leading-relaxed text-muted sm:ml-11 sm:text-base">
+							{item.answer}
+						</p>
+					</div>
 				</details>
 			))}
 		</div>
 	</div>
 </section>
+
+<style>
+	/* Masquer le marqueur natif <details> (WebKit + Firefox + ::marker) */
+	.faq-details summary::-webkit-details-marker {
+		display: none;
+	}
+	.faq-details summary {
+		list-style: none;
+	}
+	.faq-details summary::marker {
+		content: '';
+		display: none;
+	}
+
+	.faq-details[open] .faq-chevron {
+		transform: rotate(90deg);
+	}
+</style>
+
+<script is:inline>
+	(function () {
+		function openFaqFromHash() {
+			const id = window.location.hash.slice(1);
+			if (!id) return;
+			const el = document.getElementById(id);
+			if (el instanceof HTMLDetailsElement) el.open = true;
+		}
+		openFaqFromHash();
+		window.addEventListener('hashchange', openFaqFromHash);
+	})();
+</script>

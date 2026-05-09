@@ -18,6 +18,17 @@ const defaultLinks: NavLink[] = [
 
 const { links = defaultLinks } = Astro.props;
 
+const diagnosticCta = {
+	href: '/diagnostic-gratuit/',
+	label: 'Demander un diagnostic gratuit',
+	compactLabel: 'Demander un diagnostic gratuit',
+};
+
+/** Positionnement marque : une personne = les deux expertises (évite la lecture « pour deux audiences »). */
+const brandTagline = 'Par un psychologue & développeur web';
+const brandTaglineHint =
+	'Je suis psychologue et développeur web : une seule personne, les deux expertises.';
+
 /** Chemin sans slash final sauf racine. */
 function normalizePath(p: string): string {
 	if (p === '/' || p === '') return '/';
@@ -38,37 +49,411 @@ function navLinkIsActive(href: string): boolean {
 }
 ---
 
-<header class="bg-white shadow-sm border-b border-border">
-	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigation principale">
-		<div class="flex flex-col sm:flex-row sm:justify-between sm:h-16 py-3 sm:py-0 gap-3 sm:gap-0">
-			<div class="flex items-center">
-				<a href="/" class="text-xl font-bold text-foreground flex flex-col items-start justify-start">
-					<span class="font-bold text-foreground hover:text-primary">NICO<span class="text-primary-foreground">DEV</span></span>
-	
-					<span class="inline-flex items-center gap-1">
-						<span class="inline-block pr-2 py-0.5 rounded-full bg-surface text-foreground text-xs font-semibold">psychologue</span>
-						<span class="text-muted text-xl align-middle">+</span>
-						<span class="inline-block px-2 py-0.5 rounded-full bg-surface text-foreground text-xs font-semibold">développeur web</span>
+<header
+	data-site-header
+	class="sticky top-0 z-40 site-header"
+>
+	<nav class="shell-layout" aria-label="Navigation principale">
+		<div class="site-header__row flex items-center justify-between gap-2 sm:gap-3">
+			<div class="flex min-w-0 items-center">
+				<a
+					href="/"
+					data-site-wordmark
+					class="site-header__brand"
+					aria-current={currentPath === '/' ? 'page' : undefined}
+				>
+					<span
+						class:list={[
+							'site-header__wordmark',
+							currentPath === '/' ? 'text-primary-foreground' : null,
+						]}
+					>
+						NICO<span class="text-primary-foreground">DEV</span>
+					</span>
+
+					<span
+						class="site-header__tagline max-w-[18rem] sm:max-w-none"
+						title={brandTaglineHint}
+					>
+						{brandTagline}
 					</span>
 				</a>
 			</div>
-			<div class="flex items-center gap-5 sm:gap-8 overflow-x-auto pb-1 sm:pb-0 text-sm sm:text-base">
-				{links.map((link) => {
-					const active = navLinkIsActive(link.href);
-					return (
-						<a
-							href={link.href}
-							class:list={[
-								'whitespace-nowrap transition-colors',
-								active ? 'font-medium text-primary' : 'text-muted hover:text-primary',
-							]}
-							aria-current={active ? 'page' : undefined}
-						>
-							{link.label}
-						</a>
-					);
-				})}
+
+			<div class="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3 md:gap-6 md:flex-none">
+				<div class="hidden md:flex md:items-center md:gap-7 lg:gap-8 shrink-0">
+					{links.map((link) => {
+						const active = navLinkIsActive(link.href);
+						const scrollspyRoot = currentPath === '/';
+						return (
+							<a
+								href={link.href}
+								data-main-nav
+								class="site-nav-link"
+								data-active={!scrollspyRoot && active ? 'true' : undefined}
+								aria-current={!scrollspyRoot && active ? 'page' : undefined}
+							>
+								{link.label}
+							</a>
+						);
+					})}
+				</div>
+
+				<a
+					href={diagnosticCta.href}
+					data-header-diagnostic-cta
+					class="btn-primary-solid inline-flex max-[380px]:max-w-38 max-[380px]:truncate shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				>
+					{diagnosticCta.compactLabel}
+				</a>
+
+			<button
+				type="button"
+				class="mobile-nav-toggle md:hidden inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg border border-border bg-white text-foreground shadow-sm transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				aria-expanded="false"
+				aria-controls="mobile-nav-drawer"
+				data-mobile-nav-toggle
+			>
+				<span class="sr-only">Ouvrir le menu</span>
+				<svg class="mobile-nav-icon-open h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+					<path d="M4 6h16M4 12h16M4 18h16" />
+				</svg>
+				<svg class="mobile-nav-icon-close hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+					<path d="M18 6 6 18M6 6l12 12" />
+				</svg>
+			</button>
 			</div>
 		</div>
 	</nav>
+
+	<div
+		id="mobile-nav-drawer"
+		class="mobile-nav-drawer md:hidden fixed inset-0 z-50 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
+		role="dialog"
+		aria-modal="true"
+		aria-label="Menu de navigation"
+		aria-hidden="true"
+		data-mobile-nav-drawer
+		hidden
+	>
+		<div class="flex min-h-14 shrink-0 items-center justify-between gap-3 border-b border-border px-4 py-3">
+			<a href="/" class="flex min-w-0 flex-col items-start gap-0.5 text-foreground" data-mobile-nav-close-wordmark>
+				<span class="text-lg font-bold leading-tight">
+					NICO<span class="text-primary-foreground">DEV</span>
+				</span>
+				<span class="text-[0.6875rem] font-semibold leading-snug text-muted" title={brandTaglineHint}>
+					{brandTagline}
+				</span>
+			</a>
+			<button
+				type="button"
+				class="inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg border border-border bg-white text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				aria-label="Fermer le menu"
+				data-mobile-nav-close
+			>
+				<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+					<path d="M18 6 6 18M6 6l12 12" />
+				</svg>
+			</button>
+		</div>
+
+		<nav class="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6" aria-label="Liens principaux">
+			{links.map((link) => {
+				const active = navLinkIsActive(link.href);
+				const scrollspyRoot = currentPath === '/';
+				return (
+					<a
+						href={link.href}
+						data-main-nav
+						data-mobile-nav-link
+						class:list={[
+							'rounded-lg px-3 py-3 text-lg transition-colors touch-manipulation',
+							!scrollspyRoot && active ? 'font-semibold text-primary bg-surface' : 'text-foreground hover:bg-surface',
+						]}
+						aria-current={!scrollspyRoot && active ? 'page' : undefined}
+					>
+						{link.label}
+					</a>
+				);
+			})}
+		</nav>
+
+		<div class="shrink-0 border-t border-border bg-white p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-md">
+			<a
+				href={diagnosticCta.href}
+				class="btn-primary-solid flex w-full touch-manipulation items-center justify-center rounded-lg px-5 py-3 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				data-mobile-nav-link
+			>
+				{diagnosticCta.label}
+			</a>
+		</div>
+	</div>
 </header>
+
+<script>
+	let mobileNavTeardown: (() => void) | undefined;
+	let headerChromeTeardown: (() => void) | undefined;
+	let navScrollSpyTeardown: (() => void) | undefined;
+
+	function normalizeClientPath(p: string): string {
+		if (!p || p === '/') return '/';
+		const trimmed = p.replace(/\/+$/, '');
+		return trimmed === '' ? '/' : trimmed;
+	}
+
+	/** Repères de page d’accueil → chemin nav correspondant (sans slash final sauf racine). */
+	const HOME_SCROLL_SLICES: Array<{ id: string; nav: string | null }> = [
+		{ id: 'site-hero', nav: null },
+		{ id: 'accueil-differentiation', nav: '/about' },
+		{ id: 'expertise-contact', nav: '/about' },
+		{ id: 'blog', nav: '/blog' },
+		{ id: 'comment-ca-marche', nav: '/about' },
+		{ id: 'offres', nav: '/tarifs' },
+		{ id: 'seo-local', nav: '/tarifs' },
+		{ id: 'temoignages', nav: '/portfolio' },
+		{ id: 'faq', nav: '/portfolio' },
+		{ id: 'contact-accueil', nav: '/contact' },
+	];
+
+	function setupHomeNavScrollspy(): () => void {
+		if (normalizeClientPath(window.location.pathname) !== '/') {
+			return () => {};
+		}
+
+		const ac = new AbortController();
+		const { signal } = ac;
+
+		function headerOffsetPx(): number {
+			const h = document.querySelector<HTMLElement>('[data-site-header]');
+			return (h?.getBoundingClientRect().height ?? 72) + 12;
+		}
+
+		function computeActiveNavPath(): string | null {
+			const scrollLine = window.scrollY + headerOffsetPx();
+			let activeNav: string | null = null;
+			for (const slice of HOME_SCROLL_SLICES) {
+				const el = document.getElementById(slice.id);
+				if (!el) continue;
+				const top = el.getBoundingClientRect().top + window.scrollY;
+				if (top <= scrollLine) activeNav = slice.nav;
+			}
+			return activeNav;
+		}
+
+		function syncNavScrollspy() {
+			const header = document.querySelector('[data-site-header]');
+			if (!header) return;
+
+			const activeNav = computeActiveNavPath();
+
+			header.querySelectorAll<HTMLAnchorElement>('a[data-main-nav]').forEach((a) => {
+				const path = normalizeClientPath(new URL(a.href).pathname);
+				const isSpy = activeNav !== null && path === normalizeClientPath(activeNav);
+
+				const inDrawer = !!a.closest('[data-mobile-nav-drawer]');
+
+				if (!inDrawer) {
+					if (isSpy) {
+						a.dataset.active = 'true';
+						a.setAttribute('aria-current', 'location');
+					} else {
+						delete a.dataset.active;
+						a.removeAttribute('aria-current');
+					}
+				} else if (isSpy) {
+					a.classList.add('font-semibold', 'text-primary', 'bg-surface');
+					a.classList.remove('text-foreground');
+					a.setAttribute('aria-current', 'location');
+				} else {
+					a.classList.remove('font-semibold', 'text-primary', 'bg-surface');
+					a.classList.add('text-foreground');
+					a.removeAttribute('aria-current');
+				}
+			});
+		}
+
+		let ticking = false;
+		function scheduleSync() {
+			if (ticking) return;
+			ticking = true;
+			requestAnimationFrame(() => {
+				ticking = false;
+				syncNavScrollspy();
+			});
+		}
+
+		scheduleSync();
+
+		window.addEventListener('scroll', scheduleSync, { passive: true, signal });
+		window.addEventListener('resize', scheduleSync, { passive: true, signal });
+
+		return () => {
+			ac.abort();
+		};
+	}
+
+	function setupHeaderChrome() {
+		headerChromeTeardown?.();
+
+		const header = document.querySelector<HTMLElement>('[data-site-header]');
+		if (!header) return;
+
+		const siteHeader = header;
+
+		const ac = new AbortController();
+		const { signal } = ac;
+
+		function syncScrollState() {
+			const scrolled = window.scrollY > 6;
+			if (scrolled) {
+				siteHeader.dataset.scrolled = 'true';
+			} else {
+				delete siteHeader.dataset.scrolled;
+			}
+		}
+
+		let scrollScheduled = false;
+		window.addEventListener(
+			'scroll',
+			() => {
+				if (scrollScheduled) return;
+				scrollScheduled = true;
+				requestAnimationFrame(() => {
+					scrollScheduled = false;
+					syncScrollState();
+				});
+			},
+			{ passive: true, signal },
+		);
+
+		syncScrollState();
+
+		headerChromeTeardown = () => {
+			ac.abort();
+			headerChromeTeardown = undefined;
+		};
+	}
+
+	function setupMobileNav() {
+		mobileNavTeardown?.();
+
+		const toggle = document.querySelector<HTMLButtonElement>('[data-mobile-nav-toggle]');
+		const drawer = document.querySelector<HTMLElement>('[data-mobile-nav-drawer]');
+
+		if (!toggle || !drawer) return;
+
+		const navToggle = toggle;
+		const navDrawer = drawer;
+
+		const ac = new AbortController();
+		const { signal } = ac;
+
+		const closeButtons = navDrawer.querySelectorAll<HTMLButtonElement>('[data-mobile-nav-close]');
+		const links = navDrawer.querySelectorAll<HTMLAnchorElement>('[data-mobile-nav-link]');
+		const wordmarkClose = navDrawer.querySelector<HTMLAnchorElement>('[data-mobile-nav-close-wordmark]');
+
+		const iconOpen = navToggle.querySelector('.mobile-nav-icon-open');
+		const iconClose = navToggle.querySelector('.mobile-nav-icon-close');
+
+		let previouslyFocused: HTMLElement | null = null;
+
+		function isOpen() {
+			return navToggle.getAttribute('aria-expanded') === 'true';
+		}
+
+		function open() {
+			previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+			navDrawer.hidden = false;
+			document.body.style.overflow = 'hidden';
+			requestAnimationFrame(() => {
+				navDrawer.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+				navDrawer.classList.add('translate-x-0', 'opacity-100');
+				navDrawer.setAttribute('aria-hidden', 'false');
+				navToggle.setAttribute('aria-expanded', 'true');
+				const sr = navToggle.querySelector('.sr-only');
+				if (sr) sr.textContent = 'Fermer le menu';
+				iconOpen?.classList.add('hidden');
+				iconClose?.classList.remove('hidden');
+				navDrawer.querySelector<HTMLElement>('[data-mobile-nav-close]')?.focus();
+			});
+		}
+
+		function close() {
+			navDrawer.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+			navDrawer.classList.remove('translate-x-0', 'opacity-100');
+			navDrawer.setAttribute('aria-hidden', 'true');
+			navToggle.setAttribute('aria-expanded', 'false');
+			const sr = navToggle.querySelector('.sr-only');
+			if (sr) sr.textContent = 'Ouvrir le menu';
+			iconOpen?.classList.remove('hidden');
+			iconClose?.classList.add('hidden');
+			document.body.style.overflow = '';
+
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+			const settleHidden = () => {
+				navDrawer.hidden = true;
+			};
+
+			if (prefersReducedMotion) {
+				settleHidden();
+			} else {
+				const onEnd = (e: TransitionEvent) => {
+					if (e.target !== navDrawer) return;
+					navDrawer.removeEventListener('transitionend', onEnd);
+					settleHidden();
+				};
+				navDrawer.addEventListener('transitionend', onEnd);
+				window.setTimeout(() => {
+					navDrawer.removeEventListener('transitionend', onEnd);
+					if (navDrawer.hidden === false && navToggle.getAttribute('aria-expanded') === 'false') settleHidden();
+				}, 400);
+			}
+
+			previouslyFocused?.focus();
+			previouslyFocused = null;
+		}
+
+		navToggle.addEventListener(
+			'click',
+			() => {
+				if (isOpen()) close();
+				else open();
+			},
+			{ signal },
+		);
+
+		closeButtons.forEach((btn) => btn.addEventListener('click', close, { signal }));
+
+		links.forEach((a) => a.addEventListener('click', close, { signal }));
+
+		wordmarkClose?.addEventListener('click', close, { signal });
+
+		document.addEventListener(
+			'keydown',
+			(e) => {
+				if (e.key === 'Escape' && isOpen()) {
+					e.preventDefault();
+					close();
+				}
+			},
+			{ signal },
+		);
+
+		mobileNavTeardown = () => {
+			ac.abort();
+			document.body.style.overflow = '';
+			mobileNavTeardown = undefined;
+		};
+	}
+
+	function initHeader() {
+		navScrollSpyTeardown?.();
+		setupMobileNav();
+		setupHeaderChrome();
+		navScrollSpyTeardown = setupHomeNavScrollspy();
+	}
+
+	initHeader();
+	document.addEventListener('astro:after-swap', initHeader);
+</script>

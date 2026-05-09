@@ -8,7 +8,7 @@ export interface Props {
 const { title, description, centered = true } = Astro.props;
 ---
 
-<div class={`bg-background p-6 rounded-lg shadow-lg border border-border ${centered ? 'text-center' : ''}`}>
+<div class={`rounded-lg border border-border bg-background p-6 shadow-sm ${centered ? 'text-center' : ''}`}>
 	<div class={`w-16 h-16 bg-surface rounded-full flex items-center justify-center ${centered ? 'mx-auto' : ''} mb-4`}>
 		<div class="text-foreground">
 			<slot name="icon" />

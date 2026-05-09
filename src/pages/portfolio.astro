@@ -186,7 +186,7 @@ const psychologueProjects: PortfolioProject[] = [
       >
         {
           psychologueProjects.map((project) => (
-            <article class="flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow hover:shadow-md sm:rounded-xl">
+            <article class="flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow hover:shadow-md">
               <div class="relative aspect-video w-full overflow-hidden bg-surface">
                 <Image
                   src={project.image}
@@ -252,7 +252,7 @@ const psychologueProjects: PortfolioProject[] = [
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-block rounded-lg bg-primary-foreground px-4 py-2 font-semibold text-on-primary transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    class="btn-primary-solid inline-block rounded-lg px-5 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     aria-label={`Visiter le site ${project.title} (nouvel onglet)`}
                   >
                     Visiter le site
@@ -275,7 +275,7 @@ const psychologueProjects: PortfolioProject[] = [
         </p>
       </aside>
 
-      <div class="mb-10 rounded-xl border border-border bg-surface p-5 sm:p-6">
+      <div class="mb-10 rounded-lg border border-border bg-surface p-5 sm:p-6">
         <h3 class="mb-3 text-lg font-semibold text-foreground">
           Ce que montrent ces réalisations
         </h3>
@@ -304,7 +304,7 @@ const psychologueProjects: PortfolioProject[] = [
       </div>
 
       <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div class="rounded-xl border border-border bg-background p-6">
+        <div class="rounded-lg border border-border bg-background p-6">
           <h3 class="mb-4 text-lg font-semibold text-foreground">
             Méthode de travail
           </h3>
@@ -318,7 +318,7 @@ const psychologueProjects: PortfolioProject[] = [
             </li>
           </ol>
         </div>
-        <div class="rounded-xl border border-border bg-surface p-6">
+        <div class="rounded-lg border border-border bg-surface p-6">
           <h3 class="mb-4 text-lg font-semibold text-foreground">
             Ce que vous pouvez attendre
           </h3>
@@ -333,16 +333,16 @@ const psychologueProjects: PortfolioProject[] = [
           </p>
           <div class="mt-5 flex flex-col gap-3 sm:flex-row">
             <a
-              href="/tarifs/"
-              class="inline-block rounded-lg border-2 border-primary px-4 py-2 text-center font-semibold text-foreground transition-colors hover:bg-background"
+              href="/diagnostic-gratuit/"
+              class="btn-primary-solid inline-block rounded-lg px-5 py-3 text-center"
             >
-              Voir les offres
+              Demander un diagnostic gratuit
             </a>
             <a
-              href="/contact/"
-              class="inline-block rounded-lg bg-primary-foreground px-4 py-2 text-center font-semibold text-on-primary transition-colors hover:opacity-90"
+              href="/tarifs/"
+              class="btn-outline-accent inline-block rounded-lg border-2 border-primary px-5 py-3 text-center text-foreground hover:bg-background"
             >
-              Recevoir une proposition en 48h
+              Voir les tarifs
             </a>
           </div>
         </div>
@@ -352,8 +352,8 @@ const psychologueProjects: PortfolioProject[] = [
 
   <CtaSection
     title="Vous avez un projet similaire ?"
-    description="Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé."
-    primaryButton={{ text: "Me contacter", href: "/contact/" }}
-    secondaryButton={{ text: "Voir mes tarifs", href: "/tarifs/" }}
+    description="Un diagnostic gratuit permet de faire le point ; les tarifs détaillent les formules."
+    primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+    secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
   />
 </Layout>

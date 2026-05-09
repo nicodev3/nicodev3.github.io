@@ -1,18 +1,18 @@
 ---
 import { Image } from "astro:assets";
 import { Check } from '@lucide/astro';
-import developmentImage from "../assets/images/development.webp";
+import portraitNicolas from "../assets/images/nicodev.webp";
 ---
 
-<section class="expertise-section py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="expertise-contact" class="expertise-section section-y scroll-mt-28" aria-labelledby="expertise-heading">
+  <div class="shell-layout">
     <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
       <div class="min-w-0">
-        <p class="expertise-kicker mb-3">Un accompagnement entre professionnels</p>
-        <h2 class="text-3xl font-bold text-foreground mb-6">
+        <p class="expertise-kicker type-eyebrow mb-3">Un accompagnement entre professionnels</p>
+        <h2 id="expertise-heading" class="text-3xl font-bold text-foreground mb-6">
           J'accompagne les psychologues dans leur communication digitale et leur visibilité sur Internet
         </h2>
-        <div class="text-lg text-muted max-w-3xl">
+        <div class="shell-prose text-lg text-muted">
           <p class="mb-5 text-base font-medium leading-snug text-foreground md:text-lg">
             Je ne travaille pas comme une usine à sites : je prends peu de projets, avec attention, pour proposer des
             sites vraiment adaptés aux besoins de mes confrères psychologues.
@@ -58,15 +58,17 @@ import developmentImage from "../assets/images/development.webp";
       <div class="flex justify-center lg:justify-end">
         <figure class="expertise-visual">
           <Image
-            src={developmentImage}
-            alt="Psychologue et développeur web au service des confrères"
-            width={640}
-            height={426}
-            widths={[384, 530, 640]}
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 640px"
-            class="rounded-2xl w-full max-w-md"
+            src={portraitNicolas}
+            alt="Portrait de Nicolas Devaux, psychologue et développeur web"
+            width={520}
+            height={520}
+            widths={[280, 400, 520]}
+            sizes="(max-width: 768px) 85vw, (max-width: 1024px) 42vw, 520px"
+            class="mx-auto aspect-square w-full max-w-[min(100%,20rem)] rounded-lg object-cover sm:max-w-[22rem]"
           />
-          <figcaption class="expertise-caption">20 ans d'expérience web, dont des postes de tech lead.</figcaption>
+          <figcaption class="expertise-caption">
+            Psychologue en cabinet et développeur web — 20 ans d'expérience web, dont des responsabilités de tech lead.
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -75,7 +77,7 @@ import developmentImage from "../assets/images/development.webp";
 
 <style>
   .expertise-section {
-    border-block: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     background:
       radial-gradient(circle at 10% 18%, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 42%),
       radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--color-foreground) 8%, transparent), transparent 38%),
@@ -84,24 +86,20 @@ import developmentImage from "../assets/images/development.webp";
 
   .expertise-kicker {
     width: fit-content;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     color: var(--color-foreground);
     background: color-mix(in srgb, var(--color-primary) 18%, transparent);
     border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
-    border-radius: 9999px;
+    border-radius: var(--radius-full);
     padding: 0.35rem 0.75rem;
   }
 
   .expertise-visual {
     margin: 0;
-    border-radius: 1rem;
+    border-radius: var(--radius-lg);
     padding: 0.7rem;
     background: color-mix(in srgb, white 70%, var(--color-surface));
     border: 1px solid color-mix(in srgb, var(--color-border) 70%, white);
-    box-shadow: 0 18px 40px color-mix(in srgb, var(--color-foreground) 14%, transparent);
+    box-shadow: var(--shadow-sm);
   }
 
   .expertise-caption {
@@ -134,7 +132,7 @@ import developmentImage from "../assets/images/development.webp";
     width: 1.35rem;
     height: 1.35rem;
     margin-top: 0.1rem;
-    border-radius: 9999px;
+    border-radius: var(--radius-full);
     color: var(--color-primary);
     flex-shrink: 0;
   }

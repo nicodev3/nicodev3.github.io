@@ -1,0 +1,33 @@
+/**
+ * Tokens rayon & élévation — source Tailwind (@theme).
+ *
+ * Rayons : trois valeurs sémantiques seulement —
+ *   • contrôle (sm) : 8px — champs, chips compacts, focus rings
+ *   • surface (md … 4xl) : 14px — cartes, boutons, panneaux, prose (aliases identiques)
+ *   • pilule (full) : 9999px — avatars, badges capsule, pastilles
+ *
+ * Ne pas introduire de 12px ni 16px côte à côte : tout « grande surface » passe par 14px.
+ * Ombres : --shadow-sm | --shadow-md | --shadow-lg (utilitaires shadow-*).
+ * Les couleurs sont définies avant import dans global.css (@theme).
+ */
+@theme {
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 14px;
+    --radius-xl: 14px;
+    --radius-2xl: 14px;
+    --radius-3xl: 14px;
+    --radius-4xl: 14px;
+
+    --radius-full: 9999px;
+
+    --shadow-sm:
+        0 1px 2px color-mix(in srgb, var(--color-foreground) 7%, transparent),
+        0 4px 14px color-mix(in srgb, var(--color-foreground) 5%, transparent);
+    --shadow-md:
+        0 4px 8px color-mix(in srgb, var(--color-foreground) 8%, transparent),
+        0 14px 32px color-mix(in srgb, var(--color-foreground) 9%, transparent);
+    --shadow-lg:
+        0 10px 26px color-mix(in srgb, var(--color-foreground) 11%, transparent),
+        0 26px 52px color-mix(in srgb, var(--color-foreground) 10%, transparent);
+}

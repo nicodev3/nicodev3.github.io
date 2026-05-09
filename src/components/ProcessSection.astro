@@ -43,42 +43,26 @@ const steps: ProcessStep[] = [
 
 const includedBento = [
 	{
-		title: "Jusqu’à la prévisualisation",
-		subtitle: "Cadrage, contenu, premier rendu",
+		title: "Inclus dans le forfait",
+		subtitle: "Jusqu’à la prévisualisation, votre adresse web et la livraison",
 		items: [
 			"Diagnostic express et validation du pack",
 			"Choix du template et palette de couleurs",
 			"Formulaire guidé pour centraliser tout le contenu",
-			"Prévisualisation sous 5–7 jours avec checklist"
-		],
-		gridClass:
-			"lg:col-span-7 min-h-0 border-border bg-surface [&_svg]:text-foreground",
-		isNegative: false
-	},
-	{
-		title: "Livraison",
-		subtitle: "Corrections & mise en ligne",
-		items: [
+			"Prévisualisation sous 5–7 jours avec checklist",
+			"Nom de domaine et hébergement, sans gestion technique de votre côté",
 			"1 aller-retour de corrections mineures",
 			"Mise en ligne et intégration widget RDV (Doctolib, Qare...)"
 		],
-		gridClass: "lg:col-span-5 border-border bg-surface [&_svg]:text-foreground",
-		isNegative: false
-	},
-	{
-		title: "Votre adresse sur le web",
-		subtitle: "Sans gestion technique de votre côté",
-		items: ["Votre nom de domaine et hébergement"],
 		gridClass:
-			"lg:col-span-4 border-primary/25 bg-gradient-to-br from-surface to-[color-mix(in_srgb,var(--color-primary)_6%,var(--color-surface))] [&_svg]:text-primary-foreground",
+			"border-primary/25 bg-gradient-to-br from-surface to-[color-mix(in_srgb,var(--color-primary)_6%,var(--color-surface))] [&_svg]:text-primary-foreground",
 		isNegative: false
 	},
 	{
 		title: "Hors forfait création",
 		subtitle: "À prévoir si le besoin évolue",
 		items: ["Modifications majeures après validation du site (facturées) : ajout de section, etc."],
-		gridClass:
-			"lg:col-span-8 border-dashed border-muted/40 bg-background/80 [&_svg]:text-muted",
+		gridClass: "border-dashed border-muted/40 bg-background/80 [&_svg]:text-muted",
 		isNegative: true
 	}
 ] as const;
@@ -86,11 +70,11 @@ const includedBento = [
 const checkIcon = "m4.5 12.75l6 6l9-13.5";
 const crossIcon = "M6 18 18 6M6 6l12 12";
 
-const { ctaHref = "/devis/", ctaLabel = "Recevoir ma proposition personnalisée" } = Astro.props;
+const { ctaHref = '/diagnostic-gratuit/', ctaLabel = 'Demander un diagnostic gratuit' } = Astro.props;
 ---
 
-<section id="comment-ca-marche" class="py-16 bg-surface-alt">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="comment-ca-marche" class="section-y scroll-mt-28 border-b border-border bg-surface-alt">
+	<div class="shell-layout">
 		<div class="text-center mb-10">
 		<h2 class="text-3xl font-bold text-foreground">Un processus simple, sans charge technique</h2>
 		<p class="text-muted mt-3">5 étapes claires, peu de temps à y consacrer, et aucun aspect technique à gérer de votre côté.</p>
@@ -98,7 +82,7 @@ const { ctaHref = "/devis/", ctaLabel = "Recevoir ma proposition personnalisée"
 
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
 			{steps.map((step, index) => (
-				<div class="process-step-card relative overflow-hidden rounded-xl border border-border bg-surface p-5 sm:p-6">
+				<div class="process-step-card relative overflow-hidden rounded-lg border border-border bg-surface p-5 sm:p-6">
 					<span class="process-step-watermark" aria-hidden="true">
 						{String(index + 1).padStart(2, "0")}
 					</span>
@@ -124,15 +108,15 @@ const { ctaHref = "/devis/", ctaLabel = "Recevoir ma proposition personnalisée"
 
 		<div class="mt-12">
 			<h3 class="text-center text-lg font-semibold text-foreground mb-6">Ce qui est inclus (et ce qui ne l’est pas)</h3>
-			<div class="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-5">
+			<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5 lg:items-stretch">
 				{includedBento.map((tile) => (
 					<div
 						class:list={[
-							"rounded-2xl border p-5 sm:p-6 flex flex-col",
+							"rounded-lg border p-5 sm:p-6 flex flex-col min-h-0",
 							tile.gridClass
 						]}
 					>
-						<p class="text-xs font-medium uppercase tracking-wide text-muted">{tile.subtitle}</p>
+						<p class="type-eyebrow text-muted">{tile.subtitle}</p>
 						<h4 class="mt-1 font-heading text-lg font-semibold text-foreground">{tile.title}</h4>
 						<ul class="mt-4 space-y-3 flex-1">
 							{tile.items.map((item) => (
@@ -164,7 +148,7 @@ const { ctaHref = "/devis/", ctaLabel = "Recevoir ma proposition personnalisée"
 		</div>
 
 		<div class="mt-10 text-center">
-			<a href={ctaHref} class="inline-block bg-primary-foreground text-on-primary px-7 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors">
+			<a href={ctaHref} class="btn-primary-solid inline-block rounded-lg px-5 py-3">
 				{ctaLabel}
 			</a>
 		</div>
@@ -186,7 +170,7 @@ const { ctaHref = "/devis/", ctaLabel = "Recevoir ma proposition personnalisée"
 		font-weight: 700;
 		line-height: 0.82;
 		letter-spacing: -0.045em;
-		color: color-mix(in srgb, var(--color-foreground) 9%, transparent);
+		color: color-mix(in srgb, var(--color-primary-500) 15%, transparent);
 		pointer-events: none;
 		user-select: none;
 	}

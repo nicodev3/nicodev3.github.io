@@ -54,7 +54,7 @@ const renderInline = (value: string): string =>
 const renderImage = (altText: string, src: string): string => {
   const safeAlt = escapeHtml(altText);
   const safeSrc = escapeHtml(src);
-  return `<figure class="my-8"><img src="${safeSrc}" alt="${safeAlt}" loading="lazy" decoding="async" class="w-full rounded-2xl border border-slate-200 bg-white shadow-sm" /><figcaption class="mt-3 text-sm text-slate-600">${safeAlt}</figcaption></figure>`;
+  return `<figure class="my-8"><img src="${safeSrc}" alt="${safeAlt}" loading="lazy" decoding="async" class="w-full rounded-lg border border-slate-200 bg-white shadow-sm" /><figcaption class="mt-3 text-sm text-slate-600">${safeAlt}</figcaption></figure>`;
 };
 
 const buildNavigation = (source: string) => {
@@ -124,7 +124,7 @@ const renderMarkdown = (source: string): string => {
     };
 
     html.push(
-      `<aside class="my-6 rounded-2xl border px-5 py-4 ${styles[boxType] ?? styles.INFO}"><p class="mb-2 text-sm font-bold uppercase tracking-[0.18em]">${boxType}</p><p>${renderInline(
+      `<aside class="my-6 rounded-lg border px-5 py-4 ${styles[boxType] ?? styles.INFO}"><p class="mb-2 text-sm font-bold uppercase tracking-[0.18em]">${boxType}</p><p>${renderInline(
         boxLines.join(" "),
       )}</p></aside>`,
     );
@@ -186,7 +186,7 @@ const renderMarkdown = (source: string): string => {
       flushList();
       flushOrdered();
       html.push(
-        `<div class="my-8 rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50 px-6 py-8 text-center text-slate-700"><p class="mb-2 text-sm font-semibold uppercase tracking-[0.18em]">Illustration</p><p>${renderInline(
+        `<div class="my-8 rounded-lg border-2 border-dashed border-slate-300 bg-slate-50 px-6 py-8 text-center text-slate-700"><p class="mb-2 text-sm font-semibold uppercase tracking-[0.18em]">Illustration</p><p>${renderInline(
           line.slice(15, -1).trim(),
         )}</p></div>`,
       );
@@ -309,7 +309,7 @@ const renderedHtml = isDev ? renderMarkdown(markdown) : "";
         isDev ? (
           <>
             <div class="pt-28 sm:pt-32">
-              <div class="mb-8 rounded-2xl border border-teal-200 bg-teal-50 px-5 py-4 text-teal-950">
+              <div class="mb-8 rounded-lg border border-teal-200 bg-teal-50 px-5 py-4 text-teal-950">
                 <p class="text-sm font-semibold uppercase tracking-[0.18em]">
                   Preview locale
                 </p>
@@ -319,13 +319,13 @@ const renderedHtml = isDev ? renderMarkdown(markdown) : "";
               </div>
 
               <article
-                class="guide-preview prose prose-slate mx-auto max-w-4xl rounded-3xl bg-white px-6 py-10 shadow-sm sm:px-10"
+                class="guide-preview prose prose-slate mx-auto max-w-4xl rounded-lg bg-white px-6 py-10 shadow-sm sm:px-10"
                 set:html={renderedHtml}
               />
             </div>
           </>
         ) : (
-          <div class="rounded-3xl bg-white px-8 py-10 shadow-sm">
+          <div class="rounded-lg bg-white px-8 py-10 shadow-sm">
             <h1 class="text-3xl font-bold text-slate-900">Prévisualisation indisponible</h1>
             <p class="mt-4 text-slate-700">
               Cette route est réservée au développement local et n’affiche pas le contenu du guide en production.
@@ -379,10 +379,8 @@ const renderedHtml = isDev ? renderMarkdown(markdown) : "";
     transform: translate(-50%, -50%);
     width: 0.45rem;
     height: 0.45rem;
-    border-radius: 9999px;
+    border-radius: var(--radius-full);
     background: rgb(15 118 110);
-    box-shadow:
-      0 0 0 3px rgb(255 255 255),
-      0 0 0 4px rgb(13 148 136 / 0.25);
+    box-shadow: 0 0 0 3px rgb(255 255 255);
   }
 </style>

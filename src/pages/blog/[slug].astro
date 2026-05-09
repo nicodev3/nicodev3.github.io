@@ -157,32 +157,30 @@ const breadcrumbSchema = {
 				prose-strong:text-foreground
 				prose-blockquote:border-l-4 prose-blockquote:border-border prose-blockquote:bg-surface prose-blockquote:rounded-r-lg prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-muted
 				prose-code:text-foreground prose-code:bg-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
-				prose-pre:bg-foreground prose-pre:text-on-foreground prose-pre:rounded-xl prose-pre:shadow-lg
+				prose-pre:bg-foreground prose-pre:text-on-foreground prose-pre:rounded-lg prose-pre:shadow-md
 				prose-ul:my-4 prose-li:my-1 prose-li:text-muted
 				prose-ol:my-4
-				prose-img:rounded-xl prose-img:shadow-md prose-img:mx-auto
+				prose-img:rounded-lg prose-img:shadow-sm prose-img:mx-auto
 				prose-hr:border-border">
 				<Content />
 			</div>
 		</div>
 	</article>
 
-	<!-- Liens internes : exemples, tarifs et contact -->
+	<!-- Liens internes : diagnostic et tarifs (alignés avec le reste du site) -->
 	<section class="py-12 bg-surface border-t border-border">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-xl font-semibold text-foreground mb-4">Un projet de site web ?</h2>
 			<p class="text-muted mb-6">
-				Vous cherchez un site professionnel pour votre cabinet ? Consultez <a href="/exemples-sites-psychologue/" class="text-foreground font-medium hover:text-primary">des exemples de sites pour psychologues</a>, mes <a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a> ou <a href="/contact/" class="text-foreground font-medium hover:text-primary">contactez-moi</a> pour en discuter.
+				Vous cherchez un site professionnel pour votre cabinet ? Un diagnostic gratuit permet de faire le point ; la page tarifs détaille les formules. Pour vous projeter visuellement, vous pouvez aussi consulter des{' '}
+				<a href="/exemples-sites-psychologue/" class="text-foreground font-medium hover:text-primary">exemples de sites pour psychologues</a>.
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<a href="/exemples-sites-psychologue/" class="inline-flex items-center bg-background text-foreground border-2 border-border px-5 py-2.5 rounded-lg font-medium hover:bg-surface transition-colors">
-					Voir un aperçu
+				<a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center rounded-lg px-5 py-3">
+					Demander un diagnostic gratuit
 				</a>
-				<a href="/tarifs/" class="inline-flex items-center bg-primary-foreground text-on-primary px-5 py-2.5 rounded-lg font-medium hover:opacity-90 transition-colors">
+				<a href="/tarifs/" class="btn-outline-accent inline-flex items-center rounded-lg border-2 border-primary bg-background px-5 py-3 text-foreground hover:bg-surface">
 					Voir les tarifs
-				</a>
-				<a href="/contact/" class="inline-flex items-center bg-background text-foreground border-2 border-primary px-5 py-2.5 rounded-lg font-medium hover:bg-surface transition-colors">
-					Me contacter
 				</a>
 			</div>
 		</div>
@@ -216,7 +214,7 @@ const breadcrumbSchema = {
 			<div class="text-center">
 				<a 
 					href="/blog/"
-					class="inline-flex items-center bg-primary-foreground text-on-primary px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
+					class="btn-primary-solid inline-flex items-center rounded-lg px-5 py-3"
 				>
 					← Retour au blog
 				</a>

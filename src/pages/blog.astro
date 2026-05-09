@@ -46,7 +46,7 @@ const sortedPosts = posts.sort((a, b) => {
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			{allTags.length > 0 && (
 				<nav class="mb-10" aria-label="Filtrer par tag">
-				<h2 class="text-sm font-semibold text-muted uppercase tracking-wider mb-3">Parcourir par thématique</h2>
+				<h2 class="type-eyebrow text-muted mb-3">Parcourir par thématique</h2>
 				<div class="flex flex-wrap gap-2">
 					{allTags.map((t) => (
 						<a href={toTagHref(t)} class="inline-flex items-center px-4 py-2 rounded-full bg-surface text-foreground hover:bg-surface-alt font-medium text-sm transition-colors">
@@ -74,9 +74,8 @@ const sortedPosts = posts.sort((a, b) => {
 			<div class="mt-16 pt-12 border-t border-border text-center">
 				<p class="text-muted mb-4">Un projet de site web pour votre cabinet ?</p>
 				<div class="flex flex-wrap justify-center gap-4">
-					<a href="/exemples-sites-psychologue/" class="text-foreground font-medium hover:text-primary">Voir un aperçu des sites</a>
-					<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">Voir mes tarifs</a>
-					<a href="/contact/" class="text-foreground font-medium hover:text-primary">Me contacter</a>
+					<a href="/diagnostic-gratuit/" class="text-foreground font-medium hover:text-primary">Demander un diagnostic gratuit</a>
+					<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">Voir les tarifs</a>
 				</div>
 			</div>
 		</div>

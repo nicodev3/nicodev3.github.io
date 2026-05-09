@@ -34,7 +34,7 @@ const breadcrumbSchema = {
 
 	<section class="border-t border-border bg-white py-10 sm:py-12">
 		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-			<div class="rounded-2xl border border-border bg-muted/10 p-6 sm:p-8">
+			<div class="rounded-lg border border-border bg-muted/10 p-6 sm:p-8">
 				<h2 class="mb-4 text-lg font-semibold text-foreground sm:text-xl">
 					Pourquoi un abonnement mensuel ?
 				</h2>
@@ -77,7 +77,7 @@ const breadcrumbSchema = {
 					Je ne fonctionne pas comme une usine à sites. Je préfère faire peu de sites, mais les faire bien, avec une attention réelle portée au contenu, à la lisibilité et aux besoins concrets des psychologues que j’accompagne.
 				</p>
 				
-				<div class="bg-surface p-8 rounded-xl border border-border">
+				<div class="bg-surface p-8 rounded-lg border border-border">
 					<h3 class="text-xl font-semibold text-foreground mb-4">Mes engagements qualité</h3>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<BulletList 
@@ -99,7 +99,7 @@ const breadcrumbSchema = {
 
 				<div
 					id="performances-pagespeed"
-					class="not-prose mt-10 scroll-mt-24 rounded-xl border border-border bg-white p-6 sm:p-8"
+					class="not-prose mt-10 scroll-mt-24 rounded-lg border border-border bg-white p-6 sm:p-8"
 				>
 					<h3 class="mb-3 text-xl font-semibold text-foreground">
 						Performances techniques (Google PageSpeed)
@@ -135,14 +135,14 @@ const breadcrumbSchema = {
 	</section>
 
 	<!-- Tarifs Section : Offres détaillées (même contenu que OffersSection) -->
-	<section class="py-16 bg-white">
+	<section id="tarifs-offres" class="scroll-mt-28 py-16 bg-white">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<p class="text-center text-muted mb-12 max-w-2xl mx-auto">
 				Tous les tarifs sont TTC. Les abonnements sont sans engagement et résiliables à tout moment.
 			</p>
 			
 			<!-- Avantages du modèle abonnement -->
-			<div class="mt-0 bg-white p-8 rounded-xl shadow-lg border border-border">
+			<div class="mt-0 rounded-lg border border-border bg-white p-8 shadow-md">
 				<h3 class="text-2xl font-bold text-center text-foreground mb-8">
 					Pourquoi choisir l'abonnement ?
 				</h3>
@@ -178,7 +178,7 @@ const breadcrumbSchema = {
 			</div>
 			
 			<!-- Comparaison avec les plateformes -->
-			<div class="mt-16 bg-surface p-8 rounded-xl border border-border">
+			<div class="mt-16 bg-surface p-8 rounded-lg border border-border">
 				<h3 class="text-2xl font-bold text-center text-foreground mb-8">
 					Pourquoi choisir mes services plutôt qu'une plateforme ?
 				</h3>
@@ -312,12 +312,11 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	<CtaSection 
+	<CtaSection
 		title="Prêt à créer votre site internet ?"
 		description="Discutons de votre projet et choisissons ensemble la formule qui correspond à vos besoins."
-		primaryButton={{ text: "Demander un devis gratuit", href: "/devis/" }}
-		secondaryButton={{ text: "Voir un aperçu des sites", href: "/exemples-sites-psychologue/" }}
-		maxWidth="4xl"
+		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/#tarifs-offres' }}
 		background="white"
 	/>
 </Layout>

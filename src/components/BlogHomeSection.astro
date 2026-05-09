@@ -10,10 +10,10 @@ interface Props {
 const { posts } = Astro.props;
 ---
 
-<section id="blog" class="py-16 bg-white border-y border-border/60" aria-labelledby="blog-home-heading">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="max-w-3xl mb-10">
-			<p class="text-sm font-semibold uppercase tracking-wider text-muted mb-2">Blog</p>
+<section id="blog" class="section-y scroll-mt-28 border-b border-border bg-white" aria-labelledby="blog-home-heading">
+	<div class="shell-layout">
+		<div class="shell-prose mb-10">
+			<p class="type-eyebrow text-muted mb-2">Blog</p>
 			<h2 id="blog-home-heading" class="text-3xl font-bold text-foreground">
 				Des réponses aux questions que vous posez peut-être concernant votre présence sur Internet en tant que psychologue libéral
 			</h2>
@@ -21,11 +21,15 @@ const { posts } = Astro.props;
 				Installation, premiers patients, visibilité Google, site vs Doctolib… Des articles rédigés pour les psychologues en libéral, pour clarifier les sujets que vous cherchez sur le web — souvent longtemps avant de demander un devis.
 			</p>
 		</div>
-		<div class="relative lg:px-10 xl:px-14" data-carousel-root>
+
+		<div class="relative flex flex-col gap-4" data-carousel-root>
 			<div
-				class="flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+				class="flex gap-6 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 rounded-lg"
 				data-carousel-track
-				aria-label="Articles du blog"
+				tabindex="0"
+				role="region"
+				aria-roledescription="carrousel"
+				aria-label="Articles du blog — faites défiler horizontalement"
 			>
 				{posts.map((post) => (
 					<div class="snap-start shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
@@ -43,30 +47,42 @@ const { posts } = Astro.props;
 					</div>
 				))}
 			</div>
-			<button
-				type="button"
-				class="absolute left-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary/60 text-white shadow-md ring-2 ring-white/70 transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:left-2 sm:bg-primary/70 lg:-left-5 lg:bg-primary xl:-left-6"
-				aria-label="Voir les articles précédents"
-				data-carousel-prev
-			>
-				<span aria-hidden="true">←</span>
-			</button>
-			<button
-				type="button"
-				class="absolute right-1 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-primary/60 text-white shadow-md ring-2 ring-white/70 transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:right-2 sm:bg-primary/70 lg:-right-5 lg:bg-primary xl:-right-6"
-				aria-label="Voir les articles suivants"
-				data-carousel-next
-			>
-				<span aria-hidden="true">→</span>
-			</button>
-			<div class="mt-4 flex items-center justify-center" data-carousel-controls>
-				<p class="text-sm text-muted tabular-nums" aria-live="polite">
-					<span data-carousel-current>1</span>
-					<span aria-hidden="true"> / </span>
-					<span data-carousel-total>{posts.length}</span>
-				</p>
+
+			<div class="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 sm:gap-x-4" data-carousel-toolbar>
+				<button
+					type="button"
+					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
+					aria-label="Articles précédents"
+					data-carousel-prev
+				>
+					<span aria-hidden="true">←</span>
+				</button>
+
+				<div class="flex min-w-0 flex-col items-center gap-2 justify-self-center">
+					<p class="text-base font-medium tabular-nums text-foreground sm:text-lg" aria-live="polite">
+						<span data-carousel-current>1</span>
+						<span class="text-muted" aria-hidden="true"> / </span>
+						<span data-carousel-total>{posts.length}</span>
+					</p>
+					<div class="flex flex-wrap justify-center gap-2" data-carousel-dots aria-label="Pagination du carrousel"></div>
+					<p
+						data-carousel-swipe-hint
+						class="hidden max-w-[16rem] text-center text-xs italic leading-snug text-muted motion-reduce:transition-none"
+						aria-hidden="true"
+					/>
+				</div>
+
+				<button
+					type="button"
+					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
+					aria-label="Articles suivants"
+					data-carousel-next
+				>
+					<span aria-hidden="true">→</span>
+				</button>
 			</div>
 		</div>
+
 		<div class="mt-12 text-center">
 			<a
 				href="/blog/"
@@ -79,43 +95,181 @@ const { posts } = Astro.props;
 </section>
 
 <script>
-	const carouselRoot = document.querySelector('[data-carousel-root]');
-	const carouselTrack = carouselRoot?.querySelector('[data-carousel-track]');
-	const prevButton = carouselRoot?.querySelector('[data-carousel-prev]');
-	const nextButton = carouselRoot?.querySelector('[data-carousel-next]');
-	const currentLabel = carouselRoot?.querySelector('[data-carousel-current]');
-	const totalLabel = carouselRoot?.querySelector('[data-carousel-total]');
+	let blogCarouselTeardown: (() => void) | undefined;
 
-	if (
-		carouselTrack instanceof HTMLElement &&
-		prevButton instanceof HTMLButtonElement &&
-		nextButton instanceof HTMLButtonElement &&
-		currentLabel instanceof HTMLElement &&
-		totalLabel instanceof HTMLElement
-	) {
-		const getScrollStep = () => carouselTrack.clientWidth;
+	function setupBlogCarousel() {
+		blogCarouselTeardown?.();
 
-		const updateButtons = () => {
-			const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
-			const rawIndex = Math.round(carouselTrack.scrollLeft / Math.max(getScrollStep(), 1)) + 1;
-			const maxIndex = Math.max(Math.ceil(carouselTrack.scrollWidth / Math.max(getScrollStep(), 1)), 1);
-			const clampedIndex = Math.min(Math.max(rawIndex, 1), maxIndex);
-			prevButton.disabled = carouselTrack.scrollLeft <= 8;
-			nextButton.disabled = carouselTrack.scrollLeft >= maxScroll - 8;
-			currentLabel.textContent = String(clampedIndex);
-			totalLabel.textContent = String(maxIndex);
+		const carouselRoot = document.querySelector('[data-carousel-root]');
+		const carouselTrack = carouselRoot?.querySelector<HTMLElement>('[data-carousel-track]');
+		const prevButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-carousel-prev]');
+		const nextButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-carousel-next]');
+		const currentLabel = carouselRoot?.querySelector<HTMLElement>('[data-carousel-current]');
+		const totalLabel = carouselRoot?.querySelector<HTMLElement>('[data-carousel-total]');
+		const dotsContainer = carouselRoot?.querySelector<HTMLElement>('[data-carousel-dots]');
+		const swipeHint = carouselRoot?.querySelector<HTMLElement>('[data-carousel-swipe-hint]');
+
+		if (
+			!carouselRoot ||
+			!carouselTrack ||
+			!prevButton ||
+			!nextButton ||
+			!currentLabel ||
+			!totalLabel ||
+			!dotsContainer
+		) {
+			return;
+		}
+
+		const track = carouselTrack;
+		const dotsEl = dotsContainer;
+		const prevBtn = prevButton;
+		const nextBtn = nextButton;
+		const curLabel = currentLabel;
+		const totLabel = totalLabel;
+
+		const ac = new AbortController();
+		const { signal } = ac;
+
+		const getScrollStep = () => track.clientWidth;
+
+		const getPageCount = () =>
+			Math.max(Math.ceil(track.scrollWidth / Math.max(getScrollStep(), 1)), 1);
+
+		const getMaxScroll = () => track.scrollWidth - track.clientWidth;
+
+		function scrollToPage(pageIndex: number) {
+			const maxScroll = getMaxScroll();
+			const step = getScrollStep();
+			const target = Math.min(Math.max(0, pageIndex) * step, maxScroll);
+			track.scrollTo({ left: target, behavior: 'smooth' });
+		}
+
+		function rebuildDots(pageCount: number, activePage: number) {
+			dotsEl.innerHTML = '';
+			for (let i = 0; i < pageCount; i++) {
+				const btn = document.createElement('button');
+				btn.type = 'button';
+				btn.className =
+					'h-2.5 w-2.5 shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+					(i === activePage ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
+				btn.setAttribute('aria-label', `Afficher la série d’articles ${i + 1} sur ${pageCount}`);
+				if (i === activePage) btn.setAttribute('aria-current', 'true');
+				btn.addEventListener(
+					'click',
+					() => {
+						scrollToPage(i);
+					},
+					{ signal },
+				);
+				dotsEl.appendChild(btn);
+			}
+		}
+
+		let dotRebuildScheduled = false;
+		function scheduleDotRebuild() {
+			if (dotRebuildScheduled) return;
+			dotRebuildScheduled = true;
+			requestAnimationFrame(() => {
+				dotRebuildScheduled = false;
+				updateButtons(true);
+			});
+		}
+
+		function updateButtons(rebuildDotsMaybe = false) {
+			const maxScroll = getMaxScroll();
+			const step = Math.max(getScrollStep(), 1);
+			const pageCount = getPageCount();
+			const rawIndex = Math.round(track.scrollLeft / step);
+			const clampedPage = Math.min(Math.max(rawIndex, 0), pageCount - 1);
+
+			prevBtn.disabled = track.scrollLeft <= 8;
+			nextBtn.disabled = track.scrollLeft >= maxScroll - 8;
+			curLabel.textContent = String(clampedPage + 1);
+			totLabel.textContent = String(pageCount);
+
+			if (rebuildDotsMaybe || dotsEl.childElementCount !== pageCount) {
+				rebuildDots(pageCount, clampedPage);
+			} else {
+				Array.from(dotsEl.querySelectorAll('button')).forEach((btn, i) => {
+					const on = i === clampedPage;
+					btn.className =
+						'h-2.5 w-2.5 shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+						(on ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
+					if (on) btn.setAttribute('aria-current', 'true');
+					else btn.removeAttribute('aria-current');
+				});
+			}
+		}
+
+		function setupSwipeHint() {
+			const hintMaybe = swipeHint;
+			if (!hintMaybe) return;
+			const swipeHintEl = hintMaybe;
+			const coarse = window.matchMedia('(pointer: coarse)').matches;
+			if (!coarse || sessionStorage.getItem('blog-carousel-swipe-dismissed')) return;
+
+			swipeHintEl.textContent = '← Glissez pour voir plus →';
+			swipeHintEl.classList.remove('hidden');
+			swipeHintEl.removeAttribute('aria-hidden');
+
+			function hideSwipeHint() {
+				swipeHintEl.classList.add('hidden');
+				swipeHintEl.setAttribute('aria-hidden', 'true');
+				sessionStorage.setItem('blog-carousel-swipe-dismissed', '1');
+			}
+
+			const onScrollDismiss = () => {
+				if (sessionStorage.getItem('blog-carousel-swipe-dismissed')) return;
+				if (track.scrollLeft > 12) hideSwipeHint();
+			};
+
+			track.addEventListener('scroll', onScrollDismiss, { passive: true, signal });
+			window.setTimeout(hideSwipeHint, 10000);
+		}
+
+		prevBtn.addEventListener(
+			'click',
+			() => {
+				track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+			},
+			{ signal },
+		);
+
+		nextBtn.addEventListener(
+			'click',
+			() => {
+				track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+			},
+			{ signal },
+		);
+
+		carouselRoot.addEventListener(
+			'keydown',
+			(e: Event) => {
+				if (!(e instanceof KeyboardEvent)) return;
+				if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+				const ae = document.activeElement;
+				if (!(ae instanceof Node) || !track.contains(ae)) return;
+				e.preventDefault();
+				const dir = e.key === 'ArrowLeft' ? -1 : 1;
+				track.scrollBy({ left: dir * getScrollStep(), behavior: 'smooth' });
+			},
+			{ capture: true, signal },
+		);
+
+		track.addEventListener('scroll', () => updateButtons(false), { passive: true, signal });
+		window.addEventListener('resize', scheduleDotRebuild, { signal });
+
+		updateButtons(true);
+		setupSwipeHint();
+
+		blogCarouselTeardown = () => {
+			ac.abort();
+			blogCarouselTeardown = undefined;
 		};
-
-		prevButton.addEventListener('click', () => {
-			carouselTrack.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
-		});
-
-		nextButton.addEventListener('click', () => {
-			carouselTrack.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
-		});
-
-		carouselTrack.addEventListener('scroll', updateButtons, { passive: true });
-		window.addEventListener('resize', updateButtons);
-		updateButtons();
 	}
+
+	setupBlogCarousel();
+	document.addEventListener('astro:after-swap', setupBlogCarousel);
 </script>

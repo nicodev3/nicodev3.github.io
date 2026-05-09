@@ -68,12 +68,12 @@ const personSchema = {
   />
 
   <!-- About Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
+  <section class="section-y border-b border-border bg-white">
+    <div class="shell-layout">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <div class="min-w-0">
           <h2 class="text-3xl font-bold text-foreground mb-6">Mon parcours</h2>
-          <div class="prose prose-lg text-muted space-y-4">
+          <div class="shell-prose prose prose-lg text-muted space-y-4">
             <p>
               Je suis <a
                 href="https://nicolas-devaux-psychologue.fr"
@@ -106,7 +106,7 @@ const personSchema = {
           <Image
             src={developmentImage}
             alt="Nicolas Devaux - Développeur web spécialisé sites pour psychologues"
-            class="about-photo shadow-xl object-cover mx-auto"
+            class="about-photo mx-auto object-cover shadow-sm"
             width={280}
             height={280}
             widths={[180, 240, 280]}
@@ -118,14 +118,14 @@ const personSchema = {
   </section>
 
   <!-- Experience Section -->
-  <section id="references-professionnelles" class="py-16 bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="references-professionnelles" class="section-y border-b border-border bg-surface">
+    <div class="shell-layout">
       <h2 class="text-3xl font-bold text-center text-foreground mb-12">
         Mon expérience professionnelle
       </h2>
 
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-white p-8 rounded-lg shadow-lg border border-border">
+      <div class="shell-prose mx-auto">
+        <div class="rounded-lg border border-border bg-white p-8 shadow-sm">
           <div class="text-center mb-8">
             <div
               class="w-16 h-16 bg-surface rounded-full flex items-center justify-center mx-auto mb-4"
@@ -208,8 +208,8 @@ const personSchema = {
   </section>
 
   <!-- Skills Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="section-y border-b border-border bg-white">
+    <div class="shell-layout">
       <h2 class="text-3xl font-bold text-center text-foreground mb-12">Mes compétences</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -294,8 +294,8 @@ const personSchema = {
   </section>
 
   <!-- Philosophy Section -->
-  <section class="py-16 bg-surface">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="section-y border-b border-border bg-surface">
+    <div class="shell-layout">
       <h2 class="text-3xl font-bold text-center text-foreground mb-12">Ma philosophie</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -362,18 +362,16 @@ const personSchema = {
 
   <CtaSection
     title="Prêt à créer votre site internet ?"
-    description="Discutons de votre projet et créons ensemble votre présence en ligne."
-    primaryButton={{ text: 'Voir un aperçu des sites', href: '/exemples-sites-psychologue/' }}
-    secondaryButton={{ text: 'Me contacter', href: '/contact/' }}
+    description="Un diagnostic gratuit pour vous orienter, et une page tarifs transparente pour comparer les formules."
+    primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+    secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
     background="white"
   />
 
   <style>
     .about-photo {
       border-radius: 54% 46% 43% 57% / 47% 53% 47% 53%;
-      box-shadow:
-        0 10px 22px rgba(15, 23, 42, 0.1),
-        0 3px 8px rgba(15, 23, 42, 0.06);
+      box-shadow: var(--shadow-md);
     }
   </style>
 </Layout>

@@ -19,7 +19,7 @@ const { title, description, href, image, imageAlt, pubDate, author, tags, update
 const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 ---
 
-<article class="bg-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-border grid grid-rows-[auto_minmax(0,1fr)] min-h-0 self-stretch h-full">
+<article class="grid h-full min-h-0 grid-rows-[auto_minmax(0,1fr)] self-stretch overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow duration-300 hover:shadow-md">
 	<div class="min-h-0">
 		<Image
 			src={image}
@@ -79,9 +79,10 @@ const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 		)}
 		<a
 			href={href}
-			class="mt-auto w-fit shrink-0 inline-flex items-center justify-center bg-primary-foreground text-on-primary px-4 py-2 rounded-lg hover:opacity-90 transition-colors"
+			class="mt-auto inline-flex w-fit shrink-0 items-center gap-1.5 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-[0.22em] transition-colors hover:text-primary-900 hover:decoration-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 		>
 			Lire l'article
+			<span aria-hidden="true">→</span>
 		</a>
 	</div>
 </article>

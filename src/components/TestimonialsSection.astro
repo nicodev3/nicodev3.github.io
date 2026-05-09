@@ -1,12 +1,10 @@
 ---
-import { Image } from 'astro:assets';
 import TestimonialCard from './TestimonialCard.astro';
-import testimonialAvatars from '../assets/images/testimonial-avatars.webp';
 ---
 
-<section id="temoignages" class="relative overflow-hidden py-20 bg-surface-alt">
+<section id="temoignages" class="section-y relative scroll-mt-28 overflow-hidden border-b border-border bg-surface-alt">
 	<div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-primary/10/10 to-transparent blur-3xl" />
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<div class="shell-layout">
 		<div class="text-center mb-14">
 			<div class="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs font-medium text-muted shadow-sm backdrop-blur-sm">
 				<span class="h-1.5 w-1.5 rounded-full bg-primary" />
@@ -15,21 +13,9 @@ import testimonialAvatars from '../assets/images/testimonial-avatars.webp';
 			<h2 class="mt-5 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
 				Ils ont choisi un site pensé pour leur pratique
 			</h2>
-			<p class="mx-auto mt-4 max-w-2xl text-sm md:text-base text-muted">
+			<p class="shell-prose mx-auto mt-4 text-sm md:text-base text-muted">
 				Des psychologues en libéral qui voulaient un site simple, professionnel, sans charge technique, pour se concentrer sur leurs patients.
 			</p>
-			<div class="mt-7 flex justify-center">
-				<Image
-					src={testimonialAvatars}
-					alt=""
-					width={256}
-					height={64}
-					widths={[128, 256, 384]}
-					sizes="(min-width: 768px) 256px, 192px"
-					class="h-16 w-auto opacity-90 drop-shadow-sm"
-					aria-hidden="true"
-				/>
-			</div>
 		</div>
 		<div class="relative">
 			<div class="pointer-events-none absolute -left-10 top-0 h-24 w-24 -rotate-12 rounded-full bg-primary/10 blur-2xl" />
@@ -37,22 +23,25 @@ import testimonialAvatars from '../assets/images/testimonial-avatars.webp';
 		</div>
 		<div class="relative grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7 lg:gap-8">
 			<TestimonialCard
+				variant={0}
 				quote="Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble.Des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité ... un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique !"
 				author="Delphine, Psychologue en libéral, Brest"
 			/>
 			<TestimonialCard
+				variant={1}
 				quote="Nicolas Devaux a conçu mon site internet lors de mon installation en libéral, afin de donner de la visibilité à mon activité.
 Je suis ravie de notre collaboration et du résultat. Il a su prendre en compte mes exigences, mes souhaits lors de la conception de mon site. Nicolas s'est montré egalement très disponible.
 Tout cela pour un rapport qualité/prix imbattable!"
 				author="Anne, Psychologue en libéral, Paris"
 			/>
 			<TestimonialCard
+				variant={2}
 				quote="Je suis très satisfaite de mon site. Nicolas a su allier tout son savoir faire avec mes désirs pour réaliser ce projet. Bien évidemment sa «double casquette» psychologue et webdesigner a été un atout important. Il a fait preuve d'écoute et d'une grande disponibilité. Vous pouvez lui faire confiance !"
 				author="Bruno, Psychologue en libéral, Lyon"
 			/>
 		</div>
 		<div class="mt-10 flex flex-col items-center gap-3 text-center">
-			<p class="text-xs font-medium uppercase tracking-[0.18em] text-muted">
+			<p class="type-eyebrow text-muted">
 				Transparence sur les retours
 			</p>
 			<p class="max-w-xl text-sm text-muted">

@@ -42,9 +42,9 @@ const iconCheck =
 	"m4.5 12.75l6 6l9-13.5";
 ---
 
-<section class="py-16 bg-background border-b border-border">
-	<div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-		<header class="max-w-3xl mb-10">
+<section id="accueil-differentiation" class="section-y scroll-mt-28 border-b border-border bg-background">
+	<div class="shell-layout">
+		<header class="shell-prose mb-10">
 			<h2 class="text-3xl font-bold text-foreground mb-4">
 				Le problème n’est pas d’avoir un site, mais d’avoir un site qui vous aide à être visible et à informer vos futurs patients
 			</h2>
@@ -55,13 +55,13 @@ const iconCheck =
 			</p>
 		</header>
 
-		<div class="w-full overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
+		<div class="w-full overflow-hidden rounded-lg border border-border bg-surface shadow-sm">
 			<div class="border-b border-border bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-surface))] px-4 py-3 sm:px-5">
-				<p class="text-sm font-medium text-muted">Comparaison rapide</p>
-				<p class="font-heading text-lg font-semibold text-foreground">Faire seul vs. nicodev</p>
+				<p class="type-eyebrow text-muted">Comparaison rapide</p>
+				<p class="mt-1 font-heading text-lg font-semibold text-foreground">Faire seul vs. nicodev</p>
 			</div>
 			<div class="hidden w-full overflow-x-auto md:block">
-				<table class="diy-compare-table w-full min-w-0 table-fixed text-left text-sm">
+				<table class="diy-compare-table w-full min-w-0 table-fixed text-left text-base">
 					<caption class="sr-only">
 						Comparaison entre créer son site en autonomie avec un outil grand public et être accompagné par
 						nicodev.fr : inconvénients et avantages ligne par ligne.
@@ -70,12 +70,12 @@ const iconCheck =
 						<tr>
 							<th scope="col" class="diy-compare-th diy-compare-th--muted">Critère</th>
 							<th scope="col" class="diy-compare-th diy-compare-th--diy">
-								<span class="block font-heading text-foreground">En autonomie</span>
-								<span class="mt-0.5 block text-xs font-normal text-muted">Wix, WordPress, Hostinger…</span>
+								<span class="diy-compare-th__eyebrow">En autonomie</span>
+								<span class="diy-compare-th__sub">Wix, WordPress, Hostinger…</span>
 							</th>
 							<th scope="col" class="diy-compare-th diy-compare-th--nico">
-								<span class="block font-heading text-foreground">Avec nicodev.fr</span>
-								<span class="mt-0.5 block text-xs font-normal text-primary-foreground">Sites pour psychologues</span>
+								<span class="diy-compare-th__eyebrow">Avec nicodev.fr</span>
+								<span class="diy-compare-th__sub diy-compare-th__sub--accent">Sites pour psychologues</span>
 							</th>
 						</tr>
 					</thead>
@@ -123,14 +123,13 @@ const iconCheck =
 			<div class="space-y-5 p-4 md:hidden">
 				{comparisonRows.map((row) => (
 					<article class="border-b border-border/70 pb-4 last:border-b-0 last:pb-0">
-						<h3 class="px-1 pb-2 text-sm font-semibold text-foreground">
+						<h3 class="px-1 pb-2 font-heading text-lg font-semibold leading-snug text-foreground">
 							{row.label}
 						</h3>
 						<div class="space-y-2.5">
-							<div class="rounded-lg bg-[color-mix(in_srgb,#f97316_9%,var(--color-surface))] p-3">
-								<p class="mb-2 text-[0.6875rem] font-semibold uppercase tracking-[0.06em] text-muted">
-									En autonomie
-								</p>
+							<div class="rounded-lg bg-[color-mix(in_srgb,var(--color-primary-500)_9%,var(--color-surface))] p-3">
+								<p class="diy-compare-th__eyebrow mb-1.5">En autonomie</p>
+								<p class="diy-compare-th__sub mb-2">Wix, WordPress, Hostinger…</p>
 								<span class="diy-compare-cell">
 									<span class="diy-compare-icon diy-compare-icon--bad" aria-hidden="true">
 										<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,10 +144,9 @@ const iconCheck =
 									<span class="text-muted">{row.diy}</span>
 								</span>
 							</div>
-							<div class="rounded-lg bg-[color-mix(in_srgb,#0ea5e9_9%,var(--color-surface))] p-3">
-								<p class="mb-2 text-[0.6875rem] font-semibold uppercase tracking-[0.06em] text-muted">
-									Avec nicodev.fr
-								</p>
+							<div class="rounded-lg bg-[color-mix(in_srgb,var(--color-foreground)_6%,var(--color-surface))] p-3">
+								<p class="diy-compare-th__eyebrow mb-1.5">Avec nicodev.fr</p>
+								<p class="diy-compare-th__sub diy-compare-th__sub--accent mb-2">Sites pour psychologues</p>
 								<span class="diy-compare-cell">
 									<span class="diy-compare-icon diy-compare-icon--good" aria-hidden="true">
 										<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,9 +174,9 @@ const iconCheck =
 			</p>
 			<a
 				href="/diagnostic-gratuit/"
-				class="inline-flex justify-center items-center bg-primary-foreground text-on-primary px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap hover:opacity-90 transition-colors"
+				class="btn-primary-solid inline-flex items-center justify-center whitespace-nowrap rounded-lg px-5 py-3"
 			>
-				Évaluer votre situation gratuitement
+				Demander un diagnostic gratuit
 			</a>
 		</div>
 	</div>
@@ -199,21 +197,57 @@ const iconCheck =
 	}
 
 	.diy-compare-th {
-		font-size: 0.6875rem;
+		font-size: var(--text-xs);
 		font-weight: 600;
 		text-transform: uppercase;
-		letter-spacing: 0.06em;
+		letter-spacing: 0.08em;
 		color: var(--color-muted);
+	}
+
+	.diy-compare-th--diy,
+	.diy-compare-th--nico {
+		font-size: unset;
+		font-weight: unset;
+		text-transform: none;
+		letter-spacing: normal;
+		color: unset;
+	}
+
+	/* Hiérarchie type Apple / Stripe : micro eyebrow + sous-titre lisible */
+	.diy-compare-th__eyebrow {
+		display: block;
+		font-family: var(--font-sans);
+		font-size: 0.6875rem;
+		font-weight: 600;
+		line-height: 1.25;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: color-mix(in srgb, var(--color-foreground) 60%, transparent);
+	}
+
+	.diy-compare-th__sub {
+		display: block;
+		margin-top: 0.3125rem;
+		font-family: var(--font-sans);
+		font-size: 0.8125rem;
+		font-weight: 400;
+		line-height: 1.38;
+		color: var(--color-foreground);
+	}
+
+	.diy-compare-th__sub--accent {
+		font-weight: 500;
+		color: var(--color-primary-foreground);
 	}
 
 	.diy-compare-th--diy {
 		width: 39%;
-		background: color-mix(in srgb, #f97316 11%, var(--color-surface));
+		background: color-mix(in srgb, var(--color-primary-500) 11%, var(--color-surface));
 	}
 
 	.diy-compare-th--nico {
 		width: 39%;
-		background: color-mix(in srgb, #0ea5e9 11%, var(--color-surface));
+		background: color-mix(in srgb, var(--color-foreground) 6%, var(--color-surface));
 	}
 
 	.diy-compare-th--muted {
@@ -227,7 +261,8 @@ const iconCheck =
 	}
 
 	.diy-compare-rowlabel {
-		font-size: 0.8125rem;
+		font-family: var(--font-heading);
+		font-size: var(--text-lg);
 		font-weight: 600;
 		color: var(--color-foreground);
 		line-height: 1.35;
@@ -235,11 +270,11 @@ const iconCheck =
 	}
 
 	.diy-compare-td--diy {
-		background: color-mix(in srgb, #f97316 8.5%, var(--color-surface));
+		background: color-mix(in srgb, var(--color-primary-500) 8.5%, var(--color-surface));
 	}
 
 	.diy-compare-td--nico {
-		background: color-mix(in srgb, #0ea5e9 8.5%, var(--color-surface));
+		background: color-mix(in srgb, var(--color-foreground) 6%, var(--color-surface));
 	}
 
 	.diy-compare-cell {
@@ -256,17 +291,17 @@ const iconCheck =
 		width: 1.625rem;
 		height: 1.625rem;
 		margin-top: 0.06rem;
-		border-radius: 9999px;
+		border-radius: var(--radius-full);
 	}
 
 	.diy-compare-icon--bad {
-		color: #c2410c;
-		background: color-mix(in srgb, #fdba74 48%, transparent);
+		color: var(--color-primary-700);
+		background: color-mix(in srgb, var(--color-primary-100) 72%, transparent);
 	}
 
 	.diy-compare-icon--good {
-		color: #0369a1;
-		background: color-mix(in srgb, #7dd3fc 48%, transparent);
+		color: var(--color-foreground);
+		background: color-mix(in srgb, var(--color-foreground) 14%, transparent);
 	}
 
 </style>
