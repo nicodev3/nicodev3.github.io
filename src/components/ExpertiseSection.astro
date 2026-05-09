@@ -55,20 +55,24 @@ import portraitNicolas from "../assets/images/nicodev.webp";
           </ul>
         </div>
       </div>
-      <div class="flex justify-center lg:justify-end">
+      <div class="expertise-visual-slot flex justify-center lg:justify-end lg:items-stretch">
         <figure class="expertise-visual">
-          <Image
-            src={portraitNicolas}
-            alt="Portrait de Nicolas Devaux, psychologue et développeur web"
-            width={520}
-            height={520}
-            widths={[280, 400, 520]}
-            sizes="(max-width: 768px) 85vw, (max-width: 1024px) 42vw, 520px"
-            class="mx-auto aspect-square w-full max-w-[min(100%,20rem)] rounded-lg object-cover sm:max-w-[22rem]"
-          />
-          <figcaption class="expertise-caption">
-            Psychologue en cabinet et développeur web — 20 ans d'expérience web, dont des responsabilités de tech lead.
-          </figcaption>
+          <div class="expertise-portrait">
+            <div class="expertise-portrait__media">
+              <Image
+                src={portraitNicolas}
+                alt="Portrait de Nicolas Devaux, psychologue et développeur web"
+                width={560}
+                height={700}
+                widths={[320, 480, 560]}
+                sizes="(max-width: 1024px) min(92vw, 24rem), min(36vw, 22rem)"
+                class="expertise-portrait__img"
+              />
+            </div>
+            <figcaption class="expertise-portrait__caption">
+              Psychologue en cabinet et développeur web — 20 ans d'expérience web, dont des responsabilités de tech lead.
+            </figcaption>
+          </div>
         </figure>
       </div>
     </div>
@@ -93,20 +97,122 @@ import portraitNicolas from "../assets/images/nicodev.webp";
     padding: 0.35rem 0.75rem;
   }
 
-  .expertise-visual {
-    margin: 0;
-    border-radius: var(--radius-lg);
-    padding: 0.7rem;
-    background: color-mix(in srgb, white 70%, var(--color-surface));
-    border: 1px solid color-mix(in srgb, var(--color-border) 70%, white);
-    box-shadow: var(--shadow-sm);
+  /* Fond du créneau portrait : même famille chromatique que la photo (évite le collage sur gris froid). */
+  .expertise-visual-slot {
+    align-self: stretch;
   }
 
-  .expertise-caption {
-    margin-top: 0.75rem;
+  .expertise-visual {
+    margin: 0;
+    width: 100%;
+    max-width: min(100%, 22rem);
+  }
+
+  @media (min-width: 1024px) {
+    .expertise-visual {
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      min-height: min(70vh, 28rem);
+      display: flex;
+    }
+  }
+
+  .expertise-portrait {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow: var(--shadow-md);
+    background: color-mix(in srgb, var(--color-primary-100) 28%, var(--color-surface));
+  }
+
+  @media (min-width: 1024px) {
+    .expertise-portrait {
+      flex: 1;
+      min-height: 0;
+    }
+  }
+
+  .expertise-portrait__media {
+    position: relative;
+    flex: 1;
+    min-height: 14rem;
+    aspect-ratio: 4 / 5;
+  }
+
+  @media (min-width: 1024px) {
+    .expertise-portrait__media {
+      aspect-ratio: auto;
+      min-height: 12rem;
+      flex: 1;
+    }
+  }
+
+  /* Grain léger + wash terracotta : intègre une photo chaude au reste de la section. */
+  .expertise-portrait__media::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.11;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.55'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .expertise-portrait__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+      185deg,
+      color-mix(in srgb, var(--color-primary-500) 22%, transparent) 0%,
+      transparent 42%,
+      color-mix(in srgb, var(--color-primary-900) 72%, transparent) 100%
+    );
+    mix-blend-mode: multiply;
+    opacity: 0.92;
+  }
+
+  .expertise-portrait__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    filter: saturate(0.94) contrast(1.03);
+  }
+
+  .expertise-portrait__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    margin: 0;
+    padding: 1.35rem 1.15rem 1.15rem;
     font-size: 0.8125rem;
-    color: var(--color-muted);
-    text-align: center;
+    line-height: 1.45;
+    font-weight: 500;
+    color: var(--color-neutral-0);
+    text-align: left;
+    text-shadow:
+      0 1px 2px color-mix(in srgb, var(--color-foreground) 45%, transparent),
+      0 0 24px color-mix(in srgb, var(--color-primary-900) 55%, transparent);
+  }
+
+  @media (min-width: 640px) {
+    .expertise-portrait__caption {
+      font-size: 0.875rem;
+      padding: 1.5rem 1.35rem 1.35rem;
+    }
   }
 
   .expertise-list {

@@ -19,6 +19,9 @@ const {
 } = Astro.props;
 
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
+
+const primarySuppressHeaderDiag =
+	new URL(primaryButton.href, Astro.site ?? Astro.url).pathname.replace(/\/+$/, '') === '/diagnostic-gratuit';
 ---
 
 <section id={anchorId} class:list={['section-y', bgClass, 'border-t border-border', anchorId && 'scroll-mt-28']}>
@@ -33,6 +36,7 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 			<a
 				href={primaryButton.href}
 				class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3"
+				{...(primarySuppressHeaderDiag ? { 'data-suppress-header-diagnostic-when-visible': true } : {})}
 			>
 				{primaryButton.text}
 			</a>

@@ -75,6 +75,9 @@ const includedBento = [
 ] as const;
 
 const { ctaHref = '/diagnostic-gratuit/', ctaLabel = 'Demander un diagnostic gratuit' } = Astro.props;
+
+const suppressHeaderDiagPeer =
+	new URL(ctaHref, Astro.site ?? Astro.url).pathname.replace(/\/+$/, '') === '/diagnostic-gratuit';
 ---
 
 <section id="comment-ca-marche" class="section-y scroll-mt-28 border-b border-border bg-surface-alt">
@@ -146,7 +149,11 @@ const { ctaHref = '/diagnostic-gratuit/', ctaLabel = 'Demander un diagnostic gra
 		</div>
 
 		<div class="mt-10 text-center">
-			<a href={ctaHref} class="btn-primary-solid inline-block rounded-lg px-5 py-3">
+			<a
+				href={ctaHref}
+				class="btn-primary-solid inline-block rounded-lg px-5 py-3"
+				{...(suppressHeaderDiagPeer ? { 'data-suppress-header-diagnostic-when-visible': true } : {})}
+			>
 				{ctaLabel}
 			</a>
 		</div>
