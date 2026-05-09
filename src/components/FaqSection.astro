@@ -62,17 +62,17 @@ const faqItems = [
 						class="flex cursor-pointer list-none items-start gap-3 px-4 py-6 transition-colors hover:bg-surface-alt sm:px-5 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset"
 					>
 						<span
-							class="faq-chevron mt-0.5 inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/12 text-primary-foreground ring-1 ring-primary/25 transition-transform duration-200 ease-out motion-reduce:transition-none"
+							class="faq-chevron ui-icon-well mt-0.5 transition-transform duration-200 ease-out motion-reduce:transition-none"
 							aria-hidden="true"
 						>
-							<ChevronRight class="size-4.5" stroke-width={2.2} />
+							<ChevronRight class="h-5 w-5" stroke-width={1.5} />
 						</span>
 						<span class="min-w-0 flex-1 pt-0.5 text-left text-base font-semibold leading-snug text-foreground">
 							{item.question}
 						</span>
 					</summary>
 					<div class="px-4 pb-6 pt-0 sm:px-5">
-						<p class="ml-10 border-t border-border pt-5 text-sm leading-relaxed text-muted sm:ml-11 sm:text-base">
+						<p class="faq-answer-text border-t border-border pt-5 text-sm leading-relaxed text-muted sm:text-base">
 							{item.answer}
 						</p>
 					</div>
@@ -97,6 +97,11 @@ const faqItems = [
 
 	.faq-details[open] .faq-chevron {
 		transform: rotate(90deg);
+	}
+
+	/* Aligner le corps de réponse sous le titre (pastille 2.5rem + gap-3) */
+	.faq-answer-text {
+		margin-left: calc(2.5rem + 0.75rem);
 	}
 </style>
 

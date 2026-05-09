@@ -75,6 +75,22 @@ body {
     @apply py-16 md:py-24;
 }
 
+/*
+ * Icônes Lucide (trait uniforme 1.5) : une seule pastille sur la page marketing.
+ */
+.ui-icon-well {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    color: var(--color-primary-foreground);
+}
+
 /* Ligne de section / chapô uppercase — sans 12px, tracking intentionnel (≈80‰) */
 .type-eyebrow {
     font-family: var(--font-sans);
