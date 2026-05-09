@@ -21,7 +21,8 @@ const { links = defaultLinks } = Astro.props;
 const diagnosticCta = {
 	href: '/diagnostic-gratuit/',
 	label: 'Demander un diagnostic gratuit',
-	compactLabel: 'Demander un diagnostic gratuit',
+	/** Bandeau mobile : libellé court pour laisser place au menu */
+	shortHeaderLabel: 'Diagnostic gratuit',
 };
 
 /** Positionnement marque : une personne = les deux expertises (évite la lecture « pour deux audiences »). */
@@ -102,9 +103,11 @@ function navLinkIsActive(href: string): boolean {
 				<a
 					href={diagnosticCta.href}
 					data-header-diagnostic-cta
-					class="btn-primary-solid inline-flex max-[380px]:max-w-38 max-[380px]:truncate shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+					aria-label={diagnosticCta.label}
+					class="btn-primary-solid inline-flex max-md:min-w-0 max-md:max-w-46 max-md:shrink max-md:truncate max-md:px-3 max-md:py-2 max-md:text-sm md:shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center text-sm md:text-base leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				>
-					{diagnosticCta.compactLabel}
+					<span class="md:hidden">{diagnosticCta.shortHeaderLabel}</span>
+					<span class="hidden md:inline">{diagnosticCta.label}</span>
 				</a>
 
 			<button

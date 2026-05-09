@@ -39,7 +39,7 @@ const reassuranceText = isDevisMode
 	: 'Aucune inscription à une newsletter. Votre message reste strictement confidentiel.';
 ---
 
-<div id="contact-form-wrapper" class="bg-background rounded-lg shadow-lg border border-border p-6 md:p-8">
+<div id="contact-form-wrapper" class="bg-background rounded-lg border border-border p-6 md:p-8 shadow-sm">
 	<form
 		id="contact-form"
 		name={formName}
@@ -88,11 +88,25 @@ const reassuranceText = isDevisMode
 
 		<button
 			type="submit"
-			class="btn-primary-solid w-full rounded-lg px-5 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+			class="btn-primary-solid relative inline-flex w-full min-h-12 items-center justify-center gap-2 rounded-lg px-5 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-85"
 		>
-			{submitLabel}
+			<svg
+				class="contact-submit-spinner hidden h-5 w-5 shrink-0 animate-spin"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				aria-hidden="true"
+			>
+				<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+				<path
+					class="opacity-75"
+					fill="currentColor"
+					d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+				></path>
+			</svg>
+			<span data-contact-submit-text>{submitLabel}</span>
 		</button>
-		<p id="contact-form-feedback" class="hidden text-sm text-red-700" role="alert" aria-live="polite"></p>
+		<p id="contact-form-feedback" class="hidden text-sm font-medium text-red-700 dark:text-red-400" role="alert" aria-live="polite"></p>
 		<p class="text-center text-xs text-muted">{reassuranceText}</p>
 	</form>
 </div>
@@ -106,6 +120,9 @@ const reassuranceText = isDevisMode
 		const successUrl = form.getAttribute('data-success-url');
 		const feedback = document.getElementById('contact-form-feedback');
 		const submitButton = form.querySelector('button[type="submit"]');
+		const submitLabelEl = submitButton?.querySelector('[data-contact-submit-text]');
+		const submitSpinner = submitButton?.querySelector('.contact-submit-spinner');
+		const defaultSubmitLabel = submitLabelEl?.textContent?.trim() ?? '';
 
 		let started = false;
 		const trackStart = () => {
@@ -120,11 +137,17 @@ const reassuranceText = isDevisMode
 		form.addEventListener('change', trackStart, { once: true });
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
+			let redirecting = false;
 			if (feedback) {
 				feedback.textContent = '';
 				feedback.classList.add('hidden');
 			}
-			if (submitButton) submitButton.setAttribute('disabled', 'disabled');
+			if (submitButton) {
+				submitButton.setAttribute('disabled', 'disabled');
+				submitButton.setAttribute('aria-busy', 'true');
+			}
+			if (submitSpinner) submitSpinner.classList.remove('hidden');
+			if (submitLabelEl) submitLabelEl.textContent = 'Envoi en cours…';
 			if (submitEvent && window.umami && typeof window.umami.track === 'function') {
 				window.umami.track(submitEvent);
 			}
@@ -143,6 +166,7 @@ const reassuranceText = isDevisMode
 				}
 
 				if (successUrl) {
+					redirecting = true;
 					window.location.href = successUrl;
 					return;
 				}
@@ -150,11 +174,16 @@ const reassuranceText = isDevisMode
 				form.reset();
 			} catch (_) {
 				if (feedback) {
-					feedback.textContent = "Une erreur est survenue. Merci de reessayer dans un instant.";
+					feedback.textContent = 'Une erreur est survenue. Merci de réessayer dans un instant.';
 					feedback.classList.remove('hidden');
 				}
 			} finally {
-				if (submitButton) submitButton.removeAttribute('disabled');
+				if (!redirecting && submitButton) {
+					submitButton.removeAttribute('disabled');
+					submitButton.removeAttribute('aria-busy');
+				}
+				if (!redirecting && submitSpinner) submitSpinner.classList.add('hidden');
+				if (!redirecting && submitLabelEl && defaultSubmitLabel) submitLabelEl.textContent = defaultSubmitLabel;
 			}
 		});
 	})();

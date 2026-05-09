@@ -3,12 +3,20 @@ export interface Props {
 	title: string;
 	description: string;
 	centered?: boolean;
+	/** Classes additionnelles sur la carte (ex. transitions hover). */
+	class?: string;
 }
 
-const { title, description, centered = true } = Astro.props;
+const { title, description, centered = true, class: className } = Astro.props;
 ---
 
-<div class={`rounded-lg border border-border bg-background p-6 shadow-sm ${centered ? 'text-center' : ''}`}>
+<div
+	class:list={[
+		'rounded-lg border border-border bg-background p-6 shadow-sm transition-shadow duration-200 motion-safe:hover:shadow-md motion-safe:hover:border-primary-300/35',
+		centered ? 'text-center' : '',
+		className,
+	]}
+>
 	<div class={`w-16 h-16 bg-surface rounded-full flex items-center justify-center ${centered ? 'mx-auto' : ''} mb-4`}>
 		<div class="text-foreground">
 			<slot name="icon" />

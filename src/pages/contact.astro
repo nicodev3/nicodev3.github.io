@@ -28,67 +28,102 @@ const breadcrumbSchema = {
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Contact' }]}
 	/>
 
-	<section class="py-16 bg-surface-alt">
+	<section class="py-16 bg-surface-alt" aria-labelledby="contact-main-heading">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14">
 				<div>
-					<h2 class="text-3xl font-bold text-foreground mb-4">
+					<p class="type-eyebrow text-muted mb-2">Formulaire</p>
+					<h2 id="contact-main-heading" class="text-3xl font-bold text-foreground mb-4">
 						Parlons de votre situation
 					</h2>
-					<p class="text-muted mb-8">
+					<p class="text-muted mb-8 max-w-prose">
 						Vous pouvez utiliser ce formulaire pour une question simple : clarification sur mes services, point de blocage sur votre
 						site actuel, ou premier échange avant de décider.
 						Si vous souhaitez une proposition tarifaire, la page devis est plus adaptée.
 					</p>
 					<ContactForm mode="contact" />
 				</div>
-				<div>
-					<h2 class="text-3xl font-bold text-foreground mb-8">
-						Mes coordonnées
-					</h2>
-					<div class="space-y-8">
-						<div class="flex items-start space-x-4">
-							<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-surface">
-								<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
-								</svg>
-							</div>
+				<aside aria-labelledby="contact-aside-heading">
+					<p class="type-eyebrow text-muted mb-2">Informations</p>
+					<h3 id="contact-aside-heading" class="text-xl font-semibold text-foreground tracking-tight mb-6">
+						Coordonnées et disponibilité
+					</h3>
+
+					<ul class="mb-8 space-y-2 text-sm text-muted border-l-2 border-primary-300 pl-4">
+						<li>
+							<strong class="font-semibold text-foreground">Réponse sous 48&nbsp;h</strong>
+							<span class="text-muted"> (jours ouvrés)</span>
+						</li>
+						<li>Fuseau horaire : Europe / Paris</li>
+						<li>Données utilisées uniquement pour répondre à votre message — pas de newsletter.</li>
+					</ul>
+
+					<dl class="space-y-5 mb-10">
+						<div class="flex gap-3">
+							<svg class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+							</svg>
 							<div>
-								<h3 class="text-lg font-semibold text-foreground mb-2">Email</h3>
-								<p class="text-muted">
-									<ObfuscatedEmail class="text-foreground hover:text-primary" />
-								</p>
+								<dt class="text-sm font-semibold text-foreground">Email</dt>
+								<dd class="mt-1 text-sm text-muted">
+									<ObfuscatedEmail class="text-foreground hover:text-primary transition-colors" />
+								</dd>
 							</div>
 						</div>
-						<div class="flex items-start space-x-4">
-							<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-surface">
-								<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
-								</svg>
-							</div>
+						<div class="flex gap-3">
+							<svg class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 1 1-6 0a3 3 0 0 1 6 0"/>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0"/>
+							</svg>
 							<div>
-								<h3 class="text-lg font-semibold text-foreground mb-2">Zone d'intervention</h3>
-								<p class="text-muted">
+								<dt class="text-sm font-semibold text-foreground">Zone d'intervention</dt>
+								<dd class="mt-1 text-sm text-muted">
 									France entière (travail à distance)
-								</p>
+								</dd>
 							</div>
 						</div>
+					</dl>
+
+					<div class="mb-10 rounded-lg border border-border bg-background p-5">
+						<p class="type-eyebrow text-muted mb-3">Après envoi</p>
+						<ol class="list-decimal space-y-2 pl-5 text-sm text-muted marker:text-foreground">
+							<li class="pl-1"><span class="text-foreground font-medium">Réception</span> — votre message arrive directement.</li>
+							<li class="pl-1"><span class="text-foreground font-medium">Lecture</span> — je traite les demandes dans l'ordre d'arrivée.</li>
+							<li class="pl-1"><span class="text-foreground font-medium">Réponse</span> — retour personnalisé sous 48&nbsp;h ouvrées.</li>
+						</ol>
 					</div>
-					<div class="mt-12 rounded-lg border border-border bg-white p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-4">
-							Vous préférez un cadre plus guidé ?
-						</h3>
-						<div class="space-y-3">
-							<a href="/devis/" data-umami-event="lead_click_cta_devis_from_contact_simple" class="block rounded-lg border border-border px-4 py-3 text-foreground hover:bg-surface transition-colors">
-								Recevoir un devis personnalisé
+
+					<div class="rounded-lg border border-border bg-background p-6">
+						<h4 class="text-lg font-semibold text-foreground mb-1">
+							Autres parcours
+						</h4>
+						<p class="text-sm text-muted mb-5">
+							Besoin d'un chiffrage ou d'un premier regard sur votre site&nbsp;? Ces pages sont faites pour ça.
+						</p>
+						<div class="flex flex-col gap-3">
+							<a
+								href="/devis/"
+								data-umami-event="lead_click_cta_devis_from_contact_simple"
+								class="btn-primary-solid inline-flex w-full items-center justify-between gap-3 rounded-lg px-5 py-3 text-left font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+							>
+								<span>Recevoir un devis personnalisé</span>
+								<svg class="h-5 w-5 shrink-0 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+								</svg>
 							</a>
-							<a href="/diagnostic-gratuit/" data-umami-event="lead_click_cta_diagnostic_from_contact_simple" class="block rounded-lg border border-border px-4 py-3 text-foreground hover:bg-surface transition-colors">
-								Demander un diagnostic gratuit
+							<a
+								href="/diagnostic-gratuit/"
+								data-umami-event="lead_click_cta_diagnostic_from_contact_simple"
+								class="btn-outline-terracotta inline-flex w-full items-center justify-between gap-3 rounded-lg border border-primary-foreground bg-transparent px-5 py-3 text-left font-semibold text-primary-foreground hover:bg-primary-foreground/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+							>
+								<span>Demander un diagnostic gratuit</span>
+								<svg class="h-5 w-5 shrink-0 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+								</svg>
 							</a>
 						</div>
 					</div>
-				</div>
+				</aside>
 			</div>
 		</div>
 	</section>

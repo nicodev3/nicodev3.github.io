@@ -35,9 +35,11 @@
     --color-muted: var(--color-neutral-600);
     --color-surface-alt: color-mix(in srgb, var(--color-foreground) 12%, var(--color-background));
     --color-border: var(--color-surface-alt);
-    --color-link: #0050AD;
-    --color-link-hover: #0047A1;
-    --color-link-on-dark: #9ED0FF;
+    /* Liens textuels = terracotta (charte), pas de bleu hors-marque */
+    --color-link: var(--color-primary-700);
+    --color-link-hover: var(--color-primary-900);
+    /* Pied de page foncé : lien lisible sur --color-foreground */
+    --color-link-on-dark: var(--color-primary-300);
 
     /*
      * Échelle typo modulaire (rem, base 16px) :
@@ -124,6 +126,31 @@ a:not([class]):hover {
 }
 
 a:not([class]):focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/*
+ * @tailwindcss/typography : `.prose a` impose un bleu « Tailwind » (#2563eb / équivalent).
+ * Pas de :where() sur le `a` : sinon la spécificité retombe à (0,1,0) et le plugin gagne.
+ * `.prose a:not([class])` → (0,1,2), au-dessus de `.prose :where(a)` du plugin.
+ */
+.prose a:not([class]) {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-primary-500) 45%, currentColor);
+    text-underline-offset: 0.16em;
+    text-decoration-thickness: 0.08em;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.prose a:not([class]):hover {
+    color: var(--color-link-hover);
+    text-decoration-color: var(--color-primary-500);
+}
+
+.prose a:not([class]):focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px;
     border-radius: var(--radius-sm);

@@ -44,6 +44,15 @@ const personSchema = {
     'https://nicolas-devaux-psychologue.fr',
   ],
 };
+
+const aboutNav = [
+  { href: '#about-parcours', label: 'Parcours' },
+  { href: '#references-professionnelles', label: 'Expérience' },
+  { href: '#about-skills', label: 'Compétences' },
+  { href: '#about-philosophie', label: 'Philosophie' },
+];
+
+const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
 ---
 
 <Layout
@@ -67,46 +76,71 @@ const personSchema = {
     breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]}
   />
 
-  <!-- About Section -->
-  <section class="section-y border-b border-border bg-white">
+  <div class="about-inpage-nav border-b border-border bg-white">
+    <div class="shell-layout py-3 md:py-4">
+      <nav aria-label="Sections de la page">
+        <ul class="flex flex-wrap justify-center gap-x-1 gap-y-2 sm:gap-x-2">
+          {
+            aboutNav.map(({ href, label }) => (
+              <li>
+                <a href={href} class="about-inpage-link rounded-md px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700">
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- About Section — bloc centré pour alignement avec le hero -->
+  <section
+    id="about-parcours"
+    class="section-y scroll-mt-28 border-b border-border bg-white"
+  >
     <div class="shell-layout">
-      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-        <div class="min-w-0">
-          <h2 class="text-3xl font-bold text-foreground mb-6">Mon parcours</h2>
-          <div class="shell-prose prose prose-lg text-muted space-y-4">
-            <p>
-              Je suis <a
-                href="https://nicolas-devaux-psychologue.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                >psychologue à Sceaux</a
-              > et développeur web.
-            </p>
-            <p>
-              Ma double formation (psychologie et développement web à l'<a
-                href="https://sfc.unistra.fr/formations/informatique_-_technologies-de-linternet_-_licence-professionnelle-developpement-web-communication-et-apprentissages_-_6187/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Université de Strasbourg</a
-              >) me permet de créer des <a href="/portfolio/">sites internet pour psychologues</a>
-              à la fois performants, lisibles et adaptés à la pratique clinique.
-            </p>
-            <p>
-              Je privilégie une approche artisanale : peu de projets, un accompagnement attentif,
-              et une collaboration directe. Découvrez <a href="/exemples-sites-psychologue/"
-                >des exemples de sites pour psychologues</a
-              >, mes <a href="/portfolio/"
-                >réalisations</a
-              >, mes <a href="/tarifs/">tarifs</a> ou <a href="/contact/">contactez-moi</a> pour
-              discuter de votre projet.
-            </p>
-          </div>
+      <header class="mx-auto mb-10 max-w-3xl text-center">
+        <p class="type-eyebrow mb-3 text-primary-700">Parcours</p>
+        <h2 class="text-3xl font-bold text-foreground md:text-4xl">Mon parcours</h2>
+      </header>
+
+      <div
+        class="about-parcours-shell mx-auto grid max-w-5xl grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(220px,280px)] lg:gap-12 lg:items-center"
+      >
+        <div class="shell-prose prose prose-lg min-w-0 text-muted space-y-4">
+          <p>
+            Je suis <a
+              href="https://nicolas-devaux-psychologue.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              >psychologue à Sceaux</a
+            > et développeur web.
+          </p>
+          <p>
+            Ma double formation (psychologie et développement web à l'<a
+              href="https://sfc.unistra.fr/formations/informatique_-_technologies-de-linternet_-_licence-professionnelle-developpement-web-communication-et-apprentissages_-_6187/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Université de Strasbourg</a
+            >) me permet de créer des <a href="/portfolio/">sites internet pour psychologues</a>
+            à la fois performants, lisibles et adaptés à la pratique clinique.
+          </p>
+          <p>
+            Je privilégie une approche artisanale : peu de projets, un accompagnement attentif,
+            et une collaboration directe. Découvrez <a href="/exemples-sites-psychologue/"
+              >des exemples de sites pour psychologues</a
+            >, mes <a href="/portfolio/">réalisations</a>, mes <a href="/tarifs/">tarifs</a> ou <a
+              href="/contact/">contactez-moi</a
+            > pour discuter de votre projet.
+          </p>
         </div>
-        <div class="relative">
+
+        <div class="mx-auto w-full max-w-[280px] lg:mx-0 lg:justify-self-end">
           <Image
             src={developmentImage}
             alt="Nicolas Devaux - Développeur web spécialisé sites pour psychologues"
-            class="about-photo mx-auto object-cover shadow-sm"
+            class="about-photo mx-auto block object-cover"
             width={280}
             height={280}
             widths={[180, 240, 280]}
@@ -117,102 +151,124 @@ const personSchema = {
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="references-professionnelles" class="section-y border-b border-border bg-surface">
+  <!-- Experience -->
+  <section
+    id="references-professionnelles"
+    class="section-y scroll-mt-28 border-b border-border bg-surface"
+  >
     <div class="shell-layout">
-      <h2 class="text-3xl font-bold text-center text-foreground mb-12">
-        Mon expérience professionnelle
-      </h2>
+      <header class="mx-auto mb-10 max-w-3xl text-center">
+        <p class="type-eyebrow mb-3 text-primary-700">Références</p>
+        <h2 class="text-3xl font-bold text-foreground md:text-4xl">
+          Mon expérience professionnelle
+        </h2>
+      </header>
 
-      <div class="shell-prose mx-auto">
-        <div class="rounded-lg border border-border bg-white p-8 shadow-sm">
-          <div class="text-center mb-8">
-            <div
-              class="w-16 h-16 bg-surface rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <svg
-                class="w-8 h-8 text-foreground"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18c-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48 48 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A24 24 0 0 1 12 15.75a24 24 0 0 1-7.577-1.22a2 2 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48 48 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a49 49 0 0 0-7.5 0M12 12.75h.008v.008H12z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-foreground mb-2">
-              <strong>20 ans d'expérience</strong> en développement de sites et en tant que psychologue
-            </h3>
-            <p class="text-muted">
-              De 1996 à 2020, j'ai exercé comme psychomotricien puis psychologue, en institution et en cabinet libéral depuis 2008. Cette expérience de terrain nourrit ma
-              compréhension fine des besoins des psychologues libéraux. Aujourd'hui, je suis psychologue en libéral, dans un service de Santé Etudiante et je crée des sites internet pour psychologues.
-            </p>
-          </div>
+      <div class="mx-auto max-w-3xl space-y-10">
+        <p class="text-lg leading-relaxed text-foreground">
+          <span class="font-heading font-semibold">20 ans d&apos;expérience</span>
+          en développement de sites et en tant que psychologue. De 1996 à 2020, j&apos;ai exercé comme
+          psychomotricien puis psychologue, en institution et en cabinet libéral depuis 2008. Cette
+          expérience de terrain nourrit ma compréhension fine des besoins des psychologues libéraux.
+          Aujourd&apos;hui, je suis psychologue en libéral, dans un service de Santé Etudiante et je
+          crée des sites internet pour psychologues.
+        </p>
 
-          <div class="space-y-8">
-            <h4 class="text-lg font-semibold text-foreground">Mon expérience en tant que développeur</h4>
+        <div
+          class="about-trust-row flex flex-wrap items-center justify-center gap-2 sm:gap-3"
+          aria-label="Références professionnelles et avis clients"
+        >
+          <span
+            class="rounded-full border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground shadow-sm"
+            >Le Figaro</span
+          >
+          <span
+            class="rounded-full border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground shadow-sm"
+            >Naxos</span
+          >
+          <span
+            class="rounded-full border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground shadow-sm"
+            >50+ projets web</span
+          >
+          <a
+            href={maltHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full border border-primary-300 bg-white px-4 py-2 text-sm font-semibold text-primary-700 shadow-sm transition-colors hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
+          >
+            Avis clients · Malt
+          </a>
+        </div>
 
-            <div class="border-l-4 border-border pl-6">
-              <h4 class="text-xl font-semibold text-foreground mb-2">
-                Tech Lead front-end - Le Figaro (2024-2025)
-              </h4>
-              <p class="text-muted mb-2">
-                Direction technique de projets d'envergure pour l'un des plus grands médias français
-              </p>
-              <p class="text-sm text-muted">
-                Management d'équipes de développement, architecture de solutions web complexes,
-                optimisation des performances
-              </p>
-            </div>
-
-            <div class="border-l-4 border-border pl-6">
-              <h4 class="text-xl font-semibold text-foreground mb-2">
-                Tech Lead front-end - Naxos (2020-2024)
-              </h4>
-              <p class="text-muted mb-2">
-                Direction technique de solutions digitales innovantes pour le secteur immobilier
-              </p>
-              <p class="text-sm text-muted">
-                Développement d'applications mobiles, sites web corporate, CRM immobilier,
-                technologies Python/Django/Angular
-              </p>
-            </div>
-
-            <div class="border-l-4 border-border pl-6">
-              <h4 class="text-xl font-semibold text-foreground mb-2">
-                Développeur Web free-lance (depuis 2005)
-              </h4>
-              <p class="text-muted mb-2">
-                Plusieurs années d'expérience en tant que free-lance auprès de clients variés :
-                indépendants, TPE/PME, associations, grands comptes. Plus de 50 projets réalisés.
-              </p>
-              <p class="text-sm text-muted">
-                Création de sites sur mesure, accompagnement digital, référencement, conseil en
-                identité numérique.<br />
-                Retrouvez les avis de mes clients sur <a
-                  href="https://www.malt.fr/profile/nicolasdevaux1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >mon profil Malt</a
-                >.
-              </p>
-            </div>
-          </div>
+        <div>
+          <ol class="about-timeline space-y-0">
+            <li class="about-timeline-item">
+              <div class="about-timeline-grid">
+                <time class="about-timeline-meta">2024 — 2025</time>
+                <article>
+                  <h3 class="text-xl font-semibold text-foreground">
+                    Tech Lead front-end — Le Figaro
+                  </h3>
+                  <p class="mt-2 text-muted">
+                    Direction technique de projets d&apos;envergure pour l&apos;un des plus grands médias
+                    français
+                  </p>
+                  <p class="mt-2 text-sm text-muted">
+                    Management d&apos;équipes de développement, architecture de solutions web complexes,
+                    optimisation des performances
+                  </p>
+                </article>
+              </div>
+            </li>
+            <li class="about-timeline-item">
+              <div class="about-timeline-grid">
+                <time class="about-timeline-meta">2020 — 2024</time>
+                <article>
+                  <h3 class="text-xl font-semibold text-foreground">
+                    Tech Lead front-end — Naxos
+                  </h3>
+                  <p class="mt-2 text-muted">
+                    Direction technique de solutions digitales innovantes pour le secteur immobilier
+                  </p>
+                  <p class="mt-2 text-sm text-muted">
+                    Développement d&apos;applications mobiles, sites web corporate, CRM immobilier,
+                    technologies Python/Django/Angular
+                  </p>
+                </article>
+              </div>
+            </li>
+            <li class="about-timeline-item about-timeline-item--last">
+              <div class="about-timeline-grid">
+                <time class="about-timeline-meta">Depuis 2005</time>
+                <article>
+                  <h3 class="text-xl font-semibold text-foreground">Développeur web freelance</h3>
+                  <p class="mt-2 text-muted">
+                    Plusieurs années d&apos;expérience auprès de clients variés : indépendants,
+                    TPE/PME, associations, grands comptes. Plus de 50 projets réalisés.
+                  </p>
+                  <p class="mt-2 text-sm text-muted">
+                    Création de sites sur mesure, accompagnement digital, référencement, conseil en
+                    identité numérique. Retrouvez les avis de mes clients sur{' '}
+                    <a href={maltHref} target="_blank" rel="noopener noreferrer">mon profil Malt</a>.
+                  </p>
+                </article>
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section class="section-y border-b border-border bg-white">
+  <!-- Skills -->
+  <section id="about-skills" class="section-y scroll-mt-28 border-b border-border bg-white">
     <div class="shell-layout">
-      <h2 class="text-3xl font-bold text-center text-foreground mb-12">Mes compétences</h2>
+      <header class="mx-auto mb-10 max-w-3xl text-center">
+        <p class="type-eyebrow mb-3 text-primary-700">Ce que je fais</p>
+        <h2 class="text-3xl font-bold text-foreground md:text-4xl">Mes compétences</h2>
+      </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         <SkillCard
           title="Création de sites web"
           description="Sites rapides, modernes et adaptés à tous les écrans : ordinateur, tablette et téléphone."
@@ -247,7 +303,7 @@ const personSchema = {
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.5"
-              d="M18 18.72a9.1 9.1 0 0 0 3.741-.479q.01-.12.01-.241a3 3 0 0 0-4.692-2.478m.94 3.197l.001.031q0 .337-.037.666A11.94 11.94 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6 6 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.941-3.197m0 0A6 6 0 0 0 12 12.75a6 6 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72a9 9 0 0 0 3.74.477m.94-3.197a5.97 5.97 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0a3 3 0 0 1 6 0m6 3a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0m-13.5 0a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
             ></path>
           </svg>
         </SkillCard>
@@ -293,69 +349,36 @@ const personSchema = {
     </div>
   </section>
 
-  <!-- Philosophy Section -->
-  <section class="section-y border-b border-border bg-surface">
+  <!-- Philosophy — mise en page éditoriale distincte des cartes compétences -->
+  <section id="about-philosophie" class="section-y scroll-mt-28 border-b border-border bg-surface">
     <div class="shell-layout">
-      <h2 class="text-3xl font-bold text-center text-foreground mb-12">Ma philosophie</h2>
+      <header class="mx-auto mb-12 max-w-3xl text-center">
+        <p class="type-eyebrow mb-3 text-primary-700">Manière de travailler</p>
+        <h2 class="text-3xl font-bold text-foreground md:text-4xl">Ma philosophie</h2>
+      </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <SkillCard
-          title="Qualité du contenu"
-          description="Je privilégie la qualité du contenu et du design plutôt que la quantité. Chaque site est pensé avec soin pour répondre aux besoins spécifiques de mes clients."
-        >
-          <svg
-            slot="icon"
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M12 18v-5.25m0 0a6 6 0 0 0 1.5-.189m-1.5.189a6 6 0 0 1-1.5-.189m3.75 7.478a12.1 12.1 0 0 1-4.5 0m3.75 2.383a14.4 14.4 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-            ></path>
-          </svg>
-        </SkillCard>
-        <SkillCard
-          title="Approche artisanale"
-          description="Je ne produis pas des sites à la chaîne. Je préfère suivre peu de projets, avec un échange direct, pour livrer des sites solides et adaptés."
-        >
-          <svg
-            slot="icon"
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M18 18.72a9.1 9.1 0 0 0 3.741-.479q.01-.12.01-.241a3 3 0 0 0-4.692-2.478m.94 3.197l.001.031q0 .337-.037.666A11.94 11.94 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6 6 0 0 1 6 18.719m12 0a5.97 5.97 0 0 0-.941-3.197m0 0A6 6 0 0 0 12 12.75a6 6 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72a9 9 0 0 0 3.74.477m.94-3.197a5.97 5.97 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0a3 3 0 0 1 6 0m6 3a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0m-13.5 0a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0"
-            ></path>
-          </svg>
-        </SkillCard>
-        <SkillCard
-          title="Performance"
-          description="Tous mes sites sont optimisés pour les performances et le référencement naturel. Un beau site doit aussi être efficace !"
-        >
-          <svg
-            slot="icon"
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="m3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75L12 13.5z"
-            ></path>
-          </svg>
-        </SkillCard>
+      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+        <article class="philosophy-pillar rounded-xl border border-border bg-white p-8 shadow-sm">
+          <h3 class="font-heading text-xl font-semibold text-foreground">Qualité du contenu</h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">
+            Je privilégie la qualité du contenu et du design plutôt que la quantité. Chaque site est
+            pensé avec soin pour répondre aux besoins spécifiques de mes clients.
+          </p>
+        </article>
+        <article class="philosophy-pillar rounded-xl border border-border bg-white p-8 shadow-sm">
+          <h3 class="font-heading text-xl font-semibold text-foreground">Approche artisanale</h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">
+            Je ne produis pas des sites à la chaîne. Je préfère suivre peu de projets, avec un échange
+            direct, pour livrer des sites solides et adaptés.
+          </p>
+        </article>
+        <article class="philosophy-pillar rounded-xl border border-border bg-white p-8 shadow-sm">
+          <h3 class="font-heading text-xl font-semibold text-foreground">Performance</h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">
+            Tous mes sites sont optimisés pour les performances et le référencement naturel. Un beau
+            site doit aussi être efficace !
+          </p>
+        </article>
       </div>
     </div>
   </section>
@@ -372,6 +395,78 @@ const personSchema = {
     .about-photo {
       border-radius: 54% 46% 43% 57% / 47% 53% 47% 53%;
       box-shadow: var(--shadow-md);
+    }
+
+    .about-timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-left: 2px solid var(--color-border);
+    }
+
+    .about-timeline-item {
+      position: relative;
+      padding-left: 1.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .about-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: calc(-5px);
+      top: 0.35rem;
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-primary-300);
+      border: 2px solid var(--color-background);
+      box-shadow: 0 0 0 1px var(--color-border);
+    }
+
+    .about-timeline-item--last {
+      padding-bottom: 0;
+    }
+
+    .about-timeline-grid {
+      display: grid;
+      gap: 0.75rem 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .about-timeline-grid {
+        grid-template-columns: 7.5rem minmax(0, 1fr);
+        align-items: start;
+      }
+    }
+
+    .about-timeline-meta {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+        'Courier New', monospace;
+      font-size: var(--text-sm);
+      font-variant-numeric: tabular-nums;
+      color: var(--color-muted);
+      letter-spacing: -0.02em;
+    }
+
+    .philosophy-pillar {
+      transition:
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .philosophy-pillar:hover {
+        box-shadow: var(--shadow-md);
+        border-color: color-mix(in srgb, var(--color-primary-300) 45%, var(--color-border));
+        transform: translateY(-2px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .philosophy-pillar:hover {
+        transform: none;
+      }
     }
   </style>
 </Layout>
