@@ -349,41 +349,77 @@ footer .footer-animated-underline:focus-visible {
     font-family: var(--font-sans);
     font-size: var(--text-xl);
     font-weight: 700;
-    letter-spacing: -0.01em;
-    color: var(--color-foreground);
-    transition: color 180ms ease;
+    letter-spacing: -0.025em;
+    transition: opacity 180ms ease;
 }
 
 .site-header__brand:hover .site-header__wordmark {
-    color: var(--color-primary-foreground);
+    opacity: 0.9;
+}
+
+/* Logo texte nicodev. — tons maquette (#222D2D / #A64D36 / #5C6B73) */
+.site-header__wordmark-nico {
+    color: #222d2d;
+}
+
+.site-header__wordmark-dev {
+    color: #a64d36;
 }
 
 .site-header__tagline {
     display: inline-block;
     margin-top: 0.125rem;
-    max-height: 1.25rem;
+    max-height: 2.75rem;
+    max-width: min(100%, 22rem);
     opacity: 1;
     overflow: hidden;
     font-size: 0.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.015em;
-    color: color-mix(in srgb, var(--color-muted) 78%, var(--color-background));
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
     transition:
         max-height 220ms ease,
+        max-width 220ms ease,
         opacity 180ms ease,
         margin-top 220ms ease;
+}
+
+.site-header__tagline-muted {
+    color: #5c6b73;
+    font-weight: 400;
+}
+
+.site-header__tagline-name {
+    color: #222d2d;
+    font-weight: 700;
 }
 
 @media (min-width: 640px) {
     .site-header__tagline {
         font-size: var(--text-xs);
+        max-width: none;
     }
 }
 
+/*
+ * Au scroll : la baseline masque seulement la hauteur (max-height) mais gardait
+ * une largeur intrinsèque (inline-block + lignes de texte), ce qui écrasait le CTA
+ * « Diagnostic gratuit » sur mobile. max-width: 0 libère la place dans la ligne flex.
+ */
 .site-header[data-scrolled="true"] .site-header__tagline {
     max-height: 0;
+    max-width: 0;
     margin-top: 0;
     opacity: 0;
+}
+
+/* Mot nicodev. dans le pied de page (fond foncé) */
+.footer-brand-wordmark-nico {
+    color: color-mix(in srgb, var(--color-on-foreground) 94%, transparent);
+}
+
+.footer-brand-wordmark-dev {
+    color: var(--color-primary-300);
 }
 
 /*

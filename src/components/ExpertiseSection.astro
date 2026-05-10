@@ -62,17 +62,17 @@ import portraitNicolas from "../assets/images/nicodev.webp";
               <Image
                 src={portraitNicolas}
                 alt="Portrait de Nicolas Devaux, psychologue et développeur web"
-                width={560}
-                height={700}
-                widths={[320, 480, 560]}
-                sizes="(max-width: 1024px) min(92vw, 24rem), min(36vw, 22rem)"
+                width={896}
+                height={1120}
+                widths={[400, 560, 672, 784, 896, 1024]}
+                sizes="(max-width: 1023px) min(92vw, 24rem), (max-width: 1280px) min(40vw, 26rem), min(26rem, 34vw)"
                 class="expertise-portrait__img"
               />
             </div>
-            <figcaption class="expertise-portrait__caption">
-              Psychologue en cabinet et développeur web — 20 ans d'expérience web, dont des responsabilités de tech lead.
-            </figcaption>
           </div>
+          <figcaption class="expertise-portrait__caption">
+            Psychologue en cabinet et développeur web — 20 ans d'expérience web, dont des responsabilités de tech lead.
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -106,29 +106,30 @@ import portraitNicolas from "../assets/images/nicodev.webp";
     margin: 0;
     width: 100%;
     max-width: min(100%, 22rem);
-  }
-
-  @media (min-width: 1024px) {
-    .expertise-visual {
-      max-width: none;
-      width: 100%;
-      height: 100%;
-      min-height: min(70vh, 28rem);
-      display: flex;
-    }
-  }
-
-  .expertise-portrait {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 0;
     border-radius: var(--radius-lg);
     overflow: hidden;
     isolation: isolate;
     box-shadow: var(--shadow-md);
     background: color-mix(in srgb, var(--color-primary-100) 28%, var(--color-surface));
+  }
+
+  @media (min-width: 1024px) {
+    .expertise-visual {
+      /* Ne pas étirer au-delà de la résolution utile (1024px source, recadrage 4:5) + lisibilité */
+      max-width: min(100%, 24rem);
+      width: 100%;
+      height: 100%;
+      min-height: min(52vh, 24rem);
+      display: flex;
+    }
+  }
+
+  .expertise-portrait {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 0;
   }
 
   @media (min-width: 1024px) {

@@ -27,9 +27,8 @@ const diagnosticCta = {
 };
 
 /** Positionnement marque : une personne = les deux expertises (évite la lecture « pour deux audiences »). */
-const brandTagline = 'Par un psychologue & développeur web';
 const brandTaglineHint =
-	'Je suis psychologue et développeur web : une seule personne, les deux expertises.';
+	'Nicolas Devaux : psychologue et développeur web, une seule personne pour les deux expertises.';
 
 /** Chemin sans slash final sauf racine. */
 function normalizePath(p: string): string {
@@ -64,20 +63,14 @@ function navLinkIsActive(href: string): boolean {
 					class="site-header__brand"
 					aria-current={currentPath === '/' ? 'page' : undefined}
 				>
-					<span
-						class:list={[
-							'site-header__wordmark',
-							currentPath === '/' ? 'text-primary-foreground' : null,
-						]}
-					>
-						NICO<span class="text-primary-foreground">DEV</span>
+					<span class="site-header__wordmark">
+						<span class="site-header__wordmark-nico">nico</span><span class="site-header__wordmark-dev">dev.</span>
 					</span>
 
-					<span
-						class="site-header__tagline max-w-[18rem] sm:max-w-none"
-						title={brandTaglineHint}
-					>
-						{brandTagline}
+					<span class="site-header__tagline" title={brandTaglineHint}>
+						<span class="site-header__tagline-muted">par </span>
+						<span class="site-header__tagline-name">Nicolas Devaux</span>
+						<span class="site-header__tagline-muted">, psychologue & développeur</span>
 					</span>
 				</a>
 			</div>
@@ -105,7 +98,7 @@ function navLinkIsActive(href: string): boolean {
 					href={diagnosticCta.href}
 					data-header-diagnostic-cta
 					aria-label={diagnosticCta.label}
-					class="btn-primary-solid inline-flex max-md:min-w-0 max-md:max-w-46 max-md:shrink max-md:truncate max-md:px-3 max-md:py-2 max-md:text-sm md:shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center text-sm md:text-base leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+					class="btn-primary-solid inline-flex max-md:shrink-0 max-md:whitespace-nowrap max-md:px-3 max-md:py-2 max-md:text-xs max-md:leading-tight md:shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center text-sm md:text-base md:leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				>
 					<span class="md:hidden">{diagnosticCta.shortHeaderLabel}</span>
 					<span class="hidden md:inline">{diagnosticCta.label}</span>
@@ -146,12 +139,14 @@ function navLinkIsActive(href: string): boolean {
 		hidden
 	>
 		<div class="flex min-h-14 shrink-0 items-center justify-between gap-3 border-b border-border px-4 py-3">
-			<a href="/" class="flex min-w-0 flex-col items-start gap-0.5 text-foreground" data-mobile-nav-close-wordmark>
-				<span class="text-lg font-bold leading-tight">
-					NICO<span class="text-primary-foreground">DEV</span>
+			<a href="/" class="site-header__brand flex min-w-0 flex-col items-start gap-0.5" data-mobile-nav-close-wordmark>
+				<span class="site-header__wordmark text-lg">
+					<span class="site-header__wordmark-nico">nico</span><span class="site-header__wordmark-dev">dev.</span>
 				</span>
-				<span class="text-[0.6875rem] font-semibold leading-snug text-muted" title={brandTaglineHint}>
-					{brandTagline}
+				<span class="site-header__tagline text-[0.6875rem] leading-snug max-w-[min(100%,22rem)]" title={brandTaglineHint}>
+					<span class="site-header__tagline-muted">par </span>
+					<span class="site-header__tagline-name">Nicolas Devaux</span>
+					<span class="site-header__tagline-muted">, psychologue & développeur</span>
 				</span>
 			</a>
 			<button

@@ -49,18 +49,22 @@ const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 			{description}
 		</p>
 		{tags && tags.length > 0 && (
-			<div class="flex flex-wrap gap-2 mb-4" role="list" aria-label="Thématiques de l’article">
+			<ul
+				class="mb-4 flex list-none flex-wrap gap-2 p-0 m-0"
+				aria-label="Thématiques de l’article"
+			>
 				{tags.slice(0, 3).map((t: string) => (
-					<a
-						href={toTagHref(t)}
-						role="listitem"
-						title={t}
-						class="inline-flex max-w-[min(100%,12rem)] shrink-0 items-center rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted shadow-sm transition-colors hover:border-primary hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-					>
-						<span class="truncate">{t}</span>
-					</a>
+					<li class="shrink-0">
+						<a
+							href={toTagHref(t)}
+							title={t}
+							class="inline-flex max-w-[min(100%,12rem)] shrink-0 items-center rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted shadow-sm transition-colors hover:border-primary hover:bg-surface hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+						>
+							<span class="truncate">{t}</span>
+						</a>
+					</li>
 				))}
-			</div>
+			</ul>
 		)}
 		<a
 			href={href}
