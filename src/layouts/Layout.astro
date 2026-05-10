@@ -55,6 +55,9 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Polices avant la CSS bloquante : les @font-face sont connus en parallèle du fetch CSS ; Source Sans en premier (corps). -->
+    <Font cssVariable="--font-source-sans-3" />
+    <Font cssVariable="--font-lora" />
     <link rel="preload" href={globalStylesUrl} as="style" />
     <link rel="stylesheet" href={globalStylesUrl} />
     <meta name="description" content={description} />
@@ -77,14 +80,6 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <Font
-      cssVariable="--font-source-sans-3"
-      preload={[{ weight: "400 700", style: "normal", subset: "latin" }]}
-    />
-    <Font
-      cssVariable="--font-lora"
-      preload={[{ weight: "400 700", style: "normal", subset: "latin" }]}
-    />
     {
       ogType === "article" && articlePublishedTime && (
         <meta
