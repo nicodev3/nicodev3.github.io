@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import CtaSection from '../components/CtaSection.astro';
+import defaultOgWebp from '../assets/images/blog/development.webp';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const pageUrl = new URL('/site-web-psychologue/', baseUrl).href;
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: 'Site web psychologue',
+			item: pageUrl
+		}
+	]
+};
+---
+
+<Layout
+	title="Site web pour psychologue — vitrine professionnelle | Nicolas Devaux"
+	description="Site web vitrine pour psychologues : présenter votre pratique, rassurer et convertir vers le rendez-vous. Création, SEO local et maintenance inclus."
+	image={defaultOgWebp}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Site web pour psychologue"
+		subtitle="Une vitrine professionnelle qui complète votre présence sur les annuaires ou Doctolib — sans les remplacer."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Site web psychologue' }]}
+	/>
+
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
+				<h2>Site internet thérapeute, site vitrine… même besoin&nbsp;?</h2>
+				<p>
+					Les expressions <strong>site web psychologue</strong>, <strong>site internet thérapeute</strong> ou <strong>site vitrine psychologue</strong> désignent souvent la même chose&nbsp;: un lieu stable où vous contrôlez le message — approche, publics accompagnés, honoraires, accès au cabinet ou téléconsultation — alors que les plateformes imposent leur mise en forme et leurs règles.
+				</p>
+				<p>
+					Mes offres décrivent précisément ce qui est inclus (hébergement, domaine, modifications, option blog pour le référencement). Commencez par la page{' '}
+					<a href="/creation-site-internet-psychologue/">création de site internet pour psychologue</a> ou par les{' '}
+					<a href="/tarifs/">tarifs</a> si vous voulez une vision directe des formules.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<CtaSection
+		title="Passer à l’action"
+		description="Diagnostic gratuit ou demande de devis selon votre niveau de maturité sur le projet."
+		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+		secondaryButton={{ text: 'Demander un devis', href: '/devis/' }}
+		background="surface"
+	/>
+</Layout>

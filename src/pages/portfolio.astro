@@ -55,9 +55,11 @@ const psychologueProjects: PortfolioProject[] = [
     title: "Sabine Lacas",
     image: psychologueUzesImage,
     url: "https://psychologue-uzes.fr/",
-    location: "Uzes",
+    location: "Uzès",
     year: 2018,
     refonte2026: true,
+    imageAlt:
+      "Capture du site vitrine psychologue Sabine Lacas à Uzès — présentation et prise de contact",
   },
   {
     title: "Marie-Josée Grasso",
@@ -66,6 +68,8 @@ const psychologueProjects: PortfolioProject[] = [
     location: "Sorgues",
     year: 2016,
     refonte2026: true,
+    imageAlt:
+      "Site internet psychologue Marie-Josée Grasso à Sorgues — page d’accueil et informations cabinet",
   },
   {
     title: "Emma Rouche",
@@ -74,6 +78,8 @@ const psychologueProjects: PortfolioProject[] = [
     location: "Castelnau-le-Lez",
     year: 2016,
     refonte2026: true,
+    imageAlt:
+      "Site vitrine psychologue Emma Rouche à Castelnau-le-Lez (agglomération montpelliéraine)",
   },
   {
     title: "Laure Meslé Yaakoubi",
@@ -82,6 +88,8 @@ const psychologueProjects: PortfolioProject[] = [
     location: "Montpellier",
     year: 2016,
     refonte2026: true,
+    imageAlt:
+      "Site web psychologue à Montpellier — Laure Meslé Yaakoubi, capture page d’accueil",
   },
   {
     title: "Séverine Reisser",
@@ -89,6 +97,8 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-leslilas.fr/",
     location: "Les Lilas",
     year: 2019,
+    imageAlt:
+      "Site internet psychologue aux Lilas (Île-de-France) — Séverine Reisser",
   },
   {
     title: "Delphine Cima",
@@ -96,6 +106,8 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-manosque.net/",
     location: "Manosque",
     year: 2016,
+    imageAlt:
+      "Site vitrine psychologue Delphine Cima à Manosque — contenus et contact",
   },
   {
     title: "Marie-Claire Bruneau",
@@ -103,6 +115,8 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://mcbruneau-psychologue-blois.fr/",
     location: "Blois",
     year: 2017,
+    imageAlt:
+      "Site web psychologue Marie-Claire Bruneau à Blois — présentation du cabinet",
   },
   {
     title: "Emanuelle FALLIGAN",
@@ -110,6 +124,8 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-sarrebourg.fr/",
     location: "Sarrebourg",
     year: 2016,
+    imageAlt:
+      "Site internet psychologue Emanuelle Falligan à Sarrebourg — accueil",
   },
   {
     title: "Stéphanie REQUET-CATINEAN",
@@ -117,13 +133,17 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-andrezieux-boutheon.fr/",
     location: "Andrézieux-Bouthéon",
     year: 2016,
+    imageAlt:
+      "Site vitrine psychologue à Andrézieux-Bouthéon (proximité bassin lyonnais) — Stéphanie Requet-Catinean",
   },
   {
     title: "Audrey Larcebau",
     image: audreyLarcebauImage,
     url: "https://psy-emdr-cotebasque.fr/",
-    location: "Côtebasque",
+    location: "Côte basque",
     year: 2016,
+    imageAlt:
+      "Site psychologue EMDR Côte basque — Audrey Larcebau, capture vitrine",
   },
 ];
 
@@ -204,7 +224,10 @@ const portfolioHeroSubtitle =
               <div class="portfolio-ref-card__media relative flex aspect-4/3 w-full items-center justify-center overflow-hidden bg-surface px-2 py-2 sm:px-2.5 sm:py-2.5">
                 <Picture
                   src={project.image}
-                  alt={project.imageAlt ?? `Aperçu du site ${project.title}`}
+                  alt={
+                    project.imageAlt ??
+                    `Site vitrine psychologue à ${project.location} — ${project.title}`
+                  }
                   formats={["avif", "webp"]}
                   fallbackFormat="webp"
                   widths={[340, 680, 1020]}
@@ -308,8 +331,8 @@ const portfolioHeroSubtitle =
 
       <div class="mb-6 max-w-3xl">
         <p class="mb-4 text-sm leading-relaxed text-muted sm:text-base">
-          <span class="font-medium text-foreground">Référence complémentaire.</span>{" "}
-          Site vitrine pour{" "}
+          <span class="font-medium text-foreground">Archive hors cœur de métier actuel.</span>{" "}
+          Réalisation plus ancienne (coaching, pas psychologue)&nbsp;: site vitrine pour{" "}
           <a
             href="https://cecilecoaching.fr/"
             target="_blank"

@@ -38,6 +38,7 @@ const ogImageSrc = image
     : image.src
   : defaultOgImage.src;
 const ogImage = new URL(ogImageSrc, baseUrl).toString();
+const homePageUrl = new URL('/', baseUrl).href;
 
 const umamiId =
   import.meta.env.UMAMI_WEBSITE_ID ??
@@ -72,6 +73,10 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
     <meta property="og:image" content={ogImage} />
     <meta property="og:site_name" content="Nicolas Devaux" />
     <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <Font
       cssVariable="--font-source-sans-3"
       preload={[{ weight: "400 700", style: "normal", subset: "latin" }]}
@@ -131,7 +136,7 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
               <a
                 href="/"
                 class="text-on-foreground transition-colors hover:text-on-foreground/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/55 focus-visible:ring-offset-2 focus-visible:ring-offset-foreground rounded-sm"
-                aria-label="Nicolas Devaux — retour à l’accueil"
+                aria-label="NICODEV — Nicolas Devaux, retour à l’accueil"
               >
                 NICO<span class="text-primary-300">DEV</span>
               </a>
@@ -145,16 +150,30 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
             <h3 class="text-lg font-semibold mb-4">Services</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/#offres" class={footerLinkClass}>Création de sites internet</a>
+                <a href={`${homePageUrl}#offres`} class={footerLinkClass}>Création de sites internet</a>
               </li>
               <li>
-                <a href="/#seo-local" class={footerLinkClass}>Visibilité locale sur Google</a>
+                <a href={`${homePageUrl}#seo-local`} class={footerLinkClass}>Visibilité locale sur Google</a>
               </li>
               <li>
-                <a href="/#faq-performance-mobile" class={footerLinkClass}>Design responsive</a>
+                <a href={`${homePageUrl}#faq-performance-mobile`} class={footerLinkClass}>Design responsive</a>
               </li>
               <li>
                 <a href="/tarifs/#faq-modifications" class={footerLinkClass}>Maintenance web</a>
+              </li>
+              <li>
+                <a href="/creation-site-internet-psychologue/" class={footerLinkClass}
+                  >Création site psychologue</a
+                >
+              </li>
+              <li>
+                <a href="/referencement-site-psychologue/" class={footerLinkClass}>Référencement site psychologue</a>
+              </li>
+              <li>
+                <a href="/webdesigner-site-psychologue/" class={footerLinkClass}>Webdesigner psychologues</a>
+              </li>
+              <li>
+                <a href="/devis/" class={footerLinkClass}>Demande de devis</a>
               </li>
               <li>
                 <a href="/exemples-sites-psychologue/" class={footerLinkClass}

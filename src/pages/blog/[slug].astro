@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
 import BlogShare from '../../components/BlogShare.astro';
 import { toTagHref } from '../../utils/blog';
+import defaultOgWebp from '../../assets/images/blog/development.webp';
 
 // Récupérer le slug depuis l'URL
 export async function getStaticPaths() {
@@ -32,7 +33,11 @@ const relatedPosts = allPosts
 	.slice(0, 3);
 
 const baseUrl = Astro.site ?? Astro.url.origin;
+const siteOrigin = new URL('/', baseUrl).href;
+const publisherLogoUrl = new URL(defaultOgWebp.src, baseUrl).toString();
 const canonical = new URL(Astro.url.pathname, baseUrl).toString();
+const metaTitleSuffix = entry.data.metaTitleSuffix ?? 'Site web psychologues';
+const layoutTitle = `${entry.data.title} | ${metaTitleSuffix}`;
 const imageUrl = entry.data.image
 	? new URL(entry.data.image.src, baseUrl).toString()
 	: undefined;
@@ -54,7 +59,11 @@ const blogPostingSchema = {
 	publisher: {
 		'@type': 'Organization',
 		name: 'Nicolas Devaux',
-		url: 'https://nicodev.fr'
+		url: siteOrigin,
+		logo: {
+			'@type': 'ImageObject',
+			url: publisherLogoUrl
+		}
 	},
 	datePublished: entry.data.pubDate,
 	dateModified: dateModified,
@@ -75,7 +84,7 @@ const breadcrumbSchema = {
 ---
 
 <Layout 
-	title={`${entry.data.title} - Nicolas Devaux`}
+	title={layoutTitle}
 	description={entry.data.description}
 	image={entry.data.image}
 	ogType="article"
@@ -172,7 +181,11 @@ const breadcrumbSchema = {
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-xl font-semibold text-foreground mb-4">Un projet de site web ?</h2>
 			<p class="text-muted mb-6">
-				Vous cherchez un site professionnel pour votre cabinet ? Un diagnostic gratuit permet de faire le point ; la page tarifs détaille les formules. Pour vous projeter visuellement, vous pouvez aussi consulter des{' '}
+				Vous cherchez un site professionnel pour votre cabinet ? Voir la page{' '}
+				<a href="/creation-site-internet-psychologue/" class="text-foreground font-medium hover:text-primary">création de site pour psychologue</a>
+				, un diagnostic gratuit pour faire le point, et les{' '}
+				<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a>
+				. Pour vous projeter visuellement :{' '}
 				<a href="/exemples-sites-psychologue/" class="text-foreground font-medium hover:text-primary">exemples de sites pour psychologues</a>.
 			</p>
 			<div class="flex flex-wrap gap-3">

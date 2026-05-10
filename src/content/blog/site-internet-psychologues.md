@@ -19,6 +19,8 @@ En 2026, un bon site ne se limite plus à "être en ligne". Il doit répondre à
 
 Ce guide vous donne une méthode simple et actionnable.
 
+Pour une présentation courte des prestations proposées ici (création, visibilité, exemples de mise en page), vous pouvez aussi ouvrir les pages&nbsp;: [création de site internet pour psychologue](/creation-site-internet-psychologue/), [référencement site psychologue](/referencement-site-psychologue/), [webdesigner pour psychologues](/webdesigner-site-psychologue/) et [site web pour psychologue](/site-web-psychologue/).
+
 ## Pourquoi un site reste indispensable pour un psychologue en 2026
 
 Les patients comparent, lisent, puis décident. Avant même le premier appel, votre site joue déjà un rôle de cadre.

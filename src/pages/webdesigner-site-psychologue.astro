@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import CtaSection from '../components/CtaSection.astro';
+import defaultOgWebp from '../assets/images/blog/development.webp';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const pageUrl = new URL('/webdesigner-site-psychologue/', baseUrl).href;
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: 'Webdesigner psychologues',
+			item: pageUrl
+		}
+	]
+};
+---
+
+<Layout
+	title="Webdesigner pour psychologues | Sites vitrine sur mesure | Nicolas Devaux"
+	description="Webdesigner spécialisé sites pour psychologues : interface sobre, lisible sur mobile, conversion vers le rendez-vous. Psychologue et développeur web."
+	image={defaultOgWebp}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Webdesigner pour psychologues"
+		subtitle="Un design sobre et professionnel — pas tape-à-l’œil — pour rassurer et guider vers la prise de contact ou le widget de RDV."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Webdesigner psychologues' }]}
+	/>
+
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
+				<h2>Pourquoi chercher un «&nbsp;webdesigner psychologue&nbsp;»&nbsp;?</h2>
+				<p>
+					La recherche <strong>webdesigner psychologue</strong> reflète souvent la même attente qu’un décorateur pour cabinet&nbsp;: on veut quelqu’un qui comprend le ton du métier — confidentialité, calme, lisibilité — sans marketing agressif ni effets gadget qui fatiguent sur téléphone.
+				</p>
+				<p>
+					Je suis <strong>psychologue et développeur web</strong>. Je ne sous-traite pas la conception à une équipe généraliste&nbsp;: vous parlez à la personne qui code et qui sait ce que vos patients peuvent craindre quand ils arrivent sur un site (surinformation, promesses, surcharge visuelle).
+				</p>
+
+				<h2>Ce que « design » veut dire ici</h2>
+				<ul>
+					<li>Hiérarchie visuelle claire (titres, espacements, contrastes accessibles)</li>
+					<li>Parcours court vers l’action utile (contact, téléphone, rendez-vous en ligne)</li>
+					<li>Variantes de mise en page à découvrir sur les <a href="/exemples-sites-psychologue/">exemples de sites pour psychologues</a></li>
+				</ul>
+
+				<h2>Liens utiles</h2>
+				<ul>
+					<li><a href="/creation-site-internet-psychologue/">Création de site internet pour psychologue</a></li>
+					<li><a href="/referencement-site-psychologue/">Référencement site psychologue</a></li>
+					<li><a href="/portfolio/">Portfolio</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<CtaSection
+		title="Voir si le rendu vous convient"
+		description="Les démos et le diagnostic gratuit permettent de valider le ton avant de vous engager."
+		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+		secondaryButton={{ text: 'Exemples de sites', href: '/exemples-sites-psychologue/' }}
+		background="surface"
+	/>
+</Layout>

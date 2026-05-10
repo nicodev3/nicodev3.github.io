@@ -1,5 +1,6 @@
 ---
 import { ChevronRight } from '@lucide/astro';
+import { homeFaqItems } from '../data/faq-home';
 
 export interface FaqItem {
 	id?: string;
@@ -16,58 +17,8 @@ export interface Props {
 	headingAlign?: 'left' | 'center';
 }
 
-const defaultItems: FaqItem[] = [
-	{
-		question: "Combien de temps faut-il pour lancer le site ?",
-		answer: "En général deux à trois semaines selon vos disponibilités et le temps nécessaire pour compléter le formulaire de contenu ; cela peut être un peu plus rapide lorsque les éléments sont fournis vite."
-	},
-	{
-		id: "faq-modifications",
-		question: "Que couvrent les modifications incluses dans les offres ?",
-		answer: "L'offre Sérénité inclut 1 modification simple par mois (texte ou photo). L'offre Visibilité & Confiance inclut les modifications de contenu ainsi qu'une modernisation du site tous les ans. Les changements de structure (refonte complète du design) restent hors périmètre."
-	},
-	{
-		question: "Je ne suis pas à l'aise pour écrire. Comment ça se passe pour le contenu ?",
-		answer: "Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu'il soit clair et rassurant."
-	},
-	{
-		id: 'faq-performance-mobile',
-		question: "Pourquoi dit-on que le site est rapide et léger ?",
-		answer: "Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s'affichent rapidement, même sur mobile ou avec une connexion limitée. C'est agréable pour vos visiteurs et bien vu par les moteurs de recherche."
-	},
-	{
-		question: "En quoi votre approche est-elle différente d’une offre standardisée ?",
-		answer: "Je ne fonctionne pas comme une usine à sites. Je préfère suivre peu de projets, avec un échange direct, pour adapter chaque site à la pratique, au ton et aux besoins réels du psychologue. Il y a une base de travail sobre et éprouvée, mais elle est toujours retravaillée avec attention."
-	},
-	{
-		id: 'faq-doctolib-rdv',
-		question: "Puis-je utiliser Doctolib, Qare ou un autre service de prise de rendez-vous ?",
-		answer: "Oui. J'intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile."
-	},
-	{
-		question: "Et si j’ai déjà un site ?",
-		answer:
-			"Nous pouvons soit repartir de zéro avec une structure plus claire, soit nous inspirer de ce qui fonctionne déjà. Le diagnostic gratuit permet d’identifier ce qui est à garder, à simplifier ou à améliorer."
-	},
-	{
-		question: "Suis-je engagé sur une longue durée ?",
-		answer:
-			"Non. Les offres sont sans engagement de durée : vous pouvez arrêter l’abonnement à tout moment. Vous gardez ainsi de la souplesse si votre situation évolue."
-	},
-	{
-		question: "Est-ce adapté si je débute en libéral ?",
-		answer:
-			"Oui. Le site est justement pensé pour vous aider à être visible dès vos débuts, avec des textes clairs pour expliquer votre pratique et rassurer vos premiers patients."
-	},
-	{
-		question: "Que se passe-t-il si j’arrête l’abonnement ?",
-		answer:
-			"Le site et les services associés (hébergement, mises à jour, support) sont arrêtés à la fin de la période payée. Vous pouvez demander un export simple des contenus principaux (textes) pour les conserver."
-	}
-];
-
 const {
-	items = defaultItems,
+	items = homeFaqItems,
 	title = 'FAQ',
 	sectionId = 'faq',
 	headingId = 'faq-heading',
@@ -92,22 +43,24 @@ const headingAlignClass = headingAlign === 'center' ? 'text-center' : '';
 			{items.map((item) => (
 				<details {...(item.id && { id: item.id })} class:list={['faq-details', item.id && 'scroll-mt-28']}>
 					<summary
-						class="flex cursor-pointer list-none items-start gap-3 px-4 py-6 transition-colors hover:bg-surface-alt sm:px-5 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset"
+						class="faq-summary grid cursor-pointer list-none grid-cols-[2.5rem_minmax(0,1fr)] items-center gap-x-3 px-4 py-6 transition-colors hover:bg-surface-alt sm:px-5 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset"
 					>
-						<span
-							class="faq-chevron ui-icon-well mt-0.5 transition-transform duration-200 ease-out motion-reduce:transition-none"
-							aria-hidden="true"
-						>
-							<ChevronRight class="h-5 w-5" stroke-width={1.5} />
+						<span class="faq-chevron-cell flex shrink-0 justify-center" aria-hidden="true">
+							<span class="faq-chevron ui-icon-well transition-transform duration-200 ease-out motion-reduce:transition-none">
+								<ChevronRight class="h-5 w-5 shrink-0" stroke-width={1.5} />
+							</span>
 						</span>
-						<span class="min-w-0 flex-1 pt-0.5 text-left text-base font-semibold leading-snug text-foreground">
+						<span class="faq-question min-w-0 text-left text-base font-semibold leading-normal text-foreground">
 							{item.question}
 						</span>
 					</summary>
-					<div class="px-4 pb-6 pt-0 sm:px-5">
-						<p class="faq-answer-text border-t border-border pt-5 text-sm leading-relaxed text-muted sm:text-base">
-							{item.answer}
-						</p>
+					<div class="border-t border-border px-4 pb-6 pt-5 sm:px-5">
+						<div class="grid grid-cols-[2.5rem_minmax(0,1fr)] items-start gap-x-3">
+							<span aria-hidden="true" class="faq-answer-spacer block min-h-px min-w-0 shrink-0"></span>
+							<p class="faq-answer-text m-0 min-w-0 text-sm leading-relaxed text-muted sm:text-base">
+								{item.answer}
+							</p>
+						</div>
 					</div>
 				</details>
 			))}
@@ -132,9 +85,13 @@ const headingAlignClass = headingAlign === 'center' ? 'text-center' : '';
 		transform: rotate(90deg);
 	}
 
-	/* Aligner le corps de réponse sous le titre (pastille 2.5rem + gap-3) */
-	.faq-answer-text {
-		margin-left: calc(2.5rem + 0.75rem);
+	.faq-summary .faq-chevron {
+		transform-origin: center;
+	}
+
+	/* Supprime l'espace baseline sous le SVG (alignement vertical avec le texte). */
+	.faq-summary .faq-chevron :global(svg) {
+		display: block;
 	}
 </style>
 

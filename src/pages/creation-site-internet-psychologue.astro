@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import CtaSection from '../components/CtaSection.astro';
+import defaultOgWebp from '../assets/images/blog/development.webp';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const pageUrl = new URL('/creation-site-internet-psychologue/', baseUrl).href;
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: 'Création site internet psychologue',
+			item: pageUrl
+		}
+	]
+};
+---
+
+<Layout
+	title="Site vitrine pour psychologue — création et suivi | Nicolas Devaux"
+	description="Je conçois et maintiens des sites vitrine pour psychologues : structure claire, ton professionnel, mobile, prise de rendez-vous intégrée. Psychologue et développeur web, j’accompagne des cabinets partout en France."
+	image={defaultOgWebp}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Site vitrine pour votre cabinet de psychologue"
+		subtitle="Je crée et fais évoluer votre site : présenter votre pratique, rassurer vos futurs patients et les orienter vers la prise de contact ou le rendez-vous en ligne. Une seule personne — psychologue et développeur web."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création site psychologue' }]}
+	/>
+
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
+				<h2>Ce que je fais pour vous</h2>
+				<p>
+					Je vous propose un <strong>site vitrine sur mesure</strong>, pensé pour le cabinet&nbsp;: pages lisibles sur téléphone, formulation adaptée au métier de psychologue, pas de promesses marketing déplacées ni de jargon technique imposé à vos patients.
+				</p>
+				<p>
+					Je travaille <strong>exclusivement avec des psychologues</strong>. Vous n’êtes pas un «&nbsp;secteur parmi d’autres&nbsp;» dans une agence généraliste&nbsp;: le socle de pages, les exemples de formulation et les contraintes (cadre déontologique, RGPD, ton de site de santé) sont déjà alignés sur votre réalité de libéral.
+				</p>
+
+				<h2>Ce que comprend la création</h2>
+				<ul>
+					<li>Une <strong>arborescence éprouvée</strong> (accueil, présentation de votre approche, informations pratiques, contact) que nous adaptons à votre ton et à vos spécialités</li>
+					<li>Un <strong>contenu structuré à partir de vos réponses</strong> à un formulaire — vous n’avez pas à rédiger seul de longs textes&nbsp;: vous répondez à des questions courtes, je les organise pour le web</li>
+					<li>Une mise en ligne <strong>rapide et sobre techniquement</strong>, lisible par Google (titres, descriptions, données structurées de base, bonnes performances sur mobile)</li>
+					<li>L’intégration de votre <strong>outil de rendez-vous</strong> (Doctolib, Qare, Maiia ou équivalent) lorsque vous en utilisez un</li>
+					<li>L’<strong>hébergement</strong>, le <strong>nom de domaine</strong> et les <strong>mises à jour</strong> inclus dans un abonnement mensuel — montants et périmètre détaillés sur la page <a href="/tarifs/">Tarifs</a></li>
+				</ul>
+
+				<h2>Déroulement typique</h2>
+				<p>
+					Échange pour cadrer le besoin (souvent après un <a href="/diagnostic-gratuit/">diagnostic gratuit</a> si vous hésitez encore), collecte de vos éléments via formulaire, mise en ligne du site puis une phase de validation ensemble avant ouverture au public. En général, comptez <strong>deux à trois semaines</strong> selon vos disponibilités et la rapidité avec laquelle les contenus sont complétés.
+				</p>
+
+				<h2>Pour vous projeter</h2>
+				<p>
+					Les <a href="/exemples-sites-psychologue/">démos</a> montrent des rendus possibles&nbsp;; le <a href="/portfolio/">portfolio</a> rassemble des sites réels ou suivis. Pour une vue plus large sur la méthode (structure, éthique, visibilité, RGPD), le guide du blog{' '}
+					<a href="/blog/site-internet-psychologues/">Site internet pour psychologue</a> reste la référence la plus complète.
+				</p>
+
+				<h2>Où que soit votre cabinet</h2>
+				<p>
+					L’accompagnement se fait en général <strong>à distance</strong> (échanges par écrit, appels courts si besoin), avec la même méthode partout en France. La ville ou la région n’est pas un critère de commande&nbsp;: ce qui compte, c’est votre besoin et la faisabilité dans vos délais.
+				</p>
+
+				<h2>Autres besoins liés au site</h2>
+				<p>
+					Si votre priorité est surtout la <strong>visibilité sur Google</strong> (référencement local, cohérence avec votre fiche Google Business Profile), voyez la page{' '}
+					<a href="/referencement-site-psychologue/">Référencement pour site de psychologue</a>. Pour l’aspect <strong>interface et mise en page</strong>, la page{' '}
+					<a href="/webdesigner-site-psychologue/">Webdesigner pour psychologues</a> précise la même démarche sous cet angle.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<CtaSection
+		title="Parler de votre projet de site"
+		description="Le diagnostic gratuit permet de cadrer vos priorités avant tout engagement."
+		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
+		background="surface"
+	/>
+</Layout>

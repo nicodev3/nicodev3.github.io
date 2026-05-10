@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import CtaSection from '../components/CtaSection.astro';
+import defaultOgWebp from '../assets/images/blog/development.webp';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const pageUrl = new URL('/referencement-site-psychologue/', baseUrl).href;
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: 'Référencement site psychologue',
+			item: pageUrl
+		}
+	]
+};
+---
+
+<Layout
+	title="Référencement et SEO pour site de psychologue | Nicolas Devaux"
+	description="Référencement naturel et local pour sites de psychologues : structure, technique, Google Business Profile et attentes réalistes. Par un psychologue développeur web."
+	image={defaultOgWebp}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Référencement et SEO pour site de psychologue"
+		subtitle="Les bases techniques et éditoriales pour être mieux compris par Google — sans promesses miraculeuses sur les classements."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Référencement site psychologue' }]}
+	/>
+
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
+				<h2>« Référencement psychologue » : que cherchez-vous vraiment&nbsp;?</h2>
+				<p>
+					Beaucoup de requêtes regroupent tout sous <strong>référencement psychologue</strong> ou <strong>site psychologue SEO</strong>. En pratique, il y a deux volets&nbsp;: votre{' '}
+					<strong>site</strong> (contenu, structure, performance) et votre présence dans les résultats locaux (notamment via{' '}
+					<a href="/blog/google-business-profile-psychologue/">Google Business Profile</a>). Les deux doivent être cohérents — même adresse, même tonalité, mêmes informations sur les modalités de consultation.
+				</p>
+
+				<h2>Ce que j’optimise côté site</h2>
+				<ul>
+					<li>Titres et descriptions alignés sur vos spécialités et votre ville ou secteur</li>
+					<li>Pages rapides sur mobile (facteur de confiance pour les patients et pour Google)</li>
+					<li>Données structurées pertinentes, plan de site et bonnes pratiques d’indexation</li>
+					<li>Contenu sobre, conforme à l’image professionnelle d’un psychologue</li>
+				</ul>
+
+				<h2>Ce que je ne promets pas</h2>
+				<p>
+					Personne ne peut garantir une «&nbsp;première position&nbsp;» permanente sur <em>psychologue + ville</em> dans les zones très concurrentielles. En revanche, un site bien construit et une fiche locale soignée donnent une chance durable d’être trouvé par les bonnes recherches — et surtout de convertir les visites en prises de contact.
+				</p>
+
+				<h2>Lectures complémentaires</h2>
+				<ul>
+					<li>
+						<a href="/blog/psychologue-premier-google-ville/">Psychologue : comment améliorer sa visibilité locale sur Google&nbsp;?</a>
+					</li>
+					<li>
+						<a href="/blog/site-internet-psychologues/">Guide complet site internet pour psychologue</a>
+					</li>
+					<li>
+						<a href="/creation-site-internet-psychologue/">Création de site internet pour psychologue</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<CtaSection
+		title="Faire le point sur votre visibilité"
+		description="Le diagnostic gratuit permet d’identifier les priorités techniques et éditoriales."
+		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
+		background="surface"
+	/>
+</Layout>

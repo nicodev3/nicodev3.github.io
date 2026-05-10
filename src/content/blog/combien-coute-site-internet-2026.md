@@ -10,6 +10,8 @@ tags: ["psychologue", "prix site internet", "création site", "cabinet libéral"
 
 *Temps de lecture : 9 minutes*
 
+> **Tarifs Nicodev :** pour les formules et prix à jour (abonnement tout inclus), voir directement la page [Tarifs](/tarifs/). *L’article ci-dessous* décrit les **fourchettes du marché** pour situer un budget réaliste en libéral.
+
 Quand on exerce en libéral, la question est concrète : **combien investir pour un site utile, sérieux, et rassurant, sans exploser le budget ?**
 
 En 2026, on voit de tout : des outils à petit budget si vous faites une partie du travail vous-même, et des prestations beaucoup plus chères si vous déléguez entièrement.

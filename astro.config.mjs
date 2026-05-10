@@ -5,18 +5,21 @@ import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
 
-const noindexPages = new Set([
-  'https://nicodev.fr/merci/',
-  'https://nicodev.fr/cgv/',
-  'https://nicodev.fr/politique-confidentialite/',
+/** URLs exactes à retirer du sitemap (noindex ou hors prod). */
+const noindexUrlsExact = new Set([
   'https://nicodev.fr/dev/styleguide/',
   'https://nicodev.fr/dev/guide-installation-psychologues/',
 ]);
 
 /** @param {string} page */
-const isTagPage = (page) => {
+const shouldIncludeInSitemap = (page) => {
   const pathname = new URL(page).pathname;
-  return pathname.startsWith('/blog/tag/');
+  if (pathname.startsWith('/merci')) return false;
+  if (pathname.startsWith('/blog/tag/')) return false;
+  if (pathname.startsWith('/dev/')) return false;
+  if (pathname === '/404' || pathname === '/404/') return false;
+  if (noindexUrlsExact.has(page)) return false;
+  return true;
 };
 
 // https://astro.build/config
@@ -52,7 +55,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       /** @param {string} page */
-      filter: (page) => !noindexPages.has(page) && !isTagPage(page),
+      filter: (page) => shouldIncludeInSitemap(page),
     }),
   ]
 });

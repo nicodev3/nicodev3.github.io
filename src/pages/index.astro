@@ -12,6 +12,7 @@ import DifferenciationDiySection from '../components/DifferenciationDiySection.a
 import BlogHomeSection from '../components/BlogHomeSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import defaultOgWebp from '../assets/images/blog/development.webp';
+import { homeFaqItems } from '../data/faq-home';
 
 const allBlogPosts = await getCollection('blog');
 const preferredBlogIds = [
@@ -36,13 +37,14 @@ for (const post of byDateDesc) {
 }
 
 const baseUrl = Astro.site ?? Astro.url.origin;
+const siteRootHref = new URL('/', baseUrl).href;
 
 const businessSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'ProfessionalService',
 	name: 'Nicolas Devaux',
 	description: 'Création de sites internet pour psychologues.',
-	url: baseUrl,
+	url: siteRootHref,
 	telephone: '+33629341367',
 	address: {
 		'@type': 'PostalAddress',
@@ -52,80 +54,51 @@ const businessSchema = {
 		addressRegion: 'Île-de-France',
 		addressCountry: 'FR'
 	},
-	priceRange: '29€ - 49€',
+	priceRange: 'Abonnement mensuel tout inclus dès 29 EUR',
 	sameAs: [
 		'https://www.malt.fr/profile/nicolasdevaux1',
-		'https://github.com/nicodev3'
+		'https://github.com/nicodev3',
+		'https://www.linkedin.com/in/nicodev3/'
 	],
-	areaServed: 'France',
-	slogan: 'Création de sites internet',
+	areaServed: { '@type': 'Country', name: 'France' },
+	slogan: 'Création de sites internet pour psychologues',
 	makesOffer: [
-		{ '@type': 'Offer', name: 'Pack Site Vitrine', price: '29', priceCurrency: 'EUR' },
-		{ '@type': 'Offer', name: 'Pack Site + Blog', price: '49', priceCurrency: 'EUR' }
+		{
+			'@type': 'Offer',
+			name: 'Pack Site Vitrine',
+			description: 'Abonnement mensuel — création et maintenance du site incluses',
+			priceSpecification: {
+				'@type': 'UnitPriceSpecification',
+				price: '29',
+				priceCurrency: 'EUR',
+				unitText: 'MONTH'
+			}
+		},
+		{
+			'@type': 'Offer',
+			name: 'Pack Site + Blog',
+			description: 'Abonnement mensuel — site vitrine et contenus éditoriaux pour la visibilité',
+			priceSpecification: {
+				'@type': 'UnitPriceSpecification',
+				price: '49',
+				priceCurrency: 'EUR',
+				unitText: 'MONTH'
+			}
+		}
 	]
 };
 
 const faqSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'FAQPage',
-	mainEntity: [
-		{
-			'@type': 'Question',
-			name: "Combien de temps faut-il pour lancer le site ?",
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: "En général deux à trois semaines selon vos disponibilités et le temps nécessaire pour compléter le formulaire de contenu ; cela peut être un peu plus rapide lorsque les éléments sont fournis vite."
-			}
-		},
-		{
-			'@type': 'Question',
-			name: "Que couvre le seul aller-retour inclus ?",
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: "Les ajustements de textes, sections et style prévus dans le brief initial."
-			}
-		},
-		{
-			'@type': 'Question',
-			name: "Que couvrent les modifications incluses dans les abonnements ?",
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: "Textes, coordonnées, tarifs, photo, horaires et lien widget RDV (Doctolib, Qare...). Pour le Pack Blog, s'ajoutent 2 articles par mois pour vous faire mieux apparaître sur Google. Les changements de structure (nouvelles pages, refonte du design) restent hors périmètre."
-			}
-		},
-		{
-			'@type': 'Question',
-			name: "Je ne suis pas à l'aise pour écrire. Comment ça se passe pour le contenu ?",
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: "Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu'il soit clair et rassurant."
-			}
-		},
-		{
-			'@type': 'Question',
-			name: "Puis-je changer d'offre plus tard ?",
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: "Oui, vous pouvez passer d'un plan à l'autre selon l'évolution de votre activité."
-			}
-		},
-		{
-			'@type': 'Question',
-			name: "Pourquoi dit-on que le site est rapide et léger ?",
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: "Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s'affichent rapidement, même sur mobile ou avec une connexion limitée. C'est agréable pour vos visiteurs et bien vu par les moteurs de recherche."
-			}
-		},
-		{
-			'@type': 'Question',
-			name: "Puis-je utiliser Doctolib, Qare ou un autre service de prise de rendez-vous ?",
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: "Oui. J'intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile."
-			}
+	mainEntity: homeFaqItems.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: {
+			'@type': 'Answer',
+			text: item.answer
 		}
-	]
+	}))
 };
 
 const websiteSchema = {
@@ -133,7 +106,7 @@ const websiteSchema = {
 	'@type': 'WebSite',
 	name: 'Nicolas Devaux',
 	alternateName: 'Nicodev',
-	url: baseUrl,
+	url: siteRootHref,
 	description: 'Création de sites internet pour psychologues.'
 };
 
@@ -141,7 +114,7 @@ const breadcrumbSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',
 	itemListElement: [
-		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: baseUrl + '/' }
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: siteRootHref }
 	]
 };
 ---

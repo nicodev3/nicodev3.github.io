@@ -13,6 +13,8 @@ const blog = defineCollection({
       author: z.string(),
       image: image().optional(),
       tags: z.array(z.string()).optional(),
+      /** Suffixe du `<title>` (après « Titre article | »). Défaut côté template : « Site web psychologues ». */
+      metaTitleSuffix: z.string().optional(),
     }),
 });
 
