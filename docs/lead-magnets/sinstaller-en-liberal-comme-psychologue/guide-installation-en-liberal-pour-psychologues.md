@@ -1,6 +1,6 @@
 # Guide de l'installation en libéral pour psychologues
 
-Ce document rassemble les chapitres du guide en cours de rédaction. Il reste stocké localement dans le projet pour le moment, afin d’être relu, enrichi, puis exporté en PDF au bon moment.
+Ce document rassemble les chapitres en cours de rédaction. Il est conçu pour être relu, enrichi, puis exporté en PDF au moment opportun.
 
 ## Table des matières
 
@@ -131,11 +131,11 @@ Exemple concret : garder un mi-temps salarié et ouvrir deux journées de cabine
 
 Tu peux imaginer cette progression :
 
-1. `Salariat principal + quelques créneaux libéraux`
-2. `Temps partagé plus équilibré`
-3. `Libéral à temps plein quand l’activité devient assez stable`
+1. Salariat principal + quelques créneaux libéraux
+2. Temps partagé plus équilibré
+3. Libéral à temps plein quand l’activité devient assez stable
 
-[ILLUSTRATION : schéma "salarié → cumul → libéral à temps plein" avec les étapes de transition]
+![Schéma de transition progressive : salariat principal, cumul salarié plus libéral, puis libéral à temps plein.](/images/guides/schema-transition-salarie-cumul-liberal.svg)
 
 Analogie utile : mieux vaut construire une passerelle que sauter d’une rive à l’autre. Le cumul progressif joue ce rôle de passerelle.
 
@@ -215,22 +215,22 @@ La question devient alors très concrète : combien de séances me faut-il par s
 
 Formule simple :
 
-`objectif de chiffre d’affaires mensuel ÷ tarif moyen = nombre de séances par mois`
+objectif de chiffre d’affaires mensuel ÷ tarif moyen = nombre de séances par mois
 
 Puis :
 
-`nombre de séances par mois ÷ 4 = nombre de séances par semaine`
+nombre de séances par mois ÷ 4 = nombre de séances par semaine
 
 Exemple concret : si tu vises 4 800 € de chiffre d’affaires mensuel avec des séances à 60 €, cela représente environ 80 séances par mois, soit 20 séances par semaine.
 
 ### Étape 4 : raisonner en net réaliste, pas en brut rassurant
 
-Si tu es en micro-BNC, le calcul est simplifié, mais il faut tout de même anticiper les cotisations sociales. Pour une profession libérale relevant de la Cipav, l’ordre de grandeur du taux micro-social est autour de `23,2 %` en 2025-2026. Cela aide à faire des simulations prudentes.
+Si tu es en micro-BNC, le calcul est simplifié, mais il faut tout de même anticiper les cotisations sociales. Pour une profession libérale relevant de la Cipav, l’ordre de grandeur du taux micro-social est autour de 23,2 % en 2025-2026. Cela aide à faire des simulations prudentes.
 
 Exemple concret : sur 4 800 € encaissés, retire déjà environ 1 100 € de cotisations sociales, puis tes frais fixes. Tu obtiens une image beaucoup plus réaliste de ce qu’il te reste.
 
 [ENCADRE_INFO]
-Le seuil du régime micro-BNC était de `77 700 €` en 2025 et il est passé à `83 600 €` pour les recettes 2026. Si tu fais ton prévisionnel, vérifie toujours les seuils applicables à ton année de démarrage.
+Le seuil du régime micro-BNC était de 77 700 € en 2025 et il est passé à 83 600 € pour les recettes 2026. Si tu fais ton prévisionnel, vérifie toujours les seuils applicables à ton année de démarrage.
 [/ENCADRE_INFO]
 
 [ENCADRE_ASTUCE]
@@ -374,7 +374,7 @@ Sur ce point, la règle est claire : **l’inscription auprès de l’ARS et l�
 
 Depuis **juin 2024**, l’enregistrement n’est plus fait dans ADELI mais dans le **RPPS**.
 
-Le guide rappelle bien la différence :
+Repère essentiel :
 
 - le numéro **ADELI** était départemental et pouvait changer ;
 - le numéro **RPPS** est **national**, **attribué une fois pour toutes** et sert de numéro de référence.
@@ -385,13 +385,13 @@ Analogie utile : ADELI ressemblait à un identifiant local. Le RPPS fonctionne d
 
 Le portail **eRPPS** de l’Agence du Numérique en Santé est accessible via :
 
-- `moncompte-ps.esante.gouv.fr`
+- moncompte-ps.esante.gouv.fr
 
 L’enregistrement et les mises à jour passent par ce portail, avec identification initiale via **FranceConnect**.
 
 ### Quand la faire
 
-Le guide précise que l’enregistrement doit être effectué **dans le mois suivant la prise de fonction**, quel que soit le mode d’exercice :
+L’enregistrement doit être effectué **dans le mois suivant la prise de fonction**, quel que soit le mode d’exercice :
 
 - salarié ;
 - libéral ;
@@ -403,7 +403,7 @@ Même si le délai d’un mois laisse un peu d’air, le plus simple est d’ant
 
 ### Ce que tu obtiens
 
-Tu obtiens un **numéro RPPS** qui t’accompagne dans le temps. En cas de changement de situation professionnelle, le guide rappelle qu’il faut **informer l’ARS via le portail eRPPS** pour mettre ton dossier à jour.
+Tu obtiens un **numéro RPPS** qui t’accompagne dans le temps. En cas de changement de situation professionnelle, il faut **informer l’ARS via le portail eRPPS** pour mettre ton dossier à jour.
 
 ## Étape 3 : déclarer ton activité sur le guichet unique INPI
 
@@ -411,11 +411,11 @@ La règle est simple : **toute activité indépendante, quel que soit le statut 
 
 La formalité se fait sur :
 
-- `procedures.inpi.fr`
+- procedures.inpi.fr
 
 ### Ce que fait concrètement cette démarche
 
-C’est cette déclaration qui lance l’immatriculation de ton activité. Le guide décrit un enchaînement très pratique :
+C’est cette déclaration qui lance l’immatriculation de ton activité. En pratique, l’enchaînement ressemble souvent à ceci :
 
 1. tu prépares tes pièces ;
 2. tu saisis ton dossier en ligne ;
@@ -424,7 +424,7 @@ C’est cette déclaration qui lance l’immatriculation de ton activité. Le gu
 5. tu suis l’avancement dans le guichet ;
 6. la décision finale met à jour les registres.
 
-### Les pièces mises en avant par le guide
+### Les pièces généralement demandées
 
 À prévoir notamment :
 
@@ -451,7 +451,7 @@ Exemple concret : si tu travailles dans un seul cabinet, tu auras un SIREN et un
 
 À compter du **1er janvier 2026**, les psychologues relèvent du code **86.93Y** :
 
-`Activités des psychologues et psychothérapeutes, à l’exception des médecins`
+Activités des psychologues et psychothérapeutes, à l’exception des médecins
 
 [ENCADRE_INFO]
 Le code APE sert à classer ton activité dans la nomenclature économique. Il décrit ton activité principale, mais ne remplace ni ton diplôme, ni ton RPPS, ni ton cadre déontologique.
@@ -461,15 +461,15 @@ Le code APE sert à classer ton activité dans la nomenclature économique. Il d
 
 La règle issue du Code de commerce est la suivante : depuis le **15 mai 2022**, l’entrepreneur individuel doit utiliser une dénomination comportant son nom, précédé ou suivi immédiatement de :
 
-- `Entrepreneur individuel`
-- ou `EI`
+- Entrepreneur individuel
+- ou EI
 
 Cette dénomination doit figurer sur les **documents et correspondances à usage professionnel**.
 
-Exemple concret : tu peux écrire `Claire Dupont EI` ou `Claire Dupont - Entrepreneur individuel` sur tes factures, devis, documents contractuels ou supports administratifs.
+Exemple concret : tu peux écrire Claire Dupont EI ou Claire Dupont - Entrepreneur individuel sur tes factures, devis, documents contractuels ou supports administratifs.
 
 [ENCADRE_ATTENTION]
-Le guide rappelle aussi qu’en cas de manquement, une amende peut être encourue. Mieux vaut intégrer cette mention tout de suite dans tes modèles de documents plutôt que corriger partout plus tard.
+En cas de manquement, une amende peut être encourue. Mieux vaut intégrer cette mention tout de suite dans tes modèles de documents plutôt que corriger partout plus tard.
 [/ENCADRE_ATTENTION]
 
 ## Étape 6 : attendre les suites d’affiliation sans paniquer
@@ -489,7 +489,7 @@ Analogie utile : c’est un peu comme un dossier qui circule entre plusieurs gui
 
 ### URSSAF et CIPAV
 
-Le guide rappelle que les cotisations sociales sont un sujet majeur de début d’activité. Pour les psychologues relevant de la **CIPAV**, il faut intégrer dès le départ que retraite et cotisations ne se résument pas au seul impôt.
+Les cotisations sociales sont un sujet majeur de début d’activité. Pour les psychologues relevant de la **CIPAV**, il faut intégrer dès le départ que retraite et cotisations ne se résument pas au seul impôt.
 
 [ENCADRE_ATTENTION]
 Ne sous-estime pas le poids des charges sociales au démarrage. Elles pèsent souvent plus lourd que l’impôt, surtout au-delà des toutes premières années. Prends cette réalité en compte dès ton budget prévisionnel.
@@ -540,7 +540,7 @@ Vérifie que le contrat vise bien ton activité professionnelle de psychologue. 
 
 ## Checklist visuelle de l’ordre des démarches
 
-[ILLUSTRATION : frise chronologique ou checklist visuelle des étapes dans l'ordre]
+![Checklist visuelle de l ordre des demarches : avant l ouverture, au demarrage, puis juste apres.](/images/guides/frise-checklist-demarches-installation.svg)
 
 ### Avant l’ouverture
 
@@ -552,7 +552,7 @@ Vérifie que le contrat vise bien ton activité professionnelle de psychologue. 
 ### Au démarrage
 
 - t’enregistrer au RPPS via l’ARS ;
-- déclarer ton activité sur `procedures.inpi.fr` ;
+- déclarer ton activité sur procedures.inpi.fr ;
 - vérifier les pièces jointes et la synthèse de ton dossier ;
 - signer électroniquement la formalité.
 
@@ -664,7 +664,7 @@ C’est généralement le choix le plus cohérent pour les psychologues qui s’
 
 ### Parce que l’exercice est d’abord personnel
 
-Dans une profession libérale comme la psychologie, les recettes viennent d’un **travail personnel**. Le guide souligne donc que l’exercice individuel ou “en nom propre” est, a priori, le plus cohérent.
+Dans une profession libérale comme la psychologie, les recettes viennent d’un **travail personnel**. L’exercice individuel ou “en nom propre” est donc, a priori, le plus cohérent.
 
 Autrement dit, ton activité repose d’abord sur toi :
 
@@ -676,7 +676,7 @@ Autrement dit, ton activité repose d’abord sur toi :
 
 ### Parce que la plupart des installations se font en solo
 
-Le guide rappelle aussi que les psychologues qui s’installent en libéral le font généralement seuls. Dans cette configuration, créer une société tout de suite n’est pas toujours pertinent.
+Les psychologues qui s’installent en libéral le font généralement seuls. Dans cette configuration, créer une société tout de suite n’est pas toujours pertinent.
 
 Exemple concret : si tu démarres avec un cabinet partagé, peu de frais, peu d’investissement et sans associé, une structure sociétale risque surtout d’ajouter de la complexité sans réel bénéfice immédiat.
 
@@ -708,7 +708,7 @@ Exemple concret : si tu encaisses 20 000 €, l’administration ne regarde pas 
 
 ### Son grand avantage
 
-Le guide insiste sur la simplicité du régime :
+Ce régime est apprécié pour sa simplicité :
 
 - formalités allégées ;
 - comptabilité très simplifiée ;
@@ -744,7 +744,7 @@ Le **régime de la déclaration contrôlée**, ou **régime réel**, devient le 
 
 Dans ce régime, ton bénéfice imposable n’est pas calculé automatiquement par un forfait. Il correspond à :
 
-`recettes encaissées - dépenses professionnelles payées`
+recettes encaissées - dépenses professionnelles payées
 
 Cela veut dire que tu peux déduire tes frais réels, à condition qu’ils soient liés à ton activité et correctement suivis.
 
@@ -818,7 +818,7 @@ Créer une société peut avoir du sens si :
 - vous cherchez un cadre commun plus structuré ;
 - la question fiscale mérite un vrai arbitrage.
 
-Le guide rappelle aussi qu’à partir du **1er septembre 2024**, les psychologues peuvent exercer en société dans le nouveau cadre des professions libérales réglementées. En pratique, quand on parle de sociétés pour un psychologue libéral, on pense souvent à des formes comme :
+À partir du **1er septembre 2024**, les psychologues peuvent exercer en société dans le nouveau cadre des professions libérales réglementées. En pratique, quand on parle de sociétés pour un psychologue libéral, on pense souvent à des formes comme :
 
 - **EURL** ;
 - **SASU** ;
@@ -829,7 +829,7 @@ Le cadre permet aussi l’ouverture aux **sociétés civiles professionnelles** 
 
 ### Pourquoi ce n’est pas forcément le premier choix
 
-Le guide souligne que, dans les professions libérales comme la nôtre, l’imposition à l’impôt sur le revenu reste souvent la plus favorable dans la majorité des cas, surtout pour les installations en solo.
+Dans les professions libérales comme la nôtre, l’imposition à l’impôt sur le revenu reste souvent la plus favorable dans la majorité des cas, surtout pour les installations en solo.
 
 Exemple concret : si tu t’installes seul avec un projet simple, la société peut parfois ressembler à une veste trop structurée pour un usage encore souple et évolutif.
 
@@ -845,7 +845,7 @@ Pour créer ou reprendre une activité, il faut en pratique **une autorisation p
 
 ### Le délai de réponse à connaître
 
-Le guide précise que l’administration dispose d’un **délai d’un mois** pour notifier sa décision. Ce délai peut être porté à **deux mois** si des informations complémentaires sont demandées.
+L’administration dispose d’un **délai d’un mois** pour notifier sa décision. Ce délai peut être porté à **deux mois** si des informations complémentaires sont demandées.
 
 Exemple concret : si tu travailles dans la fonction publique hospitalière et que tu veux ouvrir ton cabinet en parallèle, il faut traiter cette autorisation avant de considérer ton projet comme réellement lancé.
 
@@ -921,20 +921,20 @@ Quand tu hésites entre micro et réel, fais un mini comparatif sur une année :
 
 ## Tableau comparatif rapide
 
-[ILLUSTRATION : tableau comparatif simple micro-BNC vs BNC réel avec critères de choix]
+![Tableau comparatif simple des criteres de choix entre micro-BNC et BNC reel.](/images/guides/tableau-comparatif-micro-bnc-vs-bnc-reel.svg)
 
 ### Micro-BNC
 
-- seuil 2025 : `77 700 €` ;
-- abattement forfaitaire : `34 %` ;
-- cotisations sociales : environ `23,2 %` du chiffre d’affaires en 2025 ;
+- seuil 2025 : 77 700 € ;
+- abattement forfaitaire : 34 % ;
+- cotisations sociales : environ 23,2 % du chiffre d’affaires en 2025 ;
 - comptabilité très simplifiée ;
 - adapté au démarrage ou à une activité accessoire ;
 - limite principale : pas de déduction des charges réelles.
 
 ### BNC réel
 
-- obligatoire au-delà de `77 700 €` ;
+- obligatoire au-delà de 77 700 € ;
 - déduction des charges réelles ;
 - comptabilité plus exigeante ;
 - souvent plus intéressant si les frais sont importants ;
@@ -1081,7 +1081,7 @@ Autrement dit, c’est un régime de simplicité, mais il t’empêche de récup
 
 Si tu es en franchise en base, la mention obligatoire est :
 
-`TVA non applicable, art. 293 B du CGI`
+TVA non applicable, art. 293 B du CGI
 
 [ENCADRE_ATTENTION]
 Ne mélange pas exonération de TVA et franchise en base. Les deux aboutissent à ne pas facturer de TVA, mais pour des raisons juridiques différentes. La mention à faire figurer peut donc changer selon ta situation.
@@ -1167,7 +1167,7 @@ L’administration fiscale prélève des **acomptes** à partir de ta dernière 
 Tu peux être prélevé :
 
 - **chaque mois** ;
-- ou **chaque trimestre** si tu optes pour ce rythme sur `impots.gouv.fr`.
+- ou **chaque trimestre** si tu optes pour ce rythme sur impots.gouv.fr.
 
 Exemple concret : tu ne vois pas l’impôt disparaître directement de chaque paiement patient. En revanche, tu peux avoir chaque mois ou chaque trimestre un prélèvement bancaire dédié à l’impôt sur le revenu.
 
@@ -1193,20 +1193,20 @@ La réponse dépend de trois blocs :
 
 Tu peux partir de cette logique :
 
-`charges fixes + cotisations estimées + revenu net souhaité = chiffre d’affaires mensuel à atteindre`
+charges fixes + cotisations estimées + revenu net souhaité = chiffre d’affaires mensuel à atteindre
 
 Puis :
 
-`chiffre d’affaires mensuel ÷ tarif moyen = nombre de séances par mois`
+chiffre d’affaires mensuel ÷ tarif moyen = nombre de séances par mois
 
 Et enfin :
 
-`nombre de séances par mois ÷ 4 = nombre de séances par semaine`
+nombre de séances par mois ÷ 4 = nombre de séances par semaine
 
 Exemple concret : si tu vises 2 000 € pour vivre, avec 700 € de charges fixes et 900 € environ à réserver aux cotisations et à l’impôt, tu dois viser un chiffre d’affaires plus élevé que ce que ton seul “salaire souhaité” laisse imaginer.
 
 [ENCADRE_ASTUCE]
-Le mieux est de faire ce calcul avec un outil dédié. Ce guide peut t’aider à comprendre la logique, mais un calculateur te donnera une estimation beaucoup plus pratique selon ton tarif et tes charges.
+Le mieux est de faire ce calcul avec un outil dédié. Cette explication peut t’aider à comprendre la logique, mais un calculateur te donnera une estimation beaucoup plus pratique selon ton tarif et tes charges.
 [/ENCADRE_ASTUCE]
 
 ## La trésorerie de départ : le vrai point sensible
@@ -1283,7 +1283,7 @@ La prévoyance complémentaire est souvent plus facile à comprendre quand tout 
 
 ## De tes honoraires à ton revenu net
 
-[ILLUSTRATION : schéma simplifié "de vos honoraires à votre revenu net" montrant les différents prélèvements]
+![Schéma simplifié des prélèvements : des honoraires encaissés au revenu net disponible.](/images/guides/schema-honoraires-vers-revenu-net.png)
 
 Tu peux visualiser la logique ainsi :
 
@@ -1583,7 +1583,7 @@ Pour les activités de prévention, de diagnostic et de soins, il faut informer 
 
 La mention à afficher est la suivante :
 
-`La prestation délivrée par votre psychologue ne fait pas l'objet d'un conventionnement. Dès lors, elle n'est pas prise en charge par la sécurité sociale. Le montant des honoraires fixé doit cependant être déterminé avec tact et mesure.`
+La prestation délivrée par votre psychologue ne fait pas l'objet d'un conventionnement. Dès lors, elle n'est pas prise en charge par la sécurité sociale. Le montant des honoraires fixé doit cependant être déterminé avec tact et mesure.
 
 ### L’information écrite au-delà d’un certain montant
 
@@ -1753,7 +1753,7 @@ Elle permet d’afficher :
 
 ### La cohérence NAP
 
-Un principe simple compte beaucoup : la cohérence **NAP**, pour **Nom, Address, Phone**.
+Un principe simple compte beaucoup : la cohérence **NAP**, pour **Nom, Adresse, Téléphone**.
 
 Cela veut dire que ton :
 
@@ -1767,10 +1767,10 @@ doivent être identiques partout : sur ton site, ta fiche Google et les annuaire
 
 Le référencement local repose aussi sur une écriture simple mais précise :
 
-- `psychologue + ville` ;
-- `psychologue anxiété + ville` ;
-- `psychologue adolescent + ville` ;
-- `psychologue TCC + ville`.
+- psychologue + ville ;
+- psychologue anxiété + ville ;
+- psychologue adolescent + ville ;
+- psychologue TCC + ville.
 
 Exemple concret : une page claire qui indique ta ville, ton public et ton approche aide beaucoup plus Google qu’une présentation très abstraite sans ancrage géographique.
 
@@ -1788,7 +1788,7 @@ Tu peux être présent, selon ton cadre d’exercice, sur :
 
 - **Doctolib** ;
 - **Crenolibre** ;
-- **Psymontout** ou d’autres annuaires spécialisés ;
+- **Perfactive** (plutôt comme plateforme de prise de rendez-vous et de gestion) selon ton positionnement ;
 - des annuaires de syndicat ou d’associations professionnelles ;
 - d’autres répertoires cohérents avec ta pratique.
 
@@ -1902,6 +1902,11 @@ Les limites possibles :
 - logique de prise en charge courte ;
 - contraintes administratives et de conventionnement.
 
+[ENCADRE_INFO]
+Pour information, le **Syndicat national des psychologues (SNP)** a exprimé publiquement une opposition au dispositif et a appelé au **boycott** de Mon soutien psy. Cette position s’inscrit dans un débat professionnel plus large sur le cadre du dispositif (autonomie, conventionnement, articulation avec le champ médical).  
+Dans ce guide, l’objectif est de présenter les options de manière factuelle : chaque psychologue peut ensuite se positionner selon sa clinique, ses valeurs et son projet d’exercice.
+[/ENCADRE_INFO]
+
 Exemple concret : si tu veux développer une activité accessible, visible et compatible avec des souffrances légères à modérées, le dispositif peut avoir du sens. Si ton cadre de travail habituel repose sur d’autres modalités, son intérêt peut être plus limité.
 
 [ENCADRE_ATTENTION]
@@ -1972,8 +1977,6 @@ Si tu veux rester sobre et efficace, une base solide peut ressembler à ceci :
 3. quelques **annuaires bien choisis** ;
 4. un **réseau local** informé de ton installation ;
 5. du temps pour laisser le **bouche-à-oreille** faire son travail.
-
-[ILLUSTRATION : pyramide ou carte mentale des leviers de visibilité par efficacité/effort]
 
 ## Ce qu’il faut retenir de ce chapitre
 
@@ -2124,11 +2127,10 @@ Les notes doivent être numérotées de manière continue, sans ajout ni retranc
 
 ### La conservation
 
-Le guide recommande de conserver les documents pendant longtemps. En pratique, prévoir **10 ans** de conservation est une base prudente pour les justificatifs d’activité.
+Conserver les documents pendant longtemps reste recommandé. En pratique, prévoir **10 ans** de conservation est une base prudente pour les justificatifs d’activité.
 
 Exemple concret : si un patient te redemande une attestation des années plus tard, ou si tu dois justifier un encaissement, un archivage sérieux te simplifie beaucoup la vie.
 
-[ILLUSTRATION : modèle de note d'honoraires anonymisée avec les mentions obligatoires annotées]
 
 ## Secret professionnel et comptabilité : ce qu’il faut écrire, et ce qu’il ne faut pas écrire
 
@@ -2149,8 +2151,8 @@ En revanche, les documents comptables ne doivent pas comporter d’indications s
 
 La formulation recommandée reste sobre, par exemple :
 
-- `consultation psychologue`
-- ou `consultation de psychologie`
+- consultation psychologue
+- ou consultation de psychologie
 
 sans précision supplémentaire.
 
@@ -2276,5 +2278,23 @@ Exemple concret : une formation intéressante n’est pas forcément financée a
 - le **FIF PL** peut accompagner ta formation continue.
 
 [ENCADRE_INFO]
-Tu tiens maintenant une version déjà très avancée du guide. La prochaine étape pourra consister à relire l’ensemble, harmoniser le ton entre les chapitres et préparer la future version PDF avec bibliographie et pages de fin.
+Tu tiens maintenant une version déjà très avancée du document. La prochaine étape pourra consister à relire l’ensemble, harmoniser le ton entre les chapitres et préparer la future version PDF avec bibliographie et pages de fin.
 [/ENCADRE_INFO]
+
+## Sources externes (vérification recommandée)
+
+Les éléments de ce document doivent être vérifiés à partir de sources institutionnelles et professionnelles à jour. Voici une base de références externes :
+
+- Service-Public.fr (entreprise individuelle, micro-entreprise, obligations administratives) : https://www.service-public.fr/
+- Guichet unique INPI (formalités de création et de modification d’activité) : https://procedures.inpi.fr/
+- URSSAF (cotisations des professions libérales, ACRE, échéanciers) : https://www.urssaf.fr/
+- CIPAV (retraite des professions libérales affiliées) : https://www.lacipav.fr/
+- impots.gouv.fr (BNC, TVA, obligations fiscales des indépendants) : https://www.impots.gouv.fr/
+- CNIL (RGPD, gestion des données de santé et obligations d’information) : https://www.cnil.fr/
+- Ameli (Mon soutien psy et informations assurés) : https://www.ameli.fr/
+- ANS / RPPS (références sur l’identification des professionnels de santé) : https://esante.gouv.fr/
+- Syndicat national des psychologues (prises de position et communiqués, dont Mon soutien psy) : https://psychologues.org/category/communique/
+
+[ENCADRE_ATTENTION]
+Les règles administratives, fiscales et sociales évoluent régulièrement. Avant publication et usage opérationnel, valider chaque point avec les textes et organismes officiels en vigueur.
+[/ENCADRE_ATTENTION]

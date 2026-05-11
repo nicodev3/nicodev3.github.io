@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Tableau comparatif micro-BNC versus BNC réel</title>
+  <desc id="desc">Comparatif visuel des critères de choix entre micro-BNC et BNC réel.</desc>
+
+  <defs>
+    <style>
+      .title { font: 700 48px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 24px Arial, sans-serif; fill: #334155; }
+      .header { font: 700 28px Arial, sans-serif; fill: #0f172a; }
+      .cell { font: 400 23px Arial, sans-serif; fill: #1e293b; }
+      .row { font: 700 23px Arial, sans-serif; fill: #0f172a; }
+      .foot { font: 400 21px Arial, sans-serif; fill: #334155; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="1080" fill="#f8fafc" />
+  <text x="800" y="85" text-anchor="middle" class="title">Micro-BNC vs BNC réel : comparatif rapide</text>
+  <text x="800" y="122" text-anchor="middle" class="subtitle">Aide à la décision selon ton niveau de charges et la complexité de gestion acceptée</text>
+
+  <rect x="100" y="180" width="1400" height="740" rx="18" ry="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+
+  <rect x="100" y="180" width="420" height="90" rx="18" ry="18" fill="#e2e8f0" />
+  <rect x="520" y="180" width="490" height="90" fill="#dbeafe" />
+  <rect x="1010" y="180" width="490" height="90" rx="18" ry="18" fill="#dcfce7" />
+
+  <text x="310" y="236" text-anchor="middle" class="header">Critères</text>
+  <text x="765" y="236" text-anchor="middle" class="header">Micro-BNC</text>
+  <text x="1255" y="236" text-anchor="middle" class="header">BNC réel</text>
+
+  <line x1="100" y1="270" x2="1500" y2="270" stroke="#cbd5e1" stroke-width="2" />
+  <line x1="520" y1="180" x2="520" y2="920" stroke="#cbd5e1" stroke-width="2" />
+  <line x1="1010" y1="180" x2="1010" y2="920" stroke="#cbd5e1" stroke-width="2" />
+
+  <line x1="100" y1="360" x2="1500" y2="360" stroke="#e2e8f0" stroke-width="2" />
+  <line x1="100" y1="450" x2="1500" y2="450" stroke="#e2e8f0" stroke-width="2" />
+  <line x1="100" y1="540" x2="1500" y2="540" stroke="#e2e8f0" stroke-width="2" />
+  <line x1="100" y1="630" x2="1500" y2="630" stroke="#e2e8f0" stroke-width="2" />
+  <line x1="100" y1="720" x2="1500" y2="720" stroke="#e2e8f0" stroke-width="2" />
+  <line x1="100" y1="810" x2="1500" y2="810" stroke="#e2e8f0" stroke-width="2" />
+
+  <text x="130" y="323" class="row">Seuil / accès</text>
+  <text x="130" y="413" class="row">Charges déductibles</text>
+  <text x="130" y="503" class="row">Comptabilité</text>
+  <text x="130" y="593" class="row">Visibilité du net</text>
+  <text x="130" y="683" class="row">Profil adapté</text>
+  <text x="130" y="773" class="row">Point de vigilance</text>
+  <text x="130" y="863" class="row">Quand basculer</text>
+
+  <text x="545" y="323" class="cell">Possible jusqu'au seuil micro applicable</text>
+  <text x="545" y="413" class="cell">Non, abattement forfaitaire</text>
+  <text x="545" y="503" class="cell">Très simplifiée</text>
+  <text x="545" y="593" class="cell">Rapide mais moins précise</text>
+  <text x="545" y="683" class="cell">Démarrage, faibles frais, activité accessoire</text>
+  <text x="545" y="773" class="cell">Peut devenir défavorable si les frais montent</text>
+  <text x="545" y="863" class="cell">Si charges réelles élevées ou CA en hausse</text>
+
+  <text x="1035" y="323" class="cell">Obligatoire au-delà du seuil micro</text>
+  <text x="1035" y="413" class="cell">Oui, selon frais réels engagés</text>
+  <text x="1035" y="503" class="cell">Plus exigeante, suivi rigoureux</text>
+  <text x="1035" y="593" class="cell">Plus fidèle à la réalité économique</text>
+  <text x="1035" y="683" class="cell">Activité stable avec frais significatifs</text>
+  <text x="1035" y="773" class="cell">Charge administrative plus importante</text>
+  <text x="1035" y="863" class="cell">Dès le début si le modèle est déjà structuré</text>
+
+  <text x="100" y="985" class="foot">Repère pratique : choisis surtout selon le poids de tes charges réelles et le temps que tu peux consacrer à la gestion.</text>
+</svg>

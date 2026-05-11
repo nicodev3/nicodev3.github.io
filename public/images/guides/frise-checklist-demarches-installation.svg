@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Checklist visuelle de l ordre des demarches</title>
+  <desc id="desc">Frise en trois etapes: avant l ouverture, au demarrage, puis juste apres.</desc>
+
+  <defs>
+    <style>
+      .title { font: 700 50px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 24px Arial, sans-serif; fill: #334155; }
+      .stepTitle { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+      .item { font: 400 22px Arial, sans-serif; fill: #1e293b; }
+      .stepLabel { font: 700 22px Arial, sans-serif; fill: #0f172a; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#334155" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="1100" fill="#f8fafc" />
+
+  <text x="800" y="90" text-anchor="middle" class="title">Checklist visuelle de l ordre des demarches</text>
+  <text x="800" y="128" text-anchor="middle" class="subtitle">Progression conseillee pour lancer l activite sans oubli administratif</text>
+
+  <line x1="220" y1="230" x2="1380" y2="230" stroke="#94a3b8" stroke-width="6" />
+  <circle cx="320" cy="230" r="20" fill="#2563eb" />
+  <circle cx="800" cy="230" r="20" fill="#d97706" />
+  <circle cx="1280" cy="230" r="20" fill="#16a34a" />
+  <line x1="345" y1="230" x2="770" y2="230" stroke="#334155" stroke-width="5" marker-end="url(#arrow)" />
+  <line x1="825" y1="230" x2="1250" y2="230" stroke="#334155" stroke-width="5" marker-end="url(#arrow)" />
+
+  <text x="320" y="280" text-anchor="middle" class="stepLabel">Etape 1</text>
+  <text x="800" y="280" text-anchor="middle" class="stepLabel">Etape 2</text>
+  <text x="1280" y="280" text-anchor="middle" class="stepLabel">Etape 3</text>
+
+  <rect x="90" y="330" rx="24" ry="24" width="460" height="620" fill="#dbeafe" stroke="#93c5fd" stroke-width="3" />
+  <text x="320" y="390" text-anchor="middle" class="stepTitle">Avant l ouverture</text>
+  <text x="140" y="455" class="item">- Verifier tes justificatifs</text>
+  <text x="140" y="505" class="item">- Preparer ton dossier</text>
+  <text x="140" y="555" class="item">- Anticiper la RC Pro</text>
+  <text x="140" y="605" class="item">- Verifier ton eligibilite</text>
+  <text x="140" y="640" class="item">  a l ACRE</text>
+
+  <rect x="570" y="330" rx="24" ry="24" width="460" height="620" fill="#fef3c7" stroke="#fcd34d" stroke-width="3" />
+  <text x="800" y="390" text-anchor="middle" class="stepTitle">Au demarrage</text>
+  <text x="620" y="455" class="item">- Enregistrement RPPS via ARS</text>
+  <text x="620" y="505" class="item">- Declaration sur</text>
+  <text x="620" y="540" class="item">  procedures.inpi.fr</text>
+  <text x="620" y="590" class="item">- Verification des pieces</text>
+  <text x="620" y="625" class="item">  et de la synthese</text>
+  <text x="620" y="675" class="item">- Signature electronique</text>
+  <text x="620" y="710" class="item">  de la formalite</text>
+
+  <rect x="1050" y="330" rx="24" ry="24" width="460" height="620" fill="#dcfce7" stroke="#86efac" stroke-width="3" />
+  <text x="1280" y="390" text-anchor="middle" class="stepTitle">Juste apres</text>
+  <text x="1100" y="455" class="item">- Recuperer SIREN, SIRET</text>
+  <text x="1100" y="490" class="item">  et code APE</text>
+  <text x="1100" y="540" class="item">- Integrer la mention EI</text>
+  <text x="1100" y="590" class="item">- Ouvrir le compte dedie</text>
+  <text x="1100" y="640" class="item">- Suivre les retours</text>
+  <text x="1100" y="675" class="item">  URSSAF et CIPAV</text>
+</svg>

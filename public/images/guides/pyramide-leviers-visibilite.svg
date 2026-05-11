@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Leviers de visibilite par efficacite et effort</title>
+  <desc id="desc">Matrice lisible qui positionne les principaux leviers de visibilite d un cabinet de psychologue.</desc>
+  <defs>
+    <style>
+      .title { font: 700 46px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 24px Arial, sans-serif; fill: #334155; }
+      .axis { font: 700 24px Arial, sans-serif; fill: #334155; }
+      .zone { font: 700 24px Arial, sans-serif; fill: #0f172a; }
+      .cardTitle { font: 700 27px Arial, sans-serif; fill: #0f172a; }
+      .cardText { font: 400 22px Arial, sans-serif; fill: #1e293b; }
+      .note { font: 400 22px Arial, sans-serif; fill: #334155; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="980" fill="#f8fafc" />
+  <text x="800" y="80" text-anchor="middle" class="title">Leviers de visibilite : efficacite vs effort</text>
+  <text x="800" y="118" text-anchor="middle" class="subtitle">Version simplifiee pour prioriser les actions les plus utiles au demarrage</text>
+
+  <rect x="150" y="170" width="1200" height="680" rx="18" ry="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="3" />
+
+  <line x1="750" y1="190" x2="750" y2="830" stroke="#94a3b8" stroke-width="3" />
+  <line x1="170" y1="510" x2="1330" y2="510" stroke="#94a3b8" stroke-width="3" />
+
+  <text x="240" y="905" class="axis">Effort faible</text>
+  <text x="1110" y="905" class="axis">Effort eleve</text>
+  <text x="1365" y="780" class="axis">Efficacite forte</text>
+  <text x="1365" y="260" class="axis">Efficacite faible</text>
+
+  <text x="220" y="230" class="zone">Priorite haute</text>
+  <text x="820" y="230" class="zone">A deployer avec mesure</text>
+  <text x="220" y="550" class="zone">Utile mais secondaire</text>
+  <text x="820" y="550" class="zone">A limiter au debut</text>
+
+  <rect x="210" y="260" width="500" height="220" rx="16" ry="16" fill="#dcfce7" stroke="#86efac" stroke-width="2" />
+  <text x="240" y="315" class="cardTitle">Socle local (a faire en premier)</text>
+  <text x="240" y="360" class="cardText">- Site web professionnel clair</text>
+  <text x="240" y="398" class="cardText">- Fiche Google Business Profile</text>
+  <text x="240" y="436" class="cardText">- Reseau local (medecins, ecoles, etc.)</text>
+
+  <rect x="790" y="260" width="500" height="220" rx="16" ry="16" fill="#dbeafe" stroke="#93c5fd" stroke-width="2" />
+  <text x="820" y="315" class="cardTitle">Canaux complementaires</text>
+  <text x="820" y="360" class="cardText">- Annuaires bien choisis</text>
+  <text x="820" y="398" class="cardText">- Presence coherente sur 2-3 fiches</text>
+  <text x="820" y="436" class="cardText">- Informations strictement a jour</text>
+
+  <rect x="210" y="580" width="500" height="220" rx="16" ry="16" fill="#fef3c7" stroke="#fcd34d" stroke-width="2" />
+  <text x="240" y="635" class="cardTitle">Impact progressif</text>
+  <text x="240" y="680" class="cardText">- Bouche-a-oreille (dans la duree)</text>
+  <text x="240" y="718" class="cardText">- Regularite et qualite du cadre</text>
+  <text x="240" y="756" class="cardText">- Delai normal : plusieurs mois</text>
+
+  <rect x="790" y="580" width="500" height="220" rx="16" ry="16" fill="#fee2e2" stroke="#fca5a5" stroke-width="2" />
+  <text x="820" y="635" class="cardTitle">Optionnel au lancement</text>
+  <text x="820" y="680" class="cardText">- Reseaux sociaux</text>
+  <text x="820" y="718" class="cardText">- A garder si energie et strategie</text>
+  <text x="820" y="756" class="cardText">- Sinon, focus sur le socle local</text>
+
+  <text x="150" y="950" class="note">Regle pratique : consolider le socle local d abord, puis ajouter les canaux secondaires sans dispersion.</text>
+</svg>

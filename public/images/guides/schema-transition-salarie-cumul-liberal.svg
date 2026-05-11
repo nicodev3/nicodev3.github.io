@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Transition progressive vers le liberal</title>
+  <desc id="desc">Schema en trois etapes: salariat principal, cumul salarie plus liberal, liberal a temps plein.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#334155" />
+    </marker>
+    <style>
+      .title { font: 700 52px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 24px Arial, sans-serif; fill: #334155; }
+      .boxTitle { font: 700 34px Arial, sans-serif; fill: #0f172a; }
+      .boxText { font: 400 25px Arial, sans-serif; fill: #1e293b; }
+      .stepLabel { font: 700 24px Arial, sans-serif; fill: #0f172a; }
+      .stepSub { font: 400 20px Arial, sans-serif; fill: #334155; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" fill="#f8fafc" />
+  <text x="800" y="92" text-anchor="middle" class="title">Transition progressive vers le liberal</text>
+  <text x="800" y="132" text-anchor="middle" class="subtitle">Passer du salariat au liberal sans rupture brutale</text>
+
+  <rect x="120" y="220" rx="26" ry="26" width="390" height="310" fill="#dbeafe" stroke="#93c5fd" stroke-width="3" />
+  <text x="315" y="285" text-anchor="middle" class="boxTitle">Salariat principal</text>
+  <text x="315" y="345" text-anchor="middle" class="boxText">Revenus stables</text>
+  <text x="315" y="392" text-anchor="middle" class="boxText">Premiers creneaux</text>
+  <text x="315" y="439" text-anchor="middle" class="boxText">liberaux testes</text>
+
+  <rect x="605" y="220" rx="26" ry="26" width="390" height="310" fill="#fef3c7" stroke="#fcd34d" stroke-width="3" />
+  <text x="800" y="285" text-anchor="middle" class="boxTitle">Cumul salarie + liberal</text>
+  <text x="800" y="345" text-anchor="middle" class="boxText">Montee progressive</text>
+  <text x="800" y="392" text-anchor="middle" class="boxText">Ajustement du rythme</text>
+  <text x="800" y="439" text-anchor="middle" class="boxText">et de l agenda</text>
+
+  <rect x="1090" y="220" rx="26" ry="26" width="390" height="310" fill="#dcfce7" stroke="#86efac" stroke-width="3" />
+  <text x="1285" y="285" text-anchor="middle" class="boxTitle">Liberal a temps plein</text>
+  <text x="1285" y="345" text-anchor="middle" class="boxText">Activite stabilisee</text>
+  <text x="1285" y="392" text-anchor="middle" class="boxText">Cadre de travail</text>
+  <text x="1285" y="439" text-anchor="middle" class="boxText">pleinement autonome</text>
+
+  <line x1="520" y1="375" x2="585" y2="375" stroke="#334155" stroke-width="8" marker-end="url(#arrow)" />
+  <line x1="1005" y1="375" x2="1070" y2="375" stroke="#334155" stroke-width="8" marker-end="url(#arrow)" />
+
+  <line x1="220" y1="690" x2="1380" y2="690" stroke="#94a3b8" stroke-width="6" />
+  <circle cx="315" cy="690" r="20" fill="#2563eb" />
+  <circle cx="800" cy="690" r="20" fill="#d97706" />
+  <circle cx="1285" cy="690" r="20" fill="#16a34a" />
+
+  <text x="315" y="750" text-anchor="middle" class="stepLabel">Etape 1</text>
+  <text x="315" y="780" text-anchor="middle" class="stepSub">Salariat principal</text>
+  <text x="800" y="750" text-anchor="middle" class="stepLabel">Etape 2</text>
+  <text x="800" y="780" text-anchor="middle" class="stepSub">Cumul equilibre</text>
+  <text x="1285" y="750" text-anchor="middle" class="stepLabel">Etape 3</text>
+  <text x="1285" y="780" text-anchor="middle" class="stepSub">Liberal a temps plein</text>
+</svg>
