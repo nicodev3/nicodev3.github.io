@@ -1,7 +1,5 @@
 # Guide de l'installation en libéral pour psychologues
 
-Ce document rassemble les chapitres en cours de rédaction. Il est conçu pour être relu, enrichi, puis exporté en PDF au moment opportun.
-
 ## Table des matières
 
 1. [Chapitre 1 — Se préparer avant de se lancer](#chapitre-1-se-preparer-avant-de-se-lancer)
@@ -921,7 +919,7 @@ Quand tu hésites entre micro et réel, fais un mini comparatif sur une année :
 
 ## Tableau comparatif rapide
 
-![Tableau comparatif simple des criteres de choix entre micro-BNC et BNC reel.](/images/guides/tableau-comparatif-micro-bnc-vs-bnc-reel.svg)
+![Tableau comparatif simple des criteres de choix entre micro-BNC et BNC reel.](/images/guides/bnc-vs-reel.png)
 
 ### Micro-BNC
 
@@ -1283,7 +1281,7 @@ La prévoyance complémentaire est souvent plus facile à comprendre quand tout 
 
 ## De tes honoraires à ton revenu net
 
-![Schéma simplifié des prélèvements : des honoraires encaissés au revenu net disponible.](/images/guides/schema-honoraires-vers-revenu-net.png)
+![Schéma simplifié des prélèvements : des honoraires encaissés au revenu net disponible.](/images/guides/honoraires-revenu.png)
 
 Tu peux visualiser la logique ainsi :
 

@@ -271,53 +271,14 @@ const renderedHtml = isDev ? renderMarkdown(markdown) : "";
   title="Prévisualisation locale - Guide de l'installation en libéral pour psychologues"
   description="Prévisualisation locale du guide PDF."
   noindex={true}
+  showFloatingWhatsApp={false}
 >
-  {
-    isDev ? (
-      <div
-        slot="body-fixed"
-        class="fixed inset-x-0 top-0 z-100 border-b border-slate-200 bg-white/95 py-3 shadow-sm backdrop-blur"
-      >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-            Table des matières
-          </p>
-          <nav aria-label="Table des matières du guide">
-            <ul class="flex flex-wrap gap-2 text-sm">
-              {
-                navigation.map((item) => (
-                  <li>
-                    <a
-                      href={`#${item.id}`}
-                      class="block rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-slate-700 transition hover:border-teal-200 hover:bg-teal-50 hover:text-teal-800"
-                    >
-                      {item.text}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </nav>
-        </div>
-      </div>
-    ) : null
-  }
-
   <section class:list={["bg-slate-100 pb-16", isDev ? "pt-0" : "py-16"]}>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {
         isDev ? (
           <>
             <div class="pt-28 sm:pt-32">
-              <div class="mb-8 rounded-lg border border-teal-200 bg-teal-50 px-5 py-4 text-teal-950">
-                <p class="text-sm font-semibold uppercase tracking-[0.18em]">
-                  Preview locale
-                </p>
-                <p class="mt-2 text-sm">
-                  Cette page lit le fichier Markdown depuis <code>docs/lead-magnets</code> en développement uniquement.
-                </p>
-              </div>
-
               <article
                 class="guide-preview prose prose-slate mx-auto max-w-4xl rounded-lg bg-white px-6 py-10 shadow-sm sm:px-10"
                 set:html={renderedHtml}

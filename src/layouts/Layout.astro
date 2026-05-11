@@ -13,6 +13,7 @@ export interface Props {
   description?: string;
   image?: string | ImageMetadata;
   noindex?: boolean;
+  showFloatingWhatsApp?: boolean;
   ogType?: "website" | "article";
   articlePublishedTime?: string;
   articleModifiedTime?: string;
@@ -24,6 +25,7 @@ const {
   description = "Nicolas Devaux est développeur web et crée des sites internet pour psychologues.",
   image,
   noindex = false,
+  showFloatingWhatsApp = true,
   ogType = "website",
   articlePublishedTime,
   articleModifiedTime,
@@ -115,7 +117,7 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
     <!-- Contenu `position:fixed` relatif au viewport (évite un ancêtre transform/filter qui casse fixed dans <main>) -->
     <slot name="body-fixed" />
 
-    <FloatingWhatsApp />
+    {showFloatingWhatsApp ? <FloatingWhatsApp /> : null}
 
     <main>
       <slot />
