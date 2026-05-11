@@ -11,6 +11,7 @@ export interface Props {
 const defaultLinks: NavLink[] = [
 	{ href: '/portfolio/', label: 'Portfolio' },
 	{ href: '/exemples-sites-psychologue/', label: 'Exemples' },
+	{ href: '/outils/', label: 'Outils' },
 	{ href: '/tarifs/', label: 'Tarifs' },
 	{ href: '/about/', label: 'À propos' },
 	{ href: '/contact/', label: 'Contact' },
@@ -130,7 +131,7 @@ function navLinkIsActive(href: string): boolean {
 	-->
 	<div
 		id="mobile-nav-drawer"
-		class="mobile-nav-drawer md:hidden fixed inset-0 z-[100] flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
+		class="mobile-nav-drawer md:hidden fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu de navigation"
