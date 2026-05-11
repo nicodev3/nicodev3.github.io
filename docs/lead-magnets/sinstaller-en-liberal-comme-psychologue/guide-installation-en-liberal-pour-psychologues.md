@@ -2,13 +2,21 @@
 
 ## Table des matières
 
-1. [Chapitre 1 — Se préparer avant de se lancer](#chapitre-1-se-preparer-avant-de-se-lancer)
-2. [Chapitre 2 — Les démarches administratives](#chapitre-2-les-demarches-administratives)
-3. [Chapitre 3 — Choisir son statut juridique](#chapitre-3-choisir-son-statut-juridique)
-4. [Chapitre 4 — Fiscalité et charges](#chapitre-4-fiscalite-et-charges)
-5. [Chapitre 5 — Installer son cabinet](#chapitre-5-installer-son-cabinet)
-6. [Chapitre 6 — Se rendre visible](#chapitre-6-se-rendre-visible)
-7. [Chapitre 7 — Accueillir ses premiers patients](#chapitre-7-accueillir-ses-premiers-patients)
+1. [Introduction](#introduction)
+2. [Chapitre 1 — Se préparer avant de se lancer](#chapitre-1-se-preparer-avant-de-se-lancer)
+3. [Chapitre 2 — Les démarches administratives](#chapitre-2-les-demarches-administratives)
+4. [Chapitre 3 — Choisir son statut juridique](#chapitre-3-choisir-son-statut-juridique)
+5. [Chapitre 4 — Fiscalité et charges](#chapitre-4-fiscalite-et-charges)
+6. [Chapitre 5 — Installer son cabinet](#chapitre-5-installer-son-cabinet)
+7. [Chapitre 6 — Se rendre visible](#chapitre-6-se-rendre-visible)
+8. [Chapitre 7 — Accueillir ses premiers patients](#chapitre-7-accueillir-ses-premiers-patients)
+9. [Avertissements et mentions légales](#avertissements-et-mentions-legales)
+
+## Introduction
+
+Ce guide **n’est pas un document officiel**. Il ne constitue **ni un avis juridique, ni un conseil comptable ou fiscal**, ni une communication émanant d’une administration ou d’un organisme habilité à te dire quoi faire. Il s’agit d’une **compilation de mes recherches** sur le thème de l’installation en libéral pour les psychologues, rédigée à titre **strictement informatif** pour t’aider à **te repérer** et à préparer **tes** propres vérifications.
+
+Les règles, les barèmes et les interprétations **évoluent** ; seules les **sources officielles** à jour (sites des administrations, textes en vigueur, informations publiées par les organismes compétents) et, le cas échéant, **l’avis d’un professionnel du droit, du chiffre ou du conseil** adapté à ta situation font foi. Tu restes **seul·e responsable** des choix que tu opères pour ton activité.
 
 # Chapitre 1 — Se préparer avant de se lancer
 
@@ -1208,7 +1216,7 @@ nombre de séances par mois ÷ 4 = nombre de séances par semaine
 Exemple concret : si tu vises 2 000 € pour vivre, avec 700 € de charges fixes et 900 € environ à réserver aux cotisations et à l’impôt, tu dois viser un chiffre d’affaires plus élevé que ce que ton seul “salaire souhaité” laisse imaginer.
 
 [ENCADRE_ASTUCE]
-Le mieux est de faire ce calcul avec un outil dédié. Cette explication peut t’aider à comprendre la logique, mais un calculateur te donnera une estimation beaucoup plus pratique selon ton tarif et tes charges.
+Estimation rapide de ta recette nette après URSSAF (micro-BNC / auto-entreprise) : https://nicodev.fr/outils/micro-bnc-auto-entrepreneur/
 [/ENCADRE_ASTUCE]
 
 ## La trésorerie de départ : le vrai point sensible
@@ -2296,3 +2304,9 @@ Les éléments de ce document doivent être vérifiés à partir de sources inst
 [ENCADRE_ATTENTION]
 Les règles administratives, fiscales et sociales évoluent régulièrement. Avant publication et usage opérationnel, valider chaque point avec les textes et organismes officiels en vigueur.
 [/ENCADRE_ATTENTION]
+
+## Avertissements et mentions légales
+
+**Usage personnel et confidentialité.** Ce document t’est transmis pour **ton usage privé**. Merci de **ne pas le partager, ni le diffuser, ni le transmettre** à des tiers (y compris par messagerie, forum, groupe en ligne ou extrait recopié), **sans mon accord écrit préalable**. Toute circulation non autorisée porte atteinte aux conditions d’utilisation auxquelles tu as accès en le recevant.
+
+**Propriété littéraire et droits d’auteur.** Sauf mention contraire expresse, l’ensemble de ce guide (structure, rédaction, synthèses, formulations et choix éditoriaux) constitue une **œuvre originale** protégée par le **Code de la propriété intellectuelle** (France). **Tous droits réservés** © **2026 Nicolas Devaux**. Sont notamment interdits sans **autorisation écrite préalable** : la reproduction ou la représentation intégrale ou partielle **substantielle**, l’adaptation, la traduction, la diffusion à titre onéreux ou gratuit en ligne ou hors ligne, la mise à disposition du public ou dans un cadre collectif, ainsi que l’exploitation du contenu pour entraîner ou alimenter des systèmes automatisés de génération de texte. Les **citations courtes** demeurent possibles dans la limite des usages licites, **avec mention obligatoire du nom de l’auteur et du titre du document** et sans confusion sur l’origine.

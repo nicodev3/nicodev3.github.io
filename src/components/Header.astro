@@ -11,11 +11,11 @@ export interface Props {
 const defaultLinks: NavLink[] = [
 	{ href: '/portfolio/', label: 'Portfolio' },
 	{ href: '/exemples-sites-psychologue/', label: 'Exemples' },
-	{ href: '/outils/', label: 'Outils' },
 	{ href: '/tarifs/', label: 'Tarifs' },
 	{ href: '/about/', label: 'À propos' },
 	{ href: '/contact/', label: 'Contact' },
 	{ href: '/blog/', label: 'Blog' },
+	{ href: '/outils/', label: 'Outils' },
 ];
 
 const { links = defaultLinks } = Astro.props;
@@ -76,8 +76,8 @@ function navLinkIsActive(href: string): boolean {
 				</a>
 			</div>
 
-			<div class="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3 md:gap-6 md:flex-none">
-				<div class="hidden md:flex md:items-center md:gap-7 lg:gap-8 shrink-0">
+			<div class="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-6 lg:flex-none">
+				<div class="hidden lg:flex lg:items-center lg:gap-7 xl:gap-8 shrink-0">
 					{links.map((link) => {
 						const active = navLinkIsActive(link.href);
 						const scrollspyRoot = currentPath === '/';
@@ -99,15 +99,15 @@ function navLinkIsActive(href: string): boolean {
 					href={diagnosticCta.href}
 					data-header-diagnostic-cta
 					aria-label={diagnosticCta.label}
-					class="btn-primary-solid inline-flex max-md:shrink-0 max-md:whitespace-nowrap max-md:px-3 max-md:py-2 max-md:text-xs max-md:leading-tight md:shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center text-sm md:text-base md:leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+					class="btn-primary-solid inline-flex max-lg:shrink-0 max-lg:whitespace-nowrap max-lg:px-3 max-lg:py-2 max-lg:text-xs max-lg:leading-tight lg:shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center text-sm lg:text-base lg:leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				>
-					<span class="md:hidden">{diagnosticCta.shortHeaderLabel}</span>
-					<span class="hidden md:inline">{diagnosticCta.label}</span>
+					<span class="lg:hidden">{diagnosticCta.shortHeaderLabel}</span>
+					<span class="hidden lg:inline">{diagnosticCta.label}</span>
 				</a>
 
 			<button
 				type="button"
-				class="mobile-nav-toggle md:hidden inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg border border-border bg-white text-foreground shadow-sm transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				class="mobile-nav-toggle lg:hidden inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg border border-border bg-white text-foreground shadow-sm transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				aria-expanded="false"
 				aria-controls="mobile-nav-drawer"
 				data-mobile-nav-toggle
@@ -131,7 +131,7 @@ function navLinkIsActive(href: string): boolean {
 	-->
 	<div
 		id="mobile-nav-drawer"
-		class="mobile-nav-drawer md:hidden fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
+		class="mobile-nav-drawer lg:hidden fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu de navigation"

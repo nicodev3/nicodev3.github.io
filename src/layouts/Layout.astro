@@ -14,6 +14,8 @@ export interface Props {
   image?: string | ImageMetadata;
   noindex?: boolean;
   showFloatingWhatsApp?: boolean;
+  /** Masque en impression (PDF navigateur) l’en-tête, le bandeau professions et le pied de page. */
+  omitSiteChromeInPrint?: boolean;
   ogType?: "website" | "article";
   articlePublishedTime?: string;
   articleModifiedTime?: string;
@@ -26,6 +28,7 @@ const {
   image,
   noindex = false,
   showFloatingWhatsApp = true,
+  omitSiteChromeInPrint = false,
   ogType = "website",
   articlePublishedTime,
   articleModifiedTime,
@@ -111,7 +114,12 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
       ></script>
     )}
   </head>
-  <body class="bg-background text-foreground">
+  <body
+    class:list={[
+      "bg-background text-foreground",
+      omitSiteChromeInPrint && "omit-site-chrome-in-print",
+    ]}
+  >
     <Header />
 
     <!-- Contenu `position:fixed` relatif au viewport (évite un ancêtre transform/filter qui casse fixed dans <main>) -->

@@ -265,10 +265,6 @@ const renderMarkdown = (source: string): string => {
 
 const navigation = isDev ? buildNavigation(markdown) : [];
 const renderedHtml = isDev ? renderMarkdown(markdown) : "";
-const urssafRates = {
-  cipav: 0.232,
-  bncGeneral: 0.256,
-};
 ---
 
 <Layout
@@ -276,88 +272,14 @@ const urssafRates = {
   description="Prévisualisation locale du guide PDF."
   noindex={true}
   showFloatingWhatsApp={false}
+  omitSiteChromeInPrint={true}
 >
   <section class:list={["bg-slate-100 pb-16", isDev ? "pt-0" : "py-16"]}>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {
         isDev ? (
           <>
-            <div class="pt-28 sm:pt-32">
-              <section class="calculator-panel mx-auto mb-8 max-w-4xl rounded-lg bg-white px-6 py-8 shadow-sm sm:px-10">
-                <h2 class="text-2xl font-bold text-slate-900">
-                  Outil 1 - Simulateur micro-BNC / auto-entrepreneur (psychologue)
-                </h2>
-                <p class="mt-3 text-slate-700">
-                  Estime rapidement ta recette nette apres URSSAF a partir du tarif d'une seance.
-                </p>
-                <p class="mt-1 text-sm text-slate-600">
-                  Taux URSSAF utilises (source URSSAF, actualite mise a jour le 30/01/2026) :
-                  <strong>{(urssafRates.cipav * 100).toFixed(1)} %</strong> pour les professions liberales
-                  CIPAV et <strong>{(urssafRates.bncGeneral * 100).toFixed(1)} %</strong> pour le BNC regime
-                  general.
-                </p>
-
-                <div class="mt-6 grid gap-4 sm:grid-cols-3">
-                  <label class="flex flex-col gap-1">
-                    <span class="text-sm font-semibold text-slate-800">Tarif d'une seance (EUR)</span>
-                    <input
-                      id="session-price"
-                      type="number"
-                      min="1"
-                      step="1"
-                      value="60"
-                      class="rounded-md border border-slate-300 px-3 py-2 text-slate-900"
-                    />
-                  </label>
-
-                  <label class="flex flex-col gap-1">
-                    <span class="text-sm font-semibold text-slate-800">Regime social</span>
-                    <select id="social-rate" class="rounded-md border border-slate-300 px-3 py-2 text-slate-900">
-                      <option value={urssafRates.cipav.toString()}>Profession liberale CIPAV (23,2 %)</option>
-                      <option value={urssafRates.bncGeneral.toString()}>
-                        BNC regime general auto-entrepreneur (25,6 %)
-                      </option>
-                    </select>
-                  </label>
-
-                  <label class="flex flex-col gap-1">
-                    <span class="text-sm font-semibold text-slate-800">Seances par mois (focus)</span>
-                    <input
-                      id="sessions-focus"
-                      type="number"
-                      min="1"
-                      step="1"
-                      value="50"
-                      class="rounded-md border border-slate-300 px-3 py-2 text-slate-900"
-                    />
-                  </label>
-                </div>
-
-                <div class="mt-6 rounded-md border border-teal-200 bg-teal-50 p-4">
-                  <p class="text-sm text-teal-900">
-                    Par seance, il reste environ <strong id="net-per-session">0 EUR</strong> apres URSSAF.
-                  </p>
-                  <p class="mt-1 text-sm text-teal-900">
-                    Pour <strong id="focus-count">0</strong> seances/mois, recette nette estimee :
-                    <strong id="focus-net">0 EUR</strong>.
-                  </p>
-                </div>
-
-                <div class="mt-6 overflow-x-auto">
-                  <table class="min-w-full border-collapse text-left text-sm">
-                    <thead>
-                      <tr class="border-b border-slate-200 bg-slate-50">
-                        <th class="px-3 py-2 font-semibold text-slate-800">Seances / mois</th>
-                        <th class="px-3 py-2 font-semibold text-slate-800">CA brut</th>
-                        <th class="px-3 py-2 font-semibold text-slate-800">Cotisations URSSAF</th>
-                        <th class="px-3 py-2 font-semibold text-slate-800">Recette nette apres URSSAF</th>
-                      </tr>
-                    </thead>
-                    <tbody id="results-table-body"></tbody>
-                  </table>
-                </div>
-              </section>
-
+            <div class="guide-print-inner pt-28 sm:pt-32">
               <article
                 class="guide-preview prose prose-slate mx-auto max-w-4xl rounded-lg bg-white px-6 py-10 shadow-sm sm:px-10"
                 set:html={renderedHtml}
@@ -377,84 +299,7 @@ const urssafRates = {
   </section>
 </Layout>
 
-<script is:inline>
-  (() => {
-    const priceInput = document.getElementById("session-price");
-    const rateSelect = document.getElementById("social-rate");
-    const focusInput = document.getElementById("sessions-focus");
-    const tableBody = document.getElementById("results-table-body");
-    const netPerSessionEl = document.getElementById("net-per-session");
-    const focusCountEl = document.getElementById("focus-count");
-    const focusNetEl = document.getElementById("focus-net");
-
-    if (
-      !(priceInput instanceof HTMLInputElement) ||
-      !(rateSelect instanceof HTMLSelectElement) ||
-      !(focusInput instanceof HTMLInputElement) ||
-      !(tableBody instanceof HTMLElement) ||
-      !(netPerSessionEl instanceof HTMLElement) ||
-      !(focusCountEl instanceof HTMLElement) ||
-      !(focusNetEl instanceof HTMLElement)
-    ) {
-      return;
-    }
-
-    const sessionScenarios = [20, 30, 40, 50, 60, 80];
-    const eur = new Intl.NumberFormat("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-      maximumFractionDigits: 2,
-    });
-
-    const toPositiveNumber = (raw, fallback) => {
-      const parsed = Number(raw);
-      if (!Number.isFinite(parsed) || parsed <= 0) {
-        return fallback;
-      }
-      return parsed;
-    };
-
-    const render = () => {
-      const sessionPrice = toPositiveNumber(priceInput.value, 60);
-      const urssafRate = toPositiveNumber(rateSelect.value, 0.232);
-      const focusSessions = Math.round(toPositiveNumber(focusInput.value, 50));
-
-      const netPerSession = sessionPrice * (1 - urssafRate);
-      netPerSessionEl.textContent = eur.format(netPerSession);
-      focusCountEl.textContent = String(focusSessions);
-      focusNetEl.textContent = eur.format(netPerSession * focusSessions);
-
-      const allScenarios = Array.from(new Set([...sessionScenarios, focusSessions])).sort((a, b) => a - b);
-      tableBody.innerHTML = allScenarios
-        .map((sessions) => {
-          const gross = sessionPrice * sessions;
-          const urssaf = gross * urssafRate;
-          const net = gross - urssaf;
-          const isFocus = sessions === focusSessions;
-
-          return `<tr class="border-b border-slate-100 ${isFocus ? "bg-teal-50" : ""}">
-            <td class="px-3 py-2 font-medium text-slate-900">${sessions}</td>
-            <td class="px-3 py-2 text-slate-700">${eur.format(gross)}</td>
-            <td class="px-3 py-2 text-slate-700">${eur.format(urssaf)}</td>
-            <td class="px-3 py-2 font-semibold text-slate-900">${eur.format(net)}</td>
-          </tr>`;
-        })
-        .join("");
-    };
-
-    priceInput.addEventListener("input", render);
-    rateSelect.addEventListener("change", render);
-    focusInput.addEventListener("input", render);
-    render();
-  })();
-</script>
-
 <style>
-  .calculator-panel table th,
-  .calculator-panel table td {
-    white-space: nowrap;
-  }
-
   .guide-preview :global(h2 + ol) {
     margin-top: 0.75rem;
     margin-bottom: 1.25rem;

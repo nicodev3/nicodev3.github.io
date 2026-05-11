@@ -486,3 +486,24 @@ footer .footer-animated-underline:focus-visible {
         transition: none;
     }
 }
+
+/* Export PDF / impression : pages qui passent omitSiteChromeInPrint sur Layout */
+@media print {
+    body.omit-site-chrome-in-print>header[data-site-header],
+    body.omit-site-chrome-in-print>section[aria-label="Professions accompagnées"],
+    body.omit-site-chrome-in-print>footer {
+        display: none !important;
+    }
+
+    body.omit-site-chrome-in-print .whatsapp-fab {
+        display: none !important;
+    }
+
+    body.omit-site-chrome-in-print .guide-print-inner {
+        padding-top: 0 !important;
+    }
+
+    body.omit-site-chrome-in-print {
+        background: #fff !important;
+    }
+}
