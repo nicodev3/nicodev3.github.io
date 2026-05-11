@@ -1,0 +1,31 @@
+---
+import { GUIDE_VISIBILITE_PILLAR_HREF, GUIDE_VISIBILITE_PILLAR_SLUG } from '../utils/blog';
+
+interface Props {
+	/** Identifiant du billet courant (fichier sans `.md`). */
+	currentArticleId: string;
+}
+
+const { currentArticleId } = Astro.props;
+
+const isPillarPage = currentArticleId === GUIDE_VISIBILITE_PILLAR_SLUG;
+---
+
+{
+	!isPillarPage && (
+		<aside
+			class="not-prose mb-10 rounded-xl border border-primary/25 bg-primary/5 p-5"
+			aria-label="Guide lié — visibilité en ligne"
+		>
+			<p class="text-sm font-semibold text-foreground">Visibilité en ligne pour psychologues</p>
+			<p class="mt-2 text-muted leading-relaxed">
+				Cet article fait partie du cluster sur la visibilité web des cabinets. Pour la vue d’ensemble, les
+				priorités et les liens vers tous les guides détaillés, voir le{' '}
+				<a href={GUIDE_VISIBILITE_PILLAR_HREF} class="font-semibold text-foreground underline-offset-2 hover:underline">
+					Guide complet de la visibilité en ligne pour psychologues
+				</a>
+				.
+			</p>
+		</aside>
+	)
+}

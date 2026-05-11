@@ -15,6 +15,10 @@ const blog = defineCollection({
       tags: z.array(z.string()).optional(),
       /** Suffixe du `<title>` (après « Titre article | »). Défaut côté template : « Site web psychologues ». */
       metaTitleSuffix: z.string().optional(),
+      /** Page pilier : active un schéma ItemList vers les articles du cluster visibilité. */
+      guidePillarHub: z.boolean().optional(),
+      /** Masque le sommaire automatique (h2) généré sur la page article. */
+      hideArticleToc: z.boolean().optional(),
     }),
 });
 

@@ -1,0 +1,37 @@
+---
+export interface TocItem {
+	/** Identifiant d’ancre (attribut `id` du titre), sans `#`. */
+	slug: string;
+	/** Texte affiché (souvent le libellé du h2). */
+	text: string;
+}
+
+interface Props {
+	items: TocItem[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+	items.length > 0 && (
+		<nav
+			class="not-prose mb-10 rounded-xl border border-border bg-surface/80 p-5 shadow-sm"
+			aria-label="Sommaire de l'article"
+		>
+			<p class="text-sm font-semibold uppercase tracking-wide text-muted">Sommaire</p>
+			<ol class="mt-3 list-decimal space-y-2 pl-5 text-base text-foreground marker:text-muted">
+				{items.map((item) => (
+					<li class="pl-1">
+						<a
+							href={`#${item.slug}`}
+							class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline"
+						>
+							{item.text}
+						</a>
+					</li>
+				))}
+			</ol>
+		</nav>
+	)
+}

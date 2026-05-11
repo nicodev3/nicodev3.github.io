@@ -48,7 +48,7 @@ const features = [
 			</h1>
 
 			<p class="hero-lead text-pretty">
-				Site professionnel pensé pour les psychologues : présenter votre pratique, rassurer vos futurs patients et orienter vers le rendez-vous. Psychologue développeur, je connais votre métier — vous recevez vos patients, je m’occupe du site et de votre visibilité.
+				Création et refonte de site internet pensé pour les psychologues : présenter votre pratique, rassurer vos futurs patients et orienter vers le rendez-vous. Psychologue développeur, je connais votre métier — vous recevez vos patients, je m’occupe du site et de votre visibilité.
 			</p>
 
 			<div class="hero-primary-actions">
@@ -67,6 +67,10 @@ const features = [
 						Voir les tarifs
 					</a>
 				</div>
+
+				<p class="hero-price-qualifier text-foreground/80">
+					À partir de 29&nbsp;€/mois, tout inclus
+				</p>
 
 				<p class="hero-trust mt-4 text-muted">
 					<span class="text-foreground/80">Des psychologues accompagnés depuis 2016</span>
@@ -235,6 +239,22 @@ const features = [
 	@media (min-width: 768px) {
 		.hero-lead {
 			margin-top: 1.75rem;
+		}
+	}
+
+	.hero-price-qualifier {
+		margin-top: 0.875rem;
+		text-align: center;
+		font-size: 0.875rem;
+		line-height: 1.45;
+		font-weight: 500;
+		letter-spacing: 0.01em;
+	}
+
+	@media (min-width: 640px) {
+		.hero-price-qualifier {
+			margin-top: 1rem;
+			font-size: 0.9375rem;
 		}
 	}
 

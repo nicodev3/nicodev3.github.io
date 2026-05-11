@@ -2,14 +2,17 @@
 const comparisonRows = [
 	{
 		label: "Outil & temps",
-		diy: "Beaucoup de temps passé à comprendre l'outil (Wix, WordPress, Hostinger...)",
+		diyBalance: "nuanced" as const,
+		diy: "Souvent chronophage au début. Si vous avez déjà l'habitude de WordPress (ou équivalent) et du temps à investir régulièrement, faire soi-même peut tout à fait suffire.",
 		nicodev:
-			"Je vous accompagne en confrère, avec une posture respectueuse de votre éthique"
+			"Je prends le relais quand vous voulez déléguer la technique et le cadrage — sans présenter l'autonomie comme un mauvais choix."
 	},
 	{
 		label: "Rédaction & ton",
-		diy: "Textes à rédiger seul, avec le risque d'un ton trop commercial ou, au contraire, trop flou",
-		nicodev: "Contenus structurés pour vos patients à partir de réponses simples à un formulaire guidé"
+		diyBalance: "nuanced" as const,
+		diy: "Si vous aimez écrire, que vous relisez et faites valider par un pair, des textes sérieux en autonomie sont possibles. Le piège fréquent reste un ton trop commercial ou trop vague.",
+		nicodev:
+			"Contenus structurés pour vos patients à partir de réponses simples à un formulaire guidé — utile quand vous voulez gagner du temps ou un regard confrère."
 	},
 	{
 		label: "Visibilité locale",
@@ -64,7 +67,7 @@ const iconCheck =
 				<table class="diy-compare-table w-full min-w-0 table-fixed text-left text-base">
 					<caption class="sr-only">
 						Comparaison entre créer son site en autonomie avec un outil grand public et être accompagné par
-						nicodev.fr : inconvénients et avantages ligne par ligne.
+						nicodev.fr : limites fréquentes, cas où l’autonomie peut suffire, et apports ligne par ligne.
 					</caption>
 					<thead>
 						<tr>
@@ -87,14 +90,33 @@ const iconCheck =
 								</th>
 								<td class="diy-compare-td diy-compare-td--diy" data-col="En autonomie">
 									<span class="diy-compare-cell">
-										<span class="diy-compare-icon diy-compare-icon--bad" aria-hidden="true">
+										<span
+											class:list={[
+												'diy-compare-icon',
+												'diyBalance' in row && row.diyBalance === 'nuanced'
+													? 'diy-compare-icon--nuanced'
+													: 'diy-compare-icon--bad',
+											]}
+											aria-hidden="true"
+										>
 											<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="1.5"
-													d={iconCross}
-												/>
+												{
+													'diyBalance' in row && row.diyBalance === 'nuanced' ? (
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															stroke-width="1.5"
+															d={iconCheck}
+														/>
+													) : (
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															stroke-width="1.5"
+															d={iconCross}
+														/>
+													)
+												}
 											</svg>
 										</span>
 										<span class="text-muted">{row.diy}</span>
@@ -131,14 +153,33 @@ const iconCheck =
 								<p class="diy-compare-th__eyebrow mb-1.5">En autonomie</p>
 								<p class="diy-compare-th__sub mb-2">Wix, WordPress, Hostinger…</p>
 								<span class="diy-compare-cell">
-									<span class="diy-compare-icon diy-compare-icon--bad" aria-hidden="true">
+									<span
+										class:list={[
+											'diy-compare-icon',
+											'diyBalance' in row && row.diyBalance === 'nuanced'
+												? 'diy-compare-icon--nuanced'
+												: 'diy-compare-icon--bad',
+										]}
+										aria-hidden="true"
+									>
 										<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="1.5"
-												d={iconCross}
-											/>
+											{
+												'diyBalance' in row && row.diyBalance === 'nuanced' ? (
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														stroke-width="1.5"
+														d={iconCheck}
+													/>
+												) : (
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														stroke-width="1.5"
+														d={iconCross}
+													/>
+												)
+											}
 										</svg>
 									</span>
 									<span class="text-muted">{row.diy}</span>
@@ -298,6 +339,13 @@ const iconCheck =
 	.diy-compare-icon--bad {
 		color: var(--color-primary-700);
 		background: color-mix(in srgb, var(--color-primary-100) 72%, transparent);
+	}
+
+	/* Autonomie possible sous conditions — pas une « case rouge », crédibilité du tableau */
+	.diy-compare-icon--nuanced {
+		color: color-mix(in srgb, var(--color-primary-900) 88%, var(--color-foreground) 12%);
+		background: color-mix(in srgb, var(--color-primary-100) 55%, var(--color-surface) 45%);
+		border: 1px solid color-mix(in srgb, var(--color-primary-300) 35%, transparent);
 	}
 
 	.diy-compare-icon--good {

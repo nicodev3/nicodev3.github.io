@@ -2,6 +2,8 @@
 export interface NavLink {
 	href: string;
 	label: string;
+	/** Précise le type de page (ex. portfolio clients vs démos), sans alourdir le libellé principal. */
+	navHint?: string;
 }
 
 export interface Props {
@@ -9,8 +11,8 @@ export interface Props {
 }
 
 const defaultLinks: NavLink[] = [
-	{ href: '/portfolio/', label: 'Portfolio' },
-	{ href: '/exemples-sites-psychologue/', label: 'Exemples' },
+	{ href: '/portfolio/', label: 'Portfolio', navHint: 'Réalisations clients' },
+	{ href: '/exemples-sites-psychologue/', label: 'Exemples', navHint: 'Démos & modèles' },
 	{ href: '/tarifs/', label: 'Tarifs' },
 	{ href: '/about/', label: 'À propos' },
 	{ href: '/contact/', label: 'Contact' },
@@ -85,11 +87,18 @@ function navLinkIsActive(href: string): boolean {
 							<a
 								href={link.href}
 								data-main-nav
-								class="site-nav-link"
+								class:list={['site-nav-link', link.navHint && 'site-nav-link--stacked']}
 								data-active={!scrollspyRoot && active ? 'true' : undefined}
 								aria-current={!scrollspyRoot && active ? 'page' : undefined}
 							>
-								{link.label}
+								{link.navHint ? (
+									<span class="site-nav-link__stack">
+										<span class="site-nav-link__label">{link.label}</span>
+										<span class="site-nav-link__hint">{link.navHint}</span>
+									</span>
+								) : (
+									link.label
+								)}
 							</a>
 						);
 					})}
@@ -173,11 +182,19 @@ function navLinkIsActive(href: string): boolean {
 						data-mobile-nav-link
 						class:list={[
 							'rounded-lg px-3 py-3 text-lg transition-colors touch-manipulation',
+							link.navHint && 'site-nav-link--stacked site-nav-link--stacked-mobile',
 							!scrollspyRoot && active ? 'font-semibold text-primary bg-surface' : 'text-foreground hover:bg-surface',
 						]}
 						aria-current={!scrollspyRoot && active ? 'page' : undefined}
 					>
-						{link.label}
+						{link.navHint ? (
+							<span class="site-nav-link__stack">
+								<span class="site-nav-link__label">{link.label}</span>
+								<span class="site-nav-link__hint">{link.navHint}</span>
+							</span>
+						) : (
+							link.label
+						)}
 					</a>
 				);
 			})}

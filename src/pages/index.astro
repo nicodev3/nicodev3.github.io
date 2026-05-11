@@ -16,9 +16,10 @@ import { homeFaqItems } from '../data/faq-home';
 
 const allBlogPosts = await getCollection('blog');
 const preferredBlogIds = [
+	'guide-complet-visibilite-en-ligne-psychologues',
 	'comment-trouver-premiers-patients-psychologue',
 	'google-business-profile-psychologue',
-	'site-internet-psychologues'
+	'site-internet-psychologues',
 ] as const;
 const byBlogId = new Map(allBlogPosts.map((p) => [p.id, p]));
 const homeBlogPosts = [];
@@ -43,7 +44,8 @@ const businessSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'ProfessionalService',
 	name: 'Nicolas Devaux',
-	description: 'Création de sites internet pour psychologues.',
+	description:
+		'Création de sites internet pour psychologues. Abonnement mensuel tout inclus dès 29 EUR.',
 	url: siteRootHref,
 	telephone: '+33629341367',
 	address: {
@@ -54,7 +56,7 @@ const businessSchema = {
 		addressRegion: 'Île-de-France',
 		addressCountry: 'FR'
 	},
-	priceRange: 'Abonnement mensuel tout inclus dès 29 EUR',
+	priceRange: '€€',
 	sameAs: [
 		'https://www.malt.fr/profile/nicolasdevaux1',
 		'https://github.com/nicodev3',

@@ -1,9 +1,15 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
 import BlogShare from '../../components/BlogShare.astro';
-import { toTagHref } from '../../utils/blog';
+import BlogArticleToc from '../../components/BlogArticleToc.astro';
+import BlogPillarClusterLink from '../../components/BlogPillarClusterLink.astro';
+import {
+	GUIDE_VISIBILITE_CLUSTER_IDS,
+	toTagHref,
+} from '../../utils/blog';
 import defaultOgWebp from '../../assets/images/blog/development.webp';
 
 // Récupérer le slug depuis l'URL
@@ -17,20 +23,33 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 
-// Articles similaires (même tag ou récents, hors l'article actuel)
 const allPosts = await getCollection('blog');
+
+const clusterForPillar = GUIDE_VISIBILITE_CLUSTER_IDS.map((id) => allPosts.find((p) => p.id === id)).filter(
+	(p): p is CollectionEntry<'blog'> => Boolean(p),
+);
+
 const currentTags = entry.data.tags ?? [];
-const relatedPosts = allPosts
-	.filter((p) => p.id !== entry.id)
-	.sort((a, b) => {
-		const aScore = (a.data.tags ?? []).filter((t: string) => currentTags.includes(t)).length;
-		const bScore = (b.data.tags ?? []).filter((t: string) => currentTags.includes(t)).length;
-		if (bScore !== aScore) return bScore - aScore;
-		return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
-	})
-	.slice(0, 3);
+const relatedPosts = entry.data.guidePillarHub
+	? clusterForPillar
+	: allPosts
+			.filter((p) => p.id !== entry.id)
+			.sort((a, b) => {
+				const aScore = (a.data.tags ?? []).filter((t: string) => currentTags.includes(t)).length;
+				const bScore = (b.data.tags ?? []).filter((t: string) => currentTags.includes(t)).length;
+				if (bScore !== aScore) return bScore - aScore;
+				return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+			})
+			.slice(0, 3);
+
+const showArticleToc = !entry.data.hideArticleToc;
+const tocItems = showArticleToc
+	? (headings ?? [])
+			.filter((h) => h.depth === 2 && h.slug)
+			.map((h) => ({ slug: h.slug, text: h.text }))
+	: [];
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const siteOrigin = new URL('/', baseUrl).href;
@@ -81,6 +100,24 @@ const breadcrumbSchema = {
 		{ '@type': 'ListItem', position: 3, name: entry.data.title, item: canonical }
 	]
 };
+
+const guideClusterItemListSchema =
+	entry.data.guidePillarHub && clusterForPillar.length > 0
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'ItemList',
+				name: 'Guides de visibilité en ligne pour psychologues',
+				description:
+					'Articles détaillés reliés au guide complet : fiche Google, SEO local, site, coûts, acquisition de patients, Doctolib et technique.',
+				numberOfItems: clusterForPillar.length,
+				itemListElement: clusterForPillar.map((post, i) => ({
+					'@type': 'ListItem',
+					position: i + 1,
+					name: post.data.title,
+					url: new URL(`/blog/${post.id}/`, baseUrl).toString(),
+				})),
+			}
+		: null;
 ---
 
 <Layout 
@@ -95,6 +132,9 @@ const breadcrumbSchema = {
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+		{guideClusterItemListSchema && (
+			<script type="application/ld+json" set:html={JSON.stringify(guideClusterItemListSchema)} />
+		)}
 	</Fragment>
 	<Hero 
 		title={entry.data.title} 
@@ -159,8 +199,8 @@ const breadcrumbSchema = {
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="prose prose-lg max-w-none
 				prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground
-				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
-				prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-foreground
+				prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2 prose-h2:scroll-mt-28
+				prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-foreground prose-h3:scroll-mt-28
 				prose-p:text-muted prose-p:leading-relaxed
 				prose-a:text-foreground prose-a:font-medium prose-a:no-underline hover:prose-a:text-primary
 				prose-strong:text-foreground
@@ -171,6 +211,8 @@ const breadcrumbSchema = {
 				prose-ol:my-4
 				prose-img:rounded-lg prose-img:shadow-sm prose-img:mx-auto
 				prose-hr:border-border">
+				<BlogPillarClusterLink currentArticleId={entry.id} />
+				<BlogArticleToc items={tocItems} />
 				<Content />
 			</div>
 		</div>
@@ -199,11 +241,13 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	<!-- Articles similaires -->
+	<!-- Articles similaires (sur la page pilier : tout le cluster) -->
 	{relatedPosts.length > 0 && (
 		<section class="py-16 bg-white">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 class="text-xl font-semibold text-foreground mb-6">À lire aussi</h2>
+				<h2 class="text-xl font-semibold text-foreground mb-6">
+					{entry.data.guidePillarHub ? 'Guides détaillés du cluster' : 'À lire aussi'}
+				</h2>
 				<ul class="space-y-3">
 					{relatedPosts.map((post) => (
 						<li>

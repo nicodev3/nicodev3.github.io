@@ -476,6 +476,52 @@ footer .footer-animated-underline:focus-visible {
     background-color: var(--color-primary-foreground);
 }
 
+/* Libellé + précision (ex. Portfolio vs Exemples) : reste compact, sans tout renommer. */
+.site-nav-link--stacked {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.0625rem;
+    line-height: 1.2;
+    white-space: normal;
+    text-align: center;
+}
+
+.site-nav-link__stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.0625rem;
+}
+
+.site-nav-link__label {
+    line-height: 1.2;
+}
+
+.site-nav-link__hint {
+    max-width: 13rem;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: color-mix(in srgb, var(--color-muted) 92%, var(--color-foreground) 8%);
+}
+
+.site-nav-link--stacked:hover .site-nav-link__hint,
+.site-nav-link--stacked[data-active="true"] .site-nav-link__hint,
+.site-nav-link--stacked[aria-current="page"] .site-nav-link__hint {
+    color: color-mix(in srgb, var(--color-primary-foreground) 58%, var(--color-muted) 42%);
+}
+
+/* Tiroir mobile : le parent peut être en text-primary + font-semibold à l’état actif */
+.site-nav-link--stacked-mobile .site-nav-link__hint {
+    margin-top: 0.125rem;
+    font-size: 0.8125rem;
+}
+
+.site-nav-link--stacked-mobile[aria-current="page"] .site-nav-link__hint {
+    color: color-mix(in srgb, var(--color-primary) 45%, var(--color-muted) 55%);
+}
+
 @media (prefers-reduced-motion: reduce) {
 
     .site-header,
