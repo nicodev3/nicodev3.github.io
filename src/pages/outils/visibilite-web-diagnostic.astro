@@ -1,0 +1,289 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const questions = [
+  {
+    id: "gbp",
+    label:
+      "Fiche Google Business Profile (Google Maps) : informations à jour (adresse, horaires, téléphone, lien vers le site) ?",
+  },
+  {
+    id: "mobile",
+    label: "Votre site s’affiche-t-il correctement sur téléphone (texte lisible, boutons cliquables, pas de contenu coupé) ?",
+  },
+  {
+    id: "homepage",
+    label:
+      "Sur la page d’accueil, comprend-on vite qui vous êtes, ce que vous proposez et où vous consultez (sans multiplier les clics) ?",
+  },
+  {
+    id: "honoraires",
+    label: "Les honoraires ou modalités de séance sont-ils indiqués clairement (page dédiée ou section visible) ?",
+  },
+  {
+    id: "legal",
+    label: "Mentions légales et politique de confidentialité sont-elles accessibles depuis le site (pied de page ou menu) ?",
+  },
+  {
+    id: "contact",
+    label: "Un moyen de vous contacter est-il évident (formulaire, email cliquable, téléphone) sur les pages clés ?",
+  },
+  {
+    id: "seo-local",
+    label:
+      "Le titre de la page d’accueil (onglet du navigateur) et le titre principal (H1) précisent-ils votre métier et votre ville ou zone d’exercice ?",
+  },
+  {
+    id: "avis",
+    label: "Avez-vous des avis Google récents, ou un fonctionnement pour les demander régulièrement aux patient·es ?",
+  },
+  {
+    id: "nap",
+    label: "Le nom affiché, l’adresse et le téléphone sont-ils strictement identiques entre la fiche Google et le site ?",
+  },
+  {
+    id: "contenu",
+    label:
+      "Au moins une page utile au-delà de l’accueil (présentation du cadre, FAQ patient, article de fond) existe-t-elle et est-elle à jour ?",
+  },
+];
+---
+
+<Layout
+  title="Mini-diagnostic visibilité web psychologue | Outils"
+  description="Questionnaire rapide pour repérer les priorités sur votre site et votre présence locale (Google, contenu, cadre légal minimal)."
+>
+  <section class="section-y bg-slate-50">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-slate-600" aria-label="Fil d'Ariane">
+        <a href="/outils/" class="font-medium text-teal-700 underline decoration-teal-300 underline-offset-2 hover:text-teal-900"
+          >Outils</a
+        >
+        <span class="mx-1.5 text-slate-400" aria-hidden="true">/</span>
+        <span class="text-slate-800">Visibilité web</span>
+      </nav>
+
+      <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-teal-700">Outil 2</p>
+        <h1 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Mini-diagnostic visibilité web</h1>
+        <p class="mt-4 text-slate-700">
+          Dix questions pour vous aider à <strong>prioriser</strong> : fiche Google, site mobile, contenu,
+          cadre d’information patient et cohérence locale. Répondez au plus juste : il n’y a pas de bonne
+          note unique, seulement des axes de travail.
+        </p>
+        <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+          <strong>Limites.</strong> Ce questionnaire est <strong>gratuit et informatif</strong>. Il ne remplace
+          ni un audit technique complet, ni un accompagnement juridique ou RGPD personnalisé, ni une analyse
+          de positionnement concurrentiel.
+        </p>
+      </div>
+
+      <form
+        id="diagnostic-form"
+        class="mt-8 space-y-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+        novalidate
+      >
+        {
+          questions.map((q, index) => (
+            <fieldset class="rounded-xl border border-slate-100 bg-slate-50/80 p-4 sm:p-5">
+              <legend class="text-base font-semibold text-slate-900">
+                <span class="text-teal-700">{index + 1}.</span> {q.label}
+              </legend>
+              <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50 has-[:checked]:ring-1 has-[:checked]:ring-teal-500">
+                  <input type="radio" name={q.id} value="0" class="text-teal-700 focus:ring-teal-600" />
+                  <span>Non / pas vraiment</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50 has-[:checked]:ring-1 has-[:checked]:ring-teal-500">
+                  <input type="radio" name={q.id} value="1" class="text-teal-700 focus:ring-teal-600" />
+                  <span>Partiellement / à améliorer</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50 has-[:checked]:ring-1 has-[:checked]:ring-teal-500">
+                  <input type="radio" name={q.id} value="2" class="text-teal-700 focus:ring-teal-600" />
+                  <span>Oui / plutôt en place</span>
+                </label>
+              </div>
+            </fieldset>
+          ))
+        }
+
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <button
+            type="button"
+            id="diagnostic-reset"
+            class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
+          >
+            Réinitialiser
+          </button>
+        </div>
+      </form>
+
+      <div
+        id="diagnostic-result"
+        class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+        aria-live="polite"
+      >
+        <h2 class="text-xl font-bold text-slate-900">Votre lecture</h2>
+        <p id="diagnostic-score-line" class="mt-3 text-lg text-slate-800">
+          Répondez aux questions pour afficher un score indicatif et des priorités.
+        </p>
+        <div class="mt-4 h-3 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
+          <div id="diagnostic-score-bar" class="h-full w-0 rounded-full bg-teal-600 transition-[width] duration-300 ease-out" />
+        </div>
+        <p id="diagnostic-band" class="mt-3 text-sm font-semibold text-slate-700" />
+        <p id="diagnostic-summary" class="mt-2 text-slate-700" />
+        <div class="mt-6">
+          <h3 class="text-sm font-bold uppercase tracking-[0.12em] text-slate-500">Priorités suggérées</h3>
+          <ol id="diagnostic-priorities" class="mt-2 list-decimal space-y-2 pl-5 text-slate-800" />
+        </div>
+      </div>
+
+      <p class="mt-6 text-center text-sm text-slate-600">
+        Besoin d’un regard sur votre site&nbsp;?
+        <a
+          href="/diagnostic-gratuit/"
+          class="font-semibold text-teal-700 underline decoration-teal-300 underline-offset-2 hover:text-teal-900"
+          >Demander un diagnostic gratuit</a
+        >
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline define:vars={{ questionMeta: questions }}>
+  (() => {
+    const form = document.getElementById("diagnostic-form");
+    const resetBtn = document.getElementById("diagnostic-reset");
+    const scoreLine = document.getElementById("diagnostic-score-line");
+    const scoreBar = document.getElementById("diagnostic-score-bar");
+    const bandEl = document.getElementById("diagnostic-band");
+    const summaryEl = document.getElementById("diagnostic-summary");
+    const prioritiesEl = document.getElementById("diagnostic-priorities");
+
+    if (
+      !(form instanceof HTMLFormElement) ||
+      !(resetBtn instanceof HTMLButtonElement) ||
+      !(scoreLine instanceof HTMLElement) ||
+      !(scoreBar instanceof HTMLElement) ||
+      !(bandEl instanceof HTMLElement) ||
+      !(summaryEl instanceof HTMLElement) ||
+      !(prioritiesEl instanceof HTMLOListElement)
+    ) {
+      return;
+    }
+
+    const maxPer = 2;
+    const maxTotal = questionMeta.length * maxPer;
+
+    const bandCopy = (pctQuality) => {
+      if (pctQuality < 40) {
+        return {
+          label: "Profil : beaucoup de leviers possibles",
+          text: "Plusieurs fondamentaux méritent attention. Ce n’est pas une critique de votre pratique clinique : il s’agit surtout de rendre votre cadre visible et rassurant pour les personnes qui cherchent un·e psychologue en ligne.",
+        };
+      }
+      if (pctQuality < 70) {
+        return {
+          label: "Profil : bases en place, marges de gain",
+          text: "Vous avez probablement déjà des bons réflexes. Les derniers pourcents viennent souvent de la cohérence entre Google et le site, du mobile et d’un contenu utile qui complète votre page d’accueil.",
+        };
+      }
+      return {
+        label: "Profil : visibilité web plutôt solide",
+        text: "Votre dispositif semble cohérent sur les critères de ce mini-diagnostic. Continuez à faire évoluer contenu et fiche Google au fil de votre activité, et gardez un œil sur l’accessibilité et les textes légaux lors des mises à jour.",
+      };
+    };
+
+    const shortLabel = (id) => {
+      const map = {
+        gbp: "Fiche Google Business Profile",
+        mobile: "Affichage mobile du site",
+        homepage: "Clarté de la page d’accueil",
+        honoraires: "Honoraires / modalités visibles",
+        legal: "Mentions légales et confidentialité",
+        contact: "Moyens de contact visibles",
+        "seo-local": "Titres et ancrage local (ville / métier)",
+        avis: "Avis Google et démarche patients",
+        nap: "Cohérence nom-adresse-téléphone (Google ↔ site)",
+        contenu: "Contenu utile au-delà de l’accueil",
+      };
+      return map[id] ?? id;
+    };
+
+    const compute = () => {
+      let total = 0;
+      let answered = 0;
+      const scores = [];
+
+      for (const q of questionMeta) {
+        const selected = form.querySelector(`input[name="${q.id}"]:checked`);
+        if (selected instanceof HTMLInputElement) {
+          answered += 1;
+          const v = Number(selected.value);
+          const pts = Number.isFinite(v) ? v : 0;
+          total += pts;
+          scores.push({ id: q.id, pts, label: shortLabel(q.id) });
+        } else {
+          scores.push({ id: q.id, pts: null, label: shortLabel(q.id) });
+        }
+      }
+
+      if (answered === 0) {
+        scoreLine.textContent = "Répondez aux questions pour afficher un score indicatif et des priorités.";
+        scoreBar.style.width = "0%";
+        bandEl.textContent = "";
+        summaryEl.textContent = "";
+        prioritiesEl.innerHTML = "";
+        return;
+      }
+
+      const answeredMax = answered * maxPer;
+      const pctQuality = Math.round((total / answeredMax) * 100);
+      const pctCompletion = Math.round((answered / questionMeta.length) * 100);
+      scoreLine.textContent = `Points sur les questions renseignées : ${total} / ${answeredMax} (${pctQuality} % de réponses favorables). Questions complétées : ${answered} / ${questionMeta.length} (${pctCompletion} %). Référence plein pot : ${maxTotal} points si tout est « Oui / plutôt en place ».`;
+      scoreBar.style.width = `${pctQuality}%`;
+      const band = bandCopy(pctQuality);
+      bandEl.textContent = band.label;
+      summaryEl.textContent = band.text;
+
+      const weak = scores
+        .filter((s) => s.pts !== null)
+        .sort((a, b) => a.pts - b.pts)
+        .filter((s) => s.pts <= 1)
+        .slice(0, 3);
+
+      const unanswered = scores.filter((s) => s.pts === null).length;
+      prioritiesEl.innerHTML = "";
+
+      if (weak.length === 0) {
+        const li = document.createElement("li");
+        li.textContent =
+          "Aucun point ne ressort comme très faible parmi les réponses données. Vous pouvez affiner un détail (contenu, vitesse, accessibilité) ou faire relire le site par un pair.";
+        prioritiesEl.appendChild(li);
+      } else {
+        for (const w of weak) {
+          const li = document.createElement("li");
+          li.textContent =
+            w.pts === 0
+              ? `${w.label} — à traiter en priorité si vous voulez renforcer la confiance en ligne.`
+              : `${w.label} — petits ajustements souvent rapides pour passer au niveau supérieur.`;
+          prioritiesEl.appendChild(li);
+        }
+      }
+
+      if (unanswered > 0) {
+        const li = document.createElement("li");
+        li.className = "text-slate-600";
+        li.textContent = `${unanswered} question${unanswered > 1 ? "s" : ""} sans réponse : complétez pour affiner la lecture.`;
+        prioritiesEl.appendChild(li);
+      }
+    };
+
+    form.addEventListener("change", compute);
+    resetBtn.addEventListener("click", () => {
+      form.reset();
+      compute();
+    });
+    compute();
+  })();
+</script>

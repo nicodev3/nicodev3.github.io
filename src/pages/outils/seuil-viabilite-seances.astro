@@ -1,0 +1,280 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const contributionRates = {
+  socialPlusCfp: 0.234,
+  socialCfpAndLiberatoryTax: 0.256,
+};
+---
+
+<Layout
+  title="Seuil de viabilité — séances par mois | Outils"
+  description="Estimez le chiffre d'affaires et le nombre de séances mensuelles nécessaires pour couvrir vos charges fixes et un revenu net cible, après prélèvements URSSAF sur le CA."
+>
+  <section class="section-y bg-slate-50">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-slate-600" aria-label="Fil d'Ariane">
+        <a
+          href="/outils/"
+          class="font-medium text-teal-700 underline decoration-teal-300 underline-offset-2 hover:text-teal-900"
+          >Outils</a
+        >
+        <span class="mx-1.5 text-slate-400" aria-hidden="true">/</span>
+        <span class="text-slate-800">Seuil de viabilité</span>
+      </nav>
+
+      <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-teal-700">Outil 3</p>
+        <h1 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Seuil de viabilité (séances / mois)</h1>
+        <p class="mt-4 max-w-3xl text-slate-700">
+          À partir de vos <strong>charges fixes mensuelles</strong>, du <strong>revenu net mensuel</strong> que
+          vous visez (après charges fixes et après prélèvements sociaux sur le chiffre d&apos;affaires), de votre
+          <strong>tarif moyen de séance</strong> et d&apos;un <strong>taux de prélèvements sur le CA</strong>, l&apos;outil
+          estime le <strong>chiffre d&apos;affaires mensuel</strong> à atteindre puis le nombre de
+          <strong>séances par mois</strong> (et par semaine, sur la base de 4 semaines par mois).
+        </p>
+        <p class="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-900">
+          <strong>Modèle simplifié.</strong> On suppose que les prélèvements (URSSAF, CFP, et le cas échéant
+          versement libératoire) s&apos;appliquent en <strong>pourcentage du CA encaissé</strong>, comme en
+          micro-entreprise. L&apos;<strong>impôt sur le revenu</strong> hors versement libératoire n&apos;est pas
+          intégré ici. Les taux proposés sont les mêmes que dans l&apos;
+          <a href="/outils/micro-bnc-auto-entrepreneur/" class="font-semibold text-teal-800 underline"
+            >calculateur micro-BNC</a
+          >
+          (23,4 % et 25,6 %).
+        </p>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="flex flex-col gap-1.5 sm:col-span-2">
+            <span class="text-sm font-semibold text-slate-800">Charges fixes mensuelles du cabinet (EUR)</span>
+            <span class="text-xs text-slate-600">Loyer, assurances, logiciels, supervision, etc.</span>
+            <input
+              id="fixed-charges"
+              type="number"
+              min="0"
+              step="10"
+              value="800"
+              class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+            />
+          </label>
+
+          <label class="flex flex-col gap-1.5 sm:col-span-2">
+            <span class="text-sm font-semibold text-slate-800">Revenu net mensuel souhaité (EUR)</span>
+            <span class="text-xs text-slate-600"
+              >Ce que vous voulez dégager pour vivre ou épargner, après charges fixes et après prélèvements sociaux
+              sur le CA.</span
+            >
+            <input
+              id="target-net"
+              type="number"
+              min="0"
+              step="50"
+              value="2500"
+              class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+            />
+          </label>
+
+          <label class="flex flex-col gap-1.5">
+            <span class="text-sm font-semibold text-slate-800">Tarif moyen par séance (EUR)</span>
+            <input
+              id="session-price"
+              type="number"
+              min="1"
+              step="1"
+              value="60"
+              class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+            />
+          </label>
+
+          <label class="flex flex-col gap-1.5">
+            <span class="text-sm font-semibold text-slate-800">Taux de prélèvements sur le CA</span>
+            <select id="social-rate" class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900">
+              <option value={contributionRates.socialPlusCfp.toString()}>Sans versement libératoire (23,4 %)</option>
+              <option value={contributionRates.socialCfpAndLiberatoryTax.toString()}>
+                Avec versement libératoire IR (25,6 %)
+              </option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mt-6 rounded-lg border border-teal-200 bg-teal-50 px-4 py-4">
+          <p class="text-sm text-teal-950 sm:text-base">
+            Chiffre d&apos;affaires mensuel cible (estimation) :
+            <strong id="target-gross" class="font-semibold">—</strong>
+          </p>
+          <p class="mt-2 text-sm text-teal-950 sm:text-base">
+            Séances par mois (valeur exacte puis <strong>minimum entier</strong> au tarif indiqué) :
+            <strong id="sessions-month-exact" class="font-semibold">—</strong>
+            →
+            <strong id="sessions-month-ceil" class="font-semibold">—</strong>
+          </p>
+          <p class="mt-2 text-sm text-teal-950 sm:text-base">
+            Séances par semaine (mois ÷ 4, même logique) :
+            <strong id="sessions-week-exact" class="font-semibold">—</strong>
+            →
+            <strong id="sessions-week-ceil" class="font-semibold">—</strong>
+          </p>
+          <p id="viability-error" class="mt-2 hidden text-sm font-semibold text-rose-800" role="alert" />
+        </div>
+
+        <div class="mt-6 overflow-x-auto rounded-lg border border-slate-200">
+          <table class="min-w-full border-collapse text-left text-sm">
+            <thead>
+              <tr class="border-b border-slate-200 bg-slate-50">
+                <th class="px-3 py-2 font-semibold text-slate-900">Indicateur</th>
+                <th class="px-3 py-2 font-semibold text-slate-900">Valeur</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-800">
+              <tr class="border-b border-slate-100">
+                <td class="px-3 py-2">Prélèvements sociaux estimés (sur le CA cible)</td>
+                <td class="px-3 py-2 font-medium" id="row-deductions">—</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="px-3 py-2">Reste après prélèvements − charges fixes</td>
+                <td class="px-3 py-2 font-medium" id="row-check-net">—</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="px-3 py-2">CA annuel indicatif (× 12)</td>
+                <td class="px-3 py-2 font-medium" id="row-annual-gross">—</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2">Rappel plafond micro-BNC (CA annuel)</td>
+                <td class="px-3 py-2 font-medium">77 000 EUR — <span id="row-ceiling-note">—</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-600">
+        Estimation indicative : le calcul ne remplace pas une simulation comptable, fiscale ou une analyse de
+        trésorerie (délais d&apos;encaissement, vacances, annulations).
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const fixedInput = document.getElementById("fixed-charges");
+    const netInput = document.getElementById("target-net");
+    const priceInput = document.getElementById("session-price");
+    const rateSelect = document.getElementById("social-rate");
+    const targetGrossEl = document.getElementById("target-gross");
+    const sessionsMonthExactEl = document.getElementById("sessions-month-exact");
+    const sessionsMonthCeilEl = document.getElementById("sessions-month-ceil");
+    const sessionsWeekExactEl = document.getElementById("sessions-week-exact");
+    const sessionsWeekCeilEl = document.getElementById("sessions-week-ceil");
+    const errorEl = document.getElementById("viability-error");
+    const rowDeductions = document.getElementById("row-deductions");
+    const rowCheckNet = document.getElementById("row-check-net");
+    const rowAnnualGross = document.getElementById("row-annual-gross");
+    const rowCeilingNote = document.getElementById("row-ceiling-note");
+
+    if (
+      !(fixedInput instanceof HTMLInputElement) ||
+      !(netInput instanceof HTMLInputElement) ||
+      !(priceInput instanceof HTMLInputElement) ||
+      !(rateSelect instanceof HTMLSelectElement) ||
+      !(targetGrossEl instanceof HTMLElement) ||
+      !(sessionsMonthExactEl instanceof HTMLElement) ||
+      !(sessionsMonthCeilEl instanceof HTMLElement) ||
+      !(sessionsWeekExactEl instanceof HTMLElement) ||
+      !(sessionsWeekCeilEl instanceof HTMLElement) ||
+      !(errorEl instanceof HTMLElement) ||
+      !(rowDeductions instanceof HTMLElement) ||
+      !(rowCheckNet instanceof HTMLElement) ||
+      !(rowAnnualGross instanceof HTMLElement) ||
+      !(rowCeilingNote instanceof HTMLElement)
+    ) {
+      return;
+    }
+
+    const microBncCeiling = 77000;
+    const eur = new Intl.NumberFormat("fr-FR", {
+      style: "currency",
+      currency: "EUR",
+      maximumFractionDigits: 0,
+    });
+
+    const toNonNegative = (raw, fallback) => {
+      const parsed = Number(raw);
+      if (!Number.isFinite(parsed) || parsed < 0) return fallback;
+      return parsed;
+    };
+
+    const toPositive = (raw, fallback) => {
+      const parsed = Number(raw);
+      if (!Number.isFinite(parsed) || parsed <= 0) return fallback;
+      return parsed;
+    };
+
+    const fmtSessions = (n) => {
+      if (!Number.isFinite(n)) return "—";
+      return n.toLocaleString("fr-FR", { maximumFractionDigits: 2, minimumFractionDigits: 0 });
+    };
+
+    const render = () => {
+      errorEl.classList.add("hidden");
+      errorEl.textContent = "";
+
+      const fixed = toNonNegative(fixedInput.value, 0);
+      const targetNet = toNonNegative(netInput.value, 0);
+      const price = toPositive(priceInput.value, 60);
+      const rate = Number(rateSelect.value);
+      const netFactor = 1 - rate;
+
+      if (!Number.isFinite(rate) || netFactor <= 0.01) {
+        errorEl.textContent = "Taux incohérent : impossible de calculer un CA cible.";
+        errorEl.classList.remove("hidden");
+        targetGrossEl.textContent = "—";
+        sessionsMonthExactEl.textContent = "—";
+        sessionsMonthCeilEl.textContent = "—";
+        sessionsWeekExactEl.textContent = "—";
+        sessionsWeekCeilEl.textContent = "—";
+        rowDeductions.textContent = "—";
+        rowCheckNet.textContent = "—";
+        rowAnnualGross.textContent = "—";
+        rowCeilingNote.textContent = "—";
+        return;
+      }
+
+      const grossMonthly = (fixed + targetNet) / netFactor;
+      const sessionsMonthExact = grossMonthly / price;
+      const sessionsMonthCeil = Math.ceil(sessionsMonthExact);
+      const sessionsWeekExact = sessionsMonthExact / 4;
+      const sessionsWeekCeil = Math.ceil(sessionsWeekExact);
+
+      const deductions = grossMonthly * rate;
+      const checkNet = grossMonthly - deductions - fixed;
+
+      targetGrossEl.textContent = eur.format(grossMonthly);
+      sessionsMonthExactEl.textContent = fmtSessions(sessionsMonthExact);
+      sessionsMonthCeilEl.textContent = String(sessionsMonthCeil);
+      sessionsWeekExactEl.textContent = fmtSessions(sessionsWeekExact);
+      sessionsWeekCeilEl.textContent = String(sessionsWeekCeil);
+
+      rowDeductions.textContent = eur.format(deductions);
+      rowCheckNet.textContent = eur.format(checkNet);
+      const annualGross = grossMonthly * 12;
+      rowAnnualGross.textContent = eur.format(annualGross);
+
+      if (annualGross > microBncCeiling) {
+        rowCeilingNote.textContent = "au-dessus du plafond micro-BNC indicatif : à recalculer hors micro.";
+        rowCeilingNote.className = "font-semibold text-rose-800";
+      } else {
+        rowCeilingNote.textContent = "sous le plafond indicatif micro-BNC.";
+        rowCeilingNote.className = "text-teal-900";
+      }
+    };
+
+    fixedInput.addEventListener("input", render);
+    netInput.addEventListener("input", render);
+    priceInput.addEventListener("input", render);
+    rateSelect.addEventListener("change", render);
+    render();
+  })();
+</script>
