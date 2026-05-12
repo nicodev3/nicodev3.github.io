@@ -14,7 +14,6 @@ import audreyLarcebauImage from "../assets/images/screenshots/psy-emdr-cotebasqu
 import montpellierPsychologueImage from "../assets/images/screenshots/montpellier-psychologue.webp";
 import psychologueUzesImage from "../assets/images/screenshots/psychologue-uzes.webp";
 import emmanuelleRoucheImage from "../assets/images/screenshots/emmarouche-psycho34.webp";
-import cecileCoachingImage from "../assets/images/screenshots/cecilecoaching.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -186,15 +185,6 @@ const portfolioHeroSubtitle =
     subtitle={portfolioHeroSubtitle}
     breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Portfolio" }]}
   >
-    <p slot="context" class="m-0">
-      Les références ci-dessous sont en majorité des conceptions d’origine entre{" "}
-      <span class="whitespace-nowrap font-medium text-foreground">
-        {conceptionYearMin} et {conceptionYearMax}
-      </span>
-      : certains sites ne sont plus en ligne (arrêt d’activité, reconversion). Les livraisons les plus récentes sont souvent couvertes par une confidentialité —{" "}
-      <a href="/contact/">écrivez-moi</a>
-      {" "}pour en parler.
-    </p>
   </PortfolioHero>
 
   <section id="sites-psychologues" class="bg-white py-12 sm:py-16">
@@ -202,7 +192,7 @@ const portfolioHeroSubtitle =
       <h2
         class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl"
       >
-        Références en ligne
+        Références de sites internet réalisées pour des psychologues
       </h2>
       <p class="mb-8 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
         Affichage par défaut : sites encore suivis ou{" "}
@@ -329,57 +319,6 @@ const portfolioHeroSubtitle =
         }
       </div>
 
-      <div class="mb-6 max-w-3xl">
-        <p class="mb-4 text-sm leading-relaxed text-muted sm:text-base">
-          <span class="font-medium text-foreground">Archive hors cœur de métier actuel.</span>{" "}
-          Réalisation plus ancienne (coaching, pas psychologue)&nbsp;: site vitrine pour{" "}
-          <a
-            href="https://cecilecoaching.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
-          >
-            Cécile Coaching — coaching professionnel à Paris
-          </a>
-          .
-        </p>
-        <figure class="overflow-hidden rounded-[10px] border border-[rgba(15,42,42,0.08)] bg-surface shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(15,42,42,0.08)] max-w-xl">
-          <a
-            href="https://cecilecoaching.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex aspect-4/3 items-center justify-center overflow-hidden bg-surface px-2 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            aria-label="Voir le site Cécile Coaching (nouvel onglet)"
-          >
-            <Picture
-              src={cecileCoachingImage}
-              alt="Capture d'écran de la page d'accueil de Cécile Coaching, coach professionnelle APA à Paris"
-              formats={["avif", "webp"]}
-              fallbackFormat="webp"
-              widths={[340, 680]}
-              sizes="(max-width: 640px) 100vw, 480px"
-              loading="lazy"
-              decoding="async"
-              width={680}
-              height={510}
-              pictureAttributes={{
-                class: "contents",
-              }}
-              class="max-h-full max-w-full object-contain object-center"
-            />
-          </a>
-        </figure>
-      </div>
-
-      <aside
-        class="mb-8 max-w-3xl border-l border-border pl-3 text-xs leading-relaxed text-muted sm:text-[0.8125rem]"
-        aria-label="Complément sur le parcours"
-      >
-        <p class="m-0">
-          <span class="font-medium text-muted">Complément.</span> Pendant plusieurs années, l’activité freelance était secondaire (fonctions tech lead). Je refonds aujourd’hui nicodev.fr et une offre dédiée aux psychologues — le cadre ci-dessus rappelle déjà pourquoi ce portfolio mélange archives et projets suivis.
-        </p>
-      </aside>
-
       <div class="mb-10 rounded-lg border border-border bg-surface p-5 sm:p-6">
         <h3 class="mb-3 text-lg font-semibold text-foreground">
           Ce que montrent ces réalisations
@@ -451,6 +390,21 @@ const portfolioHeroSubtitle =
             </a>
           </div>
         </div>
+      </div>
+
+      <div class="mt-12 max-w-3xl">
+        <p class="mb-4 text-sm leading-relaxed text-muted sm:text-base">
+          <span class="font-medium text-foreground">Autres réalisations :</span>
+          <a
+            href="https://cecilecoaching.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+          >
+            coach sportif Activités Physiques Adaptées (APA)
+          </a>
+          .
+        </p>
       </div>
     </div>
   </section>
