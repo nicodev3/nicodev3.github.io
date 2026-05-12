@@ -14,6 +14,8 @@ import audreyLarcebauImage from "../assets/images/screenshots/psy-emdr-cotebasqu
 import montpellierPsychologueImage from "../assets/images/screenshots/montpellier-psychologue.webp";
 import psychologueUzesImage from "../assets/images/screenshots/psychologue-uzes.webp";
 import emmanuelleRoucheImage from "../assets/images/screenshots/emmarouche-psycho34.webp";
+import florentSimonNancyImage from "../assets/images/screenshots/psychologue-nancy-florent-simon.webp";
+import balintSmbFranceImage from "../assets/images/screenshots/balint-smb-france.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -50,6 +52,24 @@ const breadcrumbSchema = {
 
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
 const psychologueProjects: PortfolioProject[] = [
+  {
+    title: "Florent Simon",
+    image: florentSimonNancyImage,
+    url: "https://psychologue-nancy-florent-simon.fr/",
+    location: "Nancy",
+    year: 2015,
+    imageAlt:
+      "Site vitrine psychologue Florent Simon à Nancy — accueil et prise de contact",
+  },
+  {
+    title: "Société Médicale Balint France",
+    image: balintSmbFranceImage,
+    url: "https://www.balint-smb-france.org/",
+    location: "France",
+    year: 2018,
+    imageAlt:
+      "Site de la Société Médicale Balint France — groupes Balint, formations et actualités",
+  },
   {
     title: "Sabine Lacas",
     image: psychologueUzesImage,
