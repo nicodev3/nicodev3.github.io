@@ -182,18 +182,21 @@ const { posts } = Astro.props;
 		}
 
 		function updateButtons(rebuildDotsMaybe = false) {
+			// Batch all layout reads before any writes to avoid forced reflows
+			const scrollLeft = track.scrollLeft;
 			const maxScroll = getMaxScroll();
 			const step = Math.max(getScrollStep(), 1);
 			const pageCount = getPageCount();
-			const rawIndex = Math.round(track.scrollLeft / step);
+			const rawIndex = Math.round(scrollLeft / step);
 			const clampedPage = Math.min(Math.max(rawIndex, 0), pageCount - 1);
+			const needsRebuild = rebuildDotsMaybe || dotsEl.childElementCount !== pageCount;
 
-			prevBtn.disabled = track.scrollLeft <= 8;
-			nextBtn.disabled = track.scrollLeft >= maxScroll - 8;
+			prevBtn.disabled = scrollLeft <= 8;
+			nextBtn.disabled = scrollLeft >= maxScroll - 8;
 			curLabel.textContent = String(clampedPage + 1);
 			totLabel.textContent = String(pageCount);
 
-			if (rebuildDotsMaybe || dotsEl.childElementCount !== pageCount) {
+			if (needsRebuild) {
 				rebuildDots(pageCount, clampedPage);
 			} else {
 				Array.from(dotsEl.querySelectorAll('button')).forEach((btn, i) => {
