@@ -1,5 +1,5 @@
 ---
-import { ChevronRight } from '@lucide/astro';
+import { ChevronDown, ChevronRight } from '@lucide/astro';
 import { homeFaqItems } from '../data/faq-home';
 
 export interface FaqItem {
@@ -15,6 +15,8 @@ export interface Props {
 	headingId?: string;
 	background?: 'white' | 'surface';
 	headingAlign?: 'left' | 'center';
+	/** Accordéon en cartes séparées (maquette Stitch). */
+	variant?: 'default' | 'stitch';
 }
 
 const {
@@ -23,60 +25,101 @@ const {
 	sectionId = 'faq',
 	headingId = 'faq-heading',
 	background = 'white',
-	headingAlign = 'left'
+	headingAlign = 'left',
+	variant = 'default',
 } = Astro.props;
 
+const isStitch = variant === 'stitch';
 const sectionBgClass = background === 'surface' ? 'bg-surface' : 'bg-white';
 const headingAlignClass = headingAlign === 'center' ? 'text-center' : '';
 ---
 
 <section
 	id={sectionId}
-	class={`section-y scroll-mt-28 border-b border-border ${sectionBgClass}`}
+	class:list={['section-y scroll-mt-28 border-b border-border', sectionBgClass]}
 	aria-labelledby={headingId}
 >
 	<div class="shell-layout">
-		<h2 id={headingId} class:list={['mb-10 text-3xl font-bold text-foreground', headingAlignClass]}>
+		<h2
+			id={headingId}
+			class:list={[
+				'font-heading font-semibold text-foreground',
+				isStitch ? 'mb-12 text-3xl sm:text-4xl' : 'mb-10 text-3xl font-bold',
+				headingAlignClass,
+			]}
+		>
 			{title}
 		</h2>
-		<div class="faq-accordion mx-auto max-w-[72ch] overflow-hidden rounded-lg border border-border bg-background divide-y divide-border">
-			{items.map((item) => (
-				<details {...(item.id && { id: item.id })} class:list={['faq-details', item.id && 'scroll-mt-28']}>
-					<summary
-						class="faq-summary grid cursor-pointer list-none grid-cols-[2.5rem_minmax(0,1fr)] items-center gap-x-3 px-4 py-6 transition-colors hover:bg-surface-alt sm:px-5 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset"
-					>
-						<span class="faq-chevron-cell flex shrink-0 justify-center" aria-hidden="true">
-							<span class="faq-chevron ui-icon-well transition-transform duration-200 ease-out motion-reduce:transition-none">
-								<ChevronRight class="h-5 w-5 shrink-0" stroke-width={1.5} />
-							</span>
-						</span>
-						<span class="faq-question min-w-0 text-left text-base font-semibold leading-normal text-foreground">
-							{item.question}
-						</span>
-					</summary>
-					<div class="border-t border-border px-4 pb-6 pt-5 sm:px-5">
-						<div class="grid grid-cols-[2.5rem_minmax(0,1fr)] items-start gap-x-3">
-							<span aria-hidden="true" class="faq-answer-spacer block min-h-px min-w-0 shrink-0"></span>
-							<p class="faq-answer-text m-0 min-w-0 text-sm leading-relaxed text-muted sm:text-base">
-								{item.answer}
-							</p>
-						</div>
-					</div>
-				</details>
-			))}
-		</div>
+
+		{
+			isStitch ? (
+				<div class="mx-auto max-w-3xl space-y-4">
+					{items.map((item, index) => (
+						<details
+							{...(item.id && { id: item.id })}
+							class:list={[
+								'faq-stitch-details group overflow-hidden rounded-lg border border-border bg-white',
+								item.id && 'scroll-mt-28',
+							]}
+							{...(index === 0 ? { open: true } : {})}
+						>
+							<summary class="faq-stitch-summary flex cursor-pointer list-none items-center justify-between gap-4 bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))] p-6 transition-colors hover:bg-[color-mix(in_srgb,var(--color-foreground)_6%,var(--color-background))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset">
+								<span class="font-heading text-left text-xl font-semibold leading-snug text-foreground">
+									{item.question}
+								</span>
+								<ChevronDown
+									class="faq-stitch-chevron h-6 w-6 shrink-0 text-muted transition-transform duration-200 motion-reduce:transition-none"
+									stroke-width={1.5}
+									aria-hidden="true"
+								/>
+							</summary>
+							<div class="border-t border-border p-6">
+								<p class="text-base leading-relaxed text-muted">{item.answer}</p>
+							</div>
+						</details>
+					))}
+				</div>
+			) : (
+				<div class="faq-accordion mx-auto max-w-[72ch] overflow-hidden rounded-lg border border-border bg-background divide-y divide-border">
+					{items.map((item) => (
+						<details {...(item.id && { id: item.id })} class:list={['faq-details', item.id && 'scroll-mt-28']}>
+							<summary class="faq-summary grid cursor-pointer list-none grid-cols-[2.5rem_minmax(0,1fr)] items-center gap-x-3 px-4 py-6 transition-colors hover:bg-surface-alt sm:px-5 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset">
+								<span class="faq-chevron-cell flex shrink-0 justify-center" aria-hidden="true">
+									<span class="faq-chevron ui-icon-well transition-transform duration-200 ease-out motion-reduce:transition-none">
+										<ChevronRight class="h-5 w-5 shrink-0" stroke-width={1.5} />
+									</span>
+								</span>
+								<span class="faq-question min-w-0 text-left text-base font-semibold leading-normal text-foreground">
+									{item.question}
+								</span>
+							</summary>
+							<div class="border-t border-border px-4 pb-6 pt-5 sm:px-5">
+								<div class="grid grid-cols-[2.5rem_minmax(0,1fr)] items-start gap-x-3">
+									<span aria-hidden="true" class="faq-answer-spacer block min-h-px min-w-0 shrink-0" />
+									<p class="faq-answer-text m-0 min-w-0 text-sm leading-relaxed text-muted sm:text-base">
+										{item.answer}
+									</p>
+								</div>
+							</div>
+						</details>
+					))}
+				</div>
+			)
+		}
 	</div>
 </section>
 
 <style>
-	/* Masquer le marqueur natif <details> (WebKit + Firefox + ::marker) */
-	.faq-details summary::-webkit-details-marker {
+	.faq-details summary::-webkit-details-marker,
+	.faq-stitch-details summary::-webkit-details-marker {
 		display: none;
 	}
-	.faq-details summary {
+	.faq-details summary,
+	.faq-stitch-details summary {
 		list-style: none;
 	}
-	.faq-details summary::marker {
+	.faq-details summary::marker,
+	.faq-stitch-details summary::marker {
 		content: '';
 		display: none;
 	}
@@ -89,9 +132,16 @@ const headingAlignClass = headingAlign === 'center' ? 'text-center' : '';
 		transform-origin: center;
 	}
 
-	/* Supprime l'espace baseline sous le SVG (alignement vertical avec le texte). */
 	.faq-summary .faq-chevron :global(svg) {
 		display: block;
+	}
+
+	.faq-stitch-details[open] .faq-stitch-chevron {
+		transform: rotate(180deg);
+	}
+
+	.faq-stitch-details:not([open]) .faq-stitch-summary {
+		background-color: var(--color-neutral-0);
 	}
 </style>
 

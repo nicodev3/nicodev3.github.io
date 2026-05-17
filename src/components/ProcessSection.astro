@@ -18,177 +18,242 @@ export interface ProcessStep {
 export interface Props {
 	ctaHref?: string;
 	ctaLabel?: string;
+	/** Grille minimaliste type maquette Stitch (accueil). */
+	variant?: 'default' | 'stitch';
 }
 
-const steps: ProcessStep[] = [
+const defaultSteps: ProcessStep[] = [
 	{
-		title: "Diagnostic gratuit (10–15 min)",
-		description: "Échange court pour comprendre votre contexte, vérifier que l'offre est adaptée et répondre à vos questions.",
+		title: 'Diagnostic gratuit (10–15 min)',
+		description:
+			"Échange court pour comprendre votre contexte, vérifier que l'offre est adaptée et répondre à vos questions.",
 		Icon: MessagesSquare,
 	},
 	{
-		title: "Choix du template",
-		description: "Vous choisissez parmi des modèles sobres, avec une palette de couleurs adaptée à votre façon de travailler.",
+		title: 'Choix du template',
+		description:
+			'Vous choisissez parmi des modèles sobres, avec une palette de couleurs adaptée à votre façon de travailler.',
 		Icon: LayoutTemplate,
 	},
 	{
-		title: "Contenu via formulaire guidé",
-		description: "Des questions simples (20–40 min). Pas besoin de rédiger : vous répondez, je structure le texte pour vos patients.",
+		title: 'Contenu via formulaire guidé',
+		description:
+			'Des questions simples (20–40 min). Pas besoin de rédiger : vous répondez, je structure le texte pour vos patients.',
 		Icon: ClipboardList,
 	},
 	{
-		title: "Prévisualisation sous 5–7 jours",
-		description: "Envoi d'une URL de prévisualisation + checklist de validation, pour ajuster sereinement si besoin.",
+		title: 'Prévisualisation sous 5–7 jours',
+		description:
+			"Envoi d'une URL de prévisualisation + checklist de validation, pour ajuster sereinement si besoin.",
 		Icon: Eye,
 	},
 	{
-		title: "1 aller-retour inclus + mise en ligne",
-		description: "Un aller-retour d'ajustements inclus, puis mise en ligne de votre site, prêt pour vos futurs patients.",
+		title: '1 aller-retour inclus + mise en ligne',
+		description:
+			"Un aller-retour d'ajustements inclus, puis mise en ligne de votre site, prêt pour vos futurs patients.",
 		Icon: CircleCheck,
 	},
 ];
 
-const includedBento = [
+const stitchSteps = [
 	{
-		title: "Inclus dans le forfait",
-		subtitle: "Jusqu’à la prévisualisation, votre adresse web et la livraison",
-		items: [
-			"Diagnostic express et validation du pack",
-			"Choix du template et palette de couleurs",
-			"Formulaire guidé pour centraliser tout le contenu",
-			"Prévisualisation sous 5–7 jours avec checklist",
-			"Nom de domaine et hébergement, sans gestion technique de votre côté",
-			"1 aller-retour de corrections mineures",
-			"Mise en ligne et intégration widget RDV (Doctolib, Qare...)"
-		],
-		gridClass:
-			"border-primary/25 bg-gradient-to-br from-surface to-[color-mix(in_srgb,var(--color-primary)_6%,var(--color-surface))] [&_svg]:text-primary-foreground",
-		isNegative: false
+		title: 'Diagnostic gratuit',
+		description: 'Échange de 15 min pour comprendre votre contexte.',
 	},
 	{
-		title: "Hors forfait création",
-		subtitle: "À prévoir si le besoin évolue",
-		items: ["Modifications majeures après validation du site (facturées) : ajout de section, etc."],
-		gridClass: "border-dashed border-muted/40 bg-background/80 [&_svg]:text-muted",
-		isNegative: true
-	}
+		title: 'Choix du template',
+		description: 'Modèles sobres avec palettes adaptées à votre pratique.',
+	},
+	{
+		title: 'Contenu guidé',
+		description: 'Formulaire simple (30 min). Je structure vos textes.',
+	},
+	{
+		title: 'Prévisualisation',
+		description: 'Sous 7 jours, URL de test et checklist de validation.',
+	},
+	{
+		title: 'Mise en ligne',
+		description: 'Derniers ajustements et lancement officiel.',
+	},
 ] as const;
 
-const { ctaHref = '/diagnostic-gratuit/', ctaLabel = 'Demander un diagnostic gratuit' } = Astro.props;
+const includedBento = [
+	{
+		title: 'Inclus dans le forfait',
+		subtitle: 'Jusqu’à la prévisualisation, votre adresse web et la livraison',
+		items: [
+			'Diagnostic express et validation du pack',
+			'Choix du template et palette de couleurs',
+			'Formulaire guidé pour centraliser tout le contenu',
+			'Prévisualisation sous 5–7 jours avec checklist',
+			'Nom de domaine et hébergement, sans gestion technique de votre côté',
+			'1 aller-retour de corrections mineures',
+			'Mise en ligne et intégration widget RDV (Doctolib, Qare...)',
+		],
+		gridClass:
+			'border-primary/25 bg-gradient-to-br from-surface to-[color-mix(in_srgb,var(--color-primary)_6%,var(--color-surface))] [&_svg]:text-primary-foreground',
+		isNegative: false,
+	},
+	{
+		title: 'Hors forfait création',
+		subtitle: 'À prévoir si le besoin évolue',
+		items: ['Modifications majeures après validation du site (facturées) : ajout de section, etc.'],
+		gridClass: 'border-dashed border-muted/40 bg-background/80 [&_svg]:text-muted',
+		isNegative: true,
+	},
+] as const;
+
+const { ctaHref = '/diagnostic-gratuit/', ctaLabel = 'Demander un diagnostic gratuit', variant = 'default' } =
+	Astro.props;
+
+const isStitch = variant === 'stitch';
+const steps = defaultSteps;
 
 const suppressHeaderDiagPeer =
 	new URL(ctaHref, Astro.site ?? Astro.url).pathname.replace(/\/+$/, '') === '/diagnostic-gratuit';
 ---
 
-<section id="comment-ca-marche" class="section-y scroll-mt-28 border-b border-border bg-surface-alt">
+<section
+	id="comment-ca-marche"
+	class:list={[
+		'section-y scroll-mt-28 border-b border-border',
+		isStitch ? 'bg-white' : 'bg-surface-alt',
+	]}
+>
 	<div class="shell-layout">
-		<div class="text-center mb-10">
-		<h2 class="text-3xl font-bold text-foreground">Un processus simple, sans charge technique</h2>
-		<p class="text-muted mt-3">5 étapes claires, peu de temps à y consacrer, et aucun aspect technique à gérer de votre côté.</p>
+		<div class="mb-10 text-center md:mb-16">
+			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+				Un processus simple, sans charge technique
+			</h2>
+			<p class="mt-3 text-muted">
+				{isStitch
+					? '5 étapes claires pour un site opérationnel en 10 jours.'
+					: '5 étapes claires, peu de temps à y consacrer, et aucun aspect technique à gérer de votre côté.'}
+			</p>
 		</div>
 
-		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-			{steps.map((step, index) => (
-				<div class="process-step-card relative overflow-hidden rounded-lg border border-border bg-surface p-5 sm:p-6">
-					<span class="process-step-watermark" aria-hidden="true">
-						{String(index + 1).padStart(2, "0")}
-					</span>
-					<div class="relative z-10">
-						<div class="ui-icon-well mb-4" aria-hidden="true">
-							<step.Icon class="h-5 w-5" stroke-width={1.5} />
+		{
+			isStitch ? (
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-8">
+					{stitchSteps.map((step, index) => (
+						<div class="process-stitch-step group space-y-4">
+							<span class="type-label-mono text-muted transition-colors group-hover:text-primary-foreground">
+								{String(index + 1).padStart(2, '0')}
+							</span>
+							<h3 class="font-heading text-xl font-semibold leading-tight text-foreground">{step.title}</h3>
+							<p class="text-base leading-relaxed text-muted">{step.description}</p>
 						</div>
-						<h3 class="font-semibold text-foreground">
-							<span class="sr-only">Étape {index + 1} sur 5 : </span>
-							{step.title}
-						</h3>
-						<p class="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
-					</div>
+					))}
 				</div>
-			))}
-		</div>
+			) : (
+				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+					{steps.map((step, index) => (
+						<div class="process-step-card relative overflow-hidden rounded-lg border border-border bg-surface p-5 sm:p-6">
+							<span class="process-step-watermark" aria-hidden="true">
+								{String(index + 1).padStart(2, '0')}
+							</span>
+							<div class="relative z-10">
+								<div class="ui-icon-well mb-4" aria-hidden="true">
+									<step.Icon class="h-5 w-5" stroke-width={1.5} />
+								</div>
+								<h3 class="font-semibold text-foreground">
+									<span class="sr-only">Étape {index + 1} sur 5 : </span>
+									{step.title}
+								</h3>
+								<p class="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			)
+		}
 
-		<p class="text-center text-sm text-muted mt-8">
-			Délai moyen : 7 à 10 jours après réception du formulaire complet.
-		</p>
+		{
+			!isStitch && (
+				<>
+					<p class="mt-8 text-center text-sm text-muted">
+						Délai moyen : 7 à 10 jours après réception du formulaire complet.
+					</p>
 
-		<div class="mt-12">
-			<h3 class="text-center text-lg font-semibold text-foreground mb-6">Ce qui est inclus (et ce qui ne l’est pas)</h3>
-			<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5 lg:items-stretch">
-				{includedBento.map((tile) => (
-					<div
-						class:list={[
-							"rounded-lg border p-5 sm:p-6 flex flex-col min-h-0",
-							tile.gridClass
-						]}
-					>
-						<p class="type-eyebrow text-muted">{tile.subtitle}</p>
-						<h4 class="mt-1 font-heading text-lg font-semibold text-foreground">{tile.title}</h4>
-						<ul class="mt-4 space-y-3 flex-1">
-							{tile.items.map((item) => (
-								<li class="flex items-start gap-3">
-									{tile.isNegative ? (
-										<X
-											class="mt-0.5 h-5 w-5 shrink-0 text-muted"
-											stroke-width={1.5}
-											aria-hidden="true"
-										/>
-									) : (
-										<Check
-											class="mt-0.5 h-5 w-5 shrink-0 text-foreground"
-											stroke-width={1.5}
-											aria-hidden="true"
-										/>
-									)}
-									<span class="text-muted text-sm leading-relaxed">{item}</span>
-								</li>
+					<div class="mt-12">
+						<h3 class="mb-6 text-center text-lg font-semibold text-foreground">
+							Ce qui est inclus (et ce qui ne l’est pas)
+						</h3>
+						<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-stretch lg:gap-5">
+							{includedBento.map((tile) => (
+								<div
+									class:list={['flex min-h-0 flex-col rounded-lg border p-5 sm:p-6', tile.gridClass]}
+								>
+									<p class="type-eyebrow text-muted">{tile.subtitle}</p>
+									<h4 class="mt-1 font-heading text-lg font-semibold text-foreground">{tile.title}</h4>
+									<ul class="mt-4 flex-1 space-y-3">
+										{tile.items.map((item) => (
+											<li class="flex items-start gap-3">
+												{tile.isNegative ? (
+													<X
+														class="mt-0.5 h-5 w-5 shrink-0 text-muted"
+														stroke-width={1.5}
+														aria-hidden="true"
+													/>
+												) : (
+													<Check
+														class="mt-0.5 h-5 w-5 shrink-0 text-foreground"
+														stroke-width={1.5}
+														aria-hidden="true"
+													/>
+												)}
+												<span class="text-sm leading-relaxed text-muted">{item}</span>
+											</li>
+										))}
+									</ul>
+								</div>
 							))}
-						</ul>
+						</div>
 					</div>
-				))}
-			</div>
-		</div>
 
-		<div class="mt-10 text-center">
-			<a
-				href={ctaHref}
-				class="btn-primary-solid inline-block rounded-lg px-5 py-3"
-				{...(suppressHeaderDiagPeer ? { 'data-suppress-header-diagnostic-when-visible': true } : {})}
-			>
-				{ctaLabel}
-			</a>
-		</div>
+					<div class="mt-10 text-center">
+						<a
+							href={ctaHref}
+							class="btn-primary-solid inline-block rounded-lg px-5 py-3"
+							{...(suppressHeaderDiagPeer ? { 'data-suppress-header-diagnostic-when-visible': true } : {})}
+						>
+							{ctaLabel}
+						</a>
+					</div>
+				</>
+			)
+		}
 	</div>
 </section>
 
-<style>
-	.process-step-card {
-		min-height: 11rem;
-	}
-
-	.process-step-watermark {
-		position: absolute;
-		inset-inline-end: 0;
-		inset-block-start: -0.12em;
-		z-index: 0;
-		font-family: var(--font-heading), ui-serif, Georgia, serif;
-		font-size: clamp(3.25rem, 5.5vw + 1.25rem, 4.85rem);
-		font-weight: 700;
-		line-height: 0.82;
-		letter-spacing: -0.045em;
-		color: color-mix(in srgb, var(--color-primary-500) 15%, transparent);
-		pointer-events: none;
-		user-select: none;
-		/*
-		 * La carte garde overflow:hidden pour les coins arrondis ; les chiffres dépassent volontairement.
-		 * Masque horizontal : pas de coupure nette sur le bord droit.
-		 */
-		-webkit-mask-image: linear-gradient(to right, black 0%, black 58%, transparent 100%);
-		mask-image: linear-gradient(to right, black 0%, black 58%, transparent 100%);
-	}
-
-	@media (min-width: 1024px) {
-		.process-step-watermark {
-			font-size: clamp(2.75rem, 4.2vw, 3.65rem);
+{!isStitch && (
+	<style>
+		.process-step-card {
+			min-height: 11rem;
 		}
-	}
-</style>
+
+		.process-step-watermark {
+			position: absolute;
+			inset-inline-end: 0;
+			inset-block-start: -0.12em;
+			z-index: 0;
+			font-family: var(--font-heading), ui-serif, Georgia, serif;
+			font-size: clamp(3.25rem, 5.5vw + 1.25rem, 4.85rem);
+			font-weight: 700;
+			line-height: 0.82;
+			letter-spacing: -0.045em;
+			color: color-mix(in srgb, var(--color-primary-500) 15%, transparent);
+			pointer-events: none;
+			user-select: none;
+			-webkit-mask-image: linear-gradient(to right, black 0%, black 58%, transparent 100%);
+			mask-image: linear-gradient(to right, black 0%, black 58%, transparent 100%);
+		}
+
+		@media (min-width: 1024px) {
+			.process-step-watermark {
+				font-size: clamp(2.75rem, 4.2vw, 3.65rem);
+			}
+		}
+	</style>
+)}

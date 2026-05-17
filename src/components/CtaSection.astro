@@ -5,6 +5,8 @@ export interface Props {
 	primaryButton: { text: string; href: string };
 	secondaryButton: { text: string; href: string };
 	background?: 'surface' | 'white' | 'background';
+	/** Bandeau terracotta plein (CTA final accueil, design Stitch). */
+	variant?: 'default' | 'accent-band';
 	/** Ancre pour navigation sur la page (ex. accueil). */
 	anchorId?: string;
 }
@@ -15,37 +17,75 @@ const {
 	primaryButton,
 	secondaryButton,
 	background = 'surface',
+	variant = 'default',
 	anchorId,
 } = Astro.props;
 
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
+const isAccentBand = variant === 'accent-band';
 
 const primarySuppressHeaderDiag =
 	new URL(primaryButton.href, Astro.site ?? Astro.url).pathname.replace(/\/+$/, '') === '/diagnostic-gratuit';
 ---
 
-<section id={anchorId} class:list={['section-y', bgClass, 'border-t border-border', anchorId && 'scroll-mt-28']}>
+<section
+	id={anchorId}
+	class:list={[
+		'section-y',
+		isAccentBand ? 'cta-accent-band border-t border-primary-900/20' : ['border-t border-border', bgClass],
+		anchorId && 'scroll-mt-28',
+	]}
+>
 	<div class="shell-layout text-center">
-		<h2 class="text-3xl font-bold mb-4 text-foreground">
+		<h2
+			class:list={[
+				'mb-4 font-heading font-semibold tracking-tight',
+				isAccentBand ? 'text-3xl leading-tight text-on-primary sm:text-4xl md:text-5xl' : 'text-3xl sm:text-4xl text-foreground',
+			]}
+		>
 			{title}
 		</h2>
-		<p class="shell-prose text-xl mb-8 mx-auto text-muted">
+		<p
+			class:list={[
+				'shell-prose mx-auto mb-8 text-lg sm:text-xl',
+				isAccentBand ? 'text-on-primary/90' : 'text-muted',
+			]}
+		>
 			{description}
 		</p>
-		<div class="flex flex-col sm:flex-row gap-4 justify-center">
+		<div class="flex flex-col justify-center gap-4 sm:flex-row">
 			<a
 				href={primaryButton.href}
-				class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3"
+				class:list={[
+					'inline-flex items-center justify-center rounded-lg px-6 py-3.5 font-semibold transition-[background-color,box-shadow,transform] duration-200',
+					isAccentBand
+						? 'rounded-xl bg-white px-8 py-4 text-primary-foreground shadow-lg hover:bg-neutral-50'
+						: 'btn-primary-solid',
+				]}
 				{...(primarySuppressHeaderDiag ? { 'data-suppress-header-diagnostic-when-visible': true } : {})}
 			>
 				{primaryButton.text}
 			</a>
 			<a
 				href={secondaryButton.href}
-				class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary px-5 py-3 text-foreground hover:bg-background"
+				class:list={[
+					'inline-flex items-center justify-center rounded-lg px-6 py-3.5 font-semibold transition-colors duration-200',
+					isAccentBand
+						? 'rounded-xl border border-on-primary px-8 py-4 text-on-primary hover:bg-white/10'
+						: 'btn-outline-accent border-2 border-primary text-foreground hover:bg-background',
+				]}
 			>
 				{secondaryButton.text}
 			</a>
 		</div>
 	</div>
 </section>
+
+{isAccentBand && (
+	<style>
+		.cta-accent-band {
+			background-color: var(--color-primary-foreground);
+			color: var(--color-on-primary);
+		}
+	</style>
+)}

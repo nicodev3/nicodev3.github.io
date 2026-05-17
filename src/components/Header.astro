@@ -1,37 +1,33 @@
 ---
+import { Image } from 'astro:assets';
+import nicodevLogo from '../assets/images/nicodev-logo.png';
+
 export interface NavLink {
 	href: string;
 	label: string;
-	/** Précise le type de page (ex. portfolio clients vs démos), sans alourdir le libellé principal. */
-	navHint?: string;
 }
 
 export interface Props {
 	links?: NavLink[];
 }
 
+/** Navigation alignée sur la maquette Stitch « Homepage with Integrated Nicodev Logo ». */
 const defaultLinks: NavLink[] = [
-	{ href: '/portfolio/', label: 'Portfolio', navHint: 'Réalisations clients' },
-	{ href: '/exemples-sites-psychologue/', label: 'Exemples', navHint: 'Démos & modèles' },
-	{ href: '/tarifs/', label: 'Tarifs' },
+	{ href: '/#offres', label: 'Services' },
 	{ href: '/about/', label: 'À propos' },
-	{ href: '/contact/', label: 'Contact' },
+	{ href: '/portfolio/', label: 'Portfolio' },
 	{ href: '/blog/', label: 'Blog' },
-	{ href: '/outils/', label: 'Outils' },
+	{ href: '/tarifs/', label: 'Tarifs' },
+	{ href: '/#faq', label: 'FAQ' },
 ];
 
 const { links = defaultLinks } = Astro.props;
 
-const diagnosticCta = {
+const projectCta = {
 	href: '/diagnostic-gratuit/',
-	label: 'Demander un diagnostic gratuit',
-	/** Bandeau mobile : libellé court pour laisser place au menu */
-	shortHeaderLabel: 'Diagnostic gratuit',
+	label: 'Démarrer un projet',
+	ariaLabel: 'Démarrer un projet — demander un diagnostic gratuit',
 };
-
-/** Positionnement marque : une personne = les deux expertises (évite la lecture « pour deux audiences »). */
-const brandTaglineHint =
-	'Nicolas Devaux : psychologue et développeur web, une seule personne pour les deux expertises.';
 
 /** Chemin sans slash final sauf racine. */
 function normalizePath(p: string): string {
@@ -42,6 +38,14 @@ function normalizePath(p: string): string {
 const currentPath = normalizePath(Astro.url.pathname);
 
 function navLinkIsActive(href: string): boolean {
+	if (href.includes('#')) {
+		const [pathPart, hashPart] = href.split('#');
+		const path = normalizePath(pathPart || '/');
+		if (currentPath !== path) return false;
+		// Sur l’accueil, la maquette Stitch met « Services » en surbrillance.
+		return hashPart === 'offres';
+	}
+
 	const target = normalizePath(href);
 	if (target === '/blog') {
 		return currentPath === '/blog' || currentPath.startsWith('/blog/');
@@ -55,68 +59,62 @@ function navLinkIsActive(href: string): boolean {
 
 <header
 	data-site-header
-	class="sticky top-0 z-40 site-header"
+	class="site-header sticky top-0 z-50 flex h-20 items-center border-b border-border bg-surface"
 >
-	<nav class="shell-layout" aria-label="Navigation principale">
-		<div class="site-header__row flex items-center justify-between gap-2 sm:gap-3">
-			<div class="flex min-w-0 items-center">
-				<a
-					href="/"
-					data-site-wordmark
-					class="site-header__brand"
-					aria-current={currentPath === '/' ? 'page' : undefined}
-				>
-					<span class="site-header__wordmark">
-						<span class="site-header__wordmark-nico">nico</span><span class="site-header__wordmark-dev">dev.</span>
-					</span>
+	<nav class="shell-layout flex w-full items-center justify-between gap-4" aria-label="Navigation principale">
+		<a
+			href="/"
+			data-site-wordmark
+			class="site-header__brand shrink-0 transition-opacity hover:opacity-90"
+			aria-current={currentPath === '/' ? 'page' : undefined}
+			aria-label="nicodev. — retour à l’accueil"
+		>
+			<Image
+				src={nicodevLogo}
+				alt="nicodev."
+				class="h-10 w-auto object-contain"
+				width={280}
+				height={80}
+				loading="eager"
+				decoding="async"
+			/>
+		</a>
 
-					<span class="site-header__tagline" title={brandTaglineHint}>
-						<span class="site-header__tagline-muted">par </span>
-						<span class="site-header__tagline-name">Nicolas Devaux</span>
-						<span class="site-header__tagline-muted">, psychologue & développeur</span>
-					</span>
+		<div class="flex items-center gap-3 md:gap-6">
+			<div class="hidden md:flex md:items-center md:gap-6 lg:gap-8">
+				{links.map((link) => {
+					const active = navLinkIsActive(link.href);
+					return (
+						<a
+							href={link.href}
+							data-main-nav
+							class:list={[
+								'site-nav-link text-base transition-colors',
+								active
+									? 'border-b-2 border-primary pb-1 font-bold text-primary'
+									: 'text-muted hover:text-primary',
+							]}
+							data-active={active ? 'true' : undefined}
+							aria-current={active ? 'page' : undefined}
+						>
+							{link.label}
+						</a>
+					);
+				})}
+
+				<a
+					href={projectCta.href}
+					data-header-diagnostic-cta
+					aria-label={projectCta.ariaLabel}
+					class="btn-primary-solid inline-flex shrink-0 touch-manipulation items-center justify-center rounded-xl px-6 py-2 text-base font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				>
+					{projectCta.label}
 				</a>
 			</div>
 
-			<div class="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-6 lg:flex-none">
-				<div class="hidden lg:flex lg:items-center lg:gap-7 xl:gap-8 shrink-0">
-					{links.map((link) => {
-						const active = navLinkIsActive(link.href);
-						const scrollspyRoot = currentPath === '/';
-						return (
-							<a
-								href={link.href}
-								data-main-nav
-								class:list={['site-nav-link', link.navHint && 'site-nav-link--stacked']}
-								data-active={!scrollspyRoot && active ? 'true' : undefined}
-								aria-current={!scrollspyRoot && active ? 'page' : undefined}
-							>
-								{link.navHint ? (
-									<span class="site-nav-link__stack">
-										<span class="site-nav-link__label">{link.label}</span>
-										<span class="site-nav-link__hint">{link.navHint}</span>
-									</span>
-								) : (
-									link.label
-								)}
-							</a>
-						);
-					})}
-				</div>
-
-				<a
-					href={diagnosticCta.href}
-					data-header-diagnostic-cta
-					aria-label={diagnosticCta.label}
-					class="btn-primary-solid inline-flex max-lg:shrink-0 max-lg:whitespace-nowrap max-lg:px-3 max-lg:py-2 max-lg:text-xs max-lg:leading-tight lg:shrink-0 touch-manipulation items-center justify-center rounded-lg px-4 py-2.5 text-center text-sm lg:text-base lg:leading-snug focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
-				>
-					<span class="lg:hidden">{diagnosticCta.shortHeaderLabel}</span>
-					<span class="hidden lg:inline">{diagnosticCta.label}</span>
-				</a>
-
 			<button
 				type="button"
-				class="mobile-nav-toggle lg:hidden inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg border border-border bg-white text-foreground shadow-sm transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				class="mobile-nav-toggle md:hidden inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				aria-expanded="false"
 				aria-controls="mobile-nav-drawer"
 				data-mobile-nav-toggle
@@ -129,7 +127,6 @@ function navLinkIsActive(href: string): boolean {
 					<path d="M18 6 6 18M6 6l12 12" />
 				</svg>
 			</button>
-			</div>
 		</div>
 	</nav>
 </header>
@@ -140,7 +137,7 @@ function navLinkIsActive(href: string): boolean {
 	-->
 	<div
 		id="mobile-nav-drawer"
-		class="mobile-nav-drawer lg:hidden fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
+		class="mobile-nav-drawer md:hidden fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu de navigation"
@@ -149,15 +146,16 @@ function navLinkIsActive(href: string): boolean {
 		hidden
 	>
 		<div class="flex min-h-14 shrink-0 items-center justify-between gap-3 border-b border-border px-4 py-3">
-			<a href="/" class="site-header__brand flex min-w-0 flex-col items-start gap-0.5" data-mobile-nav-close-wordmark>
-				<span class="site-header__wordmark text-lg">
-					<span class="site-header__wordmark-nico">nico</span><span class="site-header__wordmark-dev">dev.</span>
-				</span>
-				<span class="site-header__tagline text-[0.6875rem] leading-snug max-w-[min(100%,22rem)]" title={brandTaglineHint}>
-					<span class="site-header__tagline-muted">par </span>
-					<span class="site-header__tagline-name">Nicolas Devaux</span>
-					<span class="site-header__tagline-muted">, psychologue & développeur</span>
-				</span>
+			<a href="/" class="site-header__brand shrink-0" data-mobile-nav-close-wordmark aria-label="nicodev. — retour à l’accueil">
+				<Image
+					src={nicodevLogo}
+					alt="nicodev."
+					class="h-8 w-auto object-contain"
+					width={224}
+					height={64}
+					loading="eager"
+					decoding="async"
+				/>
 			</a>
 			<button
 				type="button"
@@ -174,7 +172,6 @@ function navLinkIsActive(href: string): boolean {
 		<nav class="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6" aria-label="Liens principaux">
 			{links.map((link) => {
 				const active = navLinkIsActive(link.href);
-				const scrollspyRoot = currentPath === '/';
 				return (
 					<a
 						href={link.href}
@@ -182,19 +179,11 @@ function navLinkIsActive(href: string): boolean {
 						data-mobile-nav-link
 						class:list={[
 							'rounded-lg px-3 py-3 text-lg transition-colors touch-manipulation',
-							link.navHint && 'site-nav-link--stacked site-nav-link--stacked-mobile',
-							!scrollspyRoot && active ? 'font-semibold text-primary bg-surface' : 'text-foreground hover:bg-surface',
+							active ? 'bg-surface font-bold text-primary' : 'text-foreground hover:bg-surface',
 						]}
-						aria-current={!scrollspyRoot && active ? 'page' : undefined}
+						aria-current={active ? 'page' : undefined}
 					>
-						{link.navHint ? (
-							<span class="site-nav-link__stack">
-								<span class="site-nav-link__label">{link.label}</span>
-								<span class="site-nav-link__hint">{link.navHint}</span>
-							</span>
-						) : (
-							link.label
-						)}
+						{link.label}
 					</a>
 				);
 			})}
@@ -202,11 +191,11 @@ function navLinkIsActive(href: string): boolean {
 
 		<div class="shrink-0 border-t border-border bg-white p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-md">
 			<a
-				href={diagnosticCta.href}
-				class="btn-primary-solid flex w-full touch-manipulation items-center justify-center rounded-lg px-5 py-3 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				href={projectCta.href}
+				class="btn-primary-solid flex w-full touch-manipulation items-center justify-center rounded-xl px-5 py-3 text-center font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				data-mobile-nav-link
 			>
-				{diagnosticCta.label}
+				{projectCta.label}
 			</a>
 		</div>
 	</div>

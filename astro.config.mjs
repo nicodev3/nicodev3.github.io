@@ -39,8 +39,8 @@ export default defineConfig({
     },
     {
       provider: fontProviders.fontsource(),
-      name: 'Lora',
-      cssVariable: '--font-lora',
+      name: 'Source Serif 4',
+      cssVariable: '--font-source-serif-4',
       weights: ['400 700'],
       styles: ['normal'],
       subsets: ['latin'],

@@ -1,105 +1,77 @@
 ---
-import { CalendarCheck2, Clock3, PhoneCall, Smartphone } from '@lucide/astro';
-
-const features = [
-	{
-		icon: Clock3,
-		label: 'Délai : 2 à 3 semaines en général',
-		href: '#comment-ca-marche',
-		ariaHint: 'Aller au détail du processus et du calendrier',
-	},
-	{
-		icon: Smartphone,
-		label: 'Mobile et visible sur Google',
-		href: '#seo-local',
-		ariaHint: 'Aller à la section référencement local et visibilité',
-	},
-	{
-		icon: PhoneCall,
-		label: 'Prise de contact facilitée',
-		href: '#expertise-contact',
-		ariaHint: 'Aller à la présentation de l’accompagnement et du contact patient',
-	},
-	{
-		icon: CalendarCheck2,
-		label: 'Widget RDV (Doctolib...) + RGPD',
-		href: '#faq-doctolib-rdv',
-		ariaHint: 'Aller à la réponse FAQ sur Doctolib, Qare et le widget de rendez-vous',
-	},
-];
+import { ArrowRight, BadgeCheck } from '@lucide/astro';
+import { Image } from 'astro:assets';
+import portraitImage from '../assets/images/nicodev.webp';
 ---
 
-<section id="site-hero" class="hero-home section-y text-foreground">
-	<div class="hero-atmosphere" aria-hidden="true">
-		<div class="hero-layer hero-layer--wash"></div>
-		<div class="hero-layer hero-layer--grain"></div>
-		<div class="hero-orb hero-orb--left"></div>
-		<div class="hero-orb hero-orb--right"></div>
-	</div>
+<section id="site-hero" class="hero-home section-y border-b border-border bg-white overflow-hidden">
+	<div class="shell-layout">
+		<div class="hero-home__grid">
+			<div class="hero-home__copy">
+				<p class="type-label-mono text-primary-foreground">Sites web pour psychologues</p>
+				<h1 class="hero-home__title text-balance text-foreground">
+					Gagnez en visibilité avec un site internet pensé pour les psychologues.
+				</h1>
+				<p class="hero-home__lead text-pretty text-muted">
+					Création et refonte de site internet pensé pour les psychologues : présenter votre pratique,
+					rassurer vos futurs patients et orienter vers le rendez-vous. Psychologue développeur, je connais
+					votre métier — vous recevez vos patients, je m'occupe du site et de votre visibilité.
+				</p>
 
-	<div class="shell-layout relative z-10">
-		<div class="hero-copy shell-prose mx-auto w-full text-center">
-			<p class="hero-eyebrow type-eyebrow">
-				Sites web pour psychologues
-			</p>
-			<h1 class="hero-title text-foreground text-balance">
-				Gagnez en visibilité avec un site internet pensé pour les{' '}
-				<span class="text-primary-900 not-italic">psychologues</span>.
-			</h1>
-
-			<p class="hero-lead text-pretty">
-				Création et refonte de site internet pensé pour les psychologues : présenter votre pratique, rassurer vos futurs patients et orienter vers le rendez-vous. Psychologue développeur, je connais votre métier — vous recevez vos patients, je m’occupe du site et de votre visibilité.
-			</p>
-
-			<div class="hero-primary-actions">
-				<div class="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
+				<div class="hero-home__actions">
 					<a
 						href="/diagnostic-gratuit/"
 						data-suppress-header-diagnostic-when-visible
-						class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 text-center"
+						class="btn-primary-solid inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4"
 					>
 						Demander un diagnostic gratuit
+						<ArrowRight class="h-5 w-5" stroke-width={1.75} aria-hidden="true" />
 					</a>
 					<a
 						href="/tarifs/"
-						class="btn-outline-terracotta inline-flex items-center justify-center rounded-lg border border-primary-foreground bg-transparent px-5 py-3 text-center text-primary-foreground hover:bg-primary-foreground/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+						class="btn-outline-terracotta inline-flex items-center justify-center rounded-xl border border-border bg-transparent px-8 py-4 font-bold text-foreground hover:bg-surface-alt"
 					>
 						Voir les tarifs
 					</a>
 				</div>
 
-				<p class="hero-price-qualifier text-foreground/80">
+				<p class="type-label-mono hero-home__price flex items-center gap-1.5 text-muted">
+					<BadgeCheck class="h-4 w-4 shrink-0 text-primary-foreground" stroke-width={1.75} aria-hidden="true" />
 					À partir de 29&nbsp;€/mois, tout inclus
 				</p>
 
-				<p class="hero-trust mt-4 text-muted">
-					<span class="text-foreground/80">Des psychologues accompagnés depuis 2016</span>
-					<span class="mx-1.5 text-muted/50" aria-hidden="true">·</span>
+				<p class="hero-home__trust text-sm text-muted">
+					<span class="text-foreground/85">Des psychologues accompagnés depuis 2016</span>
+					<span class="mx-1.5 text-muted/45" aria-hidden="true">·</span>
 					<a
 						href="#temoignages"
-						class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+						class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary-foreground hover:decoration-primary-foreground"
 					>
 						Avis à Brest, Paris, Lyon…
 					</a>
 				</p>
 			</div>
-		</div>
 
-		<div
-			class="hero-proof-grid mx-auto grid w-full max-w-[72ch] grid-cols-1 gap-3 text-base sm:grid-cols-2 sm:gap-4 lg:grid-cols-2 lg:gap-4"
-		>
-			{features.map((feature) => (
-				<a
-					href={feature.href}
-					class="hero-feature-card group flex items-center gap-3 touch-manipulation"
-					aria-label={`${feature.label} — ${feature.ariaHint}`}
-				>
-					<span class="ui-icon-well hero-feature-card__icon-well" aria-hidden="true">
-						<feature.icon class="h-5 w-5" stroke-width={1.5} />
-					</span>
-					<span class="hero-feature-card__label">{feature.label}</span>
-				</a>
-			))}
+			<div class="hero-home__visual">
+				<div class="hero-home__portrait">
+					<Image
+						src={portraitImage}
+						alt="Nicolas Devaux — psychologue et développeur web"
+						class="h-full w-full object-cover"
+						width={640}
+						height={800}
+						loading="eager"
+						fetchpriority="high"
+						decoding="async"
+					/>
+				</div>
+				<aside class="hero-home__card" aria-label="Présentation">
+					<p class="font-heading text-xl font-semibold text-primary-foreground">Nicolas Devaux</p>
+					<p class="mt-1 text-sm leading-relaxed text-muted">
+						Psychologue en cabinet &amp; développeur web avec 20 ans d'expérience.
+					</p>
+				</aside>
+			</div>
 		</div>
 	</div>
 </section>
@@ -108,237 +80,135 @@ const features = [
 	.hero-home {
 		position: relative;
 		overflow: hidden;
-		isolation: isolate;
-		border-bottom: 1px solid var(--color-border);
-		/* Fond plat aligné sur les sections suivantes ; la chaleur ne vient que des calques masqués */
-		background-color: var(--color-background);
 	}
 
-	/*
-	 * Décor concentré en haut avec fondu long vers le bas : évite la coupe horizontale « à mi-gradient »
-	 * au joint de section (même token --color-background que la suite).
-	 */
-	.hero-atmosphere {
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-		pointer-events: none;
-		overflow: hidden;
-		mask-image: linear-gradient(
-			to bottom,
-			black 0%,
-			black min(32%, 12rem),
-			rgba(0, 0, 0, 0.65) min(58%, 26rem),
-			rgba(0, 0, 0, 0.2) min(82%, 38rem),
-			transparent 100%
-		);
-		-webkit-mask-image: linear-gradient(
-			to bottom,
-			black 0%,
-			black min(32%, 12rem),
-			rgba(0, 0, 0, 0.65) min(58%, 26rem),
-			rgba(0, 0, 0, 0.2) min(82%, 38rem),
-			transparent 100%
-		);
-	}
-
-	.hero-layer {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-	}
-
-	.hero-layer--wash {
-		background:
-			radial-gradient(
-				circle at 18% min(18%, 9rem),
-				color-mix(in srgb, var(--color-primary-500) 17%, transparent) 0,
-				transparent min(52%, 22rem)
-			),
-			radial-gradient(
-				circle at 82% min(16%, 8rem),
-				color-mix(in srgb, var(--color-foreground) 10%, transparent) 0,
-				transparent min(48%, 20rem)
-			);
-		opacity: 0.78;
-	}
-
-	.hero-layer--grain {
-		background-image:
-			linear-gradient(to right, color-mix(in srgb, var(--color-border) 22%, transparent) 1px, transparent 1px),
-			linear-gradient(to bottom, color-mix(in srgb, var(--color-border) 20%, transparent) 1px, transparent 1px);
-		background-size: 34px 34px;
-		mask-image: linear-gradient(to bottom, black 0%, black 36%, transparent 96%);
-		opacity: 0.22;
-	}
-
-	.hero-orb {
-		position: absolute;
-		width: 18rem;
-		height: 18rem;
-		border-radius: var(--radius-full);
-		filter: blur(48px);
-		opacity: 0.35;
-		pointer-events: none;
-	}
-
-	.hero-orb--left {
-		top: -4.5rem;
-		left: -5rem;
-		background: color-mix(in srgb, var(--color-primary-500) 42%, transparent);
-	}
-
-	.hero-orb--right {
-		top: -5.5rem;
-		right: -5rem;
-		background: color-mix(in srgb, var(--color-foreground) 20%, transparent);
-	}
-
-	@media (max-width: 768px) {
-		.hero-layer--grain {
-			background-size: 24px 24px;
-			opacity: 0.16;
-		}
-
-		.hero-orb {
-			width: 12rem;
-			height: 12rem;
-			filter: blur(32px);
-			opacity: 0.28;
-		}
-	}
-
-	.hero-eyebrow {
-		margin-bottom: 0.625rem;
-		/* WCAG AA corps réduit : éviter text-muted sur fond pêche / lavé */
-		color: var(--color-foreground);
+	.hero-home__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+		gap: 2.5rem;
 	}
 
 	@media (min-width: 768px) {
-		.hero-eyebrow {
-			margin-bottom: 0.75rem;
-		}
-	}
-
-	.hero-title {
-		font-weight: 600;
-		line-height: 1.18;
-		letter-spacing: -0.026em;
-		font-size: clamp(2.125rem, 1.5vw + 1.5rem, 2.75rem);
-		max-width: none;
-	}
-
-	.hero-lead {
-		margin-top: 1.5rem;
-		color: #475569;
-		font-size: clamp(1rem, 0.35vw + 0.94rem, 1.125rem);
-		line-height: 1.55;
-		font-weight: 400;
-	}
-
-	@media (min-width: 768px) {
-		.hero-lead {
-			margin-top: 1.75rem;
-		}
-	}
-
-	.hero-price-qualifier {
-		margin-top: 0.875rem;
-		text-align: center;
-		font-size: 0.875rem;
-		line-height: 1.45;
-		font-weight: 500;
-		letter-spacing: 0.01em;
-	}
-
-	@media (min-width: 640px) {
-		.hero-price-qualifier {
-			margin-top: 1rem;
-			font-size: 0.9375rem;
-		}
-	}
-
-	.hero-trust {
-		font-size: 0.8125rem;
-		line-height: 1.45;
-	}
-
-	@media (min-width: 640px) {
-		.hero-trust {
-			font-size: 0.875rem;
-		}
-	}
-
-	/*
-	 * Respiration : après le groupe CTA + réassurance, nettement plus d’air qu’entre deux tuiles
-	 * (grille gap-3 = 12px · gap-4 = 16px → viser ~3× cette cadence pour séparer action primaire / preuves).
-	 */
-	.hero-proof-grid {
-		margin-top: 3rem;
-	}
-
-	@media (min-width: 640px) {
-		.hero-proof-grid {
-			margin-top: 3.5rem;
+		.hero-home__grid {
+			grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+			gap: 3rem;
 		}
 	}
 
 	@media (min-width: 1024px) {
-		.hero-proof-grid {
-			margin-top: 4rem;
+		.hero-home__grid {
+			gap: 4rem;
 		}
 	}
 
-	/*
-	 * Tuiles arguments — surfaces cartes : tons tirés de l’échelle primary-* uniquement.
-	 */
-	.hero-feature-card {
-		border-radius: var(--radius-lg);
-		padding: 0.875rem 1rem;
-		text-decoration: none;
-		color: var(--color-foreground);
-		background: color-mix(in srgb, var(--color-neutral-0) 91%, var(--color-primary-500) 9%);
-		border-width: 1px;
-		border-style: solid;
-		border-color: color-mix(in srgb, var(--color-primary-300) 52%, var(--color-border) 48%);
-		box-shadow: var(--shadow-sm);
-		transition:
-			border-color 0.2s ease,
-			background-color 0.2s ease,
-			box-shadow 0.2s ease,
-			transform 0.2s ease;
+	.hero-home__copy {
+		text-align: center;
 	}
 
-	.hero-feature-card:hover {
-		background: color-mix(in srgb, var(--color-neutral-0) 88%, var(--color-primary-500) 12%);
-		border-color: color-mix(in srgb, var(--color-primary-500) 42%, var(--color-border) 58%);
+	@media (min-width: 768px) {
+		.hero-home__copy {
+			text-align: left;
+		}
+	}
+
+	.hero-home__title {
+		margin-top: 0.75rem;
+		font-family: var(--font-heading), ui-serif, Georgia, serif;
+		font-size: clamp(2.125rem, 1.35vw + 1.65rem, 3.25rem);
+		font-weight: 600;
+		line-height: 1.12;
+		letter-spacing: -0.02em;
+	}
+
+	.hero-home__lead {
+		margin-top: 1.25rem;
+		max-width: 42rem;
+		font-size: clamp(1rem, 0.25vw + 0.96rem, 1.125rem);
+		line-height: 1.55;
+	}
+
+	@media (min-width: 768px) {
+		.hero-home__lead {
+			margin-inline: 0;
+		}
+	}
+
+	.hero-home__actions {
+		margin-top: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	@media (min-width: 640px) {
+		.hero-home__actions {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.hero-home__actions {
+			justify-content: flex-start;
+		}
+	}
+
+	.hero-home__price {
+		margin-top: 1rem;
+		justify-content: center;
+	}
+
+	@media (min-width: 768px) {
+		.hero-home__price {
+			justify-content: flex-start;
+		}
+	}
+
+	.hero-home__trust {
+		margin-top: 1rem;
+	}
+
+	.hero-home__visual {
+		position: relative;
+		width: 100%;
+		max-width: 28rem;
+		margin-inline: auto;
+	}
+
+	@media (min-width: 768px) {
+		.hero-home__visual {
+			max-width: none;
+			margin-inline: 0;
+		}
+	}
+
+	.hero-home__portrait {
+		aspect-ratio: 4 / 5;
+		overflow: hidden;
+		border-radius: var(--radius-lg);
+		border: 1px solid var(--color-border);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.hero-home__card {
+		position: absolute;
+		bottom: -1.25rem;
+		left: -0.5rem;
+		max-width: 16rem;
+		padding: 1.25rem 1.5rem;
+		border-radius: var(--radius-lg);
+		border: 1px solid var(--color-border);
+		background: var(--color-neutral-0);
 		box-shadow: var(--shadow-md);
 	}
 
-	.hero-feature-card:focus-visible {
-		outline: 2px solid color-mix(in srgb, var(--color-primary-700) 45%, transparent);
-		outline-offset: 3px;
+	@media (min-width: 640px) {
+		.hero-home__card {
+			left: -1.25rem;
+			max-width: 18rem;
+		}
 	}
-
-	.hero-feature-card:active {
-		transform: translateY(1px);
-	}
-
-	.hero-feature-card__icon-well {
-		transition:
-			border-color 0.2s ease,
-			color 0.2s ease;
-	}
-
-	.hero-feature-card:hover .hero-feature-card__icon-well {
-		border-color: color-mix(in srgb, var(--color-primary-300) 52%, var(--color-border) 48%);
-		color: var(--color-primary-700);
-	}
-
-	.hero-feature-card__label {
-		line-height: 1.35;
-		font-weight: 600;
-		letter-spacing: 0.01em;
-	}
-
 </style>

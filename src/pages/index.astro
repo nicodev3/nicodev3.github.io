@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
+import HomeTrustStrip from '../components/HomeTrustStrip.astro';
 import DifferenciationDiySection from '../components/DifferenciationDiySection.astro';
 import BlogHomeSection from '../components/BlogHomeSection.astro';
 import CtaSection from '../components/CtaSection.astro';
@@ -133,27 +134,30 @@ const breadcrumbSchema = {
 
 	<HeroSection />
 
-	<DifferenciationDiySection />
+	<HomeTrustStrip />
+
+	<DifferenciationDiySection variant="stitch" />
 
 	<ExpertiseSection />
 
-	<BlogHomeSection posts={homeBlogPosts} />
-
-	<ProcessSection />
-
-	<OffersSection />
+	<ProcessSection variant="stitch" />
 
 	<SeoLocalSection />
 
-	<TestimonialsSection />
+	<OffersSection variant="stitch" />
 
-	<FaqSection />
+	<TestimonialsSection variant="stitch" />
+
+	<BlogHomeSection posts={homeBlogPosts} />
+
+	<FaqSection headingAlign="center" variant="stitch" />
 
 	<CtaSection
+		variant="accent-band"
 		anchorId="contact-accueil"
-		title="Diagnostic gratuit, sans engagement"
-		description="Quelques questions pour comprendre votre situation et vous orienter vers l'offre la plus adaptée, sans engagement."
+		title="Prêt à lancer votre site professionnel ?"
+		description="Diagnostic gratuit et sans engagement. Quelques questions pour comprendre votre situation et vous orienter vers l'offre la plus adaptée."
 		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
-		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
+		secondaryButton={{ text: 'Voir les tarifs détaillés', href: '/tarifs/' }}
 	/>
 </Layout>

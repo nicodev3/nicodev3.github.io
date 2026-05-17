@@ -3,104 +3,147 @@ import OfferCard from './OfferCard.astro';
 
 export interface Props {
 	background?: 'surface' | 'white' | 'background';
+	variant?: 'default' | 'stitch';
 }
 
-const { background = 'white' } = Astro.props;
-const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
+const { background = 'white', variant = 'default' } = Astro.props;
+const isStitch = variant === 'stitch';
+const bgClass = isStitch
+	? 'bg-surface'
+	: { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
+
+const serenityFeatures = isStitch
+	? [
+			'Hébergement & nom de domaine inclus',
+			'Conforme RGPD & mentions légales',
+			'1 modification simple par mois',
+		]
+	: [
+			'Accompagnement à la rédaction du contenu de votre site pour une présentation claire et professionnelle',
+			'Votre site reste en ligne et accessible en permanence',
+			"L'adresse de votre site (votre-domaine.fr) est incluse et gérée pour vous",
+			"L'hébergement est inclus dans l'abonnement",
+			'Sécurité et protection intégrées',
+			'1 modification simple par mois (texte ou photo)',
+			'Mentions légales et informations obligatoires incluses',
+			'Conforme RGPD',
+			'Sauvegardes régulières',
+		];
+
+const visibilityFeatures = isStitch
+	? [
+			"Tout le contenu de l'offre Sérénité",
+			'Amélioration SEO & fiche Google',
+			'Modernisation annuelle incluse',
+			'Modifications illimitées',
+		]
+	: [
+			'Tout le contenu de l’offre Sérénité',
+			"Ajout d'articles de blog thématiques",
+			'Amélioration de votre visibilité sur Google*',
+			'Mise en place de votre fiche Google My Business',
+			'Vérification mensuelle des performances du site avec rapport détaillé',
+			'Modifications de contenu incluses (changements de tarifs, ajouts/retraits de pages, textes...)',
+			'Modernisation du site tous les ans',
+		];
 ---
 
-<section id="offres" class={`section-y scroll-mt-28 border-b border-border ${bgClass}`}>
+<section id="offres" class:list={['section-y scroll-mt-28 border-b border-border', bgClass]}>
 	<div class="shell-layout">
 		<header class="shell-prose mx-auto text-center">
-			<h2 class="text-3xl font-bold text-foreground sm:text-4xl">
-				Une offre simple, tout compris, sans charge technique
+			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+				Une offre simple, tout compris
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				Un abonnement clair pour un site professionnel qui fonctionne&nbsp;: je m’occupe de tout (hébergement, nom de
-				domaine, sécurité, mises en ligne et mises à jour) pour que vous puissiez vous concentrer sur vos patients.
-				L’idée n’est pas de produire des sites à la chaîne, mais de proposer un cadre simple et sérieux, retravaillé avec soin pour chaque psychologue.
+				{isStitch
+					? 'Sans engagement, sans frais cachés, sans soucis techniques.'
+					: 'Un abonnement clair pour un site professionnel qui fonctionne : je m’occupe de tout (hébergement, nom de domaine, sécurité, mises en ligne et mises à jour) pour que vous puissiez vous concentrer sur vos patients. L’idée n’est pas de produire des sites à la chaîne, mais de proposer un cadre simple et sérieux, retravaillé avec soin pour chaque psychologue.'}
 			</p>
 		</header>
 
-		<div class="mt-10 grid grid-cols-1 gap-6 pt-8 sm:pt-10 lg:mt-12 lg:grid-cols-2 lg:gap-8">
+		<div
+			class:list={[
+				'grid grid-cols-1',
+				isStitch
+					? 'mx-auto mt-12 max-w-4xl gap-10 pt-0 md:grid-cols-2 lg:gap-12'
+					: 'mt-10 gap-6 pt-8 sm:pt-10 lg:mt-12 lg:grid-cols-2 lg:gap-8',
+			]}
+		>
 			<OfferCard
+				variant={isStitch ? 'stitch' : 'default'}
 				name="Sérénité"
 				price="29€"
 				description="Un site fiable et conforme, sans rien avoir à gérer côté technique."
-				features={[
-					"Accompagnement à la rédaction du contenu de votre site pour une présentation claire et professionnelle",
-					'Votre site reste en ligne et accessible en permanence',
-					"L'adresse de votre site (votre-domaine.fr) est incluse et gérée pour vous",
-					"L'hébergement est inclus dans l'abonnement",
-					'Sécurité et protection intégrées',
-					'1 modification simple par mois (texte ou photo)',
-					'Mentions légales et informations obligatoires incluses',
-					'Conforme RGPD',
-					'Sauvegardes régulières'
-				]}
-				buttonLabel="Demander un devis — Sérénité"
+				features={serenityFeatures}
+				buttonLabel={isStitch ? 'Demander un devis' : 'Demander un devis — Sérénité'}
 				buttonHref="/devis/"
 			/>
 
 			<OfferCard
+				variant={isStitch ? 'stitch' : 'default'}
 				name="Visibilité & Confiance"
 				price="49€"
-				description="Pour renforcer votre visibilité locale et garder un site clair, rapide et rassurant dans le temps."
-				features={[
-					"Tout le contenu de l’offre Sérénité",
-					"Ajout d'articles de blog thématiques",
-					'Amélioration de votre visibilité sur Google*',
-					'Mise en place de votre fiche Google My Business',
-					'Vérification mensuelle des performances du site avec rapport détaillé',
-					'Modifications de contenu incluses (changements de tarifs, ajouts/retraits de pages, textes...)',
-					'Modernisation du site tous les ans'
-				]}
-				buttonLabel="Demander un devis — Visibilité &amp; Confiance"
+				description={
+					isStitch
+						? 'Renforcez votre visibilité locale et restez à jour.'
+						: 'Pour renforcer votre visibilité locale et garder un site clair, rapide et rassurant dans le temps.'
+				}
+				features={visibilityFeatures}
+				buttonLabel={isStitch ? 'Demander un devis' : 'Demander un devis — Visibilité & Confiance'}
 				buttonHref="/devis/"
 				recommended={true}
 				badgeText="Recommandée"
 			/>
 		</div>
-		<div class="mt-8 rounded-lg border border-primary/30 bg-primary/5 p-4 text-sm text-muted sm:mt-10 sm:p-5 sm:text-base">
-			<p class="font-medium text-foreground">
-				Un site professionnel, simple, sans gestion technique.
-			</p>
-			<p class="mt-1">
-				Vous n’avez rien à gérer côté web (hébergement, nom de domaine, mises à jour, sauvegardes, réglages)&nbsp;:
-				tout est pris en charge pour vous dans l’abonnement.
-			</p>
-			<p class="mt-2">
-				Vous échangez directement avec la personne qui conçoit et maintient votre site, pas avec une chaîne de production ou des interlocuteurs qui changent en cours de route.
-			</p>
-			<p class="mt-2 font-medium text-foreground">
-				Formule sans engagement&nbsp;:
-			</p>
-			<p class="mt-1">
-				Vous pouvez arrêter l’abonnement à tout moment, sans frais cachés ni petite ligne en bas de page.
-			</p>
-			<p class="mt-4">
-				Avant de choisir une formule, vous pouvez
-				<a href="/exemples-sites-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">
-					voir un aperçu concret des sites proposés
-				</a>
-				et vérifier si le rendu correspond à ce que vous imaginez pour votre cabinet.
-			</p>
-		</div>
 
-		<p class="mt-4 text-xs text-muted sm:text-sm">
-			* Les solutions techniques pour un référencement local optimal sont mises en place avec soin, mais les résultats Google peuvent prendre du temps à apparaître, surtout
-			dans les villes très concurrentielles. Votre site sur la première page n’est pas garantie immédiatement. Une vérification mensuelle est incluse pour vous assurer que tout est en ordre.
-		</p>
+		{
+			!isStitch && (
+				<>
+					<div class="mt-8 rounded-lg border border-primary/30 bg-primary/5 p-4 text-sm text-muted sm:mt-10 sm:p-5 sm:text-base">
+						<p class="font-medium text-foreground">Un site professionnel, simple, sans gestion technique.</p>
+						<p class="mt-1">
+							Vous n’avez rien à gérer côté web (hébergement, nom de domaine, mises à jour, sauvegardes,
+							réglages) : tout est pris en charge pour vous dans l’abonnement.
+						</p>
+						<p class="mt-2">
+							Vous échangez directement avec la personne qui conçoit et maintient votre site, pas avec une
+							chaîne de production ou des interlocuteurs qui changent en cours de route.
+						</p>
+						<p class="mt-2 font-medium text-foreground">Formule sans engagement :</p>
+						<p class="mt-1">
+							Vous pouvez arrêter l’abonnement à tout moment, sans frais cachés ni petite ligne en bas de page.
+						</p>
+						<p class="mt-4">
+							Avant de choisir une formule, vous pouvez
+							<a
+								href="/exemples-sites-psychologue/"
+								class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+							>
+								voir un aperçu concret des sites proposés
+							</a>
+							et vérifier si le rendu correspond à ce que vous imaginez pour votre cabinet.
+						</p>
+					</div>
 
-		<div class="mt-10 rounded-lg border border-border bg-background p-5 shadow-sm sm:mt-12 sm:p-6">
-			<h3 class="mb-3 text-base font-semibold text-foreground sm:text-lg">
-				Pourquoi cette solution est différente
-			</h3>
-			<p class="text-sm leading-relaxed text-muted sm:text-base">
-				Je limite volontairement le nombre de projets pour garder le même interlocuteur du brief aux mises à jour,
-				plutôt qu’une chaîne de production. L’objectif est un site sobre, adapté à une pratique réglementée, qui
-				informe et rassure sans posture commerciale agressive.
-			</p>
-		</div>
+					<p class="mt-4 text-xs text-muted sm:text-sm">
+						* Les solutions techniques pour un référencement local optimal sont mises en place avec soin, mais les
+						résultats Google peuvent prendre du temps à apparaître, surtout dans les villes très concurrentielles.
+						Votre site sur la première page n’est pas garantie immédiatement. Une vérification mensuelle est incluse
+						pour vous assurer que tout est en ordre.
+					</p>
+
+					<div class="mt-10 rounded-lg border border-border bg-background p-5 shadow-sm sm:mt-12 sm:p-6">
+						<h3 class="mb-3 text-base font-semibold text-foreground sm:text-lg">
+							Pourquoi cette solution est différente
+						</h3>
+						<p class="text-sm leading-relaxed text-muted sm:text-base">
+							Je limite volontairement le nombre de projets pour garder le même interlocuteur du brief aux mises à
+							jour, plutôt qu’une chaîne de production. L’objectif est un site sobre, adapté à une pratique
+							réglementée, qui informe et rassure sans posture commerciale agressive.
+						</p>
+					</div>
+				</>
+			)
+		}
 	</div>
 </section>

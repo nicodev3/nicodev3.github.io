@@ -1,14 +1,26 @@
 ---
+import { Star } from '@lucide/astro';
+
 export interface Props {
 	quote: string;
 	author: string;
 	/** 0–2 : palette de cercle distincte pour chaque carte */
 	variant?: number;
+	/** Carte témoignage type maquette Stitch. */
+	style?: 'default' | 'stitch';
 }
 
-const { quote, author, variant = 0 } = Astro.props;
+const { quote, author, variant = 0, style = 'default' } = Astro.props;
+
+const isStitch = style === 'stitch';
 
 const firstName = author.split(',')[0]?.trim() ?? '';
+const shortAuthor = isStitch
+	? author.includes(',')
+		? `${firstName}, ${author.split(',')[1]?.trim() ?? ''}`
+		: author
+	: author;
+
 const initial =
 	firstName.length > 0 ? firstName.charAt(0).toLocaleUpperCase('fr-FR') : '?';
 
@@ -19,41 +31,65 @@ const VARIANT_CLASSES = [
 ] as const;
 
 const paletteIdx = Math.min(Math.max(variant, 0), VARIANT_CLASSES.length - 1);
-const avatarPalette = VARIANT_CLASSES[paletteIdx];
+const avatarPalette = isStitch
+	? 'bg-primary-100 text-primary-foreground font-bold'
+	: VARIANT_CLASSES[paletteIdx];
 
 const avatarLabel =
 	firstName.length > 0 ? `Initiale « ${initial} », ${firstName}` : `Initiale « ${initial} »`;
 ---
 
-<blockquote
-	class="group relative flex h-full flex-col rounded-lg border border-border/70 bg-background/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md"
->
-	<div class="pointer-events-none absolute inset-x-6 top-0 h-16 bg-gradient-to-b from-primary/5 to-transparent opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
-	<div class="relative">
-		<div class="mb-4 inline-flex items-center gap-2 text-xs font-medium text-primary/80">
-			<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
-				<span class="text-lg leading-none">“</span>
-			</span>
-			<span class="type-eyebrow text-muted">Témoignage client</span>
-		</div>
-		<p class="text-sm leading-relaxed text-foreground/90 mb-5">
-			{quote}
-		</p>
-	</div>
-	<footer class="mt-auto flex items-center gap-3 text-sm text-muted">
-		<div
-			class:list={[
-				'flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold tracking-tight ring-offset-2 ring-offset-background',
-				avatarPalette,
-			]}
-			role="img"
-			aria-label={avatarLabel}
-		>
-			{initial}
-		</div>
-		<div class="flex flex-col text-left">
-			<span class="font-medium text-foreground">{author}</span>
-			<span class="text-xs text-muted">Psychologue accompagnée avec un site clé en main</span>
-		</div>
-	</footer>
-</blockquote>
+{
+	isStitch ? (
+		<blockquote class="flex h-full flex-col rounded-lg border border-border bg-white p-8">
+			<div class="mb-6 flex gap-0.5 text-primary-foreground" aria-hidden="true">
+				{Array.from({ length: 5 }).map(() => (
+					<Star class="h-5 w-5 fill-current" stroke-width={0} />
+				))}
+			</div>
+			<p class="mb-8 flex-grow text-base italic leading-relaxed text-muted">{quote}</p>
+			<footer class="flex items-center gap-3">
+				<div
+					class:list={[
+						'flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm',
+						avatarPalette,
+					]}
+					role="img"
+					aria-label={avatarLabel}
+				>
+					{initial}
+				</div>
+				<span class="font-semibold text-foreground">{shortAuthor}</span>
+			</footer>
+		</blockquote>
+	) : (
+		<blockquote class="group relative flex h-full flex-col rounded-lg border border-border/70 bg-background/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md">
+			<div class="pointer-events-none absolute inset-x-6 top-0 h-16 bg-gradient-to-b from-primary/5 to-transparent opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
+			<div class="relative">
+				<div class="mb-4 inline-flex items-center gap-2 text-xs font-medium text-primary/80">
+					<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
+						<span class="text-lg leading-none">“</span>
+					</span>
+					<span class="type-eyebrow text-muted">Témoignage client</span>
+				</div>
+				<p class="mb-5 text-sm leading-relaxed text-foreground/90">{quote}</p>
+			</div>
+			<footer class="mt-auto flex items-center gap-3 text-sm text-muted">
+				<div
+					class:list={[
+						'flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold tracking-tight ring-offset-2 ring-offset-background',
+						avatarPalette,
+					]}
+					role="img"
+					aria-label={avatarLabel}
+				>
+					{initial}
+				</div>
+				<div class="flex flex-col text-left">
+					<span class="font-medium text-foreground">{author}</span>
+					<span class="text-xs text-muted">Psychologue accompagnée avec un site clé en main</span>
+				</div>
+			</footer>
+		</blockquote>
+	)
+}

@@ -1,58 +1,120 @@
 ---
 import TestimonialCard from './TestimonialCard.astro';
+
+export interface Props {
+	variant?: 'default' | 'stitch';
+}
+
+const { variant = 'default' } = Astro.props;
+const isStitch = variant === 'stitch';
+
+const testimonials = [
+	{
+		quote:
+			"Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble. Des explications super accessibles, écoute et disponibilité… un vrai travail de partenariat !",
+		author: 'Delphine, Psychologue en libéral, Brest',
+		short: 'Delphine, Brest',
+	},
+	{
+		quote:
+			"Nicolas Devaux a conçu mon site internet lors de mon installation en libéral. Je suis ravie de notre collaboration et du résultat. Il a su prendre en compte mes exigences avec un rapport qualité/prix imbattable !",
+		author: 'Anne, Psychologue en libéral, Paris',
+		short: 'Anne, Paris',
+	},
+	{
+		quote:
+			"Je suis très satisfaite de mon site. Sa double casquette psychologue et webdesigner a été un atout important. Il a fait preuve d'écoute et d'une grande disponibilité.",
+		author: 'Psychologue en libéral, Lyon',
+		short: 'Psychologue, Lyon',
+	},
+] as const;
 ---
 
-<section id="temoignages" class="section-y relative scroll-mt-28 overflow-hidden border-b border-border bg-surface-alt">
-	<div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-primary/10/10 to-transparent blur-3xl" />
+<section
+	id="temoignages"
+	class:list={[
+		'section-y scroll-mt-28 border-b border-border',
+		isStitch
+			? 'bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))]'
+			: 'relative overflow-hidden bg-surface-alt',
+	]}
+>
+	{
+		!isStitch && (
+			<div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-primary/10 to-transparent blur-3xl" />
+		)
+	}
 	<div class="shell-layout">
-		<div class="text-center mb-14">
-			<div class="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs font-medium text-muted shadow-sm backdrop-blur-sm">
-				<span class="h-1.5 w-1.5 rounded-full bg-primary" />
-				<span>Des psychologues déjà accompagnés</span>
-			</div>
-			<h2 class="mt-5 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
+		<div class:list={['text-center', isStitch ? 'mb-16' : 'mb-14']}>
+			{
+				!isStitch && (
+					<div class="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs font-medium text-muted shadow-sm backdrop-blur-sm">
+						<span class="h-1.5 w-1.5 rounded-full bg-primary" />
+						<span>Des psychologues déjà accompagnés</span>
+					</div>
+				)
+			}
+			<h2
+				class:list={[
+					'font-heading font-semibold tracking-tight text-foreground',
+					isStitch ? 'text-3xl sm:text-4xl' : 'mt-5 text-3xl md:text-4xl lg:text-5xl',
+				]}
+			>
 				Ils ont choisi un site pensé pour leur pratique
 			</h2>
-			<p class="shell-prose mx-auto mt-4 text-sm md:text-base text-muted">
-				Des psychologues en libéral qui voulaient un site simple, professionnel, sans charge technique, pour se concentrer sur leurs patients.
-			</p>
+			{
+				!isStitch && (
+					<p class="shell-prose mx-auto mt-4 text-sm text-muted md:text-base">
+						Des psychologues en libéral qui voulaient un site simple, professionnel, sans charge technique,
+						pour se concentrer sur leurs patients.
+					</p>
+				)
+			}
 		</div>
-		<div class="relative">
-			<div class="pointer-events-none absolute -left-10 top-0 h-24 w-24 -rotate-12 rounded-full bg-primary/10 blur-2xl" />
-			<div class="pointer-events-none absolute -right-10 bottom-0 h-28 w-28 rotate-12 rounded-full bg-accent/10 blur-2xl" />
+
+		<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+			{testimonials.map((t, index) => (
+				<TestimonialCard
+					variant={index}
+					style={isStitch ? 'stitch' : 'default'}
+					quote={t.quote}
+					author={isStitch ? t.short : t.author}
+				/>
+			))}
 		</div>
-		<div class="relative grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7 lg:gap-8">
-			<TestimonialCard
-				variant={0}
-				quote="Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble.Des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité ... un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique !"
-				author="Delphine, Psychologue en libéral, Brest"
-			/>
-			<TestimonialCard
-				variant={1}
-				quote="Nicolas Devaux a conçu mon site internet lors de mon installation en libéral, afin de donner de la visibilité à mon activité.
-Je suis ravie de notre collaboration et du résultat. Il a su prendre en compte mes exigences, mes souhaits lors de la conception de mon site. Nicolas s'est montré egalement très disponible.
-Tout cela pour un rapport qualité/prix imbattable!"
-				author="Anne, Psychologue en libéral, Paris"
-			/>
-			<TestimonialCard
-				variant={2}
-				quote="Je suis très satisfaite de mon site. Nicolas a su allier tout son savoir faire avec mes désirs pour réaliser ce projet. Bien évidemment sa «double casquette» psychologue et webdesigner a été un atout important. Il a fait preuve d'écoute et d'une grande disponibilité. Vous pouvez lui faire confiance !"
-				author="Psychologue en libéral, Lyon"
-			/>
-		</div>
-		<div class="mt-10 flex flex-col items-center gap-3 text-center">
-			<p class="type-eyebrow text-muted">
-				Transparence sur les retours
-			</p>
-			<p class="max-w-xl text-sm text-muted">
-				Vous pouvez aussi consulter d’autres avis détaillés sur
-				<a
-					href="https://www.malt.fr/profile/nicolasdevaux1"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary"
-					>mon profil Malt</a
-				>.
+
+		<div class:list={['text-center', isStitch ? 'mt-12' : 'mt-10 flex flex-col items-center gap-3']}>
+			{
+				!isStitch && (
+					<p class="type-eyebrow text-muted">Transparence sur les retours</p>
+				)
+			}
+			<p class:list={[isStitch ? 'text-base' : 'max-w-xl text-sm text-muted']}>
+				{
+					isStitch ? (
+						<a
+							href="https://www.malt.fr/profile/nicolasdevaux1"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
+						>
+							Voir tous les avis sur Malt
+						</a>
+					) : (
+						<>
+							Vous pouvez aussi consulter d’autres avis détaillés sur{' '}
+							<a
+								href="https://www.malt.fr/profile/nicolasdevaux1"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary"
+							>
+								mon profil Malt
+							</a>
+							.
+						</>
+					)
+				}
 			</p>
 		</div>
 	</div>

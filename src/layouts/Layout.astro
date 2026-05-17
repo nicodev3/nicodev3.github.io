@@ -2,9 +2,9 @@
 import type { ImageMetadata } from "astro";
 import { Font } from "astro:assets";
 import globalStylesUrl from "../styles/global.css?url";
-import ObfuscatedEmail from "../components/ObfuscatedEmail.astro";
 import Header from "../components/Header.astro";
 import ProfessionsSection from "../components/ProfessionsSection.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 import defaultOgImage from "../assets/images/blog/development.webp";
 import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 
@@ -43,16 +43,12 @@ const ogImageSrc = image
     : image.src
   : defaultOgImage.src;
 const ogImage = new URL(ogImageSrc, baseUrl).toString();
-const homePageUrl = new URL('/', baseUrl).href;
-
 const umamiId =
   import.meta.env.UMAMI_WEBSITE_ID ??
   import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL ?? import.meta.env.UMAMI_URL;
 const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : "";
 
-/** Pied de page : soulignement animé au survol (voir `.footer-animated-underline` dans global.css). */
-const footerLinkClass = "footer-animated-underline text-on-foreground";
 ---
 
 <!doctype html>
@@ -62,7 +58,7 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Polices avant la CSS bloquante : les @font-face sont connus en parallèle du fetch CSS ; Source Sans en premier (corps). -->
     <Font cssVariable="--font-source-sans-3" />
-    <Font cssVariable="--font-lora" />
+    <Font cssVariable="--font-source-serif-4" />
     <link rel="preload" href={globalStylesUrl} as="style" />
     <link rel="stylesheet" href={globalStylesUrl} />
     <meta name="description" content={description} />
@@ -133,107 +129,7 @@ const footerLinkClass = "footer-animated-underline text-on-foreground";
 
     <ProfessionsSection />
 
-    <footer class="bg-foreground text-on-foreground py-12">
-      <div class="shell-layout">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="mb-4 font-sans text-xl font-bold leading-tight tracking-tight">
-              <a
-                href="/"
-                class="transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/55 focus-visible:ring-offset-2 focus-visible:ring-offset-foreground rounded-sm"
-                aria-label="nicodev. — Nicolas Devaux, retour à l’accueil"
-              >
-                <span class="footer-brand-wordmark-nico">nico</span><span class="footer-brand-wordmark-dev">dev.</span>
-              </a>
-            </h3>
-            <p class="text-on-foreground">
-              Développeur web et psychologue spécialisé dans la création de
-              sites internet pour psychologues.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Services</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href={`${homePageUrl}#offres`} class={footerLinkClass}>Création de sites internet</a>
-              </li>
-              <li>
-                <a href={`${homePageUrl}#seo-local`} class={footerLinkClass}>Visibilité locale sur Google</a>
-              </li>
-              <li>
-                <a href={`${homePageUrl}#faq-performance-mobile`} class={footerLinkClass}>Design responsive</a>
-              </li>
-              <li>
-                <a href="/tarifs/#faq-modifications" class={footerLinkClass}>Maintenance web</a>
-              </li>
-              <li>
-                <a href="/creation-site-internet-psychologue/" class={footerLinkClass}
-                  >Création site psychologue</a
-                >
-              </li>
-              <li>
-                <a href="/referencement-site-psychologue/" class={footerLinkClass}>Référencement site psychologue</a>
-              </li>
-              <li>
-                <a href="/webdesigner-site-psychologue/" class={footerLinkClass}>Webdesigner psychologues</a>
-              </li>
-              <li>
-                <a href="/devis/" class={footerLinkClass}>Demande de devis</a>
-              </li>
-              <li>
-                <a href="/exemples-sites-psychologue/" class={footerLinkClass}
-                  >Exemples de sites psychologues</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Contact</h3>
-            <div class="space-y-3 text-on-foreground">
-              <p>
-                Email:
-                <ObfuscatedEmail class={footerLinkClass} />
-              </p>
-              <p>
-                GitHub:
-                <a href="https://github.com/nicodev3" class={footerLinkClass}>@nicodev3</a>
-              </p>
-              <p>
-                LinkedIn:
-                <a
-                  href="https://www.linkedin.com/in/nicodev3/"
-                  class={footerLinkClass}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >linkedin.com/in/nicodev3</a
-                >
-              </p>
-              <a
-                href="https://wa.me/33629341367"
-                class="inline-flex items-center justify-center rounded-lg border border-on-foreground/35 bg-transparent px-4 py-2 text-sm font-semibold text-on-foreground transition hover:border-on-foreground/55 hover:bg-white/8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Contacter Nicolas Devaux sur WhatsApp"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="border-t border-border mt-8 pt-8 text-center text-on-foreground"
-        >
-          <p class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-            <a href="/mentions-legales/" class={footerLinkClass}>Mentions légales</a>
-            <span class="text-on-foreground/60" aria-hidden="true">|</span>
-            <a href="/politique-confidentialite/" class={footerLinkClass}>Politique de confidentialité</a>
-            <span class="text-on-foreground/60" aria-hidden="true">|</span>
-            <a href="/cgv/" class={footerLinkClass}>Conditions générales de vente</a>
-          </p>
-          <p class="mt-4">&copy; 2011-2026 Nicolas Devaux. Tous droits réservés.</p>
-        </div>
-      </div>
-    </footer>
+    <SiteFooter />
 
     <script is:inline>
       (function () {

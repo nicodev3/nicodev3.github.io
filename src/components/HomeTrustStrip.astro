@@ -1,0 +1,28 @@
+---
+const items = [
+	{ label: 'Délai : 2 à 3 semaines', href: '#comment-ca-marche' },
+	{ label: 'Visible sur Google', href: '#seo-local' },
+	{ label: 'Compatible Doctolib', href: '#faq-doctolib-rdv' },
+	{ label: 'Accompagné depuis 2016', href: '#temoignages' },
+];
+---
+
+<section
+	class="home-trust-strip border-y border-border bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))]"
+	aria-label="Points clés"
+>
+	<div class="shell-layout">
+		<ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 md:justify-between md:gap-8">
+			{items.map((item) => (
+				<li>
+					<a
+						href={item.href}
+						class="type-label-mono text-muted transition-colors hover:text-primary-foreground"
+					>
+						{item.label}
+					</a>
+				</li>
+			))}
+		</ul>
+	</div>
+</section>

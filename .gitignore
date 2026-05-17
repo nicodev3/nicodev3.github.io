@@ -20,6 +20,12 @@ pnpm-debug.log*
 .env
 .env.production
 
+# MCP (clé API Stitch — voir .cursor/mcp.example.json)
+.cursor/mcp.json
+
+# Exports de référence Stitch (HTML / captures)
+.stitch-export/
+
 # macOS-specific files
 .DS_Store
 
