@@ -21,13 +21,16 @@ guidePillarHub: true
 
 Ce guide rassemble une **stratégie cohérente** pour la visibilité en ligne des psychologues en libéral : ce que le web change pour votre cabinet, par où commencer, quelles erreurs éviter, et **neuf articles détaillés** pour approfondir chaque levier. Vous pouvez le lire d’une traite ou vous servir du sommaire pour aller directement à la section utile.
 
-## Ce guide, à qui il s’adresse
+## A qui s'adresse ce guide ?
 
 Vous exercez en libéral (ou vous préparez à l’installation) et vous voulez :
 
 - être **trouvé** quand une personne cherche un psychologue près de chez elle ou sur un sujet précis ;
 - présenter votre cabinet de façon **claire, sérieuse et conforme** au cadre déontologique ;
 - éviter les solutions « toutes faites » qui promettent la première place sur Google sans effort.
+- maitriser votre budget
+- dédier votre temps à votre pratique plutôt qu'à la gestion de votre activité
+- ne pas être dépendant d'une plateforme tiers dont vous ne maîtrisez ni les règles ni l'image de marque.
 
 Ce texte ne remplace pas une analyse personnalisée de votre situation, mais il vous donne un **cadre** : quoi mettre en place, dans quel ordre, et où lire la suite.
 
