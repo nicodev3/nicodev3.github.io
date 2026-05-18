@@ -32,7 +32,7 @@ Avant d'entrer dans le détail, une précision nécessaire — d'autant plus que
 
 Ces trois plans interagissent mais ne se confondent pas. Le code de déontologie le formule lui-même : *« le respect du présent code repose sur une réflexion éthique et une capacité de discernement »*. Autrement dit, **l'éthique anime l'application de la déontologie**, elle ne s'y résume pas. Et la déontologie peut renvoyer à des règles légales (cf. secret professionnel) sans être elle-même une loi.
 
-Dans la suite de l'article, je signale explicitement de quel plan relève chaque argument : déontologique (le code), éthique (la réflexion sur le sens), ou légal (la loi).
+Dans la suite, chaque argument est explicitement rattaché à son plan : déontologique (le code), éthique (la réflexion sur le sens), ou légal (la loi).
 
 ## Quelle portée le code de déontologie a-t-il vraiment ?
 
@@ -110,7 +110,7 @@ Le code ne mentionne pas les avis en ligne. En revanche, plusieurs articles écl
 
 ## Pourquoi ne pas publier d'avis sur son site internet
 
-C'est la position que je défends — non pas comme une « interdiction légale du code », mais comme **la pratique la plus cohérente** avec le secret professionnel (article 7 / code pénal) et avec les articles 14, 23 et 32 du code.
+Cette recommandation ne se présente pas comme une « interdiction légale du code », mais comme **la pratique la plus cohérente** avec le secret professionnel (article 7 / code pénal) et avec les articles 14, 23 et 32 du code.
 
 ### Le problème du consentement
 
