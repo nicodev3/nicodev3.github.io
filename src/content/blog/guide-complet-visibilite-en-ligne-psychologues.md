@@ -56,9 +56,9 @@ C’est le levier le plus direct pour apparaître dans le **pack local** (carte 
 
 ### 2. Avis Google et e-réputation (cadre déontologique)
 
-Le sujet le plus sensible de votre présence en ligne : ce que le **code de déontologie 2021** autorise (et interdit) en matière d’avis, pourquoi **ne pas publier de témoignages** sur votre site, et comment gérer une fiche Google sans transgresser le secret professionnel.
+Le sujet le plus sensible de votre présence en ligne : ce que le **code de déontologie 2021** recommande en matière d’avis, pourquoi **ne pas publier de témoignages** sur votre site, et comment gérer une fiche Google en respectant le **secret professionnel** (obligation légale).
 
-→ [Avis Google et e-réputation du psychologue : ce que la déontologie autorise](/blog/avis-google-e-reputation-psychologue/)
+→ [Avis Google et e-réputation du psychologue : cadre éthique et bonnes pratiques](/blog/avis-google-e-reputation-psychologue/)
 
 ### 3. SEO local et « premier sur Google » dans sa ville
 
@@ -151,7 +151,7 @@ La fiche Google peut donner des effets en quelques semaines si elle est complèt
 Des objectifs mesurables (complétude de la fiche, pages clés rédigées, temps de chargement, nombre de demandes entrantes). Voir aussi [promesses trop belles](/blog/site-internet-psychologue-promesses-trop-belles/).
 
 **Puis-je publier des témoignages de patients sur mon site ?**  
-Non. Cette pratique entre en friction directe avec le secret professionnel (article 7) et l'obligation d'anonymat absolu dans la publication (article 23) du code de déontologie 2021. Le sujet est détaillé dans [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/).
+Ce n'est pas recommandé : la pratique est en tension avec le secret professionnel (obligation légale, article 7 du code) et avec l'anonymat exigé dans les publications (article 23 du code, référence éthique). Le code de déontologie n'a pas force de loi et il n'existe pas d'ordre des psychologues, mais ces principes orientent fortement la profession. Détail dans [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/).
 
 ## Conclusion
 
