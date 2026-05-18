@@ -9,6 +9,7 @@ export const GUIDE_VISIBILITE_PILLAR_HREF = `/blog/${GUIDE_VISIBILITE_PILLAR_SLU
  */
 export const GUIDE_VISIBILITE_CLUSTER_IDS = [
   'google-business-profile-psychologue',
+  'avis-google-e-reputation-psychologue',
   'psychologue-premier-google-ville',
   'site-internet-psychologues',
   'nom-de-domaine-hebergement',
@@ -18,6 +19,14 @@ export const GUIDE_VISIBILITE_CLUSTER_IDS = [
   'site-internet-psychologue-doctolib',
   'creation-site-internet',
 ] as const;
+
+/** Tri blog : du plus récent au plus ancien (pubDate). */
+export function comparePostsByPubDateDesc(
+  a: { data: { pubDate: string } },
+  b: { data: { pubDate: string } },
+): number {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+}
 
 export function slugifyTag(value: string): string {
   return value

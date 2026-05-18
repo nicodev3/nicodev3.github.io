@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import BlogCard from '../components/BlogCard.astro';
-import { GUIDE_VISIBILITE_PILLAR_SLUG, toTagHref } from '../utils/blog';
+import { comparePostsByPubDateDesc, toTagHref } from '../utils/blog';
 import defaultBlogCover from '../assets/images/blog/development.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -22,13 +22,7 @@ const posts = await getCollection('blog');
 // Récupérer tous les tags uniques pour la navigation
 const allTags = [...new Set(posts.flatMap((p) => p.data.tags ?? []))].sort((a, b) => a.localeCompare(b));
 
-const sortedPosts = [...posts].sort((a, b) => {
-	if (a.id === GUIDE_VISIBILITE_PILLAR_SLUG) return -1;
-	if (b.id === GUIDE_VISIBILITE_PILLAR_SLUG) return 1;
-	const dateA = new Date(a.data.pubDate).getTime();
-	const dateB = new Date(b.data.pubDate).getTime();
-	return dateB - dateA;
-});
+const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 ---
 
 <Layout 

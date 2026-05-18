@@ -1,6 +1,6 @@
 ---
 title: "Guide complet de la visibilité en ligne pour psychologues"
-description: "Page pilier : méthode, priorités et liens vers 9 guides (fiche Google, SEO local, site, budget, IA, patients, Doctolib, technique). Pour structurer votre présence web en cabinet."
+description: "Page pilier : méthode, priorités et liens vers 10 guides (fiche Google, avis, SEO local, site, budget, IA, patients, Doctolib, technique). Pour structurer votre présence web en cabinet."
 pubDate: "2026-05-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
@@ -19,7 +19,7 @@ guidePillarHub: true
 
 *Temps de lecture : 18 minutes*
 
-Ce guide rassemble une **stratégie cohérente** pour la visibilité en ligne des psychologues en libéral : ce que le web change pour votre cabinet, par où commencer, quelles erreurs éviter, et **neuf articles détaillés** pour approfondir chaque levier. Vous pouvez le lire d’une traite ou vous servir du sommaire pour aller directement à la section utile.
+Ce guide rassemble une **stratégie cohérente** pour la visibilité en ligne des psychologues en libéral : ce que le web change pour votre cabinet, par où commencer, quelles erreurs éviter, et **dix articles détaillés** pour approfondir chaque levier. Vous pouvez le lire d’une traite ou vous servir du sommaire pour aller directement à la section utile.
 
 ## A qui s'adresse ce guide ?
 
@@ -40,11 +40,11 @@ La visibilité n’est pas qu’une question de position dans Google. Pour un ps
 
 1. **La découverte** : une personne qui ne vous connaît pas peut vous identifier (recherche locale, recommandation, annuaires, réseaux).
 2. **La compréhension** : en quelques secondes, elle comprend qui vous êtes, pour qui vous travaillez et comment prendre contact.
-3. **La confiance** : contenu utile, cohérence des informations, respect de la confidentialité, site rapide et lisible sur mobile.
+3. **La confiance** : contenu utile, cohérence des informations, respect de la confidentialité, site rapide et lisible différents supports (ordinateur, mobile, tablette).
 
 Les leviers techniques (SEO, fiche Google, performance du site) servent ces trois objectifs. Les ignorer revient souvent à **dépendre uniquement du bouche-à-oreille** ou d’une plateforme tiers dont vous ne maîtrisez ni les règles ni l’image de marque.
 
-## Les neuf chapitres du cluster visibilité
+## Les dix chapitres du cluster visibilité
 
 Chaque lien ci-dessous mène à un **guide actionnable**. L’ordre proposé suit une progression logique : fondations locales et site, puis budget, contenus, acquisition, positionnement par rapport aux plateformes, et bases techniques.
 
@@ -54,49 +54,55 @@ C’est le levier le plus direct pour apparaître dans le **pack local** (carte 
 
 → [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
 
-### 2. SEO local et « premier sur Google » dans sa ville
+### 2. Avis Google et e-réputation (cadre déontologique)
+
+Le sujet le plus sensible de votre présence en ligne : ce que le **code de déontologie 2021** autorise (et interdit) en matière d’avis, pourquoi **ne pas publier de témoignages** sur votre site, et comment gérer une fiche Google sans transgresser le secret professionnel.
+
+→ [Avis Google et e-réputation du psychologue : ce que la déontologie autorise](/blog/avis-google-e-reputation-psychologue/)
+
+### 3. SEO local et « premier sur Google » dans sa ville
 
 Une fois la fiche en place, il faut comprendre ce que « bien classé » signifie réellement : pertinence, distance, réputation, cohérence des signaux locaux, pages du site alignées avec votre zone.
 
 → [Psychologue : comment apparaître en premier sur Google dans sa ville ?](/blog/psychologue-premier-google-ville/)
 
-### 3. Site internet dédié psychologues (structure, éthique, visibilité)
+### 4. Site internet dédié psychologues (structure, éthique, visibilité)
 
 Pourquoi un site professionnel reste le **socle** de votre discours : pages, contenu, cadre déontologique, RGPD, articulation avec la fiche Google.
 
 → [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/)
 
-### 4. Nom de domaine et hébergement
+### 5. Nom de domaine et hébergement
 
 Choix du nom, renouvellement, rapatriement, performances : des décisions simples en apparence mais **coûteuses à corriger** si elles sont mal posées au départ.
 
 → [Nom de domaine et hébergement : ce qu’un psychologue doit savoir](/blog/nom-de-domaine-hebergement/)
 
-### 5. Budget : combien coûte un site en 2026
+### 6. Budget : combien coûte un site en 2026
 
 Fourchettes réalistes, ce qui fait varier le prix, et comment comparer des offres sans vous faire piéger par des devis opaques.
 
 → [Combien coûte un site internet en 2026 ?](/blog/combien-coute-site-internet-2026/)
 
-### 6. Créer un site avec l’IA (sans sacrifier qualité ni conformité)
+### 7. Créer un site avec l’IA (sans sacrifier qualité ni conformité)
 
 Ce que les outils d’IA changent pour la rédaction et la mise en forme, et ce qu’ils **ne remplacent pas** : validation humaine, accessibilité, cadre légal.
 
 → [Créer un site avec l’IA : ce qu’un psychologue doit savoir](/blog/creer-site-avec-ia-psychologue/)
 
-### 7. Trouver les premiers patients
+### 8. Trouver les premiers patients
 
 La visibilité en ligne s’inscrit dans une stratégie plus large : réseau, partenaires, contenu, suivi des canaux qui vous apportent réellement des contacts.
 
 → [Comment trouver ses premiers patients quand on est psychologue ?](/blog/comment-trouver-premiers-patients-psychologue/)
 
-### 8. Site propre vs Doctolib (et complémentarité)
+### 9. Site propre vs Doctolib (et complémentarité)
 
 Comparer **propriété des données**, image de marque, SEO et dépendance à une plateforme pour décider comment articuler site et annuaire.
 
 → [Site internet psychologue vs Doctolib : le comparatif](/blog/site-internet-psychologue-doctolib/)
 
-### 9. Bases techniques d’un site moderne
+### 10. Bases techniques d’un site moderne
 
 HTML, performance, accessibilité : le vocabulaire utile pour dialoguer avec un prestataire ou évaluer une solution « clé en main ».
 
@@ -112,15 +118,15 @@ Ces articles complètent le tableau sans faire partie du cœur du cluster « vis
 
 ## Par où commencer selon votre situation
 
-- **Vous n’avez ni fiche Google ni site** : commencez par la [fiche Google Business Profile](/blog/google-business-profile-psychologue/), puis esquissez la structure du site avec [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/).
+- **Vous n’avez ni fiche Google ni site** : commencez par la [fiche Google Business Profile](/blog/google-business-profile-psychologue/), lisez tout de suite [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/) pour fixer le cadre déontologique, puis esquissez la structure du site avec [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/).
 - **Vous avez une fiche mais peu de contacts** : enchaînez [SEO local](/blog/psychologue-premier-google-ville/) et le comparatif [Site vs Doctolib](/blog/site-internet-psychologue-doctolib/).
-- **Vous refondez un site existant** : lisez [nom de domaine et hébergement](/blog/nom-de-domaine-hebergement/), [budget](/blog/combien-coute-site-internet-2026/) et [bases techniques](/blog/creation-site-internet/) avant de signer un devis.
+- **Vous refondez un site existant** : lisez [nom de domaine et hébergement](/blog/nom-de-domaine-hebergement/), [budget](/blog/combien-coute-site-internet-2026/) et [bases techniques](/blog/creation-site-internet/) avant de signer un devis. Profitez-en pour retirer toute section « témoignages » si vous en aviez une — voir [avis et e-réputation](/blog/avis-google-e-reputation-psychologue/).
 
 ## Erreurs fréquentes
 
 - **Négliger la fiche Google** tout en investissant dans un site très élaboré : vous perdez une partie du trafic local immédiat.
 - **Multiplier les adresses ou numéros** selon les annuaires : incohérence des données NAP (nom, adresse, téléphone) qui affaiblit le référencement local.
-- **Confondre visibilité et déontologie** : sur-promesse, avis fictifs, noms de fiche bourrés de mots-clés — autant de risques pour votre réputation et vos comptes Google / annuaires.
+- **Confondre visibilité et déontologie** : sur-promesse, avis fictifs, noms de fiche bourrés de mots-clés, témoignages patients publiés sur le site — autant de risques pour votre réputation et vos comptes Google / annuaires. Voir [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/).
 - **Sous-estimer le mobile** : une majorité de recherches se fait sur téléphone ; la lenteur ou une prise de rendez-vous confuse fait fuir.
 
 ## Checklist express
@@ -144,8 +150,11 @@ La fiche Google peut donner des effets en quelques semaines si elle est complèt
 **Par quoi remplacer une promesse « premier sur Google garanti » ?**  
 Des objectifs mesurables (complétude de la fiche, pages clés rédigées, temps de chargement, nombre de demandes entrantes). Voir aussi [promesses trop belles](/blog/site-internet-psychologue-promesses-trop-belles/).
 
+**Puis-je publier des témoignages de patients sur mon site ?**  
+Non. Cette pratique entre en friction directe avec le secret professionnel (article 7) et l'obligation d'anonymat absolu dans la publication (article 23) du code de déontologie 2021. Le sujet est détaillé dans [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/).
+
 ## Conclusion
 
-La visibilité en ligne d’un psychologue repose sur un **système** : fiche locale, site crédible, cohérence des données, contenu utile et patience. Ce guide pilier vous oriente vers neuf ressources pour exécuter chaque brique sans vous perdre.
+La visibilité en ligne d’un psychologue repose sur un **système** : fiche locale, site crédible, cohérence des données, contenu utile, gestion mesurée des avis et patience. Ce guide pilier vous oriente vers dix ressources pour exécuter chaque brique sans vous perdre.
 
 Si vous souhaitez un avis externe sur votre situation concrète, vous pouvez demander un [diagnostic gratuit](/diagnostic-gratuit/) ou consulter la page [création de site pour psychologue](/creation-site-internet-psychologue/).
