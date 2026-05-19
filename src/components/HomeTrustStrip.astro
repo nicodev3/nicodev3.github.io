@@ -9,9 +9,10 @@ const items = [
 
 <section
 	class="home-trust-strip border-y border-border bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))]"
-	aria-label="Points clés"
+	aria-labelledby="home-trust-strip-heading"
 >
 	<div class="shell-layout">
+		<h2 id="home-trust-strip-heading" class="sr-only">Repères rapides</h2>
 		<ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 md:justify-between md:gap-8">
 			{items.map((item) => (
 				<li>
