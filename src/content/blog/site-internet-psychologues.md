@@ -140,7 +140,7 @@ Vous pouvez consulter : [Combien coûte un site pour psychologue en 2026 ?](/blo
 
 ### Page "Contact"
 
-Un bon CTA reste simple : "Prendre rendez-vous" ou "Me contacter". Limitez les distractions et facilitez l'action sur mobile.
+Un bon CTA reste simple : "Prendre rendez-vous" ou "me contacter". Limitez les distractions et facilitez l'action sur mobile.
 
 Pour aller plus loin : [contactez-moi](/contact/) et [tarifs](/tarifs/).
 

@@ -1,5 +1,6 @@
 ---
 import TestimonialCard from './TestimonialCard.astro';
+import { maltTestimonials, MALT_PROFILE_URL, googleTestimonial, GOOGLE_BUSINESS_URL } from '../data/testimonials';
 
 export interface Props {
 	variant?: 'default' | 'stitch';
@@ -8,26 +9,12 @@ export interface Props {
 const { variant = 'default' } = Astro.props;
 const isStitch = variant === 'stitch';
 
-const testimonials = [
-	{
-		quote:
-			"Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble. Des explications super accessibles, écoute et disponibilité… un vrai travail de partenariat !",
-		author: 'Delphine, Psychologue en libéral, Brest',
-		short: 'Delphine, Brest',
-	},
-	{
-		quote:
-			"Nicolas Devaux a conçu mon site internet lors de mon installation en libéral. Je suis ravie de notre collaboration et du résultat. Il a su prendre en compte mes exigences avec un rapport qualité/prix imbattable !",
-		author: 'Anne, Psychologue en libéral, Paris',
-		short: 'Anne, Paris',
-	},
-	{
-		quote:
-			"Je suis très satisfaite de mon site. Sa double casquette psychologue et webdesigner a été un atout important. Il a fait preuve d'écoute et d'une grande disponibilité.",
-		author: 'Psychologue en libéral, Lyon',
-		short: 'Psychologue, Lyon',
-	},
-] as const;
+/** Google en 2ᵉ position, puis le reste des recommandations Malt. */
+const carouselTestimonials = [
+	{ source: 'malt' as const, ...maltTestimonials[0] },
+	{ source: 'google' as const, ...googleTestimonial },
+	...maltTestimonials.slice(1).map((t) => ({ source: 'malt' as const, ...t })),
+];
 ---
 
 <section
@@ -72,15 +59,84 @@ const testimonials = [
 			}
 		</div>
 
-		<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
-			{testimonials.map((t, index) => (
-				<TestimonialCard
-					variant={index}
-					style={isStitch ? 'stitch' : 'default'}
-					quote={t.quote}
-					author={isStitch ? t.short : t.author}
-				/>
-			))}
+		<div class="mb-10 text-center md:mb-12">
+			<p class="type-eyebrow mb-2 text-muted">Témoignages clients</p>
+			<p class="mx-auto max-w-2xl text-sm text-muted md:text-base">
+				Recommandations sur <strong class="font-medium text-foreground">malt.fr</strong> et avis{' '}
+				<strong class="font-medium text-foreground">Google</strong>, laissés par des psychologues accompagnés pour la
+				création de leur site.
+			</p>
+		</div>
+
+		<div class="relative flex flex-col gap-4" data-testimonials-carousel-root>
+			<div
+				class="flex gap-6 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 rounded-lg"
+				data-testimonials-carousel-track
+				tabindex="0"
+				role="region"
+				aria-roledescription="carrousel"
+				aria-label="Témoignages — faites défiler horizontalement"
+			>
+				{carouselTestimonials.map((t, index) => (
+					<div class="snap-start shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
+						<TestimonialCard
+							variant={index % 3}
+							style={isStitch ? 'stitch' : 'default'}
+							source={t.source}
+							rating={t.source === 'google' ? t.rating : undefined}
+							quote={t.quote}
+							author={isStitch ? t.short : t.author}
+						/>
+					</div>
+				))}
+			</div>
+
+			<div
+				class="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 sm:gap-x-4"
+				data-testimonials-carousel-toolbar
+			>
+				<button
+					type="button"
+					class:list={[
+						'inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40',
+						isStitch ? 'btn-primary-solid' : 'border border-border bg-background text-foreground shadow-sm hover:border-primary/50 hover:text-primary disabled:opacity-40',
+					]}
+					aria-label="Témoignages précédents"
+					data-testimonials-carousel-prev
+				>
+					<span aria-hidden="true">←</span>
+				</button>
+
+				<div class="flex min-w-0 flex-col items-center gap-2 justify-self-center">
+					<p class="text-base font-medium tabular-nums text-foreground sm:text-lg" aria-live="polite">
+						<span data-testimonials-carousel-current>1</span>
+						<span class="text-muted" aria-hidden="true"> / </span>
+						<span data-testimonials-carousel-total>1</span>
+					</p>
+					<div
+						class="flex flex-wrap justify-center gap-2"
+						data-testimonials-carousel-dots
+						aria-label="Pagination des témoignages"
+					/>
+					<p
+						data-testimonials-carousel-swipe-hint
+						class="hidden max-w-[16rem] text-center text-xs italic leading-snug text-muted motion-reduce:transition-none"
+						aria-hidden="true"
+					/>
+				</div>
+
+				<button
+					type="button"
+					class:list={[
+						'inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40',
+						isStitch ? 'btn-primary-solid' : 'border border-border bg-background text-foreground shadow-sm hover:border-primary/50 hover:text-primary disabled:opacity-40',
+					]}
+					aria-label="Témoignages suivants"
+					data-testimonials-carousel-next
+				>
+					<span aria-hidden="true">→</span>
+				</button>
+			</div>
 		</div>
 
 		<div class:list={['text-center', isStitch ? 'mt-12' : 'mt-10 flex flex-col items-center gap-3']}>
@@ -89,33 +145,231 @@ const testimonials = [
 					<p class="type-eyebrow text-muted">Transparence sur les retours</p>
 				)
 			}
-			<p class:list={[isStitch ? 'text-base' : 'max-w-xl text-sm text-muted']}>
-				{
-					isStitch ? (
-						<a
-							href="https://www.malt.fr/profile/nicolasdevaux1"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
-						>
-							Voir tous les avis sur Malt
-						</a>
-					) : (
-						<>
-							Vous pouvez aussi consulter d’autres avis détaillés sur{' '}
+			<div class:list={['flex flex-col items-center gap-2', isStitch ? 'text-base' : 'max-w-xl text-sm text-muted']}>
+				<p>
+					{
+						isStitch ? (
 							<a
-								href="https://www.malt.fr/profile/nicolasdevaux1"
+								href={MALT_PROFILE_URL}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary"
+								class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
 							>
-								mon profil Malt
+								Voir tous les avis sur Malt
 							</a>
-							.
-						</>
-					)
-				}
-			</p>
+						) : (
+							<>
+								Vous pouvez aussi consulter d’autres avis détaillés sur{' '}
+								<a
+									href={MALT_PROFILE_URL}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary"
+								>
+									mon profil Malt
+								</a>
+								.
+							</>
+						)
+					}
+				</p>
+				<p class={isStitch ? '' : 'text-sm text-muted'}>
+					<a
+						href={GOOGLE_BUSINESS_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						class:list={[
+							isStitch
+								? 'font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground'
+								: 'font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary',
+						]}
+					>
+						Voir la fiche Google
+					</a>
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
+
+<script>
+	let testimonialsCarouselTeardown: (() => void) | undefined;
+
+	function setupTestimonialsCarousel() {
+		testimonialsCarouselTeardown?.();
+
+		const carouselRoot = document.querySelector('[data-testimonials-carousel-root]');
+		const carouselTrack = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-track]');
+		const prevButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-testimonials-carousel-prev]');
+		const nextButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-testimonials-carousel-next]');
+		const currentLabel = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-current]');
+		const totalLabel = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-total]');
+		const dotsContainer = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-dots]');
+		const swipeHint = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-swipe-hint]');
+
+		if (
+			!carouselRoot ||
+			!carouselTrack ||
+			!prevButton ||
+			!nextButton ||
+			!currentLabel ||
+			!totalLabel ||
+			!dotsContainer
+		) {
+			return;
+		}
+
+		const track = carouselTrack;
+		const dotsEl = dotsContainer;
+		const prevBtn = prevButton;
+		const nextBtn = nextButton;
+		const curLabel = currentLabel;
+		const totLabel = totalLabel;
+
+		const ac = new AbortController();
+		const { signal } = ac;
+
+		const getScrollStep = () => track.clientWidth;
+
+		const getPageCount = () =>
+			Math.max(Math.ceil(track.scrollWidth / Math.max(getScrollStep(), 1)), 1);
+
+		const getMaxScroll = () => track.scrollWidth - track.clientWidth;
+
+		function scrollToPage(pageIndex: number) {
+			const maxScroll = getMaxScroll();
+			const step = getScrollStep();
+			const target = Math.min(Math.max(0, pageIndex) * step, maxScroll);
+			track.scrollTo({ left: target, behavior: 'smooth' });
+		}
+
+		function rebuildDots(pageCount: number, activePage: number) {
+			dotsEl.innerHTML = '';
+			for (let i = 0; i < pageCount; i++) {
+				const btn = document.createElement('button');
+				btn.type = 'button';
+				btn.className =
+					'h-2.5 w-2.5 shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+					(i === activePage ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
+				btn.setAttribute('aria-label', `Afficher la série de témoignages ${i + 1} sur ${pageCount}`);
+				if (i === activePage) btn.setAttribute('aria-current', 'true');
+				btn.addEventListener(
+					'click',
+					() => {
+						scrollToPage(i);
+					},
+					{ signal },
+				);
+				dotsEl.appendChild(btn);
+			}
+		}
+
+		let dotRebuildScheduled = false;
+		function scheduleDotRebuild() {
+			if (dotRebuildScheduled) return;
+			dotRebuildScheduled = true;
+			requestAnimationFrame(() => {
+				dotRebuildScheduled = false;
+				updateButtons(true);
+			});
+		}
+
+		function updateButtons(rebuildDotsMaybe = false) {
+			const scrollLeft = track.scrollLeft;
+			const maxScroll = getMaxScroll();
+			const step = Math.max(getScrollStep(), 1);
+			const pageCount = getPageCount();
+			const rawIndex = Math.round(scrollLeft / step);
+			const clampedPage = Math.min(Math.max(rawIndex, 0), pageCount - 1);
+			const needsRebuild = rebuildDotsMaybe || dotsEl.childElementCount !== pageCount;
+
+			prevBtn.disabled = scrollLeft <= 8;
+			nextBtn.disabled = scrollLeft >= maxScroll - 8;
+			curLabel.textContent = String(clampedPage + 1);
+			totLabel.textContent = String(pageCount);
+
+			if (needsRebuild) {
+				rebuildDots(pageCount, clampedPage);
+			} else {
+				Array.from(dotsEl.querySelectorAll('button')).forEach((btn, i) => {
+					const on = i === clampedPage;
+					btn.className =
+						'h-2.5 w-2.5 shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+						(on ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
+					if (on) btn.setAttribute('aria-current', 'true');
+					else btn.removeAttribute('aria-current');
+				});
+			}
+		}
+
+		function setupSwipeHint() {
+			const hintMaybe = swipeHint;
+			if (!hintMaybe) return;
+			const swipeHintEl = hintMaybe;
+			const coarse = window.matchMedia('(pointer: coarse)').matches;
+			if (!coarse || sessionStorage.getItem('testimonials-carousel-swipe-dismissed')) return;
+
+			swipeHintEl.textContent = '← Glissez pour voir plus →';
+			swipeHintEl.classList.remove('hidden');
+			swipeHintEl.removeAttribute('aria-hidden');
+
+			function hideSwipeHint() {
+				swipeHintEl.classList.add('hidden');
+				swipeHintEl.setAttribute('aria-hidden', 'true');
+				sessionStorage.setItem('testimonials-carousel-swipe-dismissed', '1');
+			}
+
+			const onScrollDismiss = () => {
+				if (sessionStorage.getItem('testimonials-carousel-swipe-dismissed')) return;
+				if (track.scrollLeft > 12) hideSwipeHint();
+			};
+
+			track.addEventListener('scroll', onScrollDismiss, { passive: true, signal });
+			window.setTimeout(hideSwipeHint, 10000);
+		}
+
+		prevBtn.addEventListener(
+			'click',
+			() => {
+				track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+			},
+			{ signal },
+		);
+
+		nextBtn.addEventListener(
+			'click',
+			() => {
+				track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+			},
+			{ signal },
+		);
+
+		carouselRoot.addEventListener(
+			'keydown',
+			(e: Event) => {
+				if (!(e instanceof KeyboardEvent)) return;
+				if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+				const ae = document.activeElement;
+				if (!(ae instanceof Node) || !track.contains(ae)) return;
+				e.preventDefault();
+				const dir = e.key === 'ArrowLeft' ? -1 : 1;
+				track.scrollBy({ left: dir * getScrollStep(), behavior: 'smooth' });
+			},
+			{ capture: true, signal },
+		);
+
+		track.addEventListener('scroll', () => updateButtons(false), { passive: true, signal });
+		window.addEventListener('resize', scheduleDotRebuild, { signal });
+
+		updateButtons(true);
+		setupSwipeHint();
+
+		testimonialsCarouselTeardown = () => {
+			ac.abort();
+			testimonialsCarouselTeardown = undefined;
+		};
+	}
+
+	setupTestimonialsCarousel();
+	document.addEventListener('astro:after-swap', setupTestimonialsCarousel);
+</script>

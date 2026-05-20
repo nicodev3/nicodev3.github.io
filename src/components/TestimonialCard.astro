@@ -8,11 +8,17 @@ export interface Props {
 	variant?: number;
 	/** Carte témoignage type maquette Stitch. */
 	style?: 'default' | 'stitch';
+	/** Plateforme d’origine de l’avis */
+	source?: 'malt' | 'google';
+	/** Note sur 5 (avis Google) */
+	rating?: number;
 }
 
-const { quote, author, variant = 0, style = 'default' } = Astro.props;
+const { quote, author, variant = 0, style = 'default', source = 'malt', rating } = Astro.props;
 
 const isStitch = style === 'stitch';
+const isGoogle = source === 'google';
+const isMalt = source === 'malt';
 
 const firstName = author.split(',')[0]?.trim() ?? '';
 const shortAuthor = isStitch
@@ -22,7 +28,7 @@ const shortAuthor = isStitch
 	: author;
 
 const initial =
-	firstName.length > 0 ? firstName.charAt(0).toLocaleUpperCase('fr-FR') : '?';
+	firstName.length > 0 ? firstName.charAt(0).toLocaleUpperCase('fr-FR') : isGoogle ? 'G' : '?';
 
 const VARIANT_CLASSES = [
 	'bg-primary/20 text-primary-foreground shadow-sm ring-2 ring-primary/25',
@@ -32,22 +38,73 @@ const VARIANT_CLASSES = [
 
 const paletteIdx = Math.min(Math.max(variant, 0), VARIANT_CLASSES.length - 1);
 const avatarPalette = isStitch
-	? 'bg-primary-100 text-primary-foreground font-bold'
-	: VARIANT_CLASSES[paletteIdx];
+	? isGoogle
+		? 'bg-[color-mix(in_srgb,#4285F4_14%,var(--color-background))] text-[#1a73e8] font-bold'
+		: 'bg-primary-100 text-primary-foreground font-bold'
+	: isGoogle
+		? 'bg-[color-mix(in_srgb,#4285F4_14%,var(--color-background))] text-[#1a73e8] font-bold'
+		: VARIANT_CLASSES[paletteIdx];
 
-const avatarLabel =
-	firstName.length > 0 ? `Initiale « ${initial} », ${firstName}` : `Initiale « ${initial} »`;
+const avatarLabel = isGoogle
+	? 'Logo Google'
+	: firstName.length > 0
+		? `Initiale « ${initial} », ${firstName}`
+		: `Initiale « ${initial} »`;
+
+const sourceLabel = isMalt ? 'Avis malt.fr' : 'Avis Google';
+const sourceBadgeClass = isMalt
+	? 'border-[color-mix(in_srgb,#FC5757_35%,var(--color-border))] bg-[color-mix(in_srgb,#FC5757_8%,var(--color-background))] text-[#c73e3e]'
+	: 'border-[color-mix(in_srgb,#4285F4_35%,var(--color-border))] bg-[color-mix(in_srgb,#4285F4_8%,var(--color-background))] text-[#1a73e8]';
+
+const footerNote = isMalt
+	? 'Recommandation publiée sur malt.fr'
+	: 'Avis publié sur Google (fiche nicodev)';
+
+const starCount = typeof rating === 'number' ? Math.min(Math.max(Math.round(rating), 0), 5) : 5;
+const showStars = isStitch || isGoogle;
 ---
 
 {
 	isStitch ? (
 		<blockquote class="flex h-full flex-col rounded-lg border border-border bg-white p-8">
-			<div class="mb-6 flex gap-0.5 text-primary-foreground" aria-hidden="true">
-				{Array.from({ length: 5 }).map(() => (
-					<Star class="h-5 w-5 fill-current" stroke-width={0} />
-				))}
+			<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+				<span
+					class:list={[
+						'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-wide',
+						sourceBadgeClass,
+					]}
+				>
+					{sourceLabel}
+				</span>
+				{
+					showStars && (
+						<div
+							class:list={['flex gap-0.5', !isGoogle && 'text-primary-foreground']}
+							aria-hidden="true"
+						>
+							{Array.from({ length: 5 }).map((_, i) => {
+								const filled = i < starCount;
+								return (
+									<Star
+										class:list={[
+											'h-5 w-5',
+											isGoogle
+												? filled
+													? 'fill-[#FBBC04] text-[#FBBC04]'
+													: 'fill-none text-[#DADCE0]'
+												: filled
+													? 'fill-current'
+													: 'fill-none opacity-25',
+										]}
+										stroke-width={filled ? 0 : 1.5}
+									/>
+								);
+							})}
+						</div>
+					)
+				}
 			</div>
-			<p class="mb-8 flex-grow text-base italic leading-relaxed text-muted">{quote}</p>
+			{quote ? <p class="mb-8 flex-grow text-base italic leading-relaxed text-muted">{quote}</p> : null}
 			<footer class="flex items-center gap-3">
 				<div
 					class:list={[
@@ -59,20 +116,28 @@ const avatarLabel =
 				>
 					{initial}
 				</div>
-				<span class="font-semibold text-foreground">{shortAuthor}</span>
+				<div class="flex min-w-0 flex-col text-left">
+					<span class="font-semibold text-foreground">{shortAuthor}</span>
+					<span class="text-xs text-muted">{footerNote}</span>
+				</div>
 			</footer>
 		</blockquote>
 	) : (
 		<blockquote class="group relative flex h-full flex-col rounded-lg border border-border/70 bg-background/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-md">
 			<div class="pointer-events-none absolute inset-x-6 top-0 h-16 bg-gradient-to-b from-primary/5 to-transparent opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
 			<div class="relative">
-				<div class="mb-4 inline-flex items-center gap-2 text-xs font-medium text-primary/80">
-					<span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
-						<span class="text-lg leading-none">“</span>
+				<div class="mb-4 flex flex-wrap items-center gap-2">
+					<span
+						class:list={[
+							'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-wide',
+							sourceBadgeClass,
+						]}
+					>
+						{sourceLabel}
 					</span>
-					<span class="type-eyebrow text-muted">Témoignage client</span>
+					{!isMalt && <span class="type-eyebrow text-muted">Google Business Profile</span>}
 				</div>
-				<p class="mb-5 text-sm leading-relaxed text-foreground/90">{quote}</p>
+				{quote ? <p class="mb-5 text-sm leading-relaxed text-foreground/90">{quote}</p> : null}
 			</div>
 			<footer class="mt-auto flex items-center gap-3 text-sm text-muted">
 				<div
@@ -87,7 +152,7 @@ const avatarLabel =
 				</div>
 				<div class="flex flex-col text-left">
 					<span class="font-medium text-foreground">{author}</span>
-					<span class="text-xs text-muted">Psychologue accompagnée avec un site clé en main</span>
+					<span class="text-xs text-muted">{footerNote}</span>
 				</div>
 			</footer>
 		</blockquote>
