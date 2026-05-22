@@ -88,7 +88,14 @@ Le site est entièrement responsive et optimisé pour :
 
 ### Variables d'environnement
 
-Aucune variable d'environnement requise pour le moment.
+| Variable | Obligatoire | Description |
+|----------|-------------|-------------|
+| `PUBLIC_FORMSPREE_*` | En production | URLs des formulaires Formspree |
+| `PUBLIC_STRIPE_PAYMENT_LINK_SERENITE` | Non | Lien Stripe Payment Link — offre Sérénité (29 €/mois) |
+| `PUBLIC_STRIPE_PAYMENT_LINK_VISIBILITE` | Non | Lien Stripe Payment Link — offre Visibilité (49 €/mois) |
+
+Sans les liens Stripe, les cartes d’offre affichent uniquement le bouton vers `/devis/`.
+Sur Cloudflare Pages, ajoutez les mêmes variables dans *Settings → Environment variables*.
 
 ## 📊 Performance
 

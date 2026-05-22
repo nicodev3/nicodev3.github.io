@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">nicodev.</title>
+  <desc id="desc">Logo nicodev pour factures Stripe, mot-symbole sombre sur fond clair avec point terracotta.</desc>
+  <rect width="1024" height="1024" fill="#ffffff"/>
+  <g transform="translate(512 512)">
+    <text
+      x="-286"
+      y="58"
+      fill="#292929"
+      font-family="Lora, Georgia, 'Times New Roman', serif"
+      font-size="168"
+      font-weight="700"
+      letter-spacing="-8"
+    >nicodev</text>
+    <circle cx="346" cy="51" r="22" fill="#d06a52"/>
+  </g>
+</svg>

@@ -8,6 +8,10 @@ export interface Props {
 
 const { background = 'white', variant = 'default' } = Astro.props;
 const isStitch = variant === 'stitch';
+
+const stripePaymentLinkSerenite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_SERENITE?.trim();
+const stripePaymentLinkVisibilite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_VISIBILITE?.trim();
+const hasStripePaymentLinks = Boolean(stripePaymentLinkSerenite && stripePaymentLinkVisibilite);
 const bgClass = isStitch
 	? 'bg-surface'
 	: { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
@@ -75,8 +79,16 @@ const visibilityFeatures = isStitch
 				price="29€"
 				description="Un site fiable et conforme, sans rien avoir à gérer côté technique."
 				features={serenityFeatures}
-				buttonLabel={isStitch ? 'Me contacter' : 'Me contacter — Sérénité'}
+				buttonLabel={
+					hasStripePaymentLinks
+						? 'Échanger avant de s’abonner'
+						: isStitch
+							? 'Me contacter'
+							: 'Me contacter — Sérénité'
+				}
 				buttonHref="/devis/"
+				subscribeHref={stripePaymentLinkSerenite}
+				subscribeLabel="S’abonner — 29 €/mois"
 			/>
 
 			<OfferCard
@@ -89,12 +101,34 @@ const visibilityFeatures = isStitch
 						: 'Pour renforcer votre visibilité locale et garder un site clair, rapide et rassurant dans le temps.'
 				}
 				features={visibilityFeatures}
-				buttonLabel={isStitch ? 'Me contacter' : 'Me contacter — Visibilité & Confiance'}
+				buttonLabel={
+					hasStripePaymentLinks
+						? 'Échanger avant de s’abonner'
+						: isStitch
+							? 'Me contacter'
+							: 'Me contacter — Visibilité & Confiance'
+				}
 				buttonHref="/devis/"
+				subscribeHref={stripePaymentLinkVisibilite}
+				subscribeLabel="S’abonner — 49 €/mois"
 				recommended={true}
 				badgeText="Recommandée"
 			/>
 		</div>
+
+		{
+			hasStripePaymentLinks && (
+				<p
+					class:list={[
+						'mx-auto max-w-2xl text-center text-sm text-muted',
+						isStitch ? 'mt-8' : 'mt-6',
+					]}
+				>
+					Le paiement en ligne s’effectue sur une page sécurisée Stripe. Vous pouvez aussi commencer par un échange via le
+					formulaire de devis.
+				</p>
+			)
+		}
 
 		{
 			!isStitch && (
