@@ -14,6 +14,7 @@ import BlogHomeSection from '../components/BlogHomeSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import defaultOgWebp from '../assets/images/blog/development.webp';
 import { homeFaqItems } from '../data/faq-home';
+import { WHATSAPP_PHONE_E164 } from '../data/contact';
 
 const allBlogPosts = await getCollection('blog');
 const preferredBlogIds = [
@@ -48,7 +49,7 @@ const businessSchema = {
 	description:
 		'Création de sites internet pour psychologues. Abonnement mensuel tout inclus dès 29 EUR.',
 	url: siteRootHref,
-	telephone: '+33629341367',
+	telephone: `+${WHATSAPP_PHONE_E164}`,
 	address: {
 		'@type': 'PostalAddress',
 		streetAddress: '63 rue Houdan',

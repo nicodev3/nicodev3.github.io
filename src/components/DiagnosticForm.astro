@@ -1,4 +1,5 @@
 ---
+import ContactWhatsAppOption from './ContactWhatsAppOption.astro';
 import FormField from './FormField.astro';
 
 const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_DIAGNOSTIC?.trim();
@@ -17,6 +18,9 @@ const startEvent = 'lead_start_diagnostic';
 	id="diagnostic-form-wrapper"
 	class="bg-background rounded-lg shadow-lg border border-border p-6 md:p-8"
 >
+	<div class="mb-6">
+		<ContactWhatsAppOption variant="button" umamiEvent="lead_click_whatsapp_from_diagnostic" />
+	</div>
 	<form
 		id="diagnostic-form"
 		name="diagnostic"

@@ -1,0 +1,48 @@
+---
+import { MessageCircle } from '@lucide/astro';
+import { WHATSAPP_DISPLAY, WHATSAPP_HREF } from '../data/contact';
+
+export interface Props {
+	/** Variante compacte (lien inline) ou bouton pleine largeur. */
+	variant?: 'inline' | 'button';
+	/** Événement Umami au clic (optionnel). */
+	umamiEvent?: string;
+}
+
+const { variant = 'button', umamiEvent } = Astro.props;
+
+const linkClass =
+	variant === 'button'
+		? 'inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-[background-color,transform] duration-200 hover:bg-[#1fb855] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+		: 'inline-flex items-center gap-1.5 font-semibold text-[#128C7E] underline underline-offset-4 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2 rounded-sm';
+---
+
+<div
+	class:list={[
+		variant === 'button' && 'rounded-lg border border-border bg-surface-alt p-4',
+	]}
+	role="region"
+	aria-label="Contact WhatsApp"
+>
+	{variant === 'button' ? (
+		<p class="mb-3 text-sm text-muted">
+			Vous préférez un échange direct&nbsp;? Contactez-moi sur WhatsApp — réponse en général le jour même.
+		</p>
+	) : (
+		<p class="text-sm text-muted">
+			<strong class="text-foreground">WhatsApp</strong>
+			{' — '}
+			contact direct&nbsp;:
+		</p>
+	)}
+	<a
+		href={WHATSAPP_HREF}
+		target="_blank"
+		rel="noopener noreferrer"
+		class={linkClass}
+		{...(umamiEvent ? { 'data-umami-event': umamiEvent } : {})}
+	>
+		<MessageCircle size={18} stroke-width={1.75} class="shrink-0" aria-hidden="true" />
+		<span>{variant === 'button' ? 'Écrire sur WhatsApp' : WHATSAPP_DISPLAY}</span>
+	</a>
+</div>

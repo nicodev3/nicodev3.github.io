@@ -1,4 +1,5 @@
 ---
+import ContactWhatsAppOption from './ContactWhatsAppOption.astro';
 import FormField from './FormField.astro';
 
 export interface Props {
@@ -40,6 +41,12 @@ const reassuranceText = isDevisMode
 ---
 
 <div id="contact-form-wrapper" class="bg-background rounded-lg border border-border p-6 md:p-8 shadow-sm">
+	<div class="mb-6">
+		<ContactWhatsAppOption
+			variant="button"
+			umamiEvent={isDevisMode ? 'lead_click_whatsapp_from_devis' : 'lead_click_whatsapp_from_contact'}
+		/>
+	</div>
 	<form
 		id="contact-form"
 		name={formName}

@@ -1,4 +1,6 @@
 ---
+import { WHATSAPP_HREF } from '../data/contact';
+
 const baseUrl = Astro.site ?? Astro.url.origin;
 const homePageUrl = new URL('/', baseUrl).href;
 
@@ -21,6 +23,15 @@ const footerLinkClass =
 				</p>
 				<div class="flex flex-wrap gap-4 text-sm">
 					<a href="/contact/" class={footerLinkClass}>Contact</a>
+					<a
+						href={WHATSAPP_HREF}
+						class={footerLinkClass}
+						target="_blank"
+						rel="noopener noreferrer"
+						data-umami-event="lead_click_whatsapp_from_footer"
+					>
+						WhatsApp
+					</a>
 					<a
 						href="https://www.linkedin.com/in/nicodev3/"
 						class={footerLinkClass}
