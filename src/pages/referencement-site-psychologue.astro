@@ -2,10 +2,59 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
-import defaultOgWebp from '../assets/images/blog/development.webp';
+import { Phone, MessageCircle } from '@lucide/astro';
+import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
+import refOgWebp from '../assets/images/blog/seo-google-my-business.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const pageUrl = new URL('/referencement-site-psychologue/', baseUrl).href;
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'Le référencement est-il inclus dans la création de site ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Les fondations techniques et éditoriales oui ; une stratégie de contenu régulière (blog) ou un accompagnement renforcé dépend de la formule choisie.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Puis-je faire mon SEO moi-même ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Oui pour une partie (compléter la fiche, demander des avis dans le cadre déontologique). La technique avancée (données structurées, performance, structure) est souvent plus rapide à confier — surtout si vous préférez vous concentrer sur la clinique.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Comment mesurer les résultats du référencement ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Appels, formulaires, clics d'itinéraire sur la fiche, pages du site qui génèrent des contacts — sans confondre positions et prises de rendez-vous.",
+			},
+		},
+	],
+};
+
+const serviceSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Référencement naturel et local pour site de psychologue',
+	description:
+		'Optimisation SEO et référencement local pour sites de psychologues : structure, technique, Google Business Profile et attentes réalistes.',
+	provider: {
+		'@type': 'Person',
+		name: 'Nicolas Devaux',
+		url: new URL('/about/', baseUrl).href,
+	},
+	serviceType: 'Référencement naturel (SEO)',
+	areaServed: { '@type': 'Country', name: 'France' },
+	url: pageUrl,
+};
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -25,9 +74,11 @@ const breadcrumbSchema = {
 <Layout
 	title="Référencement et SEO pour site de psychologue | Nicolas Devaux"
 	description="Référencement naturel et local pour sites de psychologues : structure, technique, Google Business Profile et attentes réalistes. Par un psychologue développeur web."
-	image={defaultOgWebp}
+	image={refOgWebp}
 >
 	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 
@@ -36,6 +87,28 @@ const breadcrumbSchema = {
 		subtitle="Les bases techniques et éditoriales pour être mieux compris par Google — sans promesses miraculeuses sur les classements."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Référencement site psychologue' }]}
 	/>
+
+	<div class="border-b border-border bg-white py-3">
+		<div class="shell-layout flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+			<a
+				href={`tel:+${WHATSAPP_PHONE_E164}`}
+				class="inline-flex items-center gap-1.5 font-medium text-muted transition-colors hover:text-primary"
+			>
+				<Phone class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				{WHATSAPP_DISPLAY}
+			</a>
+			<a
+				href={WHATSAPP_HREF}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-1.5 font-semibold text-primary-500 transition-colors hover:text-primary"
+				data-umami-event="lead_click_whatsapp_from_referencement_page"
+			>
+				<MessageCircle class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				WhatsApp — réponse rapide
+			</a>
+		</div>
+	</div>
 
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">

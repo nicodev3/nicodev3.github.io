@@ -2,10 +2,60 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
-import defaultOgWebp from '../assets/images/blog/development.webp';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+import { Phone, MessageCircle } from '@lucide/astro';
+import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
+import creationOgWebp from '../assets/images/blog/creation-site-internet.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const pageUrl = new URL('/creation-site-internet-psychologue/', baseUrl).href;
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'Faut-il rédiger tout le contenu soi-même ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Non : vous répondez à un formulaire guidé ; j'organise et reformule pour le web en respectant votre ton.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: "Combien de temps avant d'être visible sur Google ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Le site peut être indexé en quelques semaines ; le positionnement local durable demande souvent plusieurs mois de régularité (fiche Google + site cohérents).',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: "Que comprend l'abonnement mensuel ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Hébergement, nom de domaine, mises à jour et support selon la formule choisie.',
+			},
+		},
+	],
+};
+
+const serviceSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Création de site internet pour psychologue',
+	description:
+		'Création de site web vitrine sur mesure pour psychologues : structure claire, ton professionnel, mobile, prise de rendez-vous intégrée.',
+	provider: {
+		'@type': 'Person',
+		name: 'Nicolas Devaux',
+		url: new URL('/about/', baseUrl).href,
+	},
+	serviceType: 'Création de site internet',
+	areaServed: { '@type': 'Country', name: 'France' },
+	url: pageUrl,
+};
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -25,9 +75,11 @@ const breadcrumbSchema = {
 <Layout
 	title="Création de site web pour psychologue — vitrine et suivi | Nicolas Devaux"
 	description="Création de site internet et site web vitrine pour psychologues : structure claire, ton professionnel, mobile, prise de rendez-vous intégrée. Psychologue et développeur web, j’accompagne des cabinets partout en France."
-	image={defaultOgWebp}
+	image={creationOgWebp}
 >
 	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 
@@ -36,6 +88,28 @@ const breadcrumbSchema = {
 		subtitle="Site vitrine sur mesure : présenter votre pratique, rassurer vos futurs patients et les orienter vers la prise de contact ou le rendez-vous en ligne. Une seule personne — psychologue et développeur web."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création site psychologue' }]}
 	/>
+
+	<div class="border-b border-border bg-white py-3">
+		<div class="shell-layout flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+			<a
+				href={`tel:+${WHATSAPP_PHONE_E164}`}
+				class="inline-flex items-center gap-1.5 font-medium text-muted transition-colors hover:text-primary"
+			>
+				<Phone class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				{WHATSAPP_DISPLAY}
+			</a>
+			<a
+				href={WHATSAPP_HREF}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-1.5 font-semibold text-primary-500 transition-colors hover:text-primary"
+				data-umami-event="lead_click_whatsapp_from_creation_page"
+			>
+				<MessageCircle class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				WhatsApp — réponse rapide
+			</a>
+		</div>
+	</div>
 
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">
@@ -99,6 +173,8 @@ const breadcrumbSchema = {
 			</div>
 		</div>
 	</section>
+
+	<TestimonialsSection variant="stitch" />
 
 	<CtaSection
 		title="Parler de votre projet de site"

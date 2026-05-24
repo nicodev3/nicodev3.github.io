@@ -2,10 +2,59 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
-import defaultOgWebp from '../assets/images/blog/development.webp';
+import { Phone, MessageCircle } from '@lucide/astro';
+import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
+import webdesignerOgWebp from '../assets/images/blog/site-psychologue.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const pageUrl = new URL('/webdesigner-site-psychologue/', baseUrl).href;
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'Puis-je choisir les couleurs et la police ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Oui, dans un cadre sobre et accessible — nous validons ensemble les contrastes et la lisibilité.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Proposez-vous uniquement le design ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Non : l'accompagnement couvre conception, développement, hébergement et suivi. Je ne livre pas de maquettes Figma sans mise en ligne.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Le design influence-t-il le référencement ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Indirectement : un site clair, rapide et bien structuré aide Google et surtout les patients à agir (appel, formulaire, RDV).',
+			},
+		},
+	],
+};
+
+const serviceSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Design et conception de site vitrine pour psychologue',
+	description:
+		'Webdesign spécialisé pour psychologues : interface sobre, lisible sur mobile, conversion vers le rendez-vous.',
+	provider: {
+		'@type': 'Person',
+		name: 'Nicolas Devaux',
+		url: new URL('/about/', baseUrl).href,
+	},
+	serviceType: 'Conception et design de site internet',
+	areaServed: { '@type': 'Country', name: 'France' },
+	url: pageUrl,
+};
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -25,17 +74,41 @@ const breadcrumbSchema = {
 <Layout
 	title="Webdesigner pour psychologues | Sites vitrine sur mesure | Nicolas Devaux"
 	description="Webdesigner spécialisé sites pour psychologues : interface sobre, lisible sur mobile, conversion vers le rendez-vous. Psychologue et développeur web."
-	image={defaultOgWebp}
+	image={webdesignerOgWebp}
 >
 	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 
 	<Hero
 		title="Webdesigner pour psychologues"
 		subtitle="Un design sobre et professionnel — pas tape-à-l’œil — pour rassurer et guider vers la prise de contact ou le widget de RDV."
-		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Webdesigner psychologues' }]}
+		breadcrumb={[{ label: ‘Accueil’, href: ‘/’ }, { label: ‘Webdesigner psychologues’ }]}
 	/>
+
+	<div class="border-b border-border bg-white py-3">
+		<div class="shell-layout flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+			<a
+				href={`tel:+${WHATSAPP_PHONE_E164}`}
+				class="inline-flex items-center gap-1.5 font-medium text-muted transition-colors hover:text-primary"
+			>
+				<Phone class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				{WHATSAPP_DISPLAY}
+			</a>
+			<a
+				href={WHATSAPP_HREF}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-1.5 font-semibold text-primary-500 transition-colors hover:text-primary"
+				data-umami-event="lead_click_whatsapp_from_webdesigner_page"
+			>
+				<MessageCircle class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				WhatsApp — réponse rapide
+			</a>
+		</div>
+	</div>
 
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">

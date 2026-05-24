@@ -53,7 +53,7 @@ const tocItems = showArticleToc
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const siteOrigin = new URL('/', baseUrl).href;
-const publisherLogoUrl = new URL(defaultOgWebp.src, baseUrl).toString();
+const publisherLogoUrl = new URL('/favicon.svg', baseUrl).toString();
 const canonical = new URL(Astro.url.pathname, baseUrl).toString();
 const metaTitleSuffix = entry.data.metaTitleSuffix ?? 'Site web psychologues';
 const layoutTitle = `${entry.data.title} | ${metaTitleSuffix}`;
@@ -73,7 +73,8 @@ const blogPostingSchema = {
 	},
 	author: {
 		'@type': 'Person',
-		name: entry.data.author
+		name: entry.data.author,
+		url: new URL('/about/', baseUrl).toString(),
 	},
 	publisher: {
 		'@type': 'Organization',
