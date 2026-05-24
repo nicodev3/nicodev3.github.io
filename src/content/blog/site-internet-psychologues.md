@@ -1,6 +1,7 @@
 ---
-title: "Site internet pour psychologue en 2026 : guide complet SEO et éthique"
-description: "Comment créer un site de psychologue visible sur Google en 2026 : structure, SEO local, accessibilité, cadre RGPD et bonnes pratiques de conversion."
+title: "Site psychologue 2026 : 5 pages, SEO & RGPD"
+metaTitleSuffix: "Nicolas Devaux"
+description: "Checklist actionnable en 12 min : 5 pages indispensables, référencement local, accessibilité et cadre déontologique. Méthode 2026 pour être trouvé sur Google sans sur-optimiser."
 pubDate: "2016-09-05"
 updatedDate: "2026-02-26"
 author: "Nicolas Devaux"
