@@ -25,9 +25,9 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.3.7",
-    "puppeteer": "^24.16.2",
+    "puppeteer": "^25.0.4",
     "tailwindcss": "^4.2.4",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "prettier": "^3.8.3",
