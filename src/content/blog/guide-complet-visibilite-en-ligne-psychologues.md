@@ -157,4 +157,4 @@ Ce n'est pas recommandé : la pratique est en tension avec le secret professionn
 
 La visibilité en ligne d’un psychologue repose sur un **système** : fiche locale, site crédible, cohérence des données, contenu utile, gestion mesurée des avis et patience. Ce guide pilier vous oriente vers dix ressources pour exécuter chaque brique sans vous perdre.
 
-Si vous souhaitez un avis externe sur votre situation concrète, vous pouvez demander un [diagnostic gratuit](/diagnostic-gratuit/) ou consulter la page [création de site pour psychologue](/creation-site-internet-psychologue/).
+Si vous souhaitez un avis externe sur votre situation concrète, vous pouvez demander un [diagnostic gratuit](/diagnostic-gratuit/) ou consulter les pages service&nbsp;: [création de site pour psychologue](/creation-site-internet-psychologue/), [référencement site psychologue](/referencement-site-psychologue/) et [webdesigner pour psychologues](/webdesigner-site-psychologue/).

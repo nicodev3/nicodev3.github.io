@@ -93,3 +93,10 @@ Le **titre de psychologue** mérite d'être représenté avec précision. La dis
 Mon objectif n'est pas de produire "davantage de sites". Mon objectif est de concevoir des sites justes, clairs et utiles, à la fois pour les psychologues et pour les personnes en recherche d'accompagnement.
 
 Si vous êtes psychologue et que vous souhaitez un **site web pour psychologue** fidèle à votre cadre professionnel, vous pouvez me contacter. Nous évaluerons ensemble si mon approche correspond à votre besoin.
+
+Pour aller plus loin sans attendre&nbsp;:
+
+- [Création de site web pour psychologue](/creation-site-internet-psychologue/) — offre, déroulement et FAQ ;
+- [Référencement site psychologue](/referencement-site-psychologue/) — visibilité locale et cohérence avec votre fiche Google ;
+- [Guide complet de la visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/) — plan d’ensemble (fiche, site, avis, contenu) ;
+- [S’installer en libéral : par où commencer](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans votre installation.

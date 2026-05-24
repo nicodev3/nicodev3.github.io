@@ -283,7 +283,7 @@ Apparaître en premier sur Google dans votre ville n'est pas une tactique isolé
 
 C'est cette constance qui attire un trafic qualifié et, surtout, des prises de contact plus pertinentes.
 
-Si vous voulez, je peux réaliser un diagnostic SEO local de votre situation actuelle (fiche Google + site + opportunités rapides) via [la page contact](/contact/).
+Si vous voulez, je peux réaliser un diagnostic SEO local de votre situation actuelle (fiche Google + site + opportunités rapides) via [la page contact](/contact/) ou un [diagnostic gratuit](/diagnostic-gratuit/). Pages service associées&nbsp;: [référencement site psychologue](/referencement-site-psychologue/) et [création de site web pour psychologue](/creation-site-internet-psychologue/).
 
 ---
 
@@ -291,4 +291,6 @@ Si vous voulez, je peux réaliser un diagnostic SEO local de votre situation act
 
 - [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
 - [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/)
+- [Référencement site psychologue](/referencement-site-psychologue/)
+- [Guide complet visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/)
 - [Comment trouver ses premiers patients quand on est psychologue ?](/blog/comment-trouver-premiers-patients-psychologue/)

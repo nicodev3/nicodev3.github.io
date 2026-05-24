@@ -212,13 +212,15 @@ La fiche Google Business Profile est un outil simple, gratuit et efficace pour a
 
 L'essentiel : une fiche complète, des informations cohérentes avec votre site, et une gestion des avis respectueuse de votre cadre professionnel.
 
-Si vous souhaitez être accompagné dans la création ou l'optimisation de votre fiche Google Business Profile, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/).
+Si vous souhaitez être accompagné dans la création ou l'optimisation de votre fiche Google Business Profile, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/). Pour le volet site et référencement associé&nbsp;: [référencement site psychologue](/referencement-site-psychologue/) et [création de site web pour psychologue](/creation-site-internet-psychologue/).
 
 ---
 
 ## À lire aussi
 
 - [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/) — guide complet SEO et éthique
+- [Référencement site psychologue](/referencement-site-psychologue/) — prestation et attentes réalistes
+- [Création de site web pour psychologue](/creation-site-internet-psychologue/) — offre vitrine et suivi
 - [Combien coûte un site pour psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) — budget et fourchettes réalistes
 - [Création d'un site Internet](/blog/creation-site-internet/) — comprendre les technologies du web moderne
 - [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/) — guide pour débutants

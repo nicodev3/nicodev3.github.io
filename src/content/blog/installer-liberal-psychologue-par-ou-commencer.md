@@ -119,7 +119,7 @@ Dans les faits, beaucoup de psychologues combinent :
 - un **site internet** pour expliquer ton approche, ton public, tes modalités et rassurer avant le premier contact ;
 - éventuellement une **plateforme de rendez-vous** (Doctolib ou autre), utile pour l’accès mais rarement suffisante à elle seule pour dire qui tu es cliniquement et pour rassurer les patients.
 
-La cohérence des informations (**nom, adresse, téléphone**) entre ces canaux compte beaucoup pour le référencement local. Ce n’est pas du « SEO obscure » : c’est de la clarté pour les humains et pour les moteurs.
+La cohérence des informations (**nom, adresse, téléphone**) entre ces canaux compte beaucoup pour le référencement local. Ce n’est pas du « SEO obscure » : c’est de la clarté pour les humains et pour les moteurs. Le [guide complet de la visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/) et la page [référencement site psychologue](/referencement-site-psychologue/) détaillent cette logique côté web.
 
 ### Ce qui attire vraiment les premières prises de contact
 
@@ -149,7 +149,7 @@ Pour éviter la dispersion, pense en sprints :
 
 Le **site internet** mérite d’être préparé en parallèle des autres chantiers, pas relégué « pour plus tard » : c’est souvent le premier point de contact réel avec les patients, et il structure ensuite toute la communication (fiche Google, Doctolib, cartes de visite, mails). Un site sobre, bien pensé, qui présente clairement ton titre, ton approche, tes publics et tes modalités fait davantage pour ta crédibilité que n’importe quelle campagne publicitaire — et c’est aussi ce qui te rend **indépendant des plateformes** sur la durée.
 
-> 💡 Si tu veux gagner du temps sur cette étape, j’accompagne spécifiquement les psychologues dans la **création de leur site** : contenu, structure, référencement local, conformité (mentions légales, RGPD, cadre déontologique). Tu peux voir les offres sur la [page tarifs](/tarifs/) ou demander un [diagnostic gratuit](/diagnostic-gratuit/) de ta situation actuelle.
+> 💡 Si tu veux gagner du temps sur cette étape, j’accompagne spécifiquement les psychologues dans la **création de leur site** : contenu, structure, référencement local, conformité (mentions légales, RGPD, cadre déontologique). Voir la page [création de site web pour psychologue](/creation-site-internet-psychologue/), les [tarifs](/tarifs/) ou demander un [diagnostic gratuit](/diagnostic-gratuit/) de ta situation actuelle.
 
 Tu veux la version détaillée du plan 30 jours (priorités quotidiennes, documents à préparer, points de vigilance) ? Je te l’envoie par mail.
 
