@@ -12,7 +12,6 @@ tags:
     "site internet psychologue",
     "google business profile",
     "référencement",
-    "cluster",
   ]
 guidePillarHub: true
 ---

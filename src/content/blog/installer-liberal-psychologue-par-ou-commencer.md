@@ -9,8 +9,6 @@ tags:
     "psychologue",
     "installation libérale",
     "cabinet libéral",
-    "BNC",
-    "micro-entreprise",
     "visibilité locale",
     "site internet psychologue",
   ]

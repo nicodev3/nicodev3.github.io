@@ -4,7 +4,7 @@ description: "Guide pas-à-pas pour créer, vérifier et optimiser votre fiche G
 pubDate: "2026-03-02"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/seo-google-my-business.webp"
-tags: ["psychologue", "google business profile", "seo local", "référencement local", "fiche établissement", "visibilité google", "2026"]
+tags: ["psychologue", "google business profile", "seo local", "référencement local", "visibilité google"]
 ---
 
 *Temps de lecture : 11 minutes*

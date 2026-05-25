@@ -5,7 +5,7 @@ pubDate: "2026-02-22"
 updatedDate: "2026-03-18"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/cout-site-internet.webp"
-tags: ["psychologue", "prix site internet", "création site", "cabinet libéral", "budget web", "2026"]
+tags: ["psychologue", "prix site internet", "création site", "cabinet libéral"]
 ---
 
 *Temps de lecture : 9 minutes*

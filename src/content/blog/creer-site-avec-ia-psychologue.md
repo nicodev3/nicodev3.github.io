@@ -4,7 +4,7 @@ description: "Les outils d'intelligence artificielle facilitent la rédaction et
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-web-IA.webp"
-tags: ["psychologue", "site internet", "intelligence artificielle", "rgpd", "ux", "création de site"]
+tags: ["psychologue", "site internet", "intelligence artificielle", "rgpd", "création de site"]
 ---
 
 *Temps de lecture : 9 minutes*
