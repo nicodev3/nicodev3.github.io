@@ -7,8 +7,6 @@ image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
 tags: ["psychologue", "site web psychologue", "titre de psychologue", "profession réglementée", "déontologie"]
 ---
 
-# Pourquoi je propose mes services de création de sites web exclusivement aux psychologues
-
 Lorsque l'on m'interroge sur mon choix de me consacrer au **site web psychologue**, ma réponse est constante : il ne s'agit pas d'un positionnement commercial, mais d'une ligne professionnelle assumée.
 
 Psychologue de formation et en exercice libéral, je connais les réalités cliniques, les responsabilités attachées au titre, ainsi que les interrogations qui précèdent souvent une première consultation. Développeur web également, ayant exercé ce métier pendant plusieurs années pour de grandes entreprises, je conçois des sites utiles, sobres et rigoureux.
