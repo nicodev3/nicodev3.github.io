@@ -324,6 +324,10 @@ const portfolioHeroSubtitle =
                     rel="noopener noreferrer"
                     class="portfolio-ref-card__link inline-flex items-center gap-1.5 text-sm font-semibold text-foreground underline decoration-primary/35 underline-offset-[6px] transition-[color,text-decoration-color] hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
                     aria-label={`Voir le site ${project.title} (nouvel onglet)`}
+                    data-umami-event="portfolio_site_link_click"
+                    data-umami-event-site={new URL(project.url).hostname}
+                    data-umami-event-title={project.title}
+                    data-umami-event-emplacement="card"
                   >
                     Voir le site
                     <span
@@ -421,6 +425,10 @@ const portfolioHeroSubtitle =
             target="_blank"
             rel="noopener noreferrer"
             class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+            data-umami-event="portfolio_site_link_click"
+            data-umami-event-site="cecilecoaching.fr"
+            data-umami-event-title="Cécile Coaching (APA)"
+            data-umami-event-emplacement="autres_realisations"
           >
             coach sportif Activités Physiques Adaptées (APA)
           </a>
