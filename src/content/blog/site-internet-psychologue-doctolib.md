@@ -1,203 +1,231 @@
 ---
-title: "Psychologue : faut-il avoir un site internet en plus de Doctolib ?"
-description: "Site internet psychologue Doctolib : différences, avantages, limites et complémentarité pour améliorer la visibilité Google d'un cabinet de psychologie."
+title: "Psychologue : faut-il un site internet en plus de Doctolib ?"
+description: "Doctolib, site internet ou les deux ? Comparatif pour psychologues : coût, visibilité locale, prise de rendez-vous, autonomie et conversion des patients."
 pubDate: "2026-03-12"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-web-doctolib.webp"
 tags: ["psychologue", "doctolib", "site internet", "seo local", "référencement"]
 ---
 
-De nombreux psychologues en libéral utilisent Doctolib au quotidien. L’outil est pratique et rassurant pour les patients. Il simplifie la prise de rendez-vous et répond à un besoin concret : permettre un accès rapide à la consultation.
+De nombreux psychologues se posent la même question au moment de s'installer, ou quand l'agenda commence à dépendre d'un seul canal : **faut-il vraiment créer un site internet si l'on a déjà Doctolib ?**
 
-Dans ce contexte, une question revient souvent : un site internet est-il encore utile quand Doctolib fonctionne ?
+La réponse courte : oui, dans la plupart des cas. Pas parce qu'il faudrait opposer Doctolib et site internet, mais parce que les deux outils ne jouent pas le même rôle.
 
-La question est légitime. Gérer un cabinet demande du temps. Ajouter un nouveau support de communication peut sembler complexe, voire inutile. Pourtant, Doctolib et un site internet n’ont pas exactement la même fonction.
+Doctolib facilite la réservation. Un site internet aide le patient à comprendre votre cadre, votre approche, vos modalités, votre lieu d'exercice et les raisons de prendre rendez-vous avec vous plutôt qu'avec un autre praticien.
 
-Un annuaire facilite la réservation. Un site, lui, permet d’expliquer plus précisément sa pratique, son cadre et ses spécificités. Les deux outils peuvent donc être complémentaires.
+Et surtout : un site n'a pas besoin de remplacer votre outil de rendez-vous. Il peut simplement y être relié. Doctolib, Maiia, Resalib, Calendly, Perfactive, SimplyBook, un agenda métier plus discret, un formulaire de contact ou même un simple bouton d'appel : le site reste votre point d'entrée, l'outil de rendez-vous reste votre outil logistique.
 
-Cet article aide à comprendre les avantages et limites de chaque solution.
+Cette nuance change beaucoup de choses, notamment sur le budget. La brochure tarifaire Doctolib indique une offre agenda à **149 € TTC / mois / praticien**. À titre de comparaison, une offre de site à **49 € / mois** avec un lien ou un widget de prise de rendez-vous peut déjà couvrir l'essentiel de votre présence en ligne, tout en vous laissant libre du système de réservation utilisé.
 
-## Ce que permet Doctolib
+## Doctolib est utile, mais ce n'est pas un site
 
-### Prise de rendez-vous simple et rapide
+### Ce que Doctolib fait bien
 
-Le principal atout de Doctolib est la simplicité. Les créneaux sont visibles immédiatement. Le patient peut réserver en ligne, sans appel téléphonique. Pour beaucoup de personnes, c’est plus confortable.
+Doctolib a de vrais atouts. Il est connu, rassurant pour une partie des patients, et très pratique pour afficher des créneaux disponibles. La réservation se fait sans appel téléphonique, les rappels automatiques réduisent certains oublis, et l'agenda est centralisé.
 
-Cette simplicité est utile aussi côté praticien. L’agenda est centralisé. Les rappels automatiques limitent certains oublis. L’organisation administrative devient plus fluide.
+Pour un cabinet qui démarre, cela peut aider à recevoir des premières demandes, surtout dans les zones où les patients ont déjà le réflexe de chercher un praticien sur la plateforme.
 
-Pour un psychologue qui démarre son activité ou qui veut réduire les tâches de gestion, ce point est important (néamoins attention aux frais d'abonnement qui peuvent s'avérer assez coûteux surtout en début d'activité. Voir plus loin.).
+Mais il faut regarder l'outil pour ce qu'il est : un système de prise de rendez-vous et un annuaire. Ce n'est pas un espace éditorial complet pour présenter finement votre pratique.
 
-### Visibilité rapide
+### Ce que Doctolib montre moins bien
 
-Doctolib bénéficie d’une forte notoriété. Lorsqu’un patient cherche un praticien proche de chez lui, la plateforme apparaît souvent parmi les premiers résultats.
+Sur Doctolib, les profils suivent un format commun. C'est utile pour comparer vite des disponibilités, mais plus limité pour répondre aux questions qui comptent souvent avant une première consultation :
 
-Cette visibilité immédiate peut générer des demandes rapidement, surtout dans les zones urbaines où les usages numériques sont très installés. C’est un avantage réel pour un cabinet qui souhaite être trouvé vite.
+- Est-ce que ce psychologue reçoit les adultes, les adolescents, les enfants, les couples ?
+- Comment se déroule un premier rendez-vous ?
+- Quelle est sa manière de travailler ?
+- Quelles sont les modalités d'annulation ?
+- Où se trouve exactement le cabinet ?
+- Est-ce que le cadre me semble suffisamment clair et rassurant ?
 
-### Confiance liée à la plateforme
+En psychologie, la décision ne repose pas seulement sur un créneau libre. Le patient cherche aussi une forme de justesse : un ton, un cadre, une compréhension minimale de ce qui va se passer. C'est précisément ce qu'un site peut mieux porter.
 
-Pour une partie du public, Doctolib est un environnement familier. Le parcours est standardisé. Les informations sont présentées de façon claire. Cette familiarité crée une forme de confiance au moment du premier contact.
+## Le coût : un vrai sujet pour les psychologues en libéral
 
-Dans un domaine sensible comme la psychologie, ce facteur peut faciliter la prise de décision.
+### 149 € par mois, ce n'est pas neutre
 
-### Limite n°1 : dépendance à une plateforme
+Le tarif n'est pas un détail. Dans sa brochure de solutions, Doctolib affiche l'agenda en ligne à **149 € TTC / mois / praticien**. Sur une année, cela représente **1 788 € TTC**.
 
-Doctolib reste un service tiers. Le psychologue ne maîtrise ni l’outil ni ses évolutions. Si les conditions changent, le cabinet doit s’adapter.
+Pour un cabinet déjà rempli, ce montant peut être absorbé. Pour un psychologue qui s'installe, qui exerce à temps partiel, qui partage un cabinet, ou qui reçoit progressivement ses premiers patients, c'est une charge fixe importante.
 
-Cette dépendance peut devenir un point de vigilance sur la durée.
+La bonne question n'est donc pas "Doctolib est-il trop cher ?" mais plutôt :
 
-### Limite n°2 : peu de personnalisation
+> **Est-ce que j'ai besoin de payer ce prix pour obtenir ce dont j'ai réellement besoin aujourd'hui ?**
 
-Un profil Doctolib suit un format commun à tous les praticiens. C’est efficace pour comparer rapidement des disponibilités, mais cela limite la personnalisation.
+Si votre besoin principal est de permettre une prise de rendez-vous en ligne, il existe d'autres solutions. Certaines sont moins connues, moins chères, ou plus simples. Et un site internet peut être relié à chacune d'elles.
 
-Or, en psychologie, le choix d’un praticien repose souvent sur des éléments qualitatifs : cadre, posture, type d’accompagnement, public reçu. Ces éléments sont difficiles à développer en profondeur dans un format court.
+### Un site à 49 € / mois peut suffire dans beaucoup de cas
 
-### Limite n°3 : difficulté à expliquer sa pratique
+Un site professionnel avec une page claire, une présentation soignée, des informations pratiques, une optimisation locale et un bouton "Prendre rendez-vous" peut déjà remplir une grande partie du travail commercial :
 
-Doctolib est pensé pour orienter vers la prise de rendez-vous. Ce n’est pas un espace éditorial complet.
+- rassurer le patient avant le premier contact ;
+- expliquer votre cadre ;
+- améliorer votre présence sur Google ;
+- centraliser vos informations ;
+- orienter vers l'outil de réservation de votre choix ;
+- vous rendre moins dépendant d'une seule plateforme.
 
-Il est donc plus compliqué d’y détailler :
+Autrement dit, **49 € / mois pour un site avec widget ou lien de prise de rendez-vous**, c'est nettement moins que 149 € / mois pour un annuaire-agenda. Ce n'est pas le même produit, mais pour beaucoup de cabinets, c'est un meilleur premier investissement.
 
-- l’approche thérapeutique ;
-- les motifs de consultation accompagnés ;
-- le déroulement des premières séances ;
-- les réponses aux questions fréquentes.
+Le site devient votre socle. L'agenda devient une brique interchangeable.
 
-Pour certains patients, ces informations sont pourtant importantes avant de s’engager.
+## Zone rurale : Doctolib est-il toujours le meilleur levier ?
 
-## Ce qu’apporte un site internet
+Il faut être prudent : Doctolib n'est pas inutile en zone rurale. La plateforme peut rendre service partout, notamment pour éviter des appels, afficher des disponibilités et simplifier l'organisation.
 
-### Un espace professionnel personnel
+Mais l'intérêt commercial peut varier selon le territoire.
 
-Un **site internet cabinet psychologie** est un espace maîtrisé par le praticien. Le contenu, la structure et le ton ne dépendent pas d’un modèle unique.
+Dans une zone urbaine dense, un patient compare souvent plusieurs praticiens, filtre par disponibilité, par quartier, par spécialité ou par délai. La plateforme a alors une logique évidente : beaucoup d'offre, beaucoup de demande, beaucoup d'usages numériques.
 
-Le site peut évoluer avec l’activité : nouvelles spécialités, changement d’organisation, nouvelles informations pratiques. Cette autonomie est utile pour construire une présence numérique stable.
+Dans une zone rurale ou moins dense, la situation peut être différente :
 
-### Une présentation claire de l’approche
+- il y a parfois moins de psychologues référencés ;
+- le bouche-à-oreille local pèse davantage ;
+- les recherches Google du type "psychologue + ville" ou "psychologue près de moi" peuvent être plus importantes que la comparaison sur plateforme ;
+- certains patients veulent surtout savoir si vous recevez dans leur secteur, à quelle distance, avec quelles modalités ;
+- le retour sur investissement d'un abonnement mensuel élevé peut être moins évident si le volume de demandes via la plateforme reste limité.
 
-Un site permet de présenter sa pratique avec plus de précision, tout en restant simple et accessible.
+Le point vérifié est intéressant : dans une étude Doctolib sur la téléconsultation publiée en 2025, la plateforme indique que les usages de téléconsultation sont davantage urbains que ruraux. L'étude précise notamment que 47 % des consultations en présentiel ont lieu en zone rurale, contre 28 % des téléconsultations. Ce n'est pas une preuve que Doctolib serait "inutile" hors des villes, mais cela confirme qu'il faut raisonner par territoire, pas appliquer le même budget partout.
 
-Le psychologue peut expliquer :
+Pour un psychologue en zone rurale, le bon réflexe est donc très concret : regarder d'où viennent les demandes réelles. Si vos patients vous trouvent surtout par Google, par recommandation médicale, par bouche-à-oreille, par la fiche Google Business Profile ou par votre nom, un site clair peut être plus rentable qu'une dépendance forte à Doctolib.
 
-- son cadre de travail ;
-- les publics accompagnés ;
-- les modalités de consultation ;
-- les informations utiles avant un premier rendez-vous.
+## Pourquoi un site convertit mieux qu'un simple profil
 
-Cette clarté aide les patients à mieux comprendre ce qui est proposé. Elle peut aussi éviter des malentendus au premier contact.
+### 1. Il transforme une recherche en confiance
 
-### Un contenu plus détaillé
+Un patient qui cherche un psychologue arrive souvent avec de l'inquiétude, de la fatigue, de la pudeur ou une difficulté à formuler sa demande. Il ne cherche pas seulement une fiche. Il cherche des repères.
 
-Contrairement à un annuaire, un site permet de créer plusieurs pages. Il devient possible d’aborder des sujets fréquents de manière pédagogique : anxiété, stress, difficultés relationnelles, épuisement, parentalité, adolescence, etc.
+Un site bien écrit peut répondre sans forcer :
 
-L’objectif est d’informer de façon claire et responsable.
+- qui vous recevez ;
+- pour quels motifs ;
+- comment se passe le premier contact ;
+- combien dure une séance ;
+- quel est le tarif ;
+- comment prendre rendez-vous ;
+- ce que le patient peut attendre, et ce qu'il ne faut pas promettre.
 
-Ce contenu améliore la qualité du parcours patient. Une personne bien informée arrive souvent avec des attentes plus réalistes.
+Cette clarté est une forme de conversion. Elle ne manipule pas. Elle permet au patient de se dire : "je comprends où je vais".
 
-### Visibilité sur Google dans la durée
+### 2. Il améliore votre visibilité Google
 
-Un autre intérêt du site est le travail de la **psychologue visibilité Google**. Avec des pages bien structurées, le cabinet peut apparaître sur des recherches locales ou thématiques.
+Un profil sur une plateforme peut être visible, mais il ne construit pas votre propre présence web. Un site, lui, peut se positionner sur des recherches locales et utiles :
 
-Exemples :
-
-- psychologue + ville ;
-- psychologue anxiété + ville ;
+- psychologue à [ville] ;
+- psychologue anxiété [ville] ;
+- psychologue adolescent [ville] ;
+- cabinet de psychologie [secteur] ;
 - consultation psychologue en ligne.
 
-Ce travail soutient le **référencement psychologue** et diversifie les points d’entrée vers le cabinet. La visibilité ne repose plus uniquement sur un annuaire.
+Avec le temps, cela crée des points d'entrée qui vous appartiennent davantage. Votre nom, votre cabinet, vos pages et vos contenus deviennent trouvables directement.
 
-### Un actif numérique qui appartient au cabinet
+### 3. Il rend votre outil de rendez-vous secondaire
 
-Le site est un actif durable. Il peut inclure un lien direct vers Doctolib pour conserver une prise de rendez-vous fluide. Le cabinet garde ainsi la simplicité de réservation, tout en possédant son propre espace d’information.
+C'est un argument souvent sous-estimé : le site vous permet de changer d'outil sans changer toute votre communication.
 
-## Site internet et Doctolib : complémentarité
+Aujourd'hui, vous pouvez envoyer vers Doctolib. Demain, vers Maiia, Resalib, un logiciel métier, un formulaire sécurisé, un agenda intégré ou un bouton d'appel. Pour le patient, le parcours reste simple : il arrive sur votre site, comprend votre pratique, puis clique sur "Prendre rendez-vous".
 
-### Deux rôles différents
+Le cabinet garde le contrôle. L'outil de rendez-vous devient un choix pratique, pas une dépendance stratégique.
 
-La comparaison « Doctolib ou site » est souvent trop binaire.
+### 4. Il qualifie mieux les demandes
 
-- Doctolib est très efficace pour réserver rapidement.
-- Le site est plus adapté pour expliquer la pratique et structurer la communication.
+Un bon site ne sert pas seulement à "avoir plus de contacts". Il sert aussi à recevoir des contacts plus ajustés.
 
-Les deux outils répondent donc à des objectifs distincts.
+Si votre page explique clairement vos publics, vos limites, vos modalités, vos tarifs, votre adresse et votre manière de travailler, certaines personnes comprendront immédiatement si vous correspondez ou non à leur besoin. C'est précieux pour elles, et pour vous.
 
-### Un parcours patient plus lisible
+Moins de rendez-vous mal orientés, moins de questions répétitives, moins d'ambiguïté au premier échange.
 
-La combinaison est souvent simple :
+### 5. Il construit un actif durable
 
-- le site présente le cabinet et répond aux questions principales ;
-- un bouton visible renvoie vers Doctolib pour réserver ;
-- le profil Doctolib peut, de son côté, renvoyer vers le site pour en savoir plus.
+Un profil Doctolib reste lié aux règles de Doctolib. Un site, lui, peut évoluer avec votre cabinet :
 
-Ce parcours est clair : information puis prise de rendez-vous.
+- nouvelle adresse ;
+- téléconsultation ou arrêt de la téléconsultation ;
+- spécialisation ;
+- changement de tarifs ;
+- nouvelles pages ;
+- meilleure fiche Google ;
+- contenus pédagogiques ;
+- page d'accès ;
+- informations pour les premiers rendez-vous.
 
-### Moins de dépendance, plus de cohérence
+Vous ne repartez pas de zéro à chaque changement d'outil.
 
-Associer les deux supports permet de réduire la dépendance à une seule plateforme, tout en conservant ses avantages pratiques.
+## Site internet + rendez-vous en ligne : le meilleur compromis
 
-Cette approche améliore aussi la cohérence de la communication. Les informations clés sont maîtrisées sur le site, puis converties en rendez-vous via Doctolib.
+La meilleure stratégie est souvent simple :
 
-Dans cette logique, le mot-clé **site internet psychologue Doctolib** décrit une stratégie d’équilibre, pas une opposition.
+1. le patient vous trouve sur Google, votre fiche Google, un annuaire, une recommandation ou un lien ;
+2. il arrive sur votre site ;
+3. il comprend votre cadre en quelques minutes ;
+4. il clique sur "Prendre rendez-vous" ;
+5. il réserve via l'outil que vous avez choisi.
 
-## Dans quels cas un site est particulièrement utile
+Ce parcours respecte à la fois la décision du patient et votre autonomie professionnelle.
 
-### 1. Installation récente en libéral
+Il n'est pas nécessaire d'avoir un site compliqué. Pour un psychologue, un site efficace peut rester sobre :
 
-En début d’activité, Doctolib peut aider à générer rapidement des prises de rendez-vous. Mais créer un site dès le départ permet de poser des bases solides : présentation, zone géographique, cadre de consultation, contact.
+- une page d'accueil claire ;
+- une page sur votre approche ;
+- une page informations pratiques ;
+- une page contact ;
+- une optimisation locale ;
+- un bouton de prise de rendez-vous visible ;
+- un texte adapté à la déontologie de la profession.
 
-Le cabinet construit ainsi une présence qui ne dépend pas d’un seul canal.
+La simplicité est souvent plus convaincante qu'un site rempli d'effets ou de promesses.
 
-### 2. Spécialisation clinique
+## Quand choisir Doctolib, un site, ou les deux ?
 
-Quand un psychologue travaille sur des problématiques spécifiques, la présentation détaillée devient essentielle.
+### Doctolib peut être pertinent si
 
-Un site facilite l’explication des champs d’accompagnement et des modalités de prise en charge. Cette précision aide les patients à savoir si la proposition correspond à leur besoin.
+- vous voulez un agenda en ligne très connu ;
+- beaucoup de patients de votre secteur utilisent déjà la plateforme ;
+- vous avez besoin de réduire fortement les appels ;
+- votre budget mensuel le permet ;
+- vous mesurez que la plateforme vous apporte réellement des rendez-vous.
 
-### 3. Objectif de visibilité locale
+### Un site internet est prioritaire si
 
-Pour être trouvé dans une ville ou un secteur précis, le site est un levier pertinent. Des pages locales bien rédigées soutiennent la **psychologue visibilité Google**.
+- vous voulez être trouvé sur Google localement ;
+- vous voulez présenter votre pratique avec nuance ;
+- vous souhaitez garder la main sur votre communication ;
+- vous ne voulez pas dépendre d'un seul annuaire ;
+- vous cherchez une solution plus économique au démarrage ;
+- vous exercez dans un secteur où le bouche-à-oreille et la recherche locale comptent beaucoup ;
+- vous voulez pouvoir connecter n'importe quel outil de rendez-vous.
 
-Cette stratégie complète l’annuaire et renforce le **référencement du psychologue** dans la durée.
+### Les deux peuvent fonctionner ensemble si
 
-### 4. Besoin de communication plus claire
+- Doctolib vous apporte déjà des patients ;
+- vous voulez améliorer votre taux de conversion ;
+- vous souhaitez que les patients comprennent mieux votre cadre avant de réserver ;
+- vous voulez préparer une éventuelle sortie de plateforme plus tard.
 
-Beaucoup de questions reviennent avant un premier rendez-vous : durée d’une séance, fonctionnement du suivi, politique d’annulation, téléconsultation, public accueilli.
+Dans ce cas, le site ne fait pas doublon. Il devient la page de référence du cabinet, et Doctolib reste simplement l'agenda.
 
-Un site permet de centraliser ces informations de façon claire et stable. Le patient gagne en lisibilité. Le praticien gagne du temps sur les explications répétées.
+## Le bon calcul : coût, autonomie, qualité des demandes
 
-### 5. Volonté de structurer une image professionnelle
+Pour décider, comparez trois choses.
 
-Un site aide à maintenir une communication cohérente, avec le même niveau d’information sur la durée. Dans un métier fondé sur la confiance, cette cohérence est un vrai atout.
+**Le coût mensuel.** 149 € TTC / mois représente une charge annuelle importante. 49 € / mois pour un site professionnel avec intégration d'un outil de rendez-vous peut être plus adapté si votre priorité est la présence web et la confiance.
 
-Il s’agit d’une logique de clarté professionnelle.
+**La source réelle de vos demandes.** Si vos patients arrivent par recommandation, Google, votre fiche établissement ou votre nom, un site bien construit peut mieux soutenir ce parcours qu'une fiche standardisée.
 
-## Comment décider concrètement ?
+**La qualité des demandes.** Un site n'a pas seulement vocation à générer plus de clics. Il doit aider les bonnes personnes à comprendre votre cadre et à prendre rendez-vous plus sereinement.
 
-### Les bonnes questions à se poser
+## Conclusion : ne louez pas toute votre visibilité
 
-Avant de créer un site, il est utile d’évaluer quelques points :
+Doctolib peut être un bon outil. Pour certains cabinets, il apporte une vraie simplicité et une visibilité immédiate. Mais il ne doit pas être confondu avec une stratégie de présence en ligne.
 
-- Le profil Doctolib répond-il déjà à toutes les questions des patients ?
-- Le cabinet souhaite-t-il présenter une approche spécifique plus en détail ?
-- La visibilité actuelle dépend-elle d’une seule plateforme ?
-- Le besoin local sur Google est-il important dans la zone d’exercice ?
+Un psychologue a besoin d'un espace clair, stable, sobre et maîtrisé pour présenter sa pratique. Un site internet répond à cet enjeu. Il peut ensuite être relié à Doctolib, à une alternative moins chère, à un widget de rendez-vous, à un formulaire ou à un simple contact direct.
 
-Si plusieurs réponses sont « oui », un site peut apporter une vraie utilité.
+Le choix le plus solide n'est donc pas forcément "Doctolib ou site internet". C'est plutôt :
 
-### Une démarche progressive possible
+> **un site qui vous appartient, relié à l'outil de rendez-vous qui vous convient vraiment.**
 
-Il n’est pas nécessaire de lancer un site complexe. Une version simple peut suffire au départ :
+Pour beaucoup de psychologues, c'est une solution plus économique, plus souple et plus durable. Et si votre budget est limité au démarrage, un site professionnel à 49 € / mois avec prise de rendez-vous intégrée ou connectée peut être un meilleur premier pas qu'une plateforme à 149 € / mois.
 
-- page de présentation ;
-- page d’informations pratiques ;
-- page de contact ;
-- lien de prise de rendez-vous Doctolib.
+Pour approfondir le budget, vous pouvez lire le guide [combien coûte vraiment un site internet pour psychologue ?](/blog/combien-coute-site-internet-2026/) ou consulter directement les [tarifs](/tarifs/).
 
-Ensuite, le contenu peut évoluer en fonction des besoins réels du cabinet.
-
-## Conclusion
-
-Doctolib reste un outil efficace pour la réservation en ligne, la visibilité rapide et la simplicité d’accès au rendez-vous. Pour un psychologue en libéral, c’est souvent un support central.
-
-Un site internet ne remplace pas Doctolib. Il le complète. Il permet de présenter sa pratique avec plus de clarté, de développer un **site internet cabinet psychologie** cohérent et d’améliorer la **psychologue visibilité Google** grâce à un meilleur **référencement du psychologue**.
-
-La question n’est donc pas de choisir l’un contre l’autre. Dans de nombreux cas, la combinaison **site internet psychologue Doctolib** est la solution la plus lisible : un annuaire pour réserver facilement, un site pour comprendre précisément l’accompagnement proposé.
+Sources consultées : [tarifs Doctolib](https://info.doctolib.fr/tarifs/) et [brochure tarifaire Doctolib](https://media.doctolib.com/image/upload/mkg/file/brochure_des_solutions_doctolib_with_price.pdf), notamment l'offre agenda à 149 € TTC / mois / praticien ; [étude Doctolib sur la téléconsultation](https://media.doctolib.com/image/upload/mkg/img/teleconsultation_etat_des_lieux_et_usages_au_sein_de_la_medecine_de_ville.pdf), qui observe une surreprésentation des usages urbains de la téléconsultation.
