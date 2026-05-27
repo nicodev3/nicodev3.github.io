@@ -16,40 +16,21 @@ const bgClass = isStitch
 	? 'bg-surface'
 	: { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 
-const serenityFeatures = isStitch
-	? [
-			'Hébergement & nom de domaine inclus',
-			'Conforme RGPD & mentions légales',
-			'1 modification simple par mois',
-		]
-	: [
-			'Accompagnement à la rédaction du contenu de votre site pour une présentation claire et professionnelle',
-			'Votre site reste en ligne et accessible en permanence',
-			"L'adresse de votre site (votre-domaine.fr) est incluse et gérée pour vous",
-			"L'hébergement est inclus dans l'abonnement",
-			'Sécurité et protection intégrées',
-			'1 modification simple par mois (texte ou photo)',
-			'Mentions légales et informations obligatoires incluses',
-			'Conforme RGPD',
-			'Sauvegardes régulières',
-		];
+const serenityFeatures = [
+	'Création du site professionnel et accompagnement à la rédaction',
+	'Hébergement, nom de domaine et sauvegardes inclus*',
+	'Intégration de votre widget ou lien de prise de RDV (Doctolib, Qare, Maiia, Calendly...)',
+	'Mentions légales, informations obligatoires et base RGPD',
+	'1 modification simple par mois (texte, photo, tarif, horaires ou lien RDV)',
+];
 
-const visibilityFeatures = isStitch
-	? [
-			"Tout le contenu de l'offre Sérénité",
-			'Amélioration SEO & fiche Google',
-			'Modernisation annuelle incluse',
-			'Modifications illimitées',
-		]
-	: [
-			'Tout le contenu de l’offre Sérénité',
-			"Ajout d'articles de blog thématiques",
-			'Amélioration de votre visibilité sur Google*',
-			'Mise en place de votre fiche Google My Business',
-			'Vérification mensuelle des performances du site avec rapport détaillé',
-			'Modifications de contenu incluses (changements de tarifs, ajouts/retraits de pages, textes...)',
-			'Modernisation du site tous les ans',
-		];
+const visibilityFeatures = [
+	"Tout le contenu de l'offre Sérénité",
+	'Fiche Google Business Profile mise en place ou optimisée',
+	'Optimisation SEO locale et suivi mensuel des performances*',
+	'Mises à jour régulières de vos contenus : textes, tarifs, horaires, spécialités, photos et pages déjà présentes',
+	'Modernisation annuelle du site pour garder une présence claire et rassurante',
+];
 ---
 
 <section id="offres" class:list={['section-y scroll-mt-28 border-b border-border', bgClass]}>
@@ -60,7 +41,7 @@ const visibilityFeatures = isStitch
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
 				{isStitch
-					? 'Sans engagement, sans frais cachés, sans soucis techniques.'
+					? 'Deux abonnements sans engagement : un site fiable à gérer pour vous, puis une formule renforcée si vous voulez travailler votre visibilité locale.'
 					: 'Un abonnement clair pour un site professionnel qui fonctionne : je m’occupe de tout (hébergement, nom de domaine, sécurité, mises en ligne et mises à jour) pour que vous puissiez vous concentrer sur vos patients. L’idée n’est pas de produire des sites à la chaîne, mais de proposer un cadre simple et sérieux, retravaillé avec soin pour chaque psychologue.'}
 			</p>
 		</header>
@@ -77,7 +58,7 @@ const visibilityFeatures = isStitch
 				variant={isStitch ? 'stitch' : 'default'}
 				name="Sérénité"
 				price="29€"
-				description="Un site fiable et conforme, sans rien avoir à gérer côté technique."
+				description="Pour être présent en ligne avec un site clair, conforme et relié à votre prise de rendez-vous."
 				features={serenityFeatures}
 				buttonLabel={
 					hasStripePaymentLinks
@@ -97,7 +78,7 @@ const visibilityFeatures = isStitch
 				price="49€"
 				description={
 					isStitch
-						? 'Renforcez votre visibilité locale et restez à jour.'
+						? 'Pour renforcer votre visibilité locale et garder un site vivant dans le temps.'
 						: 'Pour renforcer votre visibilité locale et garder un site clair, rapide et rassurant dans le temps.'
 				}
 				features={visibilityFeatures}
@@ -126,6 +107,16 @@ const visibilityFeatures = isStitch
 				>
 					Le paiement en ligne s’effectue sur une page sécurisée Stripe. Vous pouvez aussi commencer par un échange via le
 					formulaire de devis.
+				</p>
+			)
+		}
+
+		{
+			isStitch && (
+				<p class="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
+					* Un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable autour de
+					8 à 40 € par mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement.
+					La visibilité Google dépend ensuite de votre ville, de la concurrence locale et de la qualité des contenus.
 				</p>
 			)
 		}
@@ -160,9 +151,11 @@ const visibilityFeatures = isStitch
 					</div>
 
 					<p class="mt-4 text-xs text-muted sm:text-sm">
-						* Les solutions techniques pour un référencement local optimal sont mises en place avec soin, mais les
+						* À titre indicatif, un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable
+						autour de 8 à 40 € par mois lorsqu'ils sont pris séparément. Ici, ils sont intégrés à l'abonnement.
+						Les solutions techniques pour un référencement local optimal sont mises en place avec soin, mais les
 						résultats Google peuvent prendre du temps à apparaître, surtout dans les villes très concurrentielles.
-						Votre site sur la première page n’est pas garantie immédiatement. Une vérification mensuelle est incluse
+						Votre site sur la première page n’est pas garanti immédiatement. Une vérification mensuelle est incluse
 						pour vous assurer que tout est en ordre.
 					</p>
 
