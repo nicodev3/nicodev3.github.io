@@ -1,13 +1,13 @@
 ---
 title: "Sites internet pour psychologues : attention aux promesses trop belles pour être vraies"
-description: "Certaines offres de création de site internet pour psychologue promettent une visibilité rapide. Voici comment évaluer ces promesses avec nuance."
+description: "Certaines offres de création de site internet pour psychologue promettent une visibilité rapide. D'autres vont plus loin dans les pratiques abusives. Voici comment évaluer ces offres avec lucidité."
 pubDate: "2026-03-28"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
 tags: ["psychologue", "site internet", "référencement", "seo local", "doctolib", "visibilité google"]
 ---
 
-*Temps de lecture : 8 minutes*
+*Temps de lecture : 10 minutes*
 
 Quand on s'installe en libéral, ou quand on souhaite améliorer sa présence en ligne, la question du **site internet pour psychologue** arrive vite. Beaucoup de confrères et consœurs ont déjà une fiche Google, parfois un profil Doctolib, mais pas toujours un site clair pour présenter leur pratique.
 
@@ -44,6 +44,20 @@ Autrement dit, une forme de standardisation peut être utile. Un bon **site inte
 La standardisation générique applique la même recette à tout le monde. Même structure, mêmes blocs, mêmes formulations, parfois presque les mêmes pages quel que soit le métier. Le résultat peut être propre, mais il reste souvent peu précis et mal adapté aux questions concrètes des patients.
 
 Une standardisation pensée pour les psychologues, au contraire, part du métier. Elle tient compte de la sobriété attendue, du besoin d'expliquer le cadre, de l'importance du **référencement psychologue** local, et du fait qu'un site doit rassurer sans sur-vendre.
+
+## Certaines plateformes vont plus loin dans les pratiques problématiques
+
+Au-delà des offres simplement trop marketées, il existe une catégorie de plateformes dont les pratiques sont franchement problématiques. Plusieurs praticiens, dont certains témoignages ont été relayés par des associations de défense des consommateurs, font état de situations préoccupantes.
+
+L'une des plus courantes : la création d'un profil à votre nom sans vous avoir consulté. Vous découvrez un jour que votre nom figure sur une plateforme, accompagné parfois d'un agenda de prise de rendez-vous que vous n'avez jamais validé. Des patients peuvent alors prendre rendez-vous via ce faux agenda, se présenter à votre cabinet à une date que vous n'avez jamais confirmée, et repartir sans avoir été reçus. Des témoignages évoquent même l'ajout d'un bouton de réservation directement sur la fiche Google Maps du cabinet, renvoyant vers la plateforme — et ce, sans aucun consentement du praticien. Ce type de pratique a été qualifié de vente forcée par plusieurs praticiens qui l'ont dénoncé publiquement.
+
+Il y a aussi la question de la vérification des qualifications. Certains annuaires qui se présentent comme des références pour "trouver un psychologue" permettent en réalité à n'importe qui de créer un profil, sans vérification du diplôme, du numéro RPPS ou de l'inscription au répertoire ADELI. Un patient en souffrance ne voit pas la différence entre un psychologue clinicien et un "psycho-praticien" ou un "thérapeute holistique" présentés côte à côte dans le même annuaire. Quand une plateforme qui se dit spécialisée dans votre métier ne distingue pas les titres protégés des appellations librement inventées, elle crée une confusion qui vous dessert autant qu'elle nuit aux patients.
+
+La question du rendement est également documentée. Des praticiens inscrits à des tarifs élevés (parfois plusieurs centaines d'euros par an) font état d'un retour proche de zéro : un ou deux contacts en plusieurs mois, dont une part ne donne pas suite. Dans certains témoignages, des doutes sont exprimés sur l'authenticité même des quelques prises de contact reçues, tant la situation semble orchestrée pour apparaître juste après une réclamation.
+
+Enfin, la résiliation est souvent rendue difficile. Des praticiens rapportent que leur profil continue d'apparaître en ligne longtemps après avoir mis fin à leur abonnement, parfois avec des informations erronées ou des fonctionnalités maintenues sans consentement. Vérifier, avant de s'engager, les conditions exactes de sortie est donc essentiel.
+
+Ces dérives ne sont pas universelles, mais elles sont suffisamment documentées pour justifier une vigilance réelle avant de confier sa visibilité en ligne à une plateforme tierce.
 
 ## Un accompagnement souvent limité dans les offres industrialisées
 
@@ -91,12 +105,16 @@ Nicodev est né de cette idée. Ce n'est pas mon activité principale, ce qui me
 
 ## Conclusion
 
-Toutes les offres de création de site pour psychologues ne se valent pas, mais elles ne sont pas à rejeter en bloc non plus. D'autres sont simplement présentées de manière trop flatteuse ou trop vague.
+Toutes les offres de création de site ou de référencement pour psychologues ne se valent pas. Certaines sont simplement trop flatteuses ou trop vagues. D'autres présentent des pratiques franchement problématiques, documentées par de nombreux témoignages de professionnels.
 
 Avant de choisir, il vaut donc la peine de ralentir un peu et de poser quelques questions simples :
 
 - qu'est-ce qui est réellement inclus dans l'offre ?
 - les promesses de référencement sont-elles réalistes ?
 - le site proposé est-il adapté à ma pratique, à mon ton, et à mon cadre ?
+- mon nom de domaine m'appartient-il vraiment ?
+- puis-je résilier sans que mon profil continue d'apparaître en ligne ?
+- la plateforme mélange-t-elle des psychologues diplômés avec des praticiens aux titres non réglementés ?
+- des profils ou des agendas peuvent-ils être créés à mon nom sans mon consentement ?
 
-Un bon **site internet psychologue** n'a pas besoin d'en faire trop. Il doit surtout être clair et juste dans ce qu'il promet.
+Un bon **site internet psychologue** n'a pas besoin d'en faire trop. Il doit surtout être clair, honnête dans ce qu'il promet, et entièrement sous votre contrôle.
