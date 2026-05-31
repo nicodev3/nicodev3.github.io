@@ -3,18 +3,14 @@ import OfferCard from './OfferCard.astro';
 
 export interface Props {
 	background?: 'surface' | 'white' | 'background';
-	variant?: 'default' | 'stitch';
 }
 
-const { background = 'white', variant = 'default' } = Astro.props;
-const isStitch = variant === 'stitch';
+const { background = 'surface' } = Astro.props;
 
 const stripePaymentLinkSerenite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_SERENITE?.trim();
 const stripePaymentLinkVisibilite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_VISIBILITE?.trim();
 const hasStripePaymentLinks = Boolean(stripePaymentLinkSerenite && stripePaymentLinkVisibilite);
-const bgClass = isStitch
-	? 'bg-surface'
-	: { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
+const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 
 const serenityFeatures = [
 	'Création du site professionnel et accompagnement à la rédaction',
@@ -41,55 +37,29 @@ const visibilityFeatures = [
 				Une offre simple, tout compris
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				{isStitch
-					? 'Deux abonnements sans engagement : un site fiable à gérer pour vous, puis une formule renforcée si vous voulez travailler votre visibilité locale.'
-					: 'Un abonnement clair pour un site professionnel qui fonctionne : je m’occupe de tout (hébergement, nom de domaine, sécurité, mises en ligne et mises à jour) pour que vous puissiez vous concentrer sur vos patients. L’idée n’est pas de produire des sites à la chaîne, mais de proposer un cadre simple et sérieux, retravaillé avec soin pour chaque pratique.'}
+				Deux abonnements sans engagement : un site fiable à gérer pour vous, puis une formule renforcée si vous
+				voulez travailler votre visibilité locale.
 			</p>
 		</header>
 
-		<div
-			class:list={[
-				'grid grid-cols-1',
-				isStitch
-					? 'mx-auto mt-12 max-w-4xl gap-10 pt-0 md:grid-cols-2 lg:gap-12'
-					: 'mt-10 gap-6 pt-8 sm:pt-10 lg:mt-12 lg:grid-cols-2 lg:gap-8',
-			]}
-		>
+		<div class="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-10 pt-0 md:grid-cols-2 lg:gap-12">
 			<OfferCard
-				variant={isStitch ? 'stitch' : 'default'}
 				name="Sérénité"
 				price="29€"
 				description="Pour être présent en ligne avec un site clair, conforme et relié à votre prise de rendez-vous."
 				features={serenityFeatures}
-				buttonLabel={
-					hasStripePaymentLinks
-						? 'Échanger avant de s’abonner'
-						: isStitch
-							? 'Me contacter'
-							: 'Me contacter — Sérénité'
-				}
+				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de s’abonner' : 'Me contacter'}
 				buttonHref="/devis/"
 				subscribeHref={stripePaymentLinkSerenite}
 				subscribeLabel="S’abonner — 29 €/mois"
 			/>
 
 			<OfferCard
-				variant={isStitch ? 'stitch' : 'default'}
 				name="Visibilité & Confiance"
 				price="49€"
-				description={
-					isStitch
-						? 'Pour renforcer votre visibilité locale et garder un site vivant dans le temps.'
-						: 'Pour renforcer votre visibilité locale et garder un site clair, rapide et rassurant dans le temps.'
-				}
+				description="Pour renforcer votre visibilité locale et garder un site vivant dans le temps."
 				features={visibilityFeatures}
-				buttonLabel={
-					hasStripePaymentLinks
-						? 'Échanger avant de s’abonner'
-						: isStitch
-							? 'Me contacter'
-							: 'Me contacter — Visibilité & Confiance'
-				}
+				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de s’abonner' : 'Me contacter'}
 				buttonHref="/devis/"
 				subscribeHref={stripePaymentLinkVisibilite}
 				subscribeLabel="S’abonner — 49 €/mois"
@@ -100,78 +70,17 @@ const visibilityFeatures = [
 
 		{
 			hasStripePaymentLinks && (
-				<p
-					class:list={[
-						'mx-auto max-w-2xl text-center text-sm text-muted',
-						isStitch ? 'mt-8' : 'mt-6',
-					]}
-				>
+				<p class="mx-auto mt-8 max-w-2xl text-center text-sm text-muted">
 					Le paiement en ligne s’effectue sur une page sécurisée Stripe. Vous pouvez aussi commencer par un échange via le
 					formulaire de devis.
 				</p>
 			)
 		}
 
-		{
-			isStitch && (
-				<p class="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
-					* Un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable autour de
-					8 à 40 € par mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement.
-					La visibilité Google dépend ensuite de votre ville, de la concurrence locale et de la qualité des contenus.
-				</p>
-			)
-		}
-
-		{
-			!isStitch && (
-				<>
-					<div class="mt-8 rounded-lg border border-primary/30 bg-primary/5 p-4 text-sm text-muted sm:mt-10 sm:p-5 sm:text-base">
-						<p class="font-medium text-foreground">Un site professionnel, simple, sans gestion technique.</p>
-						<p class="mt-1">
-							Vous n’avez rien à gérer côté web (hébergement, nom de domaine, mises à jour, sauvegardes,
-							réglages) : tout est pris en charge pour vous dans l’abonnement.
-						</p>
-						<p class="mt-2">
-							Vous échangez directement avec la personne qui conçoit et maintient votre site, pas avec une
-							chaîne de production ou des interlocuteurs qui changent en cours de route.
-						</p>
-						<p class="mt-2 font-medium text-foreground">Formule sans engagement :</p>
-						<p class="mt-1">
-							Vous pouvez arrêter l’abonnement à tout moment, sans frais cachés ni petite ligne en bas de page.
-						</p>
-						<p class="mt-4">
-							Avant de choisir une formule, vous pouvez
-							<a
-								href="/exemples-sites-psychologue/"
-								class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
-							>
-								voir un aperçu concret des sites proposés aux psychologues
-							</a>
-							et vérifier si le rendu correspond à ce que vous imaginez pour votre cabinet.
-						</p>
-					</div>
-
-					<p class="mt-4 text-xs text-muted sm:text-sm">
-						* À titre indicatif, un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable
-						autour de 8 à 40 € par mois lorsqu'ils sont pris séparément. Ici, ils sont intégrés à l'abonnement.
-						Les solutions techniques pour un référencement local optimal sont mises en place avec soin, mais les
-						résultats Google peuvent prendre du temps à apparaître, surtout dans les villes très concurrentielles.
-						Votre site sur la première page n’est pas garanti immédiatement. Une vérification mensuelle est incluse
-						pour vous assurer que tout est en ordre.
-					</p>
-
-					<div class="mt-10 rounded-lg border border-border bg-background p-5 shadow-sm sm:mt-12 sm:p-6">
-						<h3 class="mb-3 text-base font-semibold text-foreground sm:text-lg">
-							Pourquoi cette solution est différente
-						</h3>
-						<p class="text-sm leading-relaxed text-muted sm:text-base">
-							Je limite volontairement le nombre de projets pour garder le même interlocuteur du brief aux mises à
-							jour, plutôt qu’une chaîne de production. L’objectif est un site sobre, adapté à une pratique
-							réglementée, qui informe et rassure sans posture commerciale agressive.
-						</p>
-					</div>
-				</>
-			)
-		}
+		<p class="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
+			* Un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable autour de 8 à 40 € par
+			mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement. La visibilité Google dépend
+			ensuite de votre ville, de la concurrence locale et de la qualité des contenus.
+		</p>
 	</div>
 </section>

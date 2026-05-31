@@ -2,13 +2,6 @@
 import TestimonialCard from './TestimonialCard.astro';
 import { maltTestimonials, MALT_PROFILE_URL, googleTestimonial, GOOGLE_BUSINESS_URL } from '../data/testimonials';
 
-export interface Props {
-	variant?: 'default' | 'stitch';
-}
-
-const { variant = 'default' } = Astro.props;
-const isStitch = variant === 'stitch';
-
 /** Google en 2ᵉ position, puis le reste des recommandations Malt. */
 const carouselTestimonials = [
 	{ source: 'malt' as const, ...maltTestimonials[0] },
@@ -19,44 +12,13 @@ const carouselTestimonials = [
 
 <section
 	id="temoignages"
-	class:list={[
-		'section-y scroll-mt-28 border-b border-border',
-		isStitch
-			? 'bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))]'
-			: 'relative overflow-hidden bg-surface-alt',
-	]}
+	class="section-y scroll-mt-28 border-b border-border bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))]"
 >
-	{
-		!isStitch && (
-			<div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-primary/10 to-transparent blur-3xl" />
-		)
-	}
 	<div class="shell-layout">
-		<div class:list={['text-center', isStitch ? 'mb-16' : 'mb-14']}>
-			{
-				!isStitch && (
-					<div class="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs font-medium text-muted shadow-sm backdrop-blur-sm">
-						<span class="h-1.5 w-1.5 rounded-full bg-primary" />
-						<span>Des psychologues déjà accompagnés</span>
-					</div>
-				)
-			}
-			<h2
-				class:list={[
-					'font-heading font-semibold tracking-tight text-foreground',
-					isStitch ? 'text-3xl sm:text-4xl' : 'mt-5 text-3xl md:text-4xl lg:text-5xl',
-				]}
-			>
+		<div class="mb-16 text-center">
+			<h2 class="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
 				Ils ont choisi un site pensé pour leur pratique
 			</h2>
-			{
-				!isStitch && (
-					<p class="shell-prose mx-auto mt-4 text-sm text-muted md:text-base">
-						Des psychologues en libéral qui voulaient un site simple, professionnel, sans charge technique,
-						pour se concentrer sur leurs patients.
-					</p>
-				)
-			}
 		</div>
 
 		<div class="mb-10 text-center md:mb-12">
@@ -77,15 +39,13 @@ const carouselTestimonials = [
 				aria-roledescription="carrousel"
 				aria-label="Témoignages — faites défiler horizontalement"
 			>
-				{carouselTestimonials.map((t, index) => (
+				{carouselTestimonials.map((t) => (
 					<div class="snap-start shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
 						<TestimonialCard
-							variant={index % 3}
-							style={isStitch ? 'stitch' : 'default'}
 							source={t.source}
 							rating={t.source === 'google' ? t.rating : undefined}
 							quote={t.quote}
-							author={isStitch ? t.short : t.author}
+							author={t.short}
 						/>
 					</div>
 				))}
@@ -97,10 +57,7 @@ const carouselTestimonials = [
 			>
 				<button
 					type="button"
-					class:list={[
-						'inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40',
-						isStitch ? 'btn-primary-solid' : 'border border-border bg-background text-foreground shadow-sm hover:border-primary/50 hover:text-primary disabled:opacity-40',
-					]}
+					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
 					aria-label="Témoignages précédents"
 					data-testimonials-carousel-prev
 				>
@@ -127,10 +84,7 @@ const carouselTestimonials = [
 
 				<button
 					type="button"
-					class:list={[
-						'inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40',
-						isStitch ? 'btn-primary-solid' : 'border border-border bg-background text-foreground shadow-sm hover:border-primary/50 hover:text-primary disabled:opacity-40',
-					]}
+					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
 					aria-label="Témoignages suivants"
 					data-testimonials-carousel-next
 				>
@@ -139,50 +93,24 @@ const carouselTestimonials = [
 			</div>
 		</div>
 
-		<div class:list={['text-center', isStitch ? 'mt-12' : 'mt-10 flex flex-col items-center gap-3']}>
-			{
-				!isStitch && (
-					<p class="type-eyebrow text-muted">Transparence sur les retours</p>
-				)
-			}
-			<div class:list={['flex flex-col items-center gap-2', isStitch ? 'text-base' : 'max-w-xl text-sm text-muted']}>
+		<div class="mt-12 text-center">
+			<div class="flex flex-col items-center gap-2 text-base">
 				<p>
-					{
-						isStitch ? (
-							<a
-								href={MALT_PROFILE_URL}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
-							>
-								Voir tous les avis sur Malt
-							</a>
-						) : (
-							<>
-								Vous pouvez aussi consulter d’autres avis détaillés sur{' '}
-								<a
-									href={MALT_PROFILE_URL}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary"
-								>
-									mon profil Malt
-								</a>
-								.
-							</>
-						)
-					}
+					<a
+						href={MALT_PROFILE_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
+					>
+						Voir tous les avis sur Malt
+					</a>
 				</p>
-				<p class={isStitch ? '' : 'text-sm text-muted'}>
+				<p>
 					<a
 						href={GOOGLE_BUSINESS_URL}
 						target="_blank"
 						rel="noopener noreferrer"
-						class:list={[
-							isStitch
-								? 'font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground'
-								: 'font-medium text-foreground underline underline-offset-4 decoration-primary/50 hover:text-primary hover:decoration-primary',
-						]}
+						class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
 					>
 						Voir la fiche Google
 					</a>

@@ -3,12 +3,37 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
 import FaqSection from '../components/FaqSection.astro';
-import { Phone, MessageCircle } from '@lucide/astro';
+import { ClipboardList, GraduationCap, MapPin, MessageCircle, Phone, Search } from '@lucide/astro';
 import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
 import defaultOgWebp from '../assets/images/blog/development.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const pageUrl = new URL('/site-internet-psychomotricien/', baseUrl).href;
+
+const legitimacyItems = [
+	{
+		Icon: GraduationCap,
+		title: 'Formé à la psychomotricité',
+		description: 'DE de psychomotricien, ISRP (1996), avant mon parcours de psychologue et de développeur web.',
+	},
+	{
+		Icon: ClipboardList,
+		title: 'Contenu guidé',
+		description: 'Un formulaire simple pour préciser vos bilans, suivis, publics accompagnés et informations pratiques.',
+	},
+	{
+		Icon: MapPin,
+		title: 'Ancrage local',
+		description: 'Une structure pensée pour votre cabinet, votre ville, votre fiche Google et vos parcours de contact.',
+	},
+] as const;
+
+const localSearchExamples = [
+	'psychomotricien Lyon',
+	'psychomotricien enfant Toulouse',
+	'bilan psychomoteur Nantes',
+	'cabinet psychomotricité Bordeaux',
+] as const;
 
 const psychomotricienFaqItems = [
 	{
@@ -25,6 +50,11 @@ const psychomotricienFaqItems = [
 		question: 'Le référencement local est-il garanti ?',
 		answer:
 			'Non, aucun prestataire sérieux ne peut garantir une position Google. En revanche, le site est construit avec des bases solides : structure claire, performance mobile, titres pertinents, données structurées et cohérence avec votre ville ou secteur.',
+	},
+	{
+		question: 'Peut-on parler des motifs de consultation sans surpromettre ?',
+		answer:
+			'Oui. Le site peut expliquer les demandes fréquentes avec prudence : bilan psychomoteur, graphomotricité, coordination, agitation, repérage dans l’espace ou le temps, selon votre pratique réelle. L’objectif est d’informer, pas de promettre un résultat.',
 	},
 	{
 		question: 'Puis-je intégrer Doctolib, Maiia ou un autre outil de rendez-vous ?',
@@ -79,7 +109,7 @@ const breadcrumbSchema = {
 
 <Layout
 	title="Site internet pour psychomotricien | Création sobre et SEO local"
-	description="Création de site internet pour psychomotricien : présenter votre cabinet, vos publics accompagnés et vos modalités de consultation. Par un ancien psychomotricien, psychologue et développeur web."
+	description="Création de site internet pour psychomotricien : présenter votre cabinet, vos publics accompagnés et vos modalités de consultation. Par un ancien psychomotricien diplômé d’État, psychologue et développeur web."
 	image={defaultOgWebp}
 >
 	<Fragment slot="head">
@@ -116,6 +146,35 @@ const breadcrumbSchema = {
 		</div>
 	</div>
 
+	<section class="border-b border-border bg-surface py-12 sm:py-16" aria-labelledby="psychomotricien-reperes-heading">
+		<div class="shell-layout">
+			<header class="mx-auto mb-8 max-w-3xl text-center">
+				<p class="type-eyebrow mb-3 text-muted">Repères</p>
+				<h2 id="psychomotricien-reperes-heading" class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">
+					Psychomotricité, soin et web : un accompagnement qui part de votre réalité
+				</h2>
+				<p class="mt-3 text-base leading-relaxed text-muted sm:text-lg">
+					Le site doit aider les familles, adultes, partenaires et prescripteurs à comprendre votre cadre de travail
+					sans réduire la psychomotricité à une liste de symptômes ou à une promesse de résultat.
+				</p>
+			</header>
+
+			<div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+				{
+					legitimacyItems.map(({ Icon, title, description }) => (
+						<article class="rounded-lg border border-border bg-white p-6 shadow-sm">
+							<div class="ui-icon-well mb-4" aria-hidden="true">
+								<Icon class="h-5 w-5" stroke-width={1.5} />
+							</div>
+							<h3 class="font-heading text-xl font-semibold text-foreground">{title}</h3>
+							<p class="mt-3 text-base leading-relaxed text-muted">{description}</p>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">
 			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
@@ -127,29 +186,35 @@ const breadcrumbSchema = {
 					votre pratique permet.
 				</p>
 				<p>
+					Pour un cabinet de psychomotricité, le contenu doit aussi parler à plusieurs publics en même temps :
+					parents qui cherchent un premier repère, adultes qui hésitent à consulter, professionnels qui orientent, et
+					personnes qui veulent simplement savoir comment se déroule un premier rendez-vous.
+				</p>
+				<p>
 					Je vous aide à construire un site sobre et lisible, adapté à une profession du soin où la confiance se
 					construit dans les détails : mots justes, informations concrètes, navigation simple, ton professionnel.
 				</p>
 
 				<h2>Une légitimité particulière sur la psychomotricité</h2>
 				<p>
-					Avant d’être psychologue et développeur web, j’ai été formé comme psychomotricien. Cette expérience me
-					permet de comprendre les enjeux de présentation d’un cabinet : expliquer le psychocorporel avec clarté,
-					distinguer bilan et suivi, rester accessible aux familles, et éviter les formulations trop commerciales ou
-					trop vagues.
+					Avant d’être psychologue et développeur web, j’ai obtenu le <strong>DE de psychomotricien à l’ISRP en 1996</strong>.
+					Cette formation me permet de comprendre les enjeux de présentation d’un cabinet : expliquer le
+					psychocorporel avec clarté, distinguer bilan et suivi, rester accessible aux familles, et éviter les
+					formulations trop commerciales ou trop vagues.
 				</p>
 				<p>
-					Nicodev reste historiquement spécialisé dans les <a href="/creation-site-internet-psychologue/">sites pour psychologues</a>.
-					Cette page ouvre progressivement l’accompagnement à des professions proches du soin, en commençant par
-					les psychomotriciens.
+					Concrètement, je ne pars pas d’un modèle générique de « thérapeute ». Je vous aide à formuler ce qui
+					appartient vraiment à votre pratique : place du corps, développement psychomoteur, graphomotricité,
+					coordination, relation, temporalité du suivi et articulation avec les autres professionnels.
 				</p>
 
 				<h2>Ce que le site peut présenter</h2>
 				<ul>
 					<li>Votre parcours, votre cadre de consultation et votre manière de travailler</li>
 					<li>Les publics accompagnés : enfants, adolescents, adultes, personnes âgées, selon votre pratique réelle</li>
-					<li>Les motifs fréquents de consultation, formulés avec prudence et pédagogie</li>
-					<li>Les informations pratiques : tarifs, accès, horaires, téléconsultation si pertinente</li>
+					<li>La différence entre un bilan psychomoteur, un suivi et un accompagnement ponctuel</li>
+					<li>Les motifs fréquents de consultation, formulés avec prudence et pédagogie, sans diagnostic simpliste</li>
+					<li>Les informations pratiques : tarifs, accès, horaires, documents à apporter, téléconsultation si pertinente</li>
 					<li>Un lien ou widget de prise de rendez-vous, lorsque vous utilisez un outil externe</li>
 					<li>Les bases de visibilité locale : titres, descriptions, performance mobile, sitemap et données structurées</li>
 				</ul>
@@ -161,6 +226,29 @@ const breadcrumbSchema = {
 					visiteurs et par les moteurs de recherche, puis à garder une cohérence entre votre site, votre fiche Google
 					Business Profile et les annuaires où votre cabinet apparaît.
 				</p>
+				<div class="not-prose my-8 rounded-lg border border-border bg-surface p-6">
+					<h3 class="mb-4 font-heading text-xl font-semibold text-foreground">
+						Exemples de recherches locales à clarifier
+					</h3>
+					<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+						{
+							localSearchExamples.map((example) => (
+								<div class="flex items-center gap-3 rounded-lg bg-white p-3">
+									<Search
+										class="h-[18px] w-[18px] shrink-0 text-primary-foreground"
+										stroke-width={1.5}
+										aria-hidden="true"
+									/>
+									<span class="type-label-mono text-foreground">{example}</span>
+								</div>
+							))
+						}
+					</div>
+					<p class="mt-4 text-sm leading-relaxed text-muted">
+						Ces exemples servent à structurer le contenu et les balises. Ils ne remplacent pas une stratégie locale
+						globale, ni la qualité de votre fiche Google, ni les recommandations professionnelles.
+					</p>
+				</div>
 				<p>
 					Un bon site ne remplace pas votre réputation locale, votre réseau d’adressage ou la qualité de votre fiche
 					Google. Il leur donne un point d’appui stable, lisible et maîtrisé.

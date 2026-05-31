@@ -13,8 +13,6 @@ export interface Props {
 	subscribeLabel?: string;
 	recommended?: boolean;
 	badgeText?: string;
-	/** Cartes tarifs type maquette Stitch. */
-	variant?: 'default' | 'stitch';
 }
 
 const {
@@ -28,25 +26,16 @@ const {
 	subscribeLabel = "S'abonner",
 	recommended = false,
 	badgeText,
-	variant = 'default',
 } = Astro.props;
 
-const isStitch = variant === 'stitch';
-
-const shellClasses = isStitch
-	? 'relative flex flex-col rounded-lg bg-white p-8 sm:p-10 transition-[border-color,box-shadow,transform] duration-200'
-	: 'relative flex flex-col rounded-lg bg-background shadow-sm transition-[transform,box-shadow] duration-200';
+const shellClasses =
+	'relative flex flex-col rounded-lg bg-white p-8 sm:p-10 transition-[border-color,box-shadow,transform] duration-200';
 
 const recommendedShell = recommended
-	? isStitch
-		? 'z-10 overflow-visible border-2 border-primary-foreground shadow-2xl md:scale-[1.05]'
-		: 'z-10 overflow-visible border-2 border-primary-foreground shadow-md -translate-y-2 md:-translate-y-3'
-	: isStitch
-		? 'border border-border hover:border-primary-300/60'
-		: 'overflow-hidden border border-solid border-[oklch(0.9_0_0)] hover:shadow-md';
+	? 'z-10 overflow-visible border-2 border-primary-foreground shadow-2xl md:scale-[1.05]'
+	: 'border border-border hover:border-primary-300/60';
 
 const articleClass = `${shellClasses} ${recommendedShell}`;
-const paddingClass = isStitch ? '' : 'p-6 sm:p-8';
 
 const primaryButtonClass = [
 	'flex w-full items-center justify-center rounded-xl px-5 py-4 text-center font-bold transition-[background-color,opacity,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background',
@@ -55,7 +44,7 @@ const primaryButtonClass = [
 
 const outlineButtonClass = [
 	'flex w-full items-center justify-center rounded-xl px-5 py-4 text-center font-bold transition-[background-color,opacity,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background',
-	isStitch ? 'border border-border text-foreground hover:bg-surface-alt' : 'btn-primary-solid',
+	'border border-border text-foreground hover:bg-surface-alt',
 ];
 
 const secondaryLinkClass =
@@ -65,64 +54,30 @@ const secondaryLinkClass =
 <article class={articleClass}>
 	{
 		recommended && badgeText && (
-			<span
-				class:list={[
-					'absolute left-1/2 top-0 z-20 max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full px-6 py-1 text-center shadow-sm',
-					isStitch
-						? 'type-label-mono bg-primary-foreground font-bold tracking-wider text-on-primary'
-						: 'type-eyebrow bg-primary-foreground text-on-primary ring-2 ring-background',
-				]}
-			>
+			<span class="type-label-mono absolute left-1/2 top-0 z-20 max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-primary-foreground px-6 py-1 text-center font-bold tracking-wider text-on-primary shadow-sm">
 				{badgeText}
 			</span>
 		)
 	}
 
-	<div class:list={['flex flex-1 flex-col', !isStitch && paddingClass]}>
-		<header class:list={[isStitch ? 'mb-8' : 'mb-6']}>
-			<h3
-				class:list={[
-					'font-heading font-semibold text-foreground',
-					isStitch ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl',
-				]}
-			>
-				{name}
-			</h3>
-			<p
-				class:list={[
-					'mt-2 font-heading font-bold leading-[1.08] tracking-tight text-foreground',
-					isStitch ? 'text-4xl sm:text-[2.75rem]' : 'text-[2.25rem] sm:text-[2.5rem]',
-				]}
-			>
+	<div class="flex flex-1 flex-col">
+		<header class="mb-8">
+			<h3 class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">{name}</h3>
+			<p class="mt-2 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
 				{price}
 				<span class="ml-1 font-sans text-base font-normal tracking-normal text-muted">/mois</span>
 			</p>
-			<p class:list={['text-muted', isStitch ? 'mt-4 text-base' : 'mt-3 text-sm sm:text-base']}>
-				{description}
-			</p>
+			<p class="mt-4 text-base text-muted">{description}</p>
 		</header>
 
-		<ul class:list={['flex-grow space-y-4', isStitch ? 'mb-10 text-base text-foreground' : 'mb-8 text-sm text-muted sm:text-base']}>
+		<ul class="mb-10 flex-grow space-y-4 text-base text-foreground">
 			{features.map((feature) => (
 				<li class="flex items-start gap-3">
-					{isStitch ? (
-						<CircleCheck
-							class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
-							stroke-width={1.75}
-							aria-hidden="true"
-						/>
-					) : (
-						<span class="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-surface text-foreground">
-							<svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="m4.5 12.75 6 6 9-13.5"
-								/>
-							</svg>
-						</span>
-					)}
+					<CircleCheck
+						class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
+						stroke-width={1.75}
+						aria-hidden="true"
+					/>
 					<span>{feature}</span>
 				</li>
 			))}
@@ -148,19 +103,13 @@ const secondaryLinkClass =
 				) : (
 					<a
 						href={buttonHref}
-						class:list={
-							isStitch && !recommended ? outlineButtonClass : primaryButtonClass
-						}
+						class:list={!recommended ? outlineButtonClass : primaryButtonClass}
 					>
 						{buttonLabel}
 					</a>
 				)
 			}
-			{
-				isStitch && (
-					<p class="mt-0 text-center type-label-mono text-muted">Sans engagement • Tout inclus</p>
-				)
-			}
+			<p class="mt-0 text-center type-label-mono text-muted">Sans engagement • Tout inclus</p>
 		</div>
 	</div>
 </article>
