@@ -81,35 +81,27 @@ const tarifsFaqItems = [
 	<Hero 
 		title="Tarifs sites web pour praticiens du soin"
 		subtitle="Abonnement mensuel à partir de 29€ : un cadre simple, transparent, et un vrai suivi humain."
+		variant="light"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Tarifs' }]}
-	/>
+	>
+		<Fragment slot="after">
+			<div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" data-suppress-whatsapp-when-visible>
+				<a href="#tarifs-offres" class="btn-primary-solid inline-flex w-full items-center justify-center rounded-xl px-6 py-3.5 font-semibold sm:w-auto">
+					Voir les offres
+				</a>
+				<a href="/diagnostic-gratuit/" class="btn-outline-accent inline-flex w-full items-center justify-center rounded-xl border-2 border-primary px-6 py-3.5 font-semibold text-foreground hover:bg-background sm:w-auto">
+					Demander un avis gratuit
+				</a>
+			</div>
+			<ul class="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted">
+				<li>Création incluse</li>
+				<li>Paiement après livraison</li>
+				<li>Sans engagement</li>
+			</ul>
+		</Fragment>
+	</Hero>
 
 	<OffersSection background="white" />
-
-	<section class="section-y border-t border-border bg-surface">
-		<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-			<header class="mx-auto max-w-3xl text-center">
-				<h2 class="text-2xl font-bold text-foreground sm:text-3xl">Comment choisir entre les deux offres ?</h2>
-				<p class="mt-3 text-sm text-muted sm:text-base">
-					Les deux formules créent un site professionnel et relié à votre prise de rendez-vous. La différence se joue surtout sur le niveau de suivi et de visibilité après la mise en ligne.
-				</p>
-			</header>
-			<div class="mt-8 grid gap-4 md:grid-cols-2">
-				<div class="rounded-lg border border-border bg-white p-5 sm:p-6">
-					<h3 class="text-lg font-semibold text-foreground">Sérénité</h3>
-					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						À choisir si votre priorité est d'avoir une présence fiable, claire et rassurante, sans gérer la technique. C'est le bon socle pour un cabinet déjà identifié ou un démarrage avec un budget maîtrisé.
-					</p>
-				</div>
-				<div class="rounded-lg border border-primary/30 bg-white p-5 shadow-sm sm:p-6">
-					<h3 class="text-lg font-semibold text-foreground">Visibilité &amp; Confiance</h3>
-					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						À choisir si votre enjeu est aussi d'être mieux trouvé localement, de structurer votre fiche Google et de faire évoluer le site plus régulièrement avec votre pratique.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<section class="section-y border-t border-border bg-white">
 		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -216,7 +208,7 @@ const tarifsFaqItems = [
 	</section>
 
 	<!-- Complément : comparaison avec les plateformes (les formules détaillées sont dans OffersSection ci-dessus) -->
-	<section id="tarifs-offres" class="section-y scroll-mt-28 bg-white">
+	<section id="comparaison-plateformes" class="section-y scroll-mt-28 bg-white">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="bg-surface p-8 rounded-lg border border-border">
 				<h3 class="text-2xl font-bold text-center text-foreground mb-8">

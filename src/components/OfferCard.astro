@@ -5,10 +5,11 @@ export interface Props {
 	name: string;
 	price: string;
 	description: string;
+	summary?: string;
 	features: string[];
 	buttonLabel: string;
 	buttonHref: string;
-	/** Lien Stripe Payment Link (test ou live). Si défini, bouton principal « S'abonner ». */
+	/** Lien Stripe Payment Link (test ou live). Si défini, bouton principal vers le paiement. */
 	subscribeHref?: string;
 	subscribeLabel?: string;
 	recommended?: boolean;
@@ -19,6 +20,7 @@ const {
 	name,
 	price,
 	description,
+	summary,
 	features,
 	buttonLabel,
 	buttonHref,
@@ -68,6 +70,11 @@ const secondaryLinkClass =
 				<span class="ml-1 font-sans text-base font-normal tracking-normal text-muted">/mois</span>
 			</p>
 			<p class="mt-4 text-base text-muted">{description}</p>
+			{summary && (
+				<p class="mt-4 border-l-2 border-primary-foreground pl-3 text-sm font-semibold leading-relaxed text-foreground">
+					{summary}
+				</p>
+			)}
 		</header>
 
 		<ul class="mb-10 flex-grow space-y-4 text-base text-foreground">
@@ -83,7 +90,7 @@ const secondaryLinkClass =
 			))}
 		</ul>
 
-		<div class="mt-auto flex flex-col gap-3">
+		<div class="mt-auto flex flex-col gap-3" data-suppress-whatsapp-when-visible>
 			{
 				subscribeHref ? (
 					<>

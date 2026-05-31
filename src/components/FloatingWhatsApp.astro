@@ -43,6 +43,14 @@ const waHref = WHATSAPP_HREF;
     transform: scale(1);
   }
 
+  @media (max-width: 640px) {
+    .whatsapp-fab[data-peer-visible="true"] {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0.75rem) scale(0.92);
+    }
+  }
+
   @keyframes whatsapp-fab-intro {
     0% {
       box-shadow:
@@ -89,12 +97,14 @@ const waHref = WHATSAPP_HREF;
 
     const threshold = 140;
     let ticking = false;
+    const visiblePeers = new Set();
 
     function sync() {
       const node = document.getElementById("whatsapp-fab");
       if (!node) return;
       node.dataset.scrolled =
         window.scrollY > threshold ? "true" : "false";
+      node.dataset.peerVisible = visiblePeers.size > 0 ? "true" : "false";
       ticking = false;
     }
 
@@ -107,6 +117,21 @@ const waHref = WHATSAPP_HREF;
 
     sync();
     window.addEventListener("scroll", onScroll, { passive: true });
+
+    const peers = document.querySelectorAll("[data-suppress-whatsapp-when-visible]");
+    if ("IntersectionObserver" in window && peers.length > 0) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) visiblePeers.add(entry.target);
+            else visiblePeers.delete(entry.target);
+          }
+          sync();
+        },
+        { root: null, rootMargin: "0px", threshold: 0.05 },
+      );
+      peers.forEach((peer) => io.observe(peer));
+    }
   }
 
   initWhatsAppFab();

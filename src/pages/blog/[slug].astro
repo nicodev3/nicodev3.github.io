@@ -6,6 +6,7 @@ import Hero from '../../components/Hero.astro';
 import BlogShare from '../../components/BlogShare.astro';
 import BlogArticleToc from '../../components/BlogArticleToc.astro';
 import BlogPillarClusterLink from '../../components/BlogPillarClusterLink.astro';
+import GuideVisibilityConversionCta from '../../components/GuideVisibilityConversionCta.astro';
 import {
 	GUIDE_VISIBILITE_CLUSTER_IDS,
 	toTagHref,
@@ -192,6 +193,24 @@ const guideClusterItemListSchema =
 				</div>
 			)}
 			<BlogShare url={canonical} title={entry.data.title} />
+			{entry.data.guidePillarHub && (
+				<div class="mt-4 flex flex-col justify-center gap-3 sm:flex-row">
+					<a
+						href="/diagnostic-gratuit/?source=guide-visibilite-hero"
+						class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
+						data-umami-event="lead_click_diagnostic_from_guide_visibilite_hero"
+					>
+						Recevoir un avis sur mon site
+					</a>
+					<a
+						href="/tarifs/"
+						class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface"
+						data-umami-event="lead_click_tarifs_from_guide_visibilite_hero"
+					>
+						Voir les tarifs
+					</a>
+				</div>
+			)}
 		</div>
 	</Hero>
 
@@ -213,8 +232,10 @@ const guideClusterItemListSchema =
 				prose-img:rounded-lg prose-img:shadow-sm prose-img:mx-auto
 				prose-hr:border-border">
 				<BlogPillarClusterLink currentArticleId={entry.id} />
+				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="intro" />}
 				<BlogArticleToc items={tocItems} />
 				<Content />
+				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="final" />}
 			</div>
 		</div>
 	</article>
@@ -222,21 +243,35 @@ const guideClusterItemListSchema =
 	<!-- Liens internes : diagnostic et tarifs (alignés avec le reste du site) -->
 	<section class="py-12 bg-surface border-t border-border">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-xl font-semibold text-foreground mb-4">Un projet de site web ?</h2>
+			<h2 class="text-xl font-semibold text-foreground mb-4">
+				{entry.data.guidePillarHub ? 'Vous voulez transformer cette lecture en actions concrètes ?' : 'Un projet de site web ?'}
+			</h2>
 			<p class="text-muted mb-6">
-				Vous cherchez un site professionnel pour votre cabinet ? Voir la page{' '}
-				<a href="/creation-site-internet-psychologue/" class="text-foreground font-medium hover:text-primary">création de site pour psychologue</a>
-				, la page{' '}
-				<a href="/site-internet-psychomotricien/" class="text-foreground font-medium hover:text-primary">site internet psychomotricien</a>
-				, la page{' '}
-				<a href="/referencement-site-psychologue/" class="text-foreground font-medium hover:text-primary">référencement site psychologue</a>
-				, un diagnostic gratuit pour faire le point, et les{' '}
-				<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a>
-				. Pour vous projeter visuellement :{' '}
-				<a href="/exemples-sites-psychologue/" class="text-foreground font-medium hover:text-primary">exemples de sites pour psychologues</a>.
+				{entry.data.guidePillarHub ? (
+					<>
+						Le diagnostic gratuit permet de vérifier votre site, votre fiche Google et vos priorités locales avant de lancer une création ou une refonte.
+						Vous pouvez aussi consulter la page{' '}
+						<a href="/creation-site-internet-psychologue/" class="text-foreground font-medium hover:text-primary">création de site pour psychologue</a>
+						{' '}et les{' '}
+						<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a>.
+					</>
+				) : (
+					<>
+						Vous cherchez un site professionnel pour votre cabinet ? Voir la page{' '}
+						<a href="/creation-site-internet-psychologue/" class="text-foreground font-medium hover:text-primary">création de site pour psychologue</a>
+						, la page{' '}
+						<a href="/site-internet-psychomotricien/" class="text-foreground font-medium hover:text-primary">site internet psychomotricien</a>
+						, la page{' '}
+						<a href="/referencement-site-psychologue/" class="text-foreground font-medium hover:text-primary">référencement site psychologue</a>
+						, un diagnostic gratuit pour faire le point, et les{' '}
+						<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a>
+						. Pour vous projeter visuellement :{' '}
+						<a href="/exemples-sites-psychologue/" class="text-foreground font-medium hover:text-primary">exemples de sites pour psychologues</a>.
+					</>
+				)}
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center rounded-lg px-5 py-3">
+				<a href={entry.data.guidePillarHub ? '/diagnostic-gratuit/?source=guide-visibilite-bottom' : '/diagnostic-gratuit/'} class="btn-primary-solid inline-flex items-center rounded-lg px-5 py-3">
 					Demander un diagnostic gratuit
 				</a>
 				<a href="/tarifs/" class="btn-outline-accent inline-flex items-center rounded-lg border-2 border-primary bg-background px-5 py-3 text-foreground hover:bg-surface">

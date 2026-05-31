@@ -34,6 +34,8 @@ const startEvent = 'lead_start_diagnostic';
 		<input type="hidden" name="form-name" value="diagnostic" />
 		{redirectUrl && <input type="hidden" name="_next" value={redirectUrl} />}
 		<input type="hidden" name="_subject" value="[nicodev.fr] Demande diagnostic gratuit" />
+		<input type="hidden" name="sourcePage" value="" data-source-page-input />
+		<input type="hidden" name="sourceParam" value="" data-source-param-input />
 		<p class="hidden" aria-hidden="true">
 			<label for="diagnostic-gotcha">Ne pas remplir</label>
 			<input id="diagnostic-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
@@ -109,6 +111,13 @@ const startEvent = 'lead_start_diagnostic';
 		const successUrl = form.getAttribute('data-success-url');
 		const feedback = document.getElementById('diagnostic-form-feedback');
 		const submitButton = form.querySelector('button[type="submit"]');
+		const sourcePageInput = form.querySelector('[data-source-page-input]');
+		const sourceParamInput = form.querySelector('[data-source-param-input]');
+
+		if (sourcePageInput instanceof HTMLInputElement) sourcePageInput.value = window.location.href;
+		if (sourceParamInput instanceof HTMLInputElement) {
+			sourceParamInput.value = new URLSearchParams(window.location.search).get('source') || '';
+		}
 
 		let started = false;
 		const trackStart = () => {
