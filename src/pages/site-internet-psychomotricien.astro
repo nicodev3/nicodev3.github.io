@@ -5,7 +5,7 @@ import CtaSection from '../components/CtaSection.astro';
 import FaqSection from '../components/FaqSection.astro';
 import { ClipboardList, GraduationCap, MapPin, MessageCircle, Phone, Search } from '@lucide/astro';
 import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
-import defaultOgWebp from '../assets/images/blog/development.webp';
+import psychomotricienneImage from '../assets/images/psychomotricienne-2.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const pageUrl = new URL('/site-internet-psychomotricien/', baseUrl).href;
@@ -89,6 +89,16 @@ const serviceSchema = {
 	},
 	serviceType: 'Création de site internet',
 	areaServed: { '@type': 'Country', name: 'France' },
+	audience: {
+		'@type': 'Audience',
+		audienceType: 'Psychomotriciens en libéral',
+	},
+	keywords: [
+		'site internet psychomotricien',
+		'création site psychomotricien',
+		'SEO local psychomotricien',
+		'site cabinet psychomotricité',
+	],
 	url: pageUrl,
 };
 
@@ -108,9 +118,9 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Site internet pour psychomotricien | Création sobre et SEO local"
-	description="Création de site internet pour psychomotricien : présenter votre cabinet, vos publics accompagnés et vos modalités de consultation. Par un ancien psychomotricien diplômé d’État, psychologue et développeur web."
-	image={defaultOgWebp}
+	title="Site internet psychomotricien | Création sobre et SEO local"
+	description="Création de site internet pour psychomotricien : cabinet, publics, rendez-vous et SEO local. Par un ancien psychomotricien, psychologue et développeur web."
+	image={psychomotricienneImage}
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

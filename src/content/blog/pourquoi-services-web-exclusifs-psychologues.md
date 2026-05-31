@@ -1,17 +1,17 @@
 ---
-title: "Pourquoi je crée des sites web exclusivement pour les psychologues"
-description: "Mon positionnement expliqué : en tant que psychologue et développeur web, je crée des sites web pour psychologues dans le respect du titre de psychologue et du cadre d'une profession réglementée."
+title: "Pourquoi Nicodev a d'abord été spécialisé pour les psychologues"
+description: "Mon positionnement expliqué : en tant que psychologue et développeur web, j'ai construit une offre de sites web pour psychologues, dans le respect du titre et du cadre d'une profession réglementée."
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
 tags: ["psychologue", "site web psychologue", "titre de psychologue", "profession réglementée", "déontologie"]
 ---
 
-Lorsque l'on m'interroge sur mon choix de me consacrer au **site web psychologue**, ma réponse est constante : il ne s'agit pas d'un positionnement commercial, mais d'une ligne professionnelle assumée.
+Lorsque l'on m'interroge sur mon choix d'avoir construit Nicodev autour du **site web psychologue**, ma réponse est constante : il ne s'agit pas seulement d'un positionnement commercial, mais d'une ligne professionnelle assumée.
 
 Psychologue de formation et en exercice libéral, je connais les réalités cliniques, les responsabilités attachées au titre, ainsi que les interrogations qui précèdent souvent une première consultation. Développeur web également, ayant exercé ce métier pendant plusieurs années pour de grandes entreprises, je conçois des sites utiles, sobres et rigoureux.
 
-J'ai donc fait un choix clair : accompagner exclusivement les psychologues. Ce choix ne procède ni d'une fermeture, ni d'un jugement à l'égard d'autres pratiques, mais d'une exigence de cohérence avec ce que je défends depuis des années : la clarté pour le public, la défense de mes collègues psychologues et le respect d'une profession réglementée.
+J'ai donc fait un choix clair : construire d'abord une offre spécialisée pour les psychologues. Ce choix ne procède ni d'une fermeture, ni d'un jugement à l'égard d'autres pratiques, mais d'une exigence de cohérence avec ce que je défends depuis des années : la clarté pour le public, la défense de mes collègues psychologues et le respect d'une profession réglementée.
 
 ## Le titre de psychologue est un titre protégé par la loi
 
@@ -40,7 +40,7 @@ Lorsque les repères deviennent flous :
 
 Il ne s'agit pas d'opposer les approches ni de disqualifier quiconque. Il s'agit de rappeler qu'une confusion durable ne sert ni les patients, ni la profession.
 
-En tant que professionnel du web, j'ai le souhait de contribuer à clarifier ces repères. En tant que psychologue, je considère qu'il s'agit d'une responsabilité. C'est précisément pourquoi je me consacre au **sites web pour psychologues** : pour permettre aux patients d'identifier un cadre professionnel précis, et aux psychologues de présenter leur travail avec une parole claire, sans ambiguïté.
+En tant que professionnel du web, j'ai le souhait de contribuer à clarifier ces repères. En tant que psychologue, je considère qu'il s'agit d'une responsabilité. C'est précisément pourquoi Nicodev s'est d'abord construit autour des **sites web pour psychologues** : pour permettre aux patients d'identifier un cadre professionnel précis, et aux psychologues de présenter leur travail avec une parole claire, sans ambiguïté.
 
 ## L'importance d'un site web qui respecte le cadre légal et déontologique d'une profession réglementée
 
@@ -70,21 +70,21 @@ Concrètement, je peux :
 - construire un site rapide, lisible et bien référencé, sans jargon ni artifices;
 - garder en tête, à chaque étape, les exigences d'une profession réglementée.
 
-Ce positionnement est volontairement exigeant. Il implique de refuser certaines demandes émanant de professionnels non psychologues. C'est précisément cette exigence qui fonde la qualité du résultat : un site professionnel, durable et aligné avec votre identité de psychologue.
+Ce positionnement est volontairement exigeant. Il implique de distinguer les cadres professionnels au lieu de les fondre dans une même catégorie vague. C'est précisément cette exigence qui fonde la qualité du résultat : un site professionnel, durable et aligné avec votre identité de psychologue.
 
 C'est aussi la raison pour laquelle je ne souhaite pas me disperser sur tous les secteurs. Je préfère une expertise utile, précise et cohérente à une approche généraliste sans compréhension approfondie du métier.
 
-## Spoiler : une ouverture envisagée vers les psychomotriciens
+## Une ouverture progressive vers les psychomotriciens
 
-En toute transparence, comme je suis également psychomotricien de formation, je réfléchis à l'ouverture progressive de mes services aux psychomotriciens.
+En toute transparence, comme je suis également psychomotricien de formation, j'ouvre progressivement mes services aux psychomotriciens.
 
-Si cette évolution se confirme, elle suivra la même logique : connaissance réelle du cadre professionnel, respect de la déontologie et communication claire à destination du public.
+Cette évolution suit la même logique : connaissance réelle du cadre professionnel, respect de la déontologie et communication claire à destination du public.
 
-À ce jour, mon engagement principal demeure inchangé : accompagner les psychologues avec une approche spécialisée et rigoureuse.
+Elle ne transforme pas les psychologues en simple segment parmi d'autres. Les pages métiers restent distinctes, avec un vocabulaire adapté à chaque profession. Une page dédiée présente désormais l'approche pour les [sites internet de psychomotriciens](/site-internet-psychomotricien/).
 
 ## Conclusion
 
-Je propose mes services de création de sites web exclusivement aux psychologues parce que ce choix est cohérent, tant sur le fond que sur la forme.
+J'ai construit Nicodev autour de la création de sites web pour psychologues parce que ce choix est cohérent, tant sur le fond que sur la forme.
 
 Le **titre de psychologue** mérite d'être représenté avec précision. La distinction entre les différentes pratiques doit être rendue plus lisible pour les patients. Et une **profession réglementée** requiert des outils de communication conformes à ses exigences, sans emprunter des codes qui ne lui correspondent pas.
 
