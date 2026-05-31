@@ -20,6 +20,9 @@ import { WHATSAPP_PHONE_E164 } from '../data/contact';
 const allBlogPosts = await getCollection('blog');
 const preferredBlogIds = [
 	'guide-complet-visibilite-en-ligne-psychologues',
+	'site-internet-psychomotricien',
+	'referencement-local-psychomotricien',
+	'google-business-profile-psychomotricien',
 	'comment-trouver-premiers-patients-psychologue',
 	'google-business-profile-psychologue',
 	'site-internet-psychologues',
@@ -50,7 +53,7 @@ const businessSchema = {
 	legalName: 'Nicolas Devaux — EI',
 	identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: '75103269900033' },
 	description:
-		'Création de sites internet pour psychologues et professionnels du soin. Abonnement mensuel tout inclus dès 29 EUR.',
+		'Création de sites internet pour psychologues, psychomotriciens et professions du soin proches. Abonnement mensuel tout inclus dès 29 EUR.',
 	url: siteRootHref,
 	telephone: `+${WHATSAPP_PHONE_E164}`,
 	address: {
@@ -67,7 +70,7 @@ const businessSchema = {
 		'https://www.linkedin.com/in/nicodev3/'
 	],
 	areaServed: { '@type': 'Country', name: 'France' },
-	slogan: 'Création de sites internet pour psychologues et professionnels du soin',
+	slogan: 'Création de sites internet pour psychologues et psychomotriciens',
 	makesOffer: [
 		{
 			'@type': 'Offer',
@@ -113,7 +116,7 @@ const websiteSchema = {
 	name: 'Nicolas Devaux',
 	alternateName: 'Nicodev',
 	url: siteRootHref,
-	description: 'Création de sites internet pour psychologues et professionnels du soin.'
+	description: 'Création de sites internet pour psychologues, psychomotriciens et professions du soin proches.'
 };
 
 const breadcrumbSchema = {
@@ -126,8 +129,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Sites web pour psychologues et professionnels du soin | Nicodev"
-	description="Création de sites internet pour psychologues, psychomotriciens et professionnels du soin. Sites sobres, clairs, visibilité locale, widget de prise de rendez-vous."
+	title="Sites web pour psychologues et psychomotriciens | Nicodev"
+	description="Création de sites internet pour psychologues, psychomotriciens et professions du soin proches. Sites sobres, clairs, visibilité locale, widget de prise de rendez-vous."
 	image={defaultOgWebp}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />

@@ -26,15 +26,15 @@ const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 ---
 
 <Layout 
-	title="Blog - Conseils création de site pour psychologues | Nicolas Devaux"
-	description="Conseils création de site pour psychologues : SEO local, visibilité Google, développement web et référencement."
+	title="Blog sites psychologues et psychomotriciens | Nicolas Devaux"
+	description="Conseils création de site pour psychologues et psychomotriciens : SEO local, visibilité Google, développement web et référencement."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero 
 		title="Blog" 
-		subtitle="Conseils et articles sur la création de sites internet"
+		subtitle="Conseils et articles sur la création de sites internet pour cabinets de soin"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Blog' }]}
 	/>
 

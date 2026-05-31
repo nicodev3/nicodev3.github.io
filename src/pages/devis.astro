@@ -15,15 +15,15 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Demande de devis site psychologue | Nicolas Devaux"
-	description="Demandez un devis personnalisé pour votre site internet de psychologue. Réponse sous 48 h avec recommandation de formule adaptée."
+	title="Devis site psychologue ou psychomotricien | Nicodev"
+	description="Demandez un devis personnalisé pour votre site internet de psychologue, psychomotricien ou profession du soin proche. Réponse sous 48 h."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 
 	<Hero
-		title="Devis pour site internet de psychologue"
+		title="Devis pour site internet de praticien du soin"
 		subtitle="Décrivez votre besoin pour recevoir une proposition adaptée à votre pratique."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Devis' }]}
 	/>
@@ -43,11 +43,11 @@ const breadcrumbSchema = {
 					</p>
 					<h2 class="text-3xl font-bold text-foreground mb-4">Votre demande de devis</h2>
 					<p class="text-muted mb-8">
-						Vous indiquez votre contexte et vos objectifs. Je vous reponds avec une recommandation claire, le cadre de travail, et
+						Vous indiquez votre profession, votre contexte et vos objectifs. Je vous réponds avec une recommandation claire, le cadre de travail, et
 						la formule la plus pertinente pour votre situation.
 					</p>
 					<p class="text-sm text-muted mb-6">
-						Temps estime : 3 a 5 minutes. Aucun engagement.
+						Temps estimé : 3 à 5 minutes. Aucun engagement.
 					</p>
 					<ContactForm mode="devis" />
 				</div>
@@ -55,19 +55,19 @@ const breadcrumbSchema = {
 					<div class="rounded-lg border border-border bg-surface p-6">
 						<h3 class="text-xl font-semibold text-foreground mb-3">Ce que vous recevez</h3>
 						<ul class="space-y-2 text-muted">
-							<li>Une recommandation sur la formule la plus adaptee.</li>
-							<li>Un cadrage du perimetre et des livrables.</li>
-							<li>Une estimation claire avec prochaine etape concrete.</li>
+							<li>Une recommandation sur la formule la plus adaptée.</li>
+							<li>Un cadrage du périmètre et des livrables.</li>
+							<li>Une estimation claire avec prochaine étape concrète.</li>
 						</ul>
 					</div>
 					<div class="rounded-lg border border-border bg-surface p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-3">Delais</h3>
+						<h3 class="text-xl font-semibold text-foreground mb-3">Délais</h3>
 						<p class="text-muted">
-							Je reponds en general sous 48h ouvrees. Si votre demande est urgente, precisez-le dans le message.
+							Je réponds en général sous 48 h ouvrées. Si votre demande est urgente, précisez-le dans le message.
 						</p>
 					</div>
 					<div class="rounded-lg border border-border bg-surface p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-3">Plutot besoin d'un diagnostic ?</h3>
+						<h3 class="text-xl font-semibold text-foreground mb-3">Plutôt besoin d'un diagnostic ?</h3>
 						<p class="text-muted mb-4">
 							Si vous hésitez sur la bonne direction, commencez par un diagnostic gratuit de votre situation actuelle.
 						</p>

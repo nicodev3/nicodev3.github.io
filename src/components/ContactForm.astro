@@ -74,6 +74,17 @@ const reassuranceText = isDevisMode
 
 		{
 			isDevisMode && (
+				<FormField id="contact-profession" name="profession" label="Profession *" required variant="select">
+					<option value="">Sélectionnez votre profession</option>
+					<option value="psychologue">Psychologue</option>
+					<option value="psychomotricien">Psychomotricien</option>
+					<option value="autre-profession-soin">Autre profession du soin</option>
+				</FormField>
+			)
+		}
+
+		{
+			isDevisMode && (
 				<FormField id="contact-formule" name="formule" label="Offre souhaitée *" required variant="select">
 					<option value="">Sélectionnez une offre</option>
 					<option value="serenite">Offre Sérénité — 29€/mois</option>
