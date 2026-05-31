@@ -13,7 +13,7 @@ import HomeAudienceSection from '../components/HomeAudienceSection.astro';
 import DifferenciationDiySection from '../components/DifferenciationDiySection.astro';
 import BlogHomeSection from '../components/BlogHomeSection.astro';
 import CtaSection from '../components/CtaSection.astro';
-import defaultOgWebp from '../assets/images/blog/development.webp';
+import portraitImage from '../assets/images/nicodev.webp';
 import { homeFaqItems } from '../data/faq-home';
 import { WHATSAPP_PHONE_E164 } from '../data/contact';
 
@@ -129,9 +129,9 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Sites web pour psychologues et psychomotriciens | Nicodev"
+	title="Sites web pour psychologues et psychomotriciens | Nicodev, psychologue et "
 	description="Création de sites internet pour psychologues, psychomotriciens et professions du soin proches. Sites sobres, clairs, visibilité locale, widget de prise de rendez-vous."
-	image={defaultOgWebp}
+	image={portraitImage}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
 	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
