@@ -7,7 +7,7 @@ Site personnel moderne de Nicolas Devaux, développeur Web front-end, construit 
 - **Astro** - Framework web moderne pour des sites ultra-rapides
 - **Tailwind CSS** - Framework CSS utilitaire pour un design moderne
 - **TypeScript** - Typage statique pour un code plus robuste
-- **Netlify** - Déploiement et hébergement
+- **Cloudflare Pages** - Déploiement et hébergement
 
 ## 🛠️ Développement local
 
@@ -78,12 +78,12 @@ Le site est entièrement responsive et optimisé pour :
 
 ## 🚀 Déploiement
 
-### Netlify (Recommandé)
+### Cloudflare Pages
 
-1. Connectez votre repository GitHub à Netlify
+1. Connectez votre repository GitHub à Cloudflare Pages
 2. Configurez les paramètres de build :
    - Build command : `npm run build`
-   - Publish directory : `dist`
+   - Build output directory : `dist`
 3. Déployez !
 
 ### Variables d'environnement

@@ -3,9 +3,9 @@ import { ArrowRight, ListChecks, Search, TrendingUp, UserSearch } from '@lucide/
 
 const searchExamples = [
 	'psychologue Sceaux',
-	'psychologue Paris 15',
-	'psychologue anxiété Lyon',
-	'psychologue Brest',
+	'psychomotricien Lyon',
+	'orthophoniste Nantes',
+	'ergothérapeute Paris',
 ] as const;
 
 const benefits = [
@@ -64,11 +64,11 @@ const setupItems = [
 	<div class="shell-layout">
 		<header class="mb-12 space-y-4 text-center md:mb-16">
 			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Référencement local : apparaître quand on cherche un psychologue près de chez soi
+				Référencement local : apparaître quand on cherche un praticien près de chez soi
 			</h2>
 			<p class="mx-auto max-w-3xl text-lg text-muted">
-				Vos futurs patients tapent souvent des recherches du type «&nbsp;psychologue&nbsp;» + leur ville ou quartier.
-				Un site bien structuré vous aide à apparaître dans ces résultats.
+				Vos futurs patients tapent souvent des recherches du type «&nbsp;profession&nbsp;» + leur ville ou quartier.
+				Un site bien structuré aide Google à comprendre votre activité, votre localisation et vos modalités d'accueil.
 			</p>
 		</header>
 
@@ -142,9 +142,13 @@ const setupItems = [
 		</div>
 
 		<p class="mx-auto max-w-2xl pt-8 text-center text-base text-muted">
-			Approfondir&nbsp;: page dédiée{' '}
+			Approfondir&nbsp;: pages dédiées{' '}
 			<a href="/referencement-site-psychologue/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
 				référencement site psychologue
+			</a>
+			{', '}
+			<a href="/site-internet-psychomotricien/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
+				site internet psychomotricien
 			</a>
 			{' '}et guide blog{' '}
 			<a href="/blog/guide-complet-visibilite-en-ligne-psychologues/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
@@ -165,7 +169,13 @@ const setupItems = [
 				href="/creation-site-internet-psychologue/"
 				class="btn-outline-terracotta inline-flex items-center justify-center rounded-xl border border-border bg-transparent px-8 py-4 font-bold text-foreground hover:bg-surface-alt"
 			>
-				Création de site
+				Page psychologues
+			</a>
+			<a
+				href="/site-internet-psychomotricien/"
+				class="btn-outline-terracotta inline-flex items-center justify-center rounded-xl border border-border bg-transparent px-8 py-4 font-bold text-foreground hover:bg-surface-alt"
+			>
+				Page psychomotriciens
 			</a>
 			<a
 				href="/tarifs/"

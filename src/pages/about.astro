@@ -34,10 +34,10 @@ const personSchema = {
   '@type': 'Person',
   name: 'Nicolas Devaux',
   jobTitle: 'Psychologue et développeur web',
-  description: 'Psychologue à Sceaux et développeur web, je crée des sites internet sur mesure pour psychologues.',
+  description: 'Psychologue à Sceaux, ancien psychomotricien et développeur web, je crée des sites internet sur mesure pour psychologues et professionnels du soin.',
   url: aboutUrl,
   image: new URL(developmentImage.src, baseUrl).toString(),
-  knowsAbout: ['développement web', 'sites internet pour psychologues', 'SEO', 'performance web'],
+  knowsAbout: ['développement web', 'sites internet pour psychologues', 'psychomotricité', 'SEO', 'performance web'],
   sameAs: [
     'https://www.malt.fr/profile/nicolasdevaux1',
     'https://github.com/nicodev3',
@@ -57,8 +57,8 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
 ---
 
 <Layout
-  title="Sites psychologues en 2 semaines | Nicolas Devaux — dès 29 €/mois"
-  description="Psychologue et dev web : site livré en 2 à 3 semaines, SEO local inclus, dès 29 €/mois. 20 ans d'expérience. Diagnostic gratuit pour cadrer votre projet."
+  title="Psychologue, ancien psychomotricien et développeur web | Nicolas Devaux"
+  description="Psychologue, ancien psychomotricien et développeur web : j’accompagne les psychologues et professionnels du soin dans la création de sites sobres, clairs et visibles localement."
   image={defaultOgWebp}
 >
   <Fragment slot="head">

@@ -1,0 +1,66 @@
+---
+import { ArrowRight, Brain, HandHeart, Stethoscope } from '@lucide/astro';
+
+const audiences = [
+	{
+		Icon: Brain,
+		title: 'Psychologues',
+		description:
+			'La spécialisation historique de Nicodev : sites pour psychologues libéraux, avec attention au cadre clinique, au ton et à la visibilité locale.',
+		href: '/creation-site-internet-psychologue/',
+		linkLabel: 'Voir la page psychologues',
+	},
+	{
+		Icon: HandHeart,
+		title: 'Psychomotriciens',
+		description:
+			'La première extension naturelle : expliquer votre cabinet, vos publics accompagnés, le bilan, les suivis et les informations pratiques.',
+		href: '/site-internet-psychomotricien/',
+		linkLabel: 'Voir la page psychomotriciens',
+	},
+	{
+		Icon: Stethoscope,
+		title: 'Professions du soin proches',
+		description:
+			'Orthophonistes, ergothérapeutes, neuropsychologues : des pages dédiées pourront être ajoutées progressivement, sans mélanger les cadres professionnels.',
+		href: '/contact/',
+		linkLabel: 'En parler simplement',
+	},
+] as const;
+---
+
+<section id="pour-qui" class="section-y scroll-mt-28 border-b border-border bg-surface" aria-labelledby="home-audience-heading">
+	<div class="shell-layout">
+		<header class="mx-auto mb-10 max-w-3xl text-center">
+			<p class="type-eyebrow mb-3 text-muted">Pour qui ?</p>
+			<h2 id="home-audience-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+				Une offre construite pour les métiers du soin, sans les confondre
+			</h2>
+			<p class="mt-4 text-lg leading-relaxed text-muted">
+				Les psychologues ne relèvent pas du paramédical. L’élargissement de Nicodev se fait donc par pages
+				métiers distinctes, avec un vocabulaire adapté à chaque profession.
+			</p>
+		</header>
+
+		<div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
+			{
+				audiences.map(({ Icon, title, description, href, linkLabel }) => (
+					<article class="flex h-full flex-col rounded-lg border border-border bg-white p-6 shadow-sm">
+						<div class="ui-icon-well mb-5" aria-hidden="true">
+							<Icon class="h-5 w-5" stroke-width={1.5} />
+						</div>
+						<h3 class="font-heading text-xl font-semibold text-foreground">{title}</h3>
+						<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
+						<a
+							href={href}
+							class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+						>
+							{linkLabel}
+							<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+						</a>
+					</article>
+				))
+			}
+		</div>
+	</div>
+</section>

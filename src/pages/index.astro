@@ -9,6 +9,7 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
 import HomeTrustStrip from '../components/HomeTrustStrip.astro';
+import HomeAudienceSection from '../components/HomeAudienceSection.astro';
 import DifferenciationDiySection from '../components/DifferenciationDiySection.astro';
 import BlogHomeSection from '../components/BlogHomeSection.astro';
 import CtaSection from '../components/CtaSection.astro';
@@ -49,7 +50,7 @@ const businessSchema = {
 	legalName: 'Nicolas Devaux — EI',
 	identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: '75103269900033' },
 	description:
-		'Création de sites internet pour psychologues. Abonnement mensuel tout inclus dès 29 EUR.',
+		'Création de sites internet pour psychologues et professionnels du soin. Abonnement mensuel tout inclus dès 29 EUR.',
 	url: siteRootHref,
 	telephone: `+${WHATSAPP_PHONE_E164}`,
 	address: {
@@ -66,7 +67,7 @@ const businessSchema = {
 		'https://www.linkedin.com/in/nicodev3/'
 	],
 	areaServed: { '@type': 'Country', name: 'France' },
-	slogan: 'Création de sites internet pour psychologues',
+	slogan: 'Création de sites internet pour psychologues et professionnels du soin',
 	makesOffer: [
 		{
 			'@type': 'Offer',
@@ -112,7 +113,7 @@ const websiteSchema = {
 	name: 'Nicolas Devaux',
 	alternateName: 'Nicodev',
 	url: siteRootHref,
-	description: 'Création de sites internet pour psychologues.'
+	description: 'Création de sites internet pour psychologues et professionnels du soin.'
 };
 
 const breadcrumbSchema = {
@@ -125,8 +126,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Sites web pour psychologues par un psychologue | SEO local"
-	description="Création de sites internet pour psychologues, optimisés pour le référencement local (psychologue + ville). Packs simples, visibilité Google, widget Doctolib."
+	title="Sites web pour psychologues et professionnels du soin | Nicodev"
+	description="Création de sites internet pour psychologues, psychomotriciens et professionnels du soin. Sites sobres, clairs, visibilité locale, widget de prise de rendez-vous."
 	image={defaultOgWebp}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
@@ -137,6 +138,8 @@ const breadcrumbSchema = {
 	<HeroSection />
 
 	<HomeTrustStrip />
+
+	<HomeAudienceSection />
 
 	<DifferenciationDiySection variant="stitch" />
 
@@ -158,7 +161,7 @@ const breadcrumbSchema = {
 		variant="accent-band"
 		anchorId="contact-accueil"
 		title="Prêt à lancer votre site professionnel ?"
-		description="Diagnostic gratuit et sans engagement. Quelques questions pour comprendre votre situation et vous orienter vers l'offre la plus adaptée."
+		description="Diagnostic gratuit et sans engagement. Quelques questions pour comprendre votre pratique, votre contexte et vous orienter vers l'offre la plus adaptée."
 		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
 		secondaryButton={{ text: 'Voir les tarifs détaillés', href: '/tarifs/' }}
 	/>

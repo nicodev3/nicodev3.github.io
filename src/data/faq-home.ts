@@ -35,7 +35,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 	{
 		question: 'En quoi votre approche est-elle différente d’une offre standardisée ?',
 		answer:
-			'Je ne fonctionne pas comme une usine à sites. Je préfère suivre peu de projets, avec un échange direct, pour adapter chaque site à la pratique, au ton et aux besoins réels du psychologue. Il y a une base de travail sobre et éprouvée, mais elle est toujours retravaillée avec attention.',
+			'Je ne fonctionne pas comme une usine à sites. Je préfère suivre peu de projets, avec un échange direct, pour adapter chaque site à la pratique, au ton et aux besoins réels du praticien. Il y a une base de travail sobre et éprouvée, mais elle est toujours retravaillée avec attention.',
 	},
 	{
 		id: 'faq-doctolib-rdv',
@@ -57,7 +57,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 	{
 		question: 'Est-ce adapté si je débute en libéral ?',
 		answer:
-			'Oui. Le site est justement pensé pour vous aider à être visible dès vos débuts, avec des textes clairs pour expliquer votre pratique et rassurer vos premiers patients.',
+			'Oui. Le site est justement pensé pour vous aider à être visible dès vos débuts, avec des textes clairs pour expliquer votre pratique, vos publics accompagnés et vos modalités d’accueil.',
 	},
 	{
 		question: 'Puis-je changer d’offre plus tard ?',

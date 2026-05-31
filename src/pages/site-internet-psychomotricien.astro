@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
+import { Phone, MessageCircle } from '@lucide/astro';
+import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
+import defaultOgWebp from '../assets/images/blog/development.webp';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const pageUrl = new URL('/site-internet-psychomotricien/', baseUrl).href;
+
+const psychomotricienFaqItems = [
+	{
+		question: 'Le site est-il adapté à une activité de psychomotricien en libéral ?',
+		answer:
+			'Oui. La page est pensée pour expliquer clairement votre cadre d’exercice, les publics que vous accompagnez, les modalités pratiques et les possibilités de prise de contact, sans transformer votre pratique en discours commercial.',
+	},
+	{
+		question: 'Faut-il rédiger tous les textes soi-même ?',
+		answer:
+			'Non. Vous répondez à un formulaire guidé : publics accompagnés, bilan, suivi, cadre de consultation, horaires, accès au cabinet. Je structure ensuite les contenus pour qu’ils soient lisibles, sobres et compréhensibles par vos futurs patients ou leurs proches.',
+	},
+	{
+		question: 'Le référencement local est-il garanti ?',
+		answer:
+			'Non, aucun prestataire sérieux ne peut garantir une position Google. En revanche, le site est construit avec des bases solides : structure claire, performance mobile, titres pertinents, données structurées et cohérence avec votre ville ou secteur.',
+	},
+	{
+		question: 'Puis-je intégrer Doctolib, Maiia ou un autre outil de rendez-vous ?',
+		answer:
+			'Oui. Si vous utilisez une plateforme compatible, j’intègre le lien, le bouton ou le widget disponible. Le site reste votre espace de présentation, et l’outil de rendez-vous vient simplement faciliter la prise de contact.',
+	},
+];
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: psychomotricienFaqItems.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: {
+			'@type': 'Answer',
+			text: item.answer,
+		},
+	})),
+};
+
+const serviceSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Création de site internet pour psychomotricien',
+	description:
+		'Création de site internet pour psychomotriciens : site vitrine sobre, contenu structuré, informations pratiques, prise de rendez-vous et bases de référencement local.',
+	provider: {
+		'@type': 'Person',
+		name: 'Nicolas Devaux',
+		url: new URL('/about/', baseUrl).href,
+	},
+	serviceType: 'Création de site internet',
+	areaServed: { '@type': 'Country', name: 'France' },
+	url: pageUrl,
+};
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: 'Site internet psychomotricien',
+			item: pageUrl,
+		},
+	],
+};
+---
+
+<Layout
+	title="Site internet pour psychomotricien | Création sobre et SEO local"
+	description="Création de site internet pour psychomotricien : présenter votre cabinet, vos publics accompagnés et vos modalités de consultation. Par un ancien psychomotricien, psychologue et développeur web."
+	image={defaultOgWebp}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Création de site internet pour psychomotricien"
+		subtitle="Un site clair pour présenter votre cabinet, vos publics accompagnés, vos modalités de consultation et vos informations pratiques, sans discours commercial excessif."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Site psychomotricien' }]}
+	/>
+
+	<div class="border-b border-border bg-white py-3">
+		<div class="shell-layout flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+			<a
+				href={`tel:+${WHATSAPP_PHONE_E164}`}
+				class="inline-flex items-center gap-1.5 font-medium text-muted transition-colors hover:text-primary"
+			>
+				<Phone class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				{WHATSAPP_DISPLAY}
+			</a>
+			<a
+				href={WHATSAPP_HREF}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-1.5 font-semibold text-primary-500 transition-colors hover:text-primary"
+				data-umami-event="lead_click_whatsapp_from_psychomotricien_page"
+			>
+				<MessageCircle class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				WhatsApp — réponse rapide
+			</a>
+		</div>
+	</div>
+
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
+				<h2>Un site pour expliquer votre pratique sans la simplifier à l’excès</h2>
+				<p>
+					Un futur patient, un parent ou un médecin qui cherche un psychomotricien a souvent besoin de comprendre
+					rapidement votre cadre : bilan, suivi, publics accompagnés, âge des patients, accès au cabinet, tarifs,
+					prise de rendez-vous. Votre site doit rendre ces informations accessibles, sans promettre plus que ce que
+					votre pratique permet.
+				</p>
+				<p>
+					Je vous aide à construire un site sobre et lisible, adapté à une profession du soin où la confiance se
+					construit dans les détails : mots justes, informations concrètes, navigation simple, ton professionnel.
+				</p>
+
+				<h2>Une légitimité particulière sur la psychomotricité</h2>
+				<p>
+					Avant d’être psychologue et développeur web, j’ai été formé comme psychomotricien. Cette expérience me
+					permet de comprendre les enjeux de présentation d’un cabinet : expliquer le psychocorporel avec clarté,
+					distinguer bilan et suivi, rester accessible aux familles, et éviter les formulations trop commerciales ou
+					trop vagues.
+				</p>
+				<p>
+					Nicodev reste historiquement spécialisé dans les <a href="/creation-site-internet-psychologue/">sites pour psychologues</a>.
+					Cette page ouvre progressivement l’accompagnement à des professions proches du soin, en commençant par
+					les psychomotriciens.
+				</p>
+
+				<h2>Ce que le site peut présenter</h2>
+				<ul>
+					<li>Votre parcours, votre cadre de consultation et votre manière de travailler</li>
+					<li>Les publics accompagnés : enfants, adolescents, adultes, personnes âgées, selon votre pratique réelle</li>
+					<li>Les motifs fréquents de consultation, formulés avec prudence et pédagogie</li>
+					<li>Les informations pratiques : tarifs, accès, horaires, téléconsultation si pertinente</li>
+					<li>Un lien ou widget de prise de rendez-vous, lorsque vous utilisez un outil externe</li>
+					<li>Les bases de visibilité locale : titres, descriptions, performance mobile, sitemap et données structurées</li>
+				</ul>
+
+				<h2>Référencement local : rester prudent et concret</h2>
+				<p>
+					Les recherches du type <strong>psychomotricien + ville</strong> sont importantes, mais elles ne justifient
+					pas des promesses irréalistes. Le travail consiste à créer une page bien structurée, compréhensible par les
+					visiteurs et par les moteurs de recherche, puis à garder une cohérence entre votre site, votre fiche Google
+					Business Profile et les annuaires où votre cabinet apparaît.
+				</p>
+				<p>
+					Un bon site ne remplace pas votre réputation locale, votre réseau d’adressage ou la qualité de votre fiche
+					Google. Il leur donne un point d’appui stable, lisible et maîtrisé.
+				</p>
+
+				<h2>Déroulement</h2>
+				<p>
+					Le processus reste simple : diagnostic gratuit, choix d’une base graphique sobre, formulaire guidé pour
+					rassembler vos informations, prévisualisation, ajustements puis mise en ligne. Vous n’avez pas besoin de
+					gérer l’hébergement, le nom de domaine, les mises à jour ou les aspects techniques.
+				</p>
+
+				<h2>Pour qui ?</h2>
+				<p>
+					Cette offre s’adresse aux psychomotriciens installés en libéral, en création de cabinet, en association ou
+					en reprise d’un site existant. Elle peut aussi convenir si vous avez déjà une fiche Google ou une page sur
+					un annuaire, mais pas encore d’espace clair pour présenter votre pratique avec vos propres mots.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<FaqSection
+		items={psychomotricienFaqItems}
+		title="Questions fréquentes"
+		sectionId="faq-psychomotricien"
+		headingId="faq-psychomotricien-heading"
+		background="surface"
+		headingAlign="center"
+	/>
+
+	<CtaSection
+		title="Faire le point sur votre projet de site"
+		description="Le diagnostic gratuit permet de vérifier vos besoins, votre contexte et la formule la plus adaptée, sans engagement."
+		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
+		background="white"
+	/>
+</Layout>
