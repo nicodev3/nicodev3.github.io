@@ -5,7 +5,7 @@ import CtaSection from '../components/CtaSection.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import { Phone, MessageCircle } from '@lucide/astro';
 import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
-import creationOgWebp from '../assets/images/blog/creation-site-internet.webp';
+import psychologueImage from '../assets/images/psychologue.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const pageUrl = new URL('/creation-site-internet-psychologue/', baseUrl).href;
@@ -75,7 +75,7 @@ const breadcrumbSchema = {
 <Layout
 	title="Création de site web pour psychologue — vitrine et suivi | Nicolas Devaux"
 	description="Création de site internet et site web vitrine pour psychologues : structure claire, ton professionnel, mobile, prise de rendez-vous intégrée. Psychologue et développeur web, j’accompagne des cabinets partout en France."
-	image={creationOgWebp}
+	image={psychologueImage}
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -87,6 +87,8 @@ const breadcrumbSchema = {
 		title="Création de site web pour psychologue"
 		subtitle="Site vitrine sur mesure : présenter votre pratique, rassurer vos futurs patients et les orienter vers la prise de contact ou le rendez-vous en ligne. Une seule personne — psychologue et développeur web."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création site psychologue' }]}
+		coverImage={psychologueImage}
+		coverImageAlt="Exemple de site sobre pour une psychologue en libéral"
 	/>
 
 	<div class="border-b border-border bg-white py-3">
