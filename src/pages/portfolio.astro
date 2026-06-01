@@ -16,15 +16,26 @@ import psychologueUzesImage from "../assets/images/screenshots/psychologue-uzes.
 import emmanuelleRoucheImage from "../assets/images/screenshots/emmarouche-psycho34.webp";
 import florentSimonNancyImage from "../assets/images/screenshots/psychologue-nancy-florent-simon.webp";
 import balintSmbFranceImage from "../assets/images/screenshots/balint-smb-france.webp";
+import psychomotriciteMorgesImage from "../assets/images/screenshots/psychomotricite-morges.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
+
+type PortfolioProfession = "psychologue" | "psychomotricien" | "association";
+
+const professionLabels: Record<PortfolioProfession, string> = {
+  psychologue: "Psychologue",
+  psychomotricien: "Psychomotricien·ne",
+  association: "Association professionnelle",
+};
+
 type PortfolioProject = {
   title: string;
   image: ImageMetadata;
   url: string;
   location: string;
   year: number;
+  profession: PortfolioProfession;
   /** Affiche « Refonte en 2026 » dans les métadonnées de la carte. */
   refonte2026?: boolean;
   /** Texte alternatif HTML si « Aperçu du site » est trop générique (SEO / a11y). */
@@ -51,13 +62,24 @@ const breadcrumbSchema = {
 };
 
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
-const psychologueProjects: PortfolioProject[] = [
+const portfolioProjects: PortfolioProject[] = [
+  {
+    title: "Anne Dupuis-de Charrière",
+    image: psychomotriciteMorgesImage,
+    url: "https://psychomotricite-morges.ch/",
+    location: "Morges",
+    year: 2026,
+    profession: "psychomotricien",
+    imageAlt:
+      "Site vitrine psychomotricité Anne Dupuis-de Charrière à Morges — accueil et prise de contact",
+  },
   {
     title: "Florent Simon",
     image: florentSimonNancyImage,
     url: "https://psychologue-nancy-florent-simon.fr/",
     location: "Nancy",
     year: 2015,
+    profession: "psychologue",
     imageAlt:
       "Site vitrine psychologue Florent Simon à Nancy — accueil et prise de contact",
   },
@@ -67,6 +89,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://www.balint-smb-france.org/",
     location: "France",
     year: 2018,
+    profession: "association",
     imageAlt:
       "Site de la Société Médicale Balint France — groupes Balint, formations et actualités",
   },
@@ -76,6 +99,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-uzes.fr/",
     location: "Uzès",
     year: 2018,
+    profession: "psychologue",
     refonte2026: true,
     imageAlt:
       "Capture du site vitrine psychologue Sabine Lacas à Uzès — présentation et prise de contact",
@@ -86,6 +110,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-sorgues.com/",
     location: "Sorgues",
     year: 2016,
+    profession: "psychologue",
     refonte2026: true,
     imageAlt:
       "Site internet psychologue Marie-Josée Grasso à Sorgues — page d’accueil et informations cabinet",
@@ -96,6 +121,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://emmarouche-psycho34.com/",
     location: "Castelnau-le-Lez",
     year: 2016,
+    profession: "psychologue",
     refonte2026: true,
     imageAlt:
       "Site vitrine psychologue Emma Rouche à Castelnau-le-Lez (agglomération montpelliéraine)",
@@ -106,6 +132,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://montpellier-psychologue.pro/",
     location: "Montpellier",
     year: 2016,
+    profession: "psychologue",
     refonte2026: true,
     imageAlt:
       "Site web psychologue à Montpellier — Laure Meslé Yaakoubi, capture page d’accueil",
@@ -116,6 +143,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-leslilas.fr/",
     location: "Les Lilas",
     year: 2019,
+    profession: "psychologue",
     imageAlt:
       "Site internet psychologue aux Lilas (Île-de-France) — Séverine Reisser",
   },
@@ -125,6 +153,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-manosque.net/",
     location: "Manosque",
     year: 2016,
+    profession: "psychologue",
     imageAlt:
       "Site vitrine psychologue Delphine Cima à Manosque — contenus et contact",
   },
@@ -134,6 +163,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://mcbruneau-psychologue-blois.fr/",
     location: "Blois",
     year: 2017,
+    profession: "psychologue",
     imageAlt:
       "Site web psychologue Marie-Claire Bruneau à Blois — présentation du cabinet",
   },
@@ -143,6 +173,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-sarrebourg.fr/",
     location: "Sarrebourg",
     year: 2016,
+    profession: "psychologue",
     imageAlt:
       "Site internet psychologue Emanuelle Falligan à Sarrebourg — accueil",
   },
@@ -152,6 +183,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psychologue-andrezieux-boutheon.fr/",
     location: "Andrézieux-Bouthéon",
     year: 2016,
+    profession: "psychologue",
     imageAlt:
       "Site vitrine psychologue à Andrézieux-Bouthéon (proximité bassin lyonnais) — Stéphanie Requet-Catinean",
   },
@@ -161,6 +193,7 @@ const psychologueProjects: PortfolioProject[] = [
     url: "https://psy-emdr-cotebasque.fr/",
     location: "Côte basque",
     year: 2016,
+    profession: "psychologue",
     refonte2026: true,
     imageAlt:
       "Site psychologue EMDR Côte basque — Audrey Larcebau, refonte 2026, page d’accueil",
@@ -170,29 +203,31 @@ const psychologueProjects: PortfolioProject[] = [
 /** Archives : conception d’origine avant 2019 sans refonte récente — masquées par défaut. */
 const archiveTier = (p: PortfolioProject) => !p.refonte2026 && p.year < 2019;
 
-const projects = psychologueProjects.map((p) => ({
+const projects = portfolioProjects.map((p) => ({
   ...p,
+  professionLabel: professionLabels[p.profession],
   archiveTier: archiveTier(p),
 }));
 
-const conceptionYears = psychologueProjects.map((p) => p.year);
+const conceptionYears = portfolioProjects.map((p) => p.year);
 const conceptionYearMin = Math.min(...conceptionYears);
 const conceptionYearMax = Math.max(...conceptionYears);
 
-const portfolioYears = psychologueProjects.flatMap((p) =>
+const portfolioYears = portfolioProjects.flatMap((p) =>
   p.refonte2026 ? [p.year, 2026] : [p.year],
 );
 const portfolioYearMin = Math.min(...portfolioYears);
 const portfolioYearMax = Math.max(...portfolioYears);
 const portfolioEyebrow = `Références · ${portfolioYearMin}–${portfolioYearMax}`;
-const portfolioHeroTitle = "Sites pour psychologues. Voici ce que j’optimise.";
+const portfolioHeroTitle =
+  "Sites pour psychologues et psychomotricien·nes. Voici ce que j’optimise.";
 const portfolioHeroSubtitle =
   "Clarté de l’offre, présence locale Google et première prise de contact — le même socle technique pour chaque mise en ligne.";
 ---
 
 <Layout
-  title="Réalisations sites internet psychologues | Nicolas Devaux"
-  description="Réalisations de sites internet : portfolio historique de sites pour psychologues, avec un socle sobre adapté aux professionnels du soin."
+  title="Réalisations sites psychologues et psychomotricien·nes | Nicolas Devaux"
+  description="Réalisations de sites internet : portfolio de sites pour psychologues et psychomotricien·nes, avec un socle sobre adapté aux professionnels du soin."
 >
   <Fragment slot="head">
     <script
@@ -213,7 +248,7 @@ const portfolioHeroSubtitle =
       <h2
         class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl"
       >
-        Références de sites internet réalisées pour des psychologues
+        Références de sites pour psychologues et psychomotricien·nes
       </h2>
       <p class="mb-8 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
         Affichage par défaut : sites encore suivis ou{" "}
@@ -262,6 +297,23 @@ const portfolioHeroSubtitle =
                   />
                 </h3>
                 <div class="mb-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
+                  <div class="flex items-center">
+                    <svg
+                      class="mr-1 h-4 w-4 shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0a3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                      />
+                    </svg>
+                    <span>{project.professionLabel}</span>
+                  </div>
                   <div class="flex items-center">
                     <svg
                       class="mr-1 h-4 w-4 shrink-0"
@@ -323,7 +375,7 @@ const portfolioHeroSubtitle =
                     target="_blank"
                     rel="noopener noreferrer"
                     class="portfolio-ref-card__link inline-flex items-center gap-1.5 text-sm font-semibold text-foreground underline decoration-primary/35 underline-offset-[6px] transition-[color,text-decoration-color] hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
-                    aria-label={`Voir le site ${project.title} (nouvel onglet)`}
+                    aria-label={`Voir le site ${project.title}, ${project.professionLabel} (nouvel onglet)`}
                     data-umami-event="portfolio_site_link_click"
                     data-umami-event-site={new URL(project.url).hostname}
                     data-umami-event-title={project.title}
