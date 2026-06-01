@@ -21,11 +21,16 @@ import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
-type PortfolioProfession = "psychologue" | "psychomotricien" | "association";
+type PortfolioProfession =
+  | "psychologue"
+  | "psychomotricien"
+  | "psychomotricienne"
+  | "association";
 
 const professionLabels: Record<PortfolioProfession, string> = {
   psychologue: "Psychologue",
   psychomotricien: "Psychomotricien·ne",
+  psychomotricienne: "Psychomotricienne",
   association: "Association professionnelle",
 };
 
@@ -69,7 +74,7 @@ const portfolioProjects: PortfolioProject[] = [
     url: "https://psychomotricite-morges.ch/",
     location: "Morges",
     year: 2026,
-    profession: "psychomotricien",
+    profession: "psychomotricienne",
     imageAlt:
       "Site vitrine psychomotricité Anne Dupuis-de Charrière à Morges — accueil et prise de contact",
   },
@@ -374,14 +379,14 @@ const portfolioHeroSubtitle =
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="portfolio-ref-card__link inline-flex items-center gap-1.5 text-sm font-semibold text-foreground underline decoration-primary/35 underline-offset-[6px] transition-[color,text-decoration-color] hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
+                    class="portfolio-ref-card__link inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     aria-label={`Voir le site ${project.title}, ${project.professionLabel} (nouvel onglet)`}
                     data-umami-event="portfolio_site_link_click"
                     data-umami-event-site={new URL(project.url).hostname}
                     data-umami-event-title={project.title}
                     data-umami-event-emplacement="card"
                   >
-                    Voir le site
+                    <span class="portfolio-ref-card__link-text">Voir le site</span>
                     <span
                       class="translate-x-0 transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-focus-within:translate-x-0.5"
                       aria-hidden="true"
@@ -518,6 +523,18 @@ const portfolioHeroSubtitle =
     box-shadow:
       0 1px 2px rgba(0, 0, 0, 0.05),
       0 14px 32px -10px rgba(15, 42, 42, 0.12);
+  }
+
+  .portfolio-ref-card__link-text {
+    text-decoration-line: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-primary-500) 35%, transparent);
+    text-underline-offset: 6px;
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  .portfolio-ref-card__link:hover .portfolio-ref-card__link-text,
+  .portfolio-ref-card__link:focus-visible .portfolio-ref-card__link-text {
+    text-decoration-color: var(--color-primary-500);
   }
 
   @media (prefers-reduced-motion: reduce) {
