@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
 import FaqSection from '../components/FaqSection.astro';
-import { ClipboardList, GraduationCap, MapPin, MessageCircle, Phone, Search } from '@lucide/astro';
+import { Code2, GraduationCap, MapPin, MessageCircle, Phone, Search } from '@lucide/astro';
 import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
 import psychomotricienneImage from '../assets/images/psychomotricienne-2.webp';
 
@@ -13,18 +13,21 @@ const pageUrl = new URL('/site-internet-psychomotricien/', baseUrl).href;
 const legitimacyItems = [
 	{
 		Icon: GraduationCap,
-		title: 'Formé à la psychomotricité',
-		description: 'DE de psychomotricien, ISRP (1996), avant mon parcours de psychologue et de développeur web.',
+		title: 'Expertise psychomotricité',
+		description:
+			'Formation initiale de psychomotricien à l’ISRP : bilan, suivi, publics accompagnés et vocabulaire du cabinet — sans modèle générique de « thérapeute ».',
 	},
 	{
-		Icon: ClipboardList,
-		title: 'Contenu guidé',
-		description: 'Un formulaire simple pour préciser vos bilans, suivis, publics accompagnés et informations pratiques.',
+		Icon: Code2,
+		title: 'Expertise web',
+		description:
+			'Développeur web et ancien tech lead front-end : structure, performance mobile, SEO technique et mise en ligne — pas une agence déconnectée du soin.',
 	},
 	{
 		Icon: MapPin,
-		title: 'Ancrage local',
-		description: 'Une structure pensée pour votre cabinet, votre ville, votre fiche Google et vos parcours de contact.',
+		title: 'Visibilité locale',
+		description:
+			'Pages et parcours de contact simples, pensés pour votre ville et votre fiche Google, sans promesses de positionnement irréalistes.',
 	},
 ] as const;
 
@@ -36,6 +39,11 @@ const localSearchExamples = [
 ] as const;
 
 const psychomotricienFaqItems = [
+	{
+		question: 'Pourquoi travailler avec quelqu’un qui connaît la psychomotricité et le web ?',
+		answer:
+			'Parce que le contenu et la technique ne se séparent pas : expliquer un bilan psychomoteur demande des mots justes ; le rendre visible en ligne demande une structure solide. Je m’appuie sur une formation initiale de psychomotricien à l’ISRP et sur un vrai parcours de développeur web, jusqu’à tech lead front-end, pour un site sobre, précis et techniquement fiable.',
+	},
 	{
 		question: 'Le site est-il adapté à une activité de psychomotricien en libéral ?',
 		answer:
@@ -81,7 +89,7 @@ const serviceSchema = {
 	'@type': 'Service',
 	name: 'Création de site internet pour psychomotricien',
 	description:
-		'Création de site internet pour psychomotriciens : site vitrine sobre, contenu structuré, informations pratiques, prise de rendez-vous et bases de référencement local.',
+		'Création de site internet pour psychomotriciens par un DE psychomotricien (ISRP) et ancien tech lead développeur web : contenu juste, site performant et bases de référencement local.',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -119,7 +127,7 @@ const breadcrumbSchema = {
 
 <Layout
 	title="Site internet psychomotricien | Création sobre et SEO local"
-	description="Création de site internet pour psychomotricien : cabinet, publics, rendez-vous et SEO local. Par un ancien psychomotricien, psychologue et développeur web."
+	description="Site internet pour psychomotricien : DE psychomotricien (ISRP) et tech lead développeur web. Contenu clinique juste, site performant, SEO local et prise de rendez-vous."
 	image={psychomotricienneImage}
 >
 	<Fragment slot="head">
@@ -130,8 +138,10 @@ const breadcrumbSchema = {
 
 	<Hero
 		title="Création de site internet pour psychomotricien"
-		subtitle="Un site clair pour présenter votre cabinet, vos publics accompagnés, vos modalités de consultation et vos informations pratiques, sans discours commercial excessif."
+		subtitle="Psychomotricien de formation et tech lead développeur web : un site sobre pour votre cabinet — contenu compris par les familles, technique maîtrisée de bout en bout."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Site psychomotricien' }]}
+		coverImage={psychomotricienneImage}
+		coverImageAlt="Espace de psychomotricité avec une professionnelle accompagnant un enfant"
 	/>
 
 	<div class="border-b border-border bg-white py-3">
@@ -161,11 +171,12 @@ const breadcrumbSchema = {
 			<header class="mx-auto mb-8 max-w-3xl text-center">
 				<p class="type-eyebrow mb-3 text-muted">Repères</p>
 				<h2 id="psychomotricien-reperes-heading" class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">
-					Psychomotricité, soin et web : un accompagnement qui part de votre réalité
+					Psychomotricité et web : la même personne derrière le contenu et la technique
 				</h2>
 				<p class="mt-3 text-base leading-relaxed text-muted sm:text-lg">
-					Le site doit aider les familles, adultes, partenaires et prescripteurs à comprendre votre cadre de travail
-					sans réduire la psychomotricité à une liste de symptômes ou à une promesse de résultat.
+					Vous n’avez pas affaire à une agence qui découvre le soin, ni à un clinicien qui délègue le code. Je connais
+					les enjeux d’un cabinet de psychomotricité et je construis moi-même des sites performants, avec un double
+					regard : formation initiale en psychomotricité et expérience confirmée du web.
 				</p>
 			</header>
 
@@ -203,19 +214,36 @@ const breadcrumbSchema = {
 				<p>
 					Je vous aide à construire un site sobre et lisible, adapté à une profession du soin où la confiance se
 					construit dans les détails : mots justes, informations concrètes, navigation simple, ton professionnel.
+					Le contenu est pensé avec une <strong>expertise psychomotricité</strong> ; la mise en ligne repose sur une
+					<strong>expertise web</strong> de développeur, jusqu’à tech lead front-end.
 				</p>
 
-				<h2>Une légitimité particulière sur la psychomotricité</h2>
+				<h2>Deux expertises réunies pour votre site</h2>
+
+				<h3>Comprendre la psychomotricité, pas seulement la « thérapie »</h3>
 				<p>
-					Avant d’être psychologue et développeur web, j’ai obtenu le <strong>DE de psychomotricien à l’ISRP en 1996</strong>.
-					Cette formation me permet de comprendre les enjeux de présentation d’un cabinet : expliquer le
-					psychocorporel avec clarté, distinguer bilan et suivi, rester accessible aux familles, et éviter les
-					formulations trop commerciales ou trop vagues.
+					Mon parcours a commencé par une <strong>formation de psychomotricien à l’ISRP</strong>, avant de se
+					prolonger vers la psychologie puis le développement web. Cette formation me permet de comprendre les enjeux
+					de présentation d’un cabinet : expliquer le psychocorporel avec clarté, distinguer bilan et suivi, rester
+					accessible aux familles, et éviter les formulations trop commerciales ou trop vagues.
 				</p>
 				<p>
 					Concrètement, je ne pars pas d’un modèle générique de « thérapeute ». Je vous aide à formuler ce qui
 					appartient vraiment à votre pratique : place du corps, développement psychomoteur, graphomotricité,
 					coordination, relation, temporalité du suivi et articulation avec les autres professionnels.
+				</p>
+
+				<h3>Un site construit par un développeur expérimenté</h3>
+				<p>
+					Mon expérience web s’est construite en freelance puis en équipe, jusqu’à des postes de{' '}
+					<strong>tech lead front-end</strong> (notamment au Figaro et chez Naxos). Aujourd’hui, je mets cette
+					expérience au service des professionnels du soin. Vous échangez directement avec la personne qui rédige,
+					structure et développe votre site — pas avec une chaîne commerciale.
+				</p>
+				<p>
+					Côté technique : pages rapides sur mobile, structure HTML claire, données structurées, sitemap, bonnes
+					pratiques SEO et intégration de vos outils (Doctolib, Maiia, etc.).{' '}
+					<a href="/about/#references-professionnelles">Voir mon parcours web et mes références</a>.
 				</p>
 
 				<h2>Ce que le site peut présenter</h2>
