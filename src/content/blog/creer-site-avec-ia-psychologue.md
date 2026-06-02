@@ -1,6 +1,6 @@
 ---
 title: "Créer son site avec l'IA : une fausse bonne idée pour un psychologue ?"
-description: "Les outils d'intelligence artificielle facilitent la rédaction et le code, mais un site professionnel exige aussi design, UX, SEO et conformité. Pourquoi l'IA ne remplace pas une compétence web — et comment l'utiliser sans se tromper."
+description: "Créer son site avec l’IA quand on est psychologue : limites, risques UX, SEO et conformité, et usages utiles sans perdre le cadre professionnel."
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-web-IA.webp"

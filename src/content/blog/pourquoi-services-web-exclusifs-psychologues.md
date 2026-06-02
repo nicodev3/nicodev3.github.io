@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi Nicodev a d'abord été spécialisé pour les psychologues"
-description: "Mon positionnement expliqué : en tant que psychologue et développeur web, j'ai construit une offre de sites web pour psychologues, dans le respect du titre et du cadre d'une profession réglementée."
+description: "Pourquoi j’ai d’abord spécialisé Nicodev pour les psychologues : titre protégé, cadre professionnel et expérience de psychologue développeur."
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"

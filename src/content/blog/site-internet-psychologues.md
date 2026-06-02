@@ -1,7 +1,7 @@
 ---
 title: "Site psychologue 2026 : 5 pages, SEO & RGPD"
 metaTitleSuffix: "Nicolas Devaux"
-description: "Checklist actionnable en 12 min : 5 pages indispensables, référencement local, accessibilité et cadre déontologique. Méthode 2026 pour être trouvé sur Google sans sur-optimiser."
+description: "Checklist site psychologue 2026 : 5 pages indispensables, référencement local, accessibilité et cadre déontologique."
 pubDate: "2016-09-05"
 updatedDate: "2026-02-26"
 author: "Nicolas Devaux"

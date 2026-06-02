@@ -1,6 +1,6 @@
 ---
 title: "Avis Google et e-réputation du psychologue : déontologie, éthique, secret professionnel"
-description: "Avis Google, témoignages patients, e-réputation : ce que le code de déontologie (2021) recommande, ce que la loi impose (secret professionnel) et ce que la réflexion éthique apporte en plus. Comment gérer sa fiche avec discernement."
+description: "Avis Google et e-réputation du psychologue : cadre déontologique, secret professionnel et repères éthiques pour gérer sa fiche."
 pubDate: "2026-05-18"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/avis_google_psychologue.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Sites internet pour psychologues : attention aux promesses trop belles pour être vraies"
-description: "Certaines offres de création de site internet pour psychologue promettent une visibilité rapide. D'autres vont plus loin dans les pratiques abusives. Voici comment évaluer ces offres avec lucidité."
+description: "Promesses SEO, visibilité rapide, offres abusives : comment évaluer une création de site pour psychologue avec lucidité."
 pubDate: "2026-03-28"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"

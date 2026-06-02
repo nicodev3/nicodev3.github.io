@@ -1,6 +1,6 @@
 ﻿---
 title: "Création de site web en 2026 : ce qu’un psychologue doit savoir sur la technique"
-description: "HTML, CSS, performance, accessibilité et SEO : les bases d’un site moderne, avant de passer au guide dédié aux psychologues (structure, éthique, visibilité locale)."
+description: "Création de site web en 2026 : bases HTML, CSS, performance, accessibilité et SEO pour comprendre la technique."
 pubDate: "2015-10-26"
 updatedDate: "2026-05-09"
 author: "Nicolas Devaux"

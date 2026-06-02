@@ -1,7 +1,7 @@
 ---
 title: "Site internet psychomotricien : pages essentielles"
 metaTitleSuffix: "Nicodev"
-description: "Structure de site pour psychomotricien en libéral : accueil, bilan, suivis, publics, tarifs, contact, SEO local et ton adapté aux familles comme aux prescripteurs."
+description: "Site internet pour psychomotricien : pages essentielles, bilan, suivis, publics, tarifs, contact, SEO local et ton adapté."
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/psychomotricienne-2.webp"

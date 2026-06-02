@@ -1,7 +1,7 @@
 ---
 title: "Guide complet de la visibilité en ligne pour psychologues"
 metaTitleSuffix: "Nicodev"
-description: "Méthode complète pour rendre un cabinet de psychologue plus visible : fiche Google, site, SEO local, Doctolib, budget et diagnostic gratuit si vous voulez être accompagné."
+description: "Guide visibilité en ligne pour psychologues : fiche Google, site, SEO local, Doctolib, budget et priorités d’action."
 pubDate: "2026-05-11"
 updatedDate: "2026-05-31"
 author: "Nicolas Devaux"

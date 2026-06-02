@@ -1,7 +1,7 @@
 ---
 title: "Fiche Google psychomotricien : réglages essentiels"
 metaTitleSuffix: "Nicodev"
-description: "Comment créer et optimiser une fiche Google Business Profile pour un cabinet de psychomotricité : catégorie, adresse, horaires, photos, site et cohérence locale."
+description: "Fiche Google Business Profile pour psychomotricien : catégorie, adresse, horaires, photos, site et cohérence locale."
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/seo-google-my-business.webp"

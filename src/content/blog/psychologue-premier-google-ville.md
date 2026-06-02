@@ -1,6 +1,6 @@
 ---
 title: "Psychologue : comment apparaître en premier sur Google dans sa ville ?"
-description: "SEO local pour psychologues : fiche Google, site, pages locales, données structurées, avis et backlinks. À lire avec le guide pilier visibilité en ligne du même blog."
+description: "SEO local pour psychologues : fiche Google, site, pages locales, données structurées, avis et liens utiles."
 pubDate: "2026-05-03"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-premier-google-ville.webp"

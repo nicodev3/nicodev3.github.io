@@ -1,6 +1,6 @@
 ---
 title: "S’installer en libéral comme psychologue : par où commencer (sans se noyer)"
-description: "Une carte de lecture pour préparer son installation : projet, démarches, statut, fiscalité, cabinet, visibilité et premiers patients — avant d’aller plus loin avec un guide détaillé."
+description: "Installation en libéral pour psychologue : projet, démarches, statut, fiscalité, cabinet, visibilité et premiers patients."
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-liberal-installation.webp"

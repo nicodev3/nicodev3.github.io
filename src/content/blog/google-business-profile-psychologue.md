@@ -1,6 +1,6 @@
 ---
 title: "Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026"
-description: "Guide pas-à-pas pour créer, vérifier et optimiser votre fiche Google Business Profile en tant que psychologue. Apparaissez dans les résultats locaux et sur Google Maps."
+description: "Créer et optimiser une fiche Google Business Profile de psychologue : étapes clés pour mieux apparaître en local et sur Google Maps."
 pubDate: "2026-03-02"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/seo-google-my-business.webp"
