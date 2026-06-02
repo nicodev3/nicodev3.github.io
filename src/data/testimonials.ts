@@ -52,9 +52,6 @@ export const maltTestimonials = [
 	},
 ] as const;
 
-/** Avis publié sur la fiche Google Business Profile (nicodev.fr). */
-export const GOOGLE_BUSINESS_URL = 'https://share.google/BhZVJc4HC2Rx78fJe';
-
 export const googleTestimonial = {
 	quote:
 		'Nicolas est professionnel, réactif et à l\'écoute. Très beau travail pour mon site internet, qui correspond parfaitement à mes attentes. Je recommande !',

@@ -1,6 +1,6 @@
 ---
 import TestimonialCard from './TestimonialCard.astro';
-import { maltTestimonials, MALT_PROFILE_URL, googleTestimonial, GOOGLE_BUSINESS_URL } from '../data/testimonials';
+import { maltTestimonials, MALT_PROFILE_URL, googleTestimonial } from '../data/testimonials';
 
 /** Google en 2ᵉ position, puis le reste des recommandations Malt. */
 const carouselTestimonials = [
@@ -94,28 +94,16 @@ const carouselTestimonials = [
 		</div>
 
 		<div class="mt-12 text-center">
-			<div class="flex flex-col items-center gap-2 text-base">
-				<p>
-					<a
-						href={MALT_PROFILE_URL}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
-					>
-						Voir tous les avis sur Malt
-					</a>
-				</p>
-				<p>
-					<a
-						href={GOOGLE_BUSINESS_URL}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
-					>
-						Voir la fiche Google
-					</a>
-				</p>
-			</div>
+			<p>
+				<a
+					href={MALT_PROFILE_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
+				>
+					Voir tous les avis sur Malt
+				</a>
+			</p>
 		</div>
 	</div>
 </section>
