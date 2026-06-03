@@ -48,6 +48,9 @@ const umamiId =
   import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL ?? import.meta.env.UMAMI_URL;
 const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : "";
+const ahrefsAnalyticsKey =
+  import.meta.env.PUBLIC_AHREFS_ANALYTICS_KEY ??
+  import.meta.env.AHREFS_ANALYTICS_KEY;
 
 ---
 
@@ -107,6 +110,13 @@ const umamiScriptSrc = umamiUrl ? `${umamiUrl.replace(/\/+$/, "")}/script.js` : 
         defer
         src={umamiScriptSrc}
         data-website-id={umamiId}
+      ></script>
+    )}
+    {ahrefsAnalyticsKey && (
+      <script
+        src="https://analytics.ahrefs.com/analytics.js"
+        data-key={ahrefsAnalyticsKey}
+        async
       ></script>
     )}
   </head>
