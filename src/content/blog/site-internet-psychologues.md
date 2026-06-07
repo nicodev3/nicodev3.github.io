@@ -205,8 +205,9 @@ Au minimum : Accueil, À propos, Pratiques, Tarifs, Contact, Mentions légales, 
 
 Un site de psychologue efficace en 2026 est un site clair, utile et sobre. Le SEO n'est pas une couche artificielle : c'est la conséquence d'un contenu bien pensé, d'une structure propre et d'une vraie qualité d'expérience.
 
-Si vous souhaitez créer ou refondre votre site, commencez par un audit simple puis avancez étape par étape.
+Si vous souhaitez créer ou refondre votre site, commencez par un audit simple puis avancez étape par étape. Si votre site existe déjà, l'article [Refonte de site internet pour psychologue et psychomotricien](/blog/refonte-site-internet/) vous aidera à prioriser les points à revoir.
 
 À lire aussi :
+- [Refonte de site internet pour psychologue et psychomotricien](/blog/refonte-site-internet/)
 - [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
 - [Création d'un site Internet](/blog/creation-site-internet/)
