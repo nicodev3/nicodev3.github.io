@@ -1,5 +1,6 @@
 ---
 title: "S’installer en libéral comme psychologue : par où commencer ?"
+seoTitle: "Installation psychologue libéral : par où commencer ?"
 description: "S’installer en libéral psychologue : démarches, statut, fiscalité, cabinet, visibilité locale et premiers patients."
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"

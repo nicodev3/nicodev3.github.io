@@ -1,5 +1,6 @@
 ﻿---
 title: "Création de site web en 2026 : ce qu’un psychologue doit savoir sur la technique"
+seoTitle: "Création site web psychologue : bases 2026 | Nicodev"
 description: "Création de site web en 2026 : bases HTML, CSS, performance, accessibilité et SEO pour comprendre la technique."
 pubDate: "2015-10-26"
 updatedDate: "2026-05-09"

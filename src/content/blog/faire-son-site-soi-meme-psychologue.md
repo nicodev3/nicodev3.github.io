@@ -1,5 +1,6 @@
 ---
 title: "Faire son site soi-même quand on est psychologue : ce qu’on ne voit pas toujours"
+seoTitle: "Site psychologue soi-même : limites et conseils SEO"
 description: "Site fait maison pour psychologue : les fragilités possibles côté UX, RGPD, déontologie, SEO local et crédibilité du cabinet."
 pubDate: "2026-05-26"
 author: "Nicolas Devaux"

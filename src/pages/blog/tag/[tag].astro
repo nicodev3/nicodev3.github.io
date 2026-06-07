@@ -25,6 +25,16 @@ export async function getStaticPaths() {
 
 const { tagSlug, tagLabel } = Astro.props;
 const posts = await getCollection('blog');
+const tagTitleCandidates = [
+	`Articles ${tagLabel} : conseils site web et SEO local | Nicodev`,
+	`Articles ${tagLabel} : site web et visibilité SEO | Nicodev`,
+	`Articles ${tagLabel} : conseils web et SEO | Nicodev`,
+	`Articles ${tagLabel} | SEO et site web Nicodev`,
+	`Articles ${tagLabel} | Blog site web Nicodev`,
+];
+const tagSeoTitle =
+	tagTitleCandidates.find((candidate) => Array.from(candidate).length >= 50 && Array.from(candidate).length <= 60) ??
+	`Articles ${tagLabel} | Nicodev`;
 
 const filteredPosts = posts
 	.filter((post) => post.data.tags?.some((t: string) => slugifyTag(t) === tagSlug))
@@ -47,7 +57,7 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title={`Articles tagués "${tagLabel}" - Blog | Nicolas Devaux`}
+	title={tagSeoTitle}
 	description={`Articles "${tagLabel}" : création de site, SEO local et visibilité web pour psychologues, psychomotriciens et professions du soin.`}
 	noindex={true}
 >

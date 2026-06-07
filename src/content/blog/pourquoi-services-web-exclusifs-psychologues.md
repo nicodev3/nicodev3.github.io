@@ -1,5 +1,6 @@
 ---
 title: "Pourquoi Nicodev a d'abord été spécialisé pour les psychologues"
+seoTitle: "Nicodev : sites web dédiés aux psychologues libéraux"
 description: "Pourquoi j’ai d’abord spécialisé Nicodev pour les psychologues : titre protégé, cadre professionnel et expérience de psychologue développeur."
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"

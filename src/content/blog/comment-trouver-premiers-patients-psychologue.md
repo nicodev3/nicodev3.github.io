@@ -1,5 +1,6 @@
 ---
 title: "Comment trouver ses premiers patients quand on s’installe comme psychologue"
+seoTitle: "Trouver ses premiers patients psychologue | Nicodev"
 description: "Trouver ses premiers patients comme psychologue : réseau, Doctolib, Google, site internet et visibilité locale."
 pubDate: "2026-03-15"
 author: "Nicolas Devaux"

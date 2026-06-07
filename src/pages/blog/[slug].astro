@@ -57,7 +57,7 @@ const siteOrigin = new URL('/', baseUrl).href;
 const publisherLogoUrl = new URL('/favicon.svg', baseUrl).toString();
 const canonical = new URL(Astro.url.pathname, baseUrl).toString();
 const metaTitleSuffix = entry.data.metaTitleSuffix ?? 'Site web psychologues';
-const layoutTitle = `${entry.data.title} | ${metaTitleSuffix}`;
+const layoutTitle = entry.data.seoTitle ?? `${entry.data.title} | ${metaTitleSuffix}`;
 const imageUrl = entry.data.image
 	? new URL(entry.data.image.src, baseUrl).toString()
 	: undefined;

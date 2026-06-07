@@ -1,5 +1,6 @@
 ---
 title: "Choisir son nom de domaine et son hébergeur"
+seoTitle: "Nom de domaine et hébergement pour site psy | Nicodev"
 description: "Comprendre les notions d'hébergement et de nom de domaine d'un site internet. Guide complet pour les débutants."
 pubDate: "2015-09-12"
 updatedDate: "2024-08-20"

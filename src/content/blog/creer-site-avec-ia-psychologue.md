@@ -1,5 +1,6 @@
 ---
 title: "Créer son site avec l'IA : une fausse bonne idée pour un psychologue ?"
+seoTitle: "Site IA psychologue : fausse bonne idée ? | Nicodev"
 description: "Créer son site avec l’IA quand on est psychologue : limites, risques UX, SEO et conformité, et usages utiles sans perdre le cadre professionnel."
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"

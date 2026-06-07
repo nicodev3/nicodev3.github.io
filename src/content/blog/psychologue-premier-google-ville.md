@@ -1,5 +1,6 @@
 ---
 title: "Psychologue : comment apparaître en premier sur Google dans sa ville ?"
+seoTitle: "Psychologue premier sur Google dans sa ville | Nicodev"
 description: "SEO local pour psychologues : fiche Google, site, pages locales, données structurées, avis et liens utiles."
 pubDate: "2026-05-03"
 author: "Nicolas Devaux"

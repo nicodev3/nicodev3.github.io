@@ -1,7 +1,8 @@
 ---
 title: "Refonte de site internet pour psychologue et psychomotricien"
+seoTitle: "Refonte site psychologue et psychomotricien | Nicodev"
 metaTitleSuffix: "Nicolas Devaux"
-description: "Refonte de site internet pour psychologue libéral et psychomotricien : signes d’alerte, priorités SEO, mobile et méthode simple pour moderniser un site professionnel."
+description: "Refonte de site internet pour psychologue ou psychomotricien : SEO, mobile et méthode simple pour moderniser un site professionnel."
 pubDate: "2026-06-04"
 updatedDate: "2026-06-04"
 author: "Nicolas Devaux"

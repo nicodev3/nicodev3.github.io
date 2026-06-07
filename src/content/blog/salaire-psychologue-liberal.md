@@ -1,5 +1,6 @@
 ---
 title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
+seoTitle: "Salaire psychologue libéral : revenus 2026 | Nicodev"
 description: "Salaire psychologue libéral : combien gagne-t-on selon les honoraires, charges, cotisations CIPAV, micro-BNC ou réel ?"
 pubDate: "2026-06-02"
 author: "Nicolas Devaux"

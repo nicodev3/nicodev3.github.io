@@ -1,5 +1,6 @@
 ---
 title: "Combien coûte vraiment la création d’un site internet pour un psychologue en 2026 ?"
+seoTitle: "Combien coûte un site psychologue en 2026 | Nicodev"
 description: "Prix d’un site internet de psychologue en 2026 : fourchettes réalistes, coûts cachés et budget selon votre pratique en libéral."
 pubDate: "2026-02-22"
 updatedDate: "2026-03-18"

@@ -1,5 +1,6 @@
 ---
 title: "Sites internet pour psychologues : attention aux promesses trop belles pour être vraies"
+seoTitle: "Promesses web aux psychologues : les éviter | Nicodev"
 description: "Promesses SEO, visibilité rapide, offres abusives : comment évaluer une création de site pour psychologue avec lucidité."
 pubDate: "2026-03-28"
 author: "Nicolas Devaux"

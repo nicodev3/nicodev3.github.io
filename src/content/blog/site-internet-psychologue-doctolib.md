@@ -1,5 +1,6 @@
 ---
 title: "Psychologue : faut-il un site internet en plus de Doctolib ?"
+seoTitle: "Site psychologue et Doctolib : faut-il les deux ? SEO"
 description: "Doctolib, site internet ou les deux ? Comparatif pour psychologues : coût, visibilité locale, prise de rendez-vous, autonomie et conversion des patients."
 pubDate: "2026-03-12"
 author: "Nicolas Devaux"

@@ -1,5 +1,6 @@
 ---
 title: "Guide complet de la visibilité en ligne pour psychologues"
+seoTitle: "Visibilité en ligne psychologues : guide SEO Nicodev"
 metaTitleSuffix: "Nicodev"
 description: "Guide visibilité en ligne pour psychologues : fiche Google, site, SEO local, Doctolib, budget et priorités d’action."
 pubDate: "2026-05-11"

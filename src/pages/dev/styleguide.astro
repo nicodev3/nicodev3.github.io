@@ -5,13 +5,28 @@ import SkillCard from '../../components/SkillCard.astro';
 import OfferCard from '../../components/OfferCard.astro';
 import FormField from '../../components/FormField.astro';
 
-if (!import.meta.env.DEV) {
-	return Astro.redirect('/');
-}
+const shouldRedirect = !import.meta.env.DEV;
 ---
 
+{shouldRedirect ? (
 <Layout
-	title="Styleguide interne | Dev"
+	title="Redirection page styleguide interne | Nicolas Devaux"
+	description="Redirection vers l'accueil depuis la page interne de styleguide."
+	noindex={true}
+	showFloatingWhatsApp={false}
+>
+	<Fragment slot="head">
+		<meta http-equiv="refresh" content="0;url=/" />
+	</Fragment>
+	<section class="py-16">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+			<p>Redirection vers <a class="text-primary underline" href="/">l'accueil</a>.</p>
+		</div>
+	</section>
+</Layout>
+) : (
+<Layout
+	title="Styleguide interne Nicodev | Système de design local"
 	description="Page de reference interne pour les composants et tokens visuels"
 	noindex={true}
 >
@@ -184,3 +199,4 @@ if (!import.meta.env.DEV) {
 		</div>
 	</section>
 </Layout>
+)}

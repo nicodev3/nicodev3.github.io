@@ -1,3 +1,23 @@
 ---
-return Astro.redirect('/dev/guide-installation/');
+import Layout from '../../layouts/Layout.astro';
+
+const targetUrl = '/dev/guide-installation/';
 ---
+
+<Layout
+  title="Redirection guide installation psychologue | Nicodev"
+  description="Redirection vers la prévisualisation locale du guide d'installation en libéral pour psychologues."
+  noindex={true}
+  showFloatingWhatsApp={false}
+>
+  <Fragment slot="head">
+    <meta http-equiv="refresh" content={`0;url=${targetUrl}`} />
+  </Fragment>
+  <section class="py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <p>
+        Redirection vers <a class="text-primary underline" href={targetUrl}>le guide d'installation</a>.
+      </p>
+    </div>
+  </section>
+</Layout>
