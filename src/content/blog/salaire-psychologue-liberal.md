@@ -23,7 +23,7 @@ La difficulté, c'est que ce mot « salaire » est en partie trompeur. En libér
 
 Cet article ne remplace ni un expert-comptable, ni un conseiller en gestion de patrimoine. Il propose une **lecture réaliste** des revenus possibles, avec des ordres de grandeur et des exemples chiffrés, pour que vous puissiez estimer votre situation — et croiser ces données avec le reste de votre projet d'installation.
 
-Pour les démarches concrètes (statut, TVA, cabinet, visibilité), vous pouvez aussi lire le guide [s'installer en libéral comme psychologue : par où commencer](/blog/installer-liberal-psychologue-par-ou-commencer/).
+Pour les démarches concrètes (statut, TVA, cabinet, visibilité), vous pouvez aussi lire le guide [ouvrir son cabinet de psychologue : s'installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/).
 
 ## Pourquoi il n'y a pas un « salaire » unique en libéral
 
@@ -294,7 +294,7 @@ Le Code de déontologie des psychologues encadre la communication : l'objectif n
 
 Le **salaire psychologue libéral** le plus honnête à retenir est donc une **fourchette** liée à votre tarif, votre volume, vos charges et votre régime — pas un chiffre unique affiché sur un forum.
 
-Si vous préparez votre installation, avancez en parallèle sur trois plans : **viabilité financière** (ce article), **cadre administratif** ([guide installation](/blog/installer-liberal-psychologue-par-ou-commencer/)), et **visibilité** pour ne pas rester invisible les premiers mois ([premiers patients](/blog/comment-trouver-premiers-patients-psychologue/), [budget site internet](/blog/combien-coute-site-internet-2026/)).
+Si vous préparez votre installation, avancez en parallèle sur trois plans : **viabilité financière** (ce article), **cadre administratif** ([ouvrir son cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/)), et **visibilité** pour ne pas rester invisible les premiers mois ([premiers patients](/blog/comment-trouver-premiers-patients-psychologue/), [budget site internet](/blog/combien-coute-site-internet-2026/)).
 
 Pour un projet de site ou de visibilité en ligne adapté aux psychologues, vous pouvez consulter la page [création de site web pour psychologue](/creation-site-internet-psychologue/), les [tarifs](/tarifs/) ou demander un [diagnostic gratuit](/diagnostic-gratuit/).
 

@@ -11,6 +11,8 @@ tags: ["psychologue", "installation libérale", "visibilité locale", "site inte
 
 S’installer en libéral comme psychologue est souvent un moment à la fois stimulant et déstabilisant. On a travaillé son cadre, réfléchi à sa pratique, choisi un lieu. Puis une question très concrète apparaît : comment trouver ses premiers patients sans se sentir obligé de "se vendre" ?
 
+Si vous êtes encore en amont, commencez par le guide dédié pour [ouvrir son cabinet de psychologue et s’installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/) : démarches, statut, local, visibilité et ordre des priorités.
+
 Cette inquiétude est normale. Au début, beaucoup de praticiens se demandent si leur cabinet va se remplir, à quel rythme, et par quels canaux les premières demandes vont arriver.
 
 Quand on s’installe comme psychologue en libéral, la difficulté de départ n’est pas forcément la qualité du travail proposé. Bien souvent, le vrai sujet est plus simple : les patients potentiels ne savent pas encore que vous existez. Autrement dit, le problème initial est souvent celui de la visibilité, pas celui de la compétence.
@@ -128,6 +130,7 @@ Ce qui compte surtout, au début, c’est de mettre en place des bases solides :
 Si vous souhaitez créer un site sobre, professionnel et pensé pour votre visibilité locale, j’accompagne précisément ce type de projet chez Nicodev. Mon approche est simple : construire un site clair, fidèle à votre pratique, utile pour vos patients, et solide pour votre installation dans la durée.
 
 À lire aussi :
+- [Ouvrir son cabinet de psychologue : s’installer en libéral sans se noyer](/blog/installer-liberal-psychologue-par-ou-commencer/)
 - [Psychologue : faut-il avoir un site internet en plus de Doctolib ?](/blog/site-internet-psychologue-doctolib/)
 - [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
 - [Site internet pour psychologue en 2026 : guide complet SEO et éthique](/blog/site-internet-psychologues/)
