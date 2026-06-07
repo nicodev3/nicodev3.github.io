@@ -1,12 +1,13 @@
 ---
-title: "Ouvrir son cabinet de psychologue : s’installer en libéral sans se noyer"
-description: "Ouvrir un cabinet de psychologue : projet, démarches, statut, fiscalité, local, visibilité et premiers patients."
+title: "S’installer en libéral comme psychologue : par où commencer ?"
+description: "S’installer en libéral psychologue : démarches, statut, fiscalité, cabinet, visibilité locale et premiers patients."
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-liberal-installation.webp"
 tags:
   [
     "psychologue",
+    "s’installer en libéral psychologue",
     "installation libérale",
     "cabinet libéral",
     "visibilité locale",
@@ -16,7 +17,7 @@ tags:
 
 *Temps de lecture : environ 8 minutes*
 
-S’installer en libéral, ce n’est pas seulement « ouvrir un cabinet ». C’est prendre des décisions qui touchent à la fois ton cadre clinique, ton organisation, des formalités administratives et une façon de vivre ton métier au quotidien. Derrière une recherche comme **« ouvrir cabinet psychologue »**, il y a souvent une même question : par quoi commencer pour ouvrir son cabinet de psychologue sans se disperser ni fragiliser son cadre ?
+S’installer en libéral comme psychologue, ce n’est pas seulement « ouvrir un cabinet ». C’est prendre des décisions qui touchent à la fois ton cadre clinique, ton organisation, des formalités administratives et une façon de vivre ton métier au quotidien. Derrière une recherche comme **« s’installer en libéral psychologue »** ou **« ouvrir cabinet psychologue »**, il y a souvent une même question : par quoi commencer pour ouvrir son cabinet de psychologue sans se disperser ni fragiliser son cadre ?
 
 Cet article ne remplace ni un conseil juridique, ni un conseil fiscal ou social personnalisé. Il propose surtout **une grille de lecture** : les grands blocs à anticiper, dans un ordre qui t’aide à avancer sans tout mélanger. L’objectif est que tu saches **ce qui mérite ton attention en premier**, et où creuser ensuite si tu veux aller plus loin.
 
@@ -24,11 +25,11 @@ Si tu veux gagner du temps, je peux t’envoyer le **guide complet d’installat
 
 👉 Écris-moi via [la page contact](/contact/) en commençant ton message par **« Guide installation libéral psy »**.
 
-## Ouvrir un cabinet de psychologue : clarifier le projet avant les formulaires
+## S’installer en libéral comme psychologue : clarifier le projet avant les formulaires
 
 Le libéral attire pour de bonnes raisons : cadre qui te ressemble, lien plus direct avec ta pratique, possibilité de faire évoluer ton activité. Il a aussi un revers souvent sous-estimé : tu portes en parallèle la clinique **et** la gestion d’une petite activité (agenda, paiements, imprévus, irrégularité des revenus au début).
 
-Avant de penser statut ou local, il est utile de rendre ton projet **lisible pour toi-même** : publics que tu souhaites recevoir, modalités (cabinet, visio, les deux), orientation que tu es prêt à assumer publiquement, rythme que tu vises. Ouvrir un cabinet de psychologue, ce n’est donc pas seulement trouver une salle : c’est construire un cadre cohérent, compréhensible et tenable dans le temps. Ce n’est pas une question de « marketing agressif » : c’est ce qui permet à des patients, à des confrères ou à des prescripteurs de comprendre rapidement **à qui tu t’adresses** — et ce qui t’aide à ne pas diluer ton énergie sur des attentes floues.
+Avant de penser statut ou local, il est utile de rendre ton projet **lisible pour toi-même** : publics que tu souhaites recevoir, modalités (cabinet, visio, les deux), orientation que tu es prêt à assumer publiquement, rythme que tu vises. Ouvrir un cabinet de psychologue, ce n’est donc pas seulement trouver une salle : c’est construire un cadre cohérent, compréhensible et tenable dans le temps. Ce n’est pas une question de « marketing agressif » : c’est ce qui permet à des patients, à des confrères ou à des prescripteurs de comprendre rapidement **à qui tu t’adresses** — et ce qui t’aide à t’installer en libéral sans diluer ton énergie sur des attentes floues.
 
 Beaucoup de psychologues gagnent en sérénité en envisageant aussi une **montée en charge progressive** (par exemple cumul avec un salariat) plutôt qu’un basculement brutal. Ce n’est pas la seule voie, mais c’est souvent celle qui limite le choc des premiers mois.
 
@@ -40,6 +41,8 @@ Avant toute démarche, valide ces 4 points :
 - ton **format de pratique** (cabinet, visio, hybride) ;
 - ton **volume réaliste** de créneaux sur 3 mois ;
 - ton **seuil de viabilité** (charges fixes + minimum de sécurité perso).
+
+Si la question financière est déjà centrale pour toi, l’article sur le [salaire d’un psychologue libéral](/blog/salaire-psychologue-liberal/) détaille les honoraires, les charges, les cotisations et les scénarios de revenu net.
 
 Dans le guide PDF que j'ai réalisé, je détaille une version complète de cette check-list avec un canevas prêt à remplir.
 
@@ -153,7 +156,7 @@ Le **site internet** mérite d’être préparé en parallèle des autres chanti
 
 Tu veux la version détaillée du plan 30 jours (priorités quotidiennes, documents à préparer, points de vigilance) ? Je te l’envoie par mail.
 
-## Questions fréquentes avant d’ouvrir son cabinet de psychologue
+## Questions fréquentes avant de s’installer en libéral comme psychologue
 
 ### Quelles sont les premières étapes pour ouvrir un cabinet de psychologue ?
 

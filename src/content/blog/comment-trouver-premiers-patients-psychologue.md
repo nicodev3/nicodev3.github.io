@@ -15,6 +15,8 @@ Si vous êtes encore en amont, commencez par le guide dédié pour [ouvrir son c
 
 Cette inquiétude est normale. Au début, beaucoup de praticiens se demandent si leur cabinet va se remplir, à quel rythme, et par quels canaux les premières demandes vont arriver.
 
+Si votre question porte aussi sur la viabilité financière, l’article [salaire psychologue libéral](/blog/salaire-psychologue-liberal/) propose des scénarios concrets pour estimer revenu net, charges et rythme de séances.
+
 Quand on s’installe comme psychologue en libéral, la difficulté de départ n’est pas forcément la qualité du travail proposé. Bien souvent, le vrai sujet est plus simple : les patients potentiels ne savent pas encore que vous existez. Autrement dit, le problème initial est souvent celui de la visibilité, pas celui de la compétence.
 
 Pour trouver ses premiers patients quand on débute, il n’y a pas de recette unique. En revanche, il existe des bases solides, sobres et compatibles avec la déontologie du métier. L’enjeu n’est pas d’être visible partout, mais de devenir repérable par les bonnes personnes, au bon endroit.

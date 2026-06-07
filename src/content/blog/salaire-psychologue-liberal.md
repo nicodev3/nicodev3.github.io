@@ -1,6 +1,6 @@
 ---
 title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
-description: "Salaire psychologue libéral : honoraires par séance, chiffre d'affaires, charges, cotisations CIPAV, micro ou réel, et revenu net selon le stade de carrière."
+description: "Salaire psychologue libéral : combien gagne-t-on selon les honoraires, charges, cotisations CIPAV, micro-BNC ou réel ?"
 pubDate: "2026-06-02"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
@@ -9,6 +9,8 @@ tags:
     "psychologue",
     "installation libérale",
     "salaire psychologue libéral",
+    "revenu psychologue libéral",
+    "combien gagne psychologue",
     "honoraires",
     "fiscalité",
     "cabinet libéral",
@@ -17,7 +19,7 @@ tags:
 
 *Temps de lecture : environ 12 minutes*
 
-Avant de s'installer, beaucoup de psychologues tapent la même requête dans Google : **salaire psychologue libéral**. On cherche un chiffre net, comparable à une fiche de paie, pour savoir si l'exercice en cabinet tiendra la route.
+Avant de s'installer, beaucoup de psychologues tapent la même requête dans Google : **salaire psychologue libéral**. Derrière cette recherche, la question est souvent très concrète : **combien gagne un psychologue libéral**, une fois les charges, cotisations et impôts retirés ?
 
 La difficulté, c'est que ce mot « salaire » est en partie trompeur. En libéral, vous ne percevez pas un salaire fixé par un employeur : vous encaissez des **honoraires**, vous supportez des **charges**, vous payez des **cotisations** et de l'**impôt** sur votre bénéfice. Le montant qui reste dans votre poche dépend donc autant de votre tarif que de votre agenda, de votre ville, de votre régime fiscal et de la façon dont vous organisez votre activité.
 
@@ -25,7 +27,7 @@ Cet article ne remplace ni un expert-comptable, ni un conseiller en gestion de p
 
 Pour les démarches concrètes (statut, TVA, cabinet, visibilité), vous pouvez aussi lire le guide [ouvrir son cabinet de psychologue : s'installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/).
 
-## Pourquoi il n'y a pas un « salaire » unique en libéral
+## Salaire psychologue libéral : pourquoi il n'y a pas un chiffre unique
 
 ### Honoraires, pas rémunération
 
@@ -71,7 +73,7 @@ Certaines prestations se facturent plus cher : **thérapie de couple** (souvent 
 
 Pour le détail administratif et fiscal (TVA sur les soins, mentions de facture), le guide [s'installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/) aborde ces points ; validez toujours votre cas avec un professionnel.
 
-## Du tarif de séance au chiffre d'affaires mensuel
+## Du tarif de séance au revenu net mensuel
 
 ### Combien de séances pour vivre de son cabinet ?
 
@@ -284,7 +286,7 @@ Le Code de déontologie des psychologues encadre la communication : l'objectif n
 - **Signer un bail ou des abonnements** avant d'avoir testé la demande locale.
 - **Ne pas simuler** micro vs réel dès 25 000 à 30 000 € de CA annuel.
 
-## En résumé : quel salaire viser en libéral ?
+## Salaire psychologue libéral : quelle fourchette viser ?
 
 | Phase | Ordre de grandeur de revenu net mensuel (après charges) |
 | --- | --- |
@@ -294,7 +296,25 @@ Le Code de déontologie des psychologues encadre la communication : l'objectif n
 
 Le **salaire psychologue libéral** le plus honnête à retenir est donc une **fourchette** liée à votre tarif, votre volume, vos charges et votre régime — pas un chiffre unique affiché sur un forum.
 
-Si vous préparez votre installation, avancez en parallèle sur trois plans : **viabilité financière** (ce article), **cadre administratif** ([ouvrir son cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/)), et **visibilité** pour ne pas rester invisible les premiers mois ([premiers patients](/blog/comment-trouver-premiers-patients-psychologue/), [budget site internet](/blog/combien-coute-site-internet-2026/)).
+Si vous préparez votre installation, avancez en parallèle sur trois plans : **viabilité financière** (cet article), **cadre administratif** ([ouvrir son cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/)), et **visibilité** pour ne pas rester invisible les premiers mois ([premiers patients](/blog/comment-trouver-premiers-patients-psychologue/), [budget site internet](/blog/combien-coute-site-internet-2026/)).
+
+## Questions fréquentes sur le salaire d'un psychologue libéral
+
+### Quel est le salaire moyen d'un psychologue libéral ?
+
+Il n'existe pas de salaire moyen officiel vraiment fiable pour tous les psychologues libéraux, car le revenu dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l'ancienneté du cabinet. Une activité récente peut rester sous **1 700 € nets mensuels**, tandis qu'un cabinet installé peut viser plus souvent **1 800 à 3 200 € nets**, avec de fortes variations.
+
+### Combien gagne un psychologue libéral débutant ?
+
+Les débuts sont souvent irréguliers. Les premiers mois, le revenu peut être faible, surtout si le cabinet coûte cher et que l'agenda n'est pas encore rempli. Beaucoup de psychologues sécurisent cette phase par une sous-location progressive, un cumul salarié-libéral ou des charges fixes limitées.
+
+### Le salaire d'un psychologue libéral est-il plus élevé qu'en salariat ?
+
+Il peut l'être, mais ce n'est pas automatique. Le libéral offre un plafond potentiel plus haut, mais il faut retirer les charges, cotisations, impôts, congés non payés, absences, outils et temps administratif. La comparaison doit donc porter sur le **revenu net disponible**, pas seulement sur les honoraires encaissés.
+
+### Micro-BNC ou réel : quel régime laisse le plus de revenu ?
+
+Le micro-BNC est souvent simple et lisible au démarrage, surtout avec peu de charges. Le réel devient intéressant quand les frais professionnels dépassent environ l'abattement forfaitaire de **34 %** du chiffre d'affaires. Le bon choix dépend donc du coût réel du cabinet, pas seulement du chiffre d'affaires.
 
 Pour un projet de site ou de visibilité en ligne adapté aux psychologues, vous pouvez consulter la page [création de site web pour psychologue](/creation-site-internet-psychologue/), les [tarifs](/tarifs/) ou demander un [diagnostic gratuit](/diagnostic-gratuit/).
 
