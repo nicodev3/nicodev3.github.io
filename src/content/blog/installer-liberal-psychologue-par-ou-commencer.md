@@ -16,7 +16,7 @@ tags:
   ]
 ---
 
-*Temps de lecture : environ 8 minutes*
+*Temps de lecture : environ 9 minutes*
 
 S’installer en libéral comme psychologue, ce n’est pas seulement « ouvrir un cabinet ». C’est prendre des décisions qui touchent à la fois ton cadre clinique, ton organisation, des formalités administratives et une façon de vivre ton métier au quotidien. Derrière une recherche comme **« s’installer en libéral psychologue »** ou **« ouvrir cabinet psychologue »**, il y a souvent une même question : par quoi commencer pour ouvrir son cabinet de psychologue sans se disperser ni fragiliser son cadre ?
 
@@ -32,16 +32,22 @@ Le libéral attire pour de bonnes raisons : cadre qui te ressemble, lien plus di
 
 Avant de penser statut ou local, il est utile de rendre ton projet **lisible pour toi-même** : publics que tu souhaites recevoir, modalités (cabinet, visio, les deux), orientation que tu es prêt à assumer publiquement, rythme que tu vises. Ouvrir un cabinet de psychologue, ce n’est donc pas seulement trouver une salle : c’est construire un cadre cohérent, compréhensible et tenable dans le temps. Ce n’est pas une question de « marketing agressif » : c’est ce qui permet à des patients, à des confrères ou à des prescripteurs de comprendre rapidement **à qui tu t’adresses** — et ce qui t’aide à t’installer en libéral sans diluer ton énergie sur des attentes floues.
 
+Il y a aussi un préalable simple, mais qu’il vaut mieux poser clairement : l’usage du titre de psychologue est protégé. Avant de communiquer, louer un cabinet ou lancer tes démarches, vérifie que ton diplôme et tes justificatifs te permettent bien d’obtenir ton enregistrement professionnel. Si tu as un parcours atypique, une équivalence, une activité mixte ou une reprise après plusieurs années, c’est typiquement le genre de point à clarifier avant d’investir dans le reste.
+
+Enfin, prends une heure pour regarder ton **territoire d’installation**. Pas besoin d’une étude de marché lourde : observe les psychologues déjà présents, leurs publics affichés, les délais de rendez-vous, les tarifs pratiqués, les lieux de soin autour de toi, les écoles, entreprises, maisons de santé ou médecins susceptibles d’orienter. Cette lecture locale t’aide à choisir une adresse, mais aussi à éviter une présentation trop vague du type « tout public, toute difficulté », qui rassure rarement.
+
 Beaucoup de psychologues gagnent en sérénité en envisageant aussi une **montée en charge progressive** (par exemple cumul avec un salariat) plutôt qu’un basculement brutal. Ce n’est pas la seule voie, mais c’est souvent celle qui limite le choc des premiers mois.
 
 ### Points de vérification préalables
 
-Avant toute démarche, valide ces 4 points :
+Avant toute démarche, valide ces 6 points :
 
 - ta **population cible prioritaire** (et celle que tu n’accueilles pas) ;
 - ton **format de pratique** (cabinet, visio, hybride) ;
 - ton **volume réaliste** de créneaux sur 3 mois ;
-- ton **seuil de viabilité** (charges fixes + minimum de sécurité perso).
+- ton **seuil de viabilité** (charges fixes + minimum de sécurité perso) ;
+- ton **territoire d’installation** (demande locale, concurrence, prescripteurs possibles) ;
+- tes **justificatifs de titre** et documents utiles pour l’enregistrement professionnel.
 
 Si la question financière est déjà centrale pour toi, l’article sur le [salaire d’un psychologue libéral](/blog/salaire-psychologue-liberal/) détaille les honoraires, les charges, les cotisations et les scénarios de revenu net.
 
@@ -52,9 +58,11 @@ Dans le guide PDF que j'ai réalisé, je détaille une version complète de cett
 Sur le papier, tout se mélange : santé, entreprise, protection sociale, fiscalité. En pratique, une chronologie simple aide beaucoup :
 
 1. **T’assurer que tu peux faire usage du titre** et rassembler les justificatifs utiles avant de te lancer dans les formulaires.
-2. **T’enregistrer comme psychologue** auprès de l’ARS et obtenir ton **RPPS** (référence nationale, distincte de l’ancienne logique ADELI).
+2. **T’enregistrer comme psychologue** auprès de l’ARS et obtenir ton **RPPS** (référence nationale utilisée pour identifier les professionnels).
 3. **Déclarer ton activité indépendante** sur le guichet unique (INPI / procédures en ligne), ce qui lance l’immatriculation et te donne les identifiants d’activité (SIREN, SIRET, code APE…).
 4. **Anticiper ce qui s’enchaîne** : organismes sociaux, échéancier des cotisations, assurance **responsabilité civile professionnelle**, compte dédié à l’activité, demandes comme l’ACRE lorsque tu y as droit, mentions obligatoires sur tes documents si tu es en entreprise individuelle.
+
+Selon ta situation, pense aussi aux dispositifs qui peuvent sécuriser le démarrage : maintien partiel de l’ARE, ARCE, ACRE, prêt d’honneur, aide locale, accompagnement par une structure de création d’activité. Ce ne sont pas des cases obligatoires pour tout le monde, mais les regarder avant l’ouverture peut éviter de découvrir trop tard une aide compatible avec ton projet.
 
 ## Statut juridique : souvent l’entreprise individuelle, puis micro ou réel
 
@@ -85,6 +93,8 @@ Deux pièges fréquents à éviter :
 - **Confondre exonération et franchise en base**. Les deux font que tu ne factures pas de TVA, mais pour des raisons juridiques différentes — et la mention à porter sur la facture n’est pas la même (exonération au titre de l’art. 261 CGI pour les soins, ou `TVA non applicable, art. 293 B du CGI` pour la franchise en base sur les activités soumises mais sous seuil).
 - **Oublier les charges « silencieuses »** qui ne dépendent pas du nombre de séances dans le mois (typiquement la **CFE**, qui arrive en général dès la deuxième année d’activité, selon les règles applicables à ta commune et à ta situation).
 
+Ajoute à cela une réserve de trésorerie réaliste. Les premiers mois peuvent être irréguliers, même avec un bon positionnement : le temps que les patients trouvent ton cabinet, que les orientations se mettent en place et que ton agenda se stabilise, tu dois pouvoir absorber l’écart entre tes charges fixes et tes recettes réelles.
+
 Pour aller plus loin sur ces sujets (TVA, CFE, cotisations, régime fiscal), je peux t’envoyer par mail le **guide complet au format PDF**. Tu y retrouveras des exemples chiffrés, les mentions exactes à faire figurer sur tes factures et les points de vigilance à valider avec ton expert-comptable.
 
 👉 [**Demander le guide par mail**](/contact/)
@@ -96,6 +106,8 @@ Domicile, sous-location à temps partagé, bail professionnel, maison de santé�
 Ce qui revient souvent comme bon compromis au démarrage : un **vrai lieu professionnel** (même partagé quelques demi-journées) plutôt qu’une solution « bricolée » qui fragilise le cadre ou la séparation vie pro / vie perso. Les points non négociables restent en général : **isolement phonique**, circulations discrètes, salle d’attente digne de ce nom, sensation de sécurité pour la personne qui entre.
 
 Si ton objectif est d’ouvrir un cabinet de psychologie identifiable localement, pense aussi au très concret : adresse stable, accès simple, cohérence entre le nom affiché sur la porte, la fiche Google, le site internet et les documents remis aux patients. Ce sont des détails administratifs en apparence, mais ils participent à la confiance et au référencement local.
+
+Regarde également les sujets d’**accessibilité** et de signalétique avant de signer : accès PMR, contraintes éventuelles d’établissement recevant du public (ERP), affichage dans l’immeuble, plaque professionnelle, règles de copropriété, autorisation d’exercice dans le local. Ce sont des détails moins visibles que le fauteuil ou la décoration, mais ils peuvent devenir très concrets au moment d’accueillir les patients.
 
 Si tu sous-loues, le sujet n’est pas seulement le prix : c’est la **solidité du cadre** (autorisation dans le bail principal, accord écrit, assurance, responsabilités claires). Un cabinet « pas cher » mais juridiquement flou peut coûter très cher ensuite.
 
@@ -113,7 +125,7 @@ Concrètement, plusieurs principes en découlent :
 - **rigueur et circonspection sur les méthodes** (art. 31) : tu présentes tes méthodes et outils avec prudence, sans en exagérer la portée ni laisser entendre qu’ils règlent mécaniquement tel ou tel trouble ;
 - **responsabilité dans l’image de la profession** (art. 30) : ce que tu diffuses publiquement (site, réseaux sociaux, fiche locale, interviews) engage aussi l’image de l’ensemble de la profession ;
 - **secret professionnel et confidentialité** (principe 2 et art. 7, renvoyant aux articles 226-13 et 226-14 du code pénal) : pas de **témoignages patients** utilisés comme argument commercial, même anonymisés, ni d’« avant/après » cliniques ;
-- **protection du titre** (loi n° 85-772 du 25 juillet 1985, art. 44) : seul l’usage du titre de psychologue, par une personne inscrite sur les listes **ADELI**, est autorisé — d’où l’importance de faire figurer ton numéro sur tes documents professionnels (art. 18).
+- **protection du titre** (loi n° 85-772 du 25 juillet 1985, art. 44) : seul l’usage du titre de psychologue, par une personne remplissant les conditions légales et enregistrée comme professionnelle, est autorisé — d’où l’importance de faire figurer ton numéro **RPPS** sur tes documents professionnels (art. 18).
 
 Ce cadre n’est pas un frein à la visibilité : c’est ce qui rend ta communication **crédible** auprès des patients et des prescripteurs. Une présentation sobre et précise (« j’accompagne les adultes en période de transition professionnelle ou personnelle, avec une approche X ») fonctionne mieux, sur la durée, qu’un argumentaire marketing.
 
@@ -146,9 +158,9 @@ Côté outils (agenda, dossier patient, facturation), le piège classique est de
 
 Pour éviter la dispersion, pense en sprints :
 
-- **Semaine 1** : cadrage du projet + choix du mode de démarrage ;
+- **Semaine 1** : cadrage du projet + lecture du territoire + choix du mode de démarrage ;
 - **Semaine 2** : démarches administratives + base assurantielle ;
-- **Semaine 3** : cadre de pratique (lieu, outils, organisation) ;
+- **Semaine 3** : cadre de pratique (lieu, accessibilité, outils, organisation) ;
 - **Semaine 4** : **mise en ligne du site professionnel** + visibilité locale + ouverture progressive des créneaux.
 
 Le **site internet** mérite d’être préparé en parallèle des autres chantiers, pas relégué « pour plus tard » : c’est souvent le premier point de contact réel avec les patients, et il structure ensuite toute la communication (fiche Google, Doctolib, cartes de visite, mails). Un site sobre, bien pensé, qui présente clairement ton titre, ton approche, tes publics et tes modalités fait davantage pour ta crédibilité que n’importe quelle campagne publicitaire — et c’est aussi ce qui te rend **indépendant des plateformes** sur la durée.
