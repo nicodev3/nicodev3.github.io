@@ -1,11 +1,11 @@
 ---
 import TestimonialCard from './TestimonialCard.astro';
-import { maltTestimonials, MALT_PROFILE_URL, googleTestimonial } from '../data/testimonials';
+import { maltTestimonials, MALT_PROFILE_URL, googleTestimonials } from '../data/testimonials';
 
-/** Google en 2ᵉ position, puis le reste des recommandations Malt. */
+/** Google en 2e position, puis le reste des recommandations Malt. */
 const carouselTestimonials = [
 	{ source: 'malt' as const, ...maltTestimonials[0] },
-	{ source: 'google' as const, ...googleTestimonial },
+	...googleTestimonials.map((t) => ({ source: 'google' as const, ...t })),
 	...maltTestimonials.slice(1).map((t) => ({ source: 'malt' as const, ...t })),
 ];
 ---
@@ -46,6 +46,8 @@ const carouselTestimonials = [
 							rating={t.source === 'google' ? t.rating : undefined}
 							quote={t.quote}
 							author={t.short}
+							websiteUrl={'websiteUrl' in t ? t.websiteUrl : undefined}
+							websiteLabel={'websiteLabel' in t ? t.websiteLabel : undefined}
 						/>
 					</div>
 				))}

@@ -52,10 +52,22 @@ export const maltTestimonials = [
 	},
 ] as const;
 
-export const googleTestimonial = {
-	quote:
-		'Nicolas est professionnel, réactif et à l\'écoute. Très beau travail pour mon site internet, qui correspond parfaitement à mes attentes. Je recommande !',
-	author: 'Audrey Larcebeau, Psychologue',
-	short: 'Audrey L.',
-	rating: 5,
-} as const;
+export const googleTestimonials = [
+	{
+		quote:
+			'Nicolas est professionnel, réactif et à l\'écoute. Très beau travail pour mon site internet, qui correspond parfaitement à mes attentes. Je recommande !',
+		author: 'Audrey Larcebau, Psychologue',
+		short: 'Audrey Larcebau',
+		rating: 5,
+		websiteUrl: 'https://psy-emdr-cotebasque.fr/',
+		websiteLabel: 'Psychologue EMDR Côte Basque',
+	},
+	{
+		quote: 'Travail de très bonne qualité ! Très bon relationnel. Vous pouvez foncer en toute confiance !',
+		author: 'Laure Meslé-Yaakoubi',
+		short: 'Laure Meslé-Yaakoubi',
+		rating: 5,
+		websiteUrl: 'https://montpellier-psychologue.pro/',
+		websiteLabel: 'Psychologue à Montpellier',
+	},
+] as const;

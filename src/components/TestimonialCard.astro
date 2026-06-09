@@ -4,13 +4,15 @@ import { Star } from '@lucide/astro';
 export interface Props {
 	quote: string;
 	author: string;
+	websiteUrl?: string;
+	websiteLabel?: string;
 	/** Plateforme d’origine de l’avis */
 	source?: 'malt' | 'google';
 	/** Note sur 5 (avis Google) */
 	rating?: number;
 }
 
-const { quote, author, source = 'malt', rating } = Astro.props;
+const { quote, author, websiteUrl, websiteLabel, source = 'malt', rating } = Astro.props;
 
 const isGoogle = source === 'google';
 const isMalt = source === 'malt';
@@ -96,6 +98,18 @@ const showStars = true;
 		<div class="flex min-w-0 flex-col text-left">
 			<span class="font-semibold text-foreground">{shortAuthor}</span>
 			<span class="text-xs text-muted">{footerNote}</span>
+			{
+				websiteUrl && websiteLabel ? (
+					<a
+						href={websiteUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-xs font-semibold text-primary-foreground underline decoration-primary-foreground/35 underline-offset-4 hover:decoration-primary-foreground"
+					>
+						{websiteLabel}
+					</a>
+				) : null
+			}
 		</div>
 	</footer>
 </blockquote>
