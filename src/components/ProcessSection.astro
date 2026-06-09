@@ -6,24 +6,16 @@ export interface ProcessStep {
 
 const steps: ProcessStep[] = [
 	{
-		title: 'Diagnostic gratuit',
-		description: 'Échange de 15 min pour comprendre votre contexte.',
+		title: 'On situe votre besoin',
+		description: 'Un échange court pour comprendre votre pratique, votre ville et ce que le site doit vraiment porter.',
 	},
 	{
-		title: 'Choix du template',
-		description: 'Modèles sobres avec palettes adaptées à votre pratique.',
+		title: 'Je structure avec vous',
+		description: 'Vous répondez simplement aux questions utiles ; je mets en forme les contenus, les pages et le parcours.',
 	},
 	{
-		title: 'Contenu guidé',
-		description: 'Formulaire simple (30 min). Je structure vos textes.',
-	},
-	{
-		title: 'Prévisualisation',
-		description: 'Sous 7 jours, URL de test et checklist de validation.',
-	},
-	{
-		title: 'Mise en ligne',
-		description: 'Derniers ajustements et lancement officiel.',
+		title: 'On ajuste puis on met en ligne',
+		description: 'Vous relisez une version de test, on corrige ce qui doit l’être, puis je m’occupe de la mise en ligne.',
 	},
 ];
 ---
@@ -32,12 +24,15 @@ const steps: ProcessStep[] = [
 	<div class="shell-layout">
 		<div class="mb-10 text-center md:mb-16">
 			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Un processus simple, sans charge technique
+				Un déroulé simple, sans jargon technique
 			</h2>
-			<p class="mt-3 text-muted">5 étapes claires pour un site opérationnel en 10 jours.</p>
+			<p class="mx-auto mt-3 max-w-2xl text-muted">
+				L’objectif n’est pas de vous faire devenir webmaster, mais de traduire votre cadre de pratique dans un site
+				lisible.
+			</p>
 		</div>
 
-		<div class="grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-8">
+		<div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3 md:gap-8">
 			{steps.map((step, index) => (
 				<div class="process-step group space-y-4">
 					<span class="type-label-mono text-muted transition-colors group-hover:text-primary-foreground">

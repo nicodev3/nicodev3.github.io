@@ -13,7 +13,7 @@ const hasStripePaymentLinks = Boolean(stripePaymentLinkSerenite && stripePayment
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 
 const serenityFeatures = [
-	'Création du site professionnel et accompagnement à la rédaction',
+	'Création du site et accompagnement pour clarifier les textes',
 	'Hébergement, nom de domaine et sauvegardes inclus*',
 	'Intégration de votre widget ou lien de prise de RDV (Doctolib, Qare, Maiia, Calendly...)',
 	'Mentions légales, informations obligatoires et base RGPD',
@@ -22,7 +22,7 @@ const serenityFeatures = [
 
 const visibilityFeatures = [
 	"Tout le contenu de l'offre Sérénité",
-	'Rédaction régulière d’articles de blog pour nourrir votre visibilité locale',
+	'Rédaction régulière de contenus pour soutenir votre visibilité locale',
 	'Fiche Google Business Profile mise en place ou optimisée',
 	'Optimisation SEO locale et suivi mensuel des performances*',
 	'Mises à jour de vos contenus courants : tarifs, horaires, spécialités, photos et pages déjà présentes',
@@ -39,11 +39,11 @@ const visibilityFeatures = [
 	<div class="shell-layout">
 		<header class="shell-prose mx-auto text-center">
 			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Une offre simple, tout compris
+				Deux cadres possibles selon votre besoin
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				Deux abonnements sans engagement : un site fiable à gérer pour vous, puis une formule renforcée si vous
-				voulez travailler votre visibilité locale.
+				L’idée est de garder quelque chose de lisible : soit un site clair et maintenu, soit un accompagnement plus
+				régulier autour de la visibilité locale.
 			</p>
 		</header>
 
@@ -51,7 +51,7 @@ const visibilityFeatures = [
 			<OfferCard
 				name="Sérénité"
 				price="29€"
-				description="Pour être présent en ligne avec un site clair, conforme et relié à votre prise de rendez-vous."
+				description="Pour avoir un site clair, maintenu, relié à votre prise de rendez-vous, sans gérer la partie technique."
 				summary="Site + maintenance essentielle"
 				features={serenityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
@@ -63,7 +63,7 @@ const visibilityFeatures = [
 			<OfferCard
 				name="Visibilité & Confiance"
 				price="49€"
-				description="Pour renforcer votre visibilité locale et garder un site vivant dans le temps."
+				description="Pour les cabinets qui veulent aussi travailler la présence locale et garder les contenus vivants."
 				summary="Site + SEO local + contenus + suivi"
 				features={visibilityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
@@ -76,19 +76,19 @@ const visibilityFeatures = [
 		</div>
 
 		<div class="mx-auto mt-10 max-w-4xl border-y border-border py-6">
-			<h3 class="text-center font-heading text-xl font-semibold text-foreground">Pour choisir vite</h3>
+			<h3 class="text-center font-heading text-xl font-semibold text-foreground">Pour vous repérer</h3>
 			<div class="mt-5 grid gap-4 md:grid-cols-2">
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						À privilégier si vous voulez surtout une présence fiable, claire et rassurante, sans gérer la
+						À envisager si vous voulez surtout une présence fiable, claire et rassurante, sans gérer la
 						technique.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						À privilégier si vous voulez aussi travailler votre visibilité locale, votre fiche Google et vos
+						À envisager si vous voulez aussi travailler votre visibilité locale, votre fiche Google et vos
 						contenus dans la durée.
 					</p>
 				</div>

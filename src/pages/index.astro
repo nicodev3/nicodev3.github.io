@@ -1,47 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import OffersSection from '../components/OffersSection.astro';
 import ProcessSection from '../components/ProcessSection.astro';
-import SeoLocalSection from '../components/SeoLocalSection.astro';
-import FaqSection from '../components/FaqSection.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
-import HomeTrustStrip from '../components/HomeTrustStrip.astro';
 import HomeAudienceSection from '../components/HomeAudienceSection.astro';
-import DifferenciationDiySection from '../components/DifferenciationDiySection.astro';
-import BlogHomeSection from '../components/BlogHomeSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import portraitImage from '../assets/images/nicodev.webp';
-import { homeFaqItems } from '../data/faq-home';
 import { WHATSAPP_PHONE_E164 } from '../data/contact';
-
-const allBlogPosts = await getCollection('blog');
-const preferredBlogIds = [
-	'guide-complet-visibilite-en-ligne-psychologues',
-	'site-internet-psychomotricien',
-	'referencement-local-psychomotricien',
-	'google-business-profile-psychomotricien',
-	'comment-trouver-premiers-patients-psychologue',
-	'google-business-profile-psychologue',
-	'site-internet-psychologues',
-] as const;
-const byBlogId = new Map(allBlogPosts.map((p) => [p.id, p]));
-const homeBlogPosts = [];
-for (const id of preferredBlogIds) {
-	const post = byBlogId.get(id);
-	if (post) homeBlogPosts.push(post);
-}
-const HOME_BLOG_POSTS_LIMIT = 9;
-
-const byDateDesc = [...allBlogPosts].sort(
-	(a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
-);
-for (const post of byDateDesc) {
-	if (homeBlogPosts.length >= HOME_BLOG_POSTS_LIMIT) break;
-	if (!homeBlogPosts.some((p) => p.id === post.id)) homeBlogPosts.push(post);
-}
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const siteRootHref = new URL('/', baseUrl).href;
@@ -97,19 +64,6 @@ const businessSchema = {
 	]
 };
 
-const faqSchema = {
-	'@context': 'https://schema.org',
-	'@type': 'FAQPage',
-	mainEntity: homeFaqItems.map((item) => ({
-		'@type': 'Question',
-		name: item.question,
-		acceptedAnswer: {
-			'@type': 'Answer',
-			text: item.answer
-		}
-	}))
-};
-
 const websiteSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'WebSite',
@@ -134,38 +88,27 @@ const breadcrumbSchema = {
 	image={portraitImage}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
-	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 	<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 	<HeroSection />
 
-	<HomeTrustStrip />
-
 	<HomeAudienceSection />
-
-	<DifferenciationDiySection />
-
-	<ExpertiseSection />
-
-	<ProcessSection />
-
-	<SeoLocalSection />
-
-	<OffersSection />
 
 	<TestimonialsSection />
 
-	<BlogHomeSection posts={homeBlogPosts} />
+	<OffersSection />
 
-	<FaqSection headingAlign="center" />
+	<ProcessSection />
+
+	<ExpertiseSection />
 
 	<CtaSection
 		variant="accent-band"
 		anchorId="contact-accueil"
-		title="Prêt à lancer votre site professionnel ?"
-		description="Diagnostic gratuit et sans engagement. Quelques questions pour comprendre votre pratique, votre contexte et vous orienter vers l'offre la plus adaptée."
+		title="Envie d’en parler simplement ?"
+		description="Le diagnostic gratuit sert surtout à situer votre contexte : votre pratique, votre ville, vos besoins réels et ce qui serait utile, ou non, pour votre site."
 		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
-		secondaryButton={{ text: 'Voir les tarifs détaillés', href: '/tarifs/' }}
+		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
 	/>
 </Layout>
