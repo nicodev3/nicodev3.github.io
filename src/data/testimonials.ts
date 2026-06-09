@@ -70,4 +70,13 @@ export const googleTestimonials = [
 		websiteUrl: 'https://montpellier-psychologue.pro/',
 		websiteLabel: 'Psychologue à Montpellier',
 	},
+	{
+		quote:
+			'Très contente de la réalisation de mon site par Nicolas. Pour moi c’est un vrai plus qu’il connaisse le métier de psychologue de l’intérieur (fluidité des échanges, langage commun…). Travail de qualité à la hauteur de mes attentes',
+		author: 'Stéphanie Requet-Catinean, Psychologue',
+		short: 'Stéphanie Requet-Catinean',
+		rating: 5,
+		websiteUrl: 'https://psychologue-andrezieux-boutheon.fr/',
+		websiteLabel: 'Psychologue à Andrézieux-Bouthéon',
+	},
 ] as const;
