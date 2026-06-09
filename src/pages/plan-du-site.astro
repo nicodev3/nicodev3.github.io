@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import { comparePostsByPubDateDesc, toTagHref } from '../utils/blog';
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const pageUrl = new URL('/plan-du-site/', baseUrl).href;
+
+const posts = await getCollection('blog');
+const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
+const allTags = [...new Set(posts.flatMap((post) => post.data.tags ?? []))].sort((a, b) =>
+	a.localeCompare(b, 'fr'),
+);
+
+const pageGroups = [
+	{
+		title: 'Pages principales',
+		links: [
+			{ label: 'Accueil', href: '/', description: 'Présentation de Nicodev et des accompagnements web.' },
+			{ label: 'À propos', href: '/about/', description: 'Parcours de Nicolas Devaux, développeur web et professionnel du soin.' },
+			{ label: 'Portfolio', href: '/portfolio/', description: 'Exemples de sites réalisés ou accompagnés.' },
+			{ label: 'Exemples de sites psychologue', href: '/exemples-sites-psychologue/', description: 'Démonstrations de mises en page pour cabinets de psychologues.' },
+			{ label: 'Tarifs', href: '/tarifs/', description: 'Formules, abonnements et questions fréquentes sur les prix.' },
+			{ label: 'Contact', href: '/contact/', description: 'Coordonnées et formulaire de prise de contact.' },
+		],
+	},
+	{
+		title: 'Services',
+		links: [
+			{ label: 'Création de site internet pour psychologue', href: '/creation-site-internet-psychologue/', description: 'Site vitrine, structure, contenus, hébergement et suivi.' },
+			{ label: 'Référencement site psychologue', href: '/referencement-site-psychologue/', description: 'SEO naturel, référencement local, technique et signaux envoyés à Google.' },
+			{ label: 'Webdesigner pour psychologues', href: '/webdesigner-site-psychologue/', description: 'Interface, parcours patient, lisibilité et design de site de cabinet.' },
+			{ label: 'Site internet psychomotricien', href: '/site-internet-psychomotricien/', description: 'Création de site adaptée aux psychomotriciens et cabinets de psychomotricité.' },
+			{ label: 'Site web psychologue', href: '/site-web-psychologue/', description: 'Page dédiée aux besoins de site web pour psychologues.' },
+		],
+	},
+	{
+		title: 'Outils',
+		links: [
+			{ label: 'Tous les outils', href: '/outils/', description: 'Outils pratiques pour installation, visibilité et activité libérale.' },
+			{ label: 'Diagnostic visibilité web', href: '/outils/visibilite-web-diagnostic/', description: 'Première lecture des priorités de visibilité en ligne.' },
+			{ label: 'Seuil de viabilité en séances', href: '/outils/seuil-viabilite-seances/', description: 'Estimation du nombre de séances nécessaires selon les objectifs.' },
+			{ label: 'Micro-BNC et auto-entrepreneur', href: '/outils/micro-bnc-auto-entrepreneur/', description: 'Repères fiscaux pour comprendre les régimes possibles.' },
+		],
+	},
+	{
+		title: 'Demandes et informations',
+		links: [
+			{ label: 'Diagnostic gratuit', href: '/diagnostic-gratuit/', description: 'Demander un premier avis sur un site, une fiche Google ou un projet.' },
+			{ label: 'Demande de devis', href: '/devis/', description: 'Formulaire pour cadrer une demande de site ou d’accompagnement.' },
+			{ label: 'Mentions légales', href: '/mentions-legales/', description: 'Informations légales de l’éditeur du site.' },
+			{ label: 'Politique de confidentialité', href: '/politique-confidentialite/', description: 'Traitement des données personnelles et confidentialité.' },
+			{ label: 'Conditions générales de vente', href: '/cgv/', description: 'Conditions applicables aux prestations proposées.' },
+		],
+	},
+];
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Plan du site', item: pageUrl },
+	],
+};
+---
+
+<Layout
+	title="Plan du site | Nicolas Devaux"
+	description="Plan du site Nicodev : pages principales, services, outils, articles du blog et informations légales."
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	</Fragment>
+
+	<Hero
+		title="Plan du site"
+		subtitle="Une vue organisée des pages publiques, des services, des outils et des articles disponibles sur Nicodev."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Plan du site' }]}
+	/>
+
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="mx-auto max-w-5xl space-y-14">
+				<div class="grid gap-10 md:grid-cols-2">
+					{pageGroups.map((group) => (
+						<section aria-labelledby={`group-${group.title.toLowerCase().replaceAll(' ', '-')}`} class="space-y-4">
+							<h2 id={`group-${group.title.toLowerCase().replaceAll(' ', '-')}`} class="font-heading text-2xl font-semibold text-foreground">
+								{group.title}
+							</h2>
+							<ul class="space-y-4">
+								{group.links.map((link) => (
+									<li class="border-l border-border pl-4">
+										<a href={link.href} class="font-semibold text-foreground transition-colors hover:text-primary-500">
+											{link.label}
+										</a>
+										<p class="mt-1 text-sm leading-relaxed text-muted">{link.description}</p>
+									</li>
+								))}
+							</ul>
+						</section>
+					))}
+				</div>
+
+				<section class="space-y-4" aria-labelledby="blog-pages">
+					<div class="border-t border-border pt-12">
+						<h2 id="blog-pages" class="font-heading text-2xl font-semibold text-foreground">Articles du blog</h2>
+						<p class="mt-2 max-w-[72ch] text-muted">
+							Les guides et articles autour de la création de site, du référencement local, de la fiche Google Business Profile et de l’installation en libéral.
+						</p>
+					</div>
+					<ul class="grid gap-4 md:grid-cols-2">
+						<li class="border-l border-border pl-4">
+							<a href="/blog/" class="font-semibold text-foreground transition-colors hover:text-primary-500">Tous les articles</a>
+							<p class="mt-1 text-sm leading-relaxed text-muted">Index complet du blog et accès aux thématiques.</p>
+						</li>
+						{sortedPosts.map((post) => (
+							<li class="border-l border-border pl-4">
+								<a href={`/blog/${post.id}/`} class="font-semibold text-foreground transition-colors hover:text-primary-500">
+									{post.data.title}
+								</a>
+								<p class="mt-1 text-sm leading-relaxed text-muted">{post.data.description}</p>
+							</li>
+						))}
+					</ul>
+				</section>
+
+				{allTags.length > 0 && (
+					<section class="space-y-4" aria-labelledby="blog-tags">
+						<div class="border-t border-border pt-12">
+							<h2 id="blog-tags" class="font-heading text-2xl font-semibold text-foreground">Thématiques du blog</h2>
+						</div>
+						<ul class="flex flex-wrap gap-2">
+							{allTags.map((tag) => (
+								<li>
+									<a href={toTagHref(tag)} class="inline-flex rounded-full bg-surface px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-surface-alt hover:text-primary-500">
+										{tag}
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				)}
+			</div>
+		</div>
+	</section>
+</Layout>
