@@ -7,7 +7,7 @@ pubDate: "2026-06-04"
 updatedDate: "2026-06-04"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/development.webp"
-tags: ["refonte site internet", "site internet", "seo local", "création site"]
+tags: ["refonte site internet", "site internet", "seo local", "création de site"]
 ---
 
 *Temps de lecture : 6 minutes*

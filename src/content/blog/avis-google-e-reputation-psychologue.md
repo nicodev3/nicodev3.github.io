@@ -12,7 +12,6 @@ tags:
     "e-réputation",
     "déontologie",
     "google business profile",
-    "secret professionnel",
     "visibilité en ligne",
   ]
 ---

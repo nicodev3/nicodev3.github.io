@@ -5,7 +5,7 @@ description: "Pourquoi j’ai d’abord spécialisé Nicodev pour les psychologu
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
-tags: ["psychologue", "site web psychologue", "titre de psychologue", "profession réglementée", "déontologie"]
+tags: ["psychologue", "site web psychologue", "déontologie"]
 ---
 
 Lorsque l'on m'interroge sur mon choix d'avoir construit Nicodev autour du **site web psychologue**, ma réponse est constante : il ne s'agit pas seulement d'un positionnement commercial, mais d'une ligne professionnelle assumée.

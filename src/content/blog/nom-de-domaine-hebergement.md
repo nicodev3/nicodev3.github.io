@@ -6,7 +6,7 @@ pubDate: "2015-09-12"
 updatedDate: "2024-08-20"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/nom-domaine-hebergement.webp"
-tags: ["site internet", "hébergement", "nom de domaine"]
+tags: ["site internet", "nom de domaine"]
 ---
 
 Certains de mes clients, très souvent psychologues, et la plupart du temps néophytes dans le monde informatique, me demandent souvent quelles différences il y a entre **nom de domaine** et **hébergement**.

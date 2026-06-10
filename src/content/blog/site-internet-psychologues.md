@@ -6,7 +6,7 @@ pubDate: "2016-09-05"
 updatedDate: "2026-02-26"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
-tags: ["psychologue", "site internet", "seo local", "accessibilité", "rgpd", "création site"]
+tags: ["psychologue", "site internet", "seo local", "accessibilité", "rgpd", "création de site"]
 ---
 
 *Temps de lecture : 12 minutes*

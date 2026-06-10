@@ -11,9 +11,6 @@ tags:
     "installation libérale",
     "salaire psychologue libéral",
     "revenu psychologue libéral",
-    "combien gagne psychologue",
-    "honoraires",
-    "fiscalité",
     "cabinet libéral",
   ]
 ---
