@@ -1,5 +1,6 @@
 ---
 import { Star } from '@lucide/astro';
+import GoogleIcon from './GoogleIcon.astro';
 
 export interface Props {
 	quote: string;
@@ -26,7 +27,7 @@ const initial =
 	firstName.length > 0 ? firstName.charAt(0).toLocaleUpperCase('fr-FR') : isGoogle ? 'G' : '?';
 
 const avatarPalette = isGoogle
-	? 'bg-[color-mix(in_srgb,#4285F4_14%,var(--color-background))] text-[#1a73e8] font-bold'
+	? 'bg-white shadow-sm ring-1 ring-[color-mix(in_srgb,#4285F4_22%,var(--color-border))]'
 	: 'bg-primary-100 text-primary-foreground font-bold';
 
 const avatarLabel = isGoogle
@@ -52,12 +53,13 @@ const showStars = true;
 	<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
 		<span
 			class:list={[
-				'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-wide',
+				'inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-wide',
 				sourceBadgeClass,
 			]}
 		>
-			{sourceLabel}
-		</span>
+				{isGoogle ? <GoogleIcon class="h-3.5 w-3.5" /> : null}
+				{sourceLabel}
+			</span>
 		{
 			showStars && (
 				<div class:list={['flex gap-0.5', !isGoogle && 'text-primary-foreground']} aria-hidden="true">
@@ -93,7 +95,7 @@ const showStars = true;
 			role="img"
 			aria-label={avatarLabel}
 		>
-			{initial}
+			{isGoogle ? <GoogleIcon class="h-5 w-5" /> : initial}
 		</div>
 		<div class="flex min-w-0 flex-col text-left">
 			<span class="font-semibold text-foreground">{shortAuthor}</span>
