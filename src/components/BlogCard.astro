@@ -19,13 +19,14 @@ const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 ---
 
 <article class="grid h-full min-h-0 grid-rows-[auto_minmax(0,1fr)] self-stretch overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow duration-300 hover:shadow-md">
-	<div class="min-h-0">
+	<div class="aspect-square min-h-0 bg-surface">
 		<Image
 			src={image}
 			alt={imageAlt}
-			class="w-full h-48 object-cover"
+			class="h-full w-full object-contain"
 			width={800}
-			height={450}
+			height={800}
+			fit="contain"
 		/>
 	</div>
 	<div class="p-6 flex flex-col min-h-0 h-full">
