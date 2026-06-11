@@ -5,7 +5,7 @@ description: "Promesses SEO, visibilité rapide, offres abusives : comment éval
 pubDate: "2026-03-28"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
-tags: ["psychologue", "site internet", "référencement", "seo local", "doctolib", "visibilité google"]
+tags: ["psychologue", "site web cabinet", "référencement local cabinet", "doctolib"]
 ---
 
 *Temps de lecture : 10 minutes*

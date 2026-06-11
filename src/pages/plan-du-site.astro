@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import { BLOG_TAG_ORDER } from '../data/blog-tags';
 import { comparePostsByPubDateDesc, toTagHref } from '../utils/blog';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -9,9 +10,8 @@ const pageUrl = new URL('/plan-du-site/', baseUrl).href;
 
 const posts = await getCollection('blog');
 const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
-const allTags = [...new Set(posts.flatMap((post) => post.data.tags ?? []))].sort((a, b) =>
-	a.localeCompare(b, 'fr'),
-);
+const usedTags = new Set(posts.flatMap((post) => post.data.tags ?? []));
+const allTags = BLOG_TAG_ORDER.filter((tag) => usedTags.has(tag));
 
 const pageGroups = [
 	{

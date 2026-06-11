@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import BlogCard from '../components/BlogCard.astro';
+import { BLOG_TAG_ORDER } from '../data/blog-tags';
 import { comparePostsByPubDateDesc, toTagHref } from '../utils/blog';
 import defaultBlogCover from '../assets/images/blog/development.webp';
 
@@ -19,8 +20,8 @@ const breadcrumbSchema = {
 
 const posts = await getCollection('blog');
 
-// Récupérer tous les tags uniques pour la navigation
-const allTags = [...new Set(posts.flatMap((p) => p.data.tags ?? []))].sort((a, b) => a.localeCompare(b));
+const usedTags = new Set(posts.flatMap((p) => p.data.tags ?? []));
+const allTags = BLOG_TAG_ORDER.filter((tag) => usedTags.has(tag));
 
 const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 ---
@@ -38,7 +39,7 @@ const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Blog' }]}
 	/>
 
-	<section class="py-16 bg-white">
+	<section class="py-16 bg-white" data-scroll-reveal-skip>
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			{allTags.length > 0 && (
 				<nav class="mb-10" aria-label="Filtrer par tag">
@@ -52,20 +53,24 @@ const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 					</div>
 				</nav>
 			)}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch *:min-h-0">
-				{sortedPosts.map((post) => (
-					<BlogCard
-						title={post.data.title}
-						description={post.data.description}
-						href={`/blog/${post.id}/`}
-						image={post.data.image ?? defaultBlogCover}
-						imageAlt={post.data.title}
-						pubDate={post.data.pubDate}
-						author={post.data.author}
-						tags={post.data.tags}
-					/>
-				))}
-			</div>
+			{sortedPosts.length === 0 ? (
+				<p class="text-center text-muted py-12">Aucun article pour le moment.</p>
+			) : (
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+					{sortedPosts.map((post) => (
+						<BlogCard
+							title={post.data.title}
+							description={post.data.description}
+							href={`/blog/${post.id}/`}
+							image={post.data.image ?? defaultBlogCover}
+							imageAlt={post.data.title}
+							pubDate={post.data.pubDate}
+							author={post.data.author}
+							tags={post.data.tags}
+						/>
+					))}
+				</div>
+			)}
 			<div class="mt-16 pt-12 border-t border-border text-center">
 				<p class="text-muted mb-4">Un projet de site web pour votre cabinet ?</p>
 				<div class="flex flex-wrap justify-center gap-4">

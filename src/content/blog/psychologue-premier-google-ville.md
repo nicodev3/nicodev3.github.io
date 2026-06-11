@@ -5,15 +5,7 @@ description: "SEO local pour psychologues : fiche Google, site, pages locales, d
 pubDate: "2026-05-03"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-premier-google-ville.webp"
-tags:
-  [
-    "psychologue",
-    "seo local",
-    "référencement local",
-    "google business profile",
-    "visibilité locale",
-    "site internet psychologue",
-  ]
+tags: ["psychologue", "référencement local cabinet", "google business profile", "site web cabinet"]
 ---
 
 *Temps de lecture : 13 minutes*

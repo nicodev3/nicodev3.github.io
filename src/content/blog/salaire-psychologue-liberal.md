@@ -5,14 +5,7 @@ description: "Salaire psychologue libéral : combien gagne-t-on selon les honora
 pubDate: "2026-06-02"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
-tags:
-  [
-    "psychologue",
-    "installation libérale",
-    "salaire psychologue libéral",
-    "revenu psychologue libéral",
-    "cabinet libéral",
-  ]
+tags: ["psychologue", "installation en libéral"]
 ---
 
 *Temps de lecture : environ 12 minutes*

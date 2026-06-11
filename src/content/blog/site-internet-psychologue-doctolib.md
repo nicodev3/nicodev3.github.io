@@ -5,7 +5,7 @@ description: "Doctolib, site internet ou les deux ? Comparatif pour psychologues
 pubDate: "2026-03-12"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-web-doctolib.webp"
-tags: ["psychologue", "doctolib", "site internet", "seo local", "référencement"]
+tags: ["psychologue", "site web cabinet", "référencement local cabinet", "doctolib"]
 ---
 
 De nombreux psychologues se posent la même question au moment de s'installer, ou quand l'agenda commence à dépendre d'un seul canal : **faut-il vraiment créer un site internet si l'on a déjà Doctolib ?**

@@ -5,7 +5,7 @@ description: "Site internet pour psychomotricien : pages essentielles, bilan, su
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/psychomotricienne-2.webp"
-tags: ["psychomotricien", "site internet", "psychomotricité", "seo local", "cabinet libéral"]
+tags: ["psychomotricien", "site web cabinet", "référencement local cabinet"]
 ---
 
 *Temps de lecture : 8 minutes*

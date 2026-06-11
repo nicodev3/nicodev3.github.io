@@ -5,7 +5,7 @@ description: "Psychologue sur Instagram : découvrez pourquoi Instagram et site 
 pubDate: "2026-06-10"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-instagram.webp"
-tags: ["psychologue", "instagram", "site internet", "référencement", "psychologue en ligne"]
+tags: ["psychologue", "réseaux sociaux", "site web cabinet", "référencement local cabinet"]
 ---
 
 *Temps de lecture : 9 minutes*

@@ -5,7 +5,7 @@ description: "Créer son site avec l’IA quand on est psychologue : limites, ri
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-web-IA.webp"
-tags: ["psychologue", "site internet", "intelligence artificielle", "rgpd", "création de site"]
+tags: ["psychologue", "site web cabinet", "intelligence artificielle", "cadre déontologique"]
 ---
 
 *Temps de lecture : 9 minutes*

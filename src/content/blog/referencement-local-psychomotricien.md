@@ -5,7 +5,7 @@ description: "SEO local pour psychomotricien : fiche Google, site, cohérence de
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/seo-google-my-business.webp"
-tags: ["psychomotricien", "seo local", "référencement local", "google business profile", "visibilité locale"]
+tags: ["psychomotricien", "référencement local cabinet", "google business profile"]
 ---
 
 *Temps de lecture : 8 minutes*

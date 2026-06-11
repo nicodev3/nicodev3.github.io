@@ -5,7 +5,7 @@ description: "Site fait maison pour psychologue : les fragilités possibles côt
 pubDate: "2026-05-26"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-fait-maison-psychologue.webp"
-tags: ["psychologue", "site internet", "site fait maison", "rgpd", "déontologie", "seo local"]
+tags: ["psychologue", "site web cabinet", "cadre déontologique", "référencement local cabinet"]
 ---
 
 *Temps de lecture : 10 minutes*

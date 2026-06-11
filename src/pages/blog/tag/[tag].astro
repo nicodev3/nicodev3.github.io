@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import Hero from '../../../components/Hero.astro';
 import BlogCard from '../../../components/BlogCard.astro';
+import { BLOG_TAG_DESCRIPTIONS } from '../../../data/blog-tags';
 import { slugifyTag } from '../../../utils/blog';
 import defaultBlogCover from '../../../assets/images/blog/development.webp';
 
@@ -25,16 +26,18 @@ export async function getStaticPaths() {
 
 const { tagSlug, tagLabel } = Astro.props;
 const posts = await getCollection('blog');
+const tagDescription =
+	BLOG_TAG_DESCRIPTIONS[tagLabel as keyof typeof BLOG_TAG_DESCRIPTIONS] ??
+	`Articles sur ${tagLabel} : site web, visibilité locale et cadre professionnel pour cabinets de soin.`;
+
 const tagTitleCandidates = [
-	`Articles ${tagLabel} : conseils site web et SEO local | Nicodev`,
-	`Articles ${tagLabel} : site web et visibilité SEO | Nicodev`,
-	`Articles ${tagLabel} : conseils web et SEO | Nicodev`,
-	`Articles ${tagLabel} | SEO et site web Nicodev`,
-	`Articles ${tagLabel} | Blog site web Nicodev`,
+	`${tagLabel} : articles site web et SEO cabinet | Nicodev`,
+	`Articles ${tagLabel} — site web et visibilité | Nicodev`,
+	`${tagLabel} : blog site internet cabinet soin | Nicodev`,
 ];
 const tagSeoTitle =
 	tagTitleCandidates.find((candidate) => Array.from(candidate).length >= 50 && Array.from(candidate).length <= 60) ??
-	`Articles ${tagLabel} | Nicodev`;
+	`${tagLabel} : articles blog | Nicodev`;
 
 const filteredPosts = posts
 	.filter((post) => post.data.tags?.some((t: string) => slugifyTag(t) === tagSlug))
@@ -51,37 +54,50 @@ const breadcrumbSchema = {
 	itemListElement: [
 		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: new URL('/', baseUrl).toString() },
 		{ '@type': 'ListItem', position: 2, name: 'Blog', item: new URL('/blog/', baseUrl).toString() },
-		{ '@type': 'ListItem', position: 3, name: `Tag: ${tagLabel}`, item: new URL(`/blog/tag/${tagSlug}/`, baseUrl).toString() }
+		{ '@type': 'ListItem', position: 3, name: tagLabel, item: new URL(`/blog/tag/${tagSlug}/`, baseUrl).toString() }
 	]
 };
+
+const itemListSchema =
+	filteredPosts.length > 0
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'ItemList',
+				name: `Articles — ${tagLabel}`,
+				numberOfItems: filteredPosts.length,
+				itemListElement: filteredPosts.map((post, index) => ({
+					'@type': 'ListItem',
+					position: index + 1,
+					name: post.data.title,
+					url: new URL(`/blog/${post.id}/`, baseUrl).toString(),
+				})),
+			}
+		: null;
 ---
 
-<Layout
-	title={tagSeoTitle}
-	description={`Articles "${tagLabel}" : création de site, SEO local et visibilité web pour psychologues, psychomotriciens et professions du soin.`}
-	noindex={true}
->
+<Layout title={tagSeoTitle} description={tagDescription}>
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+		{itemListSchema && <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />}
 	</Fragment>
 	<Hero
-		title={`Tag : ${tagLabel}`}
-		subtitle={`${filteredPosts.length} article${filteredPosts.length > 1 ? 's' : ''} trouvé${filteredPosts.length > 1 ? 's' : ''}`}
+		title={tagLabel}
+		subtitle={tagDescription}
 		breadcrumb={[
 			{ label: 'Accueil', href: '/' },
 			{ label: 'Blog', href: '/blog/' },
-			{ label: `Tag : ${tagLabel}` }
+			{ label: tagLabel }
 		]}
 	/>
 
-	<section class="py-16 bg-white">
+	<section class="py-16 bg-white" data-scroll-reveal-skip>
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="mb-8">
 				<a href="/blog/" class="text-foreground hover:text-primary font-medium inline-flex items-center gap-2">
 					← Retour au blog
 				</a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch [&>*]:min-h-0">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
 				{filteredPosts.map((post) => (
 					<BlogCard
 						title={post.data.title}

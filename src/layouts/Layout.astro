@@ -145,6 +145,13 @@ const ahrefsAnalyticsKey =
     <script is:inline>
       (function () {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        function revealIfInViewport(section) {
+          var rect = section.getBoundingClientRect();
+          var viewHeight = window.innerHeight || document.documentElement.clientHeight;
+          if (rect.top < viewHeight && rect.bottom > 0) {
+            section.classList.add("scroll-reveal--visible");
+          }
+        }
         function initScrollReveal() {
           var sections = document.querySelectorAll("main > section");
           if (!sections.length) return;
@@ -162,10 +169,16 @@ const ahrefsAnalyticsKey =
                 }
               }
             },
-            { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.02 }
+            { root: null, rootMargin: "0px 0px -2% 0px", threshold: 0 }
           );
           for (var k = 0; k < sections.length; k++) {
-            if (sections[k] !== first) io.observe(sections[k]);
+            if (sections[k] === first) continue;
+            if (sections[k].hasAttribute("data-scroll-reveal-skip")) {
+              sections[k].classList.add("scroll-reveal--visible");
+              continue;
+            }
+            revealIfInViewport(sections[k]);
+            io.observe(sections[k]);
           }
         }
         if (document.readyState === "loading") {

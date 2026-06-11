@@ -5,15 +5,7 @@ description: "S’installer en libéral psychologue : démarches, statut, fiscal
 pubDate: "2026-04-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-liberal-installation.webp"
-tags:
-  [
-    "psychologue",
-    "s’installer en libéral psychologue",
-    "installation libérale",
-    "cabinet libéral",
-    "visibilité locale",
-    "site internet psychologue",
-  ]
+tags: ["psychologue", "installation en libéral", "référencement local cabinet", "site web cabinet"]
 ---
 
 *Temps de lecture : environ 9 minutes*

@@ -7,15 +7,7 @@ pubDate: "2026-05-11"
 updatedDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
-tags:
-  [
-    "psychologue",
-    "visibilité en ligne",
-    "seo local",
-    "site internet psychologue",
-    "google business profile",
-    "référencement",
-  ]
+tags: ["psychologue", "référencement local cabinet", "site web cabinet", "google business profile"]
 guidePillarHub: true
 ---
 

@@ -5,7 +5,7 @@ description: "Trouver ses premiers patients comme psychologue : réseau, Doctoli
 pubDate: "2026-03-15"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/installation-psychologue-liberal.webp"
-tags: ["psychologue", "installation libérale", "visibilité locale", "site internet", "doctolib", "référencement local"]
+tags: ["psychologue", "installation en libéral", "référencement local cabinet", "doctolib"]
 ---
 
 *Temps de lecture : 10 minutes*

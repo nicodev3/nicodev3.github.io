@@ -5,7 +5,7 @@ description: "Créer et optimiser une fiche Google Business Profile de psycholog
 pubDate: "2026-03-02"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/seo-google-my-business.webp"
-tags: ["psychologue", "google business profile", "seo local", "référencement local", "visibilité google"]
+tags: ["psychologue", "google business profile", "référencement local cabinet"]
 ---
 
 *Temps de lecture : 11 minutes*
