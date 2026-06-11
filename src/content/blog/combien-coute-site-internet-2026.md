@@ -1,7 +1,7 @@
 ---
 title: "Combien coûte vraiment la création d’un site internet pour un psychologue en 2026 ?"
-seoTitle: "Combien coûte un site psychologue en 2026 | Nicodev"
-description: "Prix d’un site internet de psychologue en 2026 : fourchettes réalistes, coûts cachés et budget selon votre pratique en libéral."
+seoTitle: "Combien coûte un site internet pour psychologue en 2026 ?"
+description: "Tarifs, abonnement, création, hébergement, maintenance : comprendre le vrai coût d’un site internet professionnel pour psychologue."
 pubDate: "2026-02-22"
 updatedDate: "2026-03-18"
 author: "Nicolas Devaux"
@@ -218,7 +218,7 @@ En 2026, un site de psychologue peut rester simple, efficace et raisonnable en b
 
 > Pour un psychologue, un site vitrine clair et professionnel devrait en général rester dans un budget mesuré, surtout si le besoin technique est simple.
 
-Si vous cherchez justement une option simple, professionnelle et abordable pour votre cabinet, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/).
+Si vous cherchez justement une option simple, professionnelle et abordable pour votre cabinet, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/). Le détail de ce qui est inclus (structure, hébergement, bases SEO, outil de rendez-vous) est présenté sur la page [création de site internet pour psychologue](/creation-site-internet-psychologue/).
 
 Vous pouvez aussi parcourir mes [exemples de sites psychologues](/exemples-sites-psychologue/) pour vous faire une idée concrète du rendu.
 

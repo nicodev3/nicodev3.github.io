@@ -120,7 +120,7 @@ Si ce sujet me tient à cœur, c'est parce que je connais les deux côtés du pr
 
 Nicodev est né de ce croisement. L'objectif n'est pas de transformer les psychologues en marques agressives, ni de vendre des sites démesurés. L'objectif est plus simple : créer des sites sobres, professionnels, techniquement propres, pensés pour les patients et adaptés au cadre du métier.
 
-Si vous hésitez encore entre faire votre site vous-même, demander à un proche, utiliser une plateforme ou être accompagné, vous pouvez aussi lire [combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) pour replacer le budget dans une perspective plus concrète.
+Si vous hésitez encore entre faire votre site vous-même, demander à un proche, utiliser une plateforme ou être accompagné, vous pouvez aussi lire [combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) pour replacer le budget dans une perspective plus concrète, ou voir ce que comprend un [site professionnel de psychologue](/creation-site-internet-psychologue/) réalisé avec un accompagnement.
 
 ## Conclusion
 

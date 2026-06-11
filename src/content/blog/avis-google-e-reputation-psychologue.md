@@ -149,4 +149,4 @@ Cette discipline protège ce qui fait la valeur d'une consultation : le cadre, l
 - [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/) — structure, cadre déontologique, RGPD.
 - [Les promesses trop belles des offres « site psychologue »](/blog/site-internet-psychologue-promesses-trop-belles/) — repérer les modules problématiques.
 
-Pour un regard externe sur votre site ou votre fiche Google sous l'angle déontologique (et plus largement éthique), vous pouvez demander un [diagnostic gratuit](/diagnostic-gratuit/) ou consulter la page [création de site pour psychologue](/creation-site-internet-psychologue/).
+Pour un regard externe sur votre site ou votre fiche Google sous l'angle déontologique (et plus largement éthique), vous pouvez demander un [diagnostic gratuit](/diagnostic-gratuit/) ou consulter la page [création de site pour psychologue](/creation-site-internet-psychologue/). Et pour replacer la gestion des avis dans une stratégie d'ensemble, voir la page [référencement pour psychologue](/referencement-site-psychologue/) : visibilité locale sur Google sans entorse au cadre.

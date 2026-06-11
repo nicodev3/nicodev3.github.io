@@ -1,7 +1,7 @@
 ---
 title: "Site psychologue 2026 : 5 pages, SEO & RGPD"
-metaTitleSuffix: "Nicolas Devaux"
-description: "Checklist site psychologue 2026 : 5 pages indispensables, référencement local, accessibilité et cadre déontologique."
+seoTitle: "Site internet psychologue : pages essentielles, SEO et RGPD"
+description: "Découvrez les pages indispensables d’un site internet de psychologue, les bases SEO, les points de vigilance RGPD et les erreurs à éviter."
 pubDate: "2016-09-05"
 updatedDate: "2026-02-26"
 author: "Nicolas Devaux"

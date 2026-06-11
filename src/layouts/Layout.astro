@@ -37,6 +37,13 @@ const {
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const canonical = new URL(Astro.url.pathname, baseUrl).toString();
+/* Pages tags : utiles à la navigation mais pauvres pour Google — noindex en gardant le maillage (follow). */
+const isBlogTagPage = Astro.url.pathname.startsWith("/blog/tag/");
+const robotsContent = isBlogTagPage
+  ? "noindex, follow"
+  : noindex
+    ? "noindex, nofollow"
+    : "index, follow";
 const ogImageSrc = image
   ? typeof image === "string"
     ? image
@@ -65,10 +72,7 @@ const ahrefsAnalyticsKey =
     <link rel="preload" href={globalStylesUrl} as="style" />
     <link rel="stylesheet" href={globalStylesUrl} />
     <meta name="description" content={description} />
-    <meta
-      name="robots"
-      content={noindex ? "noindex, nofollow" : "index, follow"}
-    />
+    <meta name="robots" content={robotsContent} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
