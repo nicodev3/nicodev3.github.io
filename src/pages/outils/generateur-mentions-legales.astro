@@ -15,10 +15,10 @@ import Layout from "../../layouts/Layout.astro";
         </h1>
         <p class="mt-4 max-w-3xl text-slate-700">
           Renseignez les informations de votre cabinet et obtenez des mentions légales complètes,
-          rédigées en français juridique clair, adaptées aux professionnels de santé en libéral
-          (psychologue, psychomotricien, psychothérapeute, psychiatre) : identification de
-          l&apos;éditeur, hébergement, propriété intellectuelle, responsabilité, RGPD (données de
-          santé, article 9), cookies et droits des personnes.
+          rédigées en français juridique clair, adaptées aux professionnels de santé et de la santé
+          mentale en libéral (psychologue, psychomotricien, psychothérapeute, psychiatre) :
+          identification de l&apos;éditeur, hébergement, propriété intellectuelle, responsabilité,
+          RGPD (données de santé, article 9), cookies et droits des personnes.
         </p>
         <p class="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-900">
           Modèle indicatif fourni à titre informatif : il couvre les obligations usuelles (loi pour
@@ -49,6 +49,7 @@ import Layout from "../../layouts/Layout.astro";
               <option value="Psychothérapeute">Psychothérapeute</option>
               <option value="Psychiatre">Psychiatre</option>
             </select>
+            <span id="ml-titre-aide" class="text-xs text-slate-500"></span>
           </label>
 
           <label class="flex flex-col gap-1.5">
@@ -63,13 +64,14 @@ import Layout from "../../layouts/Layout.astro";
           </label>
 
           <label class="flex flex-col gap-1.5">
-            <span class="text-sm font-semibold text-slate-800">Numéro RPPS</span>
+            <span id="ml-numero-label" class="text-sm font-semibold text-slate-800">Numéro RPPS</span>
             <input
               id="ml-adeli"
               type="text"
               placeholder="Ex. 10009123456"
               class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
             />
+            <span id="ml-numero-aide" class="text-xs text-slate-500"></span>
           </label>
 
           <label class="flex flex-col gap-1.5">
@@ -81,6 +83,38 @@ import Layout from "../../layouts/Layout.astro";
               class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
             />
           </label>
+
+          <div id="ml-societe-fields" class="contents">
+            <label class="flex flex-col gap-1.5 sm:col-span-2">
+              <span class="text-sm font-semibold text-slate-800">Dénomination sociale (si société)</span>
+              <input
+                id="ml-denomination"
+                type="text"
+                placeholder="Ex. Cabinet Horizon SELARL"
+                class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+              />
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="text-sm font-semibold text-slate-800">Capital social (si société)</span>
+              <input
+                id="ml-capital"
+                type="text"
+                placeholder="Ex. 5 000 €"
+                class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+              />
+            </label>
+
+            <label class="flex flex-col gap-1.5">
+              <span class="text-sm font-semibold text-slate-800">Ville du RCS (si société)</span>
+              <input
+                id="ml-rcs-ville"
+                type="text"
+                placeholder="Ex. Paris"
+                class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+              />
+            </label>
+          </div>
 
           <label class="flex flex-col gap-1.5 sm:col-span-2">
             <span class="text-sm font-semibold text-slate-800">Adresse du cabinet</span>
@@ -130,6 +164,7 @@ import Layout from "../../layouts/Layout.astro";
               <option value="oui">Oui</option>
               <option value="non">Non</option>
             </select>
+            <span id="ml-formulaire-aide" class="text-xs text-slate-500"></span>
           </label>
 
           <label class="flex flex-col gap-1.5">
@@ -155,7 +190,7 @@ import Layout from "../../layouts/Layout.astro";
 
       <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <div class="flex flex-wrap items-center justify-between gap-3">
-          <h2 class="text-xl font-bold text-slate-900">Vos mentions légales</h2>
+          <h2 class="text-xl font-bold text-slate-900">Vos documents juridiques</h2>
           <div class="flex flex-wrap gap-3">
             <button
               id="ml-copier"
@@ -206,6 +241,9 @@ import Layout from "../../layouts/Layout.astro";
       adresse: document.getElementById("ml-adresse"),
       telephone: document.getElementById("ml-telephone"),
       email: document.getElementById("ml-email"),
+      denomination: document.getElementById("ml-denomination"),
+      capital: document.getElementById("ml-capital"),
+      rcsVille: document.getElementById("ml-rcs-ville"),
       hebergeur: document.getElementById("ml-hebergeur"),
       formulaire: document.getElementById("ml-formulaire"),
       cookiesAudience: document.getElementById("ml-cookies-audience"),
@@ -214,8 +252,23 @@ import Layout from "../../layouts/Layout.astro";
     const resultEl = document.getElementById("ml-resultat");
     const copyBtn = document.getElementById("ml-copier");
     const exportBtn = document.getElementById("ml-export-html");
+    const titleHelpEl = document.getElementById("ml-titre-aide");
+    const numberLabelEl = document.getElementById("ml-numero-label");
+    const numberHelpEl = document.getElementById("ml-numero-aide");
+    const formHelpEl = document.getElementById("ml-formulaire-aide");
+    const societeFieldsEl = document.getElementById("ml-societe-fields");
 
-    if (!resultEl || !copyBtn || !exportBtn || Object.values(fields).some((el) => !el)) {
+    if (
+      !resultEl ||
+      !copyBtn ||
+      !exportBtn ||
+      !titleHelpEl ||
+      !numberLabelEl ||
+      !numberHelpEl ||
+      !formHelpEl ||
+      !societeFieldsEl ||
+      Object.values(fields).some((el) => !el)
+    ) {
       return;
     }
 
@@ -231,55 +284,137 @@ import Layout from "../../layouts/Layout.astro";
       return escapeHtml(v === "" ? fallback : v);
     };
 
+    const rawValue = (input) => input.value.trim();
+
+    const titleUiConfigs = {
+      Psychologue: {
+        numberLabel: "Numéro RPPS",
+        numberPlaceholder: "Ex. 10009123456",
+        numberHelp:
+          "Renseignez votre numéro RPPS tel qu'utilisé pour votre identification professionnelle.",
+        titleHelp:
+          "Le texte généré emploie des formulations prudentes adaptées à l'usage du titre de psychologue.",
+        formHelp:
+          "Si vous utilisez un formulaire, invitez les patients à ne pas y décrire leur situation psychologique en détail.",
+      },
+      Psychomotricien: {
+        numberLabel: "Numéro RPPS",
+        numberPlaceholder: "Ex. 10009123456",
+        numberHelp:
+          "Renseignez votre numéro RPPS tel qu'utilisé pour votre identification professionnelle.",
+        titleHelp:
+          "Le texte généré rappelle le caractère réglementé de la profession et son rattachement au Code de la santé publique.",
+        formHelp:
+          "Si vous utilisez un formulaire, limitez les informations demandées au strict nécessaire pour une première prise de contact.",
+      },
+      Psychothérapeute: {
+        numberLabel: "Numéro professionnel / RPPS",
+        numberPlaceholder: "Ex. 10009123456",
+        numberHelp:
+          "Renseignez votre numéro RPPS si vous en disposez et l'utilisez dans votre communication professionnelle ; à défaut, adaptez le texte exporté à votre situation.",
+        titleHelp:
+          "Le texte généré rappelle l'inscription au registre national des psychothérapeutes.",
+        formHelp:
+          "En présence d'un formulaire, évitez toute collecte de détails médicaux ou psychologiques non indispensables.",
+      },
+      Psychiatre: {
+        numberLabel: "Numéro RPPS",
+        numberPlaceholder: "Ex. 10009123456",
+        numberHelp:
+          "Renseignez votre numéro RPPS de médecin.",
+        titleHelp:
+          "Le texte généré mentionne l'inscription à l'Ordre des médecins et le cadre déontologique médical.",
+        formHelp:
+          "Si vous utilisez un formulaire, veillez à ne collecter que les éléments nécessaires à l'orientation de la demande.",
+      },
+    };
+
     const titreConfigs = {
       Psychologue: {
         inscription: (nom, rpps) =>
-          `Le présent site est édité par ${nom}, psychologue exerçant à titre libéral, inscrit(e) au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
+          `Le présent site est édité par ${nom}, psychologue exerçant à titre libéral et référencé(e) au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
         titreProtege:
-          "Le titre de psychologue est un titre protégé par la loi. Son usage est réservé aux professionnels remplissant les conditions légales de formation et d'inscription auprès de l'Agence régionale de santé (ARS).",
+          "Le titre de psychologue est un titre protégé par la loi. Son usage est réservé aux personnes remplissant les conditions légales de diplôme et d'usage professionnel du titre, et disposant des enregistrements administratifs applicables.",
+        cadreReglementaire:
+          "Le psychologue exerce dans le respect des textes encadrant l'usage du titre de psychologue ainsi que des règles déontologiques applicables à sa profession.",
         responsabilite:
-          "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis médical ou psychologique, ni un diagnostic. Elles ne sauraient se substituer à une consultation auprès d'un psychologue ou d'un autre professionnel de santé.",
+          "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis psychologique individualisé, ni un diagnostic. Elles ne sauraient se substituer à une consultation auprès d'un psychologue ou d'un autre professionnel compétent.",
         urgence:
           "En cas d'urgence ou de détresse psychologique aiguë, il convient de contacter le 15 (SAMU), le 112 ou le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24).",
         rgpdSante:
-          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+          "Attention particulière relative aux données sensibles : les informations communiquées dans le cadre d'une prise de contact avec un psychologue peuvent révéler, directement ou indirectement, des éléments relatifs à la santé ou à la vie personnelle de la personne concernée. Lorsqu'elles relèvent de l'article 9 du RGPD, ces données bénéficient d'une protection renforcée. Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+        confidentialite:
+          (nom) => `Les données éventuellement recueillies sont traitées avec une obligation particulière de confidentialité, dans le respect des règles légales applicables, de l'article 226-13 du Code pénal lorsqu'il trouve à s'appliquer, ainsi que des règles déontologiques attachées à l'exercice professionnel de ${nom}.`,
       },
       Psychomotricien: {
         inscription: (nom, rpps) =>
           `Le présent site est édité par ${nom}, psychomotricien exerçant à titre libéral, inscrit(e) au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
         titreProtege:
-          "Le titre de psychomotricien est un titre protégé par la loi. Son usage est réservé aux titulaires du diplôme d'État de psychomotricien enregistrés auprès de l'Agence régionale de santé (ARS).",
+          "Le titre de psychomotricien est un titre protégé par la loi. Son usage est réservé aux titulaires du diplôme d'État de psychomotricien disposant des enregistrements administratifs applicables.",
+        cadreReglementaire:
+          "Le psychomotricien exerce une profession réglementée relevant du Code de la santé publique et intervient dans le respect des règles professionnelles applicables à sa profession.",
         responsabilite:
           "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis thérapeutique, un bilan psychomoteur en ligne, ni un diagnostic. Elles ne sauraient se substituer à une prise en charge auprès d'un psychomotricien ou d'un autre professionnel de santé.",
         urgence:
           "En cas d'urgence médicale, il convient de contacter le 15 (SAMU) ou le 112. En cas de détresse psychologique, le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24) est également disponible.",
         rgpdSante:
-          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de santé peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de santé peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Il est recommandé de ne pas détailler votre situation médicale dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+        confidentialite:
+          (nom) => `Les données éventuellement recueillies sont en outre couvertes par le secret professionnel auquel est tenu(e) ${nom} en application des textes régissant la profession et de l'article 226-13 du Code pénal.`,
       },
       Psychothérapeute: {
         inscription: (nom, rpps) =>
           `Le présent site est édité par ${nom}, psychothérapeute exerçant à titre libéral, inscrit(e) au registre national des psychothérapeutes et au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
         titreProtege:
-          "L'usage du titre de psychothérapeute est réservé aux professionnels inscrits au registre national des psychothérapeutes, conformément à l'article 52 de la loi n° 2004-806 du 9 août 2004 et au décret n° 2010-534 du 20 mai 2010.",
+          "L'usage du titre de psychothérapeute est réservé aux professionnels inscrits au registre national des psychothérapeutes, conformément aux textes en vigueur.",
+        cadreReglementaire:
+          "Le professionnel déclare exercer dans le respect du cadre légal propre à l'usage du titre de psychothérapeute et des règles déontologiques applicables à son exercice.",
         responsabilite:
           "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis thérapeutique ou psychologique, ni un diagnostic. Elles ne sauraient se substituer à une prise en charge auprès d'un psychothérapeute ou d'un autre professionnel de santé.",
         urgence:
           "En cas d'urgence ou de détresse psychologique aiguë, il convient de contacter le 15 (SAMU), le 112 ou le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24).",
         rgpdSante:
-          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+        confidentialite:
+          (nom) => `Les données éventuellement recueillies sont traitées avec une obligation particulière de confidentialité dans le respect des règles légales et déontologiques applicables à l'exercice professionnel de ${nom}.`,
       },
       Psychiatre: {
         inscription: (nom, rpps) =>
           `Le présent site est édité par ${nom}, médecin psychiatre exerçant à titre libéral, inscrit(e) à l'Ordre des médecins et au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
         titreProtege:
           "Le titre de médecin psychiatre est un titre protégé. Son exercice est réservé aux médecins inscrits au tableau de l'Ordre des médecins et titulaires d'une spécialité ou d'une qualification en psychiatrie.",
+        cadreReglementaire:
+          "Le médecin psychiatre exerce dans le respect du Code de la santé publique et des règles déontologiques applicables à la profession médicale.",
         responsabilite:
           "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation médicale, un avis médical ou un diagnostic. Elles ne sauraient se substituer à une consultation auprès d'un médecin psychiatre ou d'un autre professionnel de santé.",
         urgence:
           "En cas d'urgence ou de détresse psychologique aiguë, il convient de contacter le 15 (SAMU), le 112 ou le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24).",
         rgpdSante:
-          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+        confidentialite:
+          (nom) => `Les données éventuellement recueillies sont en outre couvertes par le secret professionnel auquel est tenu(e) ${nom} en application des textes régissant la profession et de l'article 226-13 du Code pénal.`,
       },
+    };
+
+    const isSocieteStatut = (statut) => ["EURL", "SELARL"].includes(statut);
+
+    const updateSocieteFieldsVisibility = () => {
+      const visible = isSocieteStatut(fields.statut.value);
+      societeFieldsEl.classList.toggle("hidden", !visible);
+      if (!visible) {
+        fields.denomination.value = "";
+        fields.capital.value = "";
+        fields.rcsVille.value = "";
+      }
+    };
+
+    const updateProfessionUi = () => {
+      const config = titleUiConfigs[fields.titre.value] || titleUiConfigs.Psychologue;
+      numberLabelEl.textContent = config.numberLabel;
+      fields.adeli.placeholder = config.numberPlaceholder;
+      numberHelpEl.textContent = config.numberHelp;
+      titleHelpEl.textContent = config.titleHelp;
+      formHelpEl.textContent = config.formHelp;
     };
 
     const buildCookiesParagraphs = (hebergeur, audience, embedsTiers) => {
@@ -320,7 +455,7 @@ import Layout from "../../layouts/Layout.astro";
       const needsConsentBanner = audience === "consentement" || embedsTiers;
       if (needsConsentBanner) {
         paragraphs.push(
-          "Gestion du consentement : lors de votre première visite, un bandeau vous informe de la présence de cookies soumis à consentement et vous permet d'accepter, de refuser ou de paramétrer vos choix par finalité. Votre consentement est recueilli avant tout dépôt de traceur non exempté. Vous pouvez à tout moment retirer votre consentement ou modifier vos préférences via le module de gestion des cookies accessible en pied de page ou via le bandeau. La durée de validité du consentement n'excède pas treize mois ; au-delà, votre choix vous sera redemandé.",
+          "Gestion du consentement : lors de votre première visite, un bandeau vous informe de la présence de cookies soumis à consentement et vous permet d'accepter, de refuser ou de paramétrer vos choix par finalité. Votre consentement est recueilli avant tout dépôt de traceur non exempté. Vous pouvez à tout moment retirer votre consentement ou modifier vos préférences via le module de gestion des cookies accessible en pied de page ou via le bandeau. Le choix exprimé par l'utilisateur (acceptation ou refus) a vocation à être conservé pour une durée limitée, en principe de six mois, avant qu'un nouveau recueil puisse être proposé. Les cookies de mesure d'audience soumis à consentement, lorsqu'ils sont utilisés, ne doivent pas être conservés au-delà de treize mois.",
         );
       } else {
         paragraphs.push(
@@ -336,13 +471,16 @@ import Layout from "../../layouts/Layout.astro";
       return paragraphs;
     };
 
-    const buildSections = () => {
+    const buildDocuments = () => {
       const nom = valueOr(fields.nom, "[Nom et prénom du praticien]");
       const titreKey = fields.titre.value;
       const config = titreConfigs[titreKey] || titreConfigs.Psychologue;
       const statut = escapeHtml(fields.statut.value);
       const adeli = valueOr(fields.adeli, "[Numéro RPPS]");
       const siret = valueOr(fields.siret, "[Numéro SIRET]");
+      const denomination = valueOr(fields.denomination, "[Dénomination sociale]");
+      const capital = valueOr(fields.capital, "[Capital social]");
+      const rcsVille = valueOr(fields.rcsVille, "[Ville du RCS]");
       const adresse = valueOr(fields.adresse, "[Adresse du cabinet]");
       const telephone = valueOr(fields.telephone, "[Numéro de téléphone]");
       const email = valueOr(fields.email, "[Email de contact]");
@@ -350,53 +488,62 @@ import Layout from "../../layouts/Layout.astro";
       const aFormulaire = fields.formulaire.value === "oui";
       const audienceCookies = fields.cookiesAudience.value;
       const embedsTiers = fields.cookiesTiers.value === "oui";
+      const statutRaw = rawValue(fields.statut);
+      const isSociete = isSocieteStatut(statutRaw);
 
       const sections = [];
 
-      sections.push({
-        titre: "1. Identification de l'éditeur du site",
-        paragraphes: [
-          `${config.inscription(nom, adeli)} Statut juridique : ${statut}. SIRET : ${siret}.`,
-          `Adresse professionnelle : ${adresse}.`,
-          `Téléphone : ${telephone}.`,
-          `Adresse électronique de contact : ${email}.`,
-          `Directeur de la publication : ${nom}.`,
-          config.titreProtege,
-        ],
-      });
+      const mentionsLegales = [
+        {
+          titre: "1. Identification de l'éditeur du site",
+          paragraphes: [
+            `${config.inscription(nom, adeli)} Statut juridique : ${statut}. SIRET : ${siret}.`,
+            ...(isSociete
+              ? [
+                  `La structure d'exercice est : ${denomination}. Siège social : ${adresse}. Capital social : ${capital}. Immatriculation : RCS ${rcsVille}.`,
+                ]
+              : []),
+            `Adresse professionnelle : ${adresse}.`,
+            `Téléphone : ${telephone}.`,
+            `Adresse électronique de contact : ${email}.`,
+            `Directeur de la publication : ${nom}.`,
+            config.titreProtege,
+            config.cadreReglementaire,
+          ],
+        },
+        {
+          titre: "2. Hébergement",
+          paragraphes: [
+            `Le site est hébergé par : ${hebergeur}.`,
+            `Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), l'hébergeur assure le stockage du site ; il peut être contacté pour toute question relative à cette prestation aux coordonnées indiquées ci-dessus.`,
+          ],
+        },
+        {
+          titre: "3. Propriété intellectuelle",
+          paragraphes: [
+            `L'ensemble des éléments composant le présent site (textes, images, graphismes, logo, structure, mise en forme) est protégé par les dispositions du Code de la propriété intellectuelle. Sauf mention contraire, ces éléments sont la propriété exclusive de ${nom}.`,
+            `Toute reproduction, représentation, modification ou diffusion, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit et sur quelque support que ce soit, est interdite sans l'autorisation écrite et préalable de l'éditeur. Toute utilisation non autorisée est susceptible de constituer une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.`,
+          ],
+        },
+        {
+          titre: "4. Responsabilité et limites",
+          paragraphes: [
+            config.responsabilite,
+            config.urgence,
+            `L'éditeur s'efforce d'assurer l'exactitude et la mise à jour des informations publiées, sans toutefois pouvoir en garantir l'exhaustivité ou l'absence d'erreur. Sa responsabilité ne saurait être engagée en cas d'inexactitude, d'omission ou d'indisponibilité temporaire du site.`,
+            `Le site peut contenir des liens vers des sites tiers. L'éditeur n'exerce aucun contrôle sur leur contenu et décline toute responsabilité à leur égard.`,
+          ],
+        },
+      ];
 
-      sections.push({
-        titre: "2. Hébergement",
-        paragraphes: [
-          `Le site est hébergé par : ${hebergeur}.`,
-          `Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), l'hébergeur assure le stockage du site ; il peut être contacté pour toute question relative à cette prestation aux coordonnées indiquées ci-dessus.`,
-        ],
-      });
-
-      sections.push({
-        titre: "3. Propriété intellectuelle",
-        paragraphes: [
-          `L'ensemble des éléments composant le présent site (textes, images, graphismes, logo, structure, mise en forme) est protégé par les dispositions du Code de la propriété intellectuelle. Sauf mention contraire, ces éléments sont la propriété exclusive de ${nom}.`,
-          `Toute reproduction, représentation, modification ou diffusion, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit et sur quelque support que ce soit, est interdite sans l'autorisation écrite et préalable de l'éditeur. Toute utilisation non autorisée est susceptible de constituer une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.`,
-        ],
-      });
-
-      sections.push({
-        titre: "4. Responsabilité et limites",
-        paragraphes: [
-          config.responsabilite,
-          config.urgence,
-          `L'éditeur s'efforce d'assurer l'exactitude et la mise à jour des informations publiées, sans toutefois pouvoir en garantir l'exhaustivité ou l'absence d'erreur. Sa responsabilité ne saurait être engagée en cas d'inexactitude, d'omission ou d'indisponibilité temporaire du site.`,
-          `Le site peut contenir des liens vers des sites tiers. L'éditeur n'exerce aucun contrôle sur leur contenu et décline toute responsabilité à leur égard.`,
-        ],
-      });
+      const confidentialite = [];
 
       const rgpd = [
         `Le traitement des données à caractère personnel effectué à partir de ce site est régi par le règlement (UE) 2016/679 du 27 avril 2016 (RGPD) et par la loi n° 78-17 du 6 janvier 1978 modifiée, dite « Informatique et Libertés ». Le responsable du traitement est ${nom}, joignable à l'adresse ${email}.`,
       ];
       if (aFormulaire) {
         rgpd.push(
-          `Le site met à disposition un formulaire de contact. Les données ainsi collectées (identité, coordonnées, contenu du message) sont traitées sur le fondement des mesures précontractuelles (article 6, paragraphe 1, b, du RGPD) et, le cas échéant, de l'intérêt légitime du cabinet à répondre aux demandes (article 6, paragraphe 1, f), à la seule fin de répondre aux sollicitations. Si le message contient des données de santé, leur traitement repose en outre sur le consentement explicite de la personne (article 9, paragraphe 2, a, du RGPD). Les données sont destinées exclusivement à ${nom}, ne font l'objet d'aucune cession à des tiers et sont conservées pendant une durée maximale de douze mois à compter du dernier contact, sauf ouverture d'un suivi thérapeutique.`,
+          `Le site met à disposition un formulaire de contact. Les données ainsi collectées (identité, coordonnées, contenu du message) sont traitées à la seule fin de répondre aux sollicitations adressées au cabinet, sur le fondement des mesures précontractuelles prises à la demande de la personne concernée (article 6, paragraphe 1, b, du RGPD) et, selon les cas, de l'intérêt légitime du cabinet à traiter les demandes entrantes (article 6, paragraphe 1, f). Les personnes sont invitées à ne pas transmettre, via ce formulaire, d'informations inutiles ou détaillées relatives à leur état de santé. Si des données relevant de l'article 9 du RGPD sont néanmoins communiquées de manière volontaire dans le message, elles sont traitées uniquement dans la mesure nécessaire à l'examen et au traitement de la demande. Les données sont destinées exclusivement à ${nom}, ne font l'objet d'aucune cession à des tiers et sont conservées pendant une durée maximale de douze mois à compter du dernier contact, sauf ouverture d'un suivi thérapeutique ou obligation légale particulière.`,
         );
       } else {
         rgpd.push(
@@ -405,72 +552,94 @@ import Layout from "../../layouts/Layout.astro";
       }
       rgpd.push(
         config.rgpdSante,
-        `Les données éventuellement recueillies sont en outre couvertes par le secret professionnel auquel est tenu(e) ${nom} en application de l'article 226-13 du Code pénal et des règles déontologiques applicables à sa profession.`,
+        config.confidentialite(nom),
       );
-      sections.push({
-        titre: "5. Données personnelles et RGPD",
+      confidentialite.push({
+        titre: "1. Données personnelles et finalités",
         paragraphes: rgpd,
       });
 
-      sections.push({
-        titre: "6. Cookies et traceurs",
-        paragraphes: buildCookiesParagraphs(hebergeur, audienceCookies, embedsTiers),
-      });
-
-      sections.push({
-        titre: "7. Contact, droit d'accès et de rectification",
+      confidentialite.push({
+        titre: "2. Exercice des droits",
         paragraphes: [
-          `Conformément aux articles 15 à 22 du RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données, ainsi que d'un droit d'opposition et de limitation du traitement. Vous pouvez également définir des directives relatives au sort de vos données après votre décès.`,
+          `Conformément aux articles 15 à 22 du RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et, lorsque les conditions légales sont réunies, d'un droit à la portabilité de vos données, ainsi que d'un droit d'opposition et de limitation du traitement. Vous pouvez également définir des directives relatives au sort de vos données après votre décès.`,
           `Ces droits s'exercent auprès de ${nom}, par courriel à l'adresse ${email} ou par courrier à l'adresse suivante : ${adresse}. Une réponse vous sera adressée dans un délai d'un mois à compter de la réception de la demande ; un justificatif d'identité pourra être demandé en cas de doute raisonnable sur l'identité du demandeur.`,
           `Si vous estimez, après avoir contacté le cabinet, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la Commission nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — www.cnil.fr.`,
         ],
       });
 
-      return sections;
+      const cookies = [
+        {
+          titre: "1. Cookies et traceurs",
+          paragraphes: buildCookiesParagraphs(hebergeur, audienceCookies, embedsTiers),
+        },
+      ];
+
+      return [
+        { titre: "Mentions légales", sections: mentionsLegales },
+        { titre: "Politique de confidentialité", sections: confidentialite },
+        { titre: "Politique de cookies", sections: cookies },
+      ];
     };
 
     const render = () => {
-      const sections = buildSections();
-      resultEl.innerHTML = sections
+      const documents = buildDocuments();
+      resultEl.innerHTML = documents
         .map(
-          (section) =>
-            `<h3 class="mt-5 first:mt-0 text-base font-bold text-slate-900 sm:text-lg">${section.titre}</h3>` +
-            section.paragraphes.map((p) => `<p class="mt-2 text-slate-800">${p}</p>`).join(""),
+          (document) =>
+            `<h2 class="mt-6 first:mt-0 text-lg font-extrabold text-slate-900 sm:text-xl">${document.titre}</h2>` +
+            document.sections
+              .map(
+                (section) =>
+                  `<h3 class="mt-5 text-base font-bold text-slate-900 sm:text-lg">${section.titre}</h3>` +
+                  section.paragraphes.map((p) => `<p class="mt-2 text-slate-800">${p}</p>`).join(""),
+              )
+              .join(""),
         )
         .join("");
     };
 
     const buildPlainText = () => {
-      const sections = buildSections();
+      const documents = buildDocuments();
       const decode = (html) => {
         const tmp = document.createElement("textarea");
         tmp.innerHTML = html;
         return tmp.value;
       };
-      return (
-        "Mentions légales\n\n" +
-        sections
-          .map((s) => decode(s.titre) + "\n\n" + s.paragraphes.map(decode).join("\n\n"))
-          .join("\n\n")
-      );
+      return documents
+        .map(
+          (document) =>
+            decode(document.titre) +
+            "\n\n" +
+            document.sections
+              .map((s) => decode(s.titre) + "\n\n" + s.paragraphes.map(decode).join("\n\n"))
+              .join("\n\n"),
+        )
+        .join("\n\n");
     };
 
     const copyInfoEl = document.getElementById("ml-copie-info");
 
     const fieldLabels = {
       nom: "Nom et prénom du praticien",
-      adeli: "Numéro RPPS",
+      adeli: "Numéro professionnel",
       siret: "Numéro SIRET",
       adresse: "Adresse du cabinet",
       telephone: "Téléphone de contact",
       email: "Email de contact",
       hebergeur: "Hébergeur du site",
+      denomination: "Dénomination sociale",
+      capital: "Capital social",
+      rcsVille: "Ville du RCS",
     };
 
-    const missingFields = () =>
-      Object.entries(fieldLabels)
-        .filter(([key]) => fields[key].value.trim() === "")
-        .map(([, label]) => label);
+    const missingFields = () => {
+      const required = ["nom", "adeli", "siret", "adresse", "telephone", "email", "hebergeur"];
+      if (isSocieteStatut(fields.statut.value)) {
+        required.push("denomination", "capital", "rcsVille");
+      }
+      return required.filter((key) => fields[key].value.trim() === "").map((key) => fieldLabels[key]);
+    };
 
     const showCopyInfo = (message) => {
       if (!copyInfoEl) return;
@@ -529,6 +698,8 @@ import Layout from "../../layouts/Layout.astro";
     });
 
     const onFieldUpdate = () => {
+      updateProfessionUi();
+      updateSocieteFieldsVisibility();
       render();
       if (missingFields().length === 0) {
         hideCopyInfo();
@@ -536,12 +707,18 @@ import Layout from "../../layouts/Layout.astro";
     };
 
     const buildHtmlDocument = () => {
-      const sections = buildSections();
-      const body = sections
+      const documents = buildDocuments();
+      const body = documents
         .map(
-          (section) =>
-            `    <h2>${section.titre}</h2>\n` +
-            section.paragraphes.map((p) => `    <p>${p}</p>`).join("\n"),
+          (document) =>
+            `    <h2>${document.titre}</h2>\n` +
+            document.sections
+              .map(
+                (section) =>
+                  `    <h3>${section.titre}</h3>\n` +
+                  section.paragraphes.map((p) => `    <p>${p}</p>`).join("\n"),
+              )
+              .join("\n"),
         )
         .join("\n");
       return `<!doctype html>
@@ -549,7 +726,7 @@ import Layout from "../../layouts/Layout.astro";
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentions légales</title>
+  <title>Documents juridiques du site</title>
   <style>
     body { font-family: Georgia, "Times New Roman", serif; max-width: 50rem; margin: 2rem auto; padding: 0 1.25rem; line-height: 1.6; color: #1e293b; }
     h1 { font-size: 1.75rem; }
@@ -590,6 +767,8 @@ ${body}
       el.addEventListener("input", onFieldUpdate);
       el.addEventListener("change", onFieldUpdate);
     });
+    updateProfessionUi();
+    updateSocieteFieldsVisibility();
     render();
   })();
 </script>
