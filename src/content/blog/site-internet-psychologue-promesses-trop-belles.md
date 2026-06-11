@@ -118,4 +118,4 @@ Avant de choisir, il vaut donc la peine de ralentir un peu et de poser quelques 
 - la plateforme mélange-t-elle des psychologues diplômés avec des praticiens aux titres non réglementés ?
 - des profils ou des agendas peuvent-ils être créés à mon nom sans mon consentement ?
 
-Un bon **site internet psychologue** n'a pas besoin d'en faire trop. Il doit surtout être clair, honnête dans ce qu'il promet, et entièrement sous votre contrôle.
+Un bon **site internet psychologue** n'a pas besoin d'en faire trop. Il doit surtout être clair, honnête dans ce qu'il promet, et entièrement sous votre contrôle. C'est exactement l'esprit de mon offre de [création de site internet pour psychologue](/creation-site-internet-psychologue/) : un périmètre explicite, un nom de domaine qui vous appartient, et aucune promesse de classement Google.

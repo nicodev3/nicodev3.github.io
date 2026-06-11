@@ -1,7 +1,7 @@
 ---
 title: "Psychologue : faut-il un site internet en plus de Doctolib ?"
-seoTitle: "Site psychologue et Doctolib : faut-il les deux ? SEO"
-description: "Doctolib, site internet ou les deux ? Comparatif pour psychologues : coût, visibilité locale, prise de rendez-vous, autonomie et conversion des patients."
+seoTitle: "Site internet psychologue et Doctolib : faut-il les deux ?"
+description: "Doctolib, annuaires, fiche Google et site internet ne jouent pas le même rôle. Comprendre comment les combiner pour gagner en visibilité."
 pubDate: "2026-03-12"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-web-doctolib.webp"
@@ -261,6 +261,6 @@ Le choix le plus solide n'est donc pas forcément "Doctolib ou site internet". C
 
 Pour beaucoup de psychologues, c'est une solution plus économique, plus souple et plus durable. Et si votre budget est limité au démarrage, un site professionnel à [29 € / mois ou 49 € / mois](/tarifs/#tarifs-offres), avec prise de rendez-vous intégrée ou connectée selon la formule, peut être un meilleur premier pas qu'une plateforme à 149 € / mois, ou qu'un ensemble agenda + téléconsultation à plus de 200 € / mois.
 
-Pour approfondir le budget, vous pouvez lire le guide [combien coûte vraiment un site internet pour psychologue ?](/blog/combien-coute-site-internet-2026/) ou consulter directement les [offres à 29 € et 49 € / mois](/tarifs/#tarifs-offres).
+Pour approfondir le budget, vous pouvez lire le guide [combien coûte vraiment un site internet pour psychologue ?](/blog/combien-coute-site-internet-2026/) ou consulter directement les [offres à 29 € et 49 € / mois](/tarifs/#tarifs-offres). Et pour voir concrètement ce que comprend un [site vitrine pour psychologue](/creation-site-internet-psychologue/) — structure, contenu, bases SEO, intégration d'un outil de rendez-vous —, la page dédiée détaille l'ensemble.
 
 Sources consultées : <a href="https://info.doctolib.fr/tarifs/" target="_blank" rel="nofollow noopener noreferrer">tarifs Doctolib</a> et <a href="https://media.doctolib.com/image/upload/mkg/file/brochure_des_solutions_doctolib_with_price.pdf" target="_blank" rel="nofollow noopener noreferrer">brochure tarifaire Doctolib</a>, notamment l'offre agenda à 149 € TTC / mois / praticien ; <a href="https://info.doctolib.fr/doctolib-teleconsultation/" target="_blank" rel="nofollow noopener noreferrer">page Doctolib Téléconsultation</a>, qui indique 79 € TTC / mois / praticien et 1 % HT de frais de paiement en ligne ; <a href="https://media.doctolib.com/image/upload/mkg/img/teleconsultation_etat_des_lieux_et_usages_au_sein_de_la_medecine_de_ville.pdf" target="_blank" rel="nofollow noopener noreferrer">étude Doctolib sur la téléconsultation</a>, qui observe une surreprésentation des usages urbains de la téléconsultation.

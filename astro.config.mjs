@@ -17,6 +17,8 @@ const shouldIncludeInSitemap = (page) => {
   const pathname = new URL(page).pathname;
   if (pathname.startsWith('/merci')) return false;
   if (pathname.startsWith('/dev/')) return false;
+  // Pages tags en noindex, follow (voir Layout.astro) : hors sitemap.
+  if (pathname.startsWith('/blog/tag/')) return false;
   if (pathname === '/404' || pathname === '/404/') return false;
   if (pathname === '/site-web-psychologue/' || pathname === '/site-web-psychologue') return false;
   if (noindexUrlsExact.has(page)) return false;

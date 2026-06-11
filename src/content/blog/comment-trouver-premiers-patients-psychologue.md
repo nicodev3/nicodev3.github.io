@@ -1,7 +1,7 @@
 ---
 title: "Comment trouver ses premiers patients quand on s’installe comme psychologue"
-seoTitle: "Trouver ses premiers patients psychologue | Nicodev"
-description: "Trouver ses premiers patients comme psychologue : réseau, Doctolib, Google, site internet et visibilité locale."
+seoTitle: "Comment trouver ses premiers patients quand on est psychologue ?"
+description: "Site internet, réseau, fiche Google, annuaires et bouche-à-oreille : les leviers pour développer une première patientèle en libéral."
 pubDate: "2026-03-15"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/installation-psychologue-liberal.webp"
@@ -130,7 +130,7 @@ Quand on s’installe, il est naturel de surveiller son agenda et de se demander
 
 Ce qui compte surtout, au début, c’est de mettre en place des bases solides : une présence locale identifiable, des informations claires, un cadre lisible et des outils de contact simples. C’est souvent ainsi que le cabinet se remplit progressivement, sans agitation inutile.
 
-Si vous souhaitez créer un site sobre, professionnel et pensé pour votre visibilité locale, j’accompagne précisément ce type de projet chez Nicodev. Mon approche est simple : construire un site clair, fidèle à votre pratique, utile pour vos patients, et solide pour votre installation dans la durée.
+Si vous souhaitez créer un site sobre, professionnel et pensé pour votre visibilité locale, j’accompagne précisément ce type de projet chez Nicodev. Mon approche est simple : construire un site clair, fidèle à votre pratique, utile pour vos patients, et solide pour votre installation dans la durée. Pour comprendre comment [être trouvé par des patients sur Google](/referencement-site-psychologue/) — fiche Google, site et cohérence locale —, la page référencement détaille la méthode.
 
 À lire aussi :
 - [Ouvrir son cabinet de psychologue : s’installer en libéral sans se noyer](/blog/installer-liberal-psychologue-par-ou-commencer/)

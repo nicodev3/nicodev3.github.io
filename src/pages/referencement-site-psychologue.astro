@@ -15,6 +15,54 @@ const faqSchema = {
 	mainEntity: [
 		{
 			'@type': 'Question',
+			name: "Comment améliorer le référencement d'un psychologue ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "En travaillant trois piliers cohérents : un site clair et rapide (structure, titres, contenu local), une fiche Google Business Profile complète et vérifiée, et des informations identiques partout (nom, adresse, téléphone). La régularité compte plus que les astuces.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Une fiche Google Business Profile suffit-elle ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Elle capte une partie des recherches locales, mais sans site les patients qui veulent comprendre votre approche avant d'appeler n'ont nulle part où aller — et certains se tournent vers des confrères mieux présentés. Fiche et site se renforcent mutuellement.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Faut-il créer des pages par ville ou par spécialité ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Une page par spécialité réelle peut être utile si elle apporte un vrai contenu. Multiplier des pages par ville quasi identiques est en revanche contre-productif : Google les considère comme du contenu dupliqué et les patients s'y perdent. Mieux vaut une page locale solide et cohérente avec votre fiche.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Les avis Google sont-ils importants pour un psychologue ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Ils comptent pour la visibilité locale et la confiance, mais leur gestion doit respecter le secret professionnel : pas de sollicitation insistante, et jamais de réponse qui confirme qu'une personne est suivie.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Combien de temps faut-il pour être visible sur Google ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Des signaux positifs sur la fiche Google peuvent apparaître en quelques semaines si elle est complète. Le référencement organique du site demande souvent plusieurs mois de régularité, surtout dans les villes concurrentielles. Méfiez-vous des promesses de résultats rapides garantis.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Peut-on faire du SEO en respectant la déontologie ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Oui : le SEO consiste à rendre des informations exactes faciles à trouver, pas à faire de la publicité racoleuse. Contenus informatifs, présentation sobre de la pratique et absence de promesse de résultat sont parfaitement compatibles avec le cadre déontologique.",
+			},
+		},
+		{
+			'@type': 'Question',
 			name: 'Le référencement est-il inclus dans la création de site ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
@@ -72,8 +120,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="SEO site psychologue : référencement | Nicolas Devaux"
-	description="Référencement naturel et local pour sites de psychologues : structure, technique, fiche Google et attentes réalistes."
+	title="Référencement psychologue : être visible sur Google dans sa ville"
+	description="Référencement pour psychologue : améliorez votre visibilité locale sur Google grâce à un site clair, une fiche Google Business Profile optimisée et une stratégie SEO adaptée."
 	image={refOgWebp}
 >
 	<Fragment slot="head">
@@ -83,8 +131,8 @@ const breadcrumbSchema = {
 	</Fragment>
 
 	<Hero
-		title="Référencement et SEO pour site de psychologue"
-		subtitle="Les bases techniques et éditoriales pour être mieux compris par Google — sans promesses miraculeuses sur les classements."
+		title="Référencement pour psychologue : améliorer sa visibilité locale"
+		subtitle="Les bases techniques et éditoriales pour être mieux compris par Google et trouvé dans sa ville — sans promesses miraculeuses sur les classements."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Référencement site psychologue' }]}
 	/>
 
@@ -118,6 +166,20 @@ const breadcrumbSchema = {
 					Beaucoup de requêtes regroupent tout sous <strong>référencement psychologue</strong> ou <strong>site psychologue SEO</strong>. En pratique, il y a deux volets&nbsp;: votre{' '}
 					<strong>site</strong> (contenu, structure, performance) et votre présence dans les résultats locaux (notamment via{' '}
 					<a href="/blog/google-business-profile-psychologue/">Google Business Profile</a>). Les deux doivent être cohérents — même adresse, même tonalité, mêmes informations sur les modalités de consultation.
+				</p>
+
+				<h2>Comment les patients cherchent un psychologue sur Google</h2>
+				<p>
+					La plupart des recherches sont <strong>locales et concrètes</strong>&nbsp;: «&nbsp;psychologue + ville&nbsp;»,
+					«&nbsp;psychologue enfant + quartier&nbsp;», parfois une spécialité («&nbsp;EMDR&nbsp;», «&nbsp;TCC&nbsp;») ou
+					directement votre nom après une recommandation. Google affiche d’abord le pack local (carte + fiches Google
+					Business Profile), puis les sites. Être visible suppose donc de travailler <strong>les deux étages</strong>&nbsp;:
+					une fiche complète pour apparaître sur la carte, un site clair pour convaincre ceux qui cliquent.
+				</p>
+				<p>
+					La recherche sur votre nom est tout aussi importante&nbsp;: un patient qui a entendu parler de vous vérifie
+					presque toujours en ligne avant d’appeler. Si Google ne renvoie qu’un annuaire incomplet, vous perdez la main
+					sur cette première impression. L’article <a href="/blog/comment-trouver-premiers-patients-psychologue/">trouver ses premiers patients</a> détaille ces parcours de recherche.
 				</p>
 
 				<h2>Ce que j’optimise côté site</h2>
@@ -161,6 +223,15 @@ const breadcrumbSchema = {
 					Si vous n’avez pas encore de site, la page <a href="/creation-site-internet-psychologue/">création de site internet pour psychologue</a> décrit ce qui est inclus (structure, hébergement, widget RDV, bases SEO). Le diagnostic gratuit permet de prioriser fiche, site ou les deux selon votre situation.
 				</p>
 
+				<h2>Avis Google et e-réputation&nbsp;: un levier à manier avec prudence</h2>
+				<p>
+					Les avis pèsent dans le référencement local et dans la décision des patients — mais pour un psychologue, le
+					sujet touche au <strong>secret professionnel</strong> et au cadre déontologique&nbsp;: on ne sollicite pas des
+					avis comme un restaurant, et on ne répond jamais en confirmant qu’une personne est suivie. L’article{' '}
+					<a href="/blog/avis-google-e-reputation-psychologue/">avis Google et e-réputation du psychologue</a> pose les
+					repères éthiques pour gérer sa fiche sans faute.
+				</p>
+
 				<h2>Délais et attentes réalistes</h2>
 				<p>
 					Des signaux positifs sur la fiche peuvent apparaître en <strong>quelques semaines</strong> si elle est complète et vérifiée. Le référencement organique du site demande souvent <strong>plusieurs mois</strong> de régularité — surtout dans les agglomérations concurrentielles. Ce n’est pas une course au mot-clé&nbsp;: c’est un système (technique + contenu + cohérence locale + gestion mesurée des avis).
@@ -175,6 +246,12 @@ const breadcrumbSchema = {
 				</p>
 
 				<h2>Questions fréquentes</h2>
+				<p><strong>Comment améliorer le référencement d’un psychologue&nbsp;?</strong> En travaillant trois piliers cohérents&nbsp;: un site clair et rapide, une fiche Google Business Profile complète, et des informations identiques partout (nom, adresse, téléphone). La régularité compte plus que les astuces.</p>
+				<p><strong>Une fiche Google Business Profile suffit-elle&nbsp;?</strong> Elle capte une partie des recherches locales, mais sans site les patients qui veulent comprendre votre approche avant d’appeler n’ont nulle part où aller. Fiche et site se renforcent mutuellement.</p>
+				<p><strong>Faut-il créer des pages par ville ou par spécialité&nbsp;?</strong> Une page par spécialité réelle peut être utile si elle apporte un vrai contenu. Multiplier des pages par ville quasi identiques est contre-productif&nbsp;: contenu dupliqué pour Google, confusion pour les patients.</p>
+				<p><strong>Les avis Google sont-ils importants pour un psychologue&nbsp;?</strong> Oui pour la visibilité et la confiance, mais leur gestion doit respecter le secret professionnel — voir l’article <a href="/blog/avis-google-e-reputation-psychologue/">avis Google et e-réputation</a>.</p>
+				<p><strong>Combien de temps faut-il pour être visible sur Google&nbsp;?</strong> Quelques semaines pour des signaux sur la fiche, souvent plusieurs mois pour le référencement organique du site. Méfiez-vous des résultats rapides «&nbsp;garantis&nbsp;».</p>
+				<p><strong>Peut-on faire du SEO en respectant la déontologie&nbsp;?</strong> Oui&nbsp;: le SEO consiste à rendre des informations exactes faciles à trouver, pas à faire de la publicité racoleuse. Aucune promesse de résultat n’est nécessaire — ni souhaitable.</p>
 				<p><strong>Le référencement est-il inclus dans la création de site&nbsp;?</strong> Les fondations techniques et éditoriales oui&nbsp;; une stratégie de contenu régulière (blog) ou un accompagnement renforcé dépend de la formule — voir <a href="/tarifs/">Tarifs</a>.</p>
 				<p><strong>Puis-je faire mon SEO moi-même&nbsp;?</strong> Oui pour une partie (compléter la fiche, demander des avis dans le cadre déontologique). La technique avancée (données structurées, performance, structure) est souvent plus rapide à confier — surtout si vous préférez vous concentrer sur la clinique.</p>
 				<p><strong>Comment mesurer les résultats&nbsp;?</strong> Appels, formulaires, clics d’itinéraire sur la fiche, pages du site qui génèrent des contacts — sans confondre «&nbsp;positions&nbsp;» et «&nbsp;prises de rendez-vous&nbsp;».</p>

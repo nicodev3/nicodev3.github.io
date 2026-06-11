@@ -78,7 +78,7 @@ Si vous souhaitez un site clair, adapté au métier et techniquement propre, plu
 
 Nicodev existe précisément parce que je cumule deux casquettes : **psychologue** et **développeur web**. Je connais les attentes de sobriété, de cadre et de vocabulaire dans notre champ. Je connais aussi ce qu'il faut pour qu'un site soit lisible, rapide et cohérent avec une présence locale sur Google — sans promesses irréalistes. J'en dis plus long sur ces écueils commerciaux dans l'article [sites internet pour psychologues : attention aux promesses trop belles pour être vraies](/blog/site-internet-psychologue-promesses-trop-belles/).
 
-Pour le budget et ce qu'il est raisonnable d'en attendre, vous pouvez aussi vous appuyer sur [combien coûte un site internet en 2026 ?](/blog/combien-coute-site-internet-2026/).
+Pour le budget et ce qu'il est raisonnable d'en attendre, vous pouvez aussi vous appuyer sur [combien coûte un site internet en 2026 ?](/blog/combien-coute-site-internet-2026/). Ce que comprend concrètement un [site internet pour psychologue](/creation-site-internet-psychologue/) réalisé avec moi est détaillé sur la page dédiée.
 
 Mon approche reste modeste : souvent, un site simple mais bien pensé suffit largement. L'enjeu n'est pas d'empiler les fonctionnalités, mais d'être **compris et trouvable** sans compromettre la qualité de ce que vous affichez au nom de votre pratique.
 

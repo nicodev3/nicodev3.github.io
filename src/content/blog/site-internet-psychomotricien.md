@@ -1,7 +1,7 @@
 ---
 title: "Site internet psychomotricien : pages essentielles"
-metaTitleSuffix: "Nicodev"
-description: "Site internet pour psychomotricien : pages essentielles, bilan, suivis, publics, tarifs, contact, SEO local et ton adapté."
+seoTitle: "Site internet psychomotricien : pages essentielles et visibilité locale"
+description: "Les pages utiles pour un site de psychomotricien, les informations à présenter et les bases pour être visible localement."
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/psychomotricienne-2.webp"
