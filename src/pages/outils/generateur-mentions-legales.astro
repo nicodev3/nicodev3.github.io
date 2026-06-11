@@ -3,8 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout
-  title="Générateur de mentions légales psychologue | Outils Nicodev"
-  description="Générez des mentions légales conformes au droit français pour votre site de cabinet (psychologue, psychothérapeute, psychiatre) : éditeur, hébergeur, RGPD, cookies."
+  title="Générateur de mentions légales cabinet | Outils Nicodev"
+  description="Générez des mentions légales conformes au droit français pour votre site de cabinet (psychologue, psychomotricien, psychothérapeute, psychiatre) : éditeur, hébergeur, RGPD, cookies."
 >
   <section class="section-y bg-slate-50">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -15,15 +15,16 @@ import Layout from "../../layouts/Layout.astro";
         </h1>
         <p class="mt-4 max-w-3xl text-slate-700">
           Renseignez les informations de votre cabinet et obtenez des mentions légales complètes,
-          rédigées en français juridique clair, adaptées aux professionnels de la santé mentale en
-          libéral : identification de l&apos;éditeur, hébergement, propriété intellectuelle,
-          responsabilité, RGPD (données de santé, article 9), cookies et droits des personnes.
+          rédigées en français juridique clair, adaptées aux professionnels de santé en libéral
+          (psychologue, psychomotricien, psychothérapeute, psychiatre) : identification de
+          l&apos;éditeur, hébergement, propriété intellectuelle, responsabilité, RGPD (données de
+          santé, article 9), cookies et droits des personnes.
         </p>
         <p class="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-900">
-          Document type fourni à titre informatif : il couvre les obligations usuelles (loi pour la
-          confiance dans l&apos;économie numérique du 21 juin 2004, RGPD, loi Informatique et
-          Libertés) mais ne remplace pas l&apos;avis d&apos;un avocat pour une situation
-          particulière.
+          Modèle indicatif fourni à titre informatif : il couvre les obligations usuelles (loi pour
+          la confiance dans l&apos;économie numérique du 21 juin 2004, RGPD, loi Informatique et
+          Libertés). Il ne constitue pas un avis juridique et ne remplace pas la validation par un
+          professionnel du droit pour votre situation particulière.
         </p>
       </div>
 
@@ -44,8 +45,20 @@ import Layout from "../../layouts/Layout.astro";
             <span class="text-sm font-semibold text-slate-800">Titre professionnel</span>
             <select id="ml-titre" class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900">
               <option value="Psychologue">Psychologue</option>
+              <option value="Psychomotricien">Psychomotricien</option>
               <option value="Psychothérapeute">Psychothérapeute</option>
               <option value="Psychiatre">Psychiatre</option>
+            </select>
+          </label>
+
+          <label class="flex flex-col gap-1.5">
+            <span class="text-sm font-semibold text-slate-800">Statut juridique</span>
+            <select id="ml-statut" class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900">
+              <option value="Entrepreneur individuel (EI)">Entrepreneur individuel (EI)</option>
+              <option value="Micro-entrepreneur">Micro-entrepreneur</option>
+              <option value="EURL">EURL</option>
+              <option value="SELARL">SELARL</option>
+              <option value="Autre">Autre</option>
             </select>
           </label>
 
@@ -60,11 +73,31 @@ import Layout from "../../layouts/Layout.astro";
           </label>
 
           <label class="flex flex-col gap-1.5">
+            <span class="text-sm font-semibold text-slate-800">Numéro SIRET</span>
+            <input
+              id="ml-siret"
+              type="text"
+              placeholder="Ex. 123 456 789 00012"
+              class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+            />
+          </label>
+
+          <label class="flex flex-col gap-1.5 sm:col-span-2">
             <span class="text-sm font-semibold text-slate-800">Adresse du cabinet</span>
             <input
               id="ml-adresse"
               type="text"
               placeholder="Ex. 12 rue de la Paix, 75002 Paris"
+              class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
+            />
+          </label>
+
+          <label class="flex flex-col gap-1.5">
+            <span class="text-sm font-semibold text-slate-800">Téléphone de contact</span>
+            <input
+              id="ml-telephone"
+              type="tel"
+              placeholder="Ex. 01 23 45 67 89"
               class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
             />
           </label>
@@ -79,12 +112,12 @@ import Layout from "../../layouts/Layout.astro";
             />
           </label>
 
-          <label class="flex flex-col gap-1.5">
+          <label class="flex flex-col gap-1.5 sm:col-span-2">
             <span class="text-sm font-semibold text-slate-800">Hébergeur du site</span>
             <input
               id="ml-hebergeur"
               type="text"
-              placeholder="Ex. OVH SAS, 2 rue Kellermann, 59100 Roubaix"
+              placeholder="Ex. OVH SAS, 2 rue Kellermann, 59100 Roubaix — tél. 1007"
               class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
             />
           </label>
@@ -157,8 +190,11 @@ import Layout from "../../layouts/Layout.astro";
     const fields = {
       nom: document.getElementById("ml-nom"),
       titre: document.getElementById("ml-titre"),
+      statut: document.getElementById("ml-statut"),
       adeli: document.getElementById("ml-adeli"),
+      siret: document.getElementById("ml-siret"),
       adresse: document.getElementById("ml-adresse"),
+      telephone: document.getElementById("ml-telephone"),
       email: document.getElementById("ml-email"),
       hebergeur: document.getElementById("ml-hebergeur"),
       formulaire: document.getElementById("ml-formulaire"),
@@ -184,12 +220,66 @@ import Layout from "../../layouts/Layout.astro";
       return escapeHtml(v === "" ? fallback : v);
     };
 
+    const titreConfigs = {
+      Psychologue: {
+        inscription: (nom, rpps) =>
+          `Le présent site est édité par ${nom}, psychologue exerçant à titre libéral, inscrit(e) au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
+        titreProtege:
+          "Le titre de psychologue est un titre protégé par la loi. Son usage est réservé aux professionnels remplissant les conditions légales de formation et d'inscription auprès de l'Agence régionale de santé (ARS).",
+        responsabilite:
+          "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis médical ou psychologique, ni un diagnostic. Elles ne sauraient se substituer à une consultation auprès d'un psychologue ou d'un autre professionnel de santé.",
+        urgence:
+          "En cas d'urgence ou de détresse psychologique aiguë, il convient de contacter le 15 (SAMU), le 112 ou le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24).",
+        rgpdSante:
+          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+      },
+      Psychomotricien: {
+        inscription: (nom, rpps) =>
+          `Le présent site est édité par ${nom}, psychomotricien exerçant à titre libéral, inscrit(e) au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
+        titreProtege:
+          "Le titre de psychomotricien est un titre protégé par la loi. Son usage est réservé aux titulaires du diplôme d'État de psychomotricien enregistrés auprès de l'Agence régionale de santé (ARS).",
+        responsabilite:
+          "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis thérapeutique, un bilan psychomoteur en ligne, ni un diagnostic. Elles ne sauraient se substituer à une prise en charge auprès d'un psychomotricien ou d'un autre professionnel de santé.",
+        urgence:
+          "En cas d'urgence médicale, il convient de contacter le 15 (SAMU) ou le 112. En cas de détresse psychologique, le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24) est également disponible.",
+        rgpdSante:
+          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de santé peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+      },
+      Psychothérapeute: {
+        inscription: (nom, rpps) =>
+          `Le présent site est édité par ${nom}, psychothérapeute exerçant à titre libéral, inscrit(e) au registre national des psychothérapeutes et au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
+        titreProtege:
+          "L'usage du titre de psychothérapeute est réservé aux professionnels inscrits au registre national des psychothérapeutes, conformément à l'article 52 de la loi n° 2004-806 du 9 août 2004 et au décret n° 2010-534 du 20 mai 2010.",
+        responsabilite:
+          "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis thérapeutique ou psychologique, ni un diagnostic. Elles ne sauraient se substituer à une prise en charge auprès d'un psychothérapeute ou d'un autre professionnel de santé.",
+        urgence:
+          "En cas d'urgence ou de détresse psychologique aiguë, il convient de contacter le 15 (SAMU), le 112 ou le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24).",
+        rgpdSante:
+          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+      },
+      Psychiatre: {
+        inscription: (nom, rpps) =>
+          `Le présent site est édité par ${nom}, médecin psychiatre exerçant à titre libéral, inscrit(e) à l'Ordre des médecins et au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${rpps}.`,
+        titreProtege:
+          "Le titre de médecin psychiatre est un titre protégé. Son exercice est réservé aux médecins inscrits au tableau de l'Ordre des médecins et titulaires d'une spécialité ou d'une qualification en psychiatrie.",
+        responsabilite:
+          "Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation médicale, un avis médical ou un diagnostic. Elles ne sauraient se substituer à une consultation auprès d'un médecin psychiatre ou d'un autre professionnel de santé.",
+        urgence:
+          "En cas d'urgence ou de détresse psychologique aiguë, il convient de contacter le 15 (SAMU), le 112 ou le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24).",
+        rgpdSante:
+          "Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.",
+      },
+    };
+
     const buildSections = () => {
       const nom = valueOr(fields.nom, "[Nom et prénom du praticien]");
-      const titre = escapeHtml(fields.titre.value);
-      const titreMinuscule = titre.charAt(0).toLowerCase() + titre.slice(1);
+      const titreKey = fields.titre.value;
+      const config = titreConfigs[titreKey] || titreConfigs.Psychologue;
+      const statut = escapeHtml(fields.statut.value);
       const adeli = valueOr(fields.adeli, "[Numéro RPPS]");
+      const siret = valueOr(fields.siret, "[Numéro SIRET]");
       const adresse = valueOr(fields.adresse, "[Adresse du cabinet]");
+      const telephone = valueOr(fields.telephone, "[Numéro de téléphone]");
       const email = valueOr(fields.email, "[Email de contact]");
       const hebergeur = valueOr(fields.hebergeur, "[Nom et coordonnées de l'hébergeur]");
       const aFormulaire = fields.formulaire.value === "oui";
@@ -200,11 +290,12 @@ import Layout from "../../layouts/Layout.astro";
       sections.push({
         titre: "1. Identification de l'éditeur du site",
         paragraphes: [
-          `Le présent site est édité par ${nom}, ${titreMinuscule} exerçant à titre libéral, inscrit(e) au Répertoire partagé des professionnels de santé (RPPS) sous le numéro ${adeli}.`,
+          `${config.inscription(nom, adeli)} Statut juridique : ${statut}. SIRET : ${siret}.`,
           `Adresse professionnelle : ${adresse}.`,
+          `Téléphone : ${telephone}.`,
           `Adresse électronique de contact : ${email}.`,
           `Directeur de la publication : ${nom}.`,
-          `Le titre de ${titreMinuscule} est un titre protégé par la loi. Son usage est réservé aux professionnels remplissant les conditions légales de formation et d'enregistrement auprès de l'Agence régionale de santé.`,
+          config.titreProtege,
         ],
       });
 
@@ -227,8 +318,8 @@ import Layout from "../../layouts/Layout.astro";
       sections.push({
         titre: "4. Responsabilité et limites",
         paragraphes: [
-          `Les informations diffusées sur ce site le sont à titre purement informatif. Elles ne constituent en aucun cas une consultation, un avis médical ou psychologique, ni un diagnostic. Elles ne sauraient se substituer à une consultation auprès d'un professionnel de santé ou d'un psychologue.`,
-          `En cas d'urgence ou de détresse psychologique aiguë, il convient de contacter le 15 (SAMU), le 112 ou le 3114 (numéro national de prévention du suicide, gratuit, 24 h/24).`,
+          config.responsabilite,
+          config.urgence,
           `L'éditeur s'efforce d'assurer l'exactitude et la mise à jour des informations publiées, sans toutefois pouvoir en garantir l'exhaustivité ou l'absence d'erreur. Sa responsabilité ne saurait être engagée en cas d'inexactitude, d'omission ou d'indisponibilité temporaire du site.`,
           `Le site peut contenir des liens vers des sites tiers. L'éditeur n'exerce aucun contrôle sur leur contenu et décline toute responsabilité à leur égard.`,
         ],
@@ -239,7 +330,7 @@ import Layout from "../../layouts/Layout.astro";
       ];
       if (aFormulaire) {
         rgpd.push(
-          `Le site met à disposition un formulaire de contact. Les données ainsi collectées (identité, coordonnées, contenu du message) sont traitées sur le fondement des mesures précontractuelles et de l'intérêt légitime du cabinet (article 6 du RGPD), à la seule fin de répondre aux demandes. Elles sont destinées exclusivement à ${nom}, ne font l'objet d'aucune cession à des tiers et sont conservées pendant une durée maximale de douze mois à compter du dernier contact, sauf ouverture d'un suivi.`,
+          `Le site met à disposition un formulaire de contact. Les données ainsi collectées (identité, coordonnées, contenu du message) sont traitées sur le fondement des mesures précontractuelles (article 6, paragraphe 1, b, du RGPD) et, le cas échéant, de l'intérêt légitime du cabinet à répondre aux demandes (article 6, paragraphe 1, f), à la seule fin de répondre aux sollicitations. Si le message contient des données de santé, leur traitement repose en outre sur le consentement explicite de la personne (article 9, paragraphe 2, a, du RGPD). Les données sont destinées exclusivement à ${nom}, ne font l'objet d'aucune cession à des tiers et sont conservées pendant une durée maximale de douze mois à compter du dernier contact, sauf ouverture d'un suivi thérapeutique.`,
         );
       } else {
         rgpd.push(
@@ -247,7 +338,7 @@ import Layout from "../../layouts/Layout.astro";
         );
       }
       rgpd.push(
-        `Attention particulière relative aux données de santé : les informations communiquées dans le cadre d'une prise de contact avec un professionnel de la santé mentale peuvent révéler, directement ou indirectement, des données concernant la santé, qui constituent des données sensibles au sens de l'article 9 du RGPD. Leur traitement est interdit par principe et n'est admis que dans les cas prévus par ce même article, notamment lorsque la personne a manifestement rendu ces données publiques, a donné son consentement explicite, ou lorsque le traitement est nécessaire aux fins de la prise en charge sanitaire ou sociale (article 9, paragraphe 2, h). Il est recommandé de ne pas détailler votre situation médicale ou psychologique dans un message en ligne et de réserver ces échanges au cadre confidentiel de la consultation.`,
+        config.rgpdSante,
         `Les données éventuellement recueillies sont en outre couvertes par le secret professionnel auquel est tenu(e) ${nom} en application de l'article 226-13 du Code pénal et des règles déontologiques applicables à sa profession.`,
       );
       sections.push({
@@ -316,7 +407,9 @@ import Layout from "../../layouts/Layout.astro";
     const fieldLabels = {
       nom: "Nom et prénom du praticien",
       adeli: "Numéro RPPS",
+      siret: "Numéro SIRET",
       adresse: "Adresse du cabinet",
+      telephone: "Téléphone de contact",
       email: "Email de contact",
       hebergeur: "Hébergeur du site",
     };
