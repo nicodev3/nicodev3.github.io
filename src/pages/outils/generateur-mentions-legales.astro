@@ -133,12 +133,21 @@ import Layout from "../../layouts/Layout.astro";
           </label>
 
           <label class="flex flex-col gap-1.5">
+            <span class="text-sm font-semibold text-slate-800">Mesure d&apos;audience du site</span>
+            <select id="ml-cookies-audience" class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900">
+              <option value="aucune">Aucune</option>
+              <option value="exemptee">Oui, sans cookie (ex. Umami, Matomo exempté)</option>
+              <option value="consentement">Oui, avec cookies (ex. Google Analytics)</option>
+            </select>
+          </label>
+
+          <label class="flex flex-col gap-1.5">
             <span class="text-sm font-semibold text-slate-800">
-              Le site utilise-t-il Google Analytics ou des cookies tiers ?
+              Contenus tiers intégrés au site (carte, vidéo embarquée…) ?
             </span>
-            <select id="ml-cookies" class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900">
-              <option value="non">Non</option>
-              <option value="oui">Oui</option>
+            <select id="ml-cookies-tiers" class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900">
+              <option value="non">Non — uniquement des liens sortants (ex. Doctolib)</option>
+              <option value="oui">Oui — iframe ou widget affiché sur le site</option>
             </select>
           </label>
         </div>
@@ -177,9 +186,10 @@ import Layout from "../../layouts/Layout.astro";
       </div>
 
       <div class="mt-6 rounded-xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-600">
-        Pensez aussi à publier une politique de confidentialité détaillée et, si vous utilisez des
-        cookies soumis à consentement, à mettre en place un bandeau conforme aux lignes directrices
-        de la CNIL.
+        Pensez aussi à publier une <strong>politique de confidentialité</strong> détaillée (liste
+        des traceurs, durées, sous-traitants). Si des cookies soumis à consentement sont utilisés,
+        mettez en place un bandeau conforme aux lignes directrices de la CNIL et bloquez les
+        traceurs tant que l&apos;utilisateur n&apos;a pas accepté.
       </div>
     </div>
   </section>
@@ -198,7 +208,8 @@ import Layout from "../../layouts/Layout.astro";
       email: document.getElementById("ml-email"),
       hebergeur: document.getElementById("ml-hebergeur"),
       formulaire: document.getElementById("ml-formulaire"),
-      cookies: document.getElementById("ml-cookies"),
+      cookiesAudience: document.getElementById("ml-cookies-audience"),
+      cookiesTiers: document.getElementById("ml-cookies-tiers"),
     };
     const resultEl = document.getElementById("ml-resultat");
     const copyBtn = document.getElementById("ml-copier");
@@ -271,6 +282,60 @@ import Layout from "../../layouts/Layout.astro";
       },
     };
 
+    const buildCookiesParagraphs = (hebergeur, audience, embedsTiers) => {
+      const paragraphs = [
+        "Lors de votre navigation, des cookies ou autres traceurs peuvent être déposés ou lus sur votre terminal (ordinateur, tablette, smartphone). Un cookie est un petit fichier texte enregistré par votre navigateur, permettant notamment de mémoriser des préférences ou de mesurer l'audience du site.",
+        "Conformément à l'article 82 de la loi n° 78-17 du 6 janvier 1978 modifiée (loi Informatique et Libertés) et aux recommandations de la CNIL, les cookies et traceurs sont classés selon leur finalité. Seuls les cookies strictement nécessaires au fonctionnement du site peuvent être déposés sans consentement préalable.",
+        `Cookies strictement nécessaires : ils assurent le bon fonctionnement technique du site (session, sécurité, mémorisation de vos choix de consentement le cas échéant). Ils ne nécessitent pas votre accord préalable. Des journaux techniques peuvent également être traités par l'hébergeur (${hebergeur}) pour la sécurité, la disponibilité du service et la prévention des abus ; ces traitements relèvent de l'intérêt légitime et ne servent pas au suivi publicitaire.`,
+      ];
+
+      if (audience === "exemptee") {
+        paragraphs.push(
+          "Mesure d'audience : le site utilise un outil de mesure d'audience configuré pour produire des statistiques agrégées de fréquentation (pages consultées, type d'appareil, provenance approximative), dans une finalité strictement interne d'amélioration du site. Cette mesure est mise en œuvre sans cookie publicitaire ni profilage marketing, et sans finalité de suivi de votre navigation sur d'autres sites. Sous réserve de la configuration effectivement retenue, elle peut ne pas nécessiter de bandeau de consentement.",
+        );
+      } else if (audience === "consentement") {
+        paragraphs.push(
+          "Mesure d'audience soumise au consentement : le site utilise un outil de mesure d'audience déposant des cookies ou traceurs (par exemple Google Analytics). Finalité : établir des statistiques de fréquentation et comprendre l'usage du site. Base légale : votre consentement (article 82 de la loi Informatique et Libertés). Durée maximale de conservation des cookies de mesure d'audience : treize mois à compter de leur dépôt. Destinataire : l'éditeur du site et, le cas échéant, le prestataire d'analyse (par exemple Google LLC pour Google Analytics — consultez sa politique de confidentialité : policies.google.com/privacy).",
+        );
+      } else {
+        paragraphs.push(
+          "Mesure d'audience : aucun outil de mesure d'audience déposant des cookies ou traceurs soumis au consentement n'est utilisé sur le site.",
+        );
+      }
+
+      if (embedsTiers) {
+        paragraphs.push(
+          "Contenus tiers intégrés : le site affiche des contenus ou services fournis par des tiers directement dans ses pages (par exemple carte interactive, lecteur vidéo embarqué, widget de formulaire hébergé par un tiers). Lorsque vous consultez une page comportant ces éléments, le tiers concerné peut déposer des cookies ou traceurs sur votre terminal. Ces dépôts ne doivent intervenir qu'après recueil de votre consentement, sauf si le traceur relève de l'exemption « strictement nécessaire » au sens de la CNIL. Les conditions de traitement des données par ces tiers sont régies par leurs propres politiques de confidentialité.",
+        );
+      } else {
+        paragraphs.push(
+          "Contenus tiers intégrés : aucun contenu intégré au site (iframe, widget, lecteur vidéo embarqué, carte interactive) susceptible de déposer des cookies de tiers n'est présent sur les pages.",
+        );
+      }
+
+      paragraphs.push(
+        "Liens vers des sites externes : le site peut proposer des liens ou boutons renvoyant vers des plateformes tierces (par exemple Doctolib, Maiia ou tout autre service de prise de rendez-vous en ligne). Il s'agit de simples hyperliens : aucun cookie ni traceur de ces plateformes n'est déposé sur le présent site tant que vous n'avez pas cliqué sur le lien et accédé au service concerné. Une fois redirigé(e), les cookies et la politique de confidentialité du site externe s'appliquent exclusivement sur la plateforme visitée.",
+      );
+
+      const needsConsentBanner = audience === "consentement" || embedsTiers;
+      if (needsConsentBanner) {
+        paragraphs.push(
+          "Gestion du consentement : lors de votre première visite, un bandeau vous informe de la présence de cookies soumis à consentement et vous permet d'accepter, de refuser ou de paramétrer vos choix par finalité. Votre consentement est recueilli avant tout dépôt de traceur non exempté. Vous pouvez à tout moment retirer votre consentement ou modifier vos préférences via le module de gestion des cookies accessible en pied de page ou via le bandeau. La durée de validité du consentement n'excède pas treize mois ; au-delà, votre choix vous sera redemandé.",
+        );
+      } else {
+        paragraphs.push(
+          "Bandeau de consentement : dans la configuration décrite ci-dessus, aucun cookie ou traceur soumis au consentement préalable n'est déposé. Aucun bandeau de consentement n'est donc affiché. Si des outils soumis au consentement venaient à être ajoutés ultérieurement, un bandeau conforme aux lignes directrices de la CNIL devra être mis en place avant leur activation.",
+        );
+      }
+
+      paragraphs.push(
+        "Paramétrage de votre navigateur : vous pouvez à tout moment configurer votre navigateur pour accepter ou refuser les cookies, les supprimer ou être alerté(e) de leur dépôt. Le refus de certains cookies peut toutefois dégrader certaines fonctionnalités du site. Pour en savoir plus sur les cookies et les moyens de les limiter, consultez le site de la CNIL : www.cnil.fr/fr/cookies-et-autres-traceurs.",
+        "Pour une description détaillée des traceurs utilisés, de leurs finalités, de leurs durées de conservation et des sous-traitants concernés, reportez-vous à la politique de confidentialité du site, document complémentaire aux présentes mentions légales.",
+      );
+
+      return paragraphs;
+    };
+
     const buildSections = () => {
       const nom = valueOr(fields.nom, "[Nom et prénom du praticien]");
       const titreKey = fields.titre.value;
@@ -283,7 +348,8 @@ import Layout from "../../layouts/Layout.astro";
       const email = valueOr(fields.email, "[Email de contact]");
       const hebergeur = valueOr(fields.hebergeur, "[Nom et coordonnées de l'hébergeur]");
       const aFormulaire = fields.formulaire.value === "oui";
-      const aCookiesTiers = fields.cookies.value === "oui";
+      const audienceCookies = fields.cookiesAudience.value;
+      const embedsTiers = fields.cookiesTiers.value === "oui";
 
       const sections = [];
 
@@ -346,22 +412,9 @@ import Layout from "../../layouts/Layout.astro";
         paragraphes: rgpd,
       });
 
-      const cookies = [];
-      if (aCookiesTiers) {
-        cookies.push(
-          `Le site utilise des cookies et traceurs, dont des cookies de mesure d'audience (Google Analytics) et, le cas échéant, des cookies déposés par des services tiers. Conformément à l'article 82 de la loi Informatique et Libertés et aux lignes directrices de la CNIL, ces cookies ne sont déposés qu'après recueil de votre consentement, à l'exception de ceux strictement nécessaires au fonctionnement du site.`,
-          `Vous pouvez à tout moment retirer votre consentement ou modifier vos préférences via le module de gestion des cookies du site, ainsi que paramétrer votre navigateur pour refuser tout ou partie des cookies. La durée de validité du consentement n'excède pas treize mois et la durée de conservation des cookies n'excède pas treize mois à compter de leur dépôt.`,
-          `Les données de mesure d'audience peuvent être transmises à la société Google ; vous êtes invité(e) à consulter sa politique de confidentialité pour connaître les conditions de traitement de ces données.`,
-        );
-      } else {
-        cookies.push(
-          `Le site n'utilise ni Google Analytics ni cookies déposés par des tiers. Seuls peuvent être utilisés des cookies strictement nécessaires au fonctionnement technique du site, lesquels sont dispensés de consentement en application de l'article 82 de la loi Informatique et Libertés.`,
-          `Aucun dispositif de suivi publicitaire ou de profilage n'est mis en œuvre.`,
-        );
-      }
       sections.push({
-        titre: "6. Cookies",
-        paragraphes: cookies,
+        titre: "6. Cookies et traceurs",
+        paragraphes: buildCookiesParagraphs(hebergeur, audienceCookies, embedsTiers),
       });
 
       sections.push({
