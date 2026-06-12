@@ -1,7 +1,7 @@
 ---
-title: "Pourquoi Nicodev a d'abord été spécialisé pour les psychologues"
-seoTitle: "Nicodev : sites web dédiés aux psychologues libéraux"
-description: "Pourquoi j’ai d’abord spécialisé Nicodev pour les psychologues : titre protégé, cadre professionnel et expérience de psychologue développeur."
+title: "Pourquoi une spécialisation web pour les psychologues"
+seoTitle: "Sites web dédiés aux psychologues libéraux"
+description: "Pourquoi créer des sites dédiés aux psychologues : titre protégé, cadre professionnel et expérience de psychologue développeur."
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"

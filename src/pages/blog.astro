@@ -53,6 +53,20 @@ const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 					</div>
 				</nav>
 			)}
+			<aside class="mb-10 rounded-lg border border-border bg-surface p-6" aria-labelledby="blog-pages-piliers">
+				<h2 id="blog-pages-piliers" class="type-eyebrow text-muted mb-3">Pages repères</h2>
+				<p class="max-w-3xl text-base leading-relaxed text-muted">
+					Pour passer des articles à une prestation, consultez la page
+					<a href="/creation-site-internet-psychologue/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
+						création de site internet pour psychologue
+					</a>
+					ou la page
+					<a href="/referencement-site-psychologue/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
+						référencement pour psychologue
+					</a>
+					.
+				</p>
+			</aside>
 			{sortedPosts.length === 0 ? (
 				<p class="text-center text-muted py-12">Aucun article pour le moment.</p>
 			) : (

@@ -33,8 +33,8 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Nicolas Devaux',
-  jobTitle: 'Psychologue et développeur web',
-  description: 'Psychologue à Sceaux, psychomotricien et développeur web, je crée des sites internet sur mesure pour psychologues et professionnels du soin.',
+  jobTitle: 'Fondateur de Nicodev et développeur web',
+  description: 'Fondateur de Nicodev, développeur web spécialisé dans les sites sobres pour psychologues et professionnels du soin.',
   url: aboutUrl,
   image: new URL(developmentImage.src, baseUrl).toString(),
   knowsAbout: ['développement web', 'sites internet pour psychologues', 'psychomotricité', 'SEO', 'performance web'],
@@ -57,8 +57,8 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
 ---
 
 <Layout
-  title="À propos de Nicodev — Sites web pour professionnels du soin"
-  description="Psychologue, psychomotricien et développeur web, j’aide les professionnels du soin à créer des sites sobres, clairs et visibles localement."
+  title="À propos de Nicodev — Nicolas Devaux, développeur web"
+  description="Parcours de Nicolas Devaux, fondateur de Nicodev : développeur web spécialisé dans les sites sobres pour psychologues et professions du soin."
   image={defaultOgWebp}
 >
   <Fragment slot="head">
@@ -72,8 +72,8 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
     />
   </Fragment>
   <Hero
-    title="Pourquoi Nicodev ?"
-    subtitle="Psychologue et développeur web — je construis des sites sobres et humains, au service de la rencontre."
+    title="À propos de Nicodev"
+    subtitle="Nicolas Devaux, développeur web — je construis des sites sobres et humains pour les psychologues et professions du soin."
     breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]}
   />
 
@@ -103,7 +103,7 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
     <div class="shell-layout">
       <header class="mx-auto mb-10 max-w-3xl text-center">
         <p class="type-eyebrow mb-3 text-primary-700">Parcours</p>
-        <h2 class="text-3xl font-bold text-foreground md:text-4xl">Mon parcours</h2>
+        <h2 class="text-3xl font-bold text-foreground md:text-4xl">Le parcours derrière Nicodev</h2>
       </header>
 
       <div
@@ -128,18 +128,18 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
           </p>
           <p>
             En 2024, des événements de vie ont changé mes priorités. J’ai quitté mon poste de
-            tech lead pour retrouver la clinique à plein temps. J’exerce aujourd’hui comme{' '}
+            tech lead pour réorganiser mon activité. Mon activité de psychologue libéral à Sceaux est présentée sur un site séparé&nbsp;:{' '}
             <a
               href="https://nicolas-devaux-psychologue.fr"
               target="_blank"
               rel="noopener noreferrer"
-              >psychologue libéral à Sceaux</a
-            >, dans un service de santé étudiante, et je mets mon expérience web au service de
-            confrères et consœurs.
+              >nicolas-devaux-psychologue.fr</a
+            >. Sur Nicodev, je mets mon expérience web au service de
+            collègues psychologues, psychomotriciens et professions du soin proches.
           </p>
           <p>
-            Un site pour un psychologue n’est pas une vitrine commerciale. C’est une invitation
-            — la première étape d’une rencontre possible. Il doit être lisible, sobre, et dégager
+            Un <a href="/creation-site-internet-psychologue/">site pour un psychologue</a> n’est pas une vitrine commerciale.
+            C’est une invitation — la première étape d’une rencontre possible. Il doit être lisible, sobre, et dégager
             quelque chose de juste.
           </p>
           <p>
@@ -165,8 +165,7 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
       </div>
 
       <p class="mx-auto mt-10 max-w-5xl rounded-lg border border-primary-200 bg-primary-50 px-6 py-4 text-center text-muted sm:px-8">
-        Vous cherchez mon activité de psychologue clinicien à Sceaux ? Retrouvez mon site
-        professionnel ici :{' '}
+        Vous cherchez mon activité clinique de psychologue à Sceaux ? Elle est volontairement séparée de Nicodev et présentée ici :{' '}
         <a
           href="https://nicolas-devaux-psychologue.fr"
           target="_blank"
@@ -220,11 +219,11 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
 
       <div class="mx-auto max-w-3xl space-y-10">
         <p class="text-lg leading-relaxed text-foreground">
-          Vingt ans partagés entre le cabinet et l&apos;écran.{' '}
+          Vingt ans partagés entre le soin et l&apos;écran.{' '}
           <span class="font-heading font-semibold">De 1996 à 2020</span>, j&apos;ai exercé comme
           psychomotricien puis psychologue, en institution et en cabinet libéral. Cette expérience
-          clinique informe directement ma façon de concevoir vos sites : je sais ce que ressent
-          une personne qui cherche un psychologue en ligne.
+          professionnelle informe directement ma façon de concevoir des sites pour cabinets : je connais
+          le cadre, les mots à manier avec prudence et l&apos;importance d&apos;une présence en ligne sobre.
         </p>
 
         <div
