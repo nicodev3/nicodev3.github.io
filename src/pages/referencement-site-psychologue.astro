@@ -15,6 +15,30 @@ const faqSchema = {
 	mainEntity: [
 		{
 			'@type': 'Question',
+			name: "Comment améliorer le référencement d'un site de psychologue ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Commencez par un site rapide et bien structuré (titres, pages clés, contenu local), une fiche Google Business Profile complète et des informations identiques partout (nom, adresse, téléphone). Ensuite, publiez des contenus utiles avec régularité et évitez les pages dupliquées par ville.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Faut-il un blog pour référencer un site psychologue ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Ce n'est pas obligatoire pour démarrer, mais un blog aide à couvrir des recherches locales et des questions fréquentes (installation, visibilité, fiche Google). L'essentiel reste la qualité et la cohérence, pas la quantité.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: "Combien coûte le référencement d'un site psychologue ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Les fondations SEO sont incluses dans la création de site (dès 29 EUR/mois). Un accompagnement renforcé — fiche Google, contenus réguliers, suivi — correspond à l'offre Visibilité & Confiance à 49 EUR/mois. Méfiez-vous des forfaits SEO opaques vendus en sus sans périmètre clair.",
+			},
+		},
+		{
+			'@type': 'Question',
 			name: "Comment améliorer le référencement d'un psychologue ?",
 			acceptedAnswer: {
 				'@type': 'Answer',
@@ -91,9 +115,9 @@ const faqSchema = {
 const serviceSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
-	name: 'Référencement naturel et local pour site de psychologue',
+	name: 'Référencement site psychologue — SEO local et visibilité Google',
 	description:
-		'Optimisation SEO et référencement local pour sites de psychologues : structure, technique, Google Business Profile et attentes réalistes.',
+		'Référencement site psychologue : optimisation SEO, structure technique, Google Business Profile et attentes réalistes pour les cabinets libéraux.',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -120,8 +144,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Référencement psychologue : être visible sur Google dans sa ville"
-	description="Référencement pour psychologue : améliorez votre visibilité locale sur Google grâce à un site clair, une fiche Google Business Profile optimisée et une stratégie SEO adaptée."
+	title="Référencement site psychologue : SEO local et visibilité Google"
+	description="Référencement site psychologue : améliorez votre visibilité locale sur Google grâce à un site clair, une fiche Google Business Profile optimisée et une stratégie SEO adaptée au cabinet libéral."
 	image={refOgWebp}
 >
 	<Fragment slot="head">
@@ -131,8 +155,8 @@ const breadcrumbSchema = {
 	</Fragment>
 
 	<Hero
-		title="Référencement pour psychologue : améliorer sa visibilité locale"
-		subtitle="Les bases techniques et éditoriales pour être mieux compris par Google et trouvé dans sa ville — sans promesses miraculeuses sur les classements."
+		title="Référencement site psychologue : améliorer sa visibilité locale"
+		subtitle="Les bases techniques et éditoriales pour référencer un site de psychologue sur Google — sans promesses miraculeuses sur les classements."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Référencement site psychologue' }]}
 	/>
 
@@ -161,7 +185,32 @@ const breadcrumbSchema = {
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">
 			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
-				<h2>« Référencement psychologue » : que cherchez-vous vraiment&nbsp;?</h2>
+				<p>
+					Vous cherchez comment améliorer le <strong>référencement de votre site psychologue</strong>&nbsp;?
+					Cette page détaille ce que je mets en place concrètement&nbsp;: structure technique, contenu local,
+					fiche Google Business Profile et attentes réalistes — pour être trouvé par les bonnes recherches,
+					sans promesse de «&nbsp;première position&nbsp;» permanente.
+				</p>
+
+				<h2>Référencement site psychologue&nbsp;: par où commencer&nbsp;?</h2>
+				<p>
+					Avant d’ajouter des pages ou de payer une prestation SEO opaque, vérifiez ces dix points. C’est souvent
+					là que se jouent les premiers gains de visibilité.
+				</p>
+				<ol>
+					<li><strong>Site rapide sur mobile</strong> — temps de chargement stable, textes lisibles, boutons contact accessibles.</li>
+					<li><strong>Une page par intention réelle</strong> — accueil, approche, informations pratiques, contact&nbsp;; une page par spécialité seulement si le contenu est distinct.</li>
+					<li><strong>Titres et descriptions uniques</strong> — chaque page a son titre, sa meta description et un seul H1 clair.</li>
+					<li><strong>Informations locales visibles</strong> — ville, secteur, modalités (cabinet, téléconsultation), sans bourrage de mots-clés.</li>
+					<li><strong>Fiche Google Business Profile complète</strong> — catégorie, horaires, téléphone, zone, photos sobres, lien vers le site.</li>
+					<li><strong>Cohérence NAP</strong> — nom, adresse et téléphone identiques sur le site, la fiche Google, Doctolib et les annuaires.</li>
+					<li><strong>Maillage interne</strong> — liens entre accueil, pages clés, articles de blog et page contact.</li>
+					<li><strong>Données structurées</strong> — balisage JSON-LD (service, fil d’Ariane, FAQ) pour aider Google à comprendre le site.</li>
+					<li><strong>Contenus utiles et réguliers</strong> — articles qui répondent aux vraies questions des patients (installation, visibilité, fiche Google).</li>
+					<li><strong>Suivi des contacts, pas seulement des positions</strong> — appels, formulaires, clics d’itinéraire&nbsp;: c’est ce qui compte pour votre cabinet.</li>
+				</ol>
+
+				<h2>«&nbsp;Référencement psychologue&nbsp;»&nbsp;: que cherchez-vous vraiment&nbsp;?</h2>
 				<p>
 					Beaucoup de requêtes regroupent tout sous <strong>référencement psychologue</strong> ou <strong>site psychologue SEO</strong>. En pratique, il y a deux volets&nbsp;: votre{' '}
 					<strong>site</strong> (contenu, structure, performance) et votre présence dans les résultats locaux (notamment via{' '}
@@ -180,6 +229,21 @@ const breadcrumbSchema = {
 					La recherche sur votre nom est tout aussi importante&nbsp;: un patient qui a entendu parler de vous vérifie
 					presque toujours en ligne avant d’appeler. Si Google ne renvoie qu’un annuaire incomplet, vous perdez la main
 					sur cette première impression. L’article <a href="/blog/comment-trouver-premiers-patients-psychologue/">trouver ses premiers patients</a> détaille ces parcours de recherche.
+				</p>
+
+				<h2>Pourquoi confier le référencement à un psychologue-développeur&nbsp;?</h2>
+				<p>
+					La plupart des offres «&nbsp;SEO psychologue&nbsp;» viennent d’agences généralistes qui ne connaissent ni le
+					cadre déontologique ni les attentes des patients en consultation. Ma position est différente&nbsp;: je suis{' '}
+					<a href="/about/">psychologue, psychomotricien et développeur web</a>. Je comprends ce qu’un cabinet doit
+					dire (et ne pas dire), et je prends en charge la technique — structure, performance, données structurées,
+					cohérence avec la fiche Google.
+				</p>
+				<p>
+					Des confrères que j’accompagne le confirment&nbsp;: un site performant, un{' '}
+					<strong>référencement au top</strong> et une collaboration patiente sur les contenus. Voir les{' '}
+					<a href="/tarifs/">témoignages sur la page tarifs</a> ou le <a href="/portfolio/">portfolio</a> pour des
+					exemples concrets de sites livrés.
 				</p>
 
 				<h2>Ce que j’optimise côté site</h2>
@@ -215,12 +279,49 @@ const breadcrumbSchema = {
 					Lors d’une refonte ou d’un déménagement, mettez à jour <em>tout</em> en même temps. Le guide <a href="/blog/refonte-site-internet/">Refonte de site internet pour psychologue et psychomotricien</a> aide à cadrer les priorités du site&nbsp;; l’article <a href="/blog/google-business-profile-psychologue/">Google Business Profile pour psychologue</a> détaille la fiche&nbsp;; le <a href="/blog/guide-complet-visibilite-en-ligne-psychologues/">guide pilier visibilité en ligne</a> relie fiche, site, avis et contenu dans un plan d’ensemble.
 				</p>
 
-				<h2>Site seul, fiche seule&nbsp;: pourquoi les deux</h2>
+				<h2>Site seul, fiche seule&nbsp;: pourquoi les deux&nbsp;?</h2>
 				<p>
 					La fiche Google capte souvent les recherches «&nbsp;psychologue + ville&nbsp;» très tôt&nbsp;; le site convertit celles qui veulent comprendre votre approche avant de réserver. Un site élaboré sans fiche complète laisse du trafic local sur la table&nbsp;; une fiche soignée sans site crédible envoie parfois vers des concurrents mieux présentés. L’article <a href="/blog/site-internet-psychologue-doctolib/">Site internet vs Doctolib</a> aide à arbitrer sans opposer les outils.
 				</p>
+
+				<div class="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+					<table class="w-full min-w-[36rem] border-collapse text-left text-sm">
+						<caption class="sr-only">
+							Comparaison entre site internet seul, fiche Google seule et les deux combinés pour le référencement d'un cabinet de psychologue
+						</caption>
+						<thead class="border-b border-border bg-surface-alt">
+							<tr>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Canal</th>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Ce qu'il capte</th>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Limite</th>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Recommandation</th>
+							</tr>
+						</thead>
+						<tbody class="divide-y divide-border">
+							<tr>
+								<td class="p-4 font-medium text-foreground">Fiche Google seule</td>
+								<td class="p-4 text-muted">Recherches locales «&nbsp;psychologue + ville&nbsp;», appels, itinéraire</td>
+								<td class="p-4 text-muted">Peu de place pour expliquer l'approche, le cadre, les spécialités</td>
+								<td class="p-4 text-muted">Utile en démarrage, insuffisant seul à moyen terme</td>
+							</tr>
+							<tr>
+								<td class="p-4 font-medium text-foreground">Site seul</td>
+								<td class="p-4 text-muted">Recherche sur votre nom, contenus, crédibilité avant contact</td>
+								<td class="p-4 text-muted">Moins visible sur la carte Google sans fiche complète</td>
+								<td class="p-4 text-muted">Bon pour la conversion, faible pour la découverte locale</td>
+							</tr>
+							<tr>
+								<td class="p-4 font-medium text-foreground">Site + fiche Google</td>
+								<td class="p-4 text-muted">Découverte locale ET conviction avant rendez-vous</td>
+								<td class="p-4 text-muted">Demande cohérence NAP et régularité sur les contenus</td>
+								<td class="p-4 text-muted"><strong class="text-foreground">Combinaison la plus solide</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
 				<p>
-					Si vous n’avez pas encore de site, la page <a href="/creation-site-internet-psychologue/">création de site internet pour psychologue</a> décrit ce qui est inclus (structure, hébergement, widget RDV, bases SEO). Le diagnostic gratuit permet de prioriser fiche, site ou les deux selon votre situation.
+					Si vous n’avez pas encore de site, la page <a href="/creation-site-internet-psychologue/">création de site internet pour psychologue</a> décrit ce qui est inclus (structure, hébergement, widget RDV, bases SEO). Le <a href="/diagnostic-gratuit/">diagnostic gratuit</a> permet de prioriser fiche, site ou les deux selon votre situation.
 				</p>
 
 				<h2>Avis Google et e-réputation&nbsp;: un levier à manier avec prudence</h2>
@@ -230,6 +331,31 @@ const breadcrumbSchema = {
 					avis comme un restaurant, et on ne répond jamais en confirmant qu’une personne est suivie. L’article{' '}
 					<a href="/blog/avis-google-e-reputation-psychologue/">avis Google et e-réputation du psychologue</a> pose les
 					repères éthiques pour gérer sa fiche sans faute.
+				</p>
+
+				<h2>Erreurs fréquentes sur le référencement d’un site psychologue</h2>
+				<ul>
+					<li><strong>Pages par ville dupliquées</strong> — «&nbsp;psychologue Lyon&nbsp;», «&nbsp;psychologue Villeurbanne&nbsp;» avec le même texte&nbsp;: Google les ignore et les patients s’y perdent.</li>
+					<li><strong>NAP incohérent</strong> — adresse ou téléphone différent entre site, fiche Google et Doctolib.</li>
+					<li><strong>Promesses SEO irréalistes</strong> — «&nbsp;premier sur Google garanti&nbsp;»&nbsp;: voir <a href="/blog/site-internet-psychologue-promesses-trop-belles/">les promesses trop belles</a>.</li>
+					<li><strong>Site lent ou illisible sur mobile</strong> — images lourdes, textes trop petits, formulaire de contact difficile à trouver.</li>
+					<li><strong>Contenu trop générique</strong> — textes interchangeables qui ne disent rien de votre approche ni de votre zone d’exercice.</li>
+					<li><strong>Fiche Google négligée</strong> — catégorie floue, pas de photos, horaires incomplets, aucun lien vers le site.</li>
+					<li><strong>Avis mal gérés</strong> — sollicitation insistante ou réponses qui confirment une prise en charge&nbsp;: voir <a href="/blog/avis-google-e-reputation-psychologue/">avis Google et e-réputation</a>.</li>
+				</ul>
+
+				<h2>Combien coûte le référencement d’un site psychologue&nbsp;?</h2>
+				<p>
+					Le <strong>référencement site psychologue</strong> n’est pas un supplément opaque ajouté après coup. Les fondations
+					SEO — titres, descriptions, structure, performances mobiles, sitemap, données structurées — sont incluses
+					dans la <a href="/creation-site-internet-psychologue/">création de site</a>, dès <strong>29&nbsp;EUR/mois</strong>{' '}
+					(offre Sérénité).
+				</p>
+				<p>
+					Pour aller plus loin — fiche Google Business Profile, contenus réguliers, suivi mensuel, modernisation annuelle
+					— l’offre <a href="/tarifs/">Visibilité &amp; Confiance à 49&nbsp;EUR/mois</a> couvre un accompagnement plus
+					complet. Méfiez-vous des forfaits «&nbsp;SEO&nbsp;» vendus en sus sans périmètre clair&nbsp;: un bon{' '}
+					<a href="/blog/combien-coute-site-internet-2026/">budget site psychologue</a> doit rester lisible.
 				</p>
 
 				<h2>Délais et attentes réalistes</h2>
@@ -246,6 +372,9 @@ const breadcrumbSchema = {
 				</p>
 
 				<h2>Questions fréquentes</h2>
+				<p><strong>Comment améliorer le référencement d’un site de psychologue&nbsp;?</strong> Commencez par un site rapide et bien structuré, une fiche Google complète et des informations identiques partout (nom, adresse, téléphone). Puis publiez des contenus utiles avec régularité, sans multiplier des pages par ville quasi identiques.</p>
+				<p><strong>Faut-il un blog pour référencer un site psychologue&nbsp;?</strong> Ce n’est pas obligatoire pour démarrer, mais un blog aide à couvrir des recherches locales et des questions fréquentes. L’essentiel reste la qualité et la cohérence, pas la quantité — voir l’offre <a href="/tarifs/">Visibilité &amp; Confiance</a> si vous voulez un accompagnement éditorial.</p>
+				<p><strong>Combien coûte le référencement d’un site psychologue&nbsp;?</strong> Les bases SEO sont incluses dès 29&nbsp;EUR/mois. L’accompagnement renforcé (fiche Google, contenus, suivi) correspond à 49&nbsp;EUR/mois. Pas de forfait SEO opaque en sus.</p>
 				<p><strong>Comment améliorer le référencement d’un psychologue&nbsp;?</strong> En travaillant trois piliers cohérents&nbsp;: un site clair et rapide, une fiche Google Business Profile complète, et des informations identiques partout (nom, adresse, téléphone). La régularité compte plus que les astuces.</p>
 				<p><strong>Une fiche Google Business Profile suffit-elle&nbsp;?</strong> Elle capte une partie des recherches locales, mais sans site les patients qui veulent comprendre votre approche avant d’appeler n’ont nulle part où aller. Fiche et site se renforcent mutuellement.</p>
 				<p><strong>Faut-il créer des pages par ville ou par spécialité&nbsp;?</strong> Une page par spécialité réelle peut être utile si elle apporte un vrai contenu. Multiplier des pages par ville quasi identiques est contre-productif&nbsp;: contenu dupliqué pour Google, confusion pour les patients.</p>
