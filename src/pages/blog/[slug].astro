@@ -120,6 +120,22 @@ const guideClusterItemListSchema =
 				})),
 			}
 		: null;
+
+const faqSchema =
+	entry.data.faq && entry.data.faq.length > 0
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'FAQPage',
+				mainEntity: entry.data.faq.map(({ question, answer }) => ({
+					'@type': 'Question',
+					name: question,
+					acceptedAnswer: {
+						'@type': 'Answer',
+						text: answer,
+					},
+				})),
+			}
+		: null;
 ---
 
 <Layout 
@@ -137,6 +153,7 @@ const guideClusterItemListSchema =
 		{guideClusterItemListSchema && (
 			<script type="application/ld+json" set:html={JSON.stringify(guideClusterItemListSchema)} />
 		)}
+		{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 	</Fragment>
 	<Hero 
 		title={entry.data.title} 

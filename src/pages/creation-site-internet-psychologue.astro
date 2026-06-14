@@ -16,6 +16,38 @@ const faqSchema = {
 	mainEntity: [
 		{
 			'@type': 'Question',
+			name: "Combien coûte la création d'un site internet pour psychologue ?",
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute fiche Google, contenus réguliers et suivi SEO local.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Création site web psychologue : que comprend la prestation ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Structure de pages adaptée au cabinet, rédaction guidée à partir de vos réponses, design sobre, intégration Doctolib ou équivalent, bases SEO, hébergement, nom de domaine et mises à jour inclus dans l'abonnement.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Faut-il un site internet si on est thérapeute (psychologue, psychothérapeute) ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "Un site internet thérapeute permet de présenter votre approche avec vos mots, en dehors des annuaires et plateformes. Il complète Doctolib ou votre agenda en ligne et rassure les patients avant le premier contact.",
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Combien de temps faut-il pour créer un site de psychologue ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "En général deux à trois semaines entre le premier échange et la mise en ligne, selon la rapidité avec laquelle vous complétez le formulaire de contenu.",
+			},
+		},
+		{
+			'@type': 'Question',
 			name: 'Pourquoi créer un site internet quand on est psychologue ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
@@ -92,9 +124,9 @@ const faqSchema = {
 const serviceSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
-	name: 'Création de site internet pour psychologue',
+	name: 'Création site internet psychologue — site vitrine sur mesure',
 	description:
-		'Création de site web vitrine sur mesure pour psychologues : structure claire, ton professionnel, mobile, prise de rendez-vous intégrée.',
+		'Création de site internet et site web pour psychologue : structure claire, contenu guidé, design sobre, prise de rendez-vous intégrée, hébergement et bases SEO inclus.',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -121,8 +153,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Création de site internet pour psychologue | Site vitrine + SEO"
-	description="Création de site internet pour psychologue : un site clair, professionnel et optimisé pour présenter votre pratique, rassurer les patients et améliorer votre visibilité locale."
+	title="Création site internet psychologue : site vitrine sur mesure"
+	description="Création site internet psychologue et site web pour thérapeute : site clair, professionnel, optimisé pour présenter votre pratique, rassurer les patients et améliorer votre visibilité locale."
 	image={psychologueImage}
 >
 	<Fragment slot="head">
@@ -132,9 +164,9 @@ const breadcrumbSchema = {
 	</Fragment>
 
 	<Hero
-		title="Création de site internet pour psychologue"
-		subtitle="Site vitrine sur mesure : présenter votre pratique, rassurer vos futurs patients et les orienter vers la prise de contact ou le rendez-vous en ligne. Une seule personne — psychologue et développeur web."
-		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création site psychologue' }]}
+		title="Création site internet psychologue : site vitrine sur mesure"
+		subtitle="Création de site web pour psychologue et thérapeute : présenter votre pratique, rassurer vos futurs patients et les orienter vers la prise de contact ou le rendez-vous en ligne. Psychologue et développeur web."
+		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création site internet psychologue' }]}
 		coverImage={psychologueImage}
 		coverImageAlt="Exemple de site sobre pour une psychologue en libéral"
 	/>
@@ -164,12 +196,67 @@ const breadcrumbSchema = {
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">
 			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
+				<p>
+					Vous cherchez un accompagnement pour la <strong>création de votre site internet psychologue</strong>&nbsp;?
+					Cette page détaille ce que comprend la prestation&nbsp;: structure, contenu guidé, design sobre,
+					intégration de votre outil de rendez-vous, hébergement et bases SEO — pour un site que vous contrôlez,
+					sans promesse de «&nbsp;premier sur Google&nbsp;».
+				</p>
+
+				<blockquote>
+					<p><strong>En bref — création site internet psychologue</strong></p>
+					<ul>
+						<li><strong>Offre Sérénité</strong>&nbsp;: 29&nbsp;EUR/mois — site vitrine, hébergement, domaine, maintenance</li>
+						<li><strong>Offre Visibilité &amp; Confiance</strong>&nbsp;: 49&nbsp;EUR/mois — + fiche Google, contenus, suivi SEO</li>
+						<li><strong>Délai</strong>&nbsp;: 2 à 3 semaines en moyenne</li>
+						<li><strong>Contenu</strong>&nbsp;: formulaire guidé, pas de rédaction seul·e obligatoire</li>
+						<li><strong>Spécialisation</strong>&nbsp;: psychologue-développeur, cadre déontologique intégré</li>
+					</ul>
+				</blockquote>
+
+				<h2>Création site internet psychologue&nbsp;: les 7 piliers d&apos;un site qui convertit</h2>
+				<p>
+					Avant de comparer les offres du marché, voici ce qui fait la différence entre un site «&nbsp;qui existe&nbsp;»
+					et un site qui aide réellement un cabinet à se présenter et à générer des contacts.
+				</p>
+				<ol>
+					<li><strong>Message clair dès l&apos;accueil</strong> — qui vous êtes, où vous exercez, pour quels publics.</li>
+					<li><strong>Pages essentielles bien structurées</strong> — approche, consultations, informations pratiques, contact.</li>
+					<li><strong>Ton professionnel et sobre</strong> — informatif, conforme au cadre déontologique, sans sur-promesse.</li>
+					<li><strong>Parcours court vers le contact</strong> — téléphone, formulaire ou widget RDV visible sur mobile.</li>
+					<li><strong>Bases SEO livrées</strong> — titres, descriptions, performances, données structurées, sitemap.</li>
+					<li><strong>Cohérence avec la fiche Google</strong> — même nom, adresse, téléphone (NAP) entre site et fiche.</li>
+					<li><strong>Maintenance incluse</strong> — hébergement, mises à jour, petites modifications sans gérer la technique.</li>
+				</ol>
+
+				<h2>Pourquoi confier la création à un psychologue-développeur&nbsp;?</h2>
+				<p>
+					La <strong>création site web psychologue</strong> par une agence généraliste pose souvent le même problème&nbsp;:
+					il faut tout réexpliquer (cadre clinique, déontologie, ton attendu, ce qu&apos;on peut dire ou non).
+					En tant que <a href="/about/">psychologue, psychomotricien et développeur web</a>, je connais ces contraintes
+					d&apos;emblée — et je prends en charge la technique (structure, performance, SEO, hébergement).
+				</p>
+				<p>
+					Des confrères accompagnés le confirment dans les <a href="/tarifs/">témoignages</a>&nbsp;: site performant,
+					formulation juste, collaboration patiente. Voir aussi le <a href="/portfolio/">portfolio</a> et les{' '}
+					<a href="/exemples-sites-psychologue/">exemples de sites pour psychologues</a>.
+				</p>
+
 				<h2>Site web, site internet, site vitrine&nbsp;: même besoin</h2>
 				<p>
 					Les recherches <strong>site web psychologue</strong>, <strong>site internet thérapeute</strong> ou <strong>création site psychologue</strong> désignent en pratique la même attente&nbsp;: un lieu stable où vous contrôlez le message — approche, publics accompagnés, honoraires, accès au cabinet ou téléconsultation — alors que les annuaires et plateformes imposent leur mise en forme.
 				</p>
 				<p>
 					Doctolib, Qare ou Maiia facilitent la prise de rendez-vous&nbsp;; ils ne remplacent pas un site qui explique <em>qui vous êtes</em> cliniquement et qui vous rend visible sur votre nom ou vos spécialités. Le <a href="/blog/site-internet-psychologue-doctolib/">comparatif site vs Doctolib</a> du blog détaille cette articulation&nbsp;; le <a href="/blog/guide-complet-visibilite-en-ligne-psychologues/">guide complet de la visibilité en ligne</a> pose le cadre global (fiche Google, SEO local, contenu).
+				</p>
+
+				<h2>Création site internet thérapeute&nbsp;: psychologue, psychothérapeute, autre praticien</h2>
+				<p>
+					Les recherches <strong>création site internet thérapeute</strong> ou <strong>site internet thérapeute</strong> recouvrent souvent le même besoin que pour un psychologue&nbsp;: un site vitrine sobre, conforme au cadre professionnel, qui présente l&apos;approche et les modalités pratiques.
+					Nicodev a été pensé d&apos;abord pour les <strong>psychologues en libéral</strong>&nbsp;; pour d&apos;autres professions du soin proches (orthophoniste, ergothérapeute, neuropsychologue), on vérifie ensemble la faisabilité via la page <a href="/contact/">contact</a>.
+				</p>
+				<p>
+					La différence entre «&nbsp;psychologue&nbsp;» et «&nbsp;thérapeute&nbsp;» dans les recherches Google reflète surtout la façon dont les patients formulent leur besoin — pas un type de site différent. L&apos;enjeu reste le même&nbsp;: un message clair, un parcours court vers le contact, des bases SEO livrées.
 				</p>
 
 				<h2>Ce que je fais pour vous</h2>
@@ -203,12 +290,63 @@ const breadcrumbSchema = {
 					court vers le contact font la différence — bien plus qu’un design spectaculaire.
 				</p>
 
-				<h2>Faire soi-même, IA, offres « trop belles »&nbsp;: comparer avant de choisir</h2>
+				<h2>Faire soi-même, plateforme clé en main ou accompagnement sur mesure&nbsp;?</h2>
 				<p>
 					Avant de vous engager, il est sain de comparer les options&nbsp;: <a href="/blog/faire-son-site-soi-meme-psychologue/">faire son site soi-même</a>,{' '}
-					<a href="/blog/creer-site-avec-ia-psychologue/">le créer avec l’IA</a>, ou passer par un prestataire — en gardant un œil critique sur{' '}
-					<a href="/blog/site-internet-psychologue-promesses-trop-belles/">les promesses trop belles de certaines offres</a>. Côté budget, l’article{' '}
-					<a href="/blog/combien-coute-site-internet-2026/">combien coûte un site internet pour psychologue en 2026</a> donne des fourchettes réalistes.
+					<a href="/blog/creer-site-avec-ia-psychologue/">le créer avec l&apos;IA</a>, passer par une plateforme spécialisée ou un accompagnement personnalisé — en gardant un œil critique sur{' '}
+					<a href="/blog/site-internet-psychologue-promesses-trop-belles/">les promesses trop belles de certaines offres</a>.
+				</p>
+
+				<div class="not-prose my-8 overflow-x-auto rounded-xl border border-border">
+					<table class="w-full min-w-[36rem] border-collapse text-left text-sm">
+						<caption class="sr-only">
+							Comparaison entre faire soi-même, plateforme clé en main et accompagnement Nicodev pour la création d'un site internet psychologue
+						</caption>
+						<thead class="border-b border-border bg-surface-alt">
+							<tr>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Option</th>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Avantages</th>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Limites</th>
+								<th scope="col" class="type-label-mono p-4 text-foreground">Pour qui</th>
+							</tr>
+						</thead>
+						<tbody class="divide-y divide-border">
+							<tr>
+								<td class="p-4 font-medium text-foreground">Faire soi-même (Wix, WordPress…)</td>
+								<td class="p-4 text-muted">Coût initial faible, contrôle total</td>
+								<td class="p-4 text-muted">Temps, technique, SEO, maintenance, ton parfois inadapté au métier</td>
+								<td class="p-4 text-muted">Si vous aimez la technique et du temps à y consacrer</td>
+							</tr>
+							<tr>
+								<td class="p-4 font-medium text-foreground">Plateforme spécialisée (Visipsy, Psy-Site…)</td>
+								<td class="p-4 text-muted">Modèles prêts, mise en ligne rapide</td>
+								<td class="p-4 text-muted">Moins de personnalisation, contenus parfois génériques, dépendance à la plateforme</td>
+								<td class="p-4 text-muted">Si vous voulez aller vite avec un modèle existant</td>
+							</tr>
+							<tr>
+								<td class="p-4 font-medium text-foreground">Nicodev (psychologue-développeur)</td>
+								<td class="p-4 text-muted">Cadre clinique intégré, contenu guidé, technique prise en charge, maintenance incluse</td>
+								<td class="p-4 text-muted">Abonnement mensuel, délai de 2 à 3 semaines</td>
+								<td class="p-4 text-muted"><strong class="text-foreground">Si vous préférez vous concentrer sur la clinique</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<p>
+					Côté budget, l&apos;article <a href="/blog/combien-coute-site-internet-2026/">combien coûte un site internet pour psychologue en 2026</a> donne des fourchettes réalistes pour comparer avec les offres du marché.
+				</p>
+
+				<h2>Combien coûte la création d&apos;un site internet pour psychologue&nbsp;?</h2>
+				<p>
+					La <strong>création site internet psychologue</strong> chez Nicodev fonctionne par <strong>abonnement mensuel tout inclus</strong>&nbsp;— pas de devis opaque ni de facture de maintenance surprise six mois plus tard.
+				</p>
+				<ul>
+					<li><strong>Offre Sérénité — 29&nbsp;EUR/mois</strong>&nbsp;: création du site, hébergement, nom de domaine, mises à jour, support. Idéal si vous avez déjà une fiche Google soignée ou si vous démarrez avec un site sobre.</li>
+					<li><strong>Offre Visibilité &amp; Confiance — 49&nbsp;EUR/mois</strong>&nbsp;: tout ce qui précède + fiche Google Business Profile, contenus réguliers, suivi SEO local. Pour aller plus loin sur la <a href="/referencement-site-psychologue/">visibilité Google</a>.</li>
+				</ul>
+				<p>
+					Pas de frais de création en plus de l&apos;abonnement. Détail complet sur la page <a href="/tarifs/">Tarifs</a> et dans l&apos;article <a href="/blog/combien-coute-site-internet-2026/">combien coûte un site en 2026</a>.
 				</p>
 
 				<h2>Déroulement typique</h2>
@@ -239,6 +377,10 @@ const breadcrumbSchema = {
 				</p>
 
 				<h2>Questions fréquentes</h2>
+				<p><strong>Combien coûte la création d&apos;un site internet pour psychologue&nbsp;?</strong> Abonnement tout inclus dès 29&nbsp;EUR/mois (Sérénité) ou 49&nbsp;EUR/mois (Visibilité &amp; Confiance avec fiche Google et SEO). Détail sur <a href="/tarifs/">Tarifs</a>.</p>
+				<p><strong>Création site web psychologue&nbsp;: que comprend la prestation&nbsp;?</strong> Arborescence adaptée, contenu guidé, design sobre, intégration RDV, hébergement, domaine, bases SEO et maintenance — le tout dans l&apos;abonnement.</p>
+				<p><strong>Faut-il un site internet si on est thérapeute&nbsp;?</strong> Oui si vous voulez présenter votre approche avec vos mots, en dehors des annuaires. Le site complète Doctolib ou votre agenda en ligne.</p>
+				<p><strong>Combien de temps pour créer un site de psychologue&nbsp;?</strong> En général 2 à 3 semaines entre le premier échange et la mise en ligne, selon vos disponibilités pour compléter le formulaire.</p>
 				<p><strong>Pourquoi créer un site internet quand on est psychologue&nbsp;?</strong> Pour disposer d’un espace que vous contrôlez&nbsp;: votre approche, vos publics, vos honoraires, vos modalités. Les annuaires imposent leur format&nbsp;; un site professionnel de psychologue rassure les patients avant le premier contact et soutient votre visibilité locale.</p>
 				<p><strong>Un site internet peut-il aider à trouver des patients&nbsp;?</strong> Oui, indirectement&nbsp;: un site cohérent avec votre fiche Google Business Profile améliore vos chances d’être trouvé localement, et surtout il transforme les visites en prises de contact. Aucune position Google ne peut en revanche être garantie.</p>
 				<p><strong>Faut-il un site si j’ai déjà Doctolib&nbsp;?</strong> Les deux jouent des rôles complémentaires&nbsp;: Doctolib réserve, le site explique et rassure. Voir le <a href="/blog/site-internet-psychologue-doctolib/">comparatif site internet vs Doctolib</a>.</p>

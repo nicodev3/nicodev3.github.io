@@ -24,6 +24,15 @@ const blog = defineCollection({
       guidePillarHub: z.boolean().optional(),
       /** Masque le sommaire automatique (h2) généré sur la page article. */
       hideArticleToc: z.boolean().optional(),
+      /** Questions/réponses pour le schéma FAQPage (réponses en texte brut, sans Markdown). */
+      faq: z
+        .array(
+          z.object({
+            question: z.string(),
+            answer: z.string(),
+          }),
+        )
+        .optional(),
     }),
 });
 

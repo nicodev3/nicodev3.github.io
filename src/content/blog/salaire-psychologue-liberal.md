@@ -1,22 +1,86 @@
 ---
 title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
-seoTitle: "Salaire psychologue libéral : revenus 2026 | Nicodev"
-description: "Salaire psychologue libéral : combien gagne-t-on selon les honoraires, charges, cotisations CIPAV, micro-BNC ou réel ?"
+seoTitle: "Salaire psychologue libéral : revenus nets et fourchettes 2026"
+description: "Salaire psychologue libéral : combien gagne-t-on net selon honoraires, charges, CIPAV et régime fiscal ? Fourchettes 2026, salaire clinicien libéral et comparaison salarié."
 pubDate: "2026-06-02"
+updatedDate: "2026-06-14"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
 tags: ["psychologue", "installation en libéral"]
+faq:
+  - question: "Quel est le salaire moyen d'un psychologue libéral ?"
+    answer: "Il n'existe pas de salaire moyen officiel unique. Le revenu net dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l'ancienneté du cabinet. Une activité récente peut rester sous 1 700 € nets mensuels ; un cabinet installé vise plus souvent 1 800 à 3 200 € nets."
+  - question: "Combien gagne un psychologue libéral ?"
+    answer: "Un psychologue libéral encaisse des honoraires, pas un salaire fixe. Selon le tarif et le volume de séances, le revenu net mensuel peut aller d'environ 800 € en début d'activité à plus de 3 500 € pour un agenda très rempli, après cotisations, charges et impôts."
+  - question: "Quel est le salaire net d'un psychologue libéral ?"
+    answer: "Le salaire net correspond au revenu disponible après cotisations CIPAV (environ 23 % du CA en micro-BNC), charges de cabinet (loyer, outils, supervision) et impôt sur le revenu. En cabinet établi, la fourchette courante se situe souvent entre 1 800 et 3 200 € nets par mois."
+  - question: "Quel est le salaire d'un psychologue clinicien libéral ?"
+    answer: "Le psychologue clinicien libéral suit la même logique de revenus que tout libéral : honoraires moins charges et cotisations. Les fourchettes sont comparables, avec des variations selon la spécialité, la demande locale et le tarif pratiqué."
+  - question: "Combien gagne un psychologue libéral débutant ?"
+    answer: "Les débuts sont souvent irréguliers. Les premiers mois, le revenu peut rester faible, surtout si le cabinet coûte cher et que l'agenda n'est pas encore rempli. Beaucoup sécurisent cette phase par une sous-location progressive, un cumul salarié-libéral ou des charges fixes limitées."
+  - question: "Le salaire d'un psychologue libéral est-il plus élevé qu'en salariat ?"
+    answer: "Il peut l'être, mais ce n'est pas automatique. Le libéral offre un plafond potentiel plus haut, mais il faut retirer les charges, cotisations, impôts, congés non payés, absences, outils et temps administratif. La comparaison doit porter sur le revenu net disponible."
+  - question: "Micro-BNC ou réel : quel régime laisse le plus de revenu ?"
+    answer: "Le micro-BNC est souvent simple au démarrage, surtout avec peu de charges. Le réel devient intéressant quand les frais professionnels dépassent environ l'abattement forfaitaire de 34 % du chiffre d'affaires. Le bon choix dépend du coût réel du cabinet."
+  - question: "Quel est le salaire d'un psychologue salarié en France ?"
+    answer: "Un psychologue salarié (hôpital, structure privée, association) perçoit en général entre 1 800 et 2 800 € nets mensuels selon l'expérience et le statut, avec une rémunération plus prévisible qu'en libéral mais un plafond souvent plus bas."
 ---
 
-*Temps de lecture : environ 12 minutes*
+*Temps de lecture : environ 14 minutes*
 
 Avant de s'installer, beaucoup de psychologues tapent la même requête dans Google : **salaire psychologue libéral**. Derrière cette recherche, la question est souvent très concrète : **combien gagne un psychologue libéral**, une fois les charges, cotisations et impôts retirés ?
 
-La difficulté, c'est que ce mot « salaire » est en partie trompeur. En libéral, vous ne percevez pas un salaire fixé par un employeur : vous encaissez des **honoraires**, vous supportez des **charges**, vous payez des **cotisations** et de l'**impôt** sur votre bénéfice. Le montant qui reste dans votre poche dépend donc autant de votre tarif que de votre agenda, de votre ville, de votre régime fiscal et de la façon dont vous organisez votre activité.
+La difficulté, c'est que ce mot « salaire » est en partie trompeur. En libéral, vous ne percevez pas un salaire fixé par un employeur : vous encaissez des **honoraires**, vous supportez des **charges**, vous payez des **cotisations** et de l'**impôt** sur votre bénéfice. Le montant qui reste dans votre poche — le **salaire net psychologue libéral** au sens courant — dépend donc autant de votre tarif que de votre agenda, de votre ville, de votre régime fiscal et de la façon dont vous organisez votre activité.
+
+> **En bref — salaire psychologue libéral (fourchettes 2026)**  
+> | Situation | Revenu net mensuel estimé |
+> | --- | --- |
+> | Début d'activité (0–18 mois) | 800 à 1 700 € |
+> | Cabinet établi | 1 800 à 3 200 € |
+> | Agenda dense ou activité mixte | 3 500 € et plus (possible, pas la norme) |
+> | Exemple courant : 45 séances × 58 € en micro-BNC | ~1 200 à 1 350 € nets |
 
 Cet article ne remplace ni un expert-comptable, ni un conseiller en gestion de patrimoine. Il propose une **lecture réaliste** des revenus possibles, avec des ordres de grandeur et des exemples chiffrés, pour que vous puissiez estimer votre situation — et croiser ces données avec le reste de votre projet d'installation.
 
 Pour les démarches concrètes (statut, TVA, cabinet, visibilité), vous pouvez aussi lire le guide [ouvrir son cabinet de psychologue : s'installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/).
+
+## Salaire psychologue : salarié, libéral et clinicien — ne pas confondre
+
+La requête **salaire psychologue** (sans le mot « libéral ») regroupe en réalité plusieurs situations très différentes. Avant d'estimer vos revenus, clarifiez de quel statut il s'agit :
+
+| Statut | Comment on est payé·e | Revenu net mensuel indicatif | Ce qu'il faut retenir |
+| --- | --- | --- | --- |
+| **Psychologue salarié** (hôpital, CMP, association, entreprise) | Fiche de paie, net après cotisations | ~1 800 à 2 800 € | Prévisible, congés payés, plafond souvent plus bas |
+| **Psychologue libéral** (honoraires) | Facturation directe aux patients | ~800 à 3 500 €+ selon phase | Autonomie, aléa, plafond potentiel plus haut |
+| **Psychologue clinicien libéral** | Même logique que le libéral classique | Fourchettes proches du libéral | Le titre « clinicien » ne change pas le calcul des revenus |
+
+Quand on compare des chiffres trouvés en ligne, beaucoup d'articles mélangent **salaire psychologue salarié** et **salaire psychologue libéral**. Un salarié du secteur public à 2 400 € nets n'a pas la même équation qu'un libéral qui facture 3 000 € de CA mais paie 700 € de loyer et 700 € de cotisations.
+
+Le **salaire psychologue clinicien libéral** suit la même mécanique que tout cabinet libéral : honoraires − charges − cotisations CIPAV − impôt. La spécialité clinique peut influencer le tarif et la demande, pas la structure du calcul.
+
+## Salaire net psychologue libéral : comment le calculer pas à pas
+
+Le **salaire net** dont parlent les psychologues en libéral, c'est le **revenu disponible** une fois tout payé. Voici la formule à retenir :
+
+1. **Chiffre d'affaires** = nombre de séances facturées × tarif
+2. **− Cotisations sociales** (CIPAV) : ~23,4 % du CA en micro-BNC, ou ~30–38 % du bénéfice au réel
+3. **− Charges de cabinet** : loyer, assurance, supervision, comptable, outils (déductibles au réel, payées en plus en micro)
+4. **− Impôt sur le revenu** : selon votre foyer fiscal et votre régime
+5. **= Revenu net mensuel** (ce que vous pouvez réellement dépenser)
+
+### Exemple rapide : salaire net avec 45 séances à 58 €
+
+| Étape | Micro-BNC | Régime réel |
+| --- | --- | --- |
+| CA mensuel | 2 610 € | 2 610 € |
+| Cotisations sociales | − 611 € (23,4 % du CA) | − 670 à 730 € (~31–34 % du bénéfice) |
+| Charges cabinet (450 €/mois) | − 450 € (non déductibles) | − 450 € (déjà déduites du bénéfice) |
+| Impôt sur le revenu (ordre de grandeur) | − 200 à 350 € | − 150 à 280 € |
+| **Salaire net estimé** | **~1 200 à 1 350 €** | **~1 250 à 1 430 €** |
+
+Ce calcul explique pourquoi **combien gagne un psychologue libéral** ne se répond pas en une phrase : deux praticiens avec le même CA peuvent avoir 500 € d'écart de revenu net selon leur loyer et leur régime fiscal.
+
+Pour simuler votre cas : [simulateur URSSAF](https://mon-entreprise.urssaf.fr/simulateurs) et, si besoin, un expert-comptable.
 
 ## Salaire psychologue libéral : pourquoi il n'y a pas un chiffre unique
 
@@ -295,6 +359,18 @@ Si vous préparez votre installation, avancez en parallèle sur trois plans : **
 
 Il n'existe pas de salaire moyen officiel vraiment fiable pour tous les psychologues libéraux, car le revenu dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l'ancienneté du cabinet. Une activité récente peut rester sous **1 700 € nets mensuels**, tandis qu'un cabinet installé peut viser plus souvent **1 800 à 3 200 € nets**, avec de fortes variations.
 
+### Combien gagne un psychologue libéral ?
+
+Cela dépend du tarif, du volume de séances et des charges. À titre indicatif : 30 séances à 55 € donnent environ 1 650 € de CA mensuel avant tout prélèvement ; 50 séances à 60 €, environ 3 000 € de CA. Le **revenu net** se situe souvent entre **800 €** (début) et **3 500 €+** (agenda dense), après cotisations, loyer et impôts.
+
+### Quel est le salaire net d'un psychologue libéral ?
+
+Le salaire net, c'est ce qu'il reste après cotisations CIPAV (~23 % du CA en micro), charges de cabinet et impôt. Pour un cabinet stabilisé à 2 600 € de CA mensuel, comptez souvent **1 200 à 1 400 € nets** en province — davantage si le tarif ou le volume augmente, moins si le loyer est élevé.
+
+### Quel est le salaire d'un psychologue clinicien libéral ?
+
+Le **psychologue clinicien libéral** facture comme tout libéral : honoraires moins charges et cotisations. Les fourchettes de revenu net sont comparables (souvent **1 800 à 3 200 €** une fois installé). La clinique peut justifier un tarif légèrement plus élevé si la demande locale le permet.
+
 ### Combien gagne un psychologue libéral débutant ?
 
 Les débuts sont souvent irréguliers. Les premiers mois, le revenu peut être faible, surtout si le cabinet coûte cher et que l'agenda n'est pas encore rempli. Beaucoup de psychologues sécurisent cette phase par une sous-location progressive, un cumul salarié-libéral ou des charges fixes limitées.
@@ -306,6 +382,10 @@ Il peut l'être, mais ce n'est pas automatique. Le libéral offre un plafond pot
 ### Micro-BNC ou réel : quel régime laisse le plus de revenu ?
 
 Le micro-BNC est souvent simple et lisible au démarrage, surtout avec peu de charges. Le réel devient intéressant quand les frais professionnels dépassent environ l'abattement forfaitaire de **34 %** du chiffre d'affaires. Le bon choix dépend donc du coût réel du cabinet, pas seulement du chiffre d'affaires.
+
+### Quel est le salaire d'un psychologue salarié en France ?
+
+Un **psychologue salarié** perçoit en général **1 800 à 2 800 € nets** par mois selon l'expérience, le secteur (public ou privé) et la structure employeur. La rémunération est plus prévisible qu'en libéral, mais le plafond de revenu est souvent plus bas et l'autonomie d'organisation est moindre.
 
 Pour un projet de site ou de visibilité en ligne adapté aux psychologues, vous pouvez consulter la page [création de site web pour psychologue](/creation-site-internet-psychologue/), les [tarifs](/tarifs/) ou demander un [diagnostic gratuit](/diagnostic-gratuit/).
 
