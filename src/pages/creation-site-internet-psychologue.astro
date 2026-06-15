@@ -59,7 +59,7 @@ const faqSchema = {
 			name: 'Un site internet peut-il aider à trouver des patients ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "Oui, indirectement : un site bien structuré et cohérent avec votre fiche Google Business Profile améliore vos chances d'être trouvé sur des recherches locales, et surtout il convertit les visites en prises de contact en répondant aux questions que se posent les patients. Aucune position Google ne peut en revanche être garantie.",
+				text: "Oui, indirectement : un site bien structuré et cohérent avec votre fiche Google Business Profile améliore vos chances d'être trouvé sur des recherches locales. Il aide aussi les personnes à comprendre votre cadre avant de prendre contact. Aucune place dans Google ne peut en revanche être garantie.",
 			},
 		},
 		{
@@ -91,7 +91,7 @@ const faqSchema = {
 			name: 'Est-ce compatible avec la déontologie des psychologues ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "Oui : le code de déontologie n'interdit pas d'avoir un site, il encadre la manière de se présenter. Les contenus restent informatifs et sobres, sans promesse de résultat ni discours commercial déplacé.",
+				text: "Oui : le code de déontologie n'interdit pas d'avoir un site, il encadre la manière de se présenter. Les contenus restent informatifs et sobres, sans affirmation de résultat ni discours publicitaire déplacé.",
 			},
 		},
 		{
@@ -107,7 +107,7 @@ const faqSchema = {
 			name: "Combien de temps avant d'être visible sur Google ?",
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: 'Le site peut être indexé en quelques semaines ; le positionnement local durable demande souvent plusieurs mois de régularité (fiche Google + site cohérents).',
+				text: 'Le site peut être indexé en quelques semaines ; une présence locale stable demande souvent plusieurs mois de régularité (fiche Google + site cohérents).',
 			},
 		},
 		{
@@ -134,6 +134,18 @@ const serviceSchema = {
 	},
 	serviceType: 'Création de site internet',
 	areaServed: { '@type': 'Country', name: 'France' },
+	audience: {
+		'@type': 'Audience',
+		audienceType: 'Psychologues, psychothérapeutes et praticiens du soin en libéral',
+	},
+	offers: {
+		'@type': 'AggregateOffer',
+		priceCurrency: 'EUR',
+		lowPrice: '29',
+		highPrice: '49',
+		offerCount: 2,
+		url: new URL('/tarifs/', baseUrl).href,
+	},
 	url: pageUrl,
 };
 
@@ -200,7 +212,7 @@ const breadcrumbSchema = {
 					Vous cherchez un accompagnement pour la <strong>création de votre site internet psychologue</strong>&nbsp;?
 					Cette page détaille ce que comprend la prestation&nbsp;: structure, contenu guidé, design sobre,
 					intégration de votre outil de rendez-vous, hébergement et bases SEO — pour un site que vous contrôlez,
-					sans promesse de «&nbsp;premier sur Google&nbsp;».
+					sans discours de visibilité garanti.
 				</p>
 
 				<blockquote>
@@ -214,15 +226,36 @@ const breadcrumbSchema = {
 					</ul>
 				</blockquote>
 
-				<h2>Création site internet psychologue&nbsp;: les 7 piliers d&apos;un site qui convertit</h2>
+				<div class="not-prose my-8 grid gap-4 md:grid-cols-2">
+					<div class="rounded-xl border border-border bg-surface p-5">
+						<h2 class="font-heading text-xl font-semibold text-foreground">C’est adapté si…</h2>
+						<ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+							<li>vous voulez présenter votre cabinet avec sobriété et justesse&nbsp;;</li>
+							<li>vous préférez déléguer l’hébergement, la maintenance et les réglages SEO&nbsp;;</li>
+							<li>vous avez besoin d’un site relié à Doctolib, Qare, Maiia ou à un formulaire simple&nbsp;;</li>
+							<li>vous cherchez un accompagnement qui comprend le cadre déontologique des psychologues.</li>
+						</ul>
+					</div>
+					<div class="rounded-xl border border-border bg-white p-5">
+						<h2 class="font-heading text-xl font-semibold text-foreground">Ce n’est pas adapté si…</h2>
+						<ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+							<li>vous cherchez une garantie de place précise dans Google&nbsp;;</li>
+							<li>vous voulez une plateforme complexe sur mesure ou un espace patient&nbsp;;</li>
+							<li>vous préférez tout gérer vous-même, y compris technique et maintenance&nbsp;;</li>
+							<li>vous attendez un discours publicitaire ou des affirmations thérapeutiques excessives.</li>
+						</ul>
+					</div>
+				</div>
+
+				<h2>Création site internet psychologue&nbsp;: les repères d’un site clair et utile</h2>
 				<p>
-					Avant de comparer les offres du marché, voici ce qui fait la différence entre un site «&nbsp;qui existe&nbsp;»
-					et un site qui aide réellement un cabinet à se présenter et à générer des contacts.
+					Avant de comparer les solutions possibles, voici ce qui distingue un site simplement présent en ligne
+					d’un site qui aide réellement à présenter votre cadre, vos modalités et les informations utiles avant le premier contact.
 				</p>
 				<ol>
 					<li><strong>Message clair dès l&apos;accueil</strong> — qui vous êtes, où vous exercez, pour quels publics.</li>
 					<li><strong>Pages essentielles bien structurées</strong> — approche, consultations, informations pratiques, contact.</li>
-					<li><strong>Ton professionnel et sobre</strong> — informatif, conforme au cadre déontologique, sans sur-promesse.</li>
+					<li><strong>Ton professionnel et sobre</strong> — informatif, conforme au cadre déontologique, sans affirmation excessive.</li>
 					<li><strong>Parcours court vers le contact</strong> — téléphone, formulaire ou widget RDV visible sur mobile.</li>
 					<li><strong>Bases SEO livrées</strong> — titres, descriptions, performances, données structurées, sitemap.</li>
 					<li><strong>Cohérence avec la fiche Google</strong> — même nom, adresse, téléphone (NAP) entre site et fiche.</li>
@@ -261,7 +294,7 @@ const breadcrumbSchema = {
 
 				<h2>Ce que je fais pour vous</h2>
 				<p>
-					Je vous propose un <strong>site vitrine sur mesure</strong>, pensé pour le cabinet&nbsp;: pages lisibles sur téléphone, formulation adaptée au métier de psychologue, pas de promesses marketing déplacées ni de jargon technique imposé à vos patients.
+					Je vous propose un <strong>site vitrine sur mesure</strong>, pensé pour le cabinet&nbsp;: pages lisibles sur téléphone, formulation adaptée au métier de psychologue, pas de discours publicitaire déplacé ni de jargon technique imposé à vos patients.
 				</p>
 				<p>
 					Nicodev a été construit <strong>d’abord pour les psychologues</strong>. Vous n’êtes pas un «&nbsp;secteur parmi d’autres&nbsp;» dans une agence généraliste&nbsp;: le socle de pages, les exemples de formulation et les contraintes (cadre déontologique, RGPD, ton de site de santé) restent alignés sur votre réalité de libéral. L’ouverture progressive à d’autres métiers du soin se fait par pages dédiées, sans mélanger les cadres professionnels.
@@ -294,7 +327,7 @@ const breadcrumbSchema = {
 				<p>
 					Avant de vous engager, il est sain de comparer les options&nbsp;: <a href="/blog/faire-son-site-soi-meme-psychologue/">faire son site soi-même</a>,{' '}
 					<a href="/blog/creer-site-avec-ia-psychologue/">le créer avec l&apos;IA</a>, passer par une plateforme spécialisée ou un accompagnement personnalisé — en gardant un œil critique sur{' '}
-					<a href="/blog/site-internet-psychologue-promesses-trop-belles/">les promesses trop belles de certaines offres</a>.
+					<a href="/blog/site-internet-psychologue-promesses-trop-belles/">les discours trop assurés de certaines offres</a>.
 				</p>
 
 				<div class="not-prose my-8 overflow-x-auto rounded-xl border border-border">
@@ -356,7 +389,7 @@ const breadcrumbSchema = {
 
 				<h2>Interface et mise en page</h2>
 				<p>
-					La création inclut le <strong>design</strong>&nbsp;: hiérarchie des titres, contrastes lisibles, parcours court vers le contact ou le widget de rendez-vous. Pas d’effets tape-à-l’œil ni de surcharge visuelle qui fatiguent sur mobile — l’objectif est de rassurer, pas de «&nbsp;vendre&nbsp;» une consultation. Des variantes de mise en page sont visibles sur les <a href="/exemples-sites-psychologue/">exemples de sites pour psychologues</a>&nbsp;; la page <a href="/webdesigner-site-psychologue/">webdesigner pour psychologues</a> détaille cette logique sous l’angle interface.
+					La création inclut le <strong>design</strong>&nbsp;: hiérarchie des titres, contrastes lisibles, parcours court vers le contact ou le widget de rendez-vous. Pas d’effets tape-à-l’œil ni de surcharge visuelle qui fatiguent sur mobile — l’objectif est de rendre votre cadre compréhensible, avec sobriété. Des variantes de mise en page sont visibles sur les <a href="/exemples-sites-psychologue/">exemples de sites pour psychologues</a>&nbsp;; la page <a href="/webdesigner-site-psychologue/">webdesigner pour psychologues</a> détaille cette logique sous l’angle interface.
 				</p>
 
 				<h2>Pour vous projeter</h2>
@@ -382,13 +415,13 @@ const breadcrumbSchema = {
 				<p><strong>Faut-il un site internet si on est thérapeute&nbsp;?</strong> Oui si vous voulez présenter votre approche avec vos mots, en dehors des annuaires. Le site complète Doctolib ou votre agenda en ligne.</p>
 				<p><strong>Combien de temps pour créer un site de psychologue&nbsp;?</strong> En général 2 à 3 semaines entre le premier échange et la mise en ligne, selon vos disponibilités pour compléter le formulaire.</p>
 				<p><strong>Pourquoi créer un site internet quand on est psychologue&nbsp;?</strong> Pour disposer d’un espace que vous contrôlez&nbsp;: votre approche, vos publics, vos honoraires, vos modalités. Les annuaires imposent leur format&nbsp;; un site professionnel de psychologue rassure les patients avant le premier contact et soutient votre visibilité locale.</p>
-				<p><strong>Un site internet peut-il aider à trouver des patients&nbsp;?</strong> Oui, indirectement&nbsp;: un site cohérent avec votre fiche Google Business Profile améliore vos chances d’être trouvé localement, et surtout il transforme les visites en prises de contact. Aucune position Google ne peut en revanche être garantie.</p>
+				<p><strong>Un site internet peut-il aider à trouver des patients&nbsp;?</strong> Oui, indirectement&nbsp;: un site cohérent avec votre fiche Google Business Profile améliore vos chances d’être trouvé localement, et aide les personnes à comprendre votre cadre avant de prendre contact. Aucune place dans Google ne peut en revanche être garantie.</p>
 				<p><strong>Faut-il un site si j’ai déjà Doctolib&nbsp;?</strong> Les deux jouent des rôles complémentaires&nbsp;: Doctolib réserve, le site explique et rassure. Voir le <a href="/blog/site-internet-psychologue-doctolib/">comparatif site internet vs Doctolib</a>.</p>
 				<p><strong>Quelles pages mettre sur un site de psychologue&nbsp;?</strong> Accueil, présentation de votre approche, consultations proposées, informations pratiques et contact — le détail s’adapte à votre cabinet libéral. Le guide <a href="/blog/site-internet-psychologues/">site internet pour psychologue</a> les passe en revue.</p>
 				<p><strong>Combien coûte un site internet pour psychologue&nbsp;?</strong> Un abonnement mensuel tout inclus (création, hébergement, nom de domaine, mises à jour) — détail sur la page <a href="/tarifs/">Tarifs</a> et dans l’article <a href="/blog/combien-coute-site-internet-2026/">combien coûte un site en 2026</a>.</p>
-				<p><strong>Est-ce compatible avec la déontologie des psychologues&nbsp;?</strong> Oui&nbsp;: le code de déontologie encadre la manière de se présenter, il n’interdit pas d’avoir un site. Les contenus restent informatifs et sobres, sans promesse de résultat.</p>
+				<p><strong>Est-ce compatible avec la déontologie des psychologues&nbsp;?</strong> Oui&nbsp;: le code de déontologie encadre la manière de se présenter, il n’interdit pas d’avoir un site. Les contenus restent informatifs et sobres, sans affirmation de résultat.</p>
 				<p><strong>Faut-il rédiger tout le contenu soi-même&nbsp;?</strong> Non&nbsp;: vous répondez à un formulaire guidé&nbsp;; j’organise et reformule pour le web en respectant votre ton.</p>
-				<p><strong>Combien de temps avant d’être visible sur Google&nbsp;?</strong> Le site peut être indexé en quelques semaines&nbsp;; le positionnement local durable demande souvent plusieurs mois de régularité (fiche Google + site cohérents). Voir le <a href="/blog/guide-complet-visibilite-en-ligne-psychologues/">guide visibilité</a>.</p>
+				<p><strong>Combien de temps avant d’être visible sur Google&nbsp;?</strong> Le site peut être indexé en quelques semaines&nbsp;; une présence locale stable demande souvent plusieurs mois de régularité (fiche Google + site cohérents). Voir le <a href="/blog/guide-complet-visibilite-en-ligne-psychologues/">guide visibilité</a>.</p>
 				<p><strong>Que comprend l’abonnement mensuel&nbsp;?</strong> Hébergement, nom de domaine, mises à jour et support selon la formule choisie — détail sur la page <a href="/tarifs/">Tarifs</a>.</p>
 			</div>
 		</div>

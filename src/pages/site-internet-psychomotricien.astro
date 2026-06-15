@@ -27,7 +27,7 @@ const legitimacyItems = [
 		Icon: MapPin,
 		title: 'Visibilité locale',
 		description:
-			'Pages et parcours de contact simples, pensés pour votre ville et votre fiche Google, sans promesses de positionnement irréalistes.',
+			'Pages et parcours de contact simples, pensés pour votre ville et votre fiche Google, avec des attentes réalistes sur la visibilité locale.',
 	},
 ] as const;
 
@@ -125,6 +125,14 @@ const serviceSchema = {
 	audience: {
 		'@type': 'Audience',
 		audienceType: 'Psychomotriciens en libéral',
+	},
+	offers: {
+		'@type': 'AggregateOffer',
+		priceCurrency: 'EUR',
+		lowPrice: '29',
+		highPrice: '49',
+		offerCount: 2,
+		url: new URL('/tarifs/', baseUrl).href,
 	},
 	url: pageUrl,
 };
@@ -237,6 +245,21 @@ const breadcrumbSchema = {
 					<strong>expertise web</strong> de développeur, jusqu’à tech lead front-end.
 				</p>
 
+				<div class="not-prose my-8 rounded-xl border border-border bg-surface p-6">
+					<p class="type-eyebrow mb-3 text-muted">Résumé de l’accompagnement</p>
+					<h2 class="font-heading text-2xl font-semibold text-foreground">Site, contenus, prise de rendez-vous et bases SEO inclus</h2>
+					<ul class="mt-4 grid gap-3 text-sm leading-relaxed text-muted md:grid-cols-2">
+						<li><strong class="text-foreground">À partir de 29&nbsp;EUR/mois</strong> — création, hébergement, domaine et maintenance.</li>
+						<li><strong class="text-foreground">49&nbsp;EUR/mois</strong> — avec fiche Google, contenus réguliers et suivi de visibilité.</li>
+						<li><strong class="text-foreground">Contenu guidé</strong> — bilan, séances, publics accompagnés, cadre et informations pratiques.</li>
+						<li><strong class="text-foreground">Parcours court</strong> — contact, téléphone ou lien de rendez-vous visible sur mobile.</li>
+					</ul>
+					<div class="mt-5 flex flex-col gap-3 sm:flex-row">
+						<a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold">Demander un diagnostic gratuit</a>
+						<a href="/tarifs/" class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-5 py-3 text-sm font-semibold text-foreground hover:bg-background">Voir les tarifs</a>
+					</div>
+				</div>
+
 				<h2>Deux expertises réunies pour votre site</h2>
 
 				<h3>Comprendre la psychomotricité, pas seulement la « thérapie »</h3>
@@ -278,8 +301,8 @@ const breadcrumbSchema = {
 
 				<h2>Référencement local : rester prudent et concret</h2>
 				<p>
-					Les recherches du type <strong>psychomotricien + ville</strong> sont importantes, mais elles ne justifient
-					pas des promesses irréalistes. Le travail consiste à créer une page bien structurée, compréhensible par les
+					Les recherches du type <strong>psychomotricien + ville</strong> sont importantes, mais elles demandent
+					des attentes réalistes. Le travail consiste à créer une page bien structurée, compréhensible par les
 					visiteurs et par les moteurs de recherche, puis à garder une cohérence entre votre site, votre fiche Google
 					Business Profile et les annuaires où votre cabinet apparaît.
 				</p>
@@ -342,11 +365,14 @@ const breadcrumbSchema = {
 					<a href="/contact/">page contact</a>.
 				</p>
 
-				<h2>Pour qui ?</h2>
+				<h2>Pour qui&nbsp;?</h2>
 				<p>
 					Cette offre s’adresse aux psychomotriciens installés en libéral, en création de cabinet, en association ou
 					en reprise d’un site existant. Elle peut aussi convenir si vous avez déjà une fiche Google ou une page sur
 					un annuaire, mais pas encore d’espace clair pour présenter votre pratique avec vos propres mots.
+				</p>
+				<p>
+					Elle n’est pas pensée pour garantir une place précise dans Google ni pour créer une plateforme complexe de suivi patient. L’objectif est plus simple et plus durable&nbsp;: un site clair, techniquement propre, relié à vos outils et cohérent avec votre présence locale.
 				</p>
 			</div>
 		</div>
