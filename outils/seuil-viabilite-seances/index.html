@@ -1,0 +1,401 @@
+---
+layout: no-sidebar
+title: Seuil de viabilité – nombre de séances
+h1: Seuil de viabilité des séances
+description: Calculez le nombre de séances hebdomadaires nécessaire pour atteindre votre seuil de viabilité financière, en tenant compte de vos semaines travaillées.
+permalink: /outils/seuil-viabilite-seances/
+---
+
+<style>
+.seuil-intro {
+    max-width: 680px;
+    margin-bottom: 2rem;
+}
+
+.seuil-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .seuil-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.seuil-form-block,
+.seuil-results-block {
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 1.5rem;
+}
+
+.seuil-form-block h2,
+.seuil-results-block h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 0 0 1.5rem;
+    padding-bottom: .75rem;
+    border-bottom: 2px solid #c82f00;
+    color: #455A64;
+}
+
+.seuil-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.seuil-field label {
+    font-size: .85rem;
+    font-weight: 600;
+    color: #455A64;
+    margin-bottom: .35rem;
+}
+
+.seuil-field .field-hint {
+    font-size: .75rem;
+    color: #727272;
+    margin-bottom: .35rem;
+}
+
+.seuil-field-row {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.seuil-field-row input {
+    width: 90px;
+    padding: .4rem .6rem;
+    border: 1px solid #CFD8DC;
+    font-size: 1rem;
+    text-align: right;
+    background: #f9fafb;
+    transition: border-color .15s;
+}
+
+.seuil-field-row input:focus {
+    outline: none;
+    border-color: #607D8B;
+    background: #fff;
+}
+
+.seuil-field-row .unit {
+    font-size: .85rem;
+    color: #727272;
+    white-space: nowrap;
+}
+
+.seuil-semaines {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #CFD8DC;
+}
+
+.seuil-semaines-header {
+    display: flex;
+    align-items: baseline;
+    gap: .75rem;
+    margin-bottom: .4rem;
+}
+
+.seuil-semaines-header label {
+    font-size: .85rem;
+    font-weight: 600;
+    color: #455A64;
+}
+
+.seuil-semaines-header .semaines-badge {
+    font-size: .8rem;
+    background: #c82f00;
+    color: #fff;
+    padding: .1rem .45rem;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+.seuil-semaines .field-hint {
+    font-size: .75rem;
+    color: #727272;
+    margin-bottom: .6rem;
+}
+
+.seuil-slider-row {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.seuil-slider-row input[type="range"] {
+    flex: 1;
+    accent-color: #c82f00;
+    cursor: pointer;
+}
+
+.semaines-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #c82f00;
+    min-width: 2.5rem;
+    text-align: right;
+}
+
+.semaines-detail {
+    font-size: .75rem;
+    color: #727272;
+    margin-top: .4rem;
+}
+
+/* Results */
+
+.seuil-results-block {
+    background: #455A64;
+    border-color: #455A64;
+    color: #fff;
+}
+
+.seuil-results-block h2 {
+    color: #CFD8DC;
+    border-bottom-color: #607D8B;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-size: .85rem;
+    color: #CFD8DC;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.result-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.result-item--primary .result-value {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.result-item--primary .result-label {
+    font-weight: 600;
+    color: #fff;
+}
+
+.result-item--primary {
+    padding: 1rem 0;
+    border-bottom: 2px solid rgba(255,255,255,.2);
+    margin-bottom: .5rem;
+}
+
+.seuil-note {
+    margin-top: 1.5rem;
+    font-size: .75rem;
+    color: #CFD8DC;
+    line-height: 1.5;
+}
+
+.result-warning {
+    margin-top: 1rem;
+    padding: .75rem;
+    background: rgba(200, 47, 0, .3);
+    font-size: .8rem;
+    color: #fff;
+    border-left: 3px solid #c82f00;
+    display: none;
+}
+</style>
+
+<article class="g-block">
+
+    <div class="seuil-intro">
+        <p>Renseignez vos paramètres financiers pour connaître le nombre de séances hebdomadaires nécessaire à votre viabilité. Le champ <strong>semaines travaillées</strong> permet de lisser votre objectif sur les semaines réellement actives, en tenant compte des congés et arrêts.</p>
+    </div>
+
+    <div class="seuil-grid">
+
+        <div class="seuil-form-block">
+            <h2>Paramètres</h2>
+
+            <div class="seuil-field">
+                <label for="revenuNet">Revenu net mensuel souhaité</label>
+                <span class="field-hint">Ce que vous souhaitez percevoir après charges et cotisations</span>
+                <div class="seuil-field-row">
+                    <input type="number" id="revenuNet" value="1800" min="0" step="50">
+                    <span class="unit">€ / mois</span>
+                </div>
+            </div>
+
+            <div class="seuil-field">
+                <label for="chargesPro">Charges professionnelles mensuelles</label>
+                <span class="field-hint">Loyer cabinet, assurance, téléphone, formation…</span>
+                <div class="seuil-field-row">
+                    <input type="number" id="chargesPro" value="300" min="0" step="10">
+                    <span class="unit">€ / mois</span>
+                </div>
+            </div>
+
+            <div class="seuil-field">
+                <label for="tauxCotisations">Taux de cotisations sociales</label>
+                <span class="field-hint">22 % micro-entrepreneur libéral · ~45 % EI/EIRL</span>
+                <div class="seuil-field-row">
+                    <input type="number" id="tauxCotisations" value="22" min="0" max="80" step="1">
+                    <span class="unit">%</span>
+                </div>
+            </div>
+
+            <div class="seuil-field">
+                <label for="prixSeance">Prix par séance</label>
+                <div class="seuil-field-row">
+                    <input type="number" id="prixSeance" value="60" min="1" step="5">
+                    <span class="unit">€</span>
+                </div>
+            </div>
+
+            <div class="seuil-semaines">
+                <div class="seuil-semaines-header">
+                    <label for="semainesTravaillees">Semaines travaillées par an</label>
+                    <span class="semaines-badge">lissage annuel</span>
+                </div>
+                <span class="field-hint">Ajustez selon vos congés, arrêts ou périodes creuses</span>
+                <div class="seuil-slider-row">
+                    <input type="range" id="semainesTravaillees" min="10" max="52" value="47" step="1">
+                    <span class="semaines-value" id="semainesDisplay">47</span>
+                    <span class="unit">sem.</span>
+                </div>
+                <div class="semaines-detail" id="semainesDetail">= 5 semaines de congés / arrêt</div>
+            </div>
+        </div>
+
+        <div class="seuil-results-block">
+            <h2>Résultats</h2>
+
+            <div class="result-item result-item--primary">
+                <span class="result-label">Séances par semaine nécessaires</span>
+                <span class="result-value" id="res-seances-semaine">–</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">CA annuel à atteindre</span>
+                <span class="result-value" id="res-ca-annuel">–</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">CA mensuel moyen</span>
+                <span class="result-value" id="res-ca-mensuel">–</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">Séances par an</span>
+                <span class="result-value" id="res-seances-annuelles">–</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">Séances par mois (moyenne)</span>
+                <span class="result-value" id="res-seances-mois">–</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">Cotisations annuelles estimées</span>
+                <span class="result-value" id="res-cotisations">–</span>
+            </div>
+
+            <div class="result-warning" id="res-warning">
+                Attention : plus de 8 séances par semaine peut indiquer que votre tarif ou vos charges méritent d'être revus.
+            </div>
+
+            <p class="seuil-note">
+                Le calcul suppose que vos charges professionnelles sont dues sur 12 mois, même pendant les semaines non travaillées. Le taux de cotisations est appliqué sur le chiffre d'affaires (modèle micro-entrepreneur).
+            </p>
+        </div>
+
+    </div>
+
+</article>
+
+<script>
+(function () {
+    var inputs = ['revenuNet', 'chargesPro', 'tauxCotisations', 'prixSeance', 'semainesTravaillees'];
+
+    function fmt(n, decimals) {
+        return n.toLocaleString('fr-FR', {
+            minimumFractionDigits: decimals || 0,
+            maximumFractionDigits: decimals || 0
+        });
+    }
+
+    function calculate() {
+        var revenuNet = parseFloat(document.getElementById('revenuNet').value) || 0;
+        var chargesPro = parseFloat(document.getElementById('chargesPro').value) || 0;
+        var tauxCotisations = parseFloat(document.getElementById('tauxCotisations').value) || 0;
+        var prixSeance = parseFloat(document.getElementById('prixSeance').value) || 1;
+        var semainesTravaillees = parseInt(document.getElementById('semainesTravaillees').value) || 47;
+
+        var tauxDecimal = tauxCotisations / 100;
+
+        // CA annuel = (revenu net annuel + charges pro annuelles) / (1 - taux_cotisations)
+        var revenuAnnuel = revenuNet * 12;
+        var chargesAnnuelles = chargesPro * 12;
+        var caAnnuel = (revenuAnnuel + chargesAnnuelles) / (1 - tauxDecimal);
+
+        var cotisationsAnnuelles = caAnnuel * tauxDecimal;
+        var caMensuelMoyen = caAnnuel / 12;
+
+        var seancesAnnuelles = caAnnuel / prixSeance;
+        var seancesParSemaine = seancesAnnuelles / semainesTravaillees;
+        var seancesParMois = seancesAnnuelles / 12;
+
+        document.getElementById('res-ca-annuel').textContent = fmt(caAnnuel) + ' €';
+        document.getElementById('res-ca-mensuel').textContent = fmt(caMensuelMoyen) + ' €';
+        document.getElementById('res-seances-annuelles').textContent = fmt(seancesAnnuelles, 1);
+        document.getElementById('res-seances-mois').textContent = fmt(seancesParMois, 1);
+        document.getElementById('res-cotisations').textContent = fmt(cotisationsAnnuelles) + ' €';
+        document.getElementById('res-seances-semaine').textContent = fmt(seancesParSemaine, 1);
+
+        var warning = document.getElementById('res-warning');
+        warning.style.display = seancesParSemaine > 8 ? 'block' : 'none';
+    }
+
+    function updateSemainesDisplay() {
+        var val = parseInt(document.getElementById('semainesTravaillees').value);
+        document.getElementById('semainesDisplay').textContent = val;
+        var conges = 52 - val;
+        var label = conges === 0
+            ? '= aucun congé (52 semaines pleines)'
+            : conges === 1
+            ? '= 1 semaine de congés / arrêt'
+            : '= ' + conges + ' semaines de congés / arrêt';
+        document.getElementById('semainesDetail').textContent = label;
+    }
+
+    document.getElementById('semainesTravaillees').addEventListener('input', function () {
+        updateSemainesDisplay();
+        calculate();
+    });
+
+    inputs.slice(0, 4).forEach(function (id) {
+        document.getElementById(id).addEventListener('input', calculate);
+    });
+
+    updateSemainesDisplay();
+    calculate();
+}());
+</script>
