@@ -31,7 +31,7 @@ const contributionRates = {
           vous visez (après charges fixes et après prélèvements sociaux sur le chiffre d&apos;affaires), de votre
           <strong>tarif moyen de séance</strong> et d&apos;un <strong>taux de prélèvements sur le CA</strong>, l&apos;outil
           estime le <strong>chiffre d&apos;affaires mensuel</strong> à atteindre puis le nombre de
-          <strong>séances par mois</strong> (et par semaine, sur la base de 4 semaines par mois).
+          <strong>séances par mois</strong> (et par semaine, en lissant l&apos;objectif annuel sur le nombre de <strong>semaines travaillées</strong> renseigné).
         </p>
         <p class="mt-3 rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-900">
           <strong>Modèle simplifié.</strong> On suppose que les prélèvements (URSSAF, CFP, et le cas échéant
@@ -97,6 +97,29 @@ const contributionRates = {
               </option>
             </select>
           </label>
+
+          <div class="flex flex-col gap-1.5 sm:col-span-2">
+            <span class="text-sm font-semibold text-slate-800">
+              Semaines travaillées par an —
+              <span id="weeks-worked-display" class="text-teal-700">47</span>
+              <span class="font-normal text-slate-600"> sem.</span>
+            </span>
+            <span class="text-xs text-slate-600">
+              Pour lisser l&apos;objectif annuel sur les semaines réellement actives (congés, fermetures, arrêts).
+            </span>
+            <div class="flex items-center gap-3">
+              <input
+                id="weeks-worked"
+                type="range"
+                min="10"
+                max="52"
+                value="47"
+                step="1"
+                class="flex-1 accent-teal-700"
+              />
+            </div>
+            <span id="weeks-worked-detail" class="text-xs text-slate-500">= 5 semaines de congés / arrêt</span>
+          </div>
         </div>
 
         <div class="mt-6 rounded-lg border border-teal-200 bg-teal-50 px-4 py-4">
@@ -111,7 +134,7 @@ const contributionRates = {
             <strong id="sessions-month-ceil" class="font-semibold">—</strong>
           </p>
           <p class="mt-2 text-sm text-teal-950 sm:text-base">
-            Séances par semaine (mois ÷ 4, même logique) :
+            Séances par semaine (annuel ÷ semaines travaillées, même logique) :
             <strong id="sessions-week-exact" class="font-semibold">—</strong>
             →
             <strong id="sessions-week-ceil" class="font-semibold">—</strong>
@@ -163,6 +186,9 @@ const contributionRates = {
     const netInput = document.getElementById("target-net");
     const priceInput = document.getElementById("session-price");
     const rateSelect = document.getElementById("social-rate");
+    const weeksInput = document.getElementById("weeks-worked");
+    const weeksDisplay = document.getElementById("weeks-worked-display");
+    const weeksDetail = document.getElementById("weeks-worked-detail");
     const targetGrossEl = document.getElementById("target-gross");
     const sessionsMonthExactEl = document.getElementById("sessions-month-exact");
     const sessionsMonthCeilEl = document.getElementById("sessions-month-ceil");
@@ -179,6 +205,9 @@ const contributionRates = {
       !(netInput instanceof HTMLInputElement) ||
       !(priceInput instanceof HTMLInputElement) ||
       !(rateSelect instanceof HTMLSelectElement) ||
+      !(weeksInput instanceof HTMLInputElement) ||
+      !(weeksDisplay instanceof HTMLElement) ||
+      !(weeksDetail instanceof HTMLElement) ||
       !(targetGrossEl instanceof HTMLElement) ||
       !(sessionsMonthExactEl instanceof HTMLElement) ||
       !(sessionsMonthCeilEl instanceof HTMLElement) ||
@@ -192,6 +221,18 @@ const contributionRates = {
     ) {
       return;
     }
+
+    const updateWeeksDisplay = () => {
+      const val = parseInt(weeksInput.value, 10);
+      weeksDisplay.textContent = String(val);
+      const off = 52 - val;
+      weeksDetail.textContent =
+        off === 0
+          ? "= aucun congé (52 semaines pleines)"
+          : off === 1
+            ? "= 1 semaine de congés / arrêt"
+            : `= ${off} semaines de congés / arrêt`;
+    };
 
     const microBncCeiling = 77000;
     const eur = new Intl.NumberFormat("fr-FR", {
@@ -225,6 +266,7 @@ const contributionRates = {
       const targetNet = toNonNegative(netInput.value, 0);
       const price = toPositive(priceInput.value, 60);
       const rate = Number(rateSelect.value);
+      const weeksWorked = Math.max(1, parseInt(weeksInput.value, 10) || 47);
       const netFactor = 1 - rate;
 
       if (!Number.isFinite(rate) || netFactor <= 0.01) {
@@ -245,7 +287,8 @@ const contributionRates = {
       const grossMonthly = (fixed + targetNet) / netFactor;
       const sessionsMonthExact = grossMonthly / price;
       const sessionsMonthCeil = Math.ceil(sessionsMonthExact);
-      const sessionsWeekExact = sessionsMonthExact / 4;
+      const sessionsAnnual = sessionsMonthExact * 12;
+      const sessionsWeekExact = sessionsAnnual / weeksWorked;
       const sessionsWeekCeil = Math.ceil(sessionsWeekExact);
 
       const deductions = grossMonthly * rate;
@@ -275,6 +318,8 @@ const contributionRates = {
     netInput.addEventListener("input", render);
     priceInput.addEventListener("input", render);
     rateSelect.addEventListener("change", render);
+    weeksInput.addEventListener("input", () => { updateWeeksDisplay(); render(); });
+    updateWeeksDisplay();
     render();
   })();
 </script>
