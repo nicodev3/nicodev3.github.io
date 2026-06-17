@@ -3,7 +3,8 @@ import ContactWhatsAppOption from './ContactWhatsAppOption.astro';
 import FormField from './FormField.astro';
 
 const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_DIAGNOSTIC?.trim();
-if (import.meta.env.PROD && !formspreeUrl) {
+const isCloudflareBuild = process.env.CF_PAGES === '1';
+if (import.meta.env.PROD && isCloudflareBuild && !formspreeUrl) {
 	throw new Error('PUBLIC_FORMSPREE_DIAGNOSTIC doit être défini (URL Formspree, ex. https://formspree.io/f/…)');
 }
 

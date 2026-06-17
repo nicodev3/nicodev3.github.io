@@ -14,7 +14,8 @@ const formspreeUrl = (
 		? import.meta.env.PUBLIC_FORMSPREE_DEVIS
 		: import.meta.env.PUBLIC_FORMSPREE_CONTACT
 )?.trim();
-if (import.meta.env.PROD && !formspreeUrl) {
+const isCloudflareBuild = process.env.CF_PAGES === '1';
+if (import.meta.env.PROD && isCloudflareBuild && !formspreeUrl) {
 	throw new Error(
 		isDevisMode
 			? 'PUBLIC_FORMSPREE_DEVIS doit être défini (URL Formspree, ex. https://formspree.io/f/…)'
