@@ -55,6 +55,15 @@ export const maltTestimonials = [
 export const googleTestimonials = [
 	{
 		quote:
+			"J'ai confié la création de mes sites à Nicolas en 2019 et j'ai toujours été très satisfaite de notre collaboration depuis. Au delà de la partie technique, il a su me conseiller judicieusement autant sur le fond que sur la forme et au fil des ans Nicolas m'a régulièrement recontacté afin de savoir si j'avais besoin de faire évoluer mes sites web ou de mettre à jour des informations. Je le recommande donc nicodev chaudement sans la moindre hésitation !",
+		author: 'Séverine Reisser, Psychologue',
+		short: 'Séverine Reisser',
+		rating: 5,
+		websiteUrl: 'https://psychologue-leslilas.fr/',
+		websiteLabel: 'Psychologue aux Lilas',
+	},
+	{
+		quote:
 			'Nicolas est professionnel, réactif et à l\'écoute. Très beau travail pour mon site internet, qui correspond parfaitement à mes attentes. Je recommande !',
 		author: 'Audrey Larcebau, Psychologue',
 		short: 'Audrey Larcebau',
