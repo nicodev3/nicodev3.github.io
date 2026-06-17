@@ -1,7 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import DiagnosticLeadCta from "../../components/DiagnosticLeadCta.astro";
 
-const questions = [
+const siteQuestions = [
   {
     id: "gbp",
     label:
@@ -47,11 +48,56 @@ const questions = [
       "Au moins une page utile au-delà de l’accueil (présentation du cadre, FAQ patient, article de fond) existe-t-elle et est-elle à jour ?",
   },
 ];
+
+const noSiteQuestions = [
+  {
+    id: "gbp",
+    label:
+      "Avez-vous une fiche Google Business Profile (Google Maps) créée et complétée (adresse, horaires, téléphone, description) ?",
+  },
+  {
+    id: "plateforme",
+    label:
+      "Votre profil sur une plateforme de RDV (Doctolib, Maiia, Resalib…) présente-t-il clairement votre approche, vos publics et vos modalités ?",
+  },
+  {
+    id: "recherche-google",
+    label:
+      "En cherchant « psychologue + votre ville » (ou votre nom), apparaissez-vous de façon compréhensible pour un futur patient ?",
+  },
+  {
+    id: "nap",
+    label:
+      "Le nom, l’adresse et le téléphone sont-ils identiques entre la fiche Google, la plateforme de RDV et vos autres supports ?",
+  },
+  {
+    id: "perception",
+    label:
+      "En 30 secondes sur vos profils en ligne, comprend-on qui vous recevez, comment vous travaillez et comment prendre contact ?",
+  },
+  {
+    id: "honoraires",
+    label: "Les honoraires ou modalités de séance sont-ils indiqués clairement quelque part en ligne ?",
+  },
+  {
+    id: "avis",
+    label: "Avez-vous des avis Google récents, ou une démarche pour en obtenir dans le respect du cadre déontologique ?",
+  },
+  {
+    id: "contact-hors-plateforme",
+    label: "Un moyen de contact direct (email ou téléphone professionnel) est-il visible en dehors des plateformes ?",
+  },
+];
+
+const questionSets = {
+  site: siteQuestions,
+  "no-site": noSiteQuestions,
+};
 ---
 
 <Layout
-  title="Mini-diagnostic visibilité web psychologue | Outils"
-  description="Questionnaire rapide pour repérer les priorités sur votre site et votre présence locale (Google, contenu, cadre légal minimal)."
+  title="Mini-diagnostic visibilité psychologue | Outils"
+  description="Questionnaire rapide avec ou sans site : fiche Google, profils en ligne, contenu et cohérence locale pour prioriser vos actions."
 >
   <section class="section-y bg-slate-50">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -65,11 +111,10 @@ const questions = [
 
       <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-[0.14em] text-teal-700">Outil 2</p>
-        <h1 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Mini-diagnostic visibilité web</h1>
+        <h1 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Mini-diagnostic visibilité cabinet</h1>
         <p class="mt-4 text-slate-700">
-          Dix questions pour vous aider à <strong>prioriser</strong> : fiche Google, site mobile, contenu,
-          cadre d’information patient et cohérence locale. Répondez au plus juste : il n’y a pas de bonne
-          note unique, seulement des axes de travail.
+          Quelques questions pour <strong>prioriser</strong> votre présence en ligne — que vous ayez déjà un site
+          ou que vous soyez encore en installation avec seulement Google et une plateforme de rendez-vous.
         </p>
         <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
           <strong>Limites.</strong> Ce questionnaire est <strong>gratuit et informatif</strong>. Il ne remplace
@@ -78,35 +123,38 @@ const questions = [
         </p>
       </div>
 
+      <fieldset class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <legend class="text-base font-semibold text-slate-900">Votre situation actuelle</legend>
+        <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+          <label class="flex flex-1 cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-slate-50/80 p-4 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
+            <input
+              type="radio"
+              name="diagnostic-mode"
+              value="no-site"
+              class="mt-1 text-teal-700 focus:ring-teal-600"
+              checked
+            />
+            <span>
+              <span class="block font-semibold text-slate-900">Pas encore de site (ou en projet)</span>
+              <span class="mt-1 block text-sm text-slate-600">Fiche Google, Doctolib, annuaires, cohérence des infos.</span>
+            </span>
+          </label>
+          <label class="flex flex-1 cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-slate-50/80 p-4 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
+            <input type="radio" name="diagnostic-mode" value="site" class="mt-1 text-teal-700 focus:ring-teal-600" />
+            <span>
+              <span class="block font-semibold text-slate-900">J’ai déjà un site</span>
+              <span class="mt-1 block text-sm text-slate-600">Site mobile, contenu, SEO local, pages légales.</span>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
       <form
         id="diagnostic-form"
         class="mt-8 space-y-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
         novalidate
       >
-        {
-          questions.map((q, index) => (
-            <fieldset class="rounded-xl border border-slate-100 bg-slate-50/80 p-4 sm:p-5">
-              <legend class="text-base font-semibold text-slate-900">
-                <span class="text-teal-700">{index + 1}.</span> {q.label}
-              </legend>
-              <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
-                  <input type="radio" name={q.id} value="0" class="text-teal-700 focus:ring-teal-600" />
-                  <span>Non / pas vraiment</span>
-                </label>
-                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
-                  <input type="radio" name={q.id} value="1" class="text-teal-700 focus:ring-teal-600" />
-                  <span>Partiellement / à améliorer</span>
-                </label>
-                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
-                  <input type="radio" name={q.id} value="2" class="text-teal-700 focus:ring-teal-600" />
-                  <span>Oui / plutôt en place</span>
-                </label>
-              </div>
-            </fieldset>
-          ))
-        }
-
+        <div id="diagnostic-questions" class="space-y-8" />
         <div class="flex flex-wrap items-center gap-3 pt-2">
           <button
             type="button"
@@ -138,30 +186,26 @@ const questions = [
         </div>
       </div>
 
-      <p class="mt-6 text-center text-sm text-slate-600">
-        Besoin d’un regard sur votre site&nbsp;?
-        <a
-          href="/diagnostic-gratuit/"
-          class="font-semibold text-teal-700 underline decoration-teal-300 underline-offset-2 hover:text-teal-900"
-          >Demander un diagnostic gratuit</a
-        >
-      </p>
+      <DiagnosticLeadCta variant="visibilite-tool" class="mt-8" />
     </div>
   </section>
 </Layout>
 
-<script is:inline define:vars={{ questionMeta: questions }}>
+<script is:inline define:vars={{ questionSets }}>
   (() => {
     const form = document.getElementById("diagnostic-form");
+    const questionsRoot = document.getElementById("diagnostic-questions");
     const resetBtn = document.getElementById("diagnostic-reset");
     const scoreLine = document.getElementById("diagnostic-score-line");
     const scoreBar = document.getElementById("diagnostic-score-bar");
     const bandEl = document.getElementById("diagnostic-band");
     const summaryEl = document.getElementById("diagnostic-summary");
     const prioritiesEl = document.getElementById("diagnostic-priorities");
+    const modeInputs = document.querySelectorAll('input[name="diagnostic-mode"]');
 
     if (
       !(form instanceof HTMLFormElement) ||
+      !(questionsRoot instanceof HTMLElement) ||
       !(resetBtn instanceof HTMLButtonElement) ||
       !(scoreLine instanceof HTMLElement) ||
       !(scoreBar instanceof HTMLElement) ||
@@ -172,42 +216,79 @@ const questions = [
       return;
     }
 
-    const maxPer = 2;
-    const maxTotal = questionMeta.length * maxPer;
+    let activeMode = "no-site";
+    let activeQuestions = questionSets[activeMode];
 
-    const bandCopy = (pctQuality) => {
+    const shortLabels = {
+      gbp: "Fiche Google Business Profile",
+      mobile: "Affichage mobile du site",
+      homepage: "Clarté de la page d’accueil",
+      honoraires: "Honoraires / modalités visibles",
+      legal: "Mentions légales et confidentialité",
+      contact: "Moyens de contact visibles",
+      "seo-local": "Titres et ancrage local (ville / métier)",
+      avis: "Avis Google et démarche patients",
+      nap: "Cohérence nom-adresse-téléphone",
+      contenu: "Contenu utile au-delà de l’accueil",
+      plateforme: "Qualité du profil plateforme RDV",
+      "recherche-google": "Visibilité sur Google local",
+      perception: "Compréhension rapide de votre cadre",
+      "contact-hors-plateforme": "Contact direct hors plateforme",
+    };
+
+    const renderQuestions = () => {
+      activeQuestions = questionSets[activeMode];
+      questionsRoot.innerHTML = activeQuestions
+        .map(
+          (q, index) => `
+            <fieldset class="rounded-xl border border-slate-100 bg-slate-50/80 p-4 sm:p-5" data-question-id="${q.id}">
+              <legend class="text-base font-semibold text-slate-900">
+                <span class="text-teal-700">${index + 1}.</span> ${q.label}
+              </legend>
+              <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
+                  <input type="radio" name="${q.id}" value="0" class="text-teal-700 focus:ring-teal-600" />
+                  <span>Non / pas vraiment</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
+                  <input type="radio" name="${q.id}" value="1" class="text-teal-700 focus:ring-teal-600" />
+                  <span>Partiellement / à améliorer</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 has-checked:border-teal-500 has-checked:bg-teal-50 has-checked:ring-1 has-checked:ring-teal-500">
+                  <input type="radio" name="${q.id}" value="2" class="text-teal-700 focus:ring-teal-600" />
+                  <span>Oui / plutôt en place</span>
+                </label>
+              </div>
+            </fieldset>
+          `,
+        )
+        .join("");
+    };
+
+    const maxPer = 2;
+
+    const bandCopy = (pctQuality, mode) => {
+      const noSiteHint =
+        mode === "no-site"
+          ? " Même sans site dédié, une fiche Google soignée et un profil plateforme clair peuvent déjà rassurer les patients."
+          : "";
+
       if (pctQuality < 40) {
         return {
           label: "Profil : beaucoup de leviers possibles",
-          text: "Plusieurs fondamentaux méritent attention. Ce n’est pas une critique de votre pratique clinique : il s’agit surtout de rendre votre cadre visible et rassurant pour les personnes qui cherchent un·e psychologue en ligne.",
+          text: `Plusieurs fondamentaux méritent attention. Ce n’est pas une critique de votre pratique clinique : il s’agit surtout de rendre votre cadre visible et rassurant pour les personnes qui cherchent un·e psychologue en ligne.${noSiteHint}`,
         };
       }
       if (pctQuality < 70) {
         return {
           label: "Profil : bases en place, marges de gain",
-          text: "Vous avez probablement déjà des bons réflexes. Les derniers pourcents viennent souvent de la cohérence entre Google et le site, du mobile et d’un contenu utile qui complète votre page d’accueil.",
+          text: `Vous avez probablement déjà des bons réflexes. Les derniers pourcents viennent souvent de la cohérence entre Google et vos autres supports, et d’un contenu qui complète votre présentation.${noSiteHint}`,
         };
       }
       return {
         label: "Profil : visibilité web plutôt solide",
-        text: "Votre dispositif semble cohérent sur les critères de ce mini-diagnostic. Continuez à faire évoluer contenu et fiche Google au fil de votre activité, et gardez un œil sur l’accessibilité et les textes légaux lors des mises à jour.",
+        text: `Votre dispositif semble cohérent sur les critères de ce mini-diagnostic. Continuez à faire évoluer vos profils en ligne au fil de votre activité.${noSiteHint}`,
       };
-    };
-
-    const shortLabel = (id) => {
-      const map = {
-        gbp: "Fiche Google Business Profile",
-        mobile: "Affichage mobile du site",
-        homepage: "Clarté de la page d’accueil",
-        honoraires: "Honoraires / modalités visibles",
-        legal: "Mentions légales et confidentialité",
-        contact: "Moyens de contact visibles",
-        "seo-local": "Titres et ancrage local (ville / métier)",
-        avis: "Avis Google et démarche patients",
-        nap: "Cohérence nom-adresse-téléphone (Google ↔ site)",
-        contenu: "Contenu utile au-delà de l’accueil",
-      };
-      return map[id] ?? id;
     };
 
     const compute = () => {
@@ -215,16 +296,16 @@ const questions = [
       let answered = 0;
       const scores = [];
 
-      for (const q of questionMeta) {
+      for (const q of activeQuestions) {
         const selected = form.querySelector(`input[name="${q.id}"]:checked`);
         if (selected instanceof HTMLInputElement) {
           answered += 1;
           const v = Number(selected.value);
           const pts = Number.isFinite(v) ? v : 0;
           total += pts;
-          scores.push({ id: q.id, pts, label: shortLabel(q.id) });
+          scores.push({ id: q.id, pts, label: shortLabels[q.id] ?? q.id });
         } else {
-          scores.push({ id: q.id, pts: null, label: shortLabel(q.id) });
+          scores.push({ id: q.id, pts: null, label: shortLabels[q.id] ?? q.id });
         }
       }
 
@@ -239,10 +320,10 @@ const questions = [
 
       const answeredMax = answered * maxPer;
       const pctQuality = Math.round((total / answeredMax) * 100);
-      const pctCompletion = Math.round((answered / questionMeta.length) * 100);
-      scoreLine.textContent = `Points sur les questions renseignées : ${total} / ${answeredMax} (${pctQuality} % de réponses favorables). Questions complétées : ${answered} / ${questionMeta.length} (${pctCompletion} %). Référence plein pot : ${maxTotal} points si tout est « Oui / plutôt en place ».`;
+      const pctCompletion = Math.round((answered / activeQuestions.length) * 100);
+      scoreLine.textContent = `Points sur les questions renseignées : ${total} / ${answeredMax} (${pctQuality} % de réponses favorables). Questions complétées : ${answered} / ${activeQuestions.length} (${pctCompletion} %).`;
       scoreBar.style.width = `${pctQuality}%`;
-      const band = bandCopy(pctQuality);
+      const band = bandCopy(pctQuality, activeMode);
       bandEl.textContent = band.label;
       summaryEl.textContent = band.text;
 
@@ -258,7 +339,9 @@ const questions = [
       if (weak.length === 0) {
         const li = document.createElement("li");
         li.textContent =
-          "Aucun point ne ressort comme très faible parmi les réponses données. Vous pouvez affiner un détail (contenu, vitesse, accessibilité) ou faire relire le site par un pair.";
+          activeMode === "no-site"
+            ? "Aucun point ne ressort comme très faible. Vous pouvez affiner votre projet de site ou demander un diagnostic personnalisé pour votre ville."
+            : "Aucun point ne ressort comme très faible parmi les réponses données. Vous pouvez affiner un détail (contenu, vitesse, accessibilité) ou faire relire le site par un pair.";
         prioritiesEl.appendChild(li);
       } else {
         for (const w of weak) {
@@ -279,11 +362,36 @@ const questions = [
       }
     };
 
-    form.addEventListener("change", compute);
+    const setMode = (mode) => {
+      activeMode = mode;
+      renderQuestions();
+      compute();
+    };
+
+    modeInputs.forEach((input) => {
+      input.addEventListener("change", () => {
+        if (input instanceof HTMLInputElement && input.checked) {
+          setMode(input.value === "site" ? "site" : "no-site");
+        }
+      });
+    });
+
+    form.addEventListener("change", (event) => {
+      if (event.target instanceof HTMLInputElement && event.target.name !== "diagnostic-mode") {
+        compute();
+      }
+    });
+
     resetBtn.addEventListener("click", () => {
-      form.reset();
+      form.querySelectorAll('input[type="radio"]').forEach((input) => {
+        if (input instanceof HTMLInputElement && input.name !== "diagnostic-mode") {
+          input.checked = false;
+        }
+      });
       compute();
     });
+
+    renderQuestions();
     compute();
   })();
 </script>

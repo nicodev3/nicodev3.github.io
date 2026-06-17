@@ -56,7 +56,7 @@ const startEvent = 'lead_start_diagnostic';
 		</FormField>
 		<FormField id="diagnostic-city" name="city" label="Ville (ou zone) *" required placeholder="Paris 15, Sceaux, ... " />
 
-		<FormField id="diagnostic-website" name="website" label="Site internet (si vous en avez un)" type="text" placeholder="https://votre-site.fr" />
+		<FormField id="diagnostic-website" name="website" label="Site internet (si vous en avez un, ou une URL en projet)" type="text" placeholder="https://votre-site.fr — laissez vide si pas encore de site" />
 
 		<FormField
 			id="diagnostic-visibilityStatus"
@@ -66,14 +66,15 @@ const startEvent = 'lead_start_diagnostic';
 			variant="select"
 		>
 			<option value="">Sélectionnez votre situation</option>
+			<option value="pas-de-site">Je n'ai pas encore de site (installation ou réflexion)</option>
+			<option value="plateformes-seules">J'ai surtout une fiche Google et/ou Doctolib, sans site dédié</option>
 			<option value="site-peu-visibilite">J'ai un site mais il ne génère pas assez de demandes</option>
-			<option value="pas-de-site">Je n'ai pas de site (ou il est très ancien)</option>
-			<option value="plateformes-seules">Je dépends surtout des plateformes/annuaires (Doctolib, ...)</option>
 			<option value="je-ne-sais-pas">Je ne sais pas encore</option>
 		</FormField>
 
 		<FormField id="diagnostic-mainObjective" name="mainObjective" label="Votre objectif principal *" required variant="select">
 			<option value="">Sélectionnez votre objectif</option>
+			<option value="preparer-installation">Préparer mon installation / ouverture de cabinet</option>
 			<option value="google-local">Être plus visible sur Google local</option>
 			<option value="confiance-contenu">Rassurer davantage (contenu + pages claires)</option>
 			<option value="mobile-vitesse">Avoir un site mobile rapide et agréable</option>

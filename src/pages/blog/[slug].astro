@@ -7,6 +7,7 @@ import BlogShare from '../../components/BlogShare.astro';
 import BlogArticleToc from '../../components/BlogArticleToc.astro';
 import BlogPillarClusterLink from '../../components/BlogPillarClusterLink.astro';
 import GuideVisibilityConversionCta from '../../components/GuideVisibilityConversionCta.astro';
+import DiagnosticLeadCta from '../../components/DiagnosticLeadCta.astro';
 import {
 	GUIDE_VISIBILITE_CLUSTER_IDS,
 	toTagHref,
@@ -252,9 +253,11 @@ const faqSchema =
 				prose-hr:border-border">
 				<BlogPillarClusterLink currentArticleId={entry.id} />
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="intro" />}
+				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-intro" class="my-10" />}
 				<BlogArticleToc items={tocItems} />
 				<Content />
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="final" />}
+				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-final" class="my-10" />}
 			</div>
 		</div>
 	</article>
@@ -263,13 +266,27 @@ const faqSchema =
 	<section class="py-12 bg-surface border-t border-border">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-xl font-semibold text-foreground mb-4">
-				{entry.data.guidePillarHub ? 'Vous voulez transformer cette lecture en actions concrètes ?' : 'Un projet de site web ?'}
+				{entry.data.guidePillarHub
+					? 'Vous voulez transformer cette lecture en actions concrètes ?'
+					: entry.data.installationGuideHub
+						? 'Vous préparez votre installation ?'
+						: 'Un projet de site web ?'}
 			</h2>
 			<p class="text-muted mb-6">
 				{entry.data.guidePillarHub ? (
 					<>
 						Le diagnostic gratuit permet de vérifier votre site, votre fiche Google et vos priorités locales avant de lancer une création ou une refonte.
 						Vous pouvez aussi consulter la page{' '}
+						<a href="/creation-site-internet-psychologue/" class="text-foreground font-medium hover:text-primary">création de site pour psychologue</a>
+						{' '}et les{' '}
+						<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a>.
+					</>
+				) : entry.data.installationGuideHub ? (
+					<>
+						Le{' '}
+						<a href="/diagnostic-gratuit/?source=guide-installation-bottom" class="text-foreground font-medium hover:text-primary">diagnostic visibilité gratuit</a>
+						{' '}sert à faire le point sur votre fiche Google, vos profils en ligne et la pertinence d’un site — même si vous n’en avez pas encore.
+						Voir aussi la page{' '}
 						<a href="/creation-site-internet-psychologue/" class="text-foreground font-medium hover:text-primary">création de site pour psychologue</a>
 						{' '}et les{' '}
 						<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a>.
@@ -290,8 +307,17 @@ const faqSchema =
 				)}
 			</p>
 			<div class="flex flex-wrap gap-3">
-				<a href={entry.data.guidePillarHub ? '/diagnostic-gratuit/?source=guide-visibilite-bottom' : '/diagnostic-gratuit/'} class="btn-primary-solid inline-flex items-center rounded-lg px-5 py-3">
-					Demander un diagnostic gratuit
+				<a
+					href={
+						entry.data.guidePillarHub
+							? '/diagnostic-gratuit/?source=guide-visibilite-bottom'
+							: entry.data.installationGuideHub
+								? '/diagnostic-gratuit/?source=guide-installation-bottom'
+								: '/diagnostic-gratuit/'
+					}
+					class="btn-primary-solid inline-flex items-center rounded-lg px-5 py-3"
+				>
+					{entry.data.installationGuideHub ? 'Diagnostic visibilité gratuit' : 'Demander un diagnostic gratuit'}
 				</a>
 				<a href="/tarifs/" class="btn-outline-accent inline-flex items-center rounded-lg border-2 border-primary bg-background px-5 py-3 text-foreground hover:bg-surface">
 					Voir les tarifs

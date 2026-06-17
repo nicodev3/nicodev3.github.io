@@ -1,56 +1,12 @@
 ---
+import DiagnosticLeadCta from './DiagnosticLeadCta.astro';
+
 export interface Props {
 	variant?: 'intro' | 'final';
 }
 
 const { variant = 'intro' } = Astro.props;
-
-const copy = {
-	intro: {
-		eyebrow: 'Vous voulez un plan pour votre cabinet ?',
-		title: 'Je peux regarder votre situation et vous dire quoi prioriser.',
-		description:
-			'Le guide donne la méthode générale. Le diagnostic gratuit sert à l’appliquer à votre cas : site actuel, fiche Google, ville, concurrence locale et prochaines actions utiles.',
-		primary: 'Demander un diagnostic gratuit',
-		secondary: 'Voir les offres',
-		source: 'guide-visibilite-intro',
-	},
-	final: {
-		eyebrow: 'Vous avez la carte, passons à votre site',
-		title: 'Si vous voulez être accompagné, je peux cadrer le projet avec vous.',
-		description:
-			'Je crée des sites sobres pour psychologues, avec structure, contenus, base SEO locale, intégration de votre outil de rendez-vous et suivi mensuel.',
-		primary: 'Faire le point gratuitement',
-		secondary: 'Comparer les tarifs',
-		source: 'guide-visibilite-final',
-	},
-}[variant];
-
-const sourceEvent = copy.source.replaceAll('-', '_');
+const mapped = variant === 'intro' ? 'guide-visibilite-intro' : 'guide-visibilite-final';
 ---
 
-<aside class="not-prose my-10 rounded-xl border border-primary/25 bg-primary-50 p-5 shadow-sm sm:p-6" aria-label={copy.eyebrow}>
-	<p class="type-eyebrow text-primary-700">{copy.eyebrow}</p>
-	<h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
-		{copy.title}
-	</h2>
-	<p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">
-		{copy.description}
-	</p>
-	<div class="mt-5 flex flex-col gap-3 sm:flex-row">
-		<a
-			href={`/diagnostic-gratuit/?source=${copy.source}`}
-			class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
-			data-umami-event={`lead_click_diagnostic_from_${sourceEvent}`}
-		>
-			{copy.primary}
-		</a>
-		<a
-			href="/tarifs/"
-			class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface"
-			data-umami-event={`lead_click_tarifs_from_${sourceEvent}`}
-		>
-			{copy.secondary}
-		</a>
-	</div>
-</aside>
+<DiagnosticLeadCta variant={mapped} class="my-10" />

@@ -1,0 +1,140 @@
+---
+type DiagnosticLeadCtaVariant =
+	| 'guide-visibilite-intro'
+	| 'guide-visibilite-final'
+	| 'installation-intro'
+	| 'installation-mid'
+	| 'installation-final'
+	| 'mentions-legales'
+	| 'visibilite-tool';
+
+interface Props {
+	variant: DiagnosticLeadCtaVariant;
+	class?: string;
+	hidden?: boolean;
+	id?: string;
+}
+
+const { variant, class: className, hidden = false, id } = Astro.props;
+
+const copies: Record<
+	DiagnosticLeadCtaVariant,
+	{
+		eyebrow: string;
+		title: string;
+		description: string;
+		primary: string;
+		secondary: string;
+		secondaryHref: string;
+		source: string;
+	}
+> = {
+	'guide-visibilite-intro': {
+		eyebrow: 'Vous voulez un plan pour votre cabinet ?',
+		title: 'Je peux regarder votre situation et vous dire quoi prioriser.',
+		description:
+			'Le guide donne la méthode générale. Le diagnostic gratuit sert à l’appliquer à votre cas : site actuel ou projet, fiche Google, ville, concurrence locale et prochaines actions utiles.',
+		primary: 'Demander un diagnostic gratuit',
+		secondary: 'Voir les offres',
+		secondaryHref: '/tarifs/',
+		source: 'guide-visibilite-intro',
+	},
+	'guide-visibilite-final': {
+		eyebrow: 'Vous avez la carte, passons à votre site',
+		title: 'Si vous voulez être accompagné, je peux cadrer le projet avec vous.',
+		description:
+			'Je crée des sites sobres pour psychologues, avec structure, contenus, base SEO locale, intégration de votre outil de rendez-vous et suivi mensuel.',
+		primary: 'Faire le point gratuitement',
+		secondary: 'Comparer les tarifs',
+		secondaryHref: '/tarifs/',
+		source: 'guide-visibilite-final',
+	},
+	'installation-intro': {
+		eyebrow: 'Vous préparez votre installation ?',
+		title: 'Faites le point sur votre visibilité — même sans site pour l’instant.',
+		description:
+			'Fiche Google, profil Doctolib, cohérence des infos en ligne : le diagnostic gratuit vous indique quoi traiter en premier et si un site vitrine est pertinent à ce stade.',
+		primary: 'Demander un diagnostic visibilité',
+		secondary: 'Voir des exemples de sites',
+		secondaryHref: '/exemples-sites-psychologue/',
+		source: 'guide-installation-intro',
+	},
+	'installation-mid': {
+		eyebrow: 'Étape visibilité',
+		title: 'Pas encore de site ? Vérifions d’abord comment vous apparaissez en ligne.',
+		description:
+			'Beaucoup de collègues en installation commencent par Google et une plateforme de RDV. En 48 h, je vous renvoie trois priorités concrètes — avec ou sans projet de site.',
+		primary: 'Diagnostic visibilité gratuit',
+		secondary: 'Création de site psychologue',
+		secondaryHref: '/creation-site-internet-psychologue/',
+		source: 'guide-installation-mid',
+	},
+	'installation-final': {
+		eyebrow: 'Semaine 4 : le site professionnel',
+		title: 'Un site sobre peut structurer toute votre communication.',
+		description:
+			'Contenu, conformité (RGPD, mentions légales), widget de RDV et bases SEO locale : je m’occupe de la technique pour que vous restiez concentré·e sur la clinique.',
+		primary: 'Demander un diagnostic gratuit',
+		secondary: 'Voir les tarifs',
+		secondaryHref: '/tarifs/',
+		source: 'guide-installation-final',
+	},
+	'mentions-legales': {
+		eyebrow: 'Prochaine étape',
+		title: 'Ces mentions iront sur votre site — avez-vous le reste en place ?',
+		description:
+			'Hébergement, structure des pages, fiche Google, lien Doctolib : je peux faire un bilan rapide de votre visibilité cabinet et vous dire si un accompagnement site est pertinent.',
+		primary: 'Diagnostic visibilité gratuit',
+		secondary: 'Voir la création de site',
+		secondaryHref: '/creation-site-internet-psychologue/',
+		source: 'outil-mentions-legales',
+	},
+	'visibilite-tool': {
+		eyebrow: 'Aller plus loin',
+		title: 'Un regard personnalisé sur votre cabinet',
+		description:
+			'Ce questionnaire donne des pistes générales. Le diagnostic gratuit (avec ou sans site) applique la même logique à votre ville, vos profils en ligne et vos priorités réelles.',
+		primary: 'Demander un diagnostic gratuit',
+		secondary: 'Voir les offres',
+		secondaryHref: '/tarifs/',
+		source: 'outil-visibilite-web',
+	},
+};
+
+const copy = copies[variant];
+const sourceEvent = copy.source.replaceAll('-', '_');
+---
+
+<aside
+	id={id}
+	class:list={[
+		'not-prose rounded-xl border border-primary/25 bg-primary-50 p-5 shadow-sm sm:p-6',
+		className,
+		hidden && 'hidden',
+	]}
+	aria-label={copy.eyebrow}
+>
+	<p class="type-eyebrow text-primary-700">{copy.eyebrow}</p>
+	<h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
+		{copy.title}
+	</h2>
+	<p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">
+		{copy.description}
+	</p>
+	<div class="mt-5 flex flex-col gap-3 sm:flex-row">
+		<a
+			href={`/diagnostic-gratuit/?source=${copy.source}`}
+			class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
+			data-umami-event={`lead_click_diagnostic_from_${sourceEvent}`}
+		>
+			{copy.primary}
+		</a>
+		<a
+			href={copy.secondaryHref}
+			class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface"
+			data-umami-event={`lead_click_secondary_from_${sourceEvent}`}
+		>
+			{copy.secondary}
+		</a>
+	</div>
+</aside>

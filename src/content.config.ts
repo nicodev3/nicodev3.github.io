@@ -22,6 +22,8 @@ const blog = defineCollection({
       metaTitleSuffix: z.string().optional(),
       /** Page pilier : active un schéma ItemList vers les articles du cluster visibilité. */
       guidePillarHub: z.boolean().optional(),
+      /** Guide installation libéral : CTAs diagnostic visibilité (avec ou sans site). */
+      installationGuideHub: z.boolean().optional(),
       /** Masque le sommaire automatique (h2) généré sur la page article. */
       hideArticleToc: z.boolean().optional(),
       /** Questions/réponses pour le schéma FAQPage (réponses en texte brut, sans Markdown). */

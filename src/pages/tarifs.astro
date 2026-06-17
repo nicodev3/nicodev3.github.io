@@ -71,28 +71,20 @@ const tarifsFaqItems = [
 ];
 ---
 
-<Layout 
+<Layout
 	title="Tarifs sites psychologues et psychomotriciens | Nicodev"
 	description="Tarifs transparents pour création de sites internet pour psychologues, psychomotriciens et professions du soin proches. Abonnements à partir de 29€/mois."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
-	<Hero 
+	<Hero
 		title="Tarifs sites web pour praticiens du soin"
 		subtitle="Abonnement mensuel à partir de 29€ : un cadre simple, transparent, et un vrai suivi humain."
 		variant="light"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Tarifs' }]}
 	>
 		<Fragment slot="after">
-			<div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" data-suppress-whatsapp-when-visible>
-				<a href="#tarifs-offres" class="btn-primary-solid inline-flex w-full items-center justify-center rounded-xl px-6 py-3.5 font-semibold sm:w-auto">
-					Voir les offres
-				</a>
-				<a href="/diagnostic-gratuit/" class="btn-outline-accent inline-flex w-full items-center justify-center rounded-xl border-2 border-primary px-6 py-3.5 font-semibold text-foreground hover:bg-background sm:w-auto">
-					Demander un avis gratuit
-				</a>
-			</div>
 			<ul class="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted">
 				<li>Création incluse</li>
 				<li>Paiement après livraison</li>
@@ -152,19 +144,19 @@ const tarifsFaqItems = [
 			<div class="mt-10 rounded-lg border border-border bg-white p-6 sm:p-8">
 				<h3 class="text-xl font-semibold text-foreground mb-4">Mes engagements qualité</h3>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<BulletList 
+					<BulletList
 						items={[
 							"<strong>Visibilité :</strong> Référencement local, optimisation pour les recherches psychologue ou psychomotricien",
 							"<strong>Perception :</strong> Design rassurant, navigation intuitive, accessibilité",
 							"<strong>Technique :</strong> Sécurité RGPD, performance, conformité aux standards"
-						]} 
+						]}
 					/>
-					<BulletList 
+					<BulletList
 						items={[
 							"<strong>Contenu :</strong> Présentation de vos spécialités et rédaction régulière d'articles de blog",
 							"<strong>Services :</strong> Intégration du widget ou lien de prise de RDV (Doctolib, Qare, Maiia, Calendly...)",
 							"<strong>Accompagnement :</strong> Je m'occupe de toutes vos modifications de contenu"
-						]} 
+						]}
 					/>
 				</div>
 			</div>
@@ -214,7 +206,7 @@ const tarifsFaqItems = [
 				<h3 class="text-2xl font-bold text-center text-foreground mb-8">
 					Pourquoi choisir mes services plutôt qu'une plateforme ?
 				</h3>
-				
+
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
 					<div>
 						<h4 class="text-lg font-semibold text-foreground mb-4">Avec Wix, Squarespace, etc. :</h4>
@@ -271,11 +263,11 @@ const tarifsFaqItems = [
 						</ul>
 					</div>
 				</div>
-				
+
 				<div class="bg-background p-6 rounded-lg border border-border">
 					<h4 class="font-semibold text-foreground mb-3">Le vrai coût caché des plateformes :</h4>
 					<p class="text-muted">
-						<strong>Votre temps = votre argent.</strong> Passer 20h à créer et maintenir votre site vous-même = 1000-2000€ de temps perdu. 
+						<strong>Votre temps = votre argent.</strong> Passer 20h à créer et maintenir votre site vous-même = 1000-2000€ de temps perdu.
 						Mes services vous permettent de vous concentrer sur vos patients pendant que je m'occupe de votre visibilité web.
 					</p>
 					<p class="text-muted mt-3">

@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import DiagnosticLeadCta from "../../components/DiagnosticLeadCta.astro";
 ---
 
 <Layout
@@ -218,6 +219,13 @@ import Layout from "../../layouts/Layout.astro";
           class="prose prose-slate mt-5 max-w-none rounded-lg border border-slate-200 bg-slate-50 px-5 py-4 text-sm leading-relaxed text-slate-800 sm:text-base"
         >
         </div>
+
+        <DiagnosticLeadCta
+          id="ml-post-generation-cta"
+          variant="mentions-legales"
+          class="mt-8 hidden"
+          hidden
+        />
       </div>
 
       <div class="mt-6 rounded-xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-600">
@@ -582,6 +590,14 @@ import Layout from "../../layouts/Layout.astro";
       ];
     };
 
+    const postGenerationCta = document.getElementById("ml-post-generation-cta");
+
+    const revealPostGenerationCta = () => {
+      if (!(postGenerationCta instanceof HTMLElement)) return;
+      postGenerationCta.classList.remove("hidden");
+      postGenerationCta.removeAttribute("hidden");
+    };
+
     const render = () => {
       const documents = buildDocuments();
       resultEl.innerHTML = documents
@@ -597,6 +613,7 @@ import Layout from "../../layouts/Layout.astro";
               .join(""),
         )
         .join("");
+      revealPostGenerationCta();
     };
 
     const buildPlainText = () => {
