@@ -1,227 +1,341 @@
 ---
-title: "Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026"
-seoTitle: "Google Business Profile psychologue : créer et optimiser sa fiche"
-description: "Guide pour créer, compléter et optimiser une fiche Google Business Profile de psychologue afin d’améliorer sa visibilité locale."
-pubDate: "2026-03-02"
-author: "Nicolas Devaux"
-image: "../../assets/images/blog/seo-google-my-business.webp"
-tags: ["psychologue", "google business profile", "référencement local cabinet"]
+title: 'Psychologue : créer et optimiser sa fiche Google Business Profile en 2026'
+seoTitle: 'Google Business Profile psychologue : le guide 2026'
+description: 'Guide pratique pour créer et tenir à jour une fiche Google Business Profile de psychologue, sans négliger l’éligibilité, la confidentialité et la déontologie.'
+pubDate: '2026-03-02'
+updatedDate: '2026-06-18'
+author: 'Nicolas Devaux'
+image: '../../assets/images/blog/seo-google-my-business.webp'
+tags:
+  ['psychologue', 'google business profile', 'référencement local cabinet', 'cadre déontologique']
 ---
 
-*Temps de lecture : 11 minutes*
+_Temps de lecture : 11 minutes_
 
-Vous êtes psychologue en libéral et vous aimeriez apparaître dans les résultats Google quand un patient cherche "psychologue près de chez moi" ou "psychologue + votre ville" ?
+Quand une personne cherche un psychologue, elle ne commence pas toujours par parcourir plusieurs sites. Elle regarde souvent la carte, vérifie l’adresse, les horaires, les photos du cabinet, puis décide si elle souhaite en savoir plus.
 
-La fiche Google Business Profile (anciennement Google My Business) est le levier le plus direct pour y parvenir. C'est gratuit, relativement simple à mettre en place, et l'impact sur votre visibilité locale est souvent rapide.
+Une fiche Google Business Profile — l’ancien Google My Business — peut donc être très utile. Elle permet de présenter votre cabinet dans Google Search et Google Maps, gratuitement. Elle ne garantit toutefois ni une première place ni davantage de consultations : elle vous rend surtout plus facile à trouver et donne des repères concrets avant une prise de contact.
 
-Pourtant, beaucoup de psychologues n'ont pas de fiche, ou en ont une mal renseignée. Ce guide vous explique comment créer, vérifier et optimiser votre fiche étape par étape, en respectant le cadre déontologique de votre profession.
+Ce guide explique comment créer une fiche exacte, sobre et adaptée à l’exercice d’un psychologue en France.
 
-## Pourquoi la fiche Google est incontournable pour un psychologue en libéral
+> **À vérifier avant de commencer :** Google réserve les fiches Business Profile aux activités qui rencontrent leur clientèle en personne. Un psychologue qui consulte dans un cabinet peut être éligible. Une activité exercée exclusivement en visio ne l’est pas, sauf si le professionnel rencontre aussi physiquement des personnes ou se déplace réellement auprès d’elles.
 
-Quand une personne cherche un psychologue sur Google, elle voit d'abord le **pack local** : un bloc avec une carte et trois fiches d'établissement, avant même les résultats classiques.
+## À quoi sert une fiche Google pour un psychologue ?
 
-Si vous n'avez pas de fiche Google Business Profile, vous êtes invisible dans ce bloc. Même si votre site internet est bien référencé, vous passez à côté d'une part importante des recherches locales.
+Selon la recherche et la localisation de l’internaute, Google peut afficher une carte accompagnée de plusieurs professionnels. La fiche peut alors présenter :
 
-Quelques chiffres qui parlent :
+- votre nom professionnel et votre catégorie ;
+- l’adresse du cabinet et son emplacement sur la carte ;
+- vos horaires et votre numéro de téléphone ;
+- un lien vers votre site ou votre prise de rendez-vous ;
+- des photos et des informations pratiques ;
+- les avis publiés par les internautes.
 
-- la majorité des recherches liées à un service de santé incluent une composante locale ("psychologue Lyon", "psychologue proche de moi"),
-- les fiches d'établissement affichent directement vos coordonnées, vos horaires et un lien vers votre site,
-- les patients comparent les fiches (avis, photos, informations) avant de prendre contact.
+Sans fiche, votre site peut toujours apparaître dans les résultats classiques. Vous renoncez simplement à une présence que beaucoup de personnes utilisent pour chercher un professionnel à proximité.
 
-En résumé : la fiche Google Business Profile est le complément local naturel de votre site internet. Les deux se renforcent mutuellement.
+La fiche et le site ont des fonctions différentes. La première répond rapidement à « où, quand et comment vous joindre ? ». Le second permet de comprendre votre cadre, vos modalités de consultation et votre manière de travailler.
 
-## Créer sa fiche étape par étape
+## Avant la création : votre cabinet est-il éligible ?
 
-### 1. Accéder à Google Business Profile
+Cette étape évite bien des suspensions.
 
-Rendez-vous sur [business.google.com](https://business.google.com) et connectez-vous avec un compte Google. Si vous n'en avez pas, créez-en un dédié à votre activité professionnelle (ou utilisez votre compte existant).
+### Vous recevez dans un cabinet
 
-### 2. Ajouter votre établissement
+Votre fiche peut afficher l’adresse si vous recevez effectivement les personnes à cet endroit pendant les horaires indiqués. Google demande que les activités affichant une adresse disposent d’une présence réelle et d’une signalétique fixe au nom utilisé sur la fiche.
 
-Cliquez sur "Ajouter un établissement" puis "Ajouter un seul établissement".
+Dans un cabinet partagé, votre plaque professionnelle, votre nom sur l’interphone ou une signalétique permanente peuvent notamment servir lors de la vérification. Une simple domiciliation ou une boîte aux lettres ne suffit pas.
 
-Renseignez le **nom de votre cabinet** tel qu'il apparaît dans la réalité. Évitez d'ajouter des mots-clés artificiels dans le nom (par exemple, ne mettez pas "Psychologue Hypnothérapeute TCC Lyon Centre" si votre cabinet s'appelle "Cabinet de Psychologie Martin"). Google peut suspendre les fiches qui ne respectent pas cette règle.
+### Vous louez ponctuellement un bureau ou travaillez en espace partagé
 
-### 3. Choisir la catégorie principale
+Soyez prudent. Google n’accepte pas les bureaux virtuels. Pour afficher l’adresse d’un espace de coworking ou d’un bureau partagé, le lieu doit notamment recevoir les clients, être occupé pendant les horaires annoncés et présenter une signalétique claire de votre activité.
 
-Sélectionnez **"Psychologue"** comme catégorie principale. C'est la catégorie la plus pertinente et la plus recherchée.
+Si ces conditions ne sont pas réunies, ne créez pas une adresse artificielle dans l’espoir d’être visible dans cette ville : la fiche risque d’être suspendue.
 
-Vous pourrez ajouter des catégories secondaires ensuite (voir la section dédiée plus bas).
+### Vous consultez uniquement en visio
 
-### 4. Renseigner l'adresse
+Une activité entièrement en ligne n’est pas éligible à Google Business Profile. Google précise que les fiches sont réservées aux activités qui rencontrent leur clientèle en personne et qu’elles ne sont pas destinées aux activités exclusivement en ligne ([conditions d’éligibilité de Google Business Profile](https://support.google.com/business/answer/13763036), [présentation officielle du service](https://support.google.com/business/answer/7039811)).
 
-Si vous recevez des patients dans un cabinet, indiquez l'adresse complète. Votre cabinet apparaîtra sur Google Maps.
+Il ne faut pas non plus déclarer une activité exclusivement en visio comme « activité de zone desservie ». Ce réglage concerne les professionnels qui se déplacent physiquement chez leurs clients ou leur fournissent un service sur place ([règles Google relatives aux zones desservies](https://support.google.com/business/answer/9157481)).
 
-Si vous exercez uniquement en visio ou à domicile, vous pouvez choisir de ne pas afficher d'adresse, mais de définir une zone de service (ville ou rayon géographique).
+Dans ce cas, travaillez plutôt la visibilité de votre site, vos pages de présentation et les annuaires réellement adaptés à votre pratique.
 
-### 5. Ajouter vos coordonnées
+### Vous consultez au cabinet et en visio
 
-Renseignez :
+Vous pouvez créer une fiche pour le cabinet où vous recevez. Mentionnez ensuite la téléconsultation parmi vos services ou sur votre site, si cette option est proposée dans votre profil.
 
-- votre **numéro de téléphone** professionnel,
-- l'**URL de votre site internet**.
+## Créer ou revendiquer sa fiche
 
-Ces informations doivent être identiques partout : sur votre site, sur votre fiche Google, et sur tout annuaire où vous apparaissez. C'est ce qu'on appelle la **cohérence NAP** (Name, Address, Phone), un facteur important pour le référencement local.
+### 1. Vérifier si une fiche existe déjà
 
-### 6. Vérifier votre fiche
+Recherchez votre nom et votre ville dans Google Maps. Une fiche a parfois été créée automatiquement à partir de données publiques ou par une autre personne.
 
-Google doit confirmer que vous êtes bien le propriétaire de l'établissement. Selon les cas, la vérification se fait par :
+Si elle existe, choisissez l’option permettant de la revendiquer. Évitez d’en créer une seconde : les doublons compliquent la gestion et peuvent être fusionnés ou supprimés.
 
-- **courrier postal** (carte avec un code, délai de 1 à 2 semaines),
-- **téléphone** (code envoyé par SMS ou appel),
-- **email** (si votre domaine est déjà vérifié).
+Si aucune fiche n’existe, rendez-vous sur [business.google.com/add](https://business.google.com/add) et suivez les instructions.
 
-Tant que la vérification n'est pas faite, votre fiche n'est pas publiée. Lancez la procédure dès que possible.
+### 2. Utiliser un compte Google professionnel
 
-## Optimiser les informations clés
+Vous pouvez utiliser une adresse existante, y compris une adresse qui ne se termine pas par Gmail. Un compte distinct de votre compte personnel facilite néanmoins la continuité de gestion et limite les erreurs de partage.
 
-Une fiche créée ne suffit pas. Une fiche **complète et à jour** est nettement mieux positionnée qu'une fiche vide.
+Si un prestataire vous accompagne, ajoutez-le comme gestionnaire. Ne lui transmettez pas votre mot de passe et conservez toujours la propriété principale de la fiche.
 
-### Description de l'activité
+### 3. Saisir un nom réel, pas une liste de mots-clés
 
-Rédigez une description claire et factuelle de votre pratique (750 caractères maximum). Mentionnez :
+Utilisez le nom sous lequel votre activité est connue et présentée dans la réalité : par exemple « Marie Martin — Psychologue » si cette formulation figure sur votre plaque, votre site ou vos documents professionnels.
 
-- votre spécialité ou approche (TCC, systémique, psychanalyse, EMDR...),
-- les publics accompagnés (adultes, adolescents, couples...),
-- votre localisation.
+Évitez les noms comme « Psychologue TCC EMDR anxiété Lyon centre ». Ajouter des services et une ville uniquement pour gagner des positions contrevient aux règles de Google et peut entraîner une suspension.
 
-Restez sobre et informatif. Évitez les formulations marketing ou les promesses de résultats, conformément à votre cadre déontologique.
+### 4. Choisir la catégorie la plus précise
 
-### Horaires d'ouverture
+Choisissez **« Psychologue »** comme catégorie principale lorsqu’elle est proposée et correspond à votre exercice.
 
-Indiquez vos horaires de consultation précis, y compris les horaires spéciaux (vacances, jours fériés). Des horaires à jour évitent les appels inutiles et inspirent confiance.
+Les catégories disponibles peuvent évoluer. Ajoutez seulement quelques catégories secondaires qui décrivent réellement votre activité et les titres que vous êtes autorisé à utiliser. Par exemple, ne sélectionnez « Psychothérapeute » que si vous pouvez légalement faire usage de ce titre.
 
-### Photos
+Les approches comme les TCC, l’EMDR ou la psychanalyse relèvent plutôt de la description et des services. Elles ne justifient pas nécessairement une catégorie supplémentaire.
 
-Ajoutez des photos de qualité :
+### 5. Indiquer l’adresse avec exactitude
 
-- **photo de couverture** : façade du cabinet ou salle d'attente,
-- **logo** : si vous en avez un,
-- **photos intérieures** : bureau, salle d'attente, accès.
+Saisissez l’adresse où les consultations ont réellement lieu et placez correctement le repère sur la carte. N’utilisez ni boîte postale, ni adresse de domiciliation, ni adresse empruntée à un autre professionnel.
 
-Les fiches avec photos reçoivent significativement plus de demandes d'itinéraire et de clics vers le site. Inutile de publier des dizaines de photos : 5 à 8 images de bonne qualité suffisent.
+Si vous exercez dans plusieurs cabinets distincts, chaque lieu doit remplir les critères d’éligibilité. Ne créez pas plusieurs fiches pour couvrir artificiellement plusieurs villes.
 
-### Attributs et services
+### 6. Ajouter les coordonnées utiles
 
-Google permet d'ajouter des attributs à votre fiche : accessibilité PMR, prise de rendez-vous en ligne, consultation en visio, etc. Renseignez tous les attributs pertinents pour aider les patients à trouver l'information rapidement.
+Renseignez au minimum :
 
-## Choisir les bonnes catégories
+- un numéro professionnel auquel vous pouvez être joint ;
+- l’adresse de votre site ;
+- un lien de prise de rendez-vous, si Google propose ce champ ;
+- des horaires réalistes.
 
-### Catégorie principale
+Veillez à reprendre les mêmes nom, adresse et téléphone sur votre site. Cette cohérence réduit surtout la confusion pour les personnes qui vous cherchent et aide Google à rapprocher les bonnes informations.
 
-**"Psychologue"** est le choix le plus évident et le plus efficace. C'est cette catégorie qui détermine principalement pour quelles recherches votre fiche apparaît.
+## La vérification : prévoir des preuves concrètes
 
-### Catégories secondaires
+Google choisit automatiquement les méthodes disponibles. Vous ne pouvez pas toujours sélectionner celle que vous préférez.
 
-Vous pouvez ajouter des catégories secondaires pour affiner votre profil :
+La vérification peut se faire par :
 
-- "Psychothérapeute" (si vous portez ce titre),
-- "Service de conseil en santé mentale",
-- "Service de conseil matrimonial".
+- enregistrement vidéo ;
+- appel vidéo en direct ;
+- téléphone ou SMS ;
+- e-mail ;
+- courrier postal.
 
-N'ajoutez que des catégories qui correspondent réellement à votre exercice. Multiplier les catégories non pertinentes ne vous aidera pas : Google favorise la précision.
+La vidéo est aujourd’hui fréquemment proposée. Google peut vous demander de montrer, en une seule séquence, l’environnement extérieur, le numéro de rue, la signalétique du cabinet et des éléments prouvant que vous gérez l’activité.
 
-## Gérer les avis avec éthique
+Préparez donc avant de commencer :
 
-Les avis sont un sujet sensible pour les psychologues. Ils influencent le classement de votre fiche et la confiance des patients, mais le cadre déontologique impose des limites.
+- votre plaque ou une signalétique permanente ;
+- l’accès au cabinet ;
+- un document professionnel cohérent avec le nom et l’adresse déclarés ;
+- si nécessaire, des éléments réservés au professionnel qui occupe les lieux.
 
-### Ce que vous pouvez faire
+La vérification n’est pas toujours immédiate. Google indique qu’un contrôle peut prendre jusqu’à cinq jours ouvrés après l’envoi des éléments. Une fiche vérifiée peut aussi faire l’objet d’une nouvelle vérification après une modification importante.
 
-- **Répondre à chaque avis**, positif ou négatif, de manière professionnelle et mesurée.
-- **Remercier** simplement les personnes qui laissent un avis positif.
-- **Répondre aux avis négatifs** avec calme, sans divulguer d'information sur la relation thérapeutique.
+## Compléter la fiche sans la transformer en publicité
 
-### Ce qu'il faut éviter
+Une fiche utile n’a pas besoin d’en faire trop. Elle doit permettre à une personne de comprendre rapidement si votre cadre de consultation peut lui convenir.
 
-- **Solliciter activement des avis** auprès de vos patients. La relation thérapeutique repose sur une asymétrie qui rend toute demande potentiellement problématique.
-- **Offrir une contrepartie** en échange d'un avis.
-- **Répondre avec des détails** sur le suivi ou la situation d'un patient (même en réponse à un avis négatif).
+### La description
 
-En pratique, certains patients laissent spontanément un avis, et c'est tout à fait normal. L'important est de ne pas transformer la demande d'avis en pratique systématique.
+La description est limitée à 750 caractères. Présentez de façon simple :
 
-### Signaler un avis abusif
+- votre titre et, si cela éclaire réellement le public, votre numéro RPPS ;
+- les personnes que vous recevez ;
+- les principales problématiques ou demandes accompagnées ;
+- vos orientations de travail ;
+- le lieu et les modalités de consultation.
 
-Si un avis est faux, diffamatoire ou sans rapport avec votre activité, vous pouvez le signaler à Google via votre tableau de bord. La suppression n'est pas garantie, mais les avis clairement abusifs sont généralement retirés.
+Évitez les promesses telles que « résultats rapides », « guérison garantie » ou « meilleur psychologue de la ville ». Elles sont peu crédibles et incompatibles avec la prudence attendue dans la présentation d’une pratique clinique.
 
-## Lier sa fiche à son site internet
+Voici un exemple à adapter :
 
-La fiche Google Business Profile et votre site internet ne sont pas en concurrence. Ils se complètent.
+> Psychologue à Nantes, je reçois au cabinet des adultes et de jeunes adultes confrontés notamment à l’anxiété, à l’épuisement ou à une période de changement. Les consultations ont lieu sur rendez-vous, au cabinet ou en visio pour les personnes déjà informées de ce cadre. Vous trouverez sur mon site le détail de ma pratique, mes tarifs et les modalités du premier entretien.
 
-### Comment ils se renforcent
+### Les horaires
 
-- La fiche renvoie vers votre site pour les informations détaillées (approche, spécialités, tarifs).
-- Votre site renforce la crédibilité de la fiche en montrant un contenu structuré et professionnel.
-- La cohérence des informations (nom, adresse, téléphone) entre les deux améliore votre positionnement local.
+Indiquez les heures auxquelles votre activité est réellement joignable ou ouverte, puis ajoutez les horaires exceptionnels pour les congés et jours fériés.
 
-### Bonnes pratiques
+Si vous consultez uniquement sur rendez-vous, vous pouvez le préciser dans la description. Évitez d’afficher une très large amplitude si personne ne peut répondre ou accueillir pendant ces heures.
 
-- Vérifiez que l'URL renseignée dans la fiche pointe bien vers votre site (pas vers une page d'erreur ou un ancien domaine).
-- Ajoutez sur votre site une page "Contact" ou "Accès" avec les mêmes informations que la fiche (adresse complète, téléphone, horaires).
-- Si votre site contient des données structurées (schema.org LocalBusiness), Google pourra croiser plus facilement les informations.
+### Les photos
 
-Pour en savoir plus sur la création d'un site professionnel optimisé, consultez le guide complet : [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/).
+Quelques images récentes suffisent :
 
-## Erreurs fréquentes à éviter
+- l’entrée et la plaque, pour trouver le cabinet ;
+- la salle d’attente ;
+- le bureau, sans personne ni document visible ;
+- les éléments utiles concernant l’accessibilité.
 
-1. **Fiche incomplète** : pas de description, pas de photo, horaires manquants. Google favorise les fiches riches.
-2. **Informations incohérentes** : adresse ou téléphone différent entre le site et la fiche. Cela nuit au référencement local.
-3. **Nom bourré de mots-clés** : "Cabinet Psychologue TCC Anxiété Dépression Lyon 3e". Google peut suspendre votre fiche.
-4. **Catégorie mal choisie** : choisir "Psychiatre" ou "Coach" si vous êtes psychologue fausse les résultats.
-5. **Fiche jamais mise à jour** : des horaires obsolètes ou un numéro de téléphone qui a changé font fuir les patients.
-6. **Ignorer les avis** : ne pas répondre aux avis (même positifs) envoie un signal de désintérêt.
-7. **Ne pas vérifier la fiche** : sans vérification, la fiche n'est pas publiée et vous n'avez aucun contrôle dessus.
+Vérifiez soigneusement l’arrière-plan. Un agenda, un nom sur un dossier ou une personne reconnaissable n’a rien à faire dans une photo publique. N’utilisez pas non plus de photo laissant croire à un cabinet différent du vôtre.
 
-## Suivre les performances de sa fiche
+### Les services et informations pratiques
 
-Google Business Profile fournit des statistiques utiles dans la section "Performances" :
+Selon les options proposées pour votre catégorie, vous pouvez préciser :
 
-- **nombre de recherches** ayant affiché votre fiche,
-- **actions effectuées** : appels, demandes d'itinéraire, visites du site,
-- **mots-clés utilisés** par les internautes pour vous trouver.
+- les publics reçus ;
+- la consultation au cabinet ou à distance ;
+- l’accessibilité du lieu ;
+- les langues parlées ;
+- les modalités de rendez-vous.
 
-Consultez ces données une fois par mois pour comprendre ce qui fonctionne et ajuster votre fiche si nécessaire.
+Les attributs disponibles varient selon les catégories et les comptes. Ne cherchez pas à remplir un champ lorsqu’il décrit mal votre exercice.
 
-## Questions fréquentes (FAQ)
+## Avis Google : répondre sans confirmer une prise en charge
+
+Les avis posent une difficulté particulière aux psychologues : y répondre peut confirmer publiquement qu’une personne a été reçue, alors que cette information relève déjà de sa vie privée.
+
+La règle la plus sûre consiste à rédiger des réponses générales, qui pourraient convenir aussi bien à un patient, à un proche, à un partenaire professionnel ou à une personne que vous n’avez jamais rencontrée.
+
+### Exemple de réponse prudente à un avis positif
+
+> Merci d’avoir pris le temps de partager ce retour.
+
+Cette réponse remercie sans confirmer la nature de la relation.
+
+### Exemple de réponse prudente à un avis négatif
+
+> Je prends connaissance de votre message. Pour préserver la confidentialité de chacun, je ne peux pas commenter publiquement une situation individuelle. Vous pouvez me contacter directement par les coordonnées professionnelles indiquées sur cette page.
+
+Ne discutez jamais en public du contenu d’une séance, d’un diagnostic, d’un rendez-vous manqué ou d’un désaccord financier identifiable. Même si l’auteur de l’avis révèle lui-même ces informations, cela ne vous autorise pas à les compléter.
+
+### Faut-il demander des avis à ses patients ?
+
+Google autorise la demande d’avis authentiques et fournit même un lien ou un QR code à cette fin. Il interdit en revanche les contreparties, les faux avis, la pression et la sollicitation sélective des seules personnes susceptibles de publier une note positive.
+
+Pour un psychologue, la question ne se limite toutefois pas au règlement de Google. La relation thérapeutique est asymétrique et la demande peut être vécue comme une attente du professionnel. Une position prudente consiste donc à ne pas solliciter systématiquement les patients et à ne jamais conditionner, même implicitement, la relation ou le suivi à un retour public.
+
+### Signaler un avis problématique
+
+Vous pouvez signaler un avis qui enfreint les règles de Google : faux contenu, harcèlement, données personnelles, propos hors sujet ou conflit d’intérêts, par exemple.
+
+Un avis simplement négatif n’est pas automatiquement supprimé. Conservez une réponse sobre et utilisez la procédure de signalement sans engager de débat public.
+
+## Relier la fiche au site du cabinet
+
+La fiche donne des informations immédiates ; le site apporte le contexte qui manque souvent à une carte.
+
+Sur votre site, prévoyez une page « Contact et accès » avec :
+
+- le nom professionnel utilisé sur la fiche ;
+- l’adresse exacte et les indications d’accès ;
+- le téléphone ;
+- les horaires ou modalités de rendez-vous ;
+- les informations d’accessibilité ;
+- les tarifs et les moyens de paiement, sur une page clairement identifiable.
+
+Vérifiez aussi que le site fonctionne correctement sur mobile. Beaucoup de personnes passent directement de la fiche à votre site depuis leur téléphone.
+
+Des données structurées adaptées peuvent aider les moteurs à comprendre les informations du cabinet, mais elles ne remplacent ni un contenu clair ni une fiche exacte.
+
+Pour approfondir ce volet : [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/).
+
+## Ce qui influence la visibilité locale
+
+Google présente trois grandes familles de critères :
+
+- **la pertinence** entre la recherche et les informations de la fiche ;
+- **la distance** entre l’internaute et le cabinet ;
+- **la notoriété**, évaluée à partir de différents signaux disponibles sur le web et dans Google.
+
+Vous pouvez améliorer l’exactitude et la qualité de votre présence, mais pas maîtriser la distance de l’internaute ni garantir une position. Méfiez-vous donc des prestataires qui promettent une première place sur Google Maps.
+
+En pratique, concentrez-vous sur :
+
+- une catégorie principale juste ;
+- des informations complètes et régulièrement vérifiées ;
+- une adresse et des horaires exacts ;
+- un site cohérent et utile ;
+- des photos représentatives ;
+- une gestion mesurée des avis.
+
+## Les erreurs les plus fréquentes
+
+1. **Créer une fiche pour une activité exclusivement en visio.**
+2. **Utiliser une adresse de domiciliation ou un bureau virtuel.**
+3. **Ajouter des mots-clés au nom du cabinet qui n’existent pas dans la réalité.**
+4. **Choisir des catégories ou des titres qui ne correspondent pas à son exercice.**
+5. **Créer plusieurs fiches pour le même professionnel et le même lieu.**
+6. **Publier des photos contenant des informations confidentielles.**
+7. **Répondre à un avis en confirmant qu’une personne est ou a été suivie.**
+8. **Oublier de modifier les horaires, l’adresse ou le téléphone après un changement.**
+9. **Donner la propriété principale de la fiche à un prestataire.**
+10. **Croire qu’une fiche complète garantit une place dans les trois premiers résultats.**
+
+## Suivre les performances sans surinterpréter les chiffres
+
+La rubrique « Performances » peut notamment présenter les recherches, appels, clics vers le site et demandes d’itinéraire associés à la fiche. Les indicateurs disponibles évoluent régulièrement.
+
+Un contrôle mensuel suffit généralement. Regardez surtout les tendances :
+
+- les personnes trouvent-elles la bonne fiche ?
+- cliquent-elles vers le site ?
+- demandent-elles un itinéraire ?
+- une modification récente a-t-elle créé une baisse inhabituelle ?
+
+Ces données mesurent des interactions avec Google, pas le nombre réel de nouveaux patients. Pour comprendre l’origine des prises de contact, une question simple lors du premier échange — « Comment avez-vous trouvé mes coordonnées ? » — reste souvent plus parlante.
+
+## Questions fréquentes
 
 ### La fiche Google Business Profile est-elle gratuite ?
 
-Oui, entièrement gratuite. Vous n'avez rien à payer pour créer, vérifier et gérer votre fiche. Méfiez-vous des démarchages téléphoniques qui vous proposent de "créer votre fiche Google" contre paiement : c'est un service que vous pouvez faire vous-même ou confier à un professionnel de confiance.
+Oui. La création, la revendication et la gestion courante sont gratuites. Un professionnel peut facturer son accompagnement, mais Google ne demande pas de paiement pour rendre la fiche active.
 
-### Combien de temps faut-il pour que ma fiche apparaisse ?
+### Combien de temps faut-il pour apparaître ?
 
-Après la vérification (1 à 14 jours selon la méthode), votre fiche est généralement visible dans les heures qui suivent. Son positionnement dans le pack local s'améliore ensuite au fil des semaines, à mesure que Google évalue la pertinence et la complétude de vos informations.
+Il n’existe pas de délai garanti. La méthode de vérification dépend du profil et Google peut examiner les éléments transmis pendant plusieurs jours ouvrés. La visibilité sur des recherches génériques dépend ensuite notamment de la pertinence, de la distance et de la notoriété.
 
-### Fiche Google ou annuaire Doctolib : faut-il choisir ?
+### Puis-je créer une fiche si je consulte seulement en visio ?
 
-Non, les deux ont des rôles différents. Doctolib facilite la prise de rendez-vous en ligne. La fiche Google Business Profile vous rend visible dans les recherches locales Google et Google Maps. Les deux sont complémentaires. Vous pouvez d'ailleurs ajouter un lien de prise de rendez-vous (Doctolib, Maiia, etc.) directement dans votre fiche Google.
+Non, pas pour une activité exclusivement en ligne. Une zone desservie ne contourne pas cette règle : elle concerne une activité qui se déplace physiquement auprès de ses clients.
 
-### Puis-je avoir une fiche si je ne reçois qu'en visio ?
+### Puis-je afficher l’adresse d’un cabinet loué un jour par semaine ?
 
-Oui. Vous pouvez créer une fiche de type "zone de service" sans afficher d'adresse physique. Vous définissez la zone géographique que vous desservez. C'est moins puissant qu'une fiche avec adresse pour le référencement local, mais cela reste utile.
+Cela peut être possible si vous y recevez réellement pendant les horaires indiqués et si le lieu respecte les règles de Google, notamment en matière de présence et de signalétique. Une location ponctuelle sans présence identifiable est risquée.
 
-### Mon cabinet a déménagé, que faire ?
+### Puis-je avoir une fiche dans chacun de mes cabinets ?
 
-Mettez à jour l'adresse dans votre fiche Google Business Profile dès que possible. Pensez aussi à mettre à jour votre site internet et tous les annuaires où vous apparaissez, pour maintenir la cohérence NAP.
+Oui, si chaque lieu est un véritable lieu d’exercice, reçoit les personnes pendant les horaires affichés et respecte les critères d’éligibilité. Il ne faut pas créer des fiches uniquement pour cibler plusieurs villes.
 
-### Quelqu'un a créé une fiche à mon nom, que faire ?
+### Google ou Doctolib : faut-il choisir ?
 
-Il arrive que Google crée automatiquement des fiches à partir de données publiques. Vous pouvez "revendiquer" cette fiche en passant par la procédure de vérification. Une fois vérifiée, vous en prenez le contrôle complet.
+Non. La fiche Google sert d’abord à être trouvé dans Search et Maps. Une plateforme de rendez-vous sert principalement à présenter des disponibilités et à organiser la prise de rendez-vous. Vous pouvez relier les deux lorsque les options de votre fiche le permettent.
 
-## Conclusion
+### Mon cabinet déménage : dois-je créer une nouvelle fiche ?
 
-La fiche Google Business Profile est un outil simple, gratuit et efficace pour améliorer votre visibilité locale en tant que psychologue. En y consacrant une à deux heures de mise en place, puis quelques minutes par mois de mise à jour, vous augmentez significativement vos chances d'être trouvé par des patients qui cherchent un professionnel dans votre zone géographique.
+En principe, mettez à jour la fiche existante au lieu d’en créer une autre. Google peut demander une nouvelle vérification. Modifiez aussi votre site et vos autres profils professionnels pour éviter des indications contradictoires.
 
-L'essentiel : une fiche complète, des informations cohérentes avec votre site, et une gestion des avis respectueuse de votre cadre professionnel.
+### Une autre personne contrôle déjà ma fiche : que faire ?
 
-Si vous souhaitez être accompagné dans la création ou l'optimisation de votre fiche Google Business Profile, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/). Pour le volet site et référencement associé&nbsp;: [référencement site psychologue](/referencement-site-psychologue/) et [création de site web pour psychologue](/creation-site-internet-psychologue/).
+Utilisez la procédure officielle de demande de propriété depuis Google Maps ou Business Profile. Ne créez pas immédiatement un doublon.
+
+## En résumé
+
+Une bonne fiche Google de psychologue est d’abord une fiche honnête : un lieu réel, un nom réel, des horaires réalistes et des informations compréhensibles.
+
+Elle peut faciliter la rencontre avec des personnes qui cherchent un cabinet à proximité. Elle ne doit cependant ni exagérer votre pratique, ni exposer des informations confidentielles, ni transformer la relation thérapeutique en course aux avis.
+
+Si vous souhaitez un regard extérieur sur votre fiche et sa cohérence avec votre site, vous pouvez [me contacter](/contact/) ou consulter la page [référencement pour psychologues](/referencement-site-psychologue/).
 
 ---
 
+## Sources officielles consultées
+
+- [Google — Conditions d’éligibilité et de propriété d’une fiche](https://support.google.com/business/answer/13763036)
+- [Google — Présentation du service et exclusion des activités exclusivement en ligne](https://support.google.com/business/answer/7039811)
+- [Google — Règles relatives aux activités de zone desservie](https://support.google.com/business/answer/9157481)
+- [Google — Règles de représentation d’une activité](https://support.google.com/business/answer/3038177)
+- [Google — Ajouter ou revendiquer une fiche](https://support.google.com/business/answer/2911778)
+- [Google — Vérifier une activité](https://support.google.com/business/answer/7107242)
+- [Google — Améliorer son classement local](https://support.google.com/business/answer/7091)
+- [Google — Règles relatives aux avis et contenus](https://support.google.com/contributionpolicy/answer/7400114)
+- [CNCDP — Code de déontologie des psychologues de 2021](https://www.cncdp.fr/index.php/code-de-deontologie/code-de-deontologie-2021)
+- [Agence du Numérique en Santé — Bascule des psychologues d’ADELI vers le RPPS](https://esante.gouv.fr/offres-services/annuaire-sante/bascule-des-professionnels-adeli-dans-le-rpps)
+
 ## À lire aussi
 
-- [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/) — guide complet SEO et éthique
+- [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/) — pages essentielles, SEO et cadre professionnel
+- [Avis Google et e-réputation du psychologue](/blog/avis-google-e-reputation-psychologue/) — répondre avec prudence
 - [Référencement site psychologue](/referencement-site-psychologue/) — prestation et attentes réalistes
-- [Création de site web pour psychologue](/creation-site-internet-psychologue/) — offre vitrine et suivi
-- [Combien coûte un site pour psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) — budget et fourchettes réalistes
-- [Création d'un site Internet](/blog/creation-site-internet/) — comprendre les technologies du web moderne
-- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/) — guide pour débutants
+- [Création de site web pour psychologue](/creation-site-internet-psychologue/) — offre vitrine et accompagnement
