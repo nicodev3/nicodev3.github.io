@@ -54,7 +54,7 @@ La recommandation n'est pas une « interdiction légale du code », mais la prat
 
 **Le consentement ne suffit pas.** Il est obtenu dans une relation asymétrique (Principe 1 du code). Le secret professionnel engage le psychologue vis-à-vis de la loi, pas seulement vis-à-vis du patient : son accord ne lève pas, à lui seul, l'obligation. Et un témoignage publié reste indexé pendant des années — la personne peut le regretter bien après.
 
-**L'effet est faible.** Les patients potentiels savent qu'un témoignage est sélectionné par le praticien : sa valeur informative est limitée. Les éléments qui rassurent vraiment sont d'un autre ordre (titre, ADELI, parcours, approche, tarifs). L'absence de témoignages chez un psychologue n'est pas un signal négatif — c'est même devenu, pour beaucoup, un signe de sérieux.
+**L'effet est faible.** Les patients potentiels savent qu'un témoignage est sélectionné par le praticien : sa valeur informative est limitée. Les éléments qui rassurent vraiment sont d'un autre ordre (titre, RPPS, parcours, approche, tarifs). L'absence de témoignages chez un psychologue n'est pas un signal négatif — c'est même devenu, pour beaucoup, un signe de sérieux.
 
 **L'image collective compte.** Un site de psychologue qui adopte les codes marketing d'un service commercial — cinq étoiles en bandeau, citations en italique, photos de patients souriants — installe une confusion qui dessert l'ensemble de la profession (article 30).
 
@@ -93,7 +93,7 @@ Deux options prudentes :
 
 Si vous renoncez aux témoignages et adoptez une posture défensive sur les avis, d'autres leviers — **bien plus solides** qu'une étoile — restent disponibles.
 
-**Sur votre site :** titre et **numéro ADELI** affichés ; parcours et formation détaillés sobrement ; approche clinique expliquée sans jargon ; tarifs explicites et conditions (mutuelle, Mon Soutien Psy, annulation) ; coordonnées cohérentes avec votre fiche Google et les annuaires (voir [SEO local pour psychologues](/blog/psychologue-premier-google-ville/)) ; mentions légales et politique de confidentialité complètes.
+**Sur votre site :** titre et **numéro RPPS** affichés ; parcours et formation détaillés sobrement ; approche clinique expliquée sans jargon ; tarifs explicites et conditions (mutuelle, Mon Soutien Psy, annulation) ; coordonnées cohérentes avec votre fiche Google et les annuaires (voir [SEO local pour psychologues](/blog/psychologue-premier-google-ville/)) ; mentions légales et politique de confidentialité complètes.
 
 **Sur votre fiche Google :** fiche complète (adresse, horaires, photos sobres du cabinet), description factuelle, catégorie « Psychologue » correctement renseignée. Détails dans [créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/).
 
@@ -128,7 +128,7 @@ Non. La seule façon de ne pas en avoir est de ne pas avoir de fiche, ce qui n'e
 Google retire la plupart des faux avis manifestes. Pour les cas ambigus, le recours est plus long. La meilleure protection reste **une fiche complète et un site sérieux** : un avis hostile pèse peu face à une présence professionnelle bien construite.
 
 **J'ai déjà publié des témoignages, que faire ?**  
-Retirez-les, sans drame ni annonce. Reconstruisez un bandeau de confiance avec des éléments factuels (ADELI, formations, approche, conditions de consultation).
+Retirez-les, sans drame ni annonce. Reconstruisez un bandeau de confiance avec des éléments factuels (RPPS, formations, approche, conditions de consultation).
 
 ## En résumé
 
@@ -136,7 +136,7 @@ Retirez-les, sans drame ni annonce. Reconstruisez un bandeau de confiance avec d
 2. **Pas de sollicitation d'avis** (SMS, mail, QR code, phrase en séance) — article 14.
 3. **Pas de réponse identifiante** aux avis Google — silence ou formule logistique, pour respecter le **secret professionnel** (obligation légale).
 4. **Signaler à Google** les avis manifestement abusifs ; recours juridique si diffamation grave.
-5. **Construire la confiance autrement** : titre, ADELI, parcours, approche, mentions légales, cohérence des informations.
+5. **Construire la confiance autrement** : titre, RPPS, parcours, approche, mentions légales, cohérence des informations.
 
 Cette discipline protège ce qui fait la valeur d'une consultation : le cadre, la confidentialité, la qualité du lien thérapeutique. Aucun avis cinq étoiles ne les remplacera.
 
