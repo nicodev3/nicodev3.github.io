@@ -3,6 +3,7 @@ title: "Faire son site soi-même quand on est psychologue : ce qu’on ne voit p
 seoTitle: "Site psychologue soi-même : limites et conseils SEO"
 description: "Site fait maison pour psychologue : les fragilités possibles côté UX, RGPD, déontologie, SEO local et crédibilité du cabinet."
 pubDate: "2026-05-26"
+updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-fait-maison-psychologue.webp"
 tags: ["psychologue", "site web cabinet", "cadre déontologique", "référencement local cabinet"]
@@ -114,13 +115,15 @@ L'intérêt n'est pas de déléguer aveuglément. C'est d'être aidé à prendre
 
 Pour un psychologue, un bon site n'a pas besoin d'en faire trop. Il doit être clair, rapide, lisible, respectueux du cadre, et fidèle à votre manière de travailler.
 
+Si vous voulez comparer ce travail avec un [accompagnement pour créer un site de psychologue](/creation-site-internet-psychologue/), la page dédiée présente les pages prévues, le contenu guidé, l'hébergement, la maintenance et les limites de ce qui est inclus.
+
 ## Pourquoi j'en parle avec Nicodev
 
 Si ce sujet me tient à cœur, c'est parce que je connais les deux côtés du problème. Je suis psychologue, et je sais que la communication autour d'une pratique clinique demande de la retenue. Je suis aussi développeur web, et je vois à quel point un site peut sembler simple en surface tout en demandant des choix précis pour être réellement solide.
 
 Nicodev est né de ce croisement. L'objectif n'est pas de transformer les psychologues en marques agressives, ni de vendre des sites démesurés. L'objectif est plus simple : créer des sites sobres, professionnels, techniquement propres, pensés pour les patients et adaptés au cadre du métier.
 
-Si vous hésitez encore entre faire votre site vous-même, demander à un proche, utiliser une plateforme ou être accompagné, vous pouvez aussi lire [combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) pour replacer le budget dans une perspective plus concrète, ou voir ce que comprend un [site professionnel de psychologue](/creation-site-internet-psychologue/) réalisé avec un accompagnement.
+Si vous hésitez encore entre faire votre site vous-même, demander à un proche, utiliser une plateforme ou être accompagné, vous pouvez aussi lire [combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) pour replacer le budget dans une perspective plus concrète, ou voir ce que comprend la [création de site internet pour psychologue](/creation-site-internet-psychologue/) réalisée avec un accompagnement.
 
 ## Conclusion
 

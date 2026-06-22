@@ -3,7 +3,7 @@ title: "Site psychologue 2026 : 5 pages, SEO & RGPD"
 seoTitle: "Site internet psychologue : pages essentielles, SEO et RGPD"
 description: "Découvrez les pages indispensables d’un site internet de psychologue, les bases SEO, les points de vigilance RGPD et les erreurs à éviter."
 pubDate: "2016-09-05"
-updatedDate: "2026-02-26"
+updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
 tags: ["psychologue", "site web cabinet", "référencement local cabinet", "cadre déontologique"]
@@ -20,7 +20,7 @@ En 2026, un bon site ne se limite plus à "être en ligne". Il doit répondre à
 
 Ce guide vous donne une méthode simple et actionnable.
 
-Pour une présentation courte des prestations proposées ici (création, visibilité, exemples de mise en page), vous pouvez aussi ouvrir les pages&nbsp;: [création de site web pour psychologue](/creation-site-internet-psychologue/) (site vitrine et suivi), [référencement site psychologue](/referencement-site-psychologue/) et [webdesigner pour psychologues](/webdesigner-site-psychologue/).
+Pour une présentation courte des prestations proposées ici (création, visibilité, exemples de mise en page), vous pouvez aussi ouvrir les pages&nbsp;: [création de site internet pour psychologue](/creation-site-internet-psychologue/) (site vitrine et suivi), [référencement site psychologue](/referencement-site-psychologue/) et [webdesigner pour psychologues](/webdesigner-site-psychologue/).
 
 ## Pourquoi un site reste indispensable pour un psychologue en 2026
 
@@ -52,6 +52,8 @@ Un socle minimal efficace :
 - **Pratiques** : ce que vous proposez, pour qui, comment se déroule le suivi.
 - **Tarifs** : transparence sur les honoraires, durée, modalités de règlement.
 - **Contact** : téléphone, email, formulaire sobre, accès et disponibilités.
+
+Si vous préférez déléguer cette structure plutôt que partir d'une page blanche, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) détaille le périmètre : arborescence, contenu guidé, design, hébergement, maintenance et bases SEO.
 
 ### Ajouter des éléments de confiance
 
@@ -210,4 +212,5 @@ Si vous souhaitez créer ou refondre votre site, commencez par un audit simple p
 À lire aussi :
 - [Refonte de site internet pour psychologue et psychomotricien](/blog/refonte-site-internet/)
 - [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
+- [Création de site internet pour psychologue](/creation-site-internet-psychologue/) — offre et accompagnement
 - [Création d'un site Internet](/blog/creation-site-internet/)

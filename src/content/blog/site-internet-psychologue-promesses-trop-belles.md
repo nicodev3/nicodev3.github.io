@@ -1,8 +1,9 @@
 ---
 title: "Sites internet pour psychologues : attention aux promesses trop belles pour être vraies"
 seoTitle: "Promesses web aux psychologues : les éviter | Nicodev"
-description: "Promesses SEO, visibilité rapide, offres abusives : comment évaluer une création de site pour psychologue avec lucidité."
+description: "Promesses SEO, visibilité rapide, offres abusives : comment évaluer une offre web pour psychologue avec lucidité."
 pubDate: "2026-03-28"
+updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
 tags: ["psychologue", "site web cabinet", "référencement local cabinet", "doctolib"]
@@ -14,7 +15,9 @@ Quand on s'installe en libéral, ou quand on souhaite améliorer sa présence en
 
 Dans ce contexte, les offres "clé en main" peuvent sembler rassurantes. Elles promettent souvent un site rapide à lancer, un accompagnement simple, et parfois une meilleure visibilité sur Google.
 
-Le problème n'est pas qu'il existe des offres standardisées. Certaines peuvent être utiles. Le problème, c'est qu'on ne comprend pas toujours ce que l'on achète réellement. Entre la création du site, le référencement psychologue, l'hébergement, la maintenance ou le simple droit d'utiliser la plateforme, beaucoup d'éléments sont mélangés dans un discours assez flou.
+Si votre recherche porte surtout sur une prestation concrète, la page à consulter est celle dédiée à la [création de site internet pour psychologue](/creation-site-internet-psychologue/) : elle présente le périmètre, les formules, l'hébergement, la maintenance et les bases SEO incluses. L'article ci-dessous sert plutôt de grille de vigilance pour comparer les offres et éviter les promesses trop floues.
+
+Le problème n'est pas qu'il existe des offres standardisées. Certaines peuvent être utiles. Le problème, c'est qu'on ne comprend pas toujours ce que l'on achète réellement. Entre la conception du site, le référencement psychologue, l'hébergement, la maintenance ou le simple droit d'utiliser la plateforme, beaucoup d'éléments sont mélangés dans un discours assez flou.
 
 ## Le référencement ne se garantit pas
 
@@ -34,7 +37,7 @@ D'abord, elles simplifient à l'excès la réalité. Avoir un site n'entraîne p
 
 Ensuite, parler de "concurrents" est discutable dans notre champ. Bien sûr, plusieurs praticiens peuvent apparaître sur les mêmes recherches locales. Mais l'enjeu n'est pas de "battre" les autres psychologues. L'enjeu est d'être compréhensible, trouvable, et crédible pour les personnes qui cherchent une aide adaptée. Le vocabulaire du dépassement commercial convient mal à une pratique clinique.
 
-Enfin, l'idée de "visibilité automatique" masque souvent la question centrale : qu'est-ce qui est réellement fait ? Y a-t-il un vrai travail de **création site psychologue** avec des pages pensées pour votre activité ? Ou seulement un modèle rempli rapidement avec votre nom, votre photo et vos horaires ?
+Enfin, l'idée de "visibilité automatique" masque souvent la question centrale : qu'est-ce qui est réellement fait ? Y a-t-il un vrai travail de structure, de contenu et d'adaptation à votre activité ? Ou seulement un modèle rempli rapidement avec votre nom, votre photo et vos horaires ?
 
 ## Une standardisation qui peut être utile… ou non
 
@@ -95,6 +98,8 @@ Heureusement, il existe une autre voie. Elle est souvent moins spectaculaire, ma
 Concrètement, cela veut dire : des pages lisibles, un bon affichage mobile, des informations pratiques faciles à trouver, une présentation fidèle de votre manière de travailler, et un minimum de conformité légale. Cela veut dire aussi ne pas promettre ce qu'on ne maîtrise pas. On peut travailler sérieusement la **visibilité d'un psychologue sur Google** sans raconter qu'elle sera immédiate.
 
 Dans cette logique, le site n'a pas besoin de remplacer Doctolib si vous l'utilisez déjà. Il peut au contraire le compléter. J'en parle plus en détail dans cet article sur [Doctolib et site internet pour psychologue](/blog/site-internet-psychologue-doctolib/). Le site sert à présenter votre pratique. Doctolib sert à faciliter la prise de rendez-vous.
+
+Pour passer de cette réflexion à une solution concrète, consultez la page [création site internet psychologue](/creation-site-internet-psychologue/). Elle détaille les pages prévues, la préparation des textes, les tarifs mensuels et ce qui reste sous votre contrôle.
 
 ## Pourquoi j'en parle avec Nicodev
 

@@ -3,12 +3,13 @@ title: "Psychologue : faut-il un site internet en plus de Doctolib ?"
 seoTitle: "Site internet psychologue et Doctolib : faut-il les deux ?"
 description: "Doctolib, annuaires, fiche Google et site internet ne jouent pas le même rôle. Comprendre comment les combiner pour gagner en visibilité."
 pubDate: "2026-03-12"
+updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-web-doctolib.webp"
 tags: ["psychologue", "site web cabinet", "référencement local cabinet", "doctolib"]
 ---
 
-De nombreux psychologues se posent la même question au moment de s'installer, ou quand l'agenda commence à dépendre d'un seul canal : **faut-il vraiment créer un site internet si l'on a déjà Doctolib ?**
+De nombreux psychologues se posent la même question au moment de s'installer, ou quand l'agenda commence à dépendre d'un seul canal : faut-il vraiment [créer un site internet pour psychologue](/creation-site-internet-psychologue/) si l'on a déjà Doctolib ?
 
 La réponse courte : oui, dans la plupart des cas. Pas parce qu'il faudrait opposer Doctolib et site internet, mais parce que les deux outils ne jouent pas le même rôle.
 
@@ -70,7 +71,7 @@ Un site professionnel avec une page claire, une présentation soignée, des info
 - orienter vers l'outil de réservation de votre choix ;
 - vous rendre moins dépendant d'une seule plateforme.
 
-Autrement dit, [29 € / mois pour un site vitrine sobre](/tarifs/#tarifs-offres), ou **49 € / mois pour un site avec widget ou lien de prise de rendez-vous**, c'est nettement moins que 149 € / mois pour un annuaire-agenda, et encore moins que 228 € / mois si la téléconsultation Doctolib est ajoutée. Ce n'est pas le même produit, mais pour beaucoup de cabinets, c'est un meilleur premier investissement.
+Autrement dit, [29 € / mois pour un site vitrine sobre](/tarifs/#tarifs-offres), ou **49 € / mois pour un site avec widget ou lien de prise de rendez-vous**, c'est nettement moins que 149 € / mois pour un annuaire-agenda, et encore moins que 228 € / mois si la téléconsultation Doctolib est ajoutée. Ce n'est pas le même produit, mais pour beaucoup de cabinets, c'est un meilleur premier investissement. La page [création de site internet pour psychologue](/creation-site-internet-psychologue/) précise ce que ce site inclut concrètement.
 
 Vous pouvez comparer le détail directement sur la page [Tarifs : offres Sérénité et Visibilité & Confiance](/tarifs/#tarifs-offres).
 

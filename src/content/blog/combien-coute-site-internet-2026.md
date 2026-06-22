@@ -3,7 +3,7 @@ title: "Combien coûte vraiment la création d’un site internet pour un psycho
 seoTitle: "Combien coûte un site internet pour psychologue en 2026 ? Prix et fourchettes"
 description: "Combien coûte un site internet pour psychologue en 2026 ? Prix, tarifs, coûts cachés et fourchettes réalistes (DIY, freelance, abonnement) pour budgéter votre site vitrine."
 pubDate: "2026-02-22"
-updatedDate: "2026-06-14"
+updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/cout-site-internet.webp"
 tags: ["psychologue", "site web cabinet", "installation en libéral"]
@@ -69,6 +69,18 @@ En pratique, le **coût site web psychologue** se répartit en trois grandes fam
 Ces chiffres sont des **ordres de grandeur** pour un site vitrine standard (présentation, consultations, infos pratiques, contact). Ils ne couvrent pas un e-commerce, un blog très volumineux ou une stratégie SEO mensuelle intensive.
 
 Pour le détail de ce que comprend une offre d'accompagnement (structure, formulaire guidé, hébergement, bases SEO), la page [création site internet psychologue](/creation-site-internet-psychologue/) complète ce guide tarifaire.
+
+## Quel budget prévoir pour un site de psychologue ?
+
+Si vous cherchez simplement un repère clair, voici la lecture la plus utile pour un cabinet libéral :
+
+- **moins de 500 € la première année** : possible si vous faites beaucoup vous-même, mais le coût réel se déplace vers votre temps, la rédaction et les réglages ;
+- **29 à 49 €/mois** : cohérent si vous voulez un site professionnel accompagné, avec hébergement, maintenance et suivi inclus ;
+- **1 000 à 3 000 € au lancement** : classique pour une prestation ponctuelle, à condition de vérifier ce qui est compris après la mise en ligne.
+
+Pour comparer avec mes formules concrètes, vous pouvez consulter la page [tarifs site internet psychologue](/tarifs/). Si vous voulez d'abord comprendre ce qui est inclus dans la création, la structure des pages et l'accompagnement, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) détaille l'offre.
+
+Le bon budget n'est donc pas seulement le prix de création. C'est le coût total pour obtenir un site clair, maintenu, crédible sur mobile et capable de soutenir la visibilité de votre cabinet.
 
 ## Combien ça coûte si vous le faites vous-même ?
 
@@ -230,6 +242,8 @@ Le vrai coût ici, c'est surtout votre temps, avec un risque supplémentaire : i
 
 Selon la formule choisie, vous bénéficiez d'un cadre professionnel avec hébergement, accompagnement et suivi dans la durée.
 Vous gardez un budget prévisible, sans devoir apprendre toute la partie technique, ni porter seul la qualité finale du rendu.
+
+Le détail des deux formules est disponible sur la page [tarifs](/tarifs/). Pour voir comment l'accompagnement se déroule concrètement, ouvrez aussi la page [création site internet psychologue](/creation-site-internet-psychologue/).
 
 ### Option 3 : vous déléguez une prestation classique
 

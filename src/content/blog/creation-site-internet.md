@@ -3,13 +3,13 @@ title: "Création de site web en 2026 : ce qu’un psychologue doit savoir sur l
 seoTitle: "Création de site web psychologue : bases 2026 | Nicodev"
 description: "Création de site web en 2026 : bases HTML, CSS, performance, accessibilité et SEO pour comprendre la technique."
 pubDate: "2015-10-26"
-updatedDate: "2026-05-09"
+updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-internet.webp"
 tags: ["site web cabinet"]
 ---
 
-Pour une **vision complète orientée cabinet** (structure des pages, SEO local, cadre déontologique, RGPD), voir le guide [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/). L’article ci-dessous pose les **bases techniques communes** à tout site professionnel.
+Pour une **vision complète orientée cabinet** (structure des pages, SEO local, cadre déontologique, RGPD), voir le guide [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/). Si vous cherchez une prestation plutôt qu'un repère technique, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) détaille l'accompagnement, les pages incluses et la maintenance. L’article ci-dessous pose les **bases techniques communes** à tout site professionnel.
 
 Pour beaucoup de personnes, un site internet est surtout une vitrine: du texte, des images, quelques boutons, un formulaire de contact.
 
@@ -127,7 +127,7 @@ Si vous partez de zéro, commencez simple:
 4. une base technique propre
 5. une amélioration continue
 
-Vous avez un projet de site ? Consultez mes [tarifs](/tarifs/) et [contactez-moi](/contact/) pour en parler.
+Vous avez un projet de site pour un cabinet ? Consultez la page [création de site internet pour psychologue](/creation-site-internet-psychologue/), mes [tarifs site internet psychologue](/tarifs/) ou [contactez-moi](/contact/) pour en parler.
 
 ---
 
@@ -135,4 +135,5 @@ Vous avez un projet de site ? Consultez mes [tarifs](/tarifs/) et [contactez-moi
 
 - [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide référencement local pour psychologues
 - [Combien coûte vraiment la création d'un site internet pour un psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/)
+- [Création de site internet pour psychologue](/creation-site-internet-psychologue/)
 - [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/)

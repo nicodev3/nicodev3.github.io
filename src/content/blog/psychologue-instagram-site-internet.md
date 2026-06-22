@@ -3,6 +3,7 @@ title: "Psychologue sur Instagram : faut-il aussi avoir un site internet ?"
 seoTitle: "Psychologue Instagram : faut-il un site internet ? | Nicodev"
 description: "Psychologue sur Instagram : découvrez pourquoi Instagram et site internet sont complémentaires pour développer une visibilité durable et rassurer les patients."
 pubDate: "2026-06-10"
+updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-instagram.webp"
 tags: ["psychologue", "réseaux sociaux", "site web cabinet", "référencement local cabinet"]
@@ -130,6 +131,8 @@ Un site bien structuré peut apparaître sur ces recherches. C'est tout l'intér
 
 Le référencement ne se construit pas en un jour. Mais une page claire sur votre pratique, votre ville ou un article utile peuvent continuer à être consultés pendant des mois ou des années.
 
+Pour le travail concret sur le site, la fiche Google et les contenus, la page [référencement psychologue](/referencement-site-psychologue/) détaille les bases à prioriser sans promesse de classement garanti.
+
 ### Donner une image professionnelle
 
 Un site internet bien conçu donne une impression de stabilité. Il montre que votre activité est structurée. Il permet de présenter votre identité professionnelle dans un espace calme, sans distraction, sans commentaires, sans flux permanent.
@@ -230,7 +233,7 @@ Oui. Un compte Instagram actif aide surtout à être découvert. Un site interne
 
 ### Instagram améliore-t-il le référencement d'un psychologue sur Google ?
 
-Instagram peut renforcer votre notoriété, mais il ne remplace pas le référencement psychologue sur Google. Pour apparaître sur des recherches comme "psychologue en ligne", "psychologue visio" ou "psychologue + ville", un site bien structuré reste beaucoup plus adapté.
+Instagram peut renforcer votre notoriété, mais il ne remplace pas le [référencement psychologue sur Google](/referencement-site-psychologue/). Pour apparaître sur des recherches comme "psychologue en ligne", "psychologue visio" ou "psychologue + ville", un site bien structuré reste beaucoup plus adapté.
 
 ### Quel lien mettre dans la bio Instagram d'un psychologue ?
 
