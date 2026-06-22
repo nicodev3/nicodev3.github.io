@@ -8,6 +8,8 @@ import BlogArticleToc from '../../components/BlogArticleToc.astro';
 import BlogPillarClusterLink from '../../components/BlogPillarClusterLink.astro';
 import GuideVisibilityConversionCta from '../../components/GuideVisibilityConversionCta.astro';
 import DiagnosticLeadCta from '../../components/DiagnosticLeadCta.astro';
+import BlogInlineCta from '../../components/BlogInlineCta.astro';
+import { BLOG_INLINE_CTAS } from '../../data/blog-inline-ctas';
 import {
 	GUIDE_VISIBILITE_CLUSTER_IDS,
 	toTagHref,
@@ -27,6 +29,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
+const inlineCta = BLOG_INLINE_CTAS[entry.id];
 
 const allPosts = await getCollection('blog');
 
@@ -256,6 +259,13 @@ const faqSchema =
 				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-intro" class="my-10" />}
 				<BlogArticleToc items={tocItems} />
 				<Content />
+				{inlineCta && (
+					<BlogInlineCta
+						variant={inlineCta.variant}
+						beforeHeading={inlineCta.beforeHeading}
+						articleId={entry.id}
+					/>
+				)}
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="final" />}
 				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-final" class="my-10" />}
 			</div>

@@ -1,0 +1,136 @@
+---
+import type { BlogInlineCtaVariant } from '../data/blog-inline-ctas';
+
+interface Props {
+  variant: BlogInlineCtaVariant;
+  beforeHeading: string;
+  articleId: string;
+}
+
+const { variant, beforeHeading, articleId } = Astro.props;
+
+const copies: Record<
+  BlogInlineCtaVariant,
+  {
+    eyebrow: string;
+    title: string;
+    description: string;
+    primary: string;
+    primaryHref: string;
+    secondary: string;
+    secondaryHref: string;
+  }
+> = {
+  site: {
+    eyebrow: 'Besoin d’un regard extérieur ?',
+    title: 'Votre site doit être clair pour vos patients avant d’être sophistiqué.',
+    description:
+      'Je peux examiner votre projet ou votre site actuel et vous indiquer les priorités utiles : structure, contenu, visibilité locale et points techniques.',
+    primary: 'Demander un diagnostic gratuit',
+    primaryHref: '/diagnostic-gratuit/',
+    secondary: 'Voir des exemples de sites',
+    secondaryHref: '/exemples-sites-psychologue/',
+  },
+  visibility: {
+    eyebrow: 'Passez de la méthode à votre situation',
+    title: 'Quelles actions auraient réellement un effet pour votre cabinet ?',
+    description:
+      'Le diagnostic gratuit permet d’identifier trois priorités concrètes à partir de votre site, de votre fiche Google et de votre contexte local.',
+    primary: 'Recevoir mes 3 priorités',
+    primaryHref: '/diagnostic-gratuit/',
+    secondary: 'Découvrir l’accompagnement SEO',
+    secondaryHref: '/referencement-site-psychologue/',
+  },
+  refonte: {
+    eyebrow: 'Avant de lancer la refonte',
+    title: 'Identifiez ce qui mérite vraiment d’être changé.',
+    description:
+      'Je peux analyser l’existant et distinguer les problèmes de contenu, de structure, de référencement ou de technique avant que vous engagiez un budget.',
+    primary: 'Faire analyser mon site',
+    primaryHref: '/diagnostic-gratuit/',
+    secondary: 'Voir les offres',
+    secondaryHref: '/tarifs/',
+  },
+  budget: {
+    eyebrow: 'Vous préparez votre budget ?',
+    title: 'Obtenez un périmètre adapté à votre projet avant de comparer les prix.',
+    description:
+      'Expliquez-moi votre situation et vos objectifs. Je vous indiquerai les éléments réellement nécessaires et ceux qui peuvent attendre.',
+    primary: 'Faire le point gratuitement',
+    primaryHref: '/diagnostic-gratuit/',
+    secondary: 'Consulter les tarifs',
+    secondaryHref: '/tarifs/',
+  },
+  independence: {
+    eyebrow: 'Construire une présence durable',
+    title: 'Votre site peut devenir le point central de votre visibilité.',
+    description:
+      'Je peux vérifier comment articuler votre site, Google et vos plateformes de rendez-vous sans dépendre entièrement d’un service tiers.',
+    primary: 'Demander un diagnostic gratuit',
+    primaryHref: '/diagnostic-gratuit/',
+    secondary: 'Voir la création de site',
+    secondaryHref: '/creation-site-internet-psychologue/',
+  },
+  psychomotricien: {
+    eyebrow: 'Pour votre cabinet de psychomotricité',
+    title: 'Vérifiez les priorités de votre visibilité locale.',
+    description:
+      'Je peux examiner votre site, votre fiche Google et la cohérence de vos informations pour vous proposer trois actions adaptées à votre cabinet.',
+    primary: 'Demander un diagnostic gratuit',
+    primaryHref: '/diagnostic-gratuit/',
+    secondary: 'Voir l’offre psychomotricien',
+    secondaryHref: '/site-internet-psychomotricien/',
+  },
+};
+
+const copy = copies[variant];
+const source = `article-${articleId}-inline`;
+const eventSource = articleId.replaceAll('-', '_');
+---
+
+<aside
+  class="blog-inline-cta not-prose my-10 rounded-2xl border border-primary/25 bg-primary-50 p-5 shadow-sm sm:p-7"
+  data-blog-inline-cta
+  data-before-heading={beforeHeading}
+  aria-label={copy.eyebrow}
+>
+  <p class="type-eyebrow text-primary-700">{copy.eyebrow}</p>
+  <h2 class="mt-2 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
+    {copy.title}
+  </h2>
+  <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">{copy.description}</p>
+  <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+    <a
+      href={`${copy.primaryHref}?source=${source}`}
+      class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
+      data-umami-event={`lead_click_diagnostic_from_article_${eventSource}_inline`}
+    >
+      {copy.primary}
+    </a>
+    <a
+      href={copy.secondaryHref}
+      class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface"
+      data-umami-event={`lead_click_secondary_from_article_${eventSource}_inline`}
+    >
+      {copy.secondary}
+    </a>
+  </div>
+</aside>
+
+<script>
+  const normalizeHeading = (value: string | null) =>
+    (value ?? '')
+      .replace(/[’‘]/g, "'")
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  document.querySelectorAll<HTMLElement>('[data-blog-inline-cta]').forEach((cta) => {
+    const articleBody = cta.closest('.prose');
+    const target = normalizeHeading(cta.dataset.beforeHeading);
+    const heading = Array.from(articleBody?.querySelectorAll(':scope > h2') ?? []).find(
+      (item) => normalizeHeading(item.textContent) === target,
+    );
+
+    if (heading) heading.before(cta);
+  });
+</script>
