@@ -57,7 +57,7 @@ Une activité entièrement en ligne n’est pas éligible à Google Business Pro
 
 Il ne faut pas non plus déclarer une activité exclusivement en visio comme « activité de zone desservie ». Ce réglage concerne les professionnels qui se déplacent physiquement chez leurs clients ou leur fournissent un service sur place ([règles Google relatives aux zones desservies](https://support.google.com/business/answer/9157481)).
 
-Dans ce cas, travaillez plutôt la visibilité de votre site, vos pages de présentation et les annuaires réellement adaptés à votre pratique.
+Dans ce cas, travaillez plutôt la visibilité de votre site, vos pages de présentation et les annuaires réellement adaptés à votre pratique. L’article [s’installer psychologue en libéral 100 % visio](/blog/installer-psychologue-liberal-100-visio/) détaille cette stratégie lorsque la fiche Google n’est pas le bon levier.
 
 ### Vous consultez au cabinet et en visio
 

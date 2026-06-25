@@ -78,6 +78,8 @@ Une fiche utile reste simple : nom cohérent, adresse ou zone desservie, télép
 
 Beaucoup de psychologues négligent cette étape au démarrage. Pourtant, c’est souvent l’un des leviers les plus accessibles pour commencer à travailler sa visibilité locale.
 
+Cas particulier : si vous exercez **100 % en visio**, la fiche Google Business Profile n’est généralement pas le bon levier, car elle suppose une rencontre réelle avec la clientèle. Dans ce cas, l’article [s’installer psychologue en libéral 100 % visio](/blog/installer-psychologue-liberal-100-visio/) explique comment construire une visibilité sans adresse de cabinet.
+
 ## Pourquoi un site internet reste important, même si vous êtes sur Doctolib
 
 Un site internet ne remplace pas Doctolib. Ce n’est pas son rôle. En revanche, il apporte quelque chose que les plateformes apportent moins bien : un espace à vous, plus stable et plus fidèle à votre manière d’exercer.
@@ -133,6 +135,7 @@ Ce qui compte surtout, au début, c’est de mettre en place des bases solides :
 Si vous souhaitez créer un site sobre, professionnel et pensé pour votre visibilité locale, j’accompagne précisément ce type de projet chez Nicodev. Mon approche est simple : construire un site clair, fidèle à votre pratique, utile pour vos patients, et solide pour votre installation dans la durée. Pour comprendre comment [être trouvé par des patients sur Google](/referencement-site-psychologue/) — fiche Google, site et cohérence locale —, la page référencement détaille la méthode.
 
 À lire aussi :
+
 - [Ouvrir son cabinet de psychologue : s’installer en libéral sans se noyer](/blog/installer-liberal-psychologue-par-ou-commencer/)
 - [Psychologue : faut-il avoir un site internet en plus de Doctolib ?](/blog/site-internet-psychologue-doctolib/)
 - [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)

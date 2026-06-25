@@ -64,6 +64,8 @@ C’est le levier le plus direct pour apparaître dans les résultats Google Map
 
 → [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
 
+Si vous exercez exclusivement à distance, la logique change : une activité 100 % en ligne n’entre généralement pas dans le cadre d’une fiche Google Business Profile. Le guide [s’installer psychologue en libéral 100 % visio](/blog/installer-psychologue-liberal-100-visio/) détaille alors les priorités côté site, contenus et annuaires adaptés.
+
 ### 2. Avis Google et e-réputation (cadre déontologique)
 
 Le sujet le plus sensible de votre présence en ligne : ce que le **code de déontologie 2021** recommande en matière d’avis, pourquoi **ne pas publier de témoignages** sur votre site, et comment gérer une fiche Google en respectant le **secret professionnel** (obligation légale).
