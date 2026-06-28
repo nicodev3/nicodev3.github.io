@@ -198,13 +198,9 @@ Les limites sont fréquentes :
 
 En clair, **on paie moins en argent, mais on prend souvent le risque d'obtenir un site qui "existe" sans vraiment soutenir la visibilité du cabinet ni donner une impression très professionnelle.**
 
-Pour visualiser ce que peut donner une base plus solide, vous pouvez consulter ces [exemples de sites pour psychologues](/exemples-sites-psychologue/).
-
 ### Solution accompagnée : garder un petit budget sans tout faire seul
 
 Entre le "tout seul" et la prestation classique, il existe une option plus simple : **partir sur une base professionnelle déjà pensée pour les psychologues, avec accompagnement**.
-
-Vous pouvez déjà comparer plusieurs rendus ici : [exemples de templates de sites psychologues](/exemples-sites-psychologue/).
 
 **Dans mes offres**, vous pouvez avoir :
 
@@ -296,8 +292,6 @@ En 2026, un site de psychologue peut rester simple, efficace et raisonnable en b
 > Pour un psychologue, un site vitrine clair et professionnel devrait en général rester dans un budget mesuré, surtout si le besoin technique est simple.
 
 Si vous cherchez justement une option simple, professionnelle et abordable pour votre cabinet, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/). Le détail de ce qui est inclus (structure, hébergement, bases SEO, outil de rendez-vous) est présenté sur la page [création site internet psychologue](/creation-site-internet-psychologue/). Pour la visibilité Google au-delà du site, voir aussi [référencement site psychologue](/referencement-site-psychologue/).
-
-Vous pouvez aussi parcourir mes [exemples de sites psychologues](/exemples-sites-psychologue/) pour vous faire une idée concrète du rendu.
 
 ---
 

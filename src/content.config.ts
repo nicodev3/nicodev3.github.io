@@ -18,7 +18,7 @@ const blog = defineCollection({
         .array(z.enum([...BLOG_TAGS]))
         .max(4, 'Maximum 4 tags par article')
         .optional(),
-      /** Suffixe du `<title>` (après « Titre article | »). Défaut côté template : « Site web psychologues ». */
+      /** Suffixe du `<title>` (après « Titre article | »). Défaut côté rendu : « Site web psychologues ». */
       metaTitleSuffix: z.string().optional(),
       /** Page pilier : active un schéma ItemList vers les articles du cluster visibilité. */
       guidePillarHub: z.boolean().optional(),
