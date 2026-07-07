@@ -140,7 +140,7 @@ La cohérence des informations (**nom, adresse, téléphone**) entre ces canaux 
   <h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">Pas encore de site ? Faites d’abord le point sur votre présence en ligne.</h2>
   <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">Fiche Google, profil Doctolib, cohérence des infos : en 48 h, je vous renvoie <strong class="text-foreground">trois priorités concrètes</strong> — avec ou sans projet de site.</p>
   <div class="mt-5 flex flex-col gap-3 sm:flex-row">
-    <a href="/diagnostic-gratuit/?source=guide-installation-mid" class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold" data-umami-event="lead_click_diagnostic_from_guide_installation_mid">Diagnostic visibilité gratuit</a>
+    <a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold" data-lead-source="guide-installation-mid" data-umami-event="lead_click_diagnostic_from_guide_installation_mid">Diagnostic visibilité gratuit</a>
     <a href="/creation-site-internet-psychologue/" class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface" data-umami-event="lead_click_secondary_from_guide_installation_mid">Création de site psychologue</a>
   </div>
 </div>
@@ -171,7 +171,7 @@ Côté outils (agenda, dossier patient, facturation), le piège classique est de
 
 Le **site internet** mérite d’être préparé en parallèle des autres chantiers, pas relégué « pour plus tard » : c’est souvent le premier point de contact réel avec les patients, et il structure ensuite toute la communication (fiche Google, Doctolib, cartes de visite, mails). Un site sobre, bien pensé, qui présente clairement ton titre, ton approche, tes publics et tes modalités fait davantage pour ta crédibilité que n’importe quelle campagne publicitaire — et c’est aussi ce qui te rend **indépendant des plateformes** sur la durée.
 
-> 💡 **Site ou pas encore ?** Commence par un [diagnostic visibilité gratuit](/diagnostic-gratuit/?source=guide-installation-plan) (fiche Google, profils en ligne, priorités). Si un site est pertinent, je t’accompagne sur la **création** : contenu, structure, référencement local, conformité (mentions légales, RGPD, cadre déontologique). Voir [création de site psychologue](/creation-site-internet-psychologue/) et les [tarifs](/tarifs/).
+> 💡 **Site ou pas encore ?** Commence par un <a href="/diagnostic-gratuit/" data-lead-source="guide-installation-plan" data-umami-event="lead_click_diagnostic_from_guide_installation_plan">diagnostic visibilité gratuit</a> (fiche Google, profils en ligne, priorités). Si un site est pertinent, je t’accompagne sur la **création** : contenu, structure, référencement local, conformité (mentions légales, RGPD, cadre déontologique). Voir [création de site psychologue](/creation-site-internet-psychologue/) et les [tarifs](/tarifs/).
 
 Tu veux la version détaillée du plan 30 jours (priorités quotidiennes, documents à préparer, points de vigilance) ? Je te l’envoie par mail.
 

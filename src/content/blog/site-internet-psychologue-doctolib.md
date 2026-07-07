@@ -19,7 +19,7 @@ Pour un psychologue, c'est particulièrement important : la pratique n'est pas i
 
 Et surtout : un site n'a pas besoin de remplacer votre outil de rendez-vous. Il peut simplement y être relié. Doctolib, Maiia, Resalib, Calendly, Perfactive, SimplyBook, un agenda métier plus discret, un formulaire de contact ou même un simple bouton d'appel : le site reste votre point d'entrée, l'outil de rendez-vous reste votre outil logistique.
 
-Cette nuance change beaucoup de choses, notamment sur le budget. La brochure tarifaire Doctolib indique une offre agenda à **149 € TTC / mois / praticien**. À titre de comparaison, mes offres de site démarrent avec [l'offre Sérénité à 29 € / mois](/tarifs/#tarifs-offres), et [l'offre Visibilité & Confiance à 49 € / mois](/tarifs/#tarifs-offres) peut inclure un lien ou un widget de prise de rendez-vous. Le site couvre alors l'essentiel de votre présence en ligne, tout en vous laissant libre du système de réservation utilisé.
+Cette nuance change beaucoup de choses, notamment sur le budget. La page tarifs Doctolib pour les psychologues indique une offre agenda à **149 € TTC / mois / praticien**. À titre de comparaison, mes offres de site démarrent avec [l'offre Sérénité à 29 € / mois](/tarifs/#tarifs-offres), et [l'offre Visibilité & Confiance à 49 € / mois](/tarifs/#tarifs-offres) peut inclure un lien ou un widget de prise de rendez-vous. Le site couvre alors l'essentiel de votre présence en ligne, tout en vous laissant libre du système de réservation utilisé.
 
 ## Doctolib est utile, mais ce n'est pas un site
 
@@ -48,7 +48,7 @@ En psychologie, la décision ne repose pas seulement sur un créneau libre. Le p
 
 ### 149 € par mois, ce n'est pas neutre
 
-Le tarif n'est pas un détail. Dans sa brochure de solutions, Doctolib affiche l'agenda en ligne à **149 € TTC / mois / praticien**. Sur une année, cela représente **1 788 € TTC**.
+Le tarif n'est pas un détail. Sur sa page tarifs pour les psychologues, Doctolib affiche l'agenda en ligne à **149 € TTC / mois / praticien**. Sur une année, cela représente **1 788 € TTC**.
 
 Et si vous ajoutez la téléconsultation, le budget augmente encore. Doctolib indique un tarif de **79 € TTC / mois / praticien** pour Doctolib Téléconsultation, option réservée aux soignants ayant déjà un abonnement à la solution Gestion de patientèle, avec en plus des frais de prestataire de paiement en ligne. En cumulant agenda et téléconsultation, on arrive donc à **228 € TTC / mois / praticien**, soit **2 736 € TTC / an**, hors frais de paiement. Autrement dit : plus de 200 € par mois.
 
@@ -264,4 +264,4 @@ Pour beaucoup de psychologues, c'est une solution plus économique, plus souple 
 
 Pour approfondir le budget, vous pouvez lire le guide [combien coûte vraiment un site internet pour psychologue ?](/blog/combien-coute-site-internet-2026/) ou consulter directement les [offres à 29 € et 49 € / mois](/tarifs/#tarifs-offres). Et pour voir concrètement ce que comprend un [site vitrine pour psychologue](/creation-site-internet-psychologue/) — structure, contenu, bases SEO, intégration d'un outil de rendez-vous —, la page dédiée détaille l'ensemble.
 
-Sources consultées : <a href="https://info.doctolib.fr/tarifs/" target="_blank" rel="nofollow noopener noreferrer">tarifs Doctolib</a> et <a href="https://media.doctolib.com/image/upload/mkg/file/brochure_des_solutions_doctolib_with_price.pdf" target="_blank" rel="nofollow noopener noreferrer">brochure tarifaire Doctolib</a>, notamment l'offre agenda à 149 € TTC / mois / praticien ; <a href="https://info.doctolib.fr/doctolib-teleconsultation/" target="_blank" rel="nofollow noopener noreferrer">page Doctolib Téléconsultation</a>, qui indique 79 € TTC / mois / praticien et 1 % HT de frais de paiement en ligne ; <a href="https://media.doctolib.com/image/upload/mkg/img/teleconsultation_etat_des_lieux_et_usages_au_sein_de_la_medecine_de_ville.pdf" target="_blank" rel="nofollow noopener noreferrer">étude Doctolib sur la téléconsultation</a>, qui observe une surreprésentation des usages urbains de la téléconsultation.
+Source consultée : <a href="https://info.doctolib.fr/tarifs/?pricing_specialty=psychologue" target="_blank" rel="nofollow noopener noreferrer">tarifs Doctolib pour les psychologues</a>, notamment l'offre agenda à 149 € TTC / mois / praticien et l'option téléconsultation à 79 € TTC / mois / praticien.

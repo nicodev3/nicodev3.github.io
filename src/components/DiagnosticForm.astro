@@ -118,7 +118,14 @@ const startEvent = 'lead_start_diagnostic';
 
 		if (sourcePageInput instanceof HTMLInputElement) sourcePageInput.value = window.location.href;
 		if (sourceParamInput instanceof HTMLInputElement) {
-			sourceParamInput.value = new URLSearchParams(window.location.search).get('source') || '';
+			const urlSource = new URLSearchParams(window.location.search).get('source');
+			let storedSource = '';
+			try {
+				storedSource = window.sessionStorage.getItem('nicodevLeadSource') || '';
+			} catch (_) {
+				storedSource = '';
+			}
+			sourceParamInput.value = urlSource || storedSource;
 		}
 
 		let started = false;
@@ -173,4 +180,3 @@ const startEvent = 'lead_start_diagnostic';
 		});
 	})();
 </script>
-

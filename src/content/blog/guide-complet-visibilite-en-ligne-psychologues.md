@@ -42,7 +42,7 @@ Un regard externe devient utile lorsque :
 - vous démarrez en libéral et voulez éviter de perdre du temps dans les mauvais réglages ;
 - vous voulez un site sobre, rapide et conforme sans gérer la technique.
 
-Dans ce cas, le [diagnostic gratuit](/diagnostic-gratuit/?source=guide-visibilite-section-diagnostic) sert à transformer la lecture en plan d’action : ce qui bloque, ce qui peut attendre, et ce qu’il serait pertinent de confier.
+Dans ce cas, le <a href="/diagnostic-gratuit/" data-lead-source="guide-visibilite-section-diagnostic" data-umami-event="lead_click_diagnostic_from_guide_visibilite_section_diagnostic">diagnostic gratuit</a> sert à transformer la lecture en plan d’action : ce qui bloque, ce qui peut attendre, et ce qu’il serait pertinent de confier.
 
 ## Ce que recouvre la « visibilité en ligne » pour un cabinet
 
@@ -150,7 +150,7 @@ Ces articles complètent le guide principal :
 
 Si cette checklist révèle plusieurs points faibles, ne cherchez pas forcément à tout corriger en une fois. Commencez par le maillon qui empêche le plus la prise de contact : fiche Google incomplète, site confus sur mobile, absence de page contact claire, ou message trop vague sur votre pratique.
 
-Je peux vous aider à identifier ce maillon avec un [diagnostic gratuit de votre visibilité](/diagnostic-gratuit/?source=guide-visibilite-checklist).
+Je peux vous aider à identifier ce maillon avec un <a href="/diagnostic-gratuit/" data-lead-source="guide-visibilite-checklist" data-umami-event="lead_click_diagnostic_from_guide_visibilite_checklist">diagnostic gratuit de votre visibilité</a>.
 
 ## Questions fréquentes
 
@@ -173,4 +173,4 @@ Ce n'est pas recommandé : la pratique est en tension avec le secret professionn
 
 La visibilité en ligne d’un psychologue repose sur un **système** : fiche locale, site crédible, cohérence des données, contenu utile, gestion mesurée des avis et patience. Ce guide pilier vous oriente vers dix ressources pour exécuter chaque brique sans vous perdre.
 
-Si vous souhaitez un avis externe sur votre situation concrète, vous pouvez demander un [diagnostic gratuit](/diagnostic-gratuit/?source=guide-visibilite-conclusion) ou consulter les pages service&nbsp;: [création de site pour psychologue](/creation-site-internet-psychologue/), [référencement site psychologue](/referencement-site-psychologue/) et [webdesigner pour psychologues](/webdesigner-site-psychologue/).
+Si vous souhaitez un avis externe sur votre situation concrète, vous pouvez demander un <a href="/diagnostic-gratuit/" data-lead-source="guide-visibilite-conclusion" data-umami-event="lead_click_diagnostic_from_guide_visibilite_conclusion">diagnostic gratuit</a> ou consulter les pages service&nbsp;: [création de site pour psychologue](/creation-site-internet-psychologue/), [référencement site psychologue](/referencement-site-psychologue/) et [webdesigner pour psychologues](/webdesigner-site-psychologue/).

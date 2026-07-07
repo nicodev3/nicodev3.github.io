@@ -1,7 +1,7 @@
 ---
 title: "Combien coûte vraiment la création d’un site internet pour un psychologue en 2026 ?"
-seoTitle: "Combien coûte un site internet pour psychologue en 2026 ? Prix et fourchettes"
-description: "Combien coûte un site internet pour psychologue en 2026 ? Prix, tarifs, coûts cachés et fourchettes réalistes (DIY, freelance, abonnement) pour budgéter votre site vitrine."
+seoTitle: "Prix site internet psychologue 2026 : fourchettes"
+description: "Combien coûte un site internet pour psychologue en 2026 ? Prix réalistes, coûts cachés et options DIY, freelance ou abonnement."
 pubDate: "2026-02-22"
 updatedDate: "2026-06-22"
 author: "Nicolas Devaux"

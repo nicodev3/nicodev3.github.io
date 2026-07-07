@@ -150,6 +150,24 @@ const ahrefsAnalyticsKey =
 
     <script is:inline>
       (function () {
+        document.addEventListener("click", function (event) {
+          var link = event.target && event.target.closest
+            ? event.target.closest("a[data-lead-source]")
+            : null;
+          if (!link) return;
+          var source = link.getAttribute("data-lead-source");
+          if (!source) return;
+          try {
+            window.sessionStorage.setItem("nicodevLeadSource", source);
+          } catch (_) {
+            // Tracking storage is optional; navigation should never depend on it.
+          }
+        });
+      })();
+    </script>
+
+    <script is:inline>
+      (function () {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         function revealIfInViewport(section) {
           var rect = section.getBoundingClientRect();

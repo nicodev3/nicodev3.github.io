@@ -1,6 +1,6 @@
 ---
 title: "Site internet psychomotricien : pages essentielles"
-seoTitle: "Site internet psychomotricien : pages essentielles et visibilité locale"
+seoTitle: "Site internet psychomotricien : pages et SEO local"
 description: "Les pages utiles pour un site de psychomotricien, les informations à présenter et les bases pour être visible localement."
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"

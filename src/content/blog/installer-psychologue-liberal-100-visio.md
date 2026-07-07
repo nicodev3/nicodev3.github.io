@@ -275,7 +275,7 @@ S’installer psychologue en libéral 100 % visio n’est pas une version simpli
 
 Le point décisif est souvent celui-ci : sans adresse de cabinet exploitable et sans fiche Google Business Profile adaptée, votre site devient votre principal espace de référence. Il doit présenter votre pratique avec justesse, rassurer sans promettre, expliquer la visio avec précision et permettre à Google de comprendre pour quelles recherches vous êtes pertinent.
 
-C’est exactement le type de situation où l’accompagnement par un psychologue expert du web peut faire gagner du temps et éviter des erreurs coûteuses. Si vous souhaitez construire un site sobre, clair et pensé pour la visibilité d’une activité en ligne, vous pouvez consulter la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) ou demander un [diagnostic visibilité gratuit](/diagnostic-gratuit/?source=article-psy-100-visio).
+C’est exactement le type de situation où l’accompagnement par un psychologue expert du web peut faire gagner du temps et éviter des erreurs coûteuses. Si vous souhaitez construire un site sobre, clair et pensé pour la visibilité d’une activité en ligne, vous pouvez consulter la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) ou demander un <a href="/diagnostic-gratuit/" data-lead-source="article-psy-100-visio" data-umami-event="lead_click_diagnostic_from_article_psy_100_visio">diagnostic visibilité gratuit</a>.
 
 ## À lire aussi
 

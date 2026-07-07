@@ -1,7 +1,7 @@
 ---
 title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
 seoTitle: "Salaire psychologue libéral : revenus nets et fourchettes 2026"
-description: "Salaire psychologue libéral : combien gagne-t-on net selon honoraires, charges, CIPAV et régime fiscal ? Fourchettes 2026, salaire clinicien libéral et comparaison salarié."
+description: "Salaire psychologue libéral : revenus nets, charges, CIPAV et fourchettes 2026 pour estimer ce que rapporte vraiment un cabinet."
 pubDate: "2026-06-02"
 updatedDate: "2026-06-14"
 author: "Nicolas Devaux"
@@ -391,4 +391,4 @@ Pour un projet de site ou de visibilité en ligne adapté aux psychologues, vous
 
 ---
 
-*Sources et références utiles (à recouper selon votre année) : simulateurs <a href="https://www.autoentrepreneur.urssaf.fr/portail/accueil/simulateur.html" target="_blank" rel="nofollow noopener noreferrer">URSSAF micro-entrepreneur</a> et <a href="https://www.impots.gouv.fr/simulateur" target="_blank" rel="nofollow noopener noreferrer">impots.gouv.fr</a> ; informations retraite <a href="https://www.lassuranceretraite.fr/" target="_blank" rel="nofollow noopener noreferrer">CIPAV / Assurance retraite</a>. Les montants d'honoraires cités reflètent des pratiques libérales courantes observées en 2025-2026 et peuvent évoluer selon les zones.*
+*Sources et références utiles (à recouper selon votre année) : simulateurs <a href="https://www.autoentrepreneur.urssaf.fr/portail/accueil/simulateur.html" target="_blank" rel="nofollow noopener noreferrer">URSSAF micro-entrepreneur</a> et <a href="https://www.impots.gouv.fr/simulateurs" target="_blank" rel="nofollow noopener noreferrer">impots.gouv.fr</a> ; informations retraite <a href="https://www.lassuranceretraite.fr/" target="_blank" rel="nofollow noopener noreferrer">CIPAV / Assurance retraite</a>. Les montants d'honoraires cités reflètent des pratiques libérales courantes observées en 2025-2026 et peuvent évoluer selon les zones.*
