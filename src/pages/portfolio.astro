@@ -3,6 +3,7 @@ import type { ImageMetadata } from "astro";
 import Layout from "../layouts/Layout.astro";
 import PortfolioHero from "../components/PortfolioHero.astro";
 import CtaSection from "../components/CtaSection.astro";
+import portfolioHeroImage from "../assets/images/portfolio-image.webp";
 import { Picture } from "astro:assets";
 import severineReisserImage from "../assets/images/screenshots/psychologue-leslilas.webp";
 import marieJoseeGrassoImage from "../assets/images/screenshots/psychologue-sorgues.webp";
@@ -17,6 +18,7 @@ import emmanuelleRoucheImage from "../assets/images/screenshots/emmarouche-psych
 import florentSimonNancyImage from "../assets/images/screenshots/psychologue-nancy-florent-simon.webp";
 import balintSmbFranceImage from "../assets/images/screenshots/balint-smb-france.webp";
 import psychomotriciteMorgesImage from "../assets/images/screenshots/psychomotricite-morges.webp";
+import joieCompassionImage from "../assets/images/screenshots/joiecompassion.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -45,6 +47,8 @@ type PortfolioProject = {
   refonte2026?: boolean;
   /** Texte alternatif HTML si « Aperçu du site » est trop générique (SEO / a11y). */
   imageAlt?: string;
+  /** Courte description du projet (ex. refonte WordPress). */
+  description?: string;
 };
 
 const breadcrumbSchema = {
@@ -68,6 +72,19 @@ const breadcrumbSchema = {
 
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
 const portfolioProjects: PortfolioProject[] = [
+  {
+    title: "Isabelle Leboeuf",
+    image: joieCompassionImage,
+    url: "https://joiecompassion.com/",
+    location: "France",
+    year: 2018,
+    profession: "psychologue",
+    refonte2026: true,
+    description:
+      "Refonte visuelle et optimisation SEO d'un site WordPress (Joie & Compassion, TFC et programme MOOD).",
+    imageAlt:
+      "Site Joie & Compassion — refonte visuelle et SEO WordPress, Isabelle Leboeuf, thérapie fondée sur la compassion",
+  },
   {
     title: "Anne Dupuis-de Charrière",
     image: psychomotriciteMorgesImage,
@@ -245,6 +262,8 @@ const portfolioHeroSubtitle =
     title={portfolioHeroTitle}
     subtitle={portfolioHeroSubtitle}
     breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Portfolio" }]}
+    coverImage={portfolioHeroImage}
+    coverImageAlt="Espace de travail avec maquettes de sites web pour professionnels du soin"
   >
   </PortfolioHero>
 
@@ -301,6 +320,13 @@ const portfolioHeroSubtitle =
                     aria-hidden="true"
                   />
                 </h3>
+                {
+                  project.description && (
+                    <p class="mb-4 text-sm leading-relaxed text-muted">
+                      {project.description}
+                    </p>
+                  )
+                }
                 <div class="mb-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
                   <div class="flex items-center">
                     <svg

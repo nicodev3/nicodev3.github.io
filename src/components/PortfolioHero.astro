@@ -1,4 +1,7 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 export interface BreadcrumbItem {
   label: string;
   href?: string;
@@ -9,18 +12,88 @@ export interface Props {
   title: string;
   subtitle?: string;
   breadcrumb?: BreadcrumbItem[];
+  coverImage?: string | ImageMetadata;
+  coverImageAlt?: string;
+  coverBlur?: 'light' | 'medium' | 'soft';
 }
-const { eyebrow, title, subtitle, breadcrumb } = Astro.props;
+
+const {
+  eyebrow,
+  title,
+  subtitle,
+  breadcrumb,
+  coverImage,
+  coverImageAlt,
+  coverBlur = 'soft',
+} = Astro.props;
+
+const hasCover = Boolean(coverImage);
+const coverIsAsset =
+  typeof coverImage === 'object' &&
+  coverImage !== null &&
+  'src' in coverImage &&
+  'width' in coverImage;
 ---
 
 <section
-  class="portfolio-hero-shell relative isolate overflow-hidden border-b border-border text-foreground"
+  class:list={[
+    'portfolio-hero-shell relative isolate overflow-hidden border-b border-border text-foreground',
+    { 'portfolio-hero-shell--with-cover': hasCover },
+    hasCover && coverBlur !== 'soft' ? `portfolio-hero-shell--cover-blur-${coverBlur}` : null,
+  ]}
   aria-labelledby="portfolio-hero-heading"
 >
-  <div class="portfolio-hero-wash pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  {
+    hasCover && coverImage && (
+      <div class="portfolio-hero-layer portfolio-hero-layer--photo">
+        {
+          coverIsAsset ? (
+            <Image
+              src={coverImage}
+              alt={coverImageAlt ?? ''}
+              class="portfolio-hero-cover-img"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              width={1600}
+              height={900}
+            />
+          ) : (
+            <img
+              src={coverImage as string}
+              alt={coverImageAlt ?? ''}
+              class="portfolio-hero-cover-img"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+              width="1600"
+              height="900"
+            />
+          )
+        }
+      </div>
+    )
+  }
+  {hasCover && <div class="portfolio-hero-layer portfolio-hero-layer--scrim" aria-hidden="true"></div>}
+  <div
+    class:list={['portfolio-hero-wash pointer-events-none absolute inset-0', { 'portfolio-hero-layer--hidden-when-cover': hasCover }]}
+    aria-hidden="true"
+  ></div>
   <div class="portfolio-hero-grain pointer-events-none absolute inset-0" aria-hidden="true"></div>
-  <div class="portfolio-hero-orb portfolio-hero-orb--left pointer-events-none absolute" aria-hidden="true"></div>
-  <div class="portfolio-hero-orb portfolio-hero-orb--right pointer-events-none absolute" aria-hidden="true"></div>
+  <div
+    class:list={[
+      'portfolio-hero-orb portfolio-hero-orb--left pointer-events-none absolute',
+      { 'portfolio-hero-layer--hidden-when-cover': hasCover },
+    ]}
+    aria-hidden="true"
+  ></div>
+  <div
+    class:list={[
+      'portfolio-hero-orb portfolio-hero-orb--right pointer-events-none absolute',
+      { 'portfolio-hero-layer--hidden-when-cover': hasCover },
+    ]}
+    aria-hidden="true"
+  ></div>
 
   <div class="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-14 lg:px-8 lg:py-16">
     {
@@ -135,6 +208,64 @@ const { eyebrow, title, subtitle, breadcrumb } = Astro.props;
       );
   }
 
+  .portfolio-hero-shell--with-cover {
+    background-image: none;
+  }
+
+  .portfolio-hero-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .portfolio-hero-layer--photo {
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .portfolio-hero-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.05);
+    transform-origin: center center;
+    filter: blur(6px);
+  }
+
+  .portfolio-hero-shell--cover-blur-medium .portfolio-hero-cover-img {
+    transform: scale(1.03);
+    filter: blur(4px);
+  }
+
+  .portfolio-hero-shell--cover-blur-light .portfolio-hero-cover-img {
+    transform: scale(1.02);
+    filter: blur(3px);
+  }
+
+  .portfolio-hero-layer--scrim {
+    z-index: 1;
+    background:
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--color-surface) 78%, transparent) 0%,
+        color-mix(in srgb, var(--color-surface) 52%, transparent) 42%,
+        color-mix(in srgb, var(--color-surface) 28%, transparent) 100%
+      );
+  }
+
+  .portfolio-hero-layer--hidden-when-cover {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .portfolio-hero-shell--with-cover .portfolio-hero-grain {
+    z-index: 2;
+    opacity: 0.12;
+  }
+
   .portfolio-hero-wash {
     background:
       radial-gradient(circle at 15% 14%, color-mix(in srgb, var(--color-primary) 16%, transparent) 0, transparent 44%),
@@ -178,6 +309,31 @@ const { eyebrow, title, subtitle, breadcrumb } = Astro.props;
   }
 
   @media (max-width: 768px) {
+    .portfolio-hero-cover-img {
+      transform: scale(1.04);
+      filter: blur(5px);
+    }
+
+    .portfolio-hero-shell--cover-blur-medium .portfolio-hero-cover-img {
+      transform: scale(1.02);
+      filter: blur(3px);
+    }
+
+    .portfolio-hero-shell--cover-blur-light .portfolio-hero-cover-img {
+      transform: scale(1.01);
+      filter: blur(2px);
+    }
+
+    .portfolio-hero-layer--scrim {
+      background:
+        linear-gradient(
+          180deg,
+          color-mix(in srgb, var(--color-surface) 82%, transparent) 0%,
+          color-mix(in srgb, var(--color-surface) 58%, transparent) 55%,
+          color-mix(in srgb, var(--color-surface) 32%, transparent) 100%
+        );
+    }
+
     .portfolio-hero-grain {
       background-size: 24px 24px;
       opacity: 0.14;
