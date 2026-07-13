@@ -1,5 +1,7 @@
 # Guide de l'installation en libéral pour psychologues
 
+© 2026 **Nicodev**, société de Nicolas Devaux. Tous droits réservés.
+
 ## Table des matières
 
 1. [Introduction](#introduction)
@@ -1737,6 +1739,10 @@ Analogie utile : Doctolib ressemble à une vitrine standard dans une galerie. T
 Un bon site de psychologue n’a pas besoin d’être complexe. Il doit surtout être lisible, humain, cohérent et rassurant.
 [/ENCADRE_ASTUCE]
 
+[ENCADRE_CTA]
+**Tu veux éviter de perdre des semaines sur la technique ?** Je peux réaliser pour toi un site de psychologue sobre, clair et pensé pour la visibilité locale : pages essentielles, structure SEO, mentions utiles, formulaire de contact et intégration de ton outil de rendez-vous. Voir l’accompagnement : [création site internet psychologue](/creation-site-internet-psychologue/) ou me contacter : [nicodev.fr/contact](/contact/).
+[/ENCADRE_CTA]
+
 ## Le SEO local : souvent le levier le plus puissant
 
 Quand une personne cherche un·e psychologue, elle cherche rarement “un·e psychologue” au hasard. Elle cherche souvent :
@@ -1983,6 +1989,10 @@ Si tu veux rester sobre et efficace, une base solide peut ressembler à ceci :
 3. quelques **annuaires bien choisis** ;
 4. un **réseau local** informé de ton installation ;
 5. du temps pour laisser le **bouche-à-oreille** faire son travail.
+
+[ENCADRE_CTA]
+**Priorité si tu t’installes bientôt :** ne laisse pas ton site devenir un chantier interminable. Si tu veux déléguer la structure, le design, la mise en ligne et les bases SEO locales, je peux m’en charger avec une approche adaptée aux psychologues. Voir les offres : [tarifs Nicodev](/tarifs/) ou demander un devis : [nicodev.fr/devis](/devis/).
+[/ENCADRE_CTA]
 
 ## Ce qu’il faut retenir de ce chapitre
 
@@ -2287,6 +2297,10 @@ Exemple concret : une formation intéressante n’est pas forcément financée 
 Tu tiens maintenant une version déjà très avancée du document. La prochaine étape pourra consister à relire l’ensemble, harmoniser le ton entre les chapitres et préparer la future version PDF avec bibliographie et pages de fin.
 [/ENCADRE_INFO]
 
+[ENCADRE_CTA]
+**Besoin d’un site professionnel pour ton installation ?** Je suis Nicolas Devaux, fondateur de Nicodev, développeur web et professionnel du soin. Je crée des sites sobres pour psychologues : contenu clair, design rassurant, référencement local, formulaire de contact et mise en ligne. Pour en parler : [nicodev.fr/contact](/contact/) — offres : [nicodev.fr/tarifs](/tarifs/).
+[/ENCADRE_CTA]
+
 ## Sources externes (vérification recommandée)
 
 Les éléments de ce document doivent être vérifiés à partir de sources institutionnelles et professionnelles à jour. Voici une base de références externes :
@@ -2309,4 +2323,4 @@ Les règles administratives, fiscales et sociales évoluent régulièrement. Ava
 
 **Usage personnel et confidentialité.** Ce document t’est transmis pour **ton usage privé**. Merci de **ne pas le partager, ni le diffuser, ni le transmettre** à des tiers (y compris par messagerie, forum, groupe en ligne ou extrait recopié), **sans mon accord écrit préalable**. Toute circulation non autorisée porte atteinte aux conditions d’utilisation auxquelles tu as accès en le recevant.
 
-**Propriété littéraire et droits d’auteur.** Sauf mention contraire expresse, l’ensemble de ce guide (structure, rédaction, synthèses, formulations et choix éditoriaux) constitue une **œuvre originale** protégée par le **Code de la propriété intellectuelle** (France). **Tous droits réservés** © **2026 Nicolas Devaux**. Sont notamment interdits sans **autorisation écrite préalable** : la reproduction ou la représentation intégrale ou partielle **substantielle**, l’adaptation, la traduction, la diffusion à titre onéreux ou gratuit en ligne ou hors ligne, la mise à disposition du public ou dans un cadre collectif, ainsi que l’exploitation du contenu pour entraîner ou alimenter des systèmes automatisés de génération de texte. Les **citations courtes** demeurent possibles dans la limite des usages licites, **avec mention obligatoire du nom de l’auteur et du titre du document** et sans confusion sur l’origine.
+**Propriété littéraire et droits d’auteur.** Sauf mention contraire expresse, l’ensemble de ce guide (structure, rédaction, synthèses, formulations et choix éditoriaux) constitue une **œuvre originale** protégée par le **Code de la propriété intellectuelle** (France). **Tous droits réservés** © **2026 Nicodev**, société de Nicolas Devaux. Sont notamment interdits sans **autorisation écrite préalable** : la reproduction ou la représentation intégrale ou partielle **substantielle**, l’adaptation, la traduction, la diffusion à titre onéreux ou gratuit en ligne ou hors ligne, la mise à disposition du public ou dans un cadre collectif, ainsi que l’exploitation du contenu pour entraîner ou alimenter des systèmes automatisés de génération de texte. Les **citations courtes** demeurent possibles dans la limite des usages licites, **avec mention obligatoire de Nicodev, du nom de Nicolas Devaux et du titre du document** et sans confusion sur l’origine.

@@ -35,7 +35,7 @@ const slugify = (value: string): string =>
 const renderInline = (value: string): string =>
   escapeHtml(value)
     .replace(
-      /\[([^\]]+)\]\((#[^)]+)\)/g,
+      /\[([^\]]+)\]\(((?:#|\/|https:\/\/)[^)]+)\)/g,
       '<a href="$2" class="font-medium text-teal-700 underline decoration-teal-300 underline-offset-4 hover:text-teal-900">$1</a>',
     )
     .replace(
@@ -87,7 +87,7 @@ const renderMarkdown = (source: string): string => {
   let paragraph: string[] = [];
   let listItems: string[] = [];
   let orderedItems: string[] = [];
-  let boxType: "ATTENTION" | "ASTUCE" | "INFO" | null = null;
+  let boxType: "ATTENTION" | "ASTUCE" | "INFO" | "CTA" | null = null;
   let boxLines: string[] = [];
 
   const flushParagraph = () => {
@@ -121,10 +121,19 @@ const renderMarkdown = (source: string): string => {
         "border-teal-300 bg-teal-50 text-teal-950",
       INFO:
         "border-sky-300 bg-sky-50 text-sky-950",
+      CTA:
+        "border-teal-600 bg-teal-50 text-teal-950",
+    };
+
+    const labels = {
+      ATTENTION: "ATTENTION",
+      ASTUCE: "ASTUCE",
+      INFO: "INFO",
+      CTA: "SITE WEB",
     };
 
     html.push(
-      `<aside class="my-6 rounded-lg border px-5 py-4 ${styles[boxType] ?? styles.INFO}"><p class="mb-2 text-sm font-bold uppercase tracking-[0.18em]">${boxType}</p><p>${renderInline(
+      `<aside class="my-6 rounded-lg border px-5 py-4 ${styles[boxType] ?? styles.INFO}"><p class="mb-2 text-sm font-bold uppercase tracking-[0.18em]">${labels[boxType] ?? boxType}</p><p>${renderInline(
         boxLines.join(" "),
       )}</p></aside>`,
     );
@@ -160,10 +169,19 @@ const renderMarkdown = (source: string): string => {
       continue;
     }
 
+    if (line === "[ENCADRE_CTA]") {
+      flushParagraph();
+      flushList();
+      flushOrdered();
+      boxType = "CTA";
+      continue;
+    }
+
     if (
       line === "[/ENCADRE_ATTENTION]" ||
       line === "[/ENCADRE_ASTUCE]" ||
-      line === "[/ENCADRE_INFO]"
+      line === "[/ENCADRE_INFO]" ||
+      line === "[/ENCADRE_CTA]"
     ) {
       flushBox();
       continue;
