@@ -6,6 +6,7 @@ import BlogCard from '../components/BlogCard.astro';
 import { BLOG_TAG_ORDER } from '../data/blog-tags';
 import { comparePostsByPubDateDesc, toTagHref } from '../utils/blog';
 import defaultBlogCover from '../assets/images/blog/development.webp';
+import blogHeroImage from '../assets/images/blog-image.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
@@ -37,6 +38,9 @@ const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 		title="Blog" 
 		subtitle="Conseils et articles sur la création de sites internet pour cabinets de soin"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Blog' }]}
+		coverImage={blogHeroImage}
+		coverImageAlt="Bureau professionnel avec ordinateur, symbole des articles et conseils pour cabinets de soin"
+		coverBlur="light"
 	/>
 
 	<section class="py-16 bg-white" data-scroll-reveal-skip>

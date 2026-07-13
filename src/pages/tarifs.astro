@@ -6,6 +6,15 @@ import CtaSection from '../components/CtaSection.astro';
 import OffersSection from '../components/OffersSection.astro';
 import PageSpeedScores from '../components/PageSpeedScores.astro';
 import FaqSection from '../components/FaqSection.astro';
+import tarifsHeroImage from '../assets/images/tarifs-image.webp';
+import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
+import { CalendarClock, LockOpen, PackageCheck } from '@lucide/astro';
+
+const tarifsHeroHighlightIcons = [PackageCheck, CalendarClock, LockOpen] as const;
+const tarifsHeroHighlights = TARIFS_TRUST_SIGNALS.map((label, index) => ({
+	Icon: tarifsHeroHighlightIcons[index],
+	label,
+}));
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const breadcrumbSchema = {
@@ -93,12 +102,22 @@ const tarifsFaqItems = [
 		subtitle="Prix clair et abonnement mensuel à partir de 29€ : création, hébergement, maintenance et suivi humain pour votre site de psychologue."
 		variant="light"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Tarifs' }]}
+		coverImage={tarifsHeroImage}
+		coverImageAlt="Bureau professionnel avec ordinateur, symbole de transparence tarifaire pour site de psychologue"
 	>
 		<Fragment slot="after">
-			<ul class="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted">
-				<li>Création incluse</li>
-				<li>Paiement après livraison</li>
-				<li>Sans engagement</li>
+			<ul
+				class="mx-auto mt-6 flex max-w-3xl list-none flex-wrap justify-center gap-2 p-0 sm:gap-2.5"
+				aria-label="Garanties tarifaires"
+			>
+				{tarifsHeroHighlights.map(({ Icon, label }) => (
+					<li>
+						<span class="inline-flex items-center gap-1.5 rounded-full border border-border/90 bg-background/70 px-3 py-1.5 text-sm text-muted shadow-sm backdrop-blur-sm">
+							<Icon class="size-3.5 shrink-0 text-primary-700" aria-hidden="true" stroke-width={2.25} />
+							<span>{label}</span>
+						</span>
+					</li>
+				))}
 			</ul>
 		</Fragment>
 	</Hero>

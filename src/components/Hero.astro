@@ -11,15 +11,18 @@ export interface Props {
 	/** Image de couverture (asset optimisé ou URL publique /…) — dégradé de lisibilité appliqué automatiquement */
 	coverImage?: string | ImageMetadata;
 	coverImageAlt?: string;
+	/** Flou de l’image de couverture : « light » (blog index), « medium » (articles), « soft » (marketing, défaut). */
+	coverBlur?: 'light' | 'medium' | 'soft';
 }
 
-const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb, coverImage, coverImageAlt } = Astro.props;
+const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb, coverImage, coverImageAlt, coverBlur = 'soft' } = Astro.props;
 
 const hasCover = Boolean(coverImage);
 const coverIsAsset = typeof coverImage === 'object' && coverImage !== null && 'src' in coverImage && 'width' in coverImage;
 
 const sectionClass = [
 	hasCover ? 'hero-shell--with-cover border-b border-border' : '',
+	hasCover && coverBlur !== 'soft' ? `hero-shell--cover-blur-${coverBlur}` : '',
 	variant === 'full'
 		? 'hero-shell hero-shell--full text-foreground py-16 md:py-20'
 		: 'hero-shell hero-shell--light text-foreground py-14 md:py-16',
@@ -145,9 +148,19 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 		object-fit: cover;
 		object-position: center;
 		display: block;
-		transform: scale(1.07);
+		transform: scale(1.05);
 		transform-origin: center center;
-		filter: blur(10px);
+		filter: blur(6px);
+	}
+
+	.hero-shell--cover-blur-medium .hero-cover-img {
+		transform: scale(1.03);
+		filter: blur(4px);
+	}
+
+	.hero-shell--cover-blur-light .hero-cover-img {
+		transform: scale(1.02);
+		filter: blur(3px);
 	}
 
 	.hero-layer--scrim {
@@ -164,8 +177,18 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 
 	@media (max-width: 768px) {
 		.hero-cover-img {
-			transform: scale(1.06);
-			filter: blur(8px);
+			transform: scale(1.04);
+			filter: blur(5px);
+		}
+
+		.hero-shell--cover-blur-medium .hero-cover-img {
+			transform: scale(1.02);
+			filter: blur(3px);
+		}
+
+		.hero-shell--cover-blur-light .hero-cover-img {
+			transform: scale(1.01);
+			filter: blur(2px);
 		}
 
 		.hero-layer--scrim {

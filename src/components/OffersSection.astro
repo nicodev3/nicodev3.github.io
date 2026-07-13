@@ -1,5 +1,6 @@
 ---
 import OfferCard from './OfferCard.astro';
+import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
 
 export interface Props {
 	background?: 'surface' | 'white' | 'background';
@@ -102,18 +103,12 @@ const visibilityFeatures = [
 		</div>
 
 		<ul class="mx-auto mt-8 grid max-w-4xl gap-3 text-sm text-muted sm:grid-cols-3">
-			<li class="flex items-start gap-2">
-				<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-foreground"></span>
-				<span>Création du site incluse</span>
-			</li>
-			<li class="flex items-start gap-2">
-				<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-foreground"></span>
-				<span>Paiement après livraison</span>
-			</li>
-			<li class="flex items-start gap-2">
-				<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-foreground"></span>
-				<span>Sans engagement de durée</span>
-			</li>
+			{TARIFS_TRUST_SIGNALS.map((label) => (
+				<li class="flex items-start gap-2">
+					<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-foreground"></span>
+					<span>{label}</span>
+				</li>
+			))}
 		</ul>
 
 		{

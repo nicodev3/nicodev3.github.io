@@ -6,6 +6,7 @@ import BlogCard from '../../../components/BlogCard.astro';
 import { BLOG_TAG_DESCRIPTIONS } from '../../../data/blog-tags';
 import { slugifyTag } from '../../../utils/blog';
 import defaultBlogCover from '../../../assets/images/blog/development.webp';
+import blogHeroImage from '../../../assets/images/blog-image.webp';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -88,6 +89,9 @@ const itemListSchema =
 			{ label: 'Blog', href: '/blog/' },
 			{ label: tagLabel }
 		]}
+		coverImage={blogHeroImage}
+		coverImageAlt="Bureau professionnel avec ordinateur, symbole des articles et conseils pour cabinets de soin"
+		coverBlur="light"
 	/>
 
 	<section class="py-16 bg-white" data-scroll-reveal-skip>
