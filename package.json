@@ -1,43 +1,40 @@
 {
-  "name": "nicodev-astro",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
-  "config": {
-    "puppeteer_skip_download": "true"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "optimize-images": "node scripts/optimize-images.mjs",
-    "optimize-images:webp": "node scripts/optimize-images.mjs --webp",
-    "convert-screenshots-webp": "node scripts/convert-screenshots-webp.mjs",
-    "puppeteer:install-browser": "npx puppeteer browsers install chrome"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@astrojs/sitemap": "^3.7.3",
-    "@fontsource-variable/lora": "^5.2.8",
-    "@fontsource-variable/source-sans-3": "^5.2.9",
-    "@lucide/astro": "^1.8.0",
-    "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.4.8",
-    "tailwindcss": "^4.2.4",
-    "typescript": "^6.0.3"
-  },
-  "devDependencies": {
-    "prettier": "^3.8.3",
-    "puppeteer": "^25.0.4",
-    "sharp": "^0.34.5"
-  },
-  "overrides": {
-    "vite": "^7"
-  }
+    "name": "nicodev-astro",
+    "type": "module",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "config": {
+        "puppeteer_skip_download": "true"
+    },
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "prettier . --write",
+        "format:check": "prettier . --check",
+        "optimize-images": "node scripts/optimize-images.mjs",
+        "optimize-images:webp": "node scripts/optimize-images.mjs --webp",
+        "convert-screenshots-webp": "node scripts/convert-screenshots-webp.mjs",
+        "puppeteer:install-browser": "npx puppeteer browsers install chrome"
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.9.9",
+        "@astrojs/sitemap": "^3.7.3",
+        "@fontsource-variable/lora": "^5.2.8",
+        "@fontsource-variable/source-sans-3": "^5.2.9",
+        "@lucide/astro": "^1.8.0",
+        "@tailwindcss/typography": "^0.5.16",
+        "@tailwindcss/vite": "^4.2.4",
+        "astro": "^7.0.8",
+        "tailwindcss": "^4.2.4",
+        "typescript": "^6.0.3"
+    },
+    "devDependencies": {
+        "prettier": "^3.8.3",
+        "puppeteer": "^25.0.4",
+        "sharp": "^0.34.5"
+    }
 }
