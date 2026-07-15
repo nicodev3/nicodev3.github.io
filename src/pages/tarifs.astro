@@ -47,9 +47,9 @@ const servicePros = [
 
 const tarifsFaqItems = [
 	{
-		question: "Quel prix prévoir pour un site internet de psychologue ?",
+		question: "Quels sont les tarifs Nicodev pour un site de psychologue ?",
 		answer:
-			"Chez Nicodev, le prix est présenté sous forme d'abonnement tout inclus : 29 €/mois pour l'offre Sérénité ou 49 €/mois pour l'offre Visibilité & Confiance. La création, l'hébergement, le nom de domaine et la maintenance sont intégrés au périmètre."
+			"Chez Nicodev, le prix est présenté sous forme d'abonnement tout inclus : 29 €/mois pour l'offre Sérénité ou 49 €/mois pour l'offre Visibilité & Confiance. La création, l'hébergement, le nom de domaine et la maintenance sont intégrés au périmètre. Pour les fourchettes du marché (DIY, freelance, agence), voir le guide « combien coûte un site pour psychologue »."
 	},
 	{
 		question: "Que couvre l'abonnement site psychologue ?",
@@ -91,15 +91,15 @@ const tarifsFaqItems = [
 ---
 
 <Layout
-	title="Tarifs site internet psychologue : prix et abonnement | Nicodev"
-	description="Tarifs site internet psychologue : prix transparent, abonnement site psychologue dès 29€/mois, création, hébergement, maintenance et suivi inclus."
+	title="Tarifs Nicodev : abonnement site psychologue dès 29 €/mois"
+	description="Abonnement site psychologue Nicodev : 29 ou 49 €/mois tout inclus (création, hébergement, domaine, maintenance). Formules et périmètre détaillés."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero
-		title="Tarifs site internet psychologue"
-		subtitle="Prix clair et abonnement mensuel à partir de 29€ : création, hébergement, maintenance et suivi humain pour votre site de psychologue."
+		title="Tarifs Nicodev : abonnement site psychologue"
+		subtitle="Deux formules claires dès 29 €/mois : création, hébergement, nom de domaine et maintenance inclus pour votre site de psychologue."
 		variant="light"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Tarifs' }]}
 		coverImage={tarifsHeroImage}
@@ -126,12 +126,21 @@ const tarifsFaqItems = [
 
 	<section class="section-y border-t border-border bg-white">
 		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+			<p class="mb-8 rounded-lg border border-border bg-surface px-5 py-4 text-sm text-muted sm:text-base">
+				Vous cherchez d&apos;abord un ordre de grandeur (DIY, freelance, agence)&nbsp;?
+				Lisez le guide
+				<a
+					href="/blog/combien-coute-site-internet-2026/"
+					class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+				>combien coûte un site pour psychologue</a>
+				— cette page Tarifs détaille uniquement les <strong class="text-foreground">formules Nicodev</strong>.
+			</p>
 			<div class="rounded-lg border border-border bg-muted/10 p-6 sm:p-8">
 				<h2 class="mb-4 text-lg font-semibold text-foreground sm:text-xl">
 					Pourquoi un abonnement site psychologue mensuel ?
 				</h2>
 				<p class="mb-4 text-sm text-muted sm:text-base">
-					Un site n'est pas seulement un fichier mis en ligne une fois. Il faut une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. L'abonnement regroupe ces postes pour donner un <strong class="text-foreground">prix de site internet psychologue</strong> prévisible, sans petites factures séparées ni charge mentale technique.
+					Un site n'est pas seulement un fichier mis en ligne une fois. Il faut une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. L'abonnement regroupe ces postes pour un tarif prévisible, sans petites factures séparées ni charge mentale technique.
 				</p>
 				<ul class="space-y-2 text-sm text-muted sm:text-base">
 					<li class="flex items-baseline gap-2">

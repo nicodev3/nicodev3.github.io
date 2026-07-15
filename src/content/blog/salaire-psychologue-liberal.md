@@ -1,13 +1,15 @@
 ---
 title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
-seoTitle: "Salaire psychologue libéral : revenus nets et fourchettes 2026"
+seoTitle: "Salaire psychologue libéral 2026 : revenus nets et fourchettes"
 description: "Salaire psychologue libéral : revenus nets, charges, CIPAV et fourchettes 2026 pour estimer ce que rapporte vraiment un cabinet."
 pubDate: "2026-06-02"
-updatedDate: "2026-06-14"
+updatedDate: "2026-07-15"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
 tags: ["psychologue", "installation en libéral"]
 faq:
+  - question: "Quel est le salaire psychologue libéral en 2026 ?"
+    answer: "Il n'existe pas de salaire moyen officiel unique. Le revenu net dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l'ancienneté du cabinet. Une activité récente peut rester sous 1 700 € nets mensuels ; un cabinet installé vise plus souvent 1 800 à 3 200 € nets."
   - question: "Quel est le salaire moyen d'un psychologue libéral ?"
     answer: "Il n'existe pas de salaire moyen officiel unique. Le revenu net dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l'ancienneté du cabinet. Une activité récente peut rester sous 1 700 € nets mensuels ; un cabinet installé vise plus souvent 1 800 à 3 200 € nets."
   - question: "Combien gagne un psychologue libéral ?"
@@ -43,6 +45,10 @@ La difficulté, c'est que ce mot « salaire » est en partie trompeur. En libér
 Cet article ne remplace ni un expert-comptable, ni un conseiller en gestion de patrimoine. Il propose une **lecture réaliste** des revenus possibles, avec des ordres de grandeur et des exemples chiffrés, pour que vous puissiez estimer votre situation — et croiser ces données avec le reste de votre projet d'installation.
 
 Pour les démarches concrètes (statut, TVA, cabinet, visibilité), vous pouvez aussi lire le guide [ouvrir son cabinet de psychologue : s'installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/).
+
+## Salaire psychologue libéral : fourchettes 2026
+
+Le **salaire psychologue libéral** n’est pas un barème national : c’est le revenu net qui reste après honoraires, cotisations, charges et impôts. Les ordres de grandeur 2026 restent ceux du tableau ci-dessus — utiles pour cadrer un projet d’installation, pas pour garantir un résultat.
 
 ## Salaire psychologue : salarié, libéral et clinicien — ne pas confondre
 
@@ -353,7 +359,11 @@ Le **salaire psychologue libéral** le plus honnête à retenir est donc une **f
 
 Si vous préparez votre installation, avancez en parallèle sur trois plans : **viabilité financière** (cet article), **cadre administratif** ([ouvrir son cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/)), et **visibilité** pour ne pas rester invisible les premiers mois ([premiers patients](/blog/comment-trouver-premiers-patients-psychologue/), [budget site internet](/blog/combien-coute-site-internet-2026/)).
 
-## Questions fréquentes sur le salaire d'un psychologue libéral
+## Questions fréquentes sur le salaire psychologue libéral
+
+### Quel est le salaire psychologue libéral en 2026 ?
+
+Il n'existe pas de salaire moyen officiel vraiment fiable pour tous les psychologues libéraux, car le revenu dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l'ancienneté du cabinet. Une activité récente peut rester sous **1 700 € nets mensuels**, tandis qu'un cabinet installé peut viser plus souvent **1 800 à 3 200 € nets**, avec de fortes variations.
 
 ### Quel est le salaire moyen d'un psychologue libéral ?
 

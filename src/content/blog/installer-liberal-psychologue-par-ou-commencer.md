@@ -40,11 +40,11 @@ Avant toute démarche, tu peux t'appuyer sur ces 6 points :
 - ta **population cible prioritaire** ;
 - ton **cadre de consultation** (cabinet, visio, hybride) ;
 - ton **volume réaliste** de consultations par semaine;
-- ton **seuil de viabilité financière** (charges fixes + minimum de sécurité perso) ;
+- ton **seuil de viabilité financière** (charges fixes + minimum de sécurité perso) — voir aussi le [salaire psychologue libéral](/blog/salaire-psychologue-liberal/) pour des fourchettes concrètes ;
 - ton **territoire d’installation** (demande locale, concurrence, prescripteurs possibles) ;
 - tes **justificatifs de titre** et documents utiles pour l’enregistrement professionnel.
 
-Si la question financière est déjà centrale pour toi, l’article sur le [salaire d’un psychologue libéral](/blog/salaire-psychologue-liberal/) détaille les honoraires, les charges, les cotisations et les scénarios de revenu net.
+Si la question financière est déjà centrale pour toi, l’article sur le [salaire psychologue libéral](/blog/salaire-psychologue-liberal/) détaille les honoraires, les charges, les cotisations et les scénarios de revenu net.
 
 Dans le guide PDF que j'ai réalisé, je détaille une version complète de cette check-list avec un canevas prêt à remplir.
 

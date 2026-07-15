@@ -32,6 +32,14 @@ const faqSchema = {
 		},
 		{
 			'@type': 'Question',
+			name: 'Création site psychologue : combien ça coûte ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute fiche Google, contenus réguliers et suivi SEO local.",
+			},
+		},
+		{
+			'@type': 'Question',
 			name: 'Faut-il un site internet si on est thérapeute (psychologue, psychothérapeute) ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
@@ -124,9 +132,9 @@ const faqSchema = {
 const serviceSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
-	name: 'Création site internet psychologue — site vitrine sur mesure',
+	name: 'Création site internet psychologue — création site psychologue',
 	description:
-		'Création de site internet et site web pour psychologue : structure claire, contenu guidé, design sobre, prise de rendez-vous intégrée, hébergement et bases SEO inclus.',
+		'Création site internet psychologue et création site psychologue : structure claire, contenu guidé, design sobre, prise de rendez-vous intégrée, hébergement et bases SEO inclus.',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -165,8 +173,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Création site internet psychologue : site vitrine sur mesure"
-	description="Création site internet psychologue : site vitrine clair et professionnel pour présenter votre pratique et rassurer vos futurs patients."
+	title="Création site internet psychologue | Création site psychologue"
+	description="Création site internet psychologue et création site psychologue : site vitrine sobre, contenu guidé, hébergement et bases SEO inclus dès 29 €/mois."
 	image={psychologueImage}
 >
 	<Fragment slot="head">
@@ -176,8 +184,8 @@ const breadcrumbSchema = {
 	</Fragment>
 
 	<Hero
-		title="Création site internet psychologue : site vitrine sur mesure"
-		subtitle="Création de site web pour psychologue et thérapeute : présenter votre pratique, rassurer vos futurs patients et les orienter vers la prise de contact ou le rendez-vous en ligne. Psychologue et développeur web."
+		title="Création site internet psychologue"
+		subtitle="Création site psychologue et site web pour thérapeute : présenter votre pratique, rassurer vos futurs patients et les orienter vers le contact ou le rendez-vous. Psychologue et développeur web."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création site internet psychologue' }]}
 		coverImage={psychologueImage}
 		coverImageAlt="Exemple de site sobre pour une psychologue en libéral"
@@ -209,7 +217,8 @@ const breadcrumbSchema = {
 		<div class="shell-layout">
 			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
 				<p>
-					Vous cherchez un accompagnement pour la <strong>création de votre site internet psychologue</strong>&nbsp;?
+					Vous cherchez un accompagnement pour la <strong>création site internet psychologue</strong>
+					ou la <strong>création site psychologue</strong>&nbsp;?
 					Cette page détaille ce que comprend la prestation&nbsp;: structure, contenu guidé, design sobre,
 					intégration de votre outil de rendez-vous, hébergement et bases SEO — pour un site que vous contrôlez,
 					sans discours de visibilité garanti.
@@ -252,7 +261,7 @@ const breadcrumbSchema = {
 					</div>
 				</div>
 
-				<h2>Création site internet psychologue&nbsp;: les repères d’un site clair et utile</h2>
+				<h2>Création site psychologue&nbsp;: ce que comprend la prestation</h2>
 				<p>
 					Avant de comparer les solutions possibles, voici ce qui distingue un site simplement présent en ligne
 					d’un site qui aide réellement à présenter votre cadre, vos modalités et les informations utiles avant le premier contact.
