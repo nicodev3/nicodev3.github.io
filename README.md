@@ -7,7 +7,7 @@ Site personnel moderne de Nicolas Devaux, développeur Web front-end, construit 
 - **Astro** - Framework web moderne pour des sites ultra-rapides
 - **Tailwind CSS** - Framework CSS utilitaire pour un design moderne
 - **TypeScript** - Typage statique pour un code plus robuste
-- **Cloudflare Pages** - Déploiement et hébergement test
+- **Cloudflare Pages** - Déploiement et hébergement
 
 ## 🛠️ Développement local
 
