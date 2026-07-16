@@ -19,6 +19,7 @@ import florentSimonNancyImage from "../assets/images/screenshots/psychologue-nan
 import balintSmbFranceImage from "../assets/images/screenshots/balint-smb-france.webp";
 import psychomotriciteMorgesImage from "../assets/images/screenshots/psychomotricite-morges.webp";
 import joieCompassionImage from "../assets/images/screenshots/joiecompassion.webp";
+import benedicteDonetImage from "../assets/images/screenshots/benedictedonet-psyenligne.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -73,10 +74,23 @@ const breadcrumbSchema = {
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
 const portfolioProjects: PortfolioProject[] = [
   {
+    title: "Bénédicte Donet",
+    image: benedicteDonetImage,
+    url: "https://www.benedictedonet-psyenligne.com/",
+    location: "France",
+    year: 2026,
+    profession: "psychologue",
+    refonte2026: true,
+    description:
+      "Refonte d'un site WordPress avec optimisation des performances et SEO (psychologue en ligne, EMDR, trauma).",
+    imageAlt:
+      "Site Bénédicte Donet — psychologue en ligne, refonte WordPress avec optimisation performances et SEO",
+  },
+  {
     title: "Isabelle Leboeuf",
     image: joieCompassionImage,
     url: "https://joiecompassion.com/",
-    location: "France",
+    location: "Seclin",
     year: 2018,
     profession: "psychologue",
     refonte2026: true,
