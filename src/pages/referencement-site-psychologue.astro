@@ -2,8 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import CtaSection from '../components/CtaSection.astro';
-import { Phone, MessageCircle } from '@lucide/astro';
-import { WHATSAPP_HREF, WHATSAPP_DISPLAY, WHATSAPP_PHONE_E164 } from '../data/contact';
+import { AtSign, Phone, MessageCircle } from '@lucide/astro';
+import {
+	INSTAGRAM_HREF,
+	SOCIAL_HANDLE_DISPLAY,
+	WHATSAPP_HREF,
+	WHATSAPP_DISPLAY,
+	WHATSAPP_PHONE_E164
+} from '../data/contact';
 import refOgWebp from '../assets/images/blog/seo-google-my-business.webp';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -188,7 +194,17 @@ const breadcrumbSchema = {
 				data-umami-event="lead_click_whatsapp_from_referencement_page"
 			>
 				<MessageCircle class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
-				WhatsApp — réponse rapide
+				WhatsApp {SOCIAL_HANDLE_DISPLAY}
+			</a>
+			<a
+				href={INSTAGRAM_HREF}
+				target="_blank"
+				rel="me noopener noreferrer"
+				class="inline-flex items-center gap-1.5 font-medium text-muted transition-colors hover:text-primary"
+				data-umami-event="lead_click_instagram_from_referencement_page"
+			>
+				<AtSign class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+				Instagram {SOCIAL_HANDLE_DISPLAY}
 			</a>
 		</div>
 	</div>

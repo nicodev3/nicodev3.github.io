@@ -8,7 +8,7 @@ import HeroSection from '../components/HeroSection.astro';
 import HomeAudienceSection from '../components/HomeAudienceSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import portraitImage from '../assets/images/nicodev.webp';
-import { WHATSAPP_PHONE_E164 } from '../data/contact';
+import { INSTAGRAM_HREF, WHATSAPP_PHONE_E164 } from '../data/contact';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const siteRootHref = new URL('/', baseUrl).href;
@@ -34,7 +34,8 @@ const businessSchema = {
 	sameAs: [
 		'https://www.malt.fr/profile/nicolasdevaux1',
 		'https://github.com/nicodev3',
-		'https://www.linkedin.com/in/nicodev3/'
+		'https://www.linkedin.com/in/nicodev3/',
+		INSTAGRAM_HREF
 	],
 	areaServed: { '@type': 'Country', name: 'France' },
 	slogan: 'Création de sites internet pour psychologues, psychomotriciens, ergothérapeutes et orthophonistes',

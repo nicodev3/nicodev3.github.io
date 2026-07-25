@@ -6,6 +6,7 @@ import CtaSection from '../components/CtaSection.astro';
 import { Image } from 'astro:assets';
 import developmentImage from '../assets/images/nicodev.webp';
 import defaultOgWebp from '../assets/images/blog/development.webp';
+import { INSTAGRAM_HREF, SOCIAL_HANDLE_DISPLAY } from '../data/contact';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const aboutUrl = new URL('/about/', baseUrl).toString();
@@ -42,6 +43,7 @@ const personSchema = {
     'https://www.malt.fr/profile/nicolasdevaux1',
     'https://github.com/nicodev3',
     'https://www.linkedin.com/in/nicodev3/',
+    INSTAGRAM_HREF,
     'https://nicolas-devaux-psychologue.fr',
   ],
 };
@@ -145,7 +147,7 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
           <p>
             Je travaille peu de projets à la fois, avec un échange direct et une attention réelle.
             Vous pouvez consulter mes <a href="/portfolio/">réalisations</a>, mes <a href="/tarifs/">tarifs</a>, ou
-            simplement me <a href="/contact/">contacter</a> pour un premier échange.
+            simplement me <a href="/contact/">contacter</a> (WhatsApp ou Instagram&nbsp;: {SOCIAL_HANDLE_DISPLAY}) pour un premier échange.
           </p>
         </div>
 
@@ -247,6 +249,15 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
             class="rounded-full border border-primary-300 bg-white px-4 py-2 text-sm font-semibold text-primary-700 shadow-sm transition-colors hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
           >
             Avis clients · Malt
+          </a>
+          <a
+            href={INSTAGRAM_HREF}
+            target="_blank"
+            rel="me noopener noreferrer"
+            data-umami-event="lead_click_instagram_from_about"
+            class="rounded-full border border-primary-300 bg-white px-4 py-2 text-sm font-semibold text-primary-700 shadow-sm transition-colors hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
+          >
+            Instagram {SOCIAL_HANDLE_DISPLAY}
           </a>
         </div>
 

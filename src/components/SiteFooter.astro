@@ -1,5 +1,5 @@
 ---
-import { WHATSAPP_HREF } from '../data/contact';
+import { INSTAGRAM_HREF, SOCIAL_HANDLE_DISPLAY, WHATSAPP_HREF } from '../data/contact';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const homePageUrl = new URL('/', baseUrl).href;
@@ -33,7 +33,16 @@ const footerLinkClass =
 						rel="noopener noreferrer"
 						data-umami-event="lead_click_whatsapp_from_footer"
 					>
-						WhatsApp
+						WhatsApp {SOCIAL_HANDLE_DISPLAY}
+					</a>
+					<a
+						href={INSTAGRAM_HREF}
+						class={footerLinkClass}
+						target="_blank"
+						rel="me noopener noreferrer"
+						data-umami-event="lead_click_instagram_from_footer"
+					>
+						Instagram {SOCIAL_HANDLE_DISPLAY}
 					</a>
 					<a
 						href="https://www.linkedin.com/in/nicodev3/"
