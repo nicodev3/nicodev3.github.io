@@ -125,7 +125,7 @@ HTML, performance, accessibilité : le vocabulaire utile pour dialoguer avec un 
 Ces articles complètent le guide principal :
 
 - [Les promesses trop belles des offres « site psychologue »](/blog/site-internet-psychologue-promesses-trop-belles/) : critères pour repérer les discours marketing douteux.
-- [Ouvrir son cabinet de psychologue : par où commencer ?](/blog/installer-liberal-psychologue-par-ou-commencer/) : ordre des priorités à l’installation.
+- [Ouvrir un cabinet de psychologue : guide d’installation 2026](/blog/installer-liberal-psychologue-par-ou-commencer/) : ordre des priorités à l’installation.
 - [Pourquoi des services web réservés aux psychologues ?](/blog/pourquoi-services-web-exclusifs-psychologues/) : intérêt d’une spécialisation métier côté web.
 
 ## Par où commencer selon votre situation

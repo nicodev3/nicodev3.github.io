@@ -24,6 +24,8 @@ const blog = defineCollection({
       guidePillarHub: z.boolean().optional(),
       /** Guide installation libéral : CTAs diagnostic visibilité (avec ou sans site). */
       installationGuideHub: z.boolean().optional(),
+      /** Article salaire libéral : CTAs diagnostic (pont vers visibilité / site). */
+      salaryGuideHub: z.boolean().optional(),
       /** Masque le sommaire automatique (h2) généré sur la page article. */
       hideArticleToc: z.boolean().optional(),
       /** Questions/réponses pour le schéma FAQPage (réponses en texte brut, sans Markdown). */

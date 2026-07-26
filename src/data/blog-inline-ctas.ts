@@ -76,7 +76,7 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
   },
   'salaire-psychologue-liberal': {
     beforeHeading: 'Comment augmenter son revenu sans « sur-vendre » sa pratique',
-    variant: 'visibility',
+    variant: 'site',
   },
   'site-internet-psychologue-doctolib': {
     beforeHeading: 'Quand choisir Doctolib, un site, ou les deux ?',

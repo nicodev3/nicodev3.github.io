@@ -279,7 +279,7 @@ C’est exactement le type de situation où l’accompagnement par un psychologu
 
 ## À lire aussi
 
-- [S’installer en libéral comme psychologue : par où commencer ?](/blog/installer-liberal-psychologue-par-ou-commencer/)
+- [Ouvrir un cabinet de psychologue : guide d’installation 2026](/blog/installer-liberal-psychologue-par-ou-commencer/)
 - [Google Business Profile pour psychologue : créer et optimiser sa fiche](/blog/google-business-profile-psychologue/)
 - [Site internet pour psychologue en 2026 : pages, SEO et RGPD](/blog/site-internet-psychologues/)
 - [Comment trouver ses premiers patients quand on s’installe comme psychologue](/blog/comment-trouver-premiers-patients-psychologue/)

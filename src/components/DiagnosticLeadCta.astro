@@ -5,6 +5,8 @@ type DiagnosticLeadCtaVariant =
 	| 'installation-intro'
 	| 'installation-mid'
 	| 'installation-final'
+	| 'salaire-intro'
+	| 'salaire-final'
 	| 'mentions-legales'
 	| 'visibilite-tool';
 
@@ -78,6 +80,26 @@ const copies: Record<
 		secondary: 'Voir les tarifs',
 		secondaryHref: '/tarifs/',
 		source: 'guide-installation-final',
+	},
+	'salaire-intro': {
+		eyebrow: 'Revenu et visibilité vont souvent ensemble',
+		title: 'Pour remplir l’agenda, encore faut-il être trouvable.',
+		description:
+			'Les fourchettes de revenu dépendent aussi du volume de séances. Le diagnostic gratuit fait le point sur votre fiche Google, vos profils en ligne et l’intérêt d’un site — même si vous démarrez.',
+		primary: 'Diagnostic visibilité gratuit',
+		secondary: 'Création de site psychologue',
+		secondaryHref: '/creation-site-internet-psychologue/',
+		source: 'article-salaire-intro',
+	},
+	'salaire-final': {
+		eyebrow: 'Après les chiffres, la suite concrète',
+		title: 'Un site sobre aide à être compris avant le premier contact.',
+		description:
+			'Présentation de votre cadre, honoraires, modalités, lien vers la prise de rendez-vous : je peux regarder votre situation et vous dire si un site ou une fiche Google bien tenue est le bon levier maintenant.',
+		primary: 'Demander un diagnostic gratuit',
+		secondary: 'Voir les tarifs',
+		secondaryHref: '/tarifs/',
+		source: 'article-salaire-final',
 	},
 	'mentions-legales': {
 		eyebrow: 'Prochaine étape',

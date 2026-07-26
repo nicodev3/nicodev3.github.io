@@ -98,4 +98,4 @@ Pour aller plus loin sans attendre&nbsp;:
 - [Création de site web pour psychologue](/creation-site-internet-psychologue/) — offre, déroulement et FAQ ;
 - [Référencement site psychologue](/referencement-site-psychologue/) — visibilité locale et cohérence avec votre fiche Google ;
 - [Guide complet de la visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/) — plan d’ensemble (fiche, site, avis, contenu) ;
-- [Ouvrir son cabinet de psychologue : par où commencer](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans votre installation.
+- [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans votre installation.

@@ -1,9 +1,9 @@
 ---
 title: "Combien coûte un site pour psychologue en 2026 ?"
 seoTitle: "Combien coûte un site pour psychologue ? Prix 2026"
-description: "Combien coûte un site pour psychologue en 2026 ? Fourchettes DIY, freelance, agence et abonnement, avec coûts cachés et repères réalistes."
+description: "Prix d’un site pour psychologue en 2026 : DIY, freelance, agence ou abonnement. Fourchettes réalistes pour budgéter la création d’un site de cabinet libéral."
 pubDate: "2026-02-22"
-updatedDate: "2026-07-15"
+updatedDate: "2026-07-26"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/cout-site-internet.webp"
 tags: ["psychologue", "site web cabinet", "installation en libéral"]
@@ -26,13 +26,17 @@ faq:
     answer: "Au-delà du site, un accompagnement SEO local peut ajouter 150 à 600 €/mois selon l'intensité. Pour un cabinet standard, commencer avec un site sobre, une fiche Google complète et une cohérence NAP suffit souvent avant d'investir dans du SEO mensuel lourd."
   - question: "Un site à 29 €/mois est-il suffisant pour un psychologue ?"
     answer: "Pour un site vitrine sobre (présentation, consultations, infos pratiques, contact), oui si la formule inclut hébergement, domaine, maintenance et bases SEO. Pour une stratégie de visibilité plus poussée (contenus réguliers, fiche Google, suivi SEO), une formule plus complète est souvent pertinente."
+  - question: "Quel budget prévoir pour la création d'un site web de cabinet ?"
+    answer: "Pour un site vitrine standard en libéral, comptez souvent 50 à 500 € la première année en DIY, 29 à 49 €/mois en abonnement tout inclus, ou 1 000 à 3 000 € en prestation classique. Le bon budget dépend du temps que vous acceptez de consacrer après la mise en ligne."
+  - question: "Faut-il budgéter le site en même temps que l'installation en libéral ?"
+    answer: "Oui, au moins comme poste optionnel. Le site n'est pas obligatoire dès le jour 1, mais dès que vous voulez être trouvé hors bouche-à-oreille, il devient un levier de visibilité. Beaucoup le préparent en parallèle des démarches ARS / INPI, sans le mettre en ligne trop tôt."
 ---
 
 *Temps de lecture : 9 minutes*
 
 > **Tarifs Nicodev :** pour les formules et prix à jour (abonnement tout inclus), voir directement la page [Tarifs](/tarifs/) ou la page [création site internet psychologue](/creation-site-internet-psychologue/). *L'article ci-dessous* décrit les **fourchettes du marché** pour situer un budget réaliste en libéral — sans remplacer un devis personnalisé.
 
-Avant d'ouvrir un cabinet ou de refondre sa présence en ligne, beaucoup de psychologues tapent la même requête dans Google : **combien coûte un site pour psychologue** ? Derrière cette question, l'enjeu est concret : **quel prix** prévoir pour un rendu professionnel, sans exploser le budget ni se retrouver avec des frais cachés six mois plus tard.
+Avant d'ouvrir un cabinet ou de refondre sa présence en ligne, beaucoup de psychologues tapent **combien coûte un site pour psychologue** — autrement dit, quel **prix** prévoir pour la **création d’un site web** de cabinet, sans exploser le budget ni découvrir des frais cachés six mois plus tard.
 
 > **En bref — prix site internet psychologue (2026)**  
 > | Option | Budget indicatif | Ce qu'il faut retenir |
@@ -71,6 +75,18 @@ En pratique, le **coût d’un site pour psychologue** se répartit en trois gra
 Ces chiffres sont des **ordres de grandeur** pour un site vitrine standard (présentation, consultations, infos pratiques, contact). Ils ne couvrent pas un e-commerce, un blog très volumineux ou une stratégie SEO mensuelle intensive.
 
 Pour le détail de ce que comprend une offre d'accompagnement (structure, formulaire guidé, hébergement, bases SEO), la page [création site internet psychologue](/creation-site-internet-psychologue/) complète ce guide tarifaire.
+
+## Budgéter le site dans un projet d’installation
+
+Le **prix d’un site** n’est qu’un poste parmi d’autres quand on s’installe : loyer ou sous-location, RC pro, outils de RDV, cotisations. Avant de décider combien y consacrer, beaucoup regardent d’abord leur [seuil de viabilité](/outils/seuil-viabilite-seances/) et les fourchettes de [salaire psychologue libéral](/blog/salaire-psychologue-liberal/).
+
+Dans le guide [ouvrir un cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/), le site arrive plutôt en fin de parcours (visibilité), pas avant les démarches ARS / INPI. En pratique :
+
+- **trop tôt** : payer un site alors que le local, le statut et le cadre clinique ne sont pas posés ;
+- **trop tard** : rester invisible hors bouche-à-oreille alors que l’agenda a besoin de se remplir ;
+- **bon rythme** : préparer la structure et les textes en parallèle, mettre en ligne quand vous êtes prêt·e à recevoir.
+
+Si vous hésitez encore entre fiche Google, Doctolib et site, le [diagnostic gratuit](/diagnostic-gratuit/) sert surtout à prioriser — pas à vous vendre une formule par défaut.
 
 ## Quel budget prévoir pour un site de psychologue ?
 
@@ -283,9 +299,21 @@ Oui, à condition que la formule inclue réellement hébergement, nom de domaine
 
 En prestation classique : **30 à 120 €/mois** de maintenance + **8 à 40 €/mois** d'hébergement, parfois en plus du nom de domaine. C'est souvent ce poste qui surprend après un devis de création à 1 500 €.
 
+### Quel budget prévoir pour la création d’un site web de cabinet ?
+
+Pour une vitrine standard en libéral : **50 à 500 €** la première année en DIY, **29 à 49 €/mois** en abonnement tout inclus, ou **1 000 à 3 000 €** en prestation classique. Le bon budget dépend surtout du temps que vous acceptez de consacrer après la mise en ligne.
+
+### Faut-il budgéter le site en même temps que l’installation en libéral ?
+
+Oui, au moins comme poste optionnel. Ce n’est pas obligatoire dès le jour 1, mais dès que vous voulez être trouvé hors bouche-à-oreille, le site devient un levier. Beaucoup le préparent en parallèle des démarches, sans le mettre en ligne trop tôt — voir le [guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/).
+
 ### Site pas cher vs site efficace : quelle différence ?
 
 Un site peu cher peut « exister » sans être trouvé, rassurant ou bien structuré pour un futur patient. Le coût utile, c'est celui d'un site qui remplit son rôle : présenter votre approche, inspirer confiance et faciliter le contact — voir le guide [site internet pour psychologue](/blog/site-internet-psychologues/).
+
+### Quel budget pour la création d’un site web de cabinet ?
+
+Si vous comparez des devis « création de site » sans ancrage métier, les fourchettes du marché restent proches de celles de cet article : **DIY à petit coût**, **abonnement mensuel tout inclus**, ou **1 000 à 3 000 €** en prestation ponctuelle pour une vitrine simple. Ce qui change pour un psychologue (ou un psychomotricien, ergo, orthophoniste), c’est surtout le **ton**, le **cadre déontologique** et la **lisibilité** pour les patients — pas le besoin d’une usine à fonctionnalités.
 
 ## Conclusion
 
@@ -293,13 +321,14 @@ En 2026, un site de psychologue peut rester simple, efficace et raisonnable en b
 
 > Pour un psychologue, un site vitrine clair et professionnel devrait en général rester dans un budget mesuré, surtout si le besoin technique est simple.
 
-Si vous cherchez justement une option simple, professionnelle et abordable pour votre cabinet, [contactez-moi](/contact/) ou consultez directement mes [tarifs](/tarifs/). Le détail de ce qui est inclus (structure, hébergement, bases SEO, outil de rendez-vous) est présenté sur la page [création site internet psychologue](/creation-site-internet-psychologue/). Pour la visibilité Google au-delà du site, voir aussi [référencement site psychologue](/referencement-site-psychologue/).
+Si vous cherchez une option simple pour votre cabinet, commencez par le [diagnostic gratuit](/diagnostic-gratuit/) ou consultez les [tarifs](/tarifs/). Le détail de ce qui est inclus est sur la page [création de site internet pour psychologue](/creation-site-internet-psychologue/). Pour la visibilité Google au-delà du site : [référencement site psychologue](/referencement-site-psychologue/).
 
 ---
 
 ## À lire aussi
 
+- [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans le planning
+- [Salaire psychologue libéral](/blog/salaire-psychologue-liberal/) — fourchettes de revenu pour cadrer le budget
 - [Faire son site soi-même quand on est psychologue](/blog/faire-son-site-soi-meme-psychologue/) — avantages et limites du DIY
 - [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
 - [Les psychologues et leur site internet](/blog/site-internet-psychologues/) — réflexion sur les bonnes pratiques
-- [Choisir son nom de domaine et son hébergeur](/blog/nom-de-domaine-hebergement/) — guide pour débutants

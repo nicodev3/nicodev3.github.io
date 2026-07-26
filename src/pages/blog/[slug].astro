@@ -259,6 +259,7 @@ const faqSchema =
 				<BlogPillarClusterLink currentArticleId={entry.id} />
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="intro" />}
 				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-intro" class="my-10" />}
+				{entry.data.salaryGuideHub && <DiagnosticLeadCta variant="salaire-intro" class="my-10" />}
 				<BlogArticleToc items={tocItems} />
 				<Content />
 				{inlineCta && (
@@ -270,6 +271,7 @@ const faqSchema =
 				)}
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="final" />}
 				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-final" class="my-10" />}
+				{entry.data.salaryGuideHub && <DiagnosticLeadCta variant="salaire-final" class="my-10" />}
 			</div>
 		</div>
 	</article>
@@ -280,7 +282,7 @@ const faqSchema =
 			<h2 class="text-xl font-semibold text-foreground mb-4">
 				{entry.data.guidePillarHub
 					? 'Vous voulez transformer cette lecture en actions concrètes ?'
-					: entry.data.installationGuideHub
+					: entry.data.installationGuideHub || entry.data.salaryGuideHub
 						? 'Vous préparez votre installation ?'
 						: 'Un projet de site web ?'}
 			</h2>
@@ -293,14 +295,18 @@ const faqSchema =
 						{' '}et les{' '}
 						<a href="/tarifs/" class="text-foreground font-medium hover:text-primary">tarifs</a>.
 					</>
-				) : entry.data.installationGuideHub ? (
+				) : entry.data.installationGuideHub || entry.data.salaryGuideHub ? (
 					<>
 						Le{' '}
 						<a
 							href="/diagnostic-gratuit/"
 							class="text-foreground font-medium hover:text-primary"
-							data-lead-source="guide-installation-bottom"
-							data-umami-event="lead_click_diagnostic_from_guide_installation_bottom_text"
+							data-lead-source={entry.data.salaryGuideHub ? 'article-salaire-bottom' : 'guide-installation-bottom'}
+							data-umami-event={
+								entry.data.salaryGuideHub
+									? 'lead_click_diagnostic_from_article_salaire_bottom_text'
+									: 'lead_click_diagnostic_from_guide_installation_bottom_text'
+							}
 						>
 							diagnostic visibilité gratuit
 						</a>
@@ -331,19 +337,25 @@ const faqSchema =
 					data-lead-source={
 						entry.data.guidePillarHub
 							? 'guide-visibilite-bottom'
-							: entry.data.installationGuideHub
-								? 'guide-installation-bottom'
-								: undefined
+							: entry.data.salaryGuideHub
+								? 'article-salaire-bottom'
+								: entry.data.installationGuideHub
+									? 'guide-installation-bottom'
+									: undefined
 					}
 					data-umami-event={
 						entry.data.guidePillarHub
 							? 'lead_click_diagnostic_from_guide_visibilite_bottom'
-							: entry.data.installationGuideHub
-								? 'lead_click_diagnostic_from_guide_installation_bottom'
-								: 'lead_click_diagnostic_from_blog_bottom'
+							: entry.data.salaryGuideHub
+								? 'lead_click_diagnostic_from_article_salaire_bottom'
+								: entry.data.installationGuideHub
+									? 'lead_click_diagnostic_from_guide_installation_bottom'
+									: 'lead_click_diagnostic_from_blog_bottom'
 					}
 				>
-					{entry.data.installationGuideHub ? 'Diagnostic visibilité gratuit' : 'Demander un diagnostic gratuit'}
+					{entry.data.installationGuideHub || entry.data.salaryGuideHub
+						? 'Diagnostic visibilité gratuit'
+						: 'Demander un diagnostic gratuit'}
 				</a>
 				<a href="/tarifs/" class="btn-outline-accent inline-flex items-center rounded-lg border-2 border-primary bg-background px-5 py-3 text-foreground hover:bg-surface">
 					Voir les tarifs
