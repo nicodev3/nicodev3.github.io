@@ -20,6 +20,7 @@ import balintSmbFranceImage from "../assets/images/screenshots/balint-smb-france
 import psychomotriciteMorgesImage from "../assets/images/screenshots/psychomotricite-morges.webp";
 import joieCompassionImage from "../assets/images/screenshots/joiecompassion.webp";
 import benedicteDonetImage from "../assets/images/screenshots/benedictedonet-psyenligne.webp";
+import angelaBassompierreImage from "../assets/images/screenshots/angelabassompierre.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -73,6 +74,18 @@ const breadcrumbSchema = {
 
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
 const portfolioProjects: PortfolioProject[] = [
+  {
+    title: "Angela Bassompierre",
+    image: angelaBassompierreImage,
+    url: "https://angelabassompierre.fr/",
+    location: "France",
+    year: 2026,
+    profession: "psychologue",
+    description:
+      "Création d'un site vitrine pour consultations psychologiques en ligne (approche intégrative, EFT, traumatismes).",
+    imageAlt:
+      "Site Angela Bassompierre — psychologue en ligne, consultations en visio pour adolescents et adultes",
+  },
   {
     title: "Bénédicte Donet",
     image: benedicteDonetImage,
