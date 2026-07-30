@@ -1,0 +1,102 @@
+---
+import { Image } from 'astro:assets';
+import { ArrowRight, ArrowUpRight } from '@lucide/astro';
+import angelaImage from '../assets/images/screenshots/angelabassompierre.webp';
+import benedicteImage from '../assets/images/screenshots/benedictedonet-psyenligne.webp';
+import audreyImage from '../assets/images/screenshots/psy-emdr-cotebasque.webp';
+
+const projects = [
+	{
+		title: 'Angela Bassompierre',
+		meta: 'Création · Psychologue en ligne · 2026',
+		description:
+			'Présentation des consultations en ligne, de l’approche intégrative et des accompagnements proposés aux adolescents et aux adultes.',
+		image: angelaImage,
+		imageAlt: 'Page d’accueil du site d’Angela Bassompierre, psychologue en ligne',
+		href: 'https://angelabassompierre.fr/',
+	},
+	{
+		title: 'Bénédicte Donet',
+		meta: 'Refonte · Psychologue en ligne · 2026',
+		description:
+			'Reprise d’un site WordPress pour clarifier les contenus, améliorer les performances et travailler le référencement.',
+		image: benedicteImage,
+		imageAlt: 'Page d’accueil du site de Bénédicte Donet, psychologue en ligne',
+		href: 'https://www.benedictedonet-psyenligne.com/',
+	},
+	{
+		title: 'Audrey Larcebau',
+		meta: 'Refonte · Psychologue EMDR · 2026',
+		description:
+			'Refonte du site d’une psychologue sur la Côte basque, avec une présentation plus lisible de sa pratique et de ses modalités.',
+		image: audreyImage,
+		imageAlt: 'Page d’accueil du site d’Audrey Larcebau, psychologue EMDR sur la Côte basque',
+		href: 'https://psy-emdr-cotebasque.fr/',
+	},
+] as const;
+---
+
+<section class="section-y border-b border-border bg-surface" aria-labelledby="home-portfolio-heading">
+	<div class="shell-layout">
+		<header class="mx-auto max-w-3xl text-center">
+			<p class="type-eyebrow mb-3 text-muted">Réalisations</p>
+			<h2 id="home-portfolio-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+				Quelques sites réalisés avec des psychologues
+			</h2>
+			<p class="mt-4 text-lg leading-relaxed text-muted">
+				Chaque site part d’une pratique, d’un cadre et d’une situation différents. Voici trois projets récents
+				de création ou de refonte.
+			</p>
+		</header>
+
+		<div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+			{
+				projects.map(({ title, meta, description, image, imageAlt, href }) => (
+					<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm">
+						<a
+							href={href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="block overflow-hidden border-b border-border bg-surface"
+							aria-label={`Visiter le site de ${title} — nouvel onglet`}
+						>
+							<Image
+								src={image}
+								alt={imageAlt}
+								widths={[420, 640, 840]}
+								sizes="(min-width: 1024px) 30vw, (min-width: 640px) 70vw, 100vw"
+								class="aspect-[16/10] h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+								loading="lazy"
+								decoding="async"
+							/>
+						</a>
+						<div class="flex grow flex-col p-6">
+							<p class="type-label-mono text-muted">{meta}</p>
+							<h3 class="mt-2 font-heading text-xl font-semibold text-foreground">{title}</h3>
+							<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
+							<a
+								href={href}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+							>
+								Visiter le site
+								<ArrowUpRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+							</a>
+						</div>
+					</article>
+				))
+			}
+		</div>
+
+		<div class="mt-10 text-center">
+			<a
+				href="/portfolio/"
+				class="inline-flex items-center gap-2 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+			>
+				Voir toutes les réalisations
+				<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+			</a>
+		</div>
+	</div>
+</section>

@@ -6,6 +6,8 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
 import HomeAudienceSection from '../components/HomeAudienceSection.astro';
+import HomeVisibilityPathSection from '../components/HomeVisibilityPathSection.astro';
+import HomePortfolioSection from '../components/HomePortfolioSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import portraitImage from '../assets/images/nicodev.webp';
 import { INSTAGRAM_HREF, WHATSAPP_PHONE_E164 } from '../data/contact';
@@ -20,7 +22,7 @@ const businessSchema = {
 	legalName: 'Nicolas Devaux — EI',
 	identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: '75103269900033' },
 	description:
-		'Création de sites internet pour psychologues, psychomotriciens, ergothérapeutes et orthophonistes. Abonnement mensuel tout inclus dès 29 EUR.',
+		'Création et référencement de sites internet pour psychologues en libéral par un psychologue-développeur. Hébergement et maintenance inclus dès 29 EUR par mois.',
 	url: siteRootHref,
 	telephone: `+${WHATSAPP_PHONE_E164}`,
 	address: {
@@ -38,12 +40,12 @@ const businessSchema = {
 		INSTAGRAM_HREF
 	],
 	areaServed: { '@type': 'Country', name: 'France' },
-	slogan: 'Création de sites internet pour psychologues, psychomotriciens, ergothérapeutes et orthophonistes',
+	slogan: 'Création de sites internet pour psychologues',
 	makesOffer: [
 		{
 			'@type': 'Offer',
-			name: 'Pack Site Vitrine',
-			description: 'Abonnement mensuel — création et maintenance du site incluses',
+			name: 'Sérénité',
+			description: 'Création ou refonte du site, hébergement et maintenance inclus',
 			priceSpecification: {
 				'@type': 'UnitPriceSpecification',
 				price: '29',
@@ -53,8 +55,8 @@ const businessSchema = {
 		},
 		{
 			'@type': 'Offer',
-			name: 'Pack Site + Blog',
-			description: 'Abonnement mensuel — site vitrine et contenus éditoriaux pour la visibilité',
+			name: 'Visibilité & Confiance',
+			description: 'Création du site, référencement local, contenus et suivi inclus',
 			priceSpecification: {
 				'@type': 'UnitPriceSpecification',
 				price: '49',
@@ -71,7 +73,7 @@ const websiteSchema = {
 	name: 'Nicolas Devaux',
 	alternateName: 'Nicodev',
 	url: siteRootHref,
-	description: 'Création de sites internet pour psychologues, psychomotriciens, ergothérapeutes et orthophonistes.'
+	description: 'Création de sites internet pour psychologues en libéral.'
 };
 
 const breadcrumbSchema = {
@@ -84,8 +86,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Nicodev — Sites pour psychologues, psychomotriciens, ergo et orthophonistes"
-	description="Création de sites internet pour psychologues, psychomotriciens, ergothérapeutes et orthophonistes : sites sobres, clairs, visibilité locale et rendez-vous."
+	title="Création de sites internet pour psychologues | Nicodev"
+	description="Psychologue et développeur web, je crée ou refais les sites de psychologues en libéral : contenus, visibilité locale, hébergement et maintenance dès 29 €/mois."
 	image={portraitImage}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
@@ -96,20 +98,24 @@ const breadcrumbSchema = {
 
 	<HomeAudienceSection />
 
+	<HomeVisibilityPathSection />
+
+	<ExpertiseSection />
+
+	<HomePortfolioSection />
+
 	<TestimonialsSection />
 
 	<OffersSection />
 
 	<ProcessSection />
 
-	<ExpertiseSection />
-
 	<CtaSection
 		variant="accent-band"
 		anchorId="contact-accueil"
-		title="Envie d’en parler simplement ?"
-		description="Le diagnostic gratuit sert surtout à situer votre contexte : votre pratique, votre ville, vos besoins réels et ce qui serait utile, ou non, pour votre site."
-		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
+		title="Où en êtes-vous avec votre site ?"
+		description="Installation, premier site, refonte ou manque de visibilité : présentez-moi votre situation. Je vous répondrai sur ce qui me paraît utile, sans vous orienter systématiquement vers la formule la plus complète."
+		primaryButton={{ text: 'Faire le point sur mon projet', href: '/diagnostic-gratuit/' }}
 		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
 	/>
 </Layout>

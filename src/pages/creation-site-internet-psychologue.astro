@@ -50,7 +50,7 @@ const faqSchema = {
 			name: 'Le site convient-il aussi aux psychomotriciens, ergothérapeutes et orthophonistes ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "Oui. Nicodev accompagne les psychologues, psychothérapeutes (titre réglementé), psychomotriciens, ergothérapeutes et orthophonistes en libéral, ainsi que d'autres professions paramédicales du champ santé mentale / handicap autorisées à disposer d'un site. Ce n'est pas une offre générique pour « thérapeutes » ou psychopraticiens.",
+				text: "La prestation est conçue en priorité pour les psychologues. Certains projets de psychomotriciens, ergothérapeutes et orthophonistes peuvent également être étudiés lorsqu'ils relèvent des mêmes enjeux de cadre et de présentation.",
 			},
 		},
 		{
@@ -141,7 +141,7 @@ const serviceSchema = {
 	'@type': 'Service',
 	name: 'Création de site internet pour psychologue',
 	description:
-		'Site vitrine pour psychologues, psychothérapeutes, psychomotriciens, ergothérapeutes et orthophonistes en libéral : structure claire, contenu guidé, design sobre, prise de rendez-vous, hébergement et bases SEO inclus dès 29 EUR/mois.',
+		'Création ou refonte de site internet pour psychologues en libéral : contenu guidé, prise de rendez-vous, hébergement, maintenance et bases SEO inclus dès 29 EUR par mois.',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -151,8 +151,7 @@ const serviceSchema = {
 	areaServed: { '@type': 'Country', name: 'France' },
 	audience: {
 		'@type': 'Audience',
-		audienceType:
-			'Psychologues, psychothérapeutes, psychomotriciens, ergothérapeutes et orthophonistes en libéral',
+		audienceType: 'Psychologues en libéral',
 	},
 	offers: {
 		'@type': 'AggregateOffer',
@@ -182,7 +181,7 @@ const breadcrumbSchema = {
 
 <Layout
 	title="Création de site internet pour psychologue | Nicodev"
-	description="Création de site internet pour psychologue, psychothérapeute, psychomotricien, ergothérapeute ou orthophoniste : site vitrine sobre, contenu guidé, hébergement et bases SEO dès 29 €/mois."
+	description="Création ou refonte de site internet pour psychologue : contenu guidé, prise de rendez-vous, hébergement, maintenance et bases SEO dès 29 €/mois."
 	image={psychologueImage}
 >
 	<Fragment slot="head">
@@ -241,12 +240,9 @@ const breadcrumbSchema = {
 					ou d’une plateforme de rendez-vous.
 				</p>
 				<p>
-					Cette page détaille la prestation&nbsp;: structure, contenu guidé, design sobre, intégration
-					de votre outil de RDV, hébergement et bases SEO. Public accompagné&nbsp;: <strong>psychologues</strong>,
-					<strong>psychothérapeutes</strong> (titre réglementé), <strong>psychomotriciens</strong>,
-					<strong>ergothérapeutes</strong>, <strong>orthophonistes</strong> et professions paramédicales
-					du champ santé mentale / handicap autorisées à disposer d’un site —
-					pas une offre générique «&nbsp;thérapeutes&nbsp;» ou psychopraticiens.
+					La prestation est conçue pour les <strong>psychologues en libéral</strong>&nbsp;: structure,
+					contenu guidé, design, intégration de votre outil de rendez-vous, hébergement, maintenance et bases
+					SEO. Elle tient compte de votre cadre professionnel sans transformer votre pratique en produit.
 				</p>
 
 				<blockquote>
@@ -489,7 +485,7 @@ const breadcrumbSchema = {
 				<h2>Questions fréquentes</h2>
 				<p><strong>Combien coûte la création d’un site internet pour psychologue&nbsp;?</strong> Abonnement tout inclus dès 29&nbsp;EUR/mois (Sérénité) ou 49&nbsp;EUR/mois (Visibilité &amp; Confiance avec fiche Google et SEO). Détail sur <a href="/tarifs/">Tarifs</a>.</p>
 				<p><strong>Que comprend la prestation&nbsp;?</strong> Arborescence adaptée, contenu guidé, design sobre, intégration RDV, hébergement, domaine, bases SEO et maintenance — le tout dans l’abonnement.</p>
-				<p><strong>Le site convient-il aussi aux psychomotriciens, ergothérapeutes et orthophonistes&nbsp;?</strong> Oui&nbsp;: même logique de site vitrine sobre et de cadre professionnel respecté, y compris pour les psychothérapeutes (titre réglementé) et d’autres paramédicaux du champ santé mentale / handicap. Page dédiée pour les <a href="/site-internet-psychomotricien/">psychomotriciens</a>. Pas d’offre générique «&nbsp;thérapeutes&nbsp;» ni psychopraticiens.</p>
+				<p><strong>Le site convient-il aussi aux psychomotriciens, ergothérapeutes et orthophonistes&nbsp;?</strong> La prestation est conçue en priorité pour les psychologues. J’étudie aussi certains projets de professions proches lorsqu’ils relèvent des mêmes enjeux de cadre et de présentation. Une page est dédiée aux <a href="/site-internet-psychomotricien/">psychomotriciens</a>.</p>
 				<p><strong>Combien de temps pour créer un site de psychologue&nbsp;?</strong> En général 2 à 3 semaines entre le premier échange et la mise en ligne, selon vos disponibilités pour compléter le formulaire.</p>
 				<p><strong>Pourquoi créer un site internet quand on est psychologue&nbsp;?</strong> Pour disposer d’un espace que vous contrôlez&nbsp;: votre approche, vos publics, vos honoraires, vos modalités. Les annuaires imposent leur format&nbsp;; un site professionnel de psychologue rassure les patients avant le premier contact et soutient votre visibilité locale.</p>
 				<p><strong>Un site internet peut-il aider à trouver des patients&nbsp;?</strong> Oui, indirectement&nbsp;: un site cohérent avec votre fiche Google Business Profile améliore vos chances d’être trouvé localement, et aide les personnes à comprendre votre cadre avant de prendre contact. Aucune place dans Google ne peut en revanche être garantie.</p>

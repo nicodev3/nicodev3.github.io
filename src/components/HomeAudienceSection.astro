@@ -1,54 +1,30 @@
 ---
-import { Image } from 'astro:assets';
-import { ArrowRight, Brain, HandHeart, MessageCircle, Stethoscope } from '@lucide/astro';
-import psychomotricienneImage from '../assets/images/psychomotricienne-2.webp';
-import psychologueImage from '../assets/images/psychologue.webp';
-import soinImage from '../assets/images/soignant.webp';
+import { ArrowRight, HousePlus, RefreshCw, Search } from '@lucide/astro';
 
-const audiences = [
+const situations = [
 	{
-		Icon: Brain,
-		image: psychologueImage,
-		imageAlt: 'Exemple de site sobre pour une psychologue en libéral',
-		imageClass: 'object-top',
-		title: 'Psychologues',
+		Icon: HousePlus,
+		title: 'Vous vous installez en libéral',
 		description:
-			'Vous exercez en libéral et vous avez besoin d’un site sobre pour présenter votre approche, votre cadre clinique et vos informations pratiques avec justesse.',
+			'Le site pose des repères dès l’ouverture du cabinet : votre approche, les personnes que vous recevez, vos modalités et la manière de prendre rendez-vous.',
+		href: '/blog/installer-liberal-psychologue-par-ou-commencer/',
+		linkLabel: 'Préparer son installation',
+	},
+	{
+		Icon: RefreshCw,
+		title: 'Vous créez ou refaites votre site',
+		description:
+			'Vous partez de zéro, ou votre site actuel ne correspond plus à votre pratique. Je vous aide à clarifier les contenus et je prends en charge toute la réalisation.',
 		href: '/creation-site-internet-psychologue/',
-		linkLabel: 'Création site internet psychologue',
+		linkLabel: 'Voir la prestation de création',
 	},
 	{
-		Icon: HandHeart,
-		image: psychomotricienneImage,
-		imageAlt: 'Espace de psychomotricité avec une professionnelle accompagnant un enfant',
-		imageClass: 'object-center',
-		title: 'Psychomotriciens',
+		Icon: Search,
+		title: 'Vous voulez être mieux trouvé',
 		description:
-			'Vous souhaitez expliquer clairement votre cabinet, vos publics accompagnés, le bilan, les suivis et les modalités de prise de rendez-vous.',
-		href: '/site-internet-psychomotricien/',
-		linkLabel: 'Voir la page psychomotriciens',
-	},
-	{
-		Icon: Stethoscope,
-		image: soinImage,
-		imageAlt: 'Exemple de site clair pour une pratique d’ergothérapie',
-		imageClass: 'object-top',
-		title: 'Ergothérapeutes',
-		description:
-			'Vous exercez en libéral et souhaitez un site sobre pour présenter votre accompagnement, vos publics et vos modalités pratiques.',
-		href: '/contact/',
-		linkLabel: 'Échanger sur votre projet',
-	},
-	{
-		Icon: MessageCircle,
-		image: soinImage,
-		imageAlt: 'Exemple de site clair pour un cabinet d’orthophonie',
-		imageClass: 'object-center',
-		title: 'Orthophonistes',
-		description:
-			'Vous voulez un site clair pour les parents et les médecins : publics accompagnés, bilans, rééducation et prise de rendez-vous, sans discours commercial.',
-		href: '/contact/',
-		linkLabel: 'Échanger sur votre projet',
+			'Le site, la fiche Google et les contenus sont travaillés ensemble pour rendre votre cabinet plus visible dans votre ville, sans promesse de classement.',
+		href: '/referencement-site-psychologue/',
+		linkLabel: 'Comprendre le référencement local',
 	},
 ] as const;
 ---
@@ -56,59 +32,41 @@ const audiences = [
 <section id="pour-qui" class="section-y scroll-mt-28 border-b border-border bg-surface" aria-labelledby="home-audience-heading">
 	<div class="shell-layout">
 		<header class="mx-auto mb-10 max-w-3xl text-center">
-			<p class="type-eyebrow mb-3 text-muted">Pratiques accompagnées</p>
+			<p class="type-eyebrow mb-3 text-muted">Votre situation</p>
 			<h2 id="home-audience-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Des sites pensés pour quatre pratiques
+				Un site adapté à l’étape où en est votre cabinet
 			</h2>
 			<p class="mt-4 text-lg leading-relaxed text-muted">
-				Psychologues, psychomotriciens, ergothérapeutes et orthophonistes&nbsp;: chaque métier a son cadre, ses
-				mots et ses limites. L’accompagnement part de votre réalité de cabinet, pour que le site reste sobre,
-				compréhensible et fidèle à votre manière de travailler.
-			</p>
-			<p class="mt-4 text-sm leading-relaxed text-muted">
-				Guides utiles&nbsp;:
-				<a href="/blog/installer-liberal-psychologue-par-ou-commencer/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">installation en libéral</a>,
-				<a href="/blog/salaire-psychologue-liberal/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">salaire psychologue libéral</a>,
-				<a href="/blog/combien-coute-site-internet-2026/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">budget site</a>,
-				<a href="/referencement-site-psychologue/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">référencement</a>,
-				<a href="/diagnostic-gratuit/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">diagnostic gratuit</a>.
+				Installation, premier site, refonte ou visibilité locale&nbsp;: le point de départ change, mais le site
+				doit toujours permettre de comprendre votre pratique avant de vous contacter.
 			</p>
 		</header>
 
-		<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+		<div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
 			{
-				audiences.map(({ Icon, image, imageAlt, imageClass, title, description, href, linkLabel }) => (
-					<article class="flex h-full overflow-hidden rounded-lg border border-border bg-white shadow-sm">
-						<div class="flex w-full flex-col">
-							<div class="relative aspect-[16/10] overflow-hidden border-b border-border bg-surface">
-								<Image
-									src={image}
-									alt={imageAlt}
-									widths={[360, 520, 720]}
-									sizes="(min-width: 1280px) 22vw, (min-width: 640px) 45vw, 100vw"
-									class:list={['h-full w-full object-cover', imageClass]}
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
-							<div class="flex grow flex-col p-6">
-								<div class="ui-icon-well mb-5" aria-hidden="true">
-									<Icon class="h-5 w-5" stroke-width={1.5} />
-								</div>
-								<h3 class="font-heading text-xl font-semibold text-foreground">{title}</h3>
-								<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
-								<a
-									href={href}
-									class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
-								>
-									{linkLabel}
-									<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
-								</a>
-							</div>
+				situations.map(({ Icon, title, description, href, linkLabel }) => (
+					<article class="flex h-full flex-col rounded-lg border border-border bg-white p-6 shadow-sm sm:p-8">
+						<div class="ui-icon-well mb-5" aria-hidden="true">
+							<Icon class="h-5 w-5" stroke-width={1.5} />
 						</div>
+						<h3 class="font-heading text-xl font-semibold text-foreground">{title}</h3>
+						<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
+						<a
+							href={href}
+							class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+						>
+							{linkLabel}
+							<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+						</a>
 					</article>
 				))
 			}
 		</div>
+
+		<p class="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-muted">
+			La prestation est d’abord conçue pour les psychologues. J’étudie également les projets de{' '}
+			<a href="/site-internet-psychomotricien/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">psychomotriciens</a>,
+			d’ergothérapeutes et d’orthophonistes lorsqu’ils relèvent des mêmes enjeux de cadre et de présentation.
+		</p>
 	</div>
 </section>
