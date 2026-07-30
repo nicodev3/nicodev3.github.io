@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -29,27 +29,9 @@ const shouldIncludeInSitemap = (page) => {
 export default defineConfig({
   site: 'https://nicodev.fr',
   trailingSlash: 'always',
-  fonts: [
-    {
-      provider: fontProviders.fontsource(),
-      name: 'Source Sans 3',
-      cssVariable: '--font-source-sans-3',
-      /* Une VF 400–700 = un seul .woff2 (évite 4 requêtes par graisse statique) */
-      weights: ['400 700'],
-      styles: ['normal'],
-      subsets: ['latin'],
-      fallbacks: ['system-ui', 'sans-serif'],
-    },
-    {
-      provider: fontProviders.fontsource(),
-      name: 'Source Serif 4',
-      cssVariable: '--font-source-serif-4',
-      weights: ['400 700'],
-      styles: ['normal'],
-      subsets: ['latin'],
-      fallbacks: ['Georgia', 'serif'],
-    },
-  ],
+  build: {
+    inlineStylesheets: 'always',
+  },
 
   vite: {
       plugins: [tailwindcss()]

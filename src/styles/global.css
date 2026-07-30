@@ -2,8 +2,12 @@
 @import "./design-tokens.css";
 @plugin "@tailwindcss/typography";
 @theme {
-    --font-sans: var(--font-source-sans-3);
-    --font-heading: var(--font-source-serif-4);
+    /*
+     * Piles système : aucun fichier de police dans le chemin critique.
+     * Georgia conserve le contraste éditorial des titres sans téléchargement.
+     */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-heading: ui-serif, Georgia, Cambria, "Times New Roman", serif;
 
     /*
      * Palette Stitch / Material 3 — terracotta (#94442e) + conteneur (#b35c44).
