@@ -5,7 +5,10 @@ import FormField from './FormField.astro';
 const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_DIAGNOSTIC?.trim();
 const isCloudflareBuild = process.env.CF_PAGES === '1';
 if (import.meta.env.PROD && isCloudflareBuild && !formspreeUrl) {
-	throw new Error('PUBLIC_FORMSPREE_DIAGNOSTIC doit être défini (URL Formspree, ex. https://formspree.io/f/…)');
+	throw new Error(
+		'Build Cloudflare Pages interrompu : PUBLIC_FORMSPREE_DIAGNOSTIC manquant. ' +
+			'Ajoutez l’URL Formspree (ex. https://formspree.io/f/…) dans Cloudflare Pages → Settings → Environment variables (Production).',
+	);
 }
 
 const redirectUrl = import.meta.env.SITE

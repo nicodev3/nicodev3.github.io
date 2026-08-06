@@ -16,10 +16,10 @@ const formspreeUrl = (
 )?.trim();
 const isCloudflareBuild = process.env.CF_PAGES === '1';
 if (import.meta.env.PROD && isCloudflareBuild && !formspreeUrl) {
+	const missing = isDevisMode ? 'PUBLIC_FORMSPREE_DEVIS' : 'PUBLIC_FORMSPREE_CONTACT';
 	throw new Error(
-		isDevisMode
-			? 'PUBLIC_FORMSPREE_DEVIS doit être défini (URL Formspree, ex. https://formspree.io/f/…)'
-			: 'PUBLIC_FORMSPREE_CONTACT doit être défini (URL Formspree, ex. https://formspree.io/f/…)',
+		`Build Cloudflare Pages interrompu : ${missing} manquant. ` +
+			`Ajoutez l’URL Formspree (ex. https://formspree.io/f/…) dans Cloudflare Pages → Settings → Environment variables (Production).`,
 	);
 }
 

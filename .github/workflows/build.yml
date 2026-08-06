@@ -1,0 +1,39 @@
+# Vérifie le build Astro comme Cloudflare Pages (CF_PAGES=1).
+# Les URLs Formspree de CI sont factices : le vrai déploiement CF
+# doit garder les variables PUBLIC_FORMSPREE_* dans le dashboard.
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  astro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Astro build (Cloudflare simulation)
+        env:
+          CF_PAGES: '1'
+          PUBLIC_FORMSPREE_CONTACT: https://formspree.io/f/ci-contact
+          PUBLIC_FORMSPREE_DEVIS: https://formspree.io/f/ci-devis
+          PUBLIC_FORMSPREE_DIAGNOSTIC: https://formspree.io/f/ci-diagnostic
+        run: npm run build
+
+      - name: Type check
+        run: npx astro check

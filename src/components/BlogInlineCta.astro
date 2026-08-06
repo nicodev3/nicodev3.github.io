@@ -119,7 +119,7 @@ const eventSource = articleId.replaceAll('-', '_');
 </aside>
 
 <script>
-  const normalizeHeading = (value: string | null) =>
+  const normalizeHeading = (value: string | null | undefined) =>
     (value ?? '')
       .replace(/[’‘]/g, "'")
       .replace(/\s+/g, ' ')
