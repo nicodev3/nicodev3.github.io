@@ -14,7 +14,7 @@ const hasStripePaymentLinks = Boolean(stripePaymentLinkSerenite && stripePayment
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 
 const serenityFeatures = [
-	'Création du site et accompagnement pour clarifier les textes',
+	'Création ou refonte du site et accompagnement pour clarifier les textes',
 	'Hébergement, nom de domaine et sauvegardes inclus*',
 	'Intégration de votre widget ou lien de prise de RDV (Doctolib, Qare, Maiia, Calendly...)',
 	'Mentions légales, informations obligatoires et base RGPD',
@@ -40,11 +40,11 @@ const visibilityFeatures = [
 	<div class="shell-layout">
 		<header class="shell-prose mx-auto text-center">
 			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Deux cadres possibles selon votre besoin
+				Créer votre site, puis le faire vivre selon vos besoins
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				L’idée est de garder quelque chose de lisible : soit un site clair et maintenu, soit un accompagnement plus
-				régulier autour de la visibilité locale.
+				Les deux formules comprennent la création du site, l’hébergement et la maintenance. La seconde ajoute
+				un travail régulier sur votre présence dans les recherches locales.
 			</p>
 		</header>
 
@@ -52,7 +52,7 @@ const visibilityFeatures = [
 			<OfferCard
 				name="Sérénité"
 				price="29€"
-				description="Pour avoir un site clair, maintenu, relié à votre prise de rendez-vous, sans gérer la partie technique."
+				description="Pour créer ou refaire le site de votre cabinet, le relier à votre prise de rendez-vous et déléguer la partie technique."
 				summary="Site + maintenance essentielle"
 				features={serenityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
@@ -64,7 +64,7 @@ const visibilityFeatures = [
 			<OfferCard
 				name="Visibilité & Confiance"
 				price="49€"
-				description="Pour les cabinets qui veulent aussi travailler la présence locale et garder les contenus vivants."
+				description="Pour travailler aussi la visibilité locale du cabinet, la fiche Google et les contenus du site dans la durée."
 				summary="Site + SEO local + contenus + suivi"
 				features={visibilityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
@@ -82,15 +82,15 @@ const visibilityFeatures = [
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						À envisager si vous voulez surtout une présence fiable, claire et rassurante, sans gérer la
-						technique.
+						Pour disposer d’un site professionnel que vous n’avez pas à construire, héberger ni maintenir
+						vous-même.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						À envisager si vous voulez aussi travailler votre visibilité locale, votre fiche Google et vos
-						contenus dans la durée. Voir la page{' '}
+						Pour ajouter un travail suivi sur votre visibilité locale, votre fiche Google et vos contenus.
+						Voir la page{' '}
 						<a
 							href="/referencement-site-psychologue/"
 							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"

@@ -1,4 +1,6 @@
 ---
+import contactBackground from '../assets/images/contact-accueil-background.png';
+
 export interface Props {
 	title: string;
 	description: string;
@@ -35,6 +37,7 @@ const primarySuppressHeaderDiag =
 		isAccentBand ? 'cta-accent-band border-t border-primary-900/20' : ['border-t border-border', bgClass],
 		anchorId && 'scroll-mt-28',
 	]}
+	style={isAccentBand ? `background-image: url("${contactBackground.src}")` : undefined}
 >
 	<div class="shell-layout text-center">
 		<h2
@@ -85,6 +88,9 @@ const primarySuppressHeaderDiag =
 	<style>
 		.cta-accent-band {
 			background-color: var(--color-primary-foreground);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
 			color: var(--color-on-primary);
 		}
 	</style>

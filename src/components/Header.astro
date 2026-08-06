@@ -14,7 +14,7 @@ export interface Props {
 /** Navigation alignée sur la maquette Stitch « Homepage with Integrated Nicodev Logo ». */
 const defaultLinks: NavLink[] = [
 	{ href: '/creation-site-internet-psychologue/', label: 'Psychologues' },
-	{ href: '/site-internet-psychomotricien/', label: 'Psychomotriciens' },
+	{ href: '/referencement-site-psychologue/', label: 'Référencement' },
 	{ href: '/portfolio/', label: 'Portfolio' },
 	{ href: '/blog/', label: 'Blog' },
 	{ href: '/tarifs/', label: 'Tarifs' },
@@ -24,8 +24,8 @@ const { links = defaultLinks } = Astro.props;
 
 const projectCta = {
 	href: '/diagnostic-gratuit/',
-	label: 'Démarrer un projet',
-	ariaLabel: 'Démarrer un projet — demander un diagnostic gratuit',
+	label: 'Parler de votre projet',
+	ariaLabel: 'Présenter votre projet de site internet',
 };
 
 /** Chemin sans slash final sauf racine. */

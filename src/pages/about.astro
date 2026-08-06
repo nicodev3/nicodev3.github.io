@@ -34,8 +34,8 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Nicolas Devaux',
-  jobTitle: 'Fondateur de Nicodev et développeur web',
-  description: 'Fondateur de Nicodev, développeur web spécialisé dans les sites sobres pour psychologues, psychomotriciens, ergothérapeutes et orthophonistes.',
+  jobTitle: 'Psychologue et développeur web',
+  description: 'Fondateur de Nicodev, psychologue et développeur web spécialisé dans la création de sites internet pour psychologues en libéral.',
   url: aboutUrl,
   image: new URL(developmentImage.src, baseUrl).toString(),
   knowsAbout: ['développement web', 'sites internet pour psychologues', 'psychomotricité', 'SEO', 'performance web'],
@@ -59,8 +59,8 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
 ---
 
 <Layout
-  title="À propos de Nicodev — Nicolas Devaux, développeur web"
-  description="Parcours de Nicolas Devaux, fondateur de Nicodev : développeur web spécialisé dans les sites sobres pour psychologues, psychomotriciens, ergothérapeutes et orthophonistes."
+  title="Nicolas Devaux, psychologue et développeur web | Nicodev"
+  description="Psychologue en libéral et développeur web, Nicolas Devaux conçoit des sites internet pour ses collègues psychologues."
   image={defaultOgWebp}
 >
   <Fragment slot="head">
@@ -75,7 +75,7 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
   </Fragment>
   <Hero
     title="À propos de Nicodev"
-    subtitle="Nicolas Devaux, développeur web — je construis des sites sobres et humains pour les psychologues, psychomotriciens, ergothérapeutes et orthophonistes."
+    subtitle="Un parcours entre pratique clinique et développement web, au service des psychologues qui souhaitent construire leur présence en ligne."
     breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]}
   />
 
@@ -120,24 +120,24 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
           <p>
             Passionné d’informatique depuis l’enfance, je programmais déjà dans les années 80.
             Pourtant, c’est vers le soin que je me suis d’abord dirigé : psychomotricien, puis
-            psychologue, exercé en institution et en cabinet libéral — parce que ce qui
-            comptait, c’était la rencontre avec l’autre.
+            psychologue. J’exerce aujourd’hui en cabinet libéral et dans un service de santé pour
+            les étudiants.
           </p>
           <p>
             Dans les années 2000, j’ai commencé à créer des sites web. À partir de 2010, cette
-            activité a pris de plus en plus de place : freelance, développeur, tech lead. Mais
-            je n'ai jamais tout à fait quitté le cabinet.
+            activité a pris de plus en plus de place : freelance, développeur, tech lead, en
+            parallèle de mon activité clinique.
           </p>
           <p>
             En 2024, des événements de vie ont changé mes priorités. J’ai quitté mon poste de
-            tech lead pour réorganiser mon activité. Mon activité de psychologue libéral à Sceaux est présentée sur un site séparé&nbsp;:{' '}
+            tech lead pour réorganiser mon activité. Mon activité de psychologue en libéral à Sceaux est présentée sur un site séparé&nbsp;:{' '}
             <a
               href="https://nicolas-devaux-psychologue.fr"
               target="_blank"
               rel="noopener noreferrer"
               >nicolas-devaux-psychologue.fr</a
-            >. Sur Nicodev, je mets mon expérience web au service de
-            collègues psychologues, psychomotriciens, ergothérapeutes et orthophonistes.
+            >. Sur Nicodev, je mets mon expérience web au service de mes collègues psychologues.
+            J’étudie également certains projets de psychomotriciens et d’autres professions proches.
           </p>
           <p>
             Un <a href="/creation-site-internet-psychologue/">site pour un psychologue</a> n’est pas une vitrine commerciale.
@@ -219,11 +219,12 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
 
       <div class="mx-auto max-w-3xl space-y-10">
         <p class="text-lg leading-relaxed text-foreground">
-          Vingt ans partagés entre le soin et l&apos;écran.{' '}
-          <span class="font-heading font-semibold">De 1996 à 2020</span>, j&apos;ai exercé comme
-          psychomotricien puis psychologue, en institution et en cabinet libéral. Cette expérience
-          professionnelle informe directement ma façon de concevoir des sites pour cabinets : je connais
-          le cadre, les mots à manier avec prudence et l&apos;importance d&apos;une présence en ligne sobre.
+          Un parcours partagé entre le soin et l&apos;écran.{' '}
+          <span class="font-heading font-semibold">Depuis 1996</span>, j&apos;exerce dans le soin,
+          d&apos;abord comme psychomotricien puis comme psychologue. J&apos;exerce aujourd&apos;hui en cabinet
+          libéral et dans un service de santé pour les étudiants. Cette pratique clinique informe
+          directement ma façon de concevoir des sites pour cabinets : je connais le cadre, les mots à
+          manier avec prudence et l&apos;importance d&apos;une présence en ligne sobre.
         </p>
 
         <div

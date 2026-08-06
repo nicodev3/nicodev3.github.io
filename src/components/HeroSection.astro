@@ -8,21 +8,30 @@ import portraitImage from '../assets/images/nicodev.webp';
 	<div class="shell-layout">
 		<div class="hero-home__grid">
 			<div class="hero-home__copy">
-				<p class="type-label-mono text-primary-foreground">Pour psychologues, psychomotriciens, ergo et orthophonistes</p>
+				<p class="type-label-mono text-primary-foreground">Création de sites internet pour psychologues</p>
 				<h1 class="hero-home__title text-balance text-foreground">
-					Je crée votre site internet pour présenter et développer votre activité
+					Un site qui présente votre pratique avec justesse
 				</h1>
 				<p class="hero-home__lead text-pretty text-muted">
-					Je suis Nicolas Devaux, psychologue, psychomotricien et développeur web. J’aide ces professions réglementées à construire
-					une présence en ligne sobre, juste et facile à maintenir.
+					Je suis Nicolas Devaux, psychologue en exercice, avec un parcours de développeur et de responsable
+					technique dans le web. Je consacre aujourd’hui une partie de mon temps à concevoir pour mes collègues
+					psychologues un espace qu’ils maîtrisent&nbsp;: pour expliquer leur cadre, être trouvés localement et
+					ne pas dépendre uniquement d’une plateforme.
 				</p>
 
 				<div class="hero-home__actions">
 					<a
-						href="/tarifs/"
+						href="/diagnostic-gratuit/"
 						class="btn-primary-solid inline-flex items-center justify-center rounded-xl border border-border bg-transparent mb-5 px-8 py-4 font-bold text-foreground hover:bg-surface-alt"
 					>
-						Voir les offres
+						Faire le point sur votre projet
+					</a>
+					<a
+						href="/portfolio/"
+						class="mb-5 inline-flex items-center justify-center gap-2 px-2 py-4 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+					>
+						Voir les sites réalisés
+						<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
 					</a>
 				</div>
 
@@ -32,13 +41,13 @@ import portraitImage from '../assets/images/nicodev.webp';
 				</p>
 
 				<p class="hero-home__trust text-sm text-muted">
-					<span class="text-foreground/85">Un accompagnement spécialisé auprès des praticiens depuis 2016</span>
+					<span class="text-foreground/85">Sites de psychologues réalisés depuis 2016</span>
 					<span class="mx-1.5 text-muted/45" aria-hidden="true">·</span>
 					<a
 						href="#temoignages"
 						class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary-foreground hover:decoration-primary-foreground"
 					>
-						Avis de praticiens accompagnés
+						Avis de collègues accompagnés
 					</a>
 				</p>
 			</div>
@@ -47,7 +56,7 @@ import portraitImage from '../assets/images/nicodev.webp';
 				<div class="hero-home__portrait">
 					<Image
 						src={portraitImage}
-						alt="Nicodev — Sites internet pour psychologues, psychomotriciens, ergo et orthophonistes"
+						alt="Nicodev — Sites internet pour psychologues"
 						class="h-full w-full object-cover"
 						width={640}
 						height={800}
@@ -59,7 +68,7 @@ import portraitImage from '../assets/images/nicodev.webp';
 				<aside class="hero-home__card" aria-label="Présentation">
 					<p class="font-heading text-xl font-semibold text-primary-foreground">Nicolas Devaux</p>
 					<p class="mt-1 text-sm leading-relaxed text-muted">
-						Psychologue, psychomotricien &amp; développeur web.
+						Psychologue &amp; développeur web.
 					</p>
 				</aside>
 			</div>

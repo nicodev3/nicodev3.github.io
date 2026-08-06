@@ -1,0 +1,81 @@
+---
+import { ArrowRight, CalendarCheck, Globe2, MapPin } from '@lucide/astro';
+
+const steps = [
+	{
+		Icon: Globe2,
+		eyebrow: 'Votre espace',
+		title: 'Le site internet',
+		description:
+			'Il présente votre approche, les personnes que vous recevez, votre cadre et les informations pratiques du cabinet.',
+	},
+	{
+		Icon: MapPin,
+		eyebrow: 'La visibilité locale',
+		title: 'Google',
+		description:
+			'Le site et la fiche Google donnent des repères cohérents aux personnes qui cherchent un psychologue dans votre ville.',
+	},
+	{
+		Icon: CalendarCheck,
+		eyebrow: 'Le premier contact',
+		title: 'La prise de rendez-vous',
+		description:
+			'Après avoir compris votre pratique, la personne peut vous contacter ou utiliser l’outil de réservation que vous avez choisi.',
+	},
+] as const;
+---
+
+<section class="section-y border-b border-border bg-white" aria-labelledby="visibility-path-heading">
+	<div class="shell-layout">
+		<header class="mx-auto max-w-3xl text-center">
+			<p class="type-eyebrow mb-3 text-muted">Une présence cohérente</p>
+			<h2 id="visibility-path-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+				Du site à la prise de rendez-vous
+			</h2>
+			<p class="mt-4 text-lg leading-relaxed text-muted">
+				Le site, Google et votre outil de rendez-vous n’ont pas la même fonction. Ensemble, ils forment un
+				parcours lisible, sans faire dépendre toute votre présence d’une seule plateforme.
+			</p>
+		</header>
+
+		<ol class="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+			{
+				steps.map(({ Icon, eyebrow, title, description }, index) => (
+					<>
+						<li class="relative flex min-h-64 flex-col rounded-xl border border-border bg-surface p-7 shadow-sm">
+							<div class="ui-icon-well mb-6" aria-hidden="true">
+								<Icon class="h-5 w-5" stroke-width={1.5} />
+							</div>
+							<p class="type-label-mono text-muted">{eyebrow}</p>
+							<h3 class="mt-2 font-heading text-2xl font-semibold text-foreground">{title}</h3>
+							<p class="mt-4 text-base leading-relaxed text-muted">{description}</p>
+							<span class="absolute right-5 top-5 font-heading text-4xl text-primary/15" aria-hidden="true">
+								{String(index + 1).padStart(2, '0')}
+							</span>
+						</li>
+						{index < steps.length - 1 && (
+							<li
+								class="flex h-10 items-center justify-center text-primary-foreground lg:h-auto lg:w-12"
+								aria-hidden="true"
+							>
+								<ArrowRight class="h-6 w-6 rotate-90 lg:rotate-0" stroke-width={1.5} />
+							</li>
+						)}
+					</>
+				))
+			}
+		</ol>
+
+		<p class="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-muted">
+			Doctolib peut rester votre outil de réservation. Le site conserve votre présentation, vos contenus et votre
+			visibilité dans un espace qui vous appartient.{' '}
+			<a
+				href="/blog/site-internet-psychologue-doctolib/"
+				class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary"
+			>
+				Lire le point complet sur le site et Doctolib
+			</a>.
+		</p>
+	</div>
+</section>
