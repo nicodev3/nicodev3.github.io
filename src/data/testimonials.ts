@@ -54,6 +54,23 @@ export const maltTestimonials = [
 
 export const googleTestimonials = [
 	{
+		quote: 'Merci à Nicolas pour son aide pour mon site 🙂',
+		author: 'Isabelle Leboeuf, Psychologue',
+		short: 'Isabelle Leboeuf',
+		rating: 5,
+		websiteUrl: 'https://joiecompassion.com/',
+		websiteLabel: 'Joie & Compassion',
+	},
+	{
+		quote:
+			"Je suis extrêmement satisfaite de mon expérience avec Nicolas. Ce qui rend son accompagnement vraiment précieux, c'est sa double casquette de psychologue et de webdesigner — une combinaison rare qui change tout. Il apporte une écoute sensible et une vraie compréhension des besoins, en plus d'une expertise technique solide. Je lui fais totalement confiance et je suis très heureuse de pouvoir bénéficier de son accompagnement. Je recommande vivement !",
+		author: 'Bénédicte Donet, Psychologue',
+		short: 'Bénédicte Donet',
+		rating: 5,
+		websiteUrl: 'https://www.benedictedonet-psyenligne.com/',
+		websiteLabel: 'Psychologue en ligne',
+	},
+	{
 		quote:
 			"J'ai confié la création de mes sites à Nicolas en 2019 et j'ai toujours été très satisfaite de notre collaboration depuis. Au delà de la partie technique, il a su me conseiller judicieusement autant sur le fond que sur la forme et au fil des ans Nicolas m'a régulièrement recontacté afin de savoir si j'avais besoin de faire évoluer mes sites web ou de mettre à jour des informations. Je le recommande donc nicodev chaudement sans la moindre hésitation !",
 		author: 'Séverine Reisser, Psychologue',
