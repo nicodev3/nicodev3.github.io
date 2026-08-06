@@ -34,8 +34,8 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Nicolas Devaux',
-  jobTitle: 'Psychologue et développeur web',
-  description: 'Fondateur de Nicodev, psychologue et développeur web spécialisé dans la création de sites internet pour psychologues en libéral.',
+  jobTitle: 'Psychologue, psychomotricien, psychothérapeute et développeur web',
+  description: 'Fondateur de Nicodev : psychologue, psychomotricien et psychothérapeute, développeur web spécialisé dans la création de sites pour ces professions réglementées.',
   url: aboutUrl,
   image: new URL(developmentImage.src, baseUrl).toString(),
   knowsAbout: ['développement web', 'sites internet pour psychologues', 'psychomotricité', 'SEO', 'performance web'],
@@ -59,8 +59,8 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
 ---
 
 <Layout
-  title="Nicolas Devaux, psychologue et développeur web | Nicodev"
-  description="Psychologue en libéral et développeur web, Nicolas Devaux conçoit des sites internet pour ses collègues psychologues."
+  title="Nicolas Devaux, psychologue, psychomotricien et psychothérapeute | Nicodev"
+  description="Psychologue, psychomotricien et psychothérapeute, développeur web : Nicolas Devaux conçoit des sites internet pour ses confrères en libéral."
   image={defaultOgWebp}
 >
   <Fragment slot="head">
@@ -75,7 +75,7 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
   </Fragment>
   <Hero
     title="À propos de Nicodev"
-    subtitle="Un parcours entre pratique clinique et développement web, au service des psychologues qui souhaitent construire leur présence en ligne."
+    subtitle="Un parcours entre pratique clinique (psychologue, psychomotricien, psychothérapeute) et développement web — au service de confrères qui veulent une présence en ligne juste."
     breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]}
   />
 
@@ -120,7 +120,7 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
           <p>
             Passionné d’informatique depuis l’enfance, je programmais déjà dans les années 80.
             Pourtant, c’est vers le soin que je me suis d’abord dirigé : psychomotricien, puis
-            psychologue. J’exerce aujourd’hui en cabinet libéral et dans un service de santé pour
+            psychologue et psychothérapeute. J’exerce aujourd’hui en cabinet libéral et dans un service de santé pour
             les étudiants.
           </p>
           <p>
@@ -136,8 +136,7 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
               target="_blank"
               rel="noopener noreferrer"
               >nicolas-devaux-psychologue.fr</a
-            >. Sur Nicodev, je mets mon expérience web au service de mes collègues psychologues.
-            J’étudie également certains projets de psychomotriciens et d’autres professions proches.
+            >. Sur Nicodev, je mets mon expérience web au service de mes confrères psychologues, psychothérapeutes (titre réglementé) et psychomotriciens — pas d’une offre multi-métiers qui diluerait ces titres.
           </p>
           <p>
             Un <a href="/creation-site-internet-psychologue/">site pour un psychologue</a> n’est pas une vitrine commerciale.
@@ -186,6 +185,10 @@ const maltHref = 'https://www.malt.fr/profile/nicolasdevaux1';
           <li class="border-t border-border pt-4 first:border-t-0 first:pt-0">
             <span class="block font-semibold text-foreground">Psychologie</span>
             Master 2 de psychologie, Université Paris Cité (2007)
+          </li>
+          <li class="border-t border-border pt-4 first:border-t-0 first:pt-0">
+            <span class="block font-semibold text-foreground">Psychothérapie</span>
+            Titre de psychothérapeute (usage autorisé, inscription RPPS)
           </li>
           <li class="border-t border-border pt-4 first:border-t-0 first:pt-0">
             <span class="block font-semibold text-foreground">Développement web</span>

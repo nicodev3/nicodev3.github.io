@@ -78,6 +78,18 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
     beforeHeading: 'Comment augmenter son revenu sans « sur-vendre » sa pratique',
     variant: 'site',
   },
+  'installer-liberal-psychologue-par-ou-commencer': {
+    beforeHeading: 'Accueillir les premiers patients : le cadre avant la technique',
+    variant: 'site',
+  },
+  'guide-complet-visibilite-en-ligne-psychologues': {
+    beforeHeading: 'Par où commencer selon votre situation',
+    variant: 'site',
+  },
+  'site-psychologue-confrere-vs-agence-multi-metiers': {
+    beforeHeading: 'Ce que vous gagnez concrètement',
+    variant: 'site',
+  },
   'site-internet-psychologue-doctolib': {
     beforeHeading: 'Quand choisir Doctolib, un site, ou les deux ?',
     variant: 'independence',

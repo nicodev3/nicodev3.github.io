@@ -198,7 +198,7 @@ Une **refonte de site internet** n'est pas seulement une question de design. C'e
 
 Le bon moment pour la lancer, c'est quand votre site ne reflète plus correctement votre pratique, devient difficile à maintenir ou freine la prise de contact.
 
-Si vous souhaitez créer ou refondre votre site avec une approche sobre et adaptée aux psychologues, psychomotriciens, ergothérapeutes ou orthophonistes, vous pouvez consulter mes [tarifs](/tarifs/) ou [me contacter](/contact/).
+Si vous souhaitez créer ou refondre votre site avec une approche sobre et adaptée aux psychologues, psychothérapeutes ou psychomotriciens, vous pouvez consulter mes [tarifs](/tarifs/) ou [me contacter](/contact/).
 
 ---
 

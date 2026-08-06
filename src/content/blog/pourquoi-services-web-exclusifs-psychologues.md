@@ -27,21 +27,21 @@ Derrière ce titre, il y a :
 
 Dès lors, créer un site pour un psychologue revient à représenter une profession réglementée avec fidélité et responsabilité. Ce n'est pas seulement une question de design ou de référencement : c'est d'abord une question de justesse. Le choix des mots, les informations mises en avant et la manière de présenter la pratique influencent directement la compréhension du public.
 
-## La confusion entre psychologue et autres praticiens nuit aux patients et à la profession
+## La confusion des titres nuit aux patients et à la profession
 
-Aujourd'hui, trop de personnes en demande d'aide ne distinguent pas clairement psychologue, psychothérapeute, praticien en psychothérapie, coach, thérapeute ou praticien en bien-être. Cette confusion fragilise l'orientation des patients et brouille la place du psychologue :
+Aujourd'hui, trop de personnes en demande d'aide ne distinguent pas clairement **psychologue**, **psychothérapeute** (titre réglementé, RPPS), **psychopraticien**, coach, « thérapeute » ou praticien en bien-être. Cette confusion fragilise l'orientation des patients et brouille la place des titres protégés.
 
-Lorsque les repères deviennent flous :
-- certains patients pensent consulter un professionnel formé à la psychologie clinique alors que ce n'est pas le cas;
-- certains patients pensent consulter un psychothérapeute alors que ce n'est pas le cas;
+**Psychothérapeute** et **psychopraticien** ne sont pas la même chose. Le titre de psychothérapeute est réglementé : seuls les professionnels autorisés peuvent s'en prévaloir. Un psychopraticien ou un praticien en psychothérapie sans ce titre n'entre pas dans le même cadre légal. Les confondre dans une offre web « toutes pratiques » ne rend service ni aux patients, ni aux confrères.
 
-- d'autres renoncent à consulter, faute de comprendre à qui s'adresser;
-- pire, consulter un professionnel non formé à la psychologie clinique peut être dommageable pour le patient;
-- la valeur du titre de psychologue se dilue dans un paysage où tout semble équivalent.
+Lorsque les repères deviennent flous :
+- certains patients pensent consulter un professionnel formé à la psychologie clinique alors que ce n'est pas le cas ;
+- d'autres croient s'adresser à un psychothérapeute alors que le titre n'est pas porté légalement ;
+- d'autres encore renoncent à consulter, faute de comprendre à qui s'adresser ;
+- la valeur des titres réglementés se dilue dans un paysage où tout semble équivalent.
 
-Il ne s'agit pas d'opposer les approches ni de disqualifier quiconque. Il s'agit de rappeler qu'une confusion durable ne sert ni les patients, ni la profession.
+Il ne s'agit pas d'opposer les approches ni de disqualifier quiconque. Il s'agit de rappeler qu'une confusion durable ne sert ni les patients, ni les professions réglementées.
 
-En tant que professionnel du web, j'ai le souhait de contribuer à clarifier ces repères. En tant que psychologue, je considère qu'il s'agit d'une responsabilité. C'est précisément pourquoi Nicodev s'est d'abord construit autour de sites conçus pour les psychologues : pour permettre aux patients d'identifier un cadre professionnel précis, et aux psychologues de présenter leur travail avec une parole claire, sans ambiguïté.
+En tant que professionnel du web et confrère (psychologue, psychomotricien et psychothérapeute), je considère qu'il s'agit d'une responsabilité. C'est pourquoi Nicodev ne construit pas de sites pour un catalogue multi-métiers : uniquement pour des titres que je connais de l'intérieur.
 
 ## L'importance d'un site web qui respecte le cadre légal et déontologique d'une profession réglementée
 
@@ -75,13 +75,11 @@ Ce positionnement est volontairement exigeant. Il implique de distinguer les cad
 
 C'est aussi la raison pour laquelle je ne souhaite pas me disperser sur tous les secteurs. Je préfère une expertise utile, précise et cohérente à une approche généraliste sans compréhension approfondie du métier.
 
-## Une ouverture progressive vers les psychomotriciens
+## Aussi pour psychothérapeutes (titre + RPPS) et psychomotriciens
 
-En toute transparence, comme je suis également psychomotricien de formation, j'ouvre progressivement mes services aux psychomotriciens.
+Comme je suis également psychomotricien de formation et psychothérapeute (titre réglementé), l'offre s'étend à ces deux cadres — selon la même logique : connaissance réelle du métier, respect du titre, communication claire pour le public.
 
-Cette évolution suit la même logique : connaissance réelle du cadre professionnel, respect de la déontologie et communication claire à destination du public.
-
-Elle ne transforme pas les psychologues en simple segment parmi d'autres. Les pages métiers restent distinctes, avec un vocabulaire adapté à chaque profession. Une page dédiée présente désormais l'approche pour les [sites internet de psychomotriciens](/site-internet-psychomotricien/).
+Cela ne transforme pas les psychologues en simple segment parmi d'autres. Les pages et le vocabulaire restent adaptés à chaque profession. Une page dédiée présente l'approche pour les [sites internet de psychomotriciens](/site-internet-psychomotricien/). Les psychopraticiens et « thérapeutes » hors titre restent hors offre.
 
 ## Conclusion
 
@@ -91,11 +89,12 @@ Le **titre de psychologue** mérite d'être représenté avec précision. La dis
 
 Mon objectif n'est pas de produire "davantage de sites". Mon objectif est de concevoir des sites justes, clairs et utiles, à la fois pour les psychologues et pour les personnes en recherche d'accompagnement.
 
-Si vous êtes psychologue et que vous souhaitez un **site web fidèle à votre cadre professionnel**, vous pouvez me contacter. Nous évaluerons ensemble si mon approche correspond à votre besoin.
+Si vous êtes psychologue, psychothérapeute (titre + RPPS) ou psychomotricien et que vous souhaitez un **site web fidèle à votre cadre professionnel**, vous pouvez me contacter. Nous évaluerons ensemble si mon approche correspond à votre besoin.
 
 Pour aller plus loin sans attendre&nbsp;:
 
 - [Créer un site web pour psychologue](/creation-site-internet-psychologue/) — offre, déroulement et FAQ ;
+- [Pourquoi confier son site à un confrère plutôt qu'à une agence multi-métiers](/blog/site-psychologue-confrere-vs-agence-multi-metiers/) — l'argument confrère en détail ;
 - [Référencer le site d'un psychologue](/referencement-site-psychologue/) — visibilité locale et cohérence avec votre fiche Google ;
 - [Guide complet de la visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/) — plan d’ensemble (fiche, site, avis, contenu) ;
 - [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans votre installation.

@@ -47,10 +47,10 @@ const faqSchema = {
 		},
 		{
 			'@type': 'Question',
-			name: 'Le site convient-il aussi aux psychomotriciens, ergothérapeutes et orthophonistes ?',
+			name: 'Le site convient-il aussi aux psychothérapeutes et aux psychomotriciens ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "La prestation est conçue en priorité pour les psychologues. Certains projets de psychomotriciens, ergothérapeutes et orthophonistes peuvent également être étudiés lorsqu'ils relèvent des mêmes enjeux de cadre et de présentation.",
+				text: "Oui : l'offre s'adresse aux psychologues, aux psychothérapeutes autorisés à faire usage du titre (RPPS) et aux psychomotriciens. Les psychopraticiens et les praticiens en psychothérapie sans titre de psychothérapeute ne font pas partie de l'offre.",
 			},
 		},
 		{
@@ -141,7 +141,7 @@ const serviceSchema = {
 	'@type': 'Service',
 	name: 'Création de site internet pour psychologue',
 	description:
-		'Création ou refonte de site internet pour psychologues en libéral : contenu guidé, prise de rendez-vous, hébergement, maintenance et bases SEO inclus dès 29 EUR par mois.',
+		'Création ou refonte de site internet pour psychologues, psychothérapeutes et psychomotriciens : contenu guidé, prise de rendez-vous, hébergement, maintenance et bases SEO inclus dès 29 EUR par mois.',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -151,7 +151,7 @@ const serviceSchema = {
 	areaServed: { '@type': 'Country', name: 'France' },
 	audience: {
 		'@type': 'Audience',
-		audienceType: 'Psychologues en libéral',
+		audienceType: 'Psychologues, psychothérapeutes et psychomotriciens en libéral',
 	},
 	offers: {
 		'@type': 'AggregateOffer',
@@ -192,7 +192,7 @@ const breadcrumbSchema = {
 
 	<Hero
 		title="Création de site internet pour psychologue"
-		subtitle="Un site vitrine sobre pour présenter votre cadre, rassurer avant le premier contact et soutenir votre visibilité locale — conçu par un psychologue-développeur."
+		subtitle="Un site vitrine sobre pour présenter votre cadre, rassurer avant le premier contact et soutenir votre visibilité locale — conçu par un psychologue, psychomotricien et psychothérapeute devenu développeur web."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création de site internet pour psychologue' }]}
 		coverImage={psychologueImage}
 		coverImageAlt="Exemple de site sobre pour une psychologue en libéral"
@@ -252,7 +252,7 @@ const breadcrumbSchema = {
 						<li><strong>Offre Visibilité &amp; Confiance</strong>&nbsp;: 49&nbsp;EUR/mois — + fiche Google, contenus, suivi SEO</li>
 						<li><strong>Délai</strong>&nbsp;: 2 à 3 semaines en moyenne</li>
 						<li><strong>Contenu</strong>&nbsp;: formulaire guidé, pas de rédaction seul·e obligatoire</li>
-						<li><strong>Spécialisation</strong>&nbsp;: psychologue-développeur, cadre déontologique intégré</li>
+						<li><strong>Spécialisation</strong>&nbsp;: confrère du métier (psychologue, psychomotricien, psychothérapeute) et développeur web — cadre déontologique intégré</li>
 					</ul>
 					<p>
 						Comparer les formules sur les <a href="/tarifs/">tarifs</a>.
@@ -273,7 +273,8 @@ const breadcrumbSchema = {
 							<li>vous voulez présenter votre cabinet avec sobriété et justesse&nbsp;;</li>
 							<li>vous préférez déléguer l’hébergement, la maintenance et les réglages SEO&nbsp;;</li>
 							<li>vous avez besoin d’un site relié à Doctolib, Qare, Maiia ou à un formulaire simple&nbsp;;</li>
-							<li>vous cherchez un accompagnement qui comprend le cadre déontologique des psychologues.</li>
+							<li>vous cherchez un accompagnement qui comprend le cadre déontologique des psychologues (et titres réglementés proches)&nbsp;;</li>
+							<li>vous préférez travailler avec un confrère plutôt qu’avec une agence multi-métiers.</li>
 						</ul>
 					</div>
 					<div class="rounded-xl border border-border bg-white p-5">
@@ -282,6 +283,7 @@ const breadcrumbSchema = {
 							<li>vous cherchez une garantie de place précise dans Google&nbsp;;</li>
 							<li>vous voulez une plateforme complexe sur mesure ou un espace patient&nbsp;;</li>
 							<li>vous préférez tout gérer vous-même, y compris technique et maintenance&nbsp;;</li>
+							<li>vous exercez hors titre de psychologue, de psychothérapeute (RPPS) ou de psychomotricien (ex.&nbsp;psychopraticien)&nbsp;;</li>
 							<li>vous attendez un discours publicitaire ou des affirmations thérapeutiques excessives.</li>
 						</ul>
 					</div>
@@ -302,16 +304,21 @@ const breadcrumbSchema = {
 					<li><strong>Maintenance incluse</strong> — hébergement, mises à jour, petites modifications sans gérer la technique.</li>
 				</ol>
 
-				<h2>Pourquoi confier la création à un psychologue-développeur&nbsp;?</h2>
+				<h2>Pourquoi confier la création à un confrère psychologue-développeur&nbsp;?</h2>
 				<p>
-					La <strong>création site web psychologue</strong> par une agence généraliste pose souvent le même problème&nbsp;:
-					il faut tout réexpliquer (cadre clinique, déontologie, ton attendu, ce qu&apos;on peut dire ou non).
-					En tant que <a href="/about/">psychologue, psychomotricien et développeur web</a>, je connais ces contraintes
-					d&apos;emblée — et je prends en charge la technique (structure, performance, SEO, hébergement).
+					La <strong>création site web psychologue</strong> par une agence généraliste ou une plateforme multi-métiers pose souvent le même problème&nbsp;:
+					il faut tout réexpliquer (cadre clinique, déontologie, ton attendu, ce qu&apos;on peut dire ou non) — et votre cabinet devient un segment parmi d&apos;autres, y compris des pratiques hors titre réglementé.
+				</p>
+				<p>
+					Je suis <a href="/about/">psychologue, psychomotricien et psychothérapeute</a>, et développeur web.
+					Je connais ces contraintes d&apos;emblée&nbsp;: pas besoin de «&nbsp;traduire&nbsp;» votre métier à une équipe marketing.
+					Je prends aussi en charge la technique (structure, performance, SEO, hébergement).
 				</p>
 				<p>
 					Des confrères accompagnés le confirment dans les <a href="/tarifs/">témoignages</a>&nbsp;: site performant,
-					formulation juste, collaboration patiente. Voir aussi le <a href="/portfolio/">portfolio</a>.
+					formulation juste, collaboration patiente. Voir aussi le <a href="/portfolio/">portfolio</a> et l&apos;article{' '}
+					<a href="/blog/pourquoi-services-web-exclusifs-psychologues/">pourquoi une spécialisation web pour les psychologues</a>
+					et <a href="/blog/site-psychologue-confrere-vs-agence-multi-metiers/">confrère vs agence multi-métiers</a>.
 				</p>
 
 				<h2>Site web, site internet, site vitrine&nbsp;: même besoin</h2>
@@ -322,19 +329,16 @@ const breadcrumbSchema = {
 					Doctolib, Qare ou Maiia facilitent la prise de rendez-vous&nbsp;; ils ne remplacent pas un site qui explique <em>qui vous êtes</em> cliniquement et qui vous rend visible sur votre nom ou vos spécialités. Le <a href="/blog/site-internet-psychologue-doctolib/">comparatif site vs Doctolib</a> du blog détaille cette articulation&nbsp;; le <a href="/blog/guide-complet-visibilite-en-ligne-psychologues/">guide complet de la visibilité en ligne</a> pose le cadre global (fiche Google, SEO local, contenu).
 				</p>
 
-				<h2>Aussi pour psychothérapeutes, psychomotriciens, ergo et orthophonistes</h2>
+				<h2>Aussi pour psychothérapeutes (titre + RPPS) et psychomotriciens</h2>
 				<p>
-					Nicodev est pensé d’abord pour les <strong>psychologues</strong>, et s’étend aux
-					<strong>psychothérapeutes</strong> (titre réglementé), <strong>psychomotriciens</strong>,
-					<strong>ergothérapeutes</strong>, <strong>orthophonistes</strong> et autres professions
-					paramédicales du champ santé mentale / handicap qui ont le droit d’avoir un site internet.
+					Nicodev s’adresse aux <strong>psychologues</strong>, aux <strong>psychothérapeutes</strong> autorisés à faire usage du titre (inscription RPPS) et aux <strong>psychomotriciens</strong>.
 					Même logique&nbsp;: site vitrine sobre, contenu guidé, cadre professionnel respecté.
 					Les psychomotriciens ont une page dédiée&nbsp;: <a href="/site-internet-psychomotricien/">site internet psychomotricien</a>.
 				</p>
 				<p>
-					Ce n’est <strong>pas</strong> une offre générique «&nbsp;thérapeutes&nbsp;», ni pour les
-					psychopraticiens ou praticiens en psychothérapie hors cadre réglementé&nbsp;:
-					chaque métier accompagné ici a un titre et des obligations professionnelles claires.
+					<strong>Psychothérapeute</strong> (titre réglementé) et <strong>psychopraticien</strong> ne sont pas la même chose.
+					Les psychopraticiens, praticiens en psychothérapie sans titre de psychothérapeute, coachs et «&nbsp;thérapeutes&nbsp;» génériques ne font <strong>pas</strong> partie de l’offre&nbsp;:
+					l’enjeu est de ne pas brouiller les repères des patients ni diluer les titres protégés.
 				</p>
 
 				<h2>Ce que je fais pour vous</h2>
@@ -342,8 +346,8 @@ const breadcrumbSchema = {
 					Je vous propose un <strong>site vitrine sur mesure</strong>, pensé pour le cabinet&nbsp;: pages lisibles sur téléphone, formulation adaptée à votre métier, pas de discours publicitaire déplacé ni de jargon technique imposé à vos patients.
 				</p>
 				<p>
-					Vous n’êtes pas un «&nbsp;secteur parmi d’autres&nbsp;» dans une agence généraliste&nbsp;:
-					le socle de pages, les exemples de formulation et les contraintes (cadre professionnel, RGPD, ton de site de santé) restent alignés sur votre réalité de libéral.
+					Vous n’êtes pas un «&nbsp;secteur parmi d’autres&nbsp;» dans une agence multi-métiers&nbsp;:
+					le socle de pages, les exemples de formulation et les contraintes (cadre professionnel, RGPD, ton adapté) restent alignés sur votre réalité de libéral — pas sur un catalogue qui mélange titres réglementés et pratiques hors titre.
 				</p>
 
 				<h2>Ce que comprend la création</h2>
@@ -397,16 +401,16 @@ const breadcrumbSchema = {
 								<td class="p-4 text-muted">Si vous aimez la technique et du temps à y consacrer</td>
 							</tr>
 							<tr>
-								<td class="p-4 font-medium text-foreground">Plateforme spécialisée (Visipsy, Psy-Site…)</td>
-								<td class="p-4 text-muted">Modèles prêts, mise en ligne rapide</td>
-								<td class="p-4 text-muted">Moins de personnalisation, contenus parfois génériques, dépendance à la plateforme</td>
-								<td class="p-4 text-muted">Si vous voulez aller vite avec un modèle existant</td>
+								<td class="p-4 font-medium text-foreground">Plateforme ou agence multi-métiers</td>
+								<td class="p-4 text-muted">Mise en ligne rapide, process standardisé</td>
+								<td class="p-4 text-muted">Catalogue large (y compris hors titres réglementés), ton parfois générique, peu de compréhension métier</td>
+								<td class="p-4 text-muted">Si la spécialisation confrère n’est pas un critère</td>
 							</tr>
 							<tr>
-								<td class="p-4 font-medium text-foreground">Nicodev (psychologue-développeur)</td>
-								<td class="p-4 text-muted">Cadre clinique intégré, contenu guidé, technique prise en charge, maintenance incluse</td>
+								<td class="p-4 font-medium text-foreground">Nicodev (confrère + développeur)</td>
+								<td class="p-4 text-muted">Cadre clinique intégré, contenu guidé, technique prise en charge, maintenance incluse — pas de sites pour psychopraticiens</td>
 								<td class="p-4 text-muted">Abonnement mensuel, délai de 2 à 3 semaines</td>
-								<td class="p-4 text-muted"><strong class="text-foreground">Si vous préférez vous concentrer sur la clinique</strong></td>
+								<td class="p-4 text-muted"><strong class="text-foreground">Si vous préférez un confrère et vous concentrer sur la clinique</strong></td>
 							</tr>
 						</tbody>
 					</table>
@@ -485,7 +489,7 @@ const breadcrumbSchema = {
 				<h2>Questions fréquentes</h2>
 				<p><strong>Combien coûte la création d’un site internet pour psychologue&nbsp;?</strong> Abonnement tout inclus dès 29&nbsp;EUR/mois (Sérénité) ou 49&nbsp;EUR/mois (Visibilité &amp; Confiance avec fiche Google et SEO). Détail sur <a href="/tarifs/">Tarifs</a>.</p>
 				<p><strong>Que comprend la prestation&nbsp;?</strong> Arborescence adaptée, contenu guidé, design sobre, intégration RDV, hébergement, domaine, bases SEO et maintenance — le tout dans l’abonnement.</p>
-				<p><strong>Le site convient-il aussi aux psychomotriciens, ergothérapeutes et orthophonistes&nbsp;?</strong> La prestation est conçue en priorité pour les psychologues. J’étudie aussi certains projets de professions proches lorsqu’ils relèvent des mêmes enjeux de cadre et de présentation. Une page est dédiée aux <a href="/site-internet-psychomotricien/">psychomotriciens</a>.</p>
+				<p><strong>Le site convient-il aussi aux psychothérapeutes et aux psychomotriciens&nbsp;?</strong> Oui&nbsp;: psychologues, psychothérapeutes (titre + RPPS) et psychomotriciens. Les psychopraticiens et praticiens sans titre de psychothérapeute ne font pas partie de l’offre. Page dédiée&nbsp;: <a href="/site-internet-psychomotricien/">psychomotriciens</a>.</p>
 				<p><strong>Combien de temps pour créer un site de psychologue&nbsp;?</strong> En général 2 à 3 semaines entre le premier échange et la mise en ligne, selon vos disponibilités pour compléter le formulaire.</p>
 				<p><strong>Pourquoi créer un site internet quand on est psychologue&nbsp;?</strong> Pour disposer d’un espace que vous contrôlez&nbsp;: votre approche, vos publics, vos honoraires, vos modalités. Les annuaires imposent leur format&nbsp;; un site professionnel de psychologue rassure les patients avant le premier contact et soutient votre visibilité locale.</p>
 				<p><strong>Un site internet peut-il aider à trouver des patients&nbsp;?</strong> Oui, indirectement&nbsp;: un site cohérent avec votre fiche Google Business Profile améliore vos chances d’être trouvé localement, et aide les personnes à comprendre votre cadre avant de prendre contact. Aucune place dans Google ne peut en revanche être garantie.</p>

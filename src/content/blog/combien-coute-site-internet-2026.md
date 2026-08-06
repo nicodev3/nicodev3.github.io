@@ -313,7 +313,7 @@ Un site peu cher peut « exister » sans être trouvé, rassurant ou bien struct
 
 ### Quel budget pour la création d’un site web de cabinet ?
 
-Si vous comparez des devis « création de site » sans ancrage métier, les fourchettes du marché restent proches de celles de cet article : **DIY à petit coût**, **abonnement mensuel tout inclus**, ou **1 000 à 3 000 €** en prestation ponctuelle pour une vitrine simple. Ce qui change pour un psychologue (ou un psychomotricien, ergo, orthophoniste), c’est surtout le **ton**, le **cadre déontologique** et la **lisibilité** pour les patients — pas le besoin d’une usine à fonctionnalités.
+Si vous comparez des devis « création de site » sans ancrage métier, les fourchettes du marché restent proches de celles de cet article : **DIY à petit coût**, **abonnement mensuel tout inclus**, ou **1 000 à 3 000 €** en prestation ponctuelle pour une vitrine simple. Ce qui change pour un psychologue (ou un psychothérapeute, un psychomotricien), c’est surtout le **ton**, le **cadre déontologique** et la **lisibilité** pour les patients — pas le besoin d’une usine à fonctionnalités.
 
 ## Conclusion
 
