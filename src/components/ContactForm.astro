@@ -14,8 +14,11 @@ const formspreeUrl = (
 		? import.meta.env.PUBLIC_FORMSPREE_DEVIS
 		: import.meta.env.PUBLIC_FORMSPREE_CONTACT
 )?.trim();
-const isCloudflareBuild = process.env.CF_PAGES === '1';
-if (import.meta.env.PROD && isCloudflareBuild && !formspreeUrl) {
+// Preview CF (branches / PR) n’a souvent pas les secrets Production.
+const isCloudflareProduction =
+	process.env.CF_PAGES === '1' &&
+	(process.env.CF_PAGES_BRANCH === 'main' || process.env.CF_PAGES_BRANCH === 'master');
+if (import.meta.env.PROD && isCloudflareProduction && !formspreeUrl) {
 	const missing = isDevisMode ? 'PUBLIC_FORMSPREE_DEVIS' : 'PUBLIC_FORMSPREE_CONTACT';
 	throw new Error(
 		`Build Cloudflare Pages interrompu : ${missing} manquant. ` +

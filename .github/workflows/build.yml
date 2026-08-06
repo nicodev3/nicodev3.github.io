@@ -27,12 +27,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Astro build (Cloudflare simulation)
+      - name: Astro build (Cloudflare production simulation)
         env:
           CF_PAGES: '1'
+          CF_PAGES_BRANCH: main
           PUBLIC_FORMSPREE_CONTACT: https://formspree.io/f/ci-contact
           PUBLIC_FORMSPREE_DEVIS: https://formspree.io/f/ci-devis
           PUBLIC_FORMSPREE_DIAGNOSTIC: https://formspree.io/f/ci-diagnostic
+        run: npm run build
+
+      - name: Astro build (Cloudflare preview without Formspree)
+        env:
+          CF_PAGES: '1'
+          CF_PAGES_BRANCH: cursor/preview-branch
         run: npm run build
 
       - name: Type check

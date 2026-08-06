@@ -3,8 +3,11 @@ import ContactWhatsAppOption from './ContactWhatsAppOption.astro';
 import FormField from './FormField.astro';
 
 const formspreeUrl = import.meta.env.PUBLIC_FORMSPREE_DIAGNOSTIC?.trim();
-const isCloudflareBuild = process.env.CF_PAGES === '1';
-if (import.meta.env.PROD && isCloudflareBuild && !formspreeUrl) {
+// Preview CF (branches / PR) n’a souvent pas les secrets Production.
+const isCloudflareProduction =
+	process.env.CF_PAGES === '1' &&
+	(process.env.CF_PAGES_BRANCH === 'main' || process.env.CF_PAGES_BRANCH === 'master');
+if (import.meta.env.PROD && isCloudflareProduction && !formspreeUrl) {
 	throw new Error(
 		'Build Cloudflare Pages interrompu : PUBLIC_FORMSPREE_DIAGNOSTIC manquant. ' +
 			'Ajoutez l’URL Formspree (ex. https://formspree.io/f/…) dans Cloudflare Pages → Settings → Environment variables (Production).',
