@@ -4,7 +4,7 @@ seoTitle: "Site internet psychologue : pourquoi un confrère plutôt qu'une agen
 description: "Pourquoi confier son site à un psychologue-développeur plutôt qu'à une agence multi-métiers : titres réglementés, ton juste, psychothérapeute ≠ psychopraticien."
 pubDate: "2026-08-06"
 author: "Nicolas Devaux"
-image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
+image: "../../assets/images/blog/site-psychologue-confrere-developpeur.webp"
 tags: ["psychologue", "site web cabinet", "cadre déontologique"]
 ---
 
