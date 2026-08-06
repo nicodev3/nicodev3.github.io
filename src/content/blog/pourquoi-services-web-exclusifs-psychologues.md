@@ -8,7 +8,7 @@ image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
 tags: ["psychologue", "site web cabinet", "cadre déontologique"]
 ---
 
-Lorsque l'on m'interroge sur mon choix d'avoir construit Nicodev autour du **site web psychologue**, ma réponse est constante : il ne s'agit pas seulement d'un positionnement commercial, mais d'une ligne professionnelle assumée.
+Lorsque l'on m'interroge sur mon choix d'avoir construit Nicodev autour de la création de **sites web pour psychologues**, ma réponse est constante : il ne s'agit pas seulement d'un positionnement commercial, mais d'une ligne professionnelle assumée.
 
 Psychologue de formation et en exercice libéral, je connais les réalités cliniques, les responsabilités attachées au titre, ainsi que les interrogations qui précèdent souvent une première consultation. Développeur web également, ayant exercé ce métier pendant plusieurs années pour de grandes entreprises, je conçois des sites utiles, sobres et rigoureux.
 
@@ -41,13 +41,13 @@ Lorsque les repères deviennent flous :
 
 Il ne s'agit pas d'opposer les approches ni de disqualifier quiconque. Il s'agit de rappeler qu'une confusion durable ne sert ni les patients, ni la profession.
 
-En tant que professionnel du web, j'ai le souhait de contribuer à clarifier ces repères. En tant que psychologue, je considère qu'il s'agit d'une responsabilité. C'est précisément pourquoi Nicodev s'est d'abord construit autour des **sites web pour psychologues** : pour permettre aux patients d'identifier un cadre professionnel précis, et aux psychologues de présenter leur travail avec une parole claire, sans ambiguïté.
+En tant que professionnel du web, j'ai le souhait de contribuer à clarifier ces repères. En tant que psychologue, je considère qu'il s'agit d'une responsabilité. C'est précisément pourquoi Nicodev s'est d'abord construit autour de sites conçus pour les psychologues : pour permettre aux patients d'identifier un cadre professionnel précis, et aux psychologues de présenter leur travail avec une parole claire, sans ambiguïté.
 
 ## L'importance d'un site web qui respecte le cadre légal et déontologique d'une profession réglementée
 
 Un site internet n'est jamais neutre. Il peut informer, rassurer et orienter, mais il peut aussi brouiller les repères, surpromettre, voire induire en erreur. Lorsqu'on exerce une profession réglementée, la communication doit demeurer strictement alignée avec le cadre légal et déontologique.
 
-Concrètement, le **site internet d'un.e psychologue** devrait :
+Concrètement, le **site internet d'un psychologue** devrait :
 - présenter le parcours, les diplômes et le cadre d'exercice avec exactitude;
 - éviter les promesses de résultat et les formulations commerciales inadaptées à la relation clinique;
 - préserver la confidentialité, notamment dans les formulaires et les outils de contact;
@@ -91,11 +91,11 @@ Le **titre de psychologue** mérite d'être représenté avec précision. La dis
 
 Mon objectif n'est pas de produire "davantage de sites". Mon objectif est de concevoir des sites justes, clairs et utiles, à la fois pour les psychologues et pour les personnes en recherche d'accompagnement.
 
-Si vous êtes psychologue et que vous souhaitez un **site web pour psychologue** fidèle à votre cadre professionnel, vous pouvez me contacter. Nous évaluerons ensemble si mon approche correspond à votre besoin.
+Si vous êtes psychologue et que vous souhaitez un **site web fidèle à votre cadre professionnel**, vous pouvez me contacter. Nous évaluerons ensemble si mon approche correspond à votre besoin.
 
 Pour aller plus loin sans attendre&nbsp;:
 
-- [Création de site web pour psychologue](/creation-site-internet-psychologue/) — offre, déroulement et FAQ ;
-- [Référencement site psychologue](/referencement-site-psychologue/) — visibilité locale et cohérence avec votre fiche Google ;
+- [Créer un site web pour psychologue](/creation-site-internet-psychologue/) — offre, déroulement et FAQ ;
+- [Référencer le site d'un psychologue](/referencement-site-psychologue/) — visibilité locale et cohérence avec votre fiche Google ;
 - [Guide complet de la visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/) — plan d’ensemble (fiche, site, avis, contenu) ;
 - [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans votre installation.
