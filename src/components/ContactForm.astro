@@ -14,12 +14,15 @@ const formspreeUrl = (
 		? import.meta.env.PUBLIC_FORMSPREE_DEVIS
 		: import.meta.env.PUBLIC_FORMSPREE_CONTACT
 )?.trim();
-const isCloudflareBuild = process.env.CF_PAGES === '1';
-if (import.meta.env.PROD && isCloudflareBuild && !formspreeUrl) {
+// Preview CF (branches / PR) n’a souvent pas les secrets Production.
+const isCloudflareProduction =
+	process.env.CF_PAGES === '1' &&
+	(process.env.CF_PAGES_BRANCH === 'main' || process.env.CF_PAGES_BRANCH === 'master');
+if (import.meta.env.PROD && isCloudflareProduction && !formspreeUrl) {
+	const missing = isDevisMode ? 'PUBLIC_FORMSPREE_DEVIS' : 'PUBLIC_FORMSPREE_CONTACT';
 	throw new Error(
-		isDevisMode
-			? 'PUBLIC_FORMSPREE_DEVIS doit être défini (URL Formspree, ex. https://formspree.io/f/…)'
-			: 'PUBLIC_FORMSPREE_CONTACT doit être défini (URL Formspree, ex. https://formspree.io/f/…)',
+		`Build Cloudflare Pages interrompu : ${missing} manquant. ` +
+			`Ajoutez l’URL Formspree (ex. https://formspree.io/f/…) dans Cloudflare Pages → Settings → Environment variables (Production).`,
 	);
 }
 
@@ -154,6 +157,21 @@ const reassuranceText = isDevisMode
 
 		form.addEventListener('focusin', trackStart, { once: true });
 		form.addEventListener('change', trackStart, { once: true });
+
+		const messageField = form.querySelector('#contact-message');
+		const params = new URLSearchParams(window.location.search);
+		if (
+			params.get('sujet') === 'guide-installation' &&
+			messageField instanceof HTMLTextAreaElement &&
+			!messageField.value.trim()
+		) {
+			messageField.value =
+				'Guide installation libéral psy\n\nContexte (2 lignes) : ';
+			messageField.focus();
+			const cursor = messageField.value.length;
+			messageField.setSelectionRange(cursor, cursor);
+		}
+
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
 			let redirecting = false;

@@ -156,7 +156,7 @@ Certaines prestations se facturent plus cher : **thérapie de couple** (souvent 
 
 > **À retenir** : un tarif « haut » n'améliore votre revenu que si des patients acceptent de le payer **et** que votre agenda se remplit. Monter ses honoraires sans remplir les créneaux peut baisser le revenu global.
 
-Pour le détail administratif et fiscal (TVA sur les soins, mentions de facture), le guide [s'installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/) aborde ces points ; validez toujours votre cas avec un professionnel.
+Pour le détail administratif et fiscal (TVA sur les soins, mentions de facture), voir [TVA, CFE et charges du psychologue libéral](/blog/fiscalite-tva-charges-psychologue-liberal/) et le [guide d'installation](/blog/installer-liberal-psychologue-par-ou-commencer/) ; validez toujours votre cas avec un professionnel.
 
 ## Du tarif de séance au revenu net mensuel
 
@@ -388,7 +388,7 @@ Le Code de déontologie des psychologues encadre la communication : l'objectif n
 
 Le **salaire d’un psychologue libéral** le plus honnête à retenir est donc une **fourchette** liée à votre tarif, votre volume, vos charges et votre régime — pas un chiffre unique affiché sur un forum.
 
-Si vous préparez votre installation, avancez en parallèle sur trois plans : **viabilité financière** (cet article), **cadre administratif** ([ouvrir son cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/)), et **visibilité** pour ne pas rester invisible les premiers mois ([premiers patients](/blog/comment-trouver-premiers-patients-psychologue/), [budget site internet](/blog/combien-coute-site-internet-2026/)).
+Si vous préparez votre installation, avancez en parallèle sur trois plans : **viabilité financière** (cet article), **cadre administratif** ([ouvrir son cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/), [statut micro ou réel](/blog/statut-juridique-psychologue-liberal/)), et **visibilité** pour ne pas rester invisible les premiers mois ([visibilité à l’installation](/blog/visibilite-installation-psychologue-liberal/), [premiers patients](/blog/comment-trouver-premiers-patients-psychologue/), [budget site internet](/blog/combien-coute-site-internet-2026/)).
 
 ## Questions fréquentes sur le salaire d’un psychologue libéral
 

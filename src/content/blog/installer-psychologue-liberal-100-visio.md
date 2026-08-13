@@ -39,7 +39,7 @@ Dans un cabinet, le patient perçoit rapidement certains repères : adresse, imm
 
 Ce n’est pas du marketing au mauvais sens du terme. C’est une manière de rendre votre cadre compréhensible pour des personnes qui ne pourront pas s’appuyer sur un lieu physique pour se représenter votre pratique.
 
-Si vous êtes encore au début de votre réflexion, commencez aussi par le guide général pour [s’installer en libéral comme psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/). Le 100 % visio est un cas particulier, mais il ne remplace pas les fondations administratives, fiscales et professionnelles.
+Si vous êtes encore au début de votre réflexion, commencez aussi par le guide général pour [s’installer en libéral comme psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/). Le 100 % visio est un cas particulier, mais il ne remplace pas les fondations administratives, fiscales et professionnelles — voir notamment [les démarches ARS / INPI](/blog/demarches-administratives-psychologue-liberal/) et [le cadre du local et de la visio](/blog/ouvrir-cabinet-psychologue-local/).
 
 ## La grande différence : vous perdez l’appui naturel du référencement local
 
@@ -280,6 +280,7 @@ C’est exactement le type de situation où l’accompagnement par un psychologu
 ## À lire aussi
 
 - [Ouvrir un cabinet de psychologue : guide d’installation 2026](/blog/installer-liberal-psychologue-par-ou-commencer/)
+- [Visibilité d’un psychologue qui s’installe : site, Google et réseau](/blog/visibilite-installation-psychologue-liberal/)
 - [Google Business Profile pour psychologue : créer et optimiser sa fiche](/blog/google-business-profile-psychologue/)
 - [Site internet pour psychologue en 2026 : pages, SEO et RGPD](/blog/site-internet-psychologues/)
 - [Comment trouver ses premiers patients quand on s’installe comme psychologue](/blog/comment-trouver-premiers-patients-psychologue/)
