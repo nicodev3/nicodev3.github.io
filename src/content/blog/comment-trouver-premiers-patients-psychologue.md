@@ -12,7 +12,7 @@ tags: ["psychologue", "installation en libéral", "référencement local cabinet
 
 S’installer en libéral comme psychologue est souvent un moment à la fois stimulant et déstabilisant. On a travaillé son cadre, réfléchi à sa pratique, choisi un lieu. Puis une question très concrète apparaît : comment trouver ses premiers patients sans se sentir obligé de "se vendre" ?
 
-Si vous êtes encore en amont, commencez par le guide dédié pour [ouvrir son cabinet de psychologue et s’installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/) : démarches, statut, local, visibilité et ordre des priorités.
+Si vous êtes encore en amont, commencez par le guide dédié pour [ouvrir son cabinet de psychologue et s’installer en libéral](/blog/installer-liberal-psychologue-par-ou-commencer/) : démarches, statut, local, visibilité et ordre des priorités. Le chapitre [visibilité à l’installation](/blog/visibilite-installation-psychologue-liberal/) détaille site, fiche Google et réseau local.
 
 Cette inquiétude est normale. Au début, beaucoup de praticiens se demandent si leur cabinet va se remplir, à quel rythme, et par quels canaux les premières demandes vont arriver.
 
@@ -137,6 +137,8 @@ Si vous souhaitez créer un site sobre, professionnel et pensé pour votre visib
 À lire aussi :
 
 - [Ouvrir son cabinet de psychologue : s’installer en libéral sans se noyer](/blog/installer-liberal-psychologue-par-ou-commencer/)
+- [Visibilité d’un psychologue qui s’installe : site, Google et réseau](/blog/visibilite-installation-psychologue-liberal/)
+- [Premiers patients en libéral : cadre, RGPD et notes d’honoraires](/blog/cadre-premiers-patients-psychologue-liberal/)
 - [Psychologue : faut-il avoir un site internet en plus de Doctolib ?](/blog/site-internet-psychologue-doctolib/)
 - [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
 - [Site internet pour psychologue en 2026 : guide complet SEO et éthique](/blog/site-internet-psychologues/)

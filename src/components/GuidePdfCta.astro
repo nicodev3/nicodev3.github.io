@@ -1,0 +1,52 @@
+---
+interface Props {
+	class?: string;
+	compact?: boolean;
+}
+
+const { class: className, compact = false } = Astro.props;
+---
+
+<aside
+	class:list={[
+		'not-prose rounded-xl border border-border bg-surface p-5 shadow-sm sm:p-6',
+		className,
+	]}
+	aria-label="Version PDF du guide"
+>
+	<p class="type-eyebrow text-muted">Version PDF</p>
+	<h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
+		{compact ? 'Tu préfères annoter un PDF ?' : 'Tu veux la version PDF, adaptée à ton contexte ?'}
+	</h2>
+	<p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">
+		Tout le contenu du guide est déjà publié ici. Si tu veux une version PDF à annoter (check-list pièces, erreurs des 3
+		premiers mois, plan 30 jours), écris via
+		<a href="/contact/?sujet=guide-installation" class="font-semibold text-foreground underline-offset-2 hover:underline"
+			>la page contact</a
+		>
+		en commençant par <strong class="text-foreground">« Guide installation libéral psy »</strong> et en indiquant ton
+		contexte en 2 lignes. Je te réponds avec la version adaptée.
+	</p>
+	<div class="mt-5 flex flex-col gap-3 sm:flex-row">
+		<a
+			href="/contact/?sujet=guide-installation"
+			class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface"
+			data-lead-source="guide-installation-pdf"
+			data-umami-event="lead_click_contact_from_guide_installation_pdf"
+		>
+			Demander le PDF
+		</a>
+		{
+			!compact && (
+				<a
+					href="/diagnostic-gratuit/"
+					class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
+					data-lead-source="guide-installation-pdf-diagnostic"
+					data-umami-event="lead_click_diagnostic_from_guide_installation_pdf"
+				>
+					Diagnostic visibilité gratuit
+				</a>
+			)
+		}
+	</div>
+</aside>

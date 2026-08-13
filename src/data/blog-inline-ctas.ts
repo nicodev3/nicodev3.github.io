@@ -78,10 +78,38 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
     beforeHeading: 'Comment augmenter son revenu sans « sur-vendre » sa pratique',
     variant: 'site',
   },
-  'installer-liberal-psychologue-par-ou-commencer': {
-    beforeHeading: 'Accueillir les premiers patients : le cadre avant la technique',
-    variant: 'site',
-  },
+	'visibilite-installation-psychologue-liberal': {
+		beforeHeading: 'Une stratégie simple de visibilité',
+		variant: 'site',
+	},
+	'preparer-installation-psychologue-liberal': {
+		beforeHeading: 'Étudier ton marché local sans entrer dans une logique commerciale agressive',
+		variant: 'visibility',
+	},
+	'demarches-administratives-psychologue-liberal': {
+		beforeHeading: 'Les erreurs fréquentes à éviter',
+		variant: 'site',
+	},
+	'statut-juridique-psychologue-liberal': {
+		beforeHeading: 'Se faire accompagner quand le choix n’est pas évident',
+		variant: 'budget',
+	},
+	'fiscalite-tva-charges-psychologue-liberal': {
+		beforeHeading: 'Le seuil de viabilité : combien de séances faut-il vraiment ?',
+		variant: 'site',
+	},
+	'ouvrir-cabinet-psychologue-local': {
+		beforeHeading: 'Les consultations en ligne : une vraie modalité d’exercice, avec un cadre',
+		variant: 'independence',
+	},
+	'cadre-premiers-patients-psychologue-liberal': {
+		beforeHeading: 'Le RGPD au cabinet',
+		variant: 'site',
+	},
+	'installer-liberal-psychologue-par-ou-commencer': {
+		beforeHeading: 'Plan d’action sur 30 jours',
+		variant: 'site',
+	},
   'guide-complet-visibilite-en-ligne-psychologues': {
     beforeHeading: 'Par où commencer selon votre situation',
     variant: 'site',

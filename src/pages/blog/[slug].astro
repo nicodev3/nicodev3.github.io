@@ -10,8 +10,12 @@ import GuideVisibilityConversionCta from '../../components/GuideVisibilityConver
 import DiagnosticLeadCta from '../../components/DiagnosticLeadCta.astro';
 import BlogInlineCta from '../../components/BlogInlineCta.astro';
 import { BLOG_INLINE_CTAS } from '../../data/blog-inline-ctas';
+import InstallationChapterNav from '../../components/InstallationChapterNav.astro';
+import GuidePdfCta from '../../components/GuidePdfCta.astro';
 import {
+	GUIDE_INSTALLATION_CLUSTER_IDS,
 	GUIDE_VISIBILITE_CLUSTER_IDS,
+	isInstallationClusterArticle,
 	toTagHref,
 } from '../../utils/blog';
 import { getCanonicalUrl } from '../../utils/seo';
@@ -37,19 +41,25 @@ const clusterForPillar = GUIDE_VISIBILITE_CLUSTER_IDS.map((id) => allPosts.find(
 	(p): p is CollectionEntry<'blog'> => Boolean(p),
 );
 
+const clusterForInstallation = GUIDE_INSTALLATION_CLUSTER_IDS.map((id) =>
+	allPosts.find((p) => p.id === id),
+).filter((p): p is CollectionEntry<'blog'> => Boolean(p));
+
 const currentTags = entry.data.tags ?? [];
 const currentTagSet = new Set(currentTags);
 const relatedPosts = entry.data.guidePillarHub
 	? clusterForPillar
-	: allPosts
-			.filter((p) => p.id !== entry.id)
-			.sort((a, b) => {
-				const aScore = (a.data.tags ?? []).filter((tag) => currentTagSet.has(tag)).length;
-				const bScore = (b.data.tags ?? []).filter((tag) => currentTagSet.has(tag)).length;
-				if (bScore !== aScore) return bScore - aScore;
-				return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
-			})
-			.slice(0, 3);
+	: entry.data.installationGuideHub
+		? clusterForInstallation
+		: allPosts
+				.filter((p) => p.id !== entry.id)
+				.sort((a, b) => {
+					const aScore = (a.data.tags ?? []).filter((tag) => currentTagSet.has(tag)).length;
+					const bScore = (b.data.tags ?? []).filter((tag) => currentTagSet.has(tag)).length;
+					if (bScore !== aScore) return bScore - aScore;
+					return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+				})
+				.slice(0, 3);
 
 const showArticleToc = !entry.data.hideArticleToc;
 const tocItems = showArticleToc
@@ -125,7 +135,22 @@ const guideClusterItemListSchema =
 					url: new URL(`/blog/${post.id}/`, baseUrl).toString(),
 				})),
 			}
-		: null;
+		: entry.data.installationGuideHub && clusterForInstallation.length > 0
+			? {
+					'@context': 'https://schema.org',
+					'@type': 'ItemList',
+					name: 'Guide d’installation en libéral pour psychologues',
+					description:
+						'Chapitres détaillés : préparation du projet, démarches ARS/RPPS/INPI, statut, fiscalité, cabinet, visibilité et accueil des premiers patients.',
+					numberOfItems: clusterForInstallation.length,
+					itemListElement: clusterForInstallation.map((post, i) => ({
+						'@type': 'ListItem',
+						position: i + 1,
+						name: post.data.title,
+						url: new URL(`/blog/${post.id}/`, baseUrl).toString(),
+					})),
+				}
+			: null;
 
 const faqSchema =
 	entry.data.faq && entry.data.faq.length > 0
@@ -236,6 +261,25 @@ const faqSchema =
 					</a>
 				</div>
 			)}
+			{entry.data.installationGuideHub && (
+				<div class="mt-4 flex flex-col justify-center gap-3 sm:flex-row">
+					<a
+						href="/diagnostic-gratuit/"
+						class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
+						data-lead-source="guide-installation-hero"
+						data-umami-event="lead_click_diagnostic_from_guide_installation_hero"
+					>
+						Diagnostic visibilité gratuit
+					</a>
+					<a
+						href="/creation-site-internet-psychologue/"
+						class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface"
+						data-umami-event="lead_click_creation_from_guide_installation_hero"
+					>
+						Création de site psychologue
+					</a>
+				</div>
+			)}
 		</div>
 	</Hero>
 
@@ -268,6 +312,12 @@ const faqSchema =
 						beforeHeading={inlineCta.beforeHeading}
 						articleId={entry.id}
 					/>
+				)}
+				{isInstallationClusterArticle(entry.id) && !entry.data.installationGuideHub && (
+					<InstallationChapterNav currentArticleId={entry.id} />
+				)}
+				{isInstallationClusterArticle(entry.id) && (
+					<GuidePdfCta class="my-10" compact={!entry.data.installationGuideHub} />
 				)}
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="final" />}
 				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-final" class="my-10" />}
@@ -369,7 +419,11 @@ const faqSchema =
 		<section class="py-16 bg-white">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl font-semibold text-foreground mb-6">
-					{entry.data.guidePillarHub ? 'Guides détaillés du cluster' : 'À lire aussi'}
+					{entry.data.guidePillarHub
+						? 'Guides détaillés du cluster'
+						: entry.data.installationGuideHub
+							? 'Les chapitres du guide d’installation'
+							: 'À lire aussi'}
 				</h2>
 				<ul class="space-y-3">
 					{relatedPosts.map((post) => (

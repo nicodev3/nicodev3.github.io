@@ -126,6 +126,7 @@ Ces articles complètent le guide principal :
 
 - [Les promesses trop belles des offres « site psychologue »](/blog/site-internet-psychologue-promesses-trop-belles/) : critères pour repérer les discours marketing douteux.
 - [Ouvrir un cabinet de psychologue : guide d’installation 2026](/blog/installer-liberal-psychologue-par-ou-commencer/) : ordre des priorités à l’installation.
+- [Visibilité d’un psychologue qui s’installe](/blog/visibilite-installation-psychologue-liberal/) : site, fiche Google et réseau au moment de l’ouverture.
 - [Pourquoi des services web réservés aux psychologues ?](/blog/pourquoi-services-web-exclusifs-psychologues/) : intérêt d’une spécialisation métier côté web.
 
 ## Par où commencer selon votre situation

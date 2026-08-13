@@ -1,0 +1,71 @@
+---
+import {
+	GUIDE_INSTALLATION_CHAPTERS,
+	GUIDE_INSTALLATION_PILLAR_HREF,
+} from '../utils/blog';
+
+interface Props {
+	currentArticleId: string;
+}
+
+const { currentArticleId } = Astro.props;
+const index = GUIDE_INSTALLATION_CHAPTERS.findIndex((chapter) => chapter.id === currentArticleId);
+const prev = index > 0 ? GUIDE_INSTALLATION_CHAPTERS[index - 1] : null;
+const next =
+	index >= 0 && index < GUIDE_INSTALLATION_CHAPTERS.length - 1
+		? GUIDE_INSTALLATION_CHAPTERS[index + 1]
+		: null;
+---
+
+{
+	index >= 0 && (
+		<nav
+			class="not-prose my-10 rounded-xl border border-border bg-surface p-5 sm:p-6"
+			aria-label="Navigation dans le guide d’installation"
+		>
+			<p class="type-eyebrow text-muted">Guide d’installation en libéral</p>
+			<p class="mt-2 text-sm text-muted">
+				Chapitre {index + 1} sur {GUIDE_INSTALLATION_CHAPTERS.length} —{' '}
+				<a href={GUIDE_INSTALLATION_PILLAR_HREF} class="font-semibold text-foreground underline-offset-2 hover:underline">
+					retour au guide complet
+				</a>
+			</p>
+			<div class="mt-5 grid gap-3 sm:grid-cols-2">
+				{prev ? (
+					<a
+						href={`/blog/${prev.id}/`}
+						class="rounded-lg border border-border bg-white px-4 py-3 text-sm text-muted transition-colors hover:border-primary/40 hover:text-foreground"
+					>
+						<span class="block text-xs font-semibold uppercase tracking-wide text-muted">Chapitre précédent</span>
+						<span class="mt-1 block font-semibold text-foreground">{prev.title}</span>
+					</a>
+				) : (
+					<a
+						href={GUIDE_INSTALLATION_PILLAR_HREF}
+						class="rounded-lg border border-border bg-white px-4 py-3 text-sm text-muted transition-colors hover:border-primary/40 hover:text-foreground"
+					>
+						<span class="block text-xs font-semibold uppercase tracking-wide text-muted">Vue d’ensemble</span>
+						<span class="mt-1 block font-semibold text-foreground">Ouvrir un cabinet de psychologue</span>
+					</a>
+				)}
+				{next ? (
+					<a
+						href={`/blog/${next.id}/`}
+						class="rounded-lg border border-border bg-white px-4 py-3 text-sm text-muted transition-colors hover:border-primary/40 hover:text-foreground sm:text-right"
+					>
+						<span class="block text-xs font-semibold uppercase tracking-wide text-muted">Chapitre suivant</span>
+						<span class="mt-1 block font-semibold text-foreground">{next.title}</span>
+					</a>
+				) : (
+					<a
+						href="/creation-site-internet-psychologue/"
+						class="rounded-lg border border-primary/30 bg-primary-50 px-4 py-3 text-sm text-muted transition-colors hover:border-primary/50 hover:text-foreground sm:text-right"
+					>
+						<span class="block text-xs font-semibold uppercase tracking-wide text-primary-700">Ensuite</span>
+						<span class="mt-1 block font-semibold text-foreground">Création de site psychologue</span>
+					</a>
+				)}
+			</div>
+		</nav>
+	)
+}

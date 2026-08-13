@@ -1,5 +1,11 @@
 ---
-import { GUIDE_VISIBILITE_PILLAR_HREF, GUIDE_VISIBILITE_PILLAR_SLUG } from '../utils/blog';
+import {
+	GUIDE_INSTALLATION_PILLAR_HREF,
+	GUIDE_INSTALLATION_PILLAR_SLUG,
+	GUIDE_VISIBILITE_PILLAR_HREF,
+	GUIDE_VISIBILITE_PILLAR_SLUG,
+	isInstallationClusterArticle,
+} from '../utils/blog';
 
 interface Props {
 	/** Identifiant du billet courant (fichier sans `.md`). */
@@ -8,21 +14,62 @@ interface Props {
 
 const { currentArticleId } = Astro.props;
 
-const isPillarPage = currentArticleId === GUIDE_VISIBILITE_PILLAR_SLUG;
+const isVisibilityPillar = currentArticleId === GUIDE_VISIBILITE_PILLAR_SLUG;
+const isInstallationPillar = currentArticleId === GUIDE_INSTALLATION_PILLAR_SLUG;
+const showInstallationBanner =
+	isInstallationClusterArticle(currentArticleId) && !isInstallationPillar;
+const showVisibilityBanner =
+	!showInstallationBanner && !isVisibilityPillar && !isInstallationPillar;
 ---
 
 {
-	!isPillarPage && (
+	showInstallationBanner && (
+		<aside
+			class="not-prose mb-10 rounded-xl border border-primary/25 bg-primary/5 p-5"
+			aria-label="Guide lié — installation en libéral"
+		>
+			<p class="text-sm font-semibold text-foreground">Installation en libéral pour psychologues</p>
+			<p class="mt-2 text-muted leading-relaxed">
+				Cet article est un chapitre du guide d’installation. Pour la vue d’ensemble, le plan 30 jours et les liens vers
+				tous les chapitres, voir{' '}
+				<a href={GUIDE_INSTALLATION_PILLAR_HREF} class="font-semibold text-foreground underline-offset-2 hover:underline">
+					Ouvrir un cabinet de psychologue : guide d’installation 2026
+				</a>
+				.
+			</p>
+		</aside>
+	)
+}
+{
+	showVisibilityBanner && (
 		<aside
 			class="not-prose mb-10 rounded-xl border border-primary/25 bg-primary/5 p-5"
 			aria-label="Guide lié — visibilité en ligne"
 		>
 			<p class="text-sm font-semibold text-foreground">Visibilité en ligne pour psychologues</p>
 			<p class="mt-2 text-muted leading-relaxed">
-				Cet article fait partie d'une série de guides sur la visibilité web des cabinets de psychologues libéraux. Pour la vue d'ensemble, les
-				priorités et les liens vers tous les guides détaillés, voir le{' '}
+				Cet article fait partie d'une série de guides sur la visibilité web des cabinets de psychologues libéraux. Pour
+				la vue d'ensemble, les priorités et les liens vers tous les guides détaillés, voir le{' '}
 				<a href={GUIDE_VISIBILITE_PILLAR_HREF} class="font-semibold text-foreground underline-offset-2 hover:underline">
 					Guide complet de la visibilité en ligne pour psychologues
+				</a>
+				.
+			</p>
+		</aside>
+	)
+}
+{
+	isInstallationPillar && (
+		<aside
+			class="not-prose mb-10 rounded-xl border border-primary/25 bg-primary/5 p-5"
+			aria-label="Guide lié — visibilité en ligne"
+		>
+			<p class="text-sm font-semibold text-foreground">Ensuite : la visibilité du cabinet</p>
+			<p class="mt-2 text-muted leading-relaxed">
+				Quand le cadre administratif est posé, le levier qui change souvent le remplissage de l’agenda est la présence
+				en ligne. Voir le{' '}
+				<a href={GUIDE_VISIBILITE_PILLAR_HREF} class="font-semibold text-foreground underline-offset-2 hover:underline">
+					guide complet de la visibilité en ligne pour psychologues
 				</a>
 				.
 			</p>

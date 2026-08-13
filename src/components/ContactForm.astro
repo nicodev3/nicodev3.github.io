@@ -154,6 +154,21 @@ const reassuranceText = isDevisMode
 
 		form.addEventListener('focusin', trackStart, { once: true });
 		form.addEventListener('change', trackStart, { once: true });
+
+		const messageField = form.querySelector('#contact-message');
+		const params = new URLSearchParams(window.location.search);
+		if (
+			params.get('sujet') === 'guide-installation' &&
+			messageField instanceof HTMLTextAreaElement &&
+			!messageField.value.trim()
+		) {
+			messageField.value =
+				'Guide installation libéral psy\n\nContexte (2 lignes) : ';
+			messageField.focus();
+			const cursor = messageField.value.length;
+			messageField.setSelectionRange(cursor, cursor);
+		}
+
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
 			let redirecting = false;
