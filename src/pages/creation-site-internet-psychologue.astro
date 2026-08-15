@@ -26,7 +26,7 @@ const faqSchema = {
 			name: "Combien coûte la création d'un site internet pour psychologue ?",
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute fiche Google, contenus réguliers et suivi SEO local.",
+				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, CMS, bases SEO, fiche Google, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute une veille SEO d'expert : suivi, relecture et optimisation des contenus.",
 			},
 		},
 		{
@@ -34,7 +34,7 @@ const faqSchema = {
 			name: 'Création site internet psychologue : que comprend la prestation ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "Structure de pages adaptée au cabinet, rédaction guidée à partir de vos réponses, design sobre, intégration Doctolib ou équivalent, bases SEO, hébergement, nom de domaine et mises à jour inclus dans l'abonnement.",
+				text: "Structure de pages adaptée au cabinet, rédaction guidée à partir de vos réponses, design sobre, CMS, intégration Doctolib ou équivalent, bases SEO, fiche Google, hébergement, nom de domaine et mises à jour inclus dans l'abonnement.",
 			},
 		},
 		{
@@ -42,7 +42,7 @@ const faqSchema = {
 			name: 'Création site psychologue : combien ça coûte ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute fiche Google, contenus réguliers et suivi SEO local.",
+				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, CMS, bases SEO, fiche Google, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute une veille SEO d'expert : suivi, relecture et optimisation des contenus.",
 			},
 		},
 		{
@@ -248,8 +248,8 @@ const breadcrumbSchema = {
 				<blockquote>
 					<p><strong>En bref</strong></p>
 					<ul>
-						<li><strong>Offre Sérénité</strong>&nbsp;: 29&nbsp;EUR/mois — site vitrine, hébergement, domaine, maintenance</li>
-						<li><strong>Offre Visibilité &amp; Confiance</strong>&nbsp;: 49&nbsp;EUR/mois — + fiche Google, contenus, suivi SEO</li>
+						<li><strong>Offre Sérénité</strong>&nbsp;: 29&nbsp;EUR/mois — site vitrine, CMS, bases SEO, fiche Google, hébergement</li>
+						<li><strong>Offre Visibilité &amp; Confiance</strong>&nbsp;: 49&nbsp;EUR/mois — + veille SEO d’expert, entretien</li>
 						<li><strong>Délai</strong>&nbsp;: 2 à 3 semaines en moyenne</li>
 						<li><strong>Contenu</strong>&nbsp;: formulaire guidé, pas de rédaction seul·e obligatoire</li>
 						<li><strong>Spécialisation</strong>&nbsp;: confrère du métier (psychologue, psychomotricien, psychothérapeute) et développeur web — cadre déontologique intégré</li>
@@ -433,10 +433,10 @@ const breadcrumbSchema = {
 							<p class="text-sm font-semibold uppercase tracking-wide text-muted">Sérénité</p>
 							<p class="mt-2 text-3xl font-semibold text-foreground">29&nbsp;EUR/mois</p>
 							<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
-								<li>Création du site vitrine</li>
+								<li>Création du site vitrine et CMS</li>
 								<li>Hébergement, nom de domaine et maintenance</li>
-								<li>Intégration de votre outil de rendez-vous</li>
-								<li>Bases SEO, performance mobile et support</li>
+								<li>Bases SEO, fiche Google et bouton de RDV (Doctolib, Perfactive ou autre)</li>
+								<li>1 modification simple par mois</li>
 							</ul>
 						</div>
 						<div class="rounded-lg border border-primary/30 bg-white p-5">
@@ -444,9 +444,8 @@ const breadcrumbSchema = {
 							<p class="mt-2 text-3xl font-semibold text-foreground">49&nbsp;EUR/mois</p>
 							<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
 								<li>Tout ce qui est inclus dans Sérénité</li>
-								<li>Fiche Google Business Profile</li>
-								<li>Contenus réguliers et suivi SEO local</li>
-								<li>Modernisation annuelle et ajustements de visibilité</li>
+								<li>Veille SEO d’expert : suivi, relecture et optimisation des contenus</li>
+								<li>3 modifications simples par mois et modernisation annuelle</li>
 							</ul>
 						</div>
 					</div>
@@ -482,13 +481,13 @@ const breadcrumbSchema = {
 
 				<h2>Référencement et visibilité locale</h2>
 				<p>
-					Chaque site est livré avec les bases SEO&nbsp;: titres, descriptions, performances mobiles, données structurées et plan de site. Pour aller plus loin sur la <strong>visibilité Google</strong> (fiche Google Business Profile, cohérence NAP, attentes réalistes sur «&nbsp;psychologue + ville&nbsp;»), la page{' '}
-					<a href="/referencement-site-psychologue/">référencement site psychologue</a> complète cette offre. Les articles <a href="/blog/google-business-profile-psychologue/">fiche Google Business Profile</a> et <a href="/blog/psychologue-premier-google-ville/">visibilité locale sur Google</a> restent les lectures les plus détaillées côté blog.
+					Chaque site est livré avec les bases SEO et une fiche Google&nbsp;: titres, descriptions, performances mobiles, données structurées et plan de site. L’offre Visibilité &amp; Confiance ajoute une <strong>veille SEO d’expert</strong> (suivi, relecture et optimisation des contenus), sans garantir une place dans Google. La page{' '}
+					<a href="/referencement-site-psychologue/">référencement site psychologue</a> précise le cadre. Les articles <a href="/blog/google-business-profile-psychologue/">fiche Google Business Profile</a> et <a href="/blog/psychologue-premier-google-ville/">visibilité locale sur Google</a> restent les lectures les plus détaillées côté blog.
 				</p>
 
 				<h2>Questions fréquentes</h2>
-				<p><strong>Combien coûte la création d’un site internet pour psychologue&nbsp;?</strong> Abonnement tout inclus dès 29&nbsp;EUR/mois (Sérénité) ou 49&nbsp;EUR/mois (Visibilité &amp; Confiance avec fiche Google et SEO). Détail sur <a href="/tarifs/">Tarifs</a>.</p>
-				<p><strong>Que comprend la prestation&nbsp;?</strong> Arborescence adaptée, contenu guidé, design sobre, intégration RDV, hébergement, domaine, bases SEO et maintenance — le tout dans l’abonnement.</p>
+				<p><strong>Combien coûte la création d’un site internet pour psychologue&nbsp;?</strong> Abonnement tout inclus dès 29&nbsp;EUR/mois (Sérénité&nbsp;: CMS, bases SEO, fiche Google) ou 49&nbsp;EUR/mois (Visibilité &amp; Confiance&nbsp;: veille SEO d’expert). Détail sur <a href="/tarifs/">Tarifs</a>.</p>
+				<p><strong>Que comprend la prestation&nbsp;?</strong> Arborescence adaptée, contenu guidé, design sobre, CMS, intégration RDV, bases SEO, fiche Google, hébergement, domaine et maintenance — le tout dans l’abonnement.</p>
 				<p><strong>Le site convient-il aussi aux psychothérapeutes et aux psychomotriciens&nbsp;?</strong> Oui&nbsp;: psychologues, psychothérapeutes (titre + RPPS) et psychomotriciens. Les psychopraticiens et praticiens sans titre de psychothérapeute ne font pas partie de l’offre. Page dédiée&nbsp;: <a href="/site-internet-psychomotricien/">psychomotriciens</a>.</p>
 				<p><strong>Combien de temps pour créer un site de psychologue&nbsp;?</strong> En général 2 à 3 semaines entre le premier échange et la mise en ligne, selon vos disponibilités pour compléter le formulaire.</p>
 				<p><strong>Pourquoi créer un site internet quand on est psychologue&nbsp;?</strong> Pour disposer d’un espace que vous contrôlez&nbsp;: votre approche, vos publics, vos honoraires, vos modalités. Les annuaires imposent leur format&nbsp;; un site professionnel de psychologue rassure les patients avant le premier contact et soutient votre visibilité locale.</p>

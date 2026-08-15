@@ -19,7 +19,7 @@ Pour un psychologue, c'est particulièrement important : la pratique n'est pas i
 
 Et surtout : un site n'a pas besoin de remplacer votre outil de rendez-vous. Il peut simplement y être relié. Doctolib, Maiia, Resalib, Calendly, Perfactive, SimplyBook, un agenda métier plus discret, un formulaire de contact ou même un simple bouton d'appel : le site reste votre point d'entrée, l'outil de rendez-vous reste votre outil logistique.
 
-Cette nuance change beaucoup de choses, notamment sur le budget. La page tarifs Doctolib pour les psychologues indique une offre agenda à **149 € TTC / mois / praticien**. À titre de comparaison, mes offres de site démarrent avec [l'offre Sérénité à 29 € / mois](/tarifs/#tarifs-offres), et [l'offre Visibilité & Confiance à 49 € / mois](/tarifs/#tarifs-offres) peut inclure un lien ou un widget de prise de rendez-vous. Le site couvre alors l'essentiel de votre présence en ligne, tout en vous laissant libre du système de réservation utilisé.
+Cette nuance change beaucoup de choses, notamment sur le budget. La page tarifs Doctolib pour les psychologues indique une offre agenda à **149 € TTC / mois / praticien**. À titre de comparaison, mes offres de site démarrent avec [l'offre Sérénité à 29 € / mois](/tarifs/#tarifs-offres), qui inclut déjà un lien ou un widget de prise de rendez-vous. [L'offre Visibilité & Confiance à 49 € / mois](/tarifs/#tarifs-offres) ajoute un entretien plus large et une surveillance de visibilité. Le site couvre alors l'essentiel de votre présence en ligne, tout en vous laissant libre du système de réservation utilisé.
 
 ## Doctolib est utile, mais ce n'est pas un site
 
@@ -71,7 +71,7 @@ Un site professionnel avec une page claire, une présentation soignée, des info
 - orienter vers l'outil de réservation de votre choix ;
 - vous rendre moins dépendant d'une seule plateforme.
 
-Autrement dit, [29 € / mois pour un site vitrine sobre](/tarifs/#tarifs-offres), ou **49 € / mois pour un site avec widget ou lien de prise de rendez-vous**, c'est nettement moins que 149 € / mois pour un annuaire-agenda, et encore moins que 228 € / mois si la téléconsultation Doctolib est ajoutée. Ce n'est pas le même produit, mais pour beaucoup de cabinets, c'est un meilleur premier investissement. La page [création de site internet pour psychologue](/creation-site-internet-psychologue/) précise ce que ce site inclut concrètement.
+Autrement dit, [29 € / mois pour un site vitrine sobre, déjà relié à votre outil de rendez-vous](/tarifs/#tarifs-offres), ou **49 € / mois avec entretien et surveillance**, c'est nettement moins que 149 € / mois pour un annuaire-agenda, et encore moins que 228 € / mois si la téléconsultation Doctolib est ajoutée. Ce n'est pas le même produit, mais pour beaucoup de cabinets, c'est un meilleur premier investissement. La page [création de site internet pour psychologue](/creation-site-internet-psychologue/) précise ce que ce site inclut concrètement.
 
 Vous pouvez comparer le détail directement sur la page [Tarifs : offres Sérénité et Visibilité & Confiance](/tarifs/#tarifs-offres).
 
@@ -260,7 +260,7 @@ Le choix le plus solide n'est donc pas forcément "Doctolib ou site internet". C
 
 > **un site qui vous appartient, relié à l'outil de rendez-vous qui vous convient vraiment.**
 
-Pour beaucoup de psychologues, c'est une solution plus économique, plus souple et plus durable. Et si votre budget est limité au démarrage, un site professionnel à [29 € / mois ou 49 € / mois](/tarifs/#tarifs-offres), avec prise de rendez-vous intégrée ou connectée selon la formule, peut être un meilleur premier pas qu'une plateforme à 149 € / mois, ou qu'un ensemble agenda + téléconsultation à plus de 200 € / mois.
+Pour beaucoup de psychologues, c'est une solution plus économique, plus souple et plus durable. Et si votre budget est limité au démarrage, un site professionnel à [29 € / mois ou 49 € / mois](/tarifs/#tarifs-offres), avec prise de rendez-vous intégrée dès Sérénité, peut être un meilleur premier pas qu'une plateforme à 149 € / mois, ou qu'un ensemble agenda + téléconsultation à plus de 200 € / mois.
 
 Pour approfondir le budget, vous pouvez lire le guide [combien coûte vraiment un site internet pour psychologue ?](/blog/combien-coute-site-internet-2026/) ou consulter directement les [offres à 29 € et 49 € / mois](/tarifs/#tarifs-offres). Et pour voir concrètement ce que comprend un [site vitrine pour psychologue](/creation-site-internet-psychologue/) — structure, contenu, bases SEO, intégration d'un outil de rendez-vous —, la page dédiée détaille l'ensemble.
 

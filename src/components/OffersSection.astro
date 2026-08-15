@@ -16,18 +16,17 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 const serenityFeatures = [
 	'Création ou refonte du site et accompagnement pour clarifier les textes',
 	'Hébergement, nom de domaine et sauvegardes inclus*',
-	'Intégration de votre widget ou lien de prise de RDV (Doctolib, Qare, Maiia, Calendly...)',
-	'Mentions légales, informations obligatoires et base RGPD',
-	'1 modification simple par mois (texte, photo, tarif, horaires ou lien RDV)',
+	'Interface d’administration pour modifier le site et publier des articles',
+	'Bases de référencement (SEO), fiche Google et bouton de rendez-vous (Doctolib, Perfactive ou autre)',
+	'Mentions légales, base RGPD (protection des données), 1 modification simple par mois',
 ];
 
 const visibilityFeatures = [
 	"Tout le contenu de l'offre Sérénité",
-	'Rédaction régulière de contenus pour soutenir votre visibilité locale',
-	'Fiche Google Business Profile mise en place ou optimisée',
-	'Optimisation SEO locale et suivi mensuel des performances*',
-	'Mises à jour de vos contenus courants : tarifs, horaires, spécialités, photos et pages déjà présentes',
-	'Modernisation annuelle du site pour garder une présence claire et rassurante',
+	'Veille référencement (SEO) d’expert : je surveille votre visibilité, je détecte les problèmes et je corrige**',
+	'Relecture et optimisation de vos contenus pour le référencement (SEO)',
+	'3 modifications simples par mois, traitées en priorité',
+	'Modernisation annuelle du site',
 ];
 ---
 
@@ -43,8 +42,9 @@ const visibilityFeatures = [
 				Créer votre site, puis le faire vivre selon vos besoins
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				Les deux formules comprennent la création du site, l’hébergement et la maintenance. La seconde ajoute
-				un travail régulier sur votre présence dans les recherches locales.
+				Les deux formules comprennent la création, l’hébergement, un CMS (interface d’administration), les bases
+				de référencement (SEO) et la fiche Google. La seconde ajoute une veille SEO d’expert — c’est ce qui fait
+				vraiment la différence dans la durée.
 			</p>
 		</header>
 
@@ -52,8 +52,8 @@ const visibilityFeatures = [
 			<OfferCard
 				name="Sérénité"
 				price="29€"
-				description="Pour créer ou refaire le site de votre cabinet, le relier à votre prise de rendez-vous et déléguer la partie technique."
-				summary="Site + maintenance essentielle"
+				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique — avec un espace pour modifier vos textes et publier des articles."
+				summary="Site + interface d’administration (CMS) + référencement (SEO) + fiche Google"
 				features={serenityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
 				buttonHref="/devis/"
@@ -64,8 +64,8 @@ const visibilityFeatures = [
 			<OfferCard
 				name="Visibilité & Confiance"
 				price="49€"
-				description="Pour travailler aussi la visibilité locale du cabinet, la fiche Google et les contenus du site dans la durée."
-				summary="Site + SEO local + contenus + suivi"
+				description="Pour confier la veille référencement (SEO) à un expert : suivi de visibilité, relecture et optimisation des contenus, sans que vous ayez à suivre Google."
+				summary="Veille référencement (SEO) d’expert + entretien"
 				features={visibilityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
 				buttonHref="/devis/"
@@ -82,15 +82,15 @@ const visibilityFeatures = [
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						Pour disposer d’un site professionnel que vous n’avez pas à construire, héberger ni maintenir
-						vous-même.
+						Un site professionnel, un CMS (interface d’administration) et une fiche Google. Les bases sont
+						posées ; vous publiez si vous le souhaitez.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						Pour ajouter un travail suivi sur votre visibilité locale, votre fiche Google et vos contenus.
-						Voir la page{' '}
+						Un expert en référencement (SEO) surveille votre visibilité, relit et optimise vos contenus.
+						C’est le travail continu qui fait la différence, pas seulement un site bien livré. Voir la page{' '}
 						<a
 							href="/referencement-site-psychologue/"
 							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
@@ -122,8 +122,13 @@ const visibilityFeatures = [
 
 		<p class="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
 			* Un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable autour de 8 à 40 € par
-			mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement. La visibilité Google dépend
-			ensuite de votre ville, de la concurrence locale et de la qualité des contenus.
+			mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement.
+		</p>
+		<p class="mx-auto mt-2 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
+			** La veille référencement (SEO) s’appuie sur des outils professionnels, notamment Ahrefs : suivi de
+			visibilité, détection des problèmes, relecture et optimisation des contenus. C’est le travail d’un expert
+			dans la durée — pas une place garantie dans Google. Le résultat dépend aussi de votre ville, de la
+			concurrence locale et de la régularité des contenus.
 		</p>
 	</div>
 </section>

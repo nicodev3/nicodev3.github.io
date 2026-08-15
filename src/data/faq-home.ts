@@ -18,7 +18,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 		id: 'faq-modifications',
 		question: 'Que couvrent les modifications incluses dans les offres ?',
 		answer:
-			"L'offre Sérénité inclut 1 modification simple par mois (texte ou photo). L'offre Visibilité & Confiance inclut les modifications de contenu ainsi qu'une modernisation du site tous les ans. Les changements de structure (refonte complète du design) restent hors périmètre.",
+			"L'offre Sérénité inclut 1 modification simple par mois (texte ou photo). L'offre Visibilité & Confiance inclut 3 modifications simples par mois, traitées en priorité, ainsi qu'une modernisation du site tous les ans. Les changements de structure (refonte complète du design) restent hors périmètre.",
 	},
 	{
 		question:
