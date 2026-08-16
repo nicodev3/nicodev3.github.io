@@ -5,12 +5,40 @@ const contributionRates = {
   socialPlusCfp: 0.234,
   socialCfpAndLiberatoryTax: 0.256,
 };
+
+const toolUrl = "https://nicodev.fr/outils/seuil-viabilite-seances/";
+const webApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Calculateur du seuil de viabilité d'un cabinet de psychologue",
+  description:
+    "Calculateur gratuit du chiffre d'affaires et du nombre de séances nécessaires pour couvrir les charges d'un cabinet et atteindre un revenu cible.",
+  url: toolUrl,
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Calculateur financier",
+  operatingSystem: "Tous",
+  browserRequirements: "JavaScript activé",
+  isAccessibleForFree: true,
+  inLanguage: "fr-FR",
+  dateModified: "2026-08-16",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "EUR",
+  },
+  provider: {
+    "@type": "Person",
+    name: "Nicolas Devaux",
+    url: "https://nicodev.fr/about/",
+  },
+};
 ---
 
 <Layout
   title="Seuil viabilité cabinet psychologue | Outils Nicodev"
   description="Estimez le nombre de séances mensuelles nécessaires pour couvrir vos charges fixes et atteindre un revenu net cible."
 >
+  <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(webApplicationSchema)} />
   <section class="section-y bg-slate-50">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <nav class="text-sm text-slate-600" aria-label="Fil d'Ariane">
@@ -176,6 +204,22 @@ const contributionRates = {
         Estimation indicative : le calcul ne remplace pas une simulation comptable, fiscale ou une analyse de
         trésorerie (délais d&apos;encaissement, vacances, annulations).
       </div>
+
+      <aside class="mt-6 rounded-xl border border-teal-200 bg-teal-50 px-5 py-5 text-sm leading-relaxed text-teal-950">
+        <h2 class="text-lg font-bold">Transformer ce seuil en plan d’installation</h2>
+        <p class="mt-2">
+          Comparez votre objectif aux fourchettes de{' '}
+          <a href="/blog/salaire-psychologue-liberal/" class="font-semibold underline underline-offset-2"
+            >revenu d’un psychologue libéral</a
+          >, puis estimez le coût du{' '}
+          <a href="/blog/ouvrir-cabinet-psychologue-local/" class="font-semibold underline underline-offset-2"
+            >local, de la sous-location ou du travail à domicile</a
+          >. Le{' '}
+          <a href="/blog/installer-liberal-psychologue-par-ou-commencer/" class="font-semibold underline underline-offset-2"
+            >guide d’ouverture du cabinet</a
+          > rassemble les démarches, le statut, le budget et la visibilité.
+        </p>
+      </aside>
     </div>
   </section>
 </Layout>

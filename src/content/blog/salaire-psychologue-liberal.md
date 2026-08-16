@@ -3,7 +3,7 @@ title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
 seoTitle: "Salaire psychologue libéral 2026 : revenus nets et fourchettes"
 description: "Salaire d'un psychologue libéral en 2026 : souvent 800–1 700 € nets en début d'activité et 1 800–3 200 € une fois le cabinet établi (après charges et CIPAV)."
 pubDate: "2026-06-02"
-updatedDate: "2026-07-29"
+updatedDate: "2026-08-16"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
 tags: ["psychologue", "installation en libéral"]
@@ -11,26 +11,10 @@ salaryGuideHub: true
 faq:
   - question: "Quel est le salaire d'un psychologue libéral ?"
     answer: "Il n'existe pas de salaire fixe officiel. En 2026, le revenu net mensuel se situe souvent entre 800 et 1 700 € en début d'activité, et entre 1 800 et 3 200 € pour un cabinet établi, après cotisations CIPAV, charges et impôts."
-  - question: "Quel est le salaire d'un psychologue à son compte ?"
-    answer: "À son compte, un psychologue facture des honoraires. Après cotisations (environ 23 % du CA en micro-BNC), loyer et impôts, le revenu disponible correspond en pratique aux mêmes fourchettes : environ 800 à 3 200 € nets selon la phase du cabinet."
-  - question: "Est-ce qu'un psy gagne bien sa vie ?"
-    answer: "Oui une fois le cabinet stabilisé, mais ce n'est pas automatique. Un agenda rempli en province peut viser 1 800 à 3 200 € nets ; les premières années restent souvent plus modestes, surtout avec un loyer élevé."
-  - question: "Quel type de psychologue est le mieux payé ?"
-    answer: "Ce n'est pas le titre (clinicien, etc.) qui fixe le revenu, mais le tarif, le volume de séances et les charges. Les activités annexes (bilans, supervision, formation) peuvent relever le revenu horaire si elles correspondent à votre compétence."
-  - question: "Quel est le salaire d'un psychologue libéral en 2026 ?"
-    answer: "En 2026, une activité récente peut rester sous 1 700 € nets mensuels ; un cabinet installé vise plus souvent 1 800 à 3 200 € nets. Le montant dépend du tarif, du nombre de séances, du loyer et du régime fiscal."
-  - question: "Quel est le salaire moyen d'un psychologue libéral ?"
-    answer: "Il n'existe pas de salaire moyen officiel unique. Le revenu net dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l'ancienneté du cabinet. Une activité récente peut rester sous 1 700 € nets mensuels ; un cabinet installé vise plus souvent 1 800 à 3 200 € nets."
-  - question: "Combien gagne un psychologue libéral ?"
-    answer: "Un psychologue libéral encaisse des honoraires, pas un salaire fixe. Selon le tarif et le volume de séances, le revenu net mensuel peut aller d'environ 800 € en début d'activité à plus de 3 500 € pour un agenda très rempli, après cotisations, charges et impôts."
   - question: "Quel est le salaire net d'un psychologue libéral ?"
     answer: "Le salaire net correspond au revenu après cotisations CIPAV (environ 23 % du CA en micro-BNC) et impôt sur le revenu. À 2 700 € de CA mensuel en micro-BNC, comptez souvent environ 1 700 à 1 850 € nets — avant loyer de cabinet, que tout le monde ne paie pas. En cabinet établi, la fourchette courante se situe souvent entre 1 800 et 3 200 € nets par mois."
-  - question: "Quel est le salaire d'un psychologue clinicien libéral ?"
-    answer: "Le psychologue clinicien libéral suit la même logique de revenus que tout libéral : honoraires moins charges et cotisations. Les fourchettes sont comparables, avec des variations selon la spécialité, la demande locale et le tarif pratiqué."
   - question: "Combien gagne un psychologue libéral débutant ?"
     answer: "Les débuts sont souvent irréguliers. Les premiers mois, le revenu peut rester faible, surtout si le cabinet coûte cher et que l'agenda n'est pas encore rempli. Beaucoup sécurisent cette phase par une sous-location progressive, un cumul salarié-libéral ou des charges fixes limitées."
-  - question: "Le salaire d'un psychologue libéral est-il plus élevé qu'en salariat ?"
-    answer: "Il peut l'être, mais ce n'est pas automatique. Le libéral offre un plafond potentiel plus haut, mais il faut retirer les charges, cotisations, impôts, congés non payés, absences, outils et temps administratif. La comparaison doit porter sur le revenu net disponible."
   - question: "Micro-BNC ou réel : quel régime laisse le plus de revenu ?"
     answer: "Le micro-BNC est souvent simple au démarrage, surtout avec peu de charges. Le réel devient intéressant quand les frais professionnels dépassent environ l'abattement forfaitaire de 34 % du chiffre d'affaires. Le bon choix dépend du coût réel du cabinet."
   - question: "Quel est le salaire d'un psychologue salarié en France ?"
@@ -41,7 +25,8 @@ faq:
 
 **Réponse courte :** le **salaire d’un psychologue libéral** n’est pas un salaire fixe. En 2026, le revenu net mensuel se situe souvent entre **800 et 1 700 €** en début d’activité, et entre **1 800 et 3 200 €** une fois le cabinet établi — après cotisations CIPAV et impôts. Un agenda très rempli ou une activité mixte peut dépasser **3 500 €**, sans que ce soit la norme. Le loyer de cabinet, quand il existe, vient en plus et réduit d’autant le revenu disponible.
 
-> **En bref — salaire d’un psychologue libéral (fourchettes 2026)**  
+> **En bref — salaire d’un psychologue libéral (fourchettes 2026)**
+>
 > | Situation | Revenu net mensuel estimé |
 > | --- | --- |
 > | Début d’activité (0–18 mois) | 800 à 1 700 € |
@@ -164,14 +149,14 @@ Pour le détail administratif et fiscal (TVA sur les soins, mentions de facture)
 
 Reprenons un exemple simple, **avant** charges et impôts.
 
-| Hypothèse | Calcul mensuel (CA) |
-| --- | --- |
-| 20 séances / mois à 50 € | 1 000 € |
-| 30 séances / mois à 55 € | 1 650 € |
-| 40 séances / mois à 60 € | 2 400 € |
-| 50 séances / mois à 60 € | 3 000 € |
-| 60 séances / mois à 65 € | 3 900 € |
-| 80 séances / mois à 60 € | 4 800 € |
+| Hypothèse                | Calcul mensuel (CA) |
+| ------------------------ | ------------------- |
+| 20 séances / mois à 50 € | 1 000 €             |
+| 30 séances / mois à 55 € | 1 650 €             |
+| 40 séances / mois à 60 € | 2 400 €             |
+| 50 séances / mois à 60 € | 3 000 €             |
+| 60 séances / mois à 65 € | 3 900 €             |
+| 80 séances / mois à 60 € | 4 800 €             |
 
 En réalité, toutes les plages ouvertes ne sont pas facturées : absences, annulations, créneaux de supervision, démarches admin, vacances. Beaucoup de praticiens retiennent un **taux de remplissage** réaliste (par exemple 70 à 85 % des créneaux « vendables ») plutôt que le maximum théorique.
 
@@ -289,7 +274,7 @@ On peut être en entreprise individuelle **et** en micro-BNC : c'est le cas le p
 
 **Règle pratique** : si vos charges réelles dépassent environ **34 %** du CA (l'abattement micro), une simulation au réel est pertinente. Si vous sous-louez peu cher ou exercez à domicile avec peu de frais, le micro reste souvent avantageux les premières années.
 
-## Trois scénarios chiffrés : micro-BNC vs réel *(avec charges de cabinet)*
+## Trois scénarios chiffrés : micro-BNC vs réel _(avec charges de cabinet)_
 
 Les tableaux ci-dessous illustrent l’effet du **loyer** (ou équivalent) sur le **revenu disponible**, une fois le salaire net calculé. Ils servent surtout à comparer micro et réel **quand vous avez des frais de local** — ce qui n’est pas le cas de tous les libéraux.
 
@@ -307,7 +292,7 @@ Hypothèses de charges de cabinet : **250 € / mois** (scénario A), **450 € 
 | Charges déductibles | — (payées quand même) | − 250 € |
 | Assiette cotisations | 1 250 € | **1 000 €** (bénéfice) |
 | Cotisations sociales (~23,4 % CA / ~33 % bénéfice) | **− 293 €** | **− 330 €** |
-| Charges cabinet (loyer, etc.) | **− 250 €** | *(déjà déduites)* |
+| Charges cabinet (loyer, etc.) | **− 250 €** | _(déjà déduites)_ |
 | Impôt sur le revenu (ordre de grandeur) | **− 50 à 120 €** | **− 40 à 100 €** |
 | **Revenu disponible estimé** | **~ 580 à 660 €** | **~ 620 à 700 €** |
 
@@ -323,7 +308,7 @@ Difficile à vivre seul·e ; beaucoup cumulent, réduisent le loyer ou restent e
 | Charges déductibles | — | − 450 € |
 | Assiette cotisations | 2 700 € | **2 250 €** |
 | Cotisations sociales | **− 632 €** (23,4 % du CA) | **− 700 à 765 €** (~31–34 % du bénéfice) |
-| Charges cabinet | **− 450 €** | *(déjà déduites)* |
+| Charges cabinet | **− 450 €** | _(déjà déduites)_ |
 | Impôt sur le revenu (ordre de grandeur) | **− 210 à 370 €** | **− 160 à 300 €** |
 | **Revenu disponible estimé** | **~ 1 250 à 1 400 €** | **~ 1 300 à 1 480 €** |
 
@@ -333,15 +318,15 @@ Ici, le **23 % du CA** en micro représente **632 €**, pas les **1 080 €** q
 
 **CA : 70 séances / mois × 65 € = 4 550 € / mois**
 
-| Poste | Micro-BNC | Régime réel |
-| --- | --- | --- |
-| CA | 4 550 € | 4 550 € |
-| Charges déductibles | — | − 700 € |
-| Assiette cotisations | 4 550 € | **3 850 €** |
-| Cotisations sociales | **− 1 065 €** | **− 1 150 à 1 270 €** |
-| Charges cabinet | **− 700 €** | *(déjà déduites)* |
-| Impôt sur le revenu (ordre de grandeur) | **− 550 à 900 €** | **− 450 à 750 €** |
-| **Revenu disponible estimé** | **~ 1 900 à 2 240 €** | **~ 2 030 à 2 400 €** |
+| Poste                                   | Micro-BNC             | Régime réel           |
+| --------------------------------------- | --------------------- | --------------------- |
+| CA                                      | 4 550 €               | 4 550 €               |
+| Charges déductibles                     | —                     | − 700 €               |
+| Assiette cotisations                    | 4 550 €               | **3 850 €**           |
+| Cotisations sociales                    | **− 1 065 €**         | **− 1 150 à 1 270 €** |
+| Charges cabinet                         | **− 700 €**           | _(déjà déduites)_     |
+| Impôt sur le revenu (ordre de grandeur) | **− 550 à 900 €**     | **− 450 à 750 €**     |
+| **Revenu disponible estimé**            | **~ 1 900 à 2 240 €** | **~ 2 030 à 2 400 €** |
 
 Avec un loyer parisien plus élevé (900 € et plus), le **réel** devient souvent plus intéressant ; en micro, les charges non déductibles pèsent lourdement même si le taux URSSAF reste à **23 %**.
 
@@ -380,11 +365,11 @@ Le Code de déontologie des psychologues encadre la communication : l'objectif n
 
 ## Salaire d’un psychologue libéral : quelle fourchette viser ?
 
-| Phase | Ordre de grandeur de revenu net mensuel (après charges) |
-| --- | --- |
-| **0 à 18 mois** | Souvent **800 à 1 700 €** (très variable) |
-| **Cabinet établi** | Souvent **1 800 à 3 200 €** |
-| **Activité dense ou mixte** | **3 500 € et plus** possible, pas la norme au départ |
+| Phase                       | Ordre de grandeur de revenu net mensuel (après charges) |
+| --------------------------- | ------------------------------------------------------- |
+| **0 à 18 mois**             | Souvent **800 à 1 700 €** (très variable)               |
+| **Cabinet établi**          | Souvent **1 800 à 3 200 €**                             |
+| **Activité dense ou mixte** | **3 500 € et plus** possible, pas la norme au départ    |
 
 Le **salaire d’un psychologue libéral** le plus honnête à retenir est donc une **fourchette** liée à votre tarif, votre volume, vos charges et votre régime — pas un chiffre unique affiché sur un forum.
 
@@ -396,45 +381,13 @@ Si vous préparez votre installation, avancez en parallèle sur trois plans : **
 
 Il n’existe pas de salaire fixe officiel. En 2026, le revenu net mensuel se situe souvent entre **800 et 1 700 €** en début d’activité, et entre **1 800 et 3 200 €** pour un cabinet établi, après cotisations CIPAV, charges et impôts.
 
-### Quel est le salaire d'un psychologue à son compte ?
-
-À son compte, un psychologue facture des honoraires. Après cotisations (environ **23 % du CA** en micro-BNC), loyer et impôts, le revenu disponible suit les mêmes fourchettes : environ **800 à 3 200 € nets** selon la phase du cabinet.
-
-### Est-ce qu'un psy gagne bien sa vie ?
-
-Oui une fois le cabinet stabilisé, mais ce n’est pas automatique. Un agenda rempli en province peut viser **1 800 à 3 200 € nets** ; les premières années restent souvent plus modestes, surtout avec un loyer élevé.
-
-### Quel type de psychologue est le mieux payé ?
-
-Ce n’est pas le titre (clinicien, etc.) qui fixe le revenu, mais le **tarif**, le **volume de séances** et les **charges**. Les activités annexes (bilans, supervision, formation) peuvent relever le revenu horaire si elles correspondent à votre compétence.
-
-### Quel est le salaire d’un psychologue libéral en 2026 ?
-
-En 2026, une activité récente peut rester sous **1 700 € nets mensuels** ; un cabinet installé vise plus souvent **1 800 à 3 200 € nets**, avec de fortes variations selon tarif, agenda et loyer.
-
-### Quel est le salaire moyen d'un psychologue libéral ?
-
-Il n’existe pas de salaire moyen officiel unique. Le revenu dépend du tarif, du nombre de séances, du loyer, du régime fiscal et de l’ancienneté du cabinet — d’où les fourchettes ci-dessus plutôt qu’un chiffre unique.
-
-### Combien gagne un psychologue libéral ?
-
-Cela dépend du tarif, du volume de séances, des cotisations et de l’impôt. À titre indicatif : 30 séances / mois à 55 € donnent environ 1 650 € de CA mensuel avant tout prélèvement ; 50 séances / mois à 60 €, environ 3 000 € de CA. Le **salaire net** se situe souvent entre **800 €** (début) et **3 500 €+** (agenda dense), après cotisations et impôts — hors loyer de cabinet, s’il y en a un.
-
 ### Quel est le salaire net d'un psychologue libéral ?
 
 Le **salaire net**, c’est ce qui reste après cotisations CIPAV (~23 % du CA en micro) et impôt sur le revenu. Pour **2 700 €** de CA mensuel en micro-BNC, comptez souvent **1 700 à 1 850 € nets** — **avant** loyer de cabinet. Si vous louez un local (par exemple 450 €), le revenu disponible descend d’autant. En exercice **uniquement en visio**, à **domicile** ou sans local fixe, ce salaire net reste en général la bonne référence.
 
-### Quel est le salaire d'un psychologue clinicien libéral ?
-
-Le **psychologue clinicien libéral** facture comme tout libéral : honoraires moins charges et cotisations. Les fourchettes de revenu net sont comparables (souvent **1 800 à 3 200 €** une fois installé). La clinique peut justifier un tarif légèrement plus élevé si la demande locale le permet.
-
 ### Combien gagne un psychologue libéral débutant ?
 
 Les débuts sont souvent irréguliers. Les premiers mois, le revenu peut être faible, surtout si le cabinet coûte cher et que l’agenda n’est pas encore rempli. Beaucoup de psychologues sécurisent cette phase par une sous-location progressive, un cumul salarié-libéral ou des charges fixes limitées.
-
-### Le salaire d'un psychologue libéral est-il plus élevé qu'en salariat ?
-
-Il peut l’être, mais ce n’est pas automatique. Le libéral offre un plafond potentiel plus haut, mais il faut retirer les charges, cotisations, impôts, congés non payés, absences, outils et temps administratif. La comparaison doit donc porter sur le **revenu net disponible**, pas seulement sur les honoraires encaissés.
 
 ### Micro-BNC ou réel : quel régime laisse le plus de revenu ?
 
@@ -458,4 +411,4 @@ Pour un projet de site ou de visibilité en ligne adapté aux psychologues, vous
 
 ---
 
-*Sources et références utiles (à recouper selon votre année) : simulateurs <a href="https://www.autoentrepreneur.urssaf.fr/portail/accueil/simulateur.html" target="_blank" rel="nofollow noopener noreferrer">URSSAF micro-entrepreneur</a> et <a href="https://www.impots.gouv.fr/simulateurs" target="_blank" rel="nofollow noopener noreferrer">impots.gouv.fr</a> ; informations retraite <a href="https://www.lassuranceretraite.fr/" target="_blank" rel="nofollow noopener noreferrer">CIPAV / Assurance retraite</a>. Les montants d'honoraires cités reflètent des pratiques libérales courantes observées en 2025-2026 et peuvent évoluer selon les zones.*
+_Sources et références utiles (à recouper selon votre année) : simulateurs <a href="https://www.autoentrepreneur.urssaf.fr/portail/accueil/simulateur.html" target="_blank" rel="nofollow noopener noreferrer">URSSAF micro-entrepreneur</a> et <a href="https://www.impots.gouv.fr/simulateurs" target="_blank" rel="nofollow noopener noreferrer">impots.gouv.fr</a> ; informations retraite <a href="https://www.lassuranceretraite.fr/" target="_blank" rel="nofollow noopener noreferrer">CIPAV / Assurance retraite</a>. Les montants d'honoraires cités reflètent des pratiques libérales courantes observées en 2025-2026 et peuvent évoluer selon les zones._

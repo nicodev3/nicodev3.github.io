@@ -1,8 +1,9 @@
 ---
-title: "Ouvrir un cabinet de psychologie : local, sous-location et visio"
-seoTitle: "Local cabinet psychologue : sous-location, domicile, PMR 2026"
-description: "Ouvrir un cabinet de psychologie : domicile, sous-location, bail, maison de santé, accessibilité PMR, visio, RC Pro, affichage des tarifs et budget de démarrage."
+title: "Choisir son local de psychologue : sous-location, domicile ou bail"
+seoTitle: "Local de psychologue : sous-location, domicile ou bail en 2026"
+description: "Comment choisir son local de psychologue : domicile, sous-location, bail, maison de santé, accessibilité PMR, confidentialité, assurances et budget."
 pubDate: "2026-08-13"
+updatedDate: "2026-08-16"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
 tags: ["psychologue", "installation en libéral", "cadre déontologique"]
@@ -19,7 +20,7 @@ faq:
 
 *Temps de lecture : environ 13 minutes*
 
-Le choix du cabinet n’est pas un simple détail logistique. Il influence la confidentialité, le confort du patient, ton confort de travail, ton budget et même la manière dont ton activité pourra grandir.
+Le choix d’un **local de psychologue** n’est pas un simple détail logistique. Domicile, sous-location, bail professionnel ou maison de santé : chaque formule influence la confidentialité, le confort du patient, ton confort de travail, ton budget et même la manière dont ton activité pourra grandir.
 
 Il n’existe pas un « bon » modèle unique. Le bon cabinet est surtout celui qui protège le cadre clinique tout en restant soutenable financièrement au stade où tu en es.
 

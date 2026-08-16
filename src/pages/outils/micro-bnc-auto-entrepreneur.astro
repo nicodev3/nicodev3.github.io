@@ -5,12 +5,40 @@ const contributionRates = {
   socialPlusCfp: 0.234,
   socialCfpAndLiberatoryTax: 0.256,
 };
+
+const toolUrl = "https://nicodev.fr/outils/micro-bnc-auto-entrepreneur/";
+const webApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Calculateur micro-BNC pour psychologue",
+  description:
+    "Calculateur gratuit pour estimer la recette nette d'un psychologue en micro-BNC selon son tarif, son activité et ses prélèvements.",
+  url: toolUrl,
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Calculateur financier",
+  operatingSystem: "Tous",
+  browserRequirements: "JavaScript activé",
+  isAccessibleForFree: true,
+  inLanguage: "fr-FR",
+  dateModified: "2026-08-16",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "EUR",
+  },
+  provider: {
+    "@type": "Person",
+    name: "Nicolas Devaux",
+    url: "https://nicodev.fr/about/",
+  },
+};
 ---
 
 <Layout
   title="Calculateur micro-BNC psychologue | Outils Nicodev"
   description="Calculez votre recette nette en micro-BNC ou auto-entrepreneur selon votre tarif de séance, vos cotisations URSSAF et votre activité."
 >
+  <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(webApplicationSchema)} />
   <section class="section-y bg-slate-50">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
@@ -93,6 +121,22 @@ const contributionRates = {
       <div class="mt-6 rounded-xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-600">
         Estimation informative : le calcul ne remplace pas un conseil comptable ou fiscal personnalisé.
       </div>
+
+      <aside class="mt-6 rounded-xl border border-teal-200 bg-teal-50 px-5 py-5 text-sm leading-relaxed text-teal-950">
+        <h2 class="text-lg font-bold">Passer de l’estimation au projet de cabinet</h2>
+        <p class="mt-2">
+          Pour interpréter le résultat, consultez les fourchettes de{' '}
+          <a href="/blog/salaire-psychologue-liberal/" class="font-semibold underline underline-offset-2"
+            >salaire d’un psychologue libéral</a
+          > et le comparatif entre{' '}
+          <a href="/blog/statut-juridique-psychologue-liberal/" class="font-semibold underline underline-offset-2"
+            >micro-BNC et régime réel</a
+          >. Le{' '}
+          <a href="/blog/installer-liberal-psychologue-par-ou-commencer/" class="font-semibold underline underline-offset-2"
+            >guide pour ouvrir un cabinet de psychologue</a
+          > replace ensuite le calcul dans l’ordre complet des démarches.
+        </p>
+      </aside>
     </div>
   </section>
 </Layout>
