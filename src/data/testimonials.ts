@@ -4,7 +4,7 @@ export const MALT_PROFILE_URL = 'https://www.malt.fr/profile/nicolasdevaux1';
 export const maltTestimonials = [
 	{
 		quote:
-			"Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble. Le + : des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité… un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique ! Frankement merci encore.",
+			"Nicolas m'a fait un super site pour mon activité professionnelle de psychologue en libéral, avec un design à mon goût et qui me ressemble. Le + : des explications super accessibles sur les démarches à faire pour qu'il puisse réaliser le site, écoute et disponibilité… un vrai travail de partenariat, moi qui suis terrorisée par tout ce qui ressemble à de l'informatique ! Franchement merci encore.",
 		author: 'Delphine, Psychologue en libéral',
 		short: 'Delphine',
 	},
