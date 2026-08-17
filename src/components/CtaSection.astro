@@ -1,11 +1,20 @@
 ---
 import contactBackground from '../assets/images/contact-accueil-background.png';
 
+export interface CtaButton {
+	text: string;
+	href: string;
+	/** Événement Umami émis au clic (convention : lead_click_<cible>_from_<source>). */
+	umamiEvent?: string;
+	/** Origine mémorisée en session puis transmise au formulaire de destination. */
+	leadSource?: string;
+}
+
 export interface Props {
 	title: string;
 	description: string;
-	primaryButton: { text: string; href: string };
-	secondaryButton: { text: string; href: string };
+	primaryButton: CtaButton;
+	secondaryButton: CtaButton;
 	background?: 'surface' | 'white' | 'background';
 	/** Bandeau terracotta plein (CTA final accueil, design Stitch). */
 	variant?: 'default' | 'accent-band';
@@ -66,6 +75,8 @@ const primarySuppressHeaderDiag =
 						: 'btn-primary-solid',
 				]}
 				{...(primarySuppressHeaderDiag ? { 'data-suppress-header-diagnostic-when-visible': true } : {})}
+				{...(primaryButton.umamiEvent ? { 'data-umami-event': primaryButton.umamiEvent } : {})}
+				{...(primaryButton.leadSource ? { 'data-lead-source': primaryButton.leadSource } : {})}
 			>
 				{primaryButton.text}
 			</a>
@@ -77,6 +88,8 @@ const primarySuppressHeaderDiag =
 						? 'rounded-xl border border-on-primary px-8 py-4 text-on-primary hover:bg-white/10'
 						: 'btn-outline-accent border-2 border-primary text-foreground hover:bg-background',
 				]}
+				{...(secondaryButton.umamiEvent ? { 'data-umami-event': secondaryButton.umamiEvent } : {})}
+				{...(secondaryButton.leadSource ? { 'data-lead-source': secondaryButton.leadSource } : {})}
 			>
 				{secondaryButton.text}
 			</a>

@@ -4,9 +4,11 @@ import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
 
 export interface Props {
 	background?: 'surface' | 'white' | 'background';
+	/** Page hôte — distingue les clics accueil / tarifs dans la mesure d’audience. */
+	source?: string;
 }
 
-const { background = 'surface' } = Astro.props;
+const { background = 'surface', source = 'tarifs' } = Astro.props;
 
 const stripePaymentLinkSerenite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_SERENITE?.trim();
 const stripePaymentLinkVisibilite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_VISIBILITE?.trim();
@@ -59,6 +61,7 @@ const visibilityFeatures = [
 				buttonHref="/devis/"
 				subscribeHref={stripePaymentLinkSerenite}
 				subscribeLabel="Démarrer avec Sérénité"
+				source={source}
 			/>
 
 			<OfferCard
@@ -73,6 +76,7 @@ const visibilityFeatures = [
 				subscribeLabel="Démarrer avec Visibilité"
 				recommended={true}
 				badgeText="Recommandée"
+				source={source}
 			/>
 		</div>
 

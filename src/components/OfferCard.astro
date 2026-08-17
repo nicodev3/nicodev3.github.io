@@ -14,6 +14,8 @@ export interface Props {
 	subscribeLabel?: string;
 	recommended?: boolean;
 	badgeText?: string;
+	/** Page d’où la carte est affichée (accueil, tarifs…) — utilisé pour la mesure. */
+	source?: string;
 }
 
 const {
@@ -28,6 +30,7 @@ const {
 	subscribeLabel = "S'abonner",
 	recommended = false,
 	badgeText,
+	source = 'inconnu',
 } = Astro.props;
 
 const shellClasses =
@@ -100,10 +103,18 @@ const secondaryLinkClass =
 							rel="noopener noreferrer"
 							data-umami-event="stripe_payment_link_click"
 							data-umami-event-offer={name}
+							data-umami-event-source={source}
 						>
 							{subscribeLabel}
 						</a>
-						<a href={buttonHref} class={secondaryLinkClass}>
+						<a
+							href={buttonHref}
+							class={secondaryLinkClass}
+							data-umami-event="lead_click_devis_from_offers"
+							data-umami-event-offer={name}
+							data-umami-event-source={source}
+							data-lead-source={`offres-${source}`}
+						>
 							{buttonLabel}
 						</a>
 					</>
@@ -111,6 +122,10 @@ const secondaryLinkClass =
 					<a
 						href={buttonHref}
 						class:list={!recommended ? outlineButtonClass : primaryButtonClass}
+						data-umami-event="lead_click_devis_from_offers"
+						data-umami-event-offer={name}
+						data-umami-event-source={source}
+						data-lead-source={`offres-${source}`}
 					>
 						{buttonLabel}
 					</a>

@@ -105,6 +105,8 @@ function navLinkIsActive(href: string): boolean {
 					href={projectCta.href}
 					data-header-diagnostic-cta
 					aria-label={projectCta.ariaLabel}
+					data-umami-event="lead_click_diagnostic_from_header"
+					data-lead-source="header"
 					class="btn-primary-solid inline-flex shrink-0 touch-manipulation items-center justify-center rounded-xl px-6 py-2 text-base font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				>
 					{projectCta.label}
@@ -193,6 +195,8 @@ function navLinkIsActive(href: string): boolean {
 				href={projectCta.href}
 				class="btn-primary-solid flex w-full touch-manipulation items-center justify-center rounded-xl px-5 py-3 text-center font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				data-mobile-nav-link
+				data-umami-event="lead_click_diagnostic_from_header_mobile"
+				data-lead-source="header-mobile"
 			>
 				{projectCta.label}
 			</a>

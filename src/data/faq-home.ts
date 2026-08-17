@@ -69,9 +69,10 @@ export const homeFaqItems: HomeFaqItem[] = [
 			'Oui, vous pouvez passer d\'un plan à l\'autre selon l\'évolution de votre activité.',
 	},
 	{
+		id: 'faq-sortie',
 		question: 'Que se passe-t-il si j’arrête l’abonnement ?',
 		answer:
-			'Le site et les services associés (hébergement, mises à jour, support) sont arrêtés à la fin de la période payée. Vous pouvez demander un export simple des contenus principaux (textes) pour les conserver.',
+			'Le site et les services associés (hébergement, mises à jour, support) s’arrêtent à la fin de la période déjà payée. Vous ne repartez pas les mains vides pour autant : le nom de domaine vous est transféré sur simple demande, et vous récupérez un export de vos contenus (textes et images fournies). Vous restez donc libre de continuer ailleurs avec votre adresse et vos textes.',
 	},
 ];
 
@@ -85,6 +86,7 @@ const HOME_FAQ_SHORTLIST_IDS = [
 	'faq-site-existant',
 	'faq-modifications',
 	'faq-engagement',
+	'faq-sortie',
 	'faq-delai',
 ] as const;
 

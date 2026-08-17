@@ -35,13 +35,29 @@ const benefits = [
 				Je connais le cabinet. Je prends en charge le web.
 			</h2>
 
-			<div class="space-y-6">
-				<p class="text-lg leading-relaxed text-muted">
-					J’exerce comme psychologue en cabinet libéral et dans un service de santé pour les étudiants. Je
-					connais les questions qui se posent lorsqu’il faut présenter une pratique clinique
-					publiquement&nbsp;: trouver les mots justes, informer sans promettre et rester lisible pour une
-					personne qui cherche de l’aide.
-				</p>
+			<p class="text-lg leading-relaxed text-muted">
+				J’exerce comme psychologue en cabinet libéral et dans un service de santé pour les étudiants. Je connais
+				les questions qui se posent lorsqu’il faut présenter une pratique clinique publiquement&nbsp;: trouver
+				les mots justes, informer sans promettre et rester lisible pour une personne qui cherche de l’aide.
+			</p>
+
+			<ul class="grid grid-cols-1 gap-x-12 gap-y-6 md:grid-cols-2">
+				{
+					benefits.map(({ Icon, text }) => (
+						<li class="flex items-start gap-3">
+							<Icon
+								class="mt-1 h-5 w-5 shrink-0 text-primary-foreground"
+								stroke-width={1.5}
+								aria-hidden="true"
+							/>
+							<p class="text-base text-muted">{text}</p>
+						</li>
+					))
+				}
+			</ul>
+
+			<div class="space-y-6 border-t border-border pt-8">
+				<h3 class="font-heading text-xl font-semibold text-foreground">Le parcours derrière cette offre</h3>
 				<p class="text-lg leading-relaxed text-muted">
 					J’ai travaillé comme développeur puis comme responsable technique — tech lead — notamment au Figaro,
 					et réalisé plus de 50 projets. Aujourd’hui, parallèlement à mon activité de psychologue, je consacre
@@ -61,21 +77,6 @@ const benefits = [
 					>.
 				</p>
 			</div>
-
-			<ul class="grid grid-cols-1 gap-x-12 gap-y-6 pt-2 md:grid-cols-2 md:pt-0">
-				{
-					benefits.map(({ Icon, text }) => (
-						<li class="flex items-start gap-3">
-							<Icon
-								class="mt-1 h-5 w-5 shrink-0 text-primary-foreground"
-								stroke-width={1.5}
-								aria-hidden="true"
-							/>
-							<p class="text-base text-muted">{text}</p>
-						</li>
-					))
-				}
-			</ul>
 		</div>
 	</div>
 </section>

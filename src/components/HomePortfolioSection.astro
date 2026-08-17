@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import { ArrowRight, ArrowUpRight } from '@lucide/astro';
+import { ArrowRight, ArrowUpRight, Quote } from '@lucide/astro';
+import { googleTestimonials } from '../data/testimonials';
 import angelaImage from '../assets/images/screenshots/angelabassompierre.webp';
 import benedicteImage from '../assets/images/screenshots/benedictedonet-psyenligne.webp';
 import audreyImage from '../assets/images/screenshots/psy-emdr-cotebasque.webp';
@@ -34,6 +35,22 @@ const projects = [
 		href: 'https://psy-emdr-cotebasque.fr/',
 	},
 ] as const;
+
+/** Compare deux URL en ignorant le protocole, le `www.` et le slash final. */
+const normalizeSiteUrl = (value: string) =>
+	value.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/+$/, '').toLowerCase();
+
+/**
+ * Rattache l’avis Google publié par la praticienne à sa réalisation, quand il existe.
+ * Aucun avis n’est inventé : une réalisation sans avis publié s’affiche simplement sans citation.
+ */
+const findTestimonial = (projectHref: string) =>
+	googleTestimonials.find((t) => normalizeSiteUrl(t.websiteUrl) === normalizeSiteUrl(projectHref));
+
+const projectsWithTestimonial = projects.map((project) => ({
+	...project,
+	testimonial: findTestimonial(project.href),
+}));
 ---
 
 <section class="section-y border-b border-border bg-surface" aria-labelledby="home-portfolio-heading">
@@ -45,13 +62,13 @@ const projects = [
 			</h2>
 			<p class="mt-4 text-lg leading-relaxed text-muted">
 				Chaque site part d’une pratique, d’un cadre et d’une situation différents. Voici trois projets récents
-				de création ou de refonte.
+				de création ou de refonte, avec l’avis publié par la praticienne lorsqu’il existe.
 			</p>
 		</header>
 
 		<div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
 			{
-				projects.map(({ title, meta, description, image, imageAlt, href }) => (
+				projectsWithTestimonial.map(({ title, meta, description, image, imageAlt, href, testimonial }) => (
 					<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm">
 						<a
 							href={href}
@@ -74,6 +91,22 @@ const projects = [
 							<p class="type-label-mono text-muted">{meta}</p>
 							<h3 class="mt-2 font-heading text-xl font-semibold text-foreground">{title}</h3>
 							<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
+							{testimonial && (
+								<figure class="mt-5 rounded-lg border border-border bg-surface p-4">
+									<Quote
+										class="h-4 w-4 text-primary-foreground"
+										stroke-width={1.75}
+										aria-hidden="true"
+									/>
+									<blockquote class="mt-2 text-sm leading-relaxed text-muted">
+										{testimonial.quote}
+									</blockquote>
+									<figcaption class="mt-3 text-sm font-medium text-foreground">
+										{testimonial.author}
+										<span class="block type-label-mono font-normal text-muted">Avis Google</span>
+									</figcaption>
+								</figure>
+							)}
 							<a
 								href={href}
 								target="_blank"

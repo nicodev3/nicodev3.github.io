@@ -7,6 +7,7 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ExpertiseSection from '../components/ExpertiseSection.astro';
 import HeroSection from '../components/HeroSection.astro';
 import HomeAudienceSection from '../components/HomeAudienceSection.astro';
+import HomeAiObjectionSection from '../components/HomeAiObjectionSection.astro';
 import HomeVisibilityPathSection from '../components/HomeVisibilityPathSection.astro';
 import HomePortfolioSection from '../components/HomePortfolioSection.astro';
 import BlogHomeSection from '../components/BlogHomeSection.astro';
@@ -130,6 +131,8 @@ const faqSchema = {
 
 	<HomeAudienceSection />
 
+	<HomeAiObjectionSection />
+
 	<HomeVisibilityPathSection />
 
 	<ExpertiseSection />
@@ -138,7 +141,7 @@ const faqSchema = {
 
 	<TestimonialsSection />
 
-	<OffersSection />
+	<OffersSection source="accueil" />
 
 	<ProcessSection />
 
@@ -158,7 +161,16 @@ const faqSchema = {
 		anchorId="contact-accueil"
 		title="Où en êtes-vous avec votre site ?"
 		description="Installation, premier site, refonte ou manque de visibilité : présentez-moi votre situation. Je vous répondrai sur ce qui me paraît utile, sans vous orienter systématiquement vers la formule la plus complète."
-		primaryButton={{ text: 'Faire le point sur votre site', href: '/diagnostic-gratuit/' }}
-		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/' }}
+		primaryButton={{
+			text: 'Faire le point sur votre site',
+			href: '/diagnostic-gratuit/',
+			umamiEvent: 'lead_click_diagnostic_from_home_final',
+			leadSource: 'home-final'
+		}}
+		secondaryButton={{
+			text: 'Voir les tarifs',
+			href: '/tarifs/',
+			umamiEvent: 'lead_click_tarifs_from_home_final'
+		}}
 	/>
 </Layout>
