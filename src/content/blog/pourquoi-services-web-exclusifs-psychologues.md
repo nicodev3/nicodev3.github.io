@@ -1,18 +1,18 @@
 ---
-title: "Pourquoi une spécialisation web pour les psychologues"
-seoTitle: "Sites web dédiés aux psychologues libéraux"
-description: "Pourquoi créer des sites dédiés aux psychologues : titre protégé, cadre professionnel et expérience de psychologue développeur."
+title: "Le savoir-faire, vous l'avez — il est temps de le faire savoir"
+seoTitle: "Psychologues : votre savoir-faire mérite d'être visible en ligne"
+description: "Les pseudo-thérapeutes ne manquent pas de visibilité. Les psychologues diplômés, si. Pourquoi un site professionnel dédié change la donne."
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
 tags: ["psychologue", "site web cabinet", "cadre déontologique"]
 ---
 
-Lorsque l'on m'interroge sur mon choix d'avoir construit Nicodev autour de la création de **sites web pour psychologues**, ma réponse est constante : il ne s'agit pas seulement d'un positionnement commercial, mais d'une ligne professionnelle assumée.
+Le savoir-faire des psychologues n'est plus à démontrer : cinq années d'études, des stages, un titre protégé, une pratique encadrée. Pourtant, sur le web, ce sont les coachs en bien-être, les thérapeutes auto-proclamés et les vendeurs de solutions miracles qui occupent l'espace. Eux n'hésitent pas à communiquer. Les psychologues, souvent, si.
 
-Psychologue de formation et en exercice libéral, je connais les réalités cliniques, les responsabilités attachées au titre, ainsi que les interrogations qui précèdent souvent une première consultation. Développeur web également, ayant exercé ce métier pendant plusieurs années pour de grandes entreprises, je conçois des sites utiles, sobres et rigoureux.
+Un site internet professionnel, c'est simplement le moyen de donner à votre savoir-faire la visibilité qu'il mérite — et de permettre à vos patients de vous trouver, vous, plutôt qu'un énième profil sans formation ni cadre.
 
-J'ai donc fait un choix clair : construire d'abord une offre spécialisée pour les psychologues. Ce choix ne procède ni d'une fermeture, ni d'un jugement à l'égard d'autres pratiques, mais d'une exigence de cohérence avec ce que je défends depuis des années : la clarté pour le public, la défense de mes collègues psychologues et le respect d'une profession réglementée.
+Psychologue et développeur web, j'ai construit Nicodev autour de cette conviction : notre métier a tout pour être lisible en ligne, à condition d'être accompagné par quelqu'un qui le connaît de l'intérieur.
 
 ## Le titre de psychologue est un titre protégé par la loi
 
