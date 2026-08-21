@@ -1,136 +1,123 @@
 ---
-title: "Site de psychologue : communiquer clairement et être visible sans surpromettre"
-seoTitle: "Site de psychologue : être visible avec une communication claire"
-description: "Comment présenter son cabinet de psychologie sur un site clair, sobre et visible : titres, cadre, contenus, référencement local et prise de contact."
+title: "Psychologues : pourquoi reprendre la parole en ligne"
+seoTitle: "Psychologues : pourquoi mieux communiquer sur sa pratique"
+description: "Les pseudo-thérapeutes occupent largement l'espace numérique. Pourquoi et comment les psychologues peuvent rendre leur pratique et leur savoir-faire plus visibles."
 pubDate: "2026-08-21"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue-communication-claire.webp"
-tags: ["psychologue", "site web cabinet", "référencement local cabinet", "cadre déontologique"]
+tags: ["psychologue", "psychomotricien", "site web cabinet", "réseaux sociaux"]
 faq:
-  - question: "Un psychologue doit-il être présent sur les réseaux sociaux pour être visible ?"
-    answer: "Non. Les réseaux peuvent compléter une présence en ligne, mais un site clair et une fiche Google Business Profile bien renseignée constituent une base plus durable pour être trouvé et présenter son cadre."
-  - question: "Que doit indiquer le site d'un psychologue ?"
-    answer: "Le site doit permettre de comprendre rapidement le titre professionnel, le parcours utile à la pratique, les personnes accompagnées, les modalités de consultation, les informations pratiques et la façon de prendre contact."
-  - question: "Comment être visible sans faire de promesses thérapeutiques ?"
-    answer: "La visibilité repose sur des informations précises, des pages bien structurées, une fiche Google cohérente, un site rapide sur mobile et des contenus utiles. Elle ne suppose ni promesse de résultat ni discours commercial agressif."
+  - question: "Pourquoi les psychologues communiquent-ils peu sur leur pratique ?"
+    answer: "La discrétion, la confidentialité, la prudence dans les formulations et une culture professionnelle longtemps appuyée sur les institutions et l'orientation entre confrères ont favorisé une communication mesurée. Cette retenue n'interdit cependant pas d'informer clairement le public."
+  - question: "Un psychologue peut-il communiquer sur son activité ?"
+    answer: "Oui. Le code de déontologie des psychologues prévoit une information du public sur l'activité professionnelle avec mesure et en référence au titre. Un site, des articles, des vidéos ou un podcast peuvent contribuer à cette information."
+  - question: "Pourquoi un site reste-t-il utile à côté des réseaux sociaux ?"
+    answer: "Le site constitue un point de référence stable où le professionnel peut présenter son titre, son parcours, sa pratique, ses modalités et ses sources avec davantage de précision que dans une publication courte."
 ---
 
-*Temps de lecture : 9 minutes*
+*Temps de lecture : 10 minutes*
 
-Quand une personne cherche de l'aide, elle ne cherche pas seulement « un thérapeute ». Elle essaie de comprendre à qui elle s'adresse, si le professionnel est compétent pour sa situation et comment le contacter. Or, en ligne, les informations les plus visibles ne sont pas toujours les plus claires.
+Je rencontre régulièrement le même paradoxe. Des psychologues possèdent une formation universitaire solide, enrichie par des stages, une expérience institutionnelle et pluridisciplinaire, des années de pratique et une réflexion clinique exigeante. Pourtant, ils demeurent presque invisibles en ligne. Dans le même temps, certains coachs, psychopraticiens, praticiens en psychothérapie et autres « thérapeutes » se présentent comme des spécialistes de la santé mentale ou s'appuient sur des formations courtes et hétérogènes, sans stages encadrés ni supervision clinique. Ils publient quotidiennement des vidéos, des livres, des conseils et des explications sur les réseaux sociaux, entretenant la confusion auprès d'un public encore trop peu informé sur les différences entre ces appellations.
 
-Pour un psychologue, l'enjeu n'est pas de communiquer plus fort que tout le monde. Il est de rendre son cadre **compréhensible, accessible et trouvable**. Un site bien construit permet précisément cela : donner des repères fiables au public, sans promesse de résultat ni codes marketing qui ne correspondent pas à la pratique clinique.
+Le contraste ne porte pas seulement sur la quantité de contenus. Il porte sur la place occupée dans l'esprit du public. À force d'être présents, certains intervenants finissent par apparaître comme des références, alors que leur appellation ne permet pas toujours de connaître leur formation, leur cadre ni la solidité des pratiques qu'ils proposent.
 
-## La visibilité commence par la clarté
+J'emploie ici l'expression **pseudo-thérapeutes** pour désigner les personnes qui se présentent comme capables de prendre en charge des difficultés psychiques sans titre reconnu dans ce champ ni cadre professionnel clairement vérifiable. Il ne s'agit pas de disqualifier toute activité de coaching ou de bien-être. La confusion commence lorsque celles-ci sont présentées comme une réponse à des problématiques de santé mentale, sans que le public puisse facilement distinguer les niveaux de formation et de responsabilité.
 
-Être visible ne sert à rien si la personne qui arrive sur votre site repart sans avoir compris votre pratique. Dès les premières secondes, elle devrait pouvoir répondre à ces questions simples :
+Face à cette situation, la question n'est plus seulement : « Les psychologues doivent-ils communiquer ? » Elle devient : **que se passe-t-il lorsque les professionnels les mieux formés laissent à d'autres l'essentiel de l'espace public ?**
 
-- qui êtes-vous et quel est votre titre professionnel ?
-- qui accompagnez-vous ?
-- comment se déroulent les consultations ?
-- où exercez-vous et comment prendre rendez-vous ?
+## Une discrétion profondément inscrite dans la culture des psychologues
 
-Ce sont des informations ordinaires, mais elles font toute la différence. Elles évitent que le lecteur ait à deviner ce que recouvre une expression vague comme « accompagnement personnalisé » ou « mieux-être ». Elles lui permettent aussi d'évaluer, à son rythme, si votre cadre lui correspond.
+Si les psychologues ont longtemps peu communiqué sur leur activité, ce n'est pas par manque de contenu. Plusieurs dimensions de la profession invitent naturellement à la retenue.
 
-Un site de psychologue n'a donc pas besoin d'en faire trop. Il doit être **précis avant d'être séduisant**.
+Le travail se déroule à l'abri du regard public. La confidentialité protège la parole. La relation clinique place la personne accompagnée au centre, pas le professionnel. La prudence conduit à éviter les affirmations générales à partir d'une situation particulière. L'humilité rappelle qu'une difficulté psychique ne se résume pas à une explication rapide ni à une solution valable pour tous.
 
-## Rendre le titre et le cadre professionnel immédiatement lisibles
+À cela s'ajoute une histoire professionnelle largement construite dans les institutions, les établissements de santé, les associations, l'Éducation nationale ou les réseaux de partenaires. Même en libéral, l'orientation entre professionnels et le bouche-à-oreille ont longtemps suffi à rendre une pratique identifiable localement. La visibilité personnelle n'était pas une compétence à développer en soi.
 
-Le mot « psy » est pratique dans la conversation, mais il ne renseigne pas suffisamment une personne qui cherche un professionnel. Sur votre site, dites clairement que vous êtes **psychologue**. Si vous portez aussi le titre de psychothérapeute, présentez-le avec la même exactitude. Vos diplômes et les éléments utiles de votre parcours peuvent figurer sur une page « parcours » ou « à propos », sans transformer celle-ci en curriculum vitae exhaustif.
+La culture déontologique a renforcé cette réserve. Le [code de déontologie des psychologues](https://www.codededeontologiedespsychologues.fr/2021/05/20/code-de-deontologie-des-psychologues-2021/) demande notamment de diffuser au public une information sur son activité « avec mesure et en référence à son titre ». Cette formulation dit bien la sensibilité du sujet : communiquer, oui, mais en gardant une juste place.
 
-L'objectif n'est pas de convaincre par l'accumulation de sigles. Il est de lever une ambiguïté importante : la formation, le titre et le cadre d'exercice ne sont pas interchangeables avec ceux d'un coach, d'un praticien en bien-être ou d'un psychopraticien.
+Beaucoup de psychologues ont retenu la mesure. Ils ont parfois moins retenu que le texte reconnaît aussi la possibilité d'informer le public sur leur activité.
 
-Cette clarté protège d'abord les personnes qui consultent. Elle valorise aussi votre métier sans avoir besoin de dénigrer d'autres pratiques. J'explique cette position dans l'article [pourquoi je crée des sites exclusivement pour les psychologues](/blog/pourquoi-services-web-exclusifs-psychologues/).
+## Internet a séparé la visibilité de la compétence
 
-## Décrire sa pratique sans jargon ni promesse
+Les moyens de diffusion ont complètement changé. Un site internet, une chaîne YouTube, un podcast ou un compte sur un réseau social permettent aujourd'hui de parler directement à des milliers de personnes. Aucun rédacteur en chef, aucune institution et aucun diplôme ne sont nécessaires pour publier.
 
-Les patients ne cherchent pas une démonstration théorique. Ils cherchent à savoir si vous êtes susceptible de les aider à mettre des mots sur une difficulté, et s'ils pourront vous contacter simplement.
+Cette ouverture a des aspects précieux. Elle a rendu la santé mentale plus présente dans les conversations, facilité l'accès à certaines ressources et permis à de nombreuses personnes de mettre des mots sur leur souffrance.
 
-Vous pouvez donc présenter votre pratique avec des formulations concrètes :
+Mais elle a aussi créé une confusion fondamentale : **la visibilité d'un discours ne dit rien, à elle seule, de sa validité**.
 
-- les publics que vous recevez : enfants, adolescents, adultes, parents, couples, selon votre exercice ;
-- les motifs ou problématiques que vous abordez, sans vous attribuer une compétence que vous ne proposez pas ;
-- votre approche, expliquée en langage courant si elle est utile à la compréhension ;
-- ce qui se passe lors d'un premier rendez-vous ;
-- les limites de votre intervention et les orientations possibles lorsqu'une demande ne relève pas de votre cadre.
+Sur un écran, une vidéo produite par un psychologue et celle d'un praticien autoproclamé occupent le même espace. Le titre, la formation et les références n'apparaissent pas toujours. Ce que la plateforme mesure, ce sont les vues, les réactions, les partages et la régularité de publication — pas la qualité d'une formation en psychopathologie ni la pertinence d'une indication clinique.
 
-La nuance compte. « J'accompagne les personnes confrontées à l'anxiété » est plus juste qu'une promesse de « vaincre définitivement l'anxiété ». « Une première consultation permet de faire le point sur votre demande » est plus utile que « prenez votre vie en main dès aujourd'hui ».
+Une analyse des 1 000 vidéos les plus vues sous le mot-dièse `#mentalhealth` sur TikTok a ainsi relevé que **33 % des vidéos contenant des conseils ou des informations comportaient des éléments trompeurs**. Ces contenus trompeurs obtenaient en moyenne davantage de vues et d'interactions que les contenus jugés fiables. Les références à la recherche scientifique étaient rares. Cette étude ne résume pas l'ensemble des réseaux sociaux, mais elle illustre clairement le décalage possible entre popularité et fiabilité. ([Étude publiée dans *Digital Health*](https://pubmed.ncbi.nlm.nih.gov/39839955/))
 
-La sobriété n'empêche pas la chaleur. Un texte peut être accueillant, personnel et incarné tout en restant fidèle aux exigences de la profession.
+Une autre étude portant sur 1 000 vidéos en français, anglais et espagnol a observé de la désinformation sur des thèmes aussi sensibles que les troubles de la personnalité, le suicide, les troubles psychotiques ou les traitements. Dans près de la moitié des vidéos analysées, le titre de la personne qui s'exprimait n'était pas précisé. ([Étude publiée dans le *Journal of Medical Internet Research*](https://www.jmir.org/2025/1/e64225/))
 
-## Donner les informations pratiques que le public cherche vraiment
+Le problème n'est donc pas que le public s'intéresse à la psychologie en ligne. Le problème est qu'il lui est souvent difficile d'évaluer **qui parle, depuis quelle formation et avec quel niveau de responsabilité**.
 
-Une grande partie des hésitations vient d'informations absentes ou dispersées. Votre site doit rendre les modalités de consultation faciles à trouver :
+## La souffrance psychique rend cette confusion particulièrement préoccupante
 
-- adresse du cabinet et zone desservie ;
-- consultation au cabinet, en visio, ou les deux ;
-- durée indicative d'une séance ;
-- tarifs, moyens de paiement et informations de remboursement que vous êtes en mesure de donner ;
-- modalités de prise de rendez-vous ;
-- coordonnées et horaires de contact ;
-- marche à suivre en cas d'urgence, si vous le jugez pertinent.
+Une personne en souffrance ne consulte pas les réseaux sociaux comme elle comparerait deux produits ordinaires. Elle peut chercher une explication immédiate à ce qu'elle traverse, une manière de retrouver de l'espoir ou quelqu'un qui semble enfin comprendre son expérience.
 
-Ces éléments peuvent être répartis entre une page « consultations », une page tarifs et une page contact. L'essentiel est qu'ils soient cohérents, à jour et lisibles sur téléphone. Une personne qui hésite à vous appeler ne devrait pas avoir à fouiller une publication Instagram ou à vous écrire pour connaître une information de base.
+Dans ce contexte, un discours simple, affirmatif et incarné peut être très convaincant. Une étiquette comme « trauma », « hypersensibilité », « pervers narcissique » ou « neuroatypie » peut sembler donner rapidement du sens. La nuance, les hypothèses concurrentes et les limites d'une information générale sont moins faciles à faire tenir dans une vidéo courte.
 
-## Organiser un site autour du parcours du lecteur
+Le rapport d'activité 2022-2024 de la [Miviludes](https://www.miviludes.interieur.gouv.fr/sites/miviludes/files/medias/documents/2025-08/MIVILUDES-RAPPORT-24accessible_1.pdf) relève précisément la confusion créée par des non-professionnels utilisant le préfixe « psycho » et note une offre croissante de pratiques non conventionnelles sur les réseaux sociaux. Il souligne également que professionnels de santé et intervenants du bien-être peuvent être présentés sans distinction évidente pour l'usager.
 
-Un site clair ne suppose pas de multiplier les pages. Pour beaucoup de cabinets, une structure simple suffit :
+Le ministère de la Santé rappelle de son côté que les pratiques non conventionnelles sont très diverses et que, dans leur grande majorité, elles ne disposent pas d'études cliniques établissant leur fonctionnement, leur efficacité et leur innocuité. Il alerte notamment sur le risque de perte de chance lorsqu'elles éloignent d'une prise en charge adaptée. ([Ministère de la Santé](https://sante.gouv.fr/soins-et-maladies/qualite-des-soins-et-pratiques/securite/article/les-pratiques-de-soins-non-conventionnelles))
 
-1. **Accueil** : votre titre, votre pratique, votre localisation et une orientation nette vers la prise de contact.
-2. **Votre pratique** : les personnes reçues, les motifs de consultation et votre façon de travailler.
-3. **Parcours et cadre** : les repères professionnels qui aident à comprendre qui vous êtes.
-4. **Informations pratiques** : déroulement, tarifs, accessibilité et modalités de rendez-vous.
-5. **Contact** : téléphone, formulaire adapté, accès au cabinet et informations utiles.
+Il ne s'agit pas de penser que tout contenu publié par un psychologue serait nécessairement juste, ni que toute personne extérieure à la profession diffuserait une information fausse. Le titre n'empêche ni les erreurs ni les désaccords. Il signale cependant un parcours de formation, un cadre et une responsabilité qui peuvent être identifiés par le public.
 
-Chaque page a une fonction. L'accueil ne doit pas contenir tout votre site ; il doit orienter. La page contact ne doit pas être une simple adresse e-mail ; elle doit réduire le dernier frein avant la prise de rendez-vous.
+## Le silence des psychologues a désormais un effet public
 
-Pour aller plus loin sur la structure et les choix techniques, vous pouvez lire [site internet pour psychologue : ce qu'il faut prévoir](/blog/site-internet-psychologues/).
+La discrétion professionnelle reste une qualité. L'invisibilité, en revanche, laisse un vide — et ce vide est rapidement occupé.
 
-## Être visible : permettre à ces informations d'être trouvées
+Lorsqu'un psychologue ne présente pas sa pratique, le public ne dispose pas de ses mots pour comprendre son travail. Lorsqu'une information rigoureuse reste dans les revues spécialisées, les colloques ou les échanges entre professionnels, elle ne vient pas équilibrer les explications plus séduisantes qui circulent déjà. Lorsqu'un cabinet n'est pas visible dans les résultats de recherche, une personne peut s'orienter vers l'interlocuteur dont la présence numérique est la plus travaillée, pas nécessairement vers celui dont le cadre correspond le mieux à sa situation.
 
-Une communication juste mérite d'être accessible aux personnes qui en ont besoin. La visibilité d'un cabinet repose moins sur une publication virale que sur des fondations cohérentes :
+Cette réalité ne transforme pas la communication en obligation individuelle. Tous les psychologues n'ont ni l'envie ni le temps de produire des vidéos ou d'animer une communauté. Mais collectivement, l'absence des professionnels formés modifie les repères disponibles.
 
-- une [fiche Google Business Profile](/blog/google-business-profile-psychologue/) complète et reliée au site ;
-- des informations identiques sur le site, la fiche Google et les annuaires pertinents ;
-- des pages qui mentionnent naturellement votre ville, votre zone d'exercice et votre pratique ;
-- un site rapide et agréable à consulter sur mobile ;
-- des titres de pages et une structure compréhensibles pour les moteurs de recherche comme pour les lecteurs.
+Le gouvernement français a d'ailleurs lancé une [stratégie nationale de lutte contre la désinformation en santé](https://sante.gouv.fr/actualites-presse/presse/communiques-de-presse/article/lancement-de-la-strategie-nationale-de-lutte-contre-la-desinformation-en-sante), en constatant que les réseaux sociaux peuvent amplifier les fausses informations, détourner des personnes des soins et fragiliser la confiance envers la science. Parmi les réponses annoncées figure justement la mobilisation d'experts et de créateurs capables de proposer des formats adaptés aux usages numériques.
 
-Le référencement local n'est pas une course au mot-clé. Une page « psychologue à Lyon » n'a de valeur que si elle donne de vraies informations sur votre cabinet à Lyon. Empiler les noms de villes ou répéter « psychologue + ville » n'aide ni la personne qui lit ni la qualité du site.
+Autrement dit, la présence de professionnels compétents dans l'espace public ne relève pas uniquement de leur promotion. Elle participe aussi à la qualité de l'information disponible.
 
-Le [guide complet de la visibilité en ligne pour psychologues](/blog/guide-complet-visibilite-en-ligne-psychologues/) présente ces leviers dans l'ordre où il est généralement utile de les travailler.
+## Communiquer ne signifie pas se mettre en scène
 
-## Les réseaux sociaux peuvent compléter le site, pas le remplacer
+C'est sans doute l'un des principaux malentendus. Communiquer sur sa pratique ne suppose pas de raconter sa vie, de commenter chaque actualité ni de devenir influenceur.
 
-Un post LinkedIn ou Instagram peut faire connaître une idée, partager un contenu ou montrer votre façon de réfléchir. C'est utile si cela vous convient. Mais une publication est vite recouverte par les suivantes, et son format ne permet pas toujours d'expliquer votre cadre avec suffisamment de nuances.
+Cela peut simplement consister à :
 
-Le site reste votre point d'ancrage : vous y maîtrisez les mots, l'organisation et la durée de vie des informations. Les réseaux peuvent y conduire, par exemple vers un article pédagogique, votre page de pratique ou une page de contact. Ils ne devraient pas être le seul endroit où une personne peut comprendre qui vous êtes et comment vous consulter.
+- rendre son titre, son parcours et son champ de compétence facilement identifiables ;
+- expliquer sa manière de travailler dans un langage accessible ;
+- présenter les motifs pour lesquels une personne peut prendre contact ;
+- publier une information générale qui aide à s'orienter sans se substituer à une consultation ;
+- indiquer les limites de son intervention et les relais utiles ;
+- partager des connaissances ou des sources qui éclairent un sujet de santé mentale.
 
-## Ce qui nuit souvent à la clarté — et à la visibilité
+Le ton peut rester sobre. La nuance peut rester présente. Il est même possible d'expliquer qu'une question n'appelle pas de réponse universelle. Cette manière de communiquer est parfois moins spectaculaire, mais elle donne au public quelque chose de rare en ligne : des repères fiables et une parole située.
 
-Quelques erreurs reviennent régulièrement :
+## Chaque support peut jouer un rôle différent
 
-- une page d'accueil très générale qui ne dit ni le titre, ni le public reçu, ni le lieu d'exercice ;
-- des formules commerciales ou des promesses de transformation qui ne correspondent pas au cadre clinique ;
-- un vocabulaire tellement technique qu'il devient opaque pour les non-professionnels ;
-- des informations pratiques cachées dans un PDF, une bio de réseau social ou plusieurs pages contradictoires ;
-- un site joli mais lent sur mobile, ou sans chemin clair vers la prise de contact ;
-- vouloir être « premier sur Google » avant d'avoir établi une présence locale cohérente et utile.
+Il n'est pas nécessaire d'être partout. Les réseaux sociaux, la vidéo, l'audio et le site internet ne remplissent pas la même fonction.
 
-La bonne question n'est pas : « Comment prendre toute la place ? » C'est : « Comment faire en sorte qu'une personne qui me cherche puisse me trouver, comprendre mon cadre et me contacter sereinement ? »
+Une publication LinkedIn ou Instagram peut faire circuler une idée et toucher des personnes qui ne connaissent pas encore le professionnel. Une vidéo YouTube ou un podcast permet de développer un raisonnement, d'introduire de la nuance et de rendre la psychologie plus accessible. Ces formats créent une rencontre avec une voix et une manière de penser.
 
-## Une première action simple pour votre site
+Le site internet occupe une place particulière. Il constitue un point de référence stable où une personne peut vérifier le titre, comprendre la pratique, consulter les informations utiles et prendre contact. Il n'est pas soumis au rythme d'un fil d'actualité et permet d'organiser les contenus selon les besoins du public.
 
-Ouvrez votre page d'accueil sur téléphone et essayez de vérifier, en moins d'une minute, si l'on comprend :
+Le site donne aussi une continuité aux autres prises de parole. Une publication courte peut renvoyer vers un article plus approfondi. Une vidéo peut conduire vers une page qui présente le cadre du cabinet. Un épisode de podcast peut être accompagné de sources et de ressources. L'ensemble devient cohérent au lieu de dépendre d'une succession de contenus éphémères.
 
-1. que vous êtes psychologue ;
-2. où et pour qui vous exercez ;
-3. comment vous joindre ou prendre rendez-vous.
+## Une parole professionnelle n'a pas besoin d'imiter celle des pseudo-thérapeutes
 
-Si l'une de ces réponses manque, commencez par là. C'est souvent plus efficace que de publier davantage ou de chercher une nouvelle stratégie complexe.
+Reprendre la parole ne signifie pas adopter les mêmes codes que ceux qui occupent déjà le terrain. La force d'une communication de psychologue peut justement résider ailleurs : dans la précision des termes, la capacité à contextualiser et la reconnaissance de la complexité.
 
-## Conclusion
+Une parole professionnelle peut aborder la santé mentale sans diagnostiquer à distance. Elle peut transmettre des connaissances sans transformer une publication en consultation, citer ses sources sans rendre le propos illisible et présenter une activité sans utiliser de témoignages de patients ni exposer de situations cliniques. Elle permet enfin de faire connaître un cabinet sans réduire la relation à un argument commercial.
 
-Communiquer en ligne ne revient pas à adopter les codes de ceux qui communiquent le plus fort. Pour un psychologue, un site peut devenir un espace de repères : clair sur le titre, fidèle à la pratique, utile au public et suffisamment visible pour ne pas laisser toute la place aux discours les moins nuancés.
+Cette posture demande sans doute davantage de travail éditorial. Elle ne peut pas toujours produire la phrase la plus spectaculaire. Mais elle permet à la communication de rester cohérente avec la pratique — et c'est précisément ce qui peut inspirer confiance.
 
-Si votre site existe déjà mais ne vous semble ni assez clair ni assez trouvable, un <a href="/diagnostic-gratuit/" data-lead-source="article-site-psychologue-communication-claire" data-umami-event="lead_click_diagnostic_from_article_communication_claire">diagnostic gratuit de visibilité</a> peut aider à identifier la première priorité. Vous pouvez également découvrir l'offre de [création de site internet pour psychologue](/creation-site-internet-psychologue/).
+## Savoir-faire et le faire savoir
+
+Les psychologues, psychothérapeutes et psychomotriciens disposent d'un savoir-faire que le public ne peut pas deviner. Leur formation, leur titre et la rigueur de leur pratique ne deviennent visibles que s'ils sont présentés de manière compréhensible et accessibles là où les personnes cherchent de l'aide.
+
+Pendant longtemps, la retenue a protégé une certaine idée du métier. Elle reste précieuse. Mais dans un espace numérique où chacun peut se présenter comme expert de la santé mentale, cette retenue ne devrait plus conduire les professionnels reconnus à s'effacer.
+
+Faire savoir son savoir-faire, ce n'est pas parler plus fort. C'est permettre au public d'entendre aussi la voix de ceux dont la pratique repose sur une formation, une réflexion et un cadre identifiables.
+
+C'est la raison pour laquelle j'ai choisi de créer des sites exclusivement pour les psychologues, psychothérapeutes et psychomotriciens. Comme confrère et développeur web, mon rôle est de les aider à construire une présence claire, visible et fidèle à leur façon d'exercer.
+
+Si vous souhaitez donner davantage de place à votre pratique en ligne, vous pouvez découvrir la [création de site internet pour psychologue](/creation-site-internet-psychologue/) ou demander un <a href="/diagnostic-gratuit/" data-lead-source="article-psychologues-reprendre-parole" data-umami-event="lead_click_diagnostic_from_article_reprendre_parole">diagnostic gratuit de visibilité</a>.
