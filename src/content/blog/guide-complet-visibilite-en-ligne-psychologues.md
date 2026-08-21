@@ -125,6 +125,7 @@ HTML, performance, accessibilité : le vocabulaire utile pour dialoguer avec un 
 Ces articles complètent le guide principal :
 
 - [Les promesses trop belles des offres « site psychologue »](/blog/site-internet-psychologue-promesses-trop-belles/) : critères pour repérer les discours marketing douteux.
+- [Communiquer clairement et être visible avec son site de psychologue](/blog/site-psychologue-communiquer-clairement-visible/) : rendre son titre, son cadre et ses modalités faciles à comprendre et à trouver.
 - [Ouvrir un cabinet de psychologue : guide d’installation 2026](/blog/installer-liberal-psychologue-par-ou-commencer/) : ordre des priorités à l’installation.
 - [Visibilité d’un psychologue qui s’installe](/blog/visibilite-installation-psychologue-liberal/) : site, fiche Google et réseau au moment de l’ouverture.
 - [Pourquoi des services web réservés aux psychologues ?](/blog/pourquoi-services-web-exclusifs-psychologues/) : intérêt d’une spécialisation métier côté web.
