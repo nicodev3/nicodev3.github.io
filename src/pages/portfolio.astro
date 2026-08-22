@@ -21,18 +21,21 @@ import psychomotriciteMorgesImage from "../assets/images/screenshots/psychomotri
 import joieCompassionImage from "../assets/images/screenshots/joiecompassion.webp";
 import benedicteDonetImage from "../assets/images/screenshots/benedictedonet-psyenligne.webp";
 import angelaBassompierreImage from "../assets/images/screenshots/angelabassompierre.webp";
+import pierreDalarunImage from "../assets/images/screenshots/pierre-dalarun.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 
 type PortfolioProfession =
   | "psychologue"
+  | "psychotherapeute"
   | "psychomotricien"
   | "psychomotricienne"
   | "association";
 
 const professionLabels: Record<PortfolioProfession, string> = {
   psychologue: "Psychologue",
+  psychotherapeute: "Psychothérapeute",
   psychomotricien: "Psychomotricien·ne",
   psychomotricienne: "Psychomotricienne",
   association: "Association professionnelle",
@@ -74,6 +77,18 @@ const breadcrumbSchema = {
 
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
 const portfolioProjects: PortfolioProject[] = [
+  {
+    title: "Pierre Dalarun",
+    image: pierreDalarunImage,
+    url: "https://pierredalarun.com/",
+    location: "Soudan",
+    year: 2026,
+    profession: "psychotherapeute",
+    description:
+      "Création d'un site vitrine pour présenter une approche psychocorporelle, les pratiques proposées et les consultations au cabinet ou en visio.",
+    imageAlt:
+      "Site Pierre Dalarun — psychothérapeute à Soudan près de Châteaubriant, consultations au cabinet et en visio",
+  },
   {
     title: "Angela Bassompierre",
     image: angelaBassompierreImage,
