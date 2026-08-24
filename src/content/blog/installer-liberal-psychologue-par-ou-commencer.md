@@ -1,9 +1,9 @@
 ---
 title: "Ouvrir un cabinet de psychologue : guide d’installation en libéral 2026"
-seoTitle: "Ouvrir un cabinet de psychologue : guide d’installation 2026"
-description: "Ouvrir un cabinet de psychologue en 2026 : démarches ARS/RPPS, statut, fiscalité, cabinet, visibilité locale, check-list pièces, plan 30 jours et erreurs des 3 premiers mois."
+seoTitle: "Ouvrir un cabinet de psychologue : s’installer en libéral"
+description: "S’installer en libéral comme psychologue et ouvrir un cabinet : ordre des démarches, statut, local, visibilité, check-list et plan 30 jours."
 pubDate: "2026-04-11"
-updatedDate: "2026-08-13"
+updatedDate: "2026-08-24"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-liberal-installation.webp"
 tags: ["psychologue", "installation en libéral", "référencement local cabinet", "site web cabinet"]
@@ -11,6 +11,12 @@ installationGuideHub: true
 faq:
   - question: "Comment ouvrir un cabinet de psychologue en 2026 ?"
     answer: "En cinq étapes : clarifier ton projet clinique, vérifier ton titre et obtenir ton RPPS via l’ARS, déclarer ton activité indépendante (guichet unique INPI), choisir statut et régime fiscal, puis préparer le lieu d’exercice et ta visibilité (fiche Google, site)."
+  - question: "Comment s’installer en libéral comme psychologue ?"
+    answer: "C’est le même parcours que pour ouvrir un cabinet : clarifier le projet clinique, sécuriser le titre (ARS / RPPS), déclarer l’activité à l’INPI, choisir le régime fiscal, puis le lieu d’exercice et la visibilité. L’ordre compte plus que la vitesse."
+  - question: "Installation psychologue libéral : par quoi commencer ?"
+    answer: "Par le projet (public, cadre, rythme, seuil de viabilité), puis le RPPS, puis l’INPI. Le local et le site viennent ensuite, pas en premier."
+  - question: "« Devenir psychologue libéral », est-ce la même chose que s’installer ?"
+    answer: "Non. Devenir psychologue, c’est d’abord obtenir le titre (diplôme reconnu). S’installer en libéral, c’est exercer une fois ce titre acquis : RPPS, déclaration d’activité, cadre d’exercice et visibilité. Ce guide ne traite pas la formation."
   - question: "Quel diplôme pour ouvrir un cabinet de psychologie ?"
     answer: "Il faut pouvoir faire usage légal du titre de psychologue (diplôme reconnu et enregistrement professionnel). Sans titre et sans enregistrement (ARS / RPPS), tu ne peux pas t’installer ni communiquer comme psychologue."
   - question: "Est-il possible d'ouvrir un cabinet de psychologue sans diplôme ?"
@@ -33,6 +39,12 @@ faq:
 
 Ce guide n’est **pas un document officiel**. Il ne constitue ni un avis juridique, ni un conseil comptable ou fiscal. C’est une carte pour te repérer. Les règles évoluent : seules les sources officielles et, si besoin, l’avis d’un professionnel du chiffre ou du droit font foi.
 
+## S’installer en libéral comme psychologue : par où commencer
+
+S’installer en libéral, ce n’est pas seulement trouver un local : c’est aligner cadre clinique, formalités et organisation. Derrière **« s’installer en libéral psychologue »** ou **« ouvrir cabinet psychologue »**, la question est la même : par quoi commencer ?
+
+Quand je me suis installé en libéral il y a plus de 15 ans, j’ai découvert tout ce que mon employeur gérait à ma place : patients, agenda, cotisations, trésorerie. Ce guide résume le processus d’**installation psychologue libéral** pour **ouvrir son cabinet** sans se disperser.
+
 ### Checklist — 5 étapes pour s’installer en libéral
 
 1. **Clarifier le projet** : public, cadre (cabinet / visio / hybride), rythme, seuil de viabilité.
@@ -42,10 +54,6 @@ Ce guide n’est **pas un document officiel**. Il ne constitue ni un avis juridi
 5. **Lieu + visibilité** : local tenable, fiche Google, site clair, ouverture progressive des créneaux.
 
 ![Checklist des démarches pour ouvrir un cabinet de psychologue](/images/guides/frise-checklist-demarches-installation.svg)
-
-Quand je me suis installé en libéral il y a plus de 15 ans, j’ai découvert tout ce que mon employeur gérait à ma place : patients, agenda, cotisations, trésorerie. Ce guide résume le processus d’**installation psychologue libéral** pour **ouvrir son cabinet** sans se disperser.
-
-S’installer en libéral, ce n’est pas seulement trouver un local : c’est aligner cadre clinique, formalités et organisation. Derrière **« s’installer en libéral psychologue »** ou **« ouvrir cabinet psychologue »**, la question est la même : par quoi commencer ?
 
 ## Les 7 chapitres du guide
 
@@ -61,7 +69,7 @@ Chaque chapitre reprend, en version complète, un bloc du parcours. Tu peux les 
 
 Compléments déjà en ligne : [salaire psychologue libéral](/blog/salaire-psychologue-liberal/), [installation 100 % visio](/blog/installer-psychologue-liberal-100-visio/), [trouver ses premiers patients](/blog/comment-trouver-premiers-patients-psychologue/).
 
-## S’installer en libéral comme psychologue : clarifier ton projet
+## Clarifier ton projet avant les démarches
 
 Le libéral attire pour de bonnes raisons : cadre qui te ressemble, lien plus direct avec ta pratique, possibilité de faire évoluer ton activité. Il a aussi un revers souvent sous-estimé : tu portes en parallèle la clinique et la gestion d’une petite activité (agenda, paiements, imprévus, irrégularité des revenus au début).
 
@@ -222,6 +230,18 @@ Aucune de ces erreurs n’est définitive. L’intérêt de les nommer tôt est 
 ### Comment ouvrir un cabinet de psychologue en 2026 ?
 
 En cinq étapes : clarifier ton projet clinique, vérifier ton titre et obtenir ton **RPPS** via l’ARS, déclarer ton activité indépendante (guichet unique INPI), choisir statut et régime fiscal, puis préparer le lieu d’exercice et ta visibilité (fiche Google, site).
+
+### Comment s’installer en libéral comme psychologue ?
+
+C’est le même parcours : projet clinique, titre (ARS / RPPS), déclaration INPI, régime fiscal, puis lieu d’exercice et visibilité. L’ordre compte plus que la vitesse.
+
+### Installation psychologue libéral : par quoi commencer ?
+
+Par le projet (public, cadre, rythme, seuil de viabilité), puis le RPPS, puis l’INPI. Le local et le site viennent ensuite, pas en premier.
+
+### « Devenir psychologue libéral », est-ce la même chose que s’installer ?
+
+Non. Devenir psychologue, c’est d’abord obtenir le titre (diplôme reconnu). S’installer en libéral, c’est exercer une fois ce titre acquis. Ce guide ne traite pas la formation.
 
 ### Quel diplôme pour ouvrir un cabinet de psychologie ?
 

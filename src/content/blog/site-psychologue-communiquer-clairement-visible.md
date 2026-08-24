@@ -4,7 +4,7 @@ seoTitle: "Psychologues : pourquoi mieux communiquer sur sa pratique"
 description: "Les pseudo-thérapeutes occupent largement l'espace numérique. Pourquoi et comment les psychologues peuvent rendre leur pratique et leur savoir-faire plus visibles."
 pubDate: "2026-08-21"
 author: "Nicolas Devaux"
-image: "../../assets/images/blog/site-psychologue-communication-claire.webp"
+image: "../../assets/images/blog/psychologues-reprendre-parole-en-ligne.webp"
 tags: ["psychologue", "psychomotricien", "site web cabinet", "réseaux sociaux"]
 faq:
   - question: "Pourquoi les psychologues communiquent-ils peu sur leur pratique ?"

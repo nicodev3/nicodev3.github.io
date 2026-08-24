@@ -14,6 +14,7 @@ import InstallationChapterNav from '../../components/InstallationChapterNav.astr
 import GuidePdfCta from '../../components/GuidePdfCta.astro';
 import {
 	GUIDE_INSTALLATION_CLUSTER_IDS,
+	GUIDE_INSTALLATION_COMPLEMENT_IDS,
 	GUIDE_VISIBILITE_CLUSTER_IDS,
 	isInstallationClusterArticle,
 	toTagHref,
@@ -42,6 +43,10 @@ const clusterForPillar = GUIDE_VISIBILITE_CLUSTER_IDS.map((id) => allPosts.find(
 );
 
 const clusterForInstallation = GUIDE_INSTALLATION_CLUSTER_IDS.map((id) =>
+	allPosts.find((p) => p.id === id),
+).filter((p): p is CollectionEntry<'blog'> => Boolean(p));
+
+const complementsForInstallation = GUIDE_INSTALLATION_COMPLEMENT_IDS.map((id) =>
 	allPosts.find((p) => p.id === id),
 ).filter((p): p is CollectionEntry<'blog'> => Boolean(p));
 
@@ -167,6 +172,48 @@ const faqSchema =
 				})),
 			}
 		: null;
+
+const installationHowToSchema = entry.data.installationGuideHub
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: 'S’installer en libéral comme psychologue',
+			description: entry.data.description,
+			url: canonical,
+			step: [
+				{
+					'@type': 'HowToStep',
+					position: 1,
+					name: 'Clarifier le projet',
+					text: 'Définir le public, le cadre (cabinet, visio ou hybride), le rythme et un seuil de viabilité avant les formulaires.',
+				},
+				{
+					'@type': 'HowToStep',
+					position: 2,
+					name: 'Sécuriser le titre',
+					text: 'Rassembler les justificatifs du titre de psychologue et obtenir l’enregistrement ARS pour le numéro RPPS.',
+				},
+				{
+					'@type': 'HowToStep',
+					position: 3,
+					name: 'Déclarer l’activité',
+					text: 'Déclarer l’activité indépendante sur le guichet unique INPI (SIREN / SIRET), souscrire une RC Pro et ouvrir un compte dédié.',
+				},
+				{
+					'@type': 'HowToStep',
+					position: 4,
+					name: 'Choisir le cadre fiscal',
+					text: 'Opter pour l’entreprise individuelle, puis le micro-BNC ou le réel, et anticiper TVA et CFE.',
+				},
+				{
+					'@type': 'HowToStep',
+					position: 5,
+					name: 'Lieu et visibilité',
+					text: 'Choisir un local tenable, publier une fiche Google cohérente, mettre en ligne un site clair et ouvrir les créneaux progressivement.',
+				},
+			],
+		}
+	: null;
 ---
 
 <Layout
@@ -185,6 +232,9 @@ const faqSchema =
 			<script type="application/ld+json" set:html={JSON.stringify(guideClusterItemListSchema)} />
 		)}
 		{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+		{installationHowToSchema && (
+			<script type="application/ld+json" set:html={JSON.stringify(installationHowToSchema)} />
+		)}
 	</Fragment>
 	<Hero
 		title={entry.data.title}
@@ -438,6 +488,24 @@ const faqSchema =
 						</li>
 					))}
 				</ul>
+				{entry.data.installationGuideHub && complementsForInstallation.length > 0 && (
+					<div class="mt-10">
+						<h3 class="text-lg font-semibold text-foreground mb-4">Compléments</h3>
+						<ul class="space-y-3">
+							{complementsForInstallation.map((post) => (
+								<li>
+									<a href={`/blog/${post.id}/`} class="group flex items-start gap-3 text-muted hover:text-primary">
+										<span class="text-foreground group-hover:text-primary mt-0.5">→</span>
+										<span class="font-medium group-hover:underline">{post.data.title}</span>
+										<span class="text-sm text-muted">
+											{new Date(post.data.pubDate).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
+										</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+				)}
 			</div>
 		</section>
 	)}

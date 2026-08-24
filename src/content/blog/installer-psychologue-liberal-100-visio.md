@@ -1,7 +1,7 @@
 ---
-title: 'S’installer psychologue en libéral 100 % visio'
-seoTitle: 'Psychologue 100 % visio : installation libérale et visibilité'
-description: 'S’installer psychologue en libéral 100 % visio : cadre clinique, outils, limites de Google Business Profile et visibilité grâce à un site professionnel.'
+title: 'Psychologue 100 % visio : cadre, outils et visibilité'
+seoTitle: 'Psychologue 100 % visio : cadre, outils et visibilité'
+description: 'Exercer psychologue en 100 % visio : cadre clinique, outils, limites de Google Business Profile et visibilité grâce à un site professionnel.'
 pubDate: '2026-06-25'
 author: 'Nicolas Devaux'
 image: '../../assets/images/blog/installation-psychologue-liberal.webp'
@@ -17,7 +17,7 @@ faq:
 
 _Temps de lecture : 11 minutes_
 
-S’installer comme psychologue en libéral 100 % visio peut sembler plus simple qu’ouvrir un cabinet physique : pas de bail, pas de salle d’attente, pas de plaque professionnelle, pas de trajets. Sur le papier, il suffit d’un ordinateur, d’une connexion correcte et d’un agenda en ligne.
+Exercer en **100 % visio** peut sembler plus simple qu’ouvrir un cabinet physique : pas de bail, pas de salle d’attente, pas de plaque professionnelle, pas de trajets. Sur le papier, il suffit d’un ordinateur, d’une connexion correcte et d’un agenda en ligne.
 
 En pratique, le sujet est plus subtil. Une activité entièrement à distance change votre cadre clinique, vos outils, votre façon d’être trouvé et la manière dont les patients évaluent votre sérieux avant de prendre rendez-vous. Vous n’ouvrez pas seulement un cabinet “sans local” : vous construisez un dispositif de consultation dont le lieu principal est numérique.
 
@@ -271,7 +271,7 @@ Oui, s’il est bien pensé. Un site ne garantit pas un nombre de rendez-vous, m
 
 ## En résumé
 
-S’installer psychologue en libéral 100 % visio n’est pas une version simplifiée de l’installation en cabinet. C’est un modèle spécifique, avec moins de contraintes matérielles, mais davantage d’exigences sur le cadre numérique, la confidentialité et la visibilité.
+Le 100 % visio n’est pas une version simplifiée de l’installation en cabinet. C’est un modèle spécifique, avec moins de contraintes matérielles, mais davantage d’exigences sur le cadre numérique, la confidentialité et la visibilité.
 
 Le point décisif est souvent celui-ci : sans adresse de cabinet exploitable et sans fiche Google Business Profile adaptée, votre site devient votre principal espace de référence. Il doit présenter votre pratique avec justesse, rassurer sans promettre, expliquer la visio avec précision et permettre à Google de comprendre pour quelles recherches vous êtes pertinent.
 

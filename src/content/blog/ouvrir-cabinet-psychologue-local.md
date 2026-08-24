@@ -1,14 +1,14 @@
 ---
-title: "Choisir son local de psychologue : sous-location, domicile ou bail"
-seoTitle: "Local de psychologue : sous-location, domicile ou bail en 2026"
+title: "Local de psychologue : sous-location, domicile ou bail"
+seoTitle: "Local de psychologue : sous-location, domicile ou bail"
 description: "Comment choisir son local de psychologue : domicile, sous-location, bail, maison de santé, accessibilité PMR, confidentialité, assurances et budget."
 pubDate: "2026-08-13"
-updatedDate: "2026-08-16"
+updatedDate: "2026-08-24"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
 tags: ["psychologue", "installation en libéral", "cadre déontologique"]
 faq:
-  - question: "Faut-il un local pour ouvrir un cabinet de psychologue ?"
+  - question: "Faut-il un local pour exercer en libéral ?"
     answer: "Pas forcément un bail à temps plein. Beaucoup démarrent en sous-location à temps partagé. L’exercice à domicile est possible sous conditions, mais il pose des questions de confidentialité, de bail et parfois d’autorisation."
   - question: "La sous-location d’un cabinet de psychologue est-elle une bonne idée au début ?"
     answer: "Souvent oui : coût réduit, cadre déjà professionnel, montée progressive. Le point clé n’est pas seulement le prix, c’est la solidité juridique (autorisation dans le bail principal, accord écrit, assurance)."
@@ -20,11 +20,13 @@ faq:
 
 *Temps de lecture : environ 13 minutes*
 
-Le choix d’un **local de psychologue** n’est pas un simple détail logistique. Domicile, sous-location, bail professionnel ou maison de santé : chaque formule influence la confidentialité, le confort du patient, ton confort de travail, ton budget et même la manière dont ton activité pourra grandir.
+Ce chapitre du [guide pour ouvrir un cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/) traite uniquement du **lieu d’exercice** : domicile, sous-location, bail ou maison de santé. Pour le parcours complet (ARS, statut, visibilité), commence par le guide.
+
+Le choix d’un **local de psychologue** n’est pas un simple détail logistique. Chaque formule influence la confidentialité, le confort du patient, ton confort de travail, ton budget et même la manière dont ton activité pourra grandir.
 
 Il n’existe pas un « bon » modèle unique. Le bon cabinet est surtout celui qui protège le cadre clinique tout en restant soutenable financièrement au stade où tu en es.
 
-Ce chapitre fait partie du [guide pour ouvrir un cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/). Si tu exerces **100 % visio**, lis aussi le [guide dédié](/blog/installer-psychologue-liberal-100-visio/).
+Si tu exerces **100 % visio**, lis aussi le [guide dédié](/blog/installer-psychologue-liberal-100-visio/).
 
 ## Les grandes options pour s’installer
 

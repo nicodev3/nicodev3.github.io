@@ -4,7 +4,12 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import BlogCard from '../components/BlogCard.astro';
 import { BLOG_TAG_ORDER } from '../data/blog-tags';
-import { comparePostsByPubDateDesc, toTagHref } from '../utils/blog';
+import {
+	comparePostsByPubDateDesc,
+	GUIDE_INSTALLATION_PILLAR_SLUG,
+	GUIDE_VISIBILITE_PILLAR_SLUG,
+	toTagHref,
+} from '../utils/blog';
 import defaultBlogCover from '../assets/images/blog/development.webp';
 import blogHeroImage from '../assets/images/blog-image.webp';
 
@@ -25,18 +30,24 @@ const usedTags = new Set(posts.flatMap((p) => p.data.tags ?? []));
 const allTags = BLOG_TAG_ORDER.filter((tag) => usedTags.has(tag));
 
 const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
+
+const hubPosts = [GUIDE_INSTALLATION_PILLAR_SLUG, GUIDE_VISIBILITE_PILLAR_SLUG].map((id) => {
+	const post = posts.find((entry) => entry.id === id);
+	if (!post) throw new Error(`Blog : page pilier introuvable « ${id} »`);
+	return post;
+});
 ---
 
 <Layout 
 	title="Blog sites psychologues et psychomotriciens | Nicolas Devaux"
-	description="Conseils création de site pour psychologues et psychomotriciens : SEO local, visibilité Google, développement web et référencement."
+	description="Installation en libéral, visibilité Google et création de site pour psychologues et psychomotriciens."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero 
 		title="Blog" 
-		subtitle="Conseils et articles sur la création de sites internet pour cabinets de soin"
+		subtitle="Installation en libéral, visibilité Google et création de site pour cabinets de soin"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Blog' }]}
 		coverImage={blogHeroImage}
 		coverImageAlt="Bureau professionnel avec ordinateur, symbole des articles et conseils pour cabinets de soin"
@@ -57,23 +68,19 @@ const sortedPosts = [...posts].sort(comparePostsByPubDateDesc);
 					</div>
 				</nav>
 			)}
-			<aside class="mb-10 rounded-lg border border-border bg-surface p-6" aria-labelledby="blog-pages-piliers">
+			<aside class="mb-10" aria-labelledby="blog-pages-piliers">
 				<h2 id="blog-pages-piliers" class="type-eyebrow text-muted mb-3">Pages repères</h2>
-				<p class="max-w-3xl text-base leading-relaxed text-muted">
-					Pour passer des articles à une prestation, consultez la page{' '}
-					<a href="/creation-site-internet-psychologue/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
-						création de site internet pour psychologue
-					</a>
-					, la page{' '}
-					<a href="/referencement-site-psychologue/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
-						référencement pour psychologue
-					</a>
-					{' '}ou le{' '}
-					<a href="/blog/installer-liberal-psychologue-par-ou-commencer/" class="font-medium text-foreground underline-offset-2 hover:text-primary hover:underline">
-						guide d’installation en libéral
-					</a>
-					.
-				</p>
+				<div class="grid gap-4 sm:grid-cols-2">
+					{hubPosts.map((post) => (
+						<a
+							href={`/blog/${post.id}/`}
+							class="rounded-lg border border-border bg-surface p-6 transition-colors hover:border-primary/40 hover:bg-white"
+						>
+							<p class="text-sm font-semibold text-foreground">{post.data.title}</p>
+							<p class="mt-2 text-sm leading-relaxed text-muted">{post.data.description}</p>
+						</a>
+					))}
+				</div>
 			</aside>
 			{sortedPosts.length === 0 ? (
 				<p class="text-center text-muted py-12">Aucun article pour le moment.</p>

@@ -39,6 +39,12 @@ export const GUIDE_INSTALLATION_CLUSTER_IDS = [
   'cadre-premiers-patients-psychologue-liberal',
 ] as const;
 
+/** Compléments du pilier (pas des chapitres) : visio et premiers patients. */
+export const GUIDE_INSTALLATION_COMPLEMENT_IDS = [
+  'installer-psychologue-liberal-100-visio',
+  'comment-trouver-premiers-patients-psychologue',
+] as const;
+
 export const GUIDE_INSTALLATION_CHAPTERS = [
   {
     id: 'preparer-installation-psychologue-liberal',

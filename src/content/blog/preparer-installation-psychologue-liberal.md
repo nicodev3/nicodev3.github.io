@@ -1,14 +1,15 @@
 ---
-title: "S’installer en libéral comme psychologue : se préparer avant les démarches"
-seoTitle: "S’installer en libéral psychologue : préparer son projet 2026"
-description: "S’installer en libéral comme psychologue : clarifier la pratique, cumul salarié, business plan simple, lecture du territoire et appuis cliniques avant l’ARS et l’INPI."
+title: "Préparer son projet avant l’installation en libéral"
+seoTitle: "Préparer son projet d’installation en libéral 2026"
+description: "Préparer son projet d’installation en libéral : public, cumul salarié, seuil de viabilité, lecture du territoire et appuis cliniques avant l’ARS et l’INPI."
 pubDate: "2026-08-13"
+updatedDate: "2026-08-24"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/installation-psychologue-liberal.webp"
 tags: ["psychologue", "installation en libéral"]
 faq:
-  - question: "Par où commencer pour s’installer en libéral comme psychologue ?"
-    answer: "Par le projet clinique, pas par les formulaires. Clarifie le public, le cadre (cabinet, visio, hybride), le rythme, un seuil de viabilité simple, puis seulement les démarches ARS et INPI."
+  - question: "Que préparer avant les démarches ARS et INPI ?"
+    answer: "Le projet clinique, pas les formulaires. Clarifie le public, le cadre (cabinet, visio, hybride), le rythme, un seuil de viabilité simple, puis seulement les démarches ARS et INPI."
   - question: "Peut-on cumuler salariat et libéral en tant que psychologue ?"
     answer: "Oui, c’est souvent la transition la plus soutenable. Beaucoup démarrent avec quelques créneaux en cabinet tout en gardant un poste. Si tu es fonctionnaire, une autorisation hiérarchique est en principe nécessaire."
   - question: "Faut-il un business plan pour ouvrir un cabinet de psychologue ?"
