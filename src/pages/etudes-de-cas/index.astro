@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import { ArrowRight } from "@lucide/astro";
+import CtaSection from "../../components/CtaSection.astro";
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import { caseStudies } from "../../data/case-studies";
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const pageUrl = new URL("/etudes-de-cas/", baseUrl).toString();
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: new URL("/", baseUrl).toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Études de cas",
+      item: pageUrl,
+    },
+  ],
+};
+---
+
+<Layout
+  title="Études de cas : sites et SEO pour psychologues | Nicodev"
+  description="Découvrez quatre projets de création, refonte et référencement de sites pour psychologues et psychothérapeutes, avec leurs enjeux et premières données."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <Hero
+    title="Quatre sites, quatre problèmes de visibilité"
+    subtitle="Un ancien WordPress, un site difficile à maintenir, une présence Wix peu visible et une installation dans une ville concurrentielle : voici comment chaque projet a été abordé."
+    variant="light"
+    breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Études de cas" }]}
+  >
+    <div slot="before" class="type-eyebrow mb-4 text-primary">Études de cas</div>
+  </Hero>
+
+  <section class="section-y border-b border-border bg-white">
+    <div class="shell-layout">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <h2 class="mb-4 text-3xl font-semibold text-foreground sm:text-4xl">
+          Au-delà de la capture d’écran
+        </h2>
+        <p class="text-lg leading-relaxed text-muted">
+          Ces études racontent la situation de départ, les choix réalisés et les premiers changements observés. Lorsque nous présentons des chiffres, nous expliquons simplement ce qu’ils signifient et sur quelle période ils ont été relevés.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        {
+          caseStudies.map((study) => (
+            <article class="group flex flex-col overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-md motion-reduce:hover:translate-y-0">
+              <div class="aspect-16/10 overflow-hidden border-b border-border bg-surface">
+                <Image
+                  src={study.image}
+                  alt={study.imageAlt}
+                  class="h-full w-full object-contain object-center"
+                  widths={[480, 720, 960]}
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex grow flex-col p-6 sm:p-7">
+                <p class="type-eyebrow mb-3 text-primary">
+                  {study.profession} · {study.location}
+                </p>
+                <h2 class="mb-3 text-2xl font-semibold leading-tight text-foreground">
+                  {study.person}
+                </h2>
+                <p class="mb-5 grow leading-relaxed text-muted">{study.summary}</p>
+                <a
+                  href={`/etudes-de-cas/${study.slug}/`}
+                  class="inline-flex w-fit items-center gap-2 rounded-sm font-semibold text-primary transition-colors hover:text-primary-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                  data-umami-event="case_study_open"
+                  data-umami-event-case={study.slug}
+                >
+                  Lire l’étude de cas
+                  <ArrowRight class="h-4 w-4 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" stroke-width={1.5} aria-hidden="true" />
+                </a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+
+      <aside class="mx-auto mt-12 max-w-4xl rounded-lg border border-border bg-surface p-6 sm:p-8" aria-labelledby="methodologie-donnees">
+        <h2 id="methodologie-donnees" class="mb-3 text-xl font-semibold text-foreground">
+          D’où viennent les chiffres ?
+        </h2>
+        <p class="leading-relaxed text-muted">
+          Google indique combien de fois un site a été affiché dans ses résultats et combien de personnes ont ensuite choisi de le visiter. Nous consultons ces informations dans Ahrefs. Certaines données complémentaires fournies par Ahrefs sont seulement des estimations : elles sont toujours présentées comme telles et ne permettent pas, à elles seules, de connaître le nombre de prises de rendez-vous.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Votre site rencontre un problème similaire ?"
+    description="Nous pouvons partir de votre situation réelle : site absent, ancien, peu visible ou devenu difficile à faire évoluer."
+    primaryButton={{ text: "Faire le point sur votre visibilité", href: "/diagnostic-gratuit/", leadSource: "case_studies_index" }}
+    secondaryButton={{ text: "Voir toutes les réalisations", href: "/portfolio/" }}
+  />
+</Layout>

@@ -54,6 +54,8 @@ type PortfolioProject = {
   imageAlt?: string;
   /** Courte description du projet (ex. refonte WordPress). */
   description?: string;
+  /** Étude de cas détaillée publiée sur Nicodev. */
+  caseStudySlug?: string;
 };
 
 const breadcrumbSchema = {
@@ -84,6 +86,7 @@ const portfolioProjects: PortfolioProject[] = [
     location: "Soudan",
     year: 2026,
     profession: "psychotherapeute",
+    caseStudySlug: "pierre-dalarun",
     description:
       "Création d'un site vitrine pour présenter une approche psychocorporelle, les pratiques proposées et les consultations au cabinet ou en visio.",
     imageAlt:
@@ -109,6 +112,7 @@ const portfolioProjects: PortfolioProject[] = [
     year: 2026,
     profession: "psychologue",
     refonte2026: true,
+    caseStudySlug: "benedicte-donet",
     description:
       "Refonte d'un site WordPress avec optimisation des performances et SEO (psychologue en ligne, EMDR, trauma).",
     imageAlt:
@@ -122,6 +126,7 @@ const portfolioProjects: PortfolioProject[] = [
     year: 2018,
     profession: "psychologue",
     refonte2026: true,
+    caseStudySlug: "isabelle-leboeuf-joie-compassion",
     description:
       "Refonte visuelle et optimisation SEO d'un site WordPress (Joie & Compassion, TFC et programme MOOD).",
     imageAlt:
@@ -198,6 +203,7 @@ const portfolioProjects: PortfolioProject[] = [
     year: 2016,
     profession: "psychologue",
     refonte2026: true,
+    caseStudySlug: "laure-mesle-yaakoubi",
     imageAlt:
       "Site web psychologue à Montpellier — Laure Meslé Yaakoubi, capture page d’accueil",
   },
@@ -442,7 +448,20 @@ const portfolioHeroSubtitle =
                     )
                   }
                 </div>
-                <div class="mt-auto pt-1">
+                <div class="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-1">
+                  {
+                    project.caseStudySlug && (
+                      <a
+                        href={`/etudes-de-cas/${project.caseStudySlug}/`}
+                        class="portfolio-ref-card__link inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-primary transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                        data-umami-event="portfolio_case_study_click"
+                        data-umami-event-case={project.caseStudySlug}
+                      >
+                        <span class="portfolio-ref-card__link-text">Lire l’étude de cas</span>
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    )
+                  }
                   <a
                     href={project.url}
                     target="_blank"
@@ -486,6 +505,14 @@ const portfolioHeroSubtitle =
             Google
           </li>
         </ul>
+        <p class="mt-4 text-sm text-muted sm:text-base">
+          Pour découvrir le point de départ, les choix réalisés et les premières données disponibles, consultez aussi les{" "}
+          <a
+            href="/etudes-de-cas/"
+            class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+            >études de cas détaillées</a
+          >.
+        </p>
         <p class="mt-4 text-sm text-muted sm:text-base">
           Pour le détail des performances techniques (rapidité mobile, critères Google), voir la
           section dédiée sur la page{" "}
