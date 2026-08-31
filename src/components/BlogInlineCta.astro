@@ -104,7 +104,9 @@ const eventSource = articleId.replaceAll('-', '_');
       href={copy.primaryHref}
       class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
       data-lead-source={source}
-      data-umami-event={`lead_click_diagnostic_from_article_${eventSource}_inline`}
+      data-analytics-event="lead_click_diagnostic"
+      data-analytics-cta="diagnostic"
+      data-analytics-location={`article_${eventSource}_inline`}
     >
       {copy.primary}
     </a>

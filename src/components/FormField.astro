@@ -6,12 +6,13 @@ export interface Props {
 	type?: 'text' | 'email' | 'tel';
 	required?: boolean;
 	placeholder?: string;
+	autocomplete?: string;
 	options?: { value: string; label: string }[];
 	rows?: number;
 	variant?: 'input' | 'select' | 'textarea';
 }
 
-const { id, name, label, type = 'text', required = false, placeholder, options = [], rows = 6, variant = 'input' } = Astro.props;
+const { id, name, label, type = 'text', required = false, placeholder, autocomplete, options = [], rows = 6, variant = 'input' } = Astro.props;
 
 const inputClass =
 	"w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder:text-muted/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:border-transparent";
@@ -28,6 +29,7 @@ const inputClass =
 			name={name}
 			required={required}
 			placeholder={placeholder}
+			autocomplete={autocomplete}
 			class={inputClass}
 		/>
 	)}

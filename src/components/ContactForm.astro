@@ -26,13 +26,11 @@ if (import.meta.env.PROD && isCloudflareProduction && !formspreeUrl) {
 	);
 }
 
-const redirectUrl = import.meta.env.SITE
-	? new URL(isDevisMode ? '/merci/devis/' : '/merci/contact/', import.meta.env.SITE).href
-	: undefined;
+const redirectUrl = new URL(isDevisMode ? '/merci/devis/' : '/merci/contact/', Astro.url.origin).href;
 
 const formName = isDevisMode ? 'devis' : 'contact';
-const submitEvent = isDevisMode ? 'lead_submit_devis' : 'lead_submit_contact_simple';
-const startEvent = isDevisMode ? 'lead_start_devis' : 'lead_start_contact_simple';
+const submitEvent = isDevisMode ? 'lead_submit_devis' : 'lead_submit_contact';
+const startEvent = isDevisMode ? 'lead_start_devis' : 'lead_start_contact';
 const subject = isDevisMode ? '[nicodev.fr] Demande de devis' : '[nicodev.fr] Message de contact';
 const messageLabel = isDevisMode ? 'Votre projet *' : 'Votre message *';
 const messagePlaceholder = isDevisMode
@@ -56,9 +54,10 @@ const reassuranceText = isDevisMode
 		name={formName}
 		method="POST"
 		action={formspreeUrl}
-		data-umami-event={submitEvent}
+		data-submit-event={submitEvent}
 		data-umami-start-event={startEvent}
 		data-success-url={redirectUrl}
+		data-form-configured={Boolean(formspreeUrl).toString()}
 		class="space-y-6"
 	>
 		<input type="hidden" name="form-name" value={formName} />
@@ -69,12 +68,12 @@ const reassuranceText = isDevisMode
 			<input id="contact-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
 		</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<FormField id="contact-firstName" name="firstName" label="Prénom *" type="text" required />
-			<FormField id="contact-lastName" name="lastName" label="Nom *" type="text" required />
+			<FormField id="contact-firstName" name="firstName" label="Prénom *" type="text" autocomplete="given-name" required />
+			<FormField id="contact-lastName" name="lastName" label="Nom *" type="text" autocomplete="family-name" required />
 		</div>
 
-		<FormField id="contact-email" name="email" label="Email *" type="email" required />
-		<FormField id="contact-phone" name="phone" label="Téléphone" type="tel" />
+		<FormField id="contact-email" name="email" label="Email *" type="email" autocomplete="email" required />
+		<FormField id="contact-phone" name="phone" label="Téléphone" type="tel" autocomplete="tel" />
 
 		{
 			isDevisMode && (
@@ -128,7 +127,7 @@ const reassuranceText = isDevisMode
 			</svg>
 			<span data-contact-submit-text>{submitLabel}</span>
 		</button>
-		<p id="contact-form-feedback" class="hidden text-sm font-medium text-red-700 dark:text-red-400" role="alert" aria-live="polite"></p>
+		<p id="contact-form-feedback" class="hidden text-sm font-medium text-red-700 dark:text-red-400" role="alert" aria-live="polite" tabindex="-1"></p>
 		<p class="text-center text-xs text-muted">{reassuranceText}</p>
 	</form>
 </div>
@@ -138,8 +137,9 @@ const reassuranceText = isDevisMode
 		const form = document.getElementById('contact-form');
 		if (!form) return;
 		const startEvent = form.getAttribute('data-umami-start-event');
-		const submitEvent = form.getAttribute('data-umami-event');
+		const submitEvent = form.getAttribute('data-submit-event');
 		const successUrl = form.getAttribute('data-success-url');
+		const formConfigured = form.getAttribute('data-form-configured') === 'true';
 		const feedback = document.getElementById('contact-form-feedback');
 		const submitButton = form.querySelector('button[type="submit"]');
 		const submitLabelEl = submitButton?.querySelector('[data-contact-submit-text]');
@@ -150,12 +150,13 @@ const reassuranceText = isDevisMode
 		const trackStart = () => {
 			if (started) return;
 			started = true;
-			if (startEvent && window.umami && typeof window.umami.track === 'function') {
-				window.umami.track(startEvent);
+			if (startEvent === 'lead_start_devis' || startEvent === 'lead_start_contact') {
+				const formName = startEvent === 'lead_start_devis' ? 'devis' : 'contact';
+				window.nicodevAnalytics?.track(startEvent, { form: formName }, `form-start:${formName}`);
 			}
 		};
 
-		form.addEventListener('focusin', trackStart, { once: true });
+		form.addEventListener('input', trackStart, { once: true });
 		form.addEventListener('change', trackStart, { once: true });
 
 		const messageField = form.querySelector('#contact-message');
@@ -172,23 +173,30 @@ const reassuranceText = isDevisMode
 			messageField.setSelectionRange(cursor, cursor);
 		}
 
+		let inFlight = false;
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
+			if (inFlight) return;
 			let redirecting = false;
 			if (feedback) {
 				feedback.textContent = '';
 				feedback.classList.add('hidden');
 			}
+			if (!formConfigured) {
+				if (feedback) {
+					feedback.textContent = 'Le formulaire est temporairement indisponible. Vous pouvez me contacter par WhatsApp.';
+					feedback.classList.remove('hidden');
+					feedback.focus();
+				}
+				return;
+			}
+			inFlight = true;
 			if (submitButton) {
 				submitButton.setAttribute('disabled', 'disabled');
 				submitButton.setAttribute('aria-busy', 'true');
 			}
 			if (submitSpinner) submitSpinner.classList.remove('hidden');
 			if (submitLabelEl) submitLabelEl.textContent = 'Envoi en cours…';
-			if (submitEvent && window.umami && typeof window.umami.track === 'function') {
-				window.umami.track(submitEvent);
-			}
-
 			try {
 				const response = await fetch(form.action, {
 					method: 'POST',
@@ -201,6 +209,10 @@ const reassuranceText = isDevisMode
 				if (!response.ok) {
 					throw new Error('Submission failed');
 				}
+				if (submitEvent === 'lead_submit_devis' || submitEvent === 'lead_submit_contact') {
+					const formName = submitEvent === 'lead_submit_devis' ? 'devis' : 'contact';
+					window.nicodevAnalytics?.track(submitEvent, { form: formName }, `form-submit:${formName}`);
+				}
 
 				if (successUrl) {
 					redirecting = true;
@@ -211,11 +223,13 @@ const reassuranceText = isDevisMode
 				form.reset();
 			} catch (_) {
 				if (feedback) {
-					feedback.textContent = 'Une erreur est survenue. Merci de réessayer dans un instant.';
+					feedback.textContent = 'L’envoi n’a pas abouti. Vos informations sont conservées : vérifiez votre connexion puis réessayez.';
 					feedback.classList.remove('hidden');
+					feedback.focus();
 				}
 			} finally {
 				if (!redirecting && submitButton) {
+					inFlight = false;
 					submitButton.removeAttribute('disabled');
 					submitButton.removeAttribute('aria-busy');
 				}

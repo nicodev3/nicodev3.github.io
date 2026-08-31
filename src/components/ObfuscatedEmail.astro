@@ -13,7 +13,7 @@ const visibleLabel = label ?? email;
 const fallbackLabel = label ?? 'contact [at] nicodev [dot] gmail [dot] com';
 ---
 
-<a href="#" class={className} data-obfuscated-email>{fallbackLabel}</a>
+<a href="#" class={className} data-obfuscated-email data-analytics-location="email_link">{fallbackLabel}</a>
 <script is:inline define:vars={{ userCodes, domainCodes, visibleLabel }}>
 	const anchor = document.currentScript?.previousElementSibling;
 	if (anchor instanceof HTMLAnchorElement) {

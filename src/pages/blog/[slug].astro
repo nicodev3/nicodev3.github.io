@@ -298,7 +298,9 @@ const installationHowToSchema = entry.data.installationGuideHub
 						href="/diagnostic-gratuit/"
 						class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
 						data-lead-source="guide-visibilite-hero"
-						data-umami-event="lead_click_diagnostic_from_guide_visibilite_hero"
+						data-analytics-event="lead_click_diagnostic"
+						data-analytics-cta="diagnostic"
+						data-analytics-location="guide_visibilite_hero"
 					>
 						Recevoir un avis sur mon site
 					</a>
@@ -317,7 +319,9 @@ const installationHowToSchema = entry.data.installationGuideHub
 						href="/diagnostic-gratuit/"
 						class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
 						data-lead-source="guide-installation-hero"
-						data-umami-event="lead_click_diagnostic_from_guide_installation_hero"
+						data-analytics-event="lead_click_diagnostic"
+						data-analytics-cta="diagnostic"
+						data-analytics-location="guide_installation_hero"
 					>
 						Diagnostic visibilité gratuit
 					</a>
@@ -402,11 +406,9 @@ const installationHowToSchema = entry.data.installationGuideHub
 							href="/diagnostic-gratuit/"
 							class="text-foreground font-medium hover:text-primary"
 							data-lead-source={entry.data.salaryGuideHub ? 'article-salaire-bottom' : 'guide-installation-bottom'}
-							data-umami-event={
-								entry.data.salaryGuideHub
-									? 'lead_click_diagnostic_from_article_salaire_bottom_text'
-									: 'lead_click_diagnostic_from_guide_installation_bottom_text'
-							}
+							data-analytics-event="lead_click_diagnostic"
+							data-analytics-cta="diagnostic"
+							data-analytics-location={entry.data.salaryGuideHub ? 'article_salaire_bottom_text' : 'guide_installation_bottom_text'}
 						>
 							diagnostic visibilité gratuit
 						</a>
@@ -443,14 +445,16 @@ const installationHowToSchema = entry.data.installationGuideHub
 									? 'guide-installation-bottom'
 									: undefined
 					}
-					data-umami-event={
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location={
 						entry.data.guidePillarHub
-							? 'lead_click_diagnostic_from_guide_visibilite_bottom'
+							? 'guide_visibilite_bottom'
 							: entry.data.salaryGuideHub
-								? 'lead_click_diagnostic_from_article_salaire_bottom'
+								? 'article_salaire_bottom'
 								: entry.data.installationGuideHub
-									? 'lead_click_diagnostic_from_guide_installation_bottom'
-									: 'lead_click_diagnostic_from_blog_bottom'
+									? 'guide_installation_bottom'
+									: 'blog_bottom'
 					}
 				>
 					{entry.data.installationGuideHub || entry.data.salaryGuideHub

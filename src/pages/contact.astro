@@ -101,7 +101,9 @@ const breadcrumbSchema = {
 										href={WHATSAPP_HREF}
 										target="_blank"
 										rel="noopener noreferrer"
-										data-umami-event="lead_click_whatsapp_from_contact_aside"
+										data-analytics-event="lead_click_whatsapp"
+										data-analytics-cta="whatsapp"
+										data-analytics-location="contact_aside"
 										class="font-medium text-[#128C7E] hover:text-[#25D366] transition-colors"
 									>
 										{WHATSAPP_DISPLAY}
@@ -176,7 +178,9 @@ const breadcrumbSchema = {
 							</a>
 							<a
 								href="/diagnostic-gratuit/"
-								data-umami-event="lead_click_cta_diagnostic_from_contact_simple"
+								data-analytics-event="lead_click_diagnostic"
+								data-analytics-cta="diagnostic"
+								data-analytics-location="contact_alternative"
 								class="btn-outline-terracotta inline-flex w-full items-center justify-between gap-3 rounded-lg border border-primary-foreground bg-transparent px-5 py-3 text-left font-semibold text-primary-foreground hover:bg-primary-foreground/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 							>
 								<span>Demander un diagnostic gratuit</span>
@@ -191,11 +195,4 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	<script is:inline>
-		(() => {
-			if (window.umami && typeof window.umami.track === 'function') {
-				window.umami.track('lead_view_contact_simple');
-			}
-		})();
-	</script>
 </Layout>

@@ -84,7 +84,7 @@ Analogie utile : Doctolib ressemble à une vitrine standard dans une galerie. To
   <h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">Ne laisse pas le site devenir un chantier de plusieurs mois.</h2>
   <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">Je crée des sites sobres pour psychologues : pages essentielles, structure SEO locale, mentions utiles, formulaire de contact et intégration de ton outil de rendez-vous. Tu restes concentré·e sur la clinique.</p>
   <div class="mt-5 flex flex-col gap-3 sm:flex-row">
-    <a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold" data-lead-source="guide-installation-visibilite-mid" data-umami-event="lead_click_diagnostic_from_guide_installation_visibilite_mid">Diagnostic visibilité gratuit</a>
+    <a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold" data-lead-source="guide-installation-visibilite-mid" data-analytics-event="lead_click_diagnostic" data-analytics-cta="diagnostic" data-analytics-location="guide_installation_visibilite_mid">Diagnostic visibilité gratuit</a>
     <a href="/creation-site-internet-psychologue/" class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface" data-umami-event="lead_click_creation_from_guide_installation_visibilite_mid">Création de site psychologue</a>
   </div>
 </div>

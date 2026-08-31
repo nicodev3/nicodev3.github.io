@@ -109,6 +109,10 @@ const ahrefsAnalyticsKey =
         defer
         src={umamiScriptSrc}
         data-website-id={umamiId}
+        data-domains="nicodev.fr,www.nicodev.fr"
+        data-exclude-search="true"
+        data-exclude-hash="true"
+        data-do-not-track="true"
       ></script>
     )}
     {ahrefsAnalyticsKey && (
@@ -138,6 +142,13 @@ const ahrefsAnalyticsKey =
     </main>
 
     <SiteFooter />
+
+    <script>
+      import { initAnalytics } from "../utils/analytics";
+
+      initAnalytics();
+      document.addEventListener("astro:page-load", initAnalytics);
+    </script>
 
     <script is:inline>
       (function () {

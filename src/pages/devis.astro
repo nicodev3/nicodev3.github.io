@@ -71,7 +71,7 @@ const breadcrumbSchema = {
 						<p class="text-muted mb-4">
 							Si vous hésitez sur la bonne direction, commencez par un diagnostic gratuit de votre situation actuelle.
 						</p>
-						<a href="/diagnostic-gratuit/" data-umami-event="lead_click_cta_diagnostic_from_devis" class="inline-flex items-center rounded-lg border border-border px-4 py-2 text-foreground hover:bg-white transition-colors">
+						<a href="/diagnostic-gratuit/" data-analytics-event="lead_click_diagnostic" data-analytics-cta="diagnostic" data-analytics-location="devis_alternative" class="inline-flex items-center rounded-lg border border-border px-4 py-2 text-foreground hover:bg-white transition-colors">
 							Demander un diagnostic gratuit
 						</a>
 					</div>
@@ -80,11 +80,4 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	<script is:inline>
-		(() => {
-			if (window.umami && typeof window.umami.track === 'function') {
-				window.umami.track('lead_view_devis');
-			}
-		})();
-	</script>
 </Layout>

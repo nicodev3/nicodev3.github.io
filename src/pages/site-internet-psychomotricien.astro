@@ -191,7 +191,9 @@ const breadcrumbSchema = {
 				target="_blank"
 				rel="noopener noreferrer"
 				class="inline-flex items-center gap-1.5 font-semibold text-primary-500 transition-colors hover:text-primary"
-				data-umami-event="lead_click_whatsapp_from_psychomotricien_page"
+				data-analytics-event="lead_click_whatsapp"
+				data-analytics-cta="whatsapp"
+				data-analytics-location="psychomotricien_page"
 			>
 				<MessageCircle class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
 				WhatsApp {SOCIAL_HANDLE_DISPLAY}
@@ -272,7 +274,7 @@ const breadcrumbSchema = {
 						<li><strong class="text-foreground">Parcours court</strong> — contact, téléphone ou lien de rendez-vous visible sur mobile.</li>
 					</ul>
 					<div class="mt-5 flex flex-col gap-3 sm:flex-row">
-						<a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold">Demander un diagnostic gratuit</a>
+						<a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold" data-analytics-event="lead_click_diagnostic" data-analytics-cta="diagnostic" data-analytics-location="psychomotricien_offer">Demander un diagnostic gratuit</a>
 						<a href="/tarifs/" class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-5 py-3 text-sm font-semibold text-foreground hover:bg-background">Voir les tarifs</a>
 					</div>
 				</div>

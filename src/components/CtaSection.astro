@@ -35,8 +35,10 @@ const {
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 const isAccentBand = variant === 'accent-band';
 
-const primarySuppressHeaderDiag =
-	new URL(primaryButton.href, Astro.site ?? Astro.url).pathname.replace(/\/+$/, '') === '/diagnostic-gratuit';
+const isDiagnosticHref = (href: string) =>
+	new URL(href, Astro.site ?? Astro.url).pathname.replace(/\/+$/, '') === '/diagnostic-gratuit';
+const primarySuppressHeaderDiag = isDiagnosticHref(primaryButton.href);
+const secondaryIsDiagnostic = isDiagnosticHref(secondaryButton.href);
 ---
 
 <section
@@ -75,7 +77,15 @@ const primarySuppressHeaderDiag =
 						: 'btn-primary-solid',
 				]}
 				{...(primarySuppressHeaderDiag ? { 'data-suppress-header-diagnostic-when-visible': true } : {})}
-				{...(primaryButton.umamiEvent ? { 'data-umami-event': primaryButton.umamiEvent } : {})}
+				{...(primarySuppressHeaderDiag
+					? {
+							'data-analytics-event': 'lead_click_diagnostic',
+							'data-analytics-cta': 'diagnostic',
+							'data-analytics-location': primaryButton.leadSource ?? 'cta_section',
+						}
+					: primaryButton.umamiEvent
+						? { 'data-umami-event': primaryButton.umamiEvent }
+						: {})}
 				{...(primaryButton.leadSource ? { 'data-lead-source': primaryButton.leadSource } : {})}
 			>
 				{primaryButton.text}
@@ -88,7 +98,15 @@ const primarySuppressHeaderDiag =
 						? 'rounded-xl border border-on-primary px-8 py-4 text-on-primary hover:bg-white/10'
 						: 'btn-outline-accent border-2 border-primary text-foreground hover:bg-background',
 				]}
-				{...(secondaryButton.umamiEvent ? { 'data-umami-event': secondaryButton.umamiEvent } : {})}
+				{...(secondaryIsDiagnostic
+					? {
+							'data-analytics-event': 'lead_click_diagnostic',
+							'data-analytics-cta': 'diagnostic',
+							'data-analytics-location': secondaryButton.leadSource ?? 'cta_section',
+						}
+					: secondaryButton.umamiEvent
+						? { 'data-umami-event': secondaryButton.umamiEvent }
+						: {})}
 				{...(secondaryButton.leadSource ? { 'data-lead-source': secondaryButton.leadSource } : {})}
 			>
 				{secondaryButton.text}

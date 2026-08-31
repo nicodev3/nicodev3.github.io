@@ -148,7 +148,9 @@ const sourceEvent = copy.source.replaceAll('-', '_');
 			href="/diagnostic-gratuit/"
 			class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
 			data-lead-source={copy.source}
-			data-umami-event={`lead_click_diagnostic_from_${sourceEvent}`}
+			data-analytics-event="lead_click_diagnostic"
+			data-analytics-cta="diagnostic"
+			data-analytics-location={sourceEvent}
 		>
 			{copy.primary}
 		</a>

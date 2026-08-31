@@ -7,9 +7,13 @@ export interface Props {
 	variant?: 'inline' | 'button';
 	/** Événement Umami au clic (optionnel). */
 	umamiEvent?: string;
+	/** Emplacement stable envoyé sans donnée personnelle. */
+	analyticsLocation?: string;
 }
 
-const { variant = 'button', umamiEvent } = Astro.props;
+const { variant = 'button', umamiEvent, analyticsLocation } = Astro.props;
+const legacyLocation = umamiEvent?.match(/_from_(.+)$/)?.[1];
+const location = analyticsLocation ?? legacyLocation ?? 'form';
 
 const linkClass =
 	variant === 'button'
@@ -42,7 +46,9 @@ const linkClass =
 		target="_blank"
 		rel="noopener noreferrer"
 		class={linkClass}
-		{...(umamiEvent ? { 'data-umami-event': umamiEvent } : {})}
+		data-analytics-event="lead_click_whatsapp"
+		data-analytics-cta="whatsapp"
+		data-analytics-location={location}
 	>
 		<MessageCircle size={18} stroke-width={1.75} class="shrink-0" aria-hidden="true" />
 		<span>{variant === 'button' ? 'Écrire sur WhatsApp' : WHATSAPP_DISPLAY}</span>

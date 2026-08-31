@@ -54,6 +54,7 @@ const outlineButtonClass = [
 
 const secondaryLinkClass =
 	'block text-center text-sm font-medium text-muted underline decoration-border underline-offset-4 transition-colors hover:text-foreground';
+const analyticsOffer = name.toLocaleLowerCase('fr').includes('sérénité') ? 'serenite' : 'visibilite';
 ---
 
 <article class={articleClass}>
@@ -101,9 +102,10 @@ const secondaryLinkClass =
 							href={subscribeHref}
 							class:list={primaryButtonClass}
 							rel="noopener noreferrer"
-							data-umami-event="stripe_payment_link_click"
-							data-umami-event-offer={name}
-							data-umami-event-source={source}
+							data-analytics-event="stripe_payment_link_click"
+							data-analytics-cta="stripe"
+							data-analytics-offer={analyticsOffer}
+							data-analytics-location={source}
 						>
 							{subscribeLabel}
 						</a>

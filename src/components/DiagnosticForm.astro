@@ -14,9 +14,7 @@ if (import.meta.env.PROD && isCloudflareProduction && !formspreeUrl) {
 	);
 }
 
-const redirectUrl = import.meta.env.SITE
-	? new URL('/merci/diagnostic/', import.meta.env.SITE).href
-	: undefined;
+const redirectUrl = new URL('/merci/diagnostic/', Astro.url.origin).href;
 
 const startEvent = 'lead_start_diagnostic';
 ---
@@ -33,9 +31,10 @@ const startEvent = 'lead_start_diagnostic';
 		name="diagnostic"
 		method="POST"
 		action={formspreeUrl}
-		data-umami-event="lead_submit_diagnostic"
+		data-submit-event="lead_submit_diagnostic"
 		data-umami-start-event={startEvent}
 		data-success-url={redirectUrl}
+		data-form-configured={Boolean(formspreeUrl).toString()}
 		class="space-y-6"
 	>
 		<input type="hidden" name="form-name" value="diagnostic" />
@@ -49,11 +48,11 @@ const startEvent = 'lead_start_diagnostic';
 		</p>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<FormField id="diagnostic-firstName" name="firstName" label="Prénom *" type="text" required />
-			<FormField id="diagnostic-lastName" name="lastName" label="Nom *" type="text" required />
+			<FormField id="diagnostic-firstName" name="firstName" label="Prénom *" type="text" autocomplete="given-name" required />
+			<FormField id="diagnostic-lastName" name="lastName" label="Nom *" type="text" autocomplete="family-name" required />
 		</div>
 
-		<FormField id="diagnostic-email" name="email" label="Email *" type="email" required />
+		<FormField id="diagnostic-email" name="email" label="Email *" type="email" autocomplete="email" required />
 
 		<FormField id="diagnostic-profession" name="profession" label="Votre profession *" required variant="select">
 			<option value="">Sélectionnez votre profession</option>
@@ -61,7 +60,7 @@ const startEvent = 'lead_start_diagnostic';
 			<option value="psychotherapeute">Psychothérapeute (titre + RPPS)</option>
 			<option value="psychomotricien">Psychomotricien</option>
 		</FormField>
-		<FormField id="diagnostic-city" name="city" label="Ville (ou zone) *" required placeholder="Paris 15, Sceaux, ... " />
+		<FormField id="diagnostic-city" name="city" label="Ville (ou zone) *" autocomplete="address-level2" required placeholder="Paris 15, Sceaux, ... " />
 
 		<FormField id="diagnostic-website" name="website" label="Site internet (si vous en avez un, ou une URL en projet)" type="text" placeholder="https://votre-site.fr — laissez vide si pas encore de site" />
 
@@ -99,11 +98,15 @@ const startEvent = 'lead_start_diagnostic';
 
 		<button
 			type="submit"
-			class="btn-primary-solid w-full rounded-lg px-5 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+			class="btn-primary-solid relative inline-flex w-full min-h-12 items-center justify-center gap-2 rounded-lg px-5 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-85"
 		>
-			Demander un diagnostic gratuit
+			<svg class="diagnostic-submit-spinner hidden h-5 w-5 shrink-0 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+				<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.4 0 0 5.4 0 12h4zm2 5.3A8 8 0 014 12H0c0 3 1.1 5.8 3 7.9l3-2.6z"></path>
+			</svg>
+			<span data-diagnostic-submit-text>Demander un diagnostic gratuit</span>
 		</button>
-		<p id="diagnostic-form-feedback" class="hidden text-sm text-red-700" role="alert" aria-live="polite"></p>
+		<p id="diagnostic-form-feedback" class="hidden text-sm font-medium text-red-700" role="alert" aria-live="polite" tabindex="-1"></p>
 		<p class="text-center text-xs text-muted">
 			Sans engagement. Vous recevez un retour concret avec priorités d'action.
 		</p>
@@ -115,14 +118,18 @@ const startEvent = 'lead_start_diagnostic';
 		const form = document.getElementById('diagnostic-form');
 		if (!form) return;
 		const startEvent = form.getAttribute('data-umami-start-event');
-		const submitEvent = form.getAttribute('data-umami-event');
+		const submitEvent = form.getAttribute('data-submit-event');
 		const successUrl = form.getAttribute('data-success-url');
+		const formConfigured = form.getAttribute('data-form-configured') === 'true';
 		const feedback = document.getElementById('diagnostic-form-feedback');
 		const submitButton = form.querySelector('button[type="submit"]');
+		const submitLabel = submitButton?.querySelector('[data-diagnostic-submit-text]');
+		const submitSpinner = submitButton?.querySelector('.diagnostic-submit-spinner');
+		const defaultSubmitLabel = submitLabel?.textContent?.trim() || '';
 		const sourcePageInput = form.querySelector('[data-source-page-input]');
 		const sourceParamInput = form.querySelector('[data-source-param-input]');
 
-		if (sourcePageInput instanceof HTMLInputElement) sourcePageInput.value = window.location.href;
+		if (sourcePageInput instanceof HTMLInputElement) sourcePageInput.value = window.location.pathname;
 		if (sourceParamInput instanceof HTMLInputElement) {
 			const urlSource = new URLSearchParams(window.location.search).get('source');
 			let storedSource = '';
@@ -131,31 +138,46 @@ const startEvent = 'lead_start_diagnostic';
 			} catch (_) {
 				storedSource = '';
 			}
-			sourceParamInput.value = urlSource || storedSource;
+			const source = urlSource || storedSource;
+			sourceParamInput.value = /^[a-z0-9_-]{1,80}$/i.test(source) ? source : '';
 		}
 
 		let started = false;
 		const trackStart = () => {
 			if (started) return;
 			started = true;
-			if (startEvent && window.umami && typeof window.umami.track === 'function') {
-				window.umami.track(startEvent);
+			if (startEvent === 'lead_start_diagnostic') {
+				window.nicodevAnalytics?.track(startEvent, { form: 'diagnostic' }, 'form-start:diagnostic');
 			}
 		};
 
-		form.addEventListener('focusin', trackStart, { once: true });
+		form.addEventListener('input', trackStart, { once: true });
 		form.addEventListener('change', trackStart, { once: true });
+		let inFlight = false;
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
+			if (inFlight) return;
 			if (feedback) {
 				feedback.textContent = '';
 				feedback.classList.add('hidden');
 			}
-			if (submitButton) submitButton.setAttribute('disabled', 'disabled');
-			if (submitEvent && window.umami && typeof window.umami.track === 'function') {
-				window.umami.track(submitEvent);
+			if (!formConfigured) {
+				if (feedback) {
+					feedback.textContent = "Le formulaire est temporairement indisponible. Vous pouvez me contacter par WhatsApp.";
+					feedback.classList.remove('hidden');
+					feedback.focus();
+				}
+				return;
 			}
+			inFlight = true;
+			if (submitButton) {
+				submitButton.setAttribute('disabled', 'disabled');
+				submitButton.setAttribute('aria-busy', 'true');
+			}
+			if (submitSpinner) submitSpinner.classList.remove('hidden');
+			if (submitLabel) submitLabel.textContent = 'Envoi en cours…';
 
+			let redirecting = false;
 			try {
 				const response = await fetch(form.action, {
 					method: 'POST',
@@ -168,8 +190,12 @@ const startEvent = 'lead_start_diagnostic';
 				if (!response.ok) {
 					throw new Error('Submission failed');
 				}
+				if (submitEvent === 'lead_submit_diagnostic') {
+					window.nicodevAnalytics?.track(submitEvent, { form: 'diagnostic' }, 'form-submit:diagnostic');
+				}
 
 				if (successUrl) {
+					redirecting = true;
 					window.location.href = successUrl;
 					return;
 				}
@@ -177,11 +203,20 @@ const startEvent = 'lead_start_diagnostic';
 				form.reset();
 			} catch (_) {
 				if (feedback) {
-					feedback.textContent = "Une erreur est survenue. Merci de reessayer dans un instant.";
+					feedback.textContent = "L’envoi n’a pas abouti. Vos informations sont conservées : vérifiez votre connexion puis réessayez.";
 					feedback.classList.remove('hidden');
+					feedback.focus();
 				}
 			} finally {
-				if (submitButton) submitButton.removeAttribute('disabled');
+				if (!redirecting) {
+					inFlight = false;
+					if (submitButton) {
+						submitButton.removeAttribute('disabled');
+						submitButton.removeAttribute('aria-busy');
+					}
+					if (submitSpinner) submitSpinner.classList.add('hidden');
+					if (submitLabel && defaultSubmitLabel) submitLabel.textContent = defaultSubmitLabel;
+				}
 			}
 		});
 	})();

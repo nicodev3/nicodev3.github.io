@@ -54,11 +54,13 @@ const breadcrumbSchema = {
 				</div>
 				<div class="space-y-6">
 					<div class="rounded-lg border border-border bg-white p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-3">Ce diagnostic inclut</h3>
+						<h3 class="text-xl font-semibold text-foreground mb-3">Les points vérifiés</h3>
 						<ul class="space-y-2 text-muted">
-							<li>Un regard externe sur votre visibilité (site, fiche Google, profils en ligne).</li>
-							<li>Trois priorités concrètes adaptées à votre stade (installation, lancement site, refonte).</li>
-							<li>Une orientation honnête vers la formule la plus adaptée — ou vers « pas maintenant » si c’est pertinent.</li>
+							<li>La clarté de votre positionnement et de vos informations essentielles.</li>
+							<li>Votre visibilité locale sur le site, la fiche Google et les profils en ligne.</li>
+							<li>Le parcours jusqu’à la prise de rendez-vous ou au contact.</li>
+							<li>Les principaux problèmes techniques ou d’indexation repérables.</li>
+							<li>Trois recommandations prioritaires adaptées à votre situation.</li>
 						</ul>
 					</div>
 					<div class="rounded-lg border border-border bg-white p-6">
@@ -69,7 +71,7 @@ const breadcrumbSchema = {
 						</p>
 					</div>
 					<div class="rounded-lg border border-border bg-white p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-3">Vous etes deja decide ?</h3>
+						<h3 class="text-xl font-semibold text-foreground mb-3">Votre projet est déjà défini&nbsp;?</h3>
 						<p class="text-muted mb-4">
 							Si votre besoin est déjà cadré, vous pouvez passer directement à la demande de devis.
 						</p>
@@ -82,11 +84,4 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	<script is:inline>
-		(() => {
-			if (window.umami && typeof window.umami.track === 'function') {
-				window.umami.track('lead_view_diagnostic');
-			}
-		})();
-	</script>
 </Layout>
