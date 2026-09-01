@@ -59,6 +59,12 @@ export const homeFaqItems: HomeFaqItem[] = [
 			'Non. Les offres sont sans engagement de durée : vous pouvez arrêter l’abonnement à tout moment. Vous gardez ainsi de la souplesse si votre situation évolue.',
 	},
 	{
+		id: 'faq-propriete',
+		question: 'Le site m’appartient-il vraiment ?',
+		answer:
+			'Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L’abonnement rémunère sa création puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d’accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs.',
+	},
+	{
 		question: 'Est-ce adapté si je débute en libéral ?',
 		answer:
 			'Oui. Le site est justement pensé pour vous aider à être visible dès vos débuts, avec des textes clairs pour expliquer votre pratique, vos publics accompagnés et vos modalités d’accueil.',
@@ -72,7 +78,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 		id: 'faq-sortie',
 		question: 'Que se passe-t-il si j’arrête l’abonnement ?',
 		answer:
-			'Le site et les services associés (hébergement, mises à jour, support) s’arrêtent à la fin de la période déjà payée. Vous ne repartez pas les mains vides pour autant : le nom de domaine vous est transféré sur simple demande, et vous récupérez un export de vos contenus (textes et images fournies). Vous restez donc libre de continuer ailleurs avec votre adresse et vos textes.',
+			'L’hébergement, la maintenance, les modifications et le suivi assurés par Nicodev s’arrêtent à la fin de la période déjà payée. Sur simple demande, je vous transfère le nom de domaine et vous remets une copie exploitable du site, avec ses contenus et les éléments nécessaires à son réhébergement. Vous pouvez donc poursuivre avec le prestataire de votre choix sans repartir de zéro.',
 	},
 ];
 
@@ -85,6 +91,7 @@ const HOME_FAQ_SHORTLIST_IDS = [
 	'faq-doctolib-rdv',
 	'faq-site-existant',
 	'faq-modifications',
+	'faq-propriete',
 	'faq-engagement',
 	'faq-sortie',
 	'faq-delai',

@@ -1,5 +1,6 @@
 export const TARIFS_TRUST_SIGNALS = [
-	'Tout inclus',
-	'Paiement après livraison',
-	'Sans engagement de durée',
+	'Votre site vous appartient',
+	'Paiement après validation',
+	'Résiliation à tout moment',
+	'Transfert possible ailleurs',
 ] as const;

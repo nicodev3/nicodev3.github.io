@@ -8,9 +8,9 @@ import PageSpeedScores from '../components/PageSpeedScores.astro';
 import FaqSection from '../components/FaqSection.astro';
 import tarifsHeroImage from '../assets/images/tarifs-image.webp';
 import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
-import { CalendarClock, LockOpen, PackageCheck } from '@lucide/astro';
+import { ArrowRightLeft, BadgeCheck, CalendarClock, PackageCheck } from '@lucide/astro';
 
-const tarifsHeroHighlightIcons = [PackageCheck, CalendarClock, LockOpen] as const;
+const tarifsHeroHighlightIcons = [BadgeCheck, PackageCheck, CalendarClock, ArrowRightLeft] as const;
 const tarifsHeroHighlights = TARIFS_TRUST_SIGNALS.map((label, index) => ({
 	Icon: tarifsHeroHighlightIcons[index],
 	label,
@@ -37,6 +37,7 @@ const platformCons = [
 
 const servicePros = [
 	'29-49€/mois tout inclus',
+	'Le site vous appartient et peut être transféré ailleurs',
 	"Je m'occupe de tout pour vous",
 	'Échange direct avec le développeur qui réalise vraiment votre site',
 	'Base professionnelle + adaptation attentive à votre pratique',
@@ -78,6 +79,11 @@ const tarifsFaqItems = [
 			"En général deux à trois semaines selon vos disponibilités et les contenus à fournir ; parfois un peu moins si tout arrive vite. Je travaille en étroite collaboration avec vous pour respecter votre calendrier."
 	},
 	{
+		question: "Le site m'appartient-il vraiment ?",
+		answer:
+			"Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L'abonnement rémunère sa création puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d'accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs."
+	},
+	{
 		question: "Puis-je résilier l'abonnement à tout moment ?",
 		answer:
 			"Oui, vous pouvez résilier à tout moment. Aucun engagement de durée ni pénalité liée à la seule résiliation : les prestations continuent jusqu'à la fin de la période mensuelle déjà facturée."
@@ -86,7 +92,7 @@ const tarifsFaqItems = [
 		id: 'faq-sortie',
 		question: "Si j'arrête, est-ce que je perds tout ?",
 		answer:
-			"Non. Le site et les services associés (hébergement, mises à jour, support) s'arrêtent à la fin de la période déjà payée, mais le nom de domaine vous est transféré sur simple demande, vers votre compte ou le prestataire de votre choix, et vous récupérez un export de vos contenus (textes et images fournies). Votre adresse et vos textes restent les vôtres, même si nous arrêtons de travailler ensemble."
+			"Non. L'hébergement, la maintenance, les modifications et le suivi assurés par Nicodev s'arrêtent à la fin de la période déjà payée. Sur simple demande, je vous transfère le nom de domaine et vous remets une copie exploitable du site, avec ses contenus et les éléments nécessaires à son réhébergement. Vous pouvez donc poursuivre avec le prestataire de votre choix sans repartir de zéro."
 	},
 	{
 		question: "La visibilité sur Google est-elle incluse ?",
@@ -105,7 +111,7 @@ const tarifsFaqItems = [
 	</Fragment>
 	<Hero
 		title="Tarifs Nicodev : abonnement site psychologue"
-		subtitle="Deux formules claires dès 29 €/mois : création, hébergement, nom de domaine et maintenance inclus pour votre site de psychologue."
+		subtitle="Deux formules dès 29 €/mois pour créer puis entretenir un site qui vous appartient, sans frais de création à avancer."
 		variant="light"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Tarifs' }]}
 		coverImage={tarifsHeroImage}
@@ -161,7 +167,7 @@ const tarifsFaqItems = [
 					Pourquoi un abonnement site psychologue mensuel ?
 				</h2>
 				<p class="mb-4 text-sm text-muted sm:text-base">
-					Un site n'est pas seulement un fichier mis en ligne une fois. Il faut une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. L'abonnement regroupe ces postes pour un tarif prévisible, sans petites factures séparées ni charge mentale technique.
+					L'abonnement n'est pas la location d'un site ni un droit d'accès à une plateforme. Il permet de ne pas avancer le coût de sa création, puis regroupe tout ce qui le fait vivre : une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. Vous disposez ainsi d'un tarif prévisible, sans petites factures séparées ni charge mentale technique.
 				</p>
 				<ul class="space-y-2 text-sm text-muted sm:text-base">
 					<li class="flex items-baseline gap-2">

@@ -50,7 +50,19 @@ const visibilityFeatures = [
 			</p>
 		</header>
 
-		<div class="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-10 pt-0 md:grid-cols-2 lg:gap-12">
+		<aside
+			class="mx-auto mt-8 max-w-4xl rounded-xl border border-primary/25 bg-white px-6 py-5 text-center shadow-sm sm:px-8"
+			aria-label="Propriété et liberté de transfert du site"
+		>
+			<p class="font-heading text-xl font-semibold text-foreground">Votre site, pas une location de plateforme</p>
+			<p class="mx-auto mt-2 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
+				Le site réalisé pour votre cabinet vous appartient. L’abonnement permet de ne pas avancer de frais de
+				création, puis couvre l’hébergement, la maintenance et le suivi. Si vous résiliez, je vous remets votre
+				nom de domaine et une copie exploitable du site pour le réhéberger où vous le souhaitez.
+			</p>
+		</aside>
+
+		<div class="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-10 pt-0 md:grid-cols-2 lg:gap-12">
 			<OfferCard
 				name="Sérénité"
 				price="29€"
@@ -106,7 +118,7 @@ const visibilityFeatures = [
 			</div>
 		</div>
 
-		<ul class="mx-auto mt-8 grid max-w-4xl gap-3 text-sm text-muted sm:grid-cols-3">
+		<ul class="mx-auto mt-8 grid max-w-4xl gap-3 text-sm text-muted sm:grid-cols-2 lg:grid-cols-4">
 			{TARIFS_TRUST_SIGNALS.map((label) => (
 				<li class="flex items-start gap-2">
 					<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-foreground"></span>
