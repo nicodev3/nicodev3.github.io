@@ -232,4 +232,4 @@ Les règles évoluent. Voici une base de références à revérifier :
 
 > ⚠️ **Attention.** Avant toute décision opérationnelle, valide chaque point avec les textes et organismes officiels en vigueur.
 
-Tu as maintenant le parcours complet : projet, démarches, statut, charges, cabinet, visibilité, accueil. Le [guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) rassemble le plan 30 jours et la check-list des pièces. Si tu veux un site qui pose déjà ton cadre (titre, publics, tarifs, mentions, prise de rendez-vous) sans y passer tes soirs, voir [création de site psychologue](/creation-site-internet-psychologue/).
+Tu as maintenant le parcours complet : projet, démarches, statut, charges, cabinet, visibilité, accueil. Le [guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) rassemble l’ordre des démarches et la liste des pièces. Si tu veux un site qui pose déjà ton cadre (titre, publics, tarifs, mentions, prise de rendez-vous) sans y passer tes soirs, voir [création de site psychologue](/creation-site-internet-psychologue/).
