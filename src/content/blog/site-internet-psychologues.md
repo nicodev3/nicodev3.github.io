@@ -155,31 +155,13 @@ Pour aller plus loin : [contactez-moi](/contact/) et [tarifs](/tarifs/).
 - Site lent ou peu lisible sur mobile.
 - Stratégies SEO artificielles (keyword stuffing, pages pauvres, liens douteux).
 
-## Plan d'action sur 30 jours
+## Par où commencer
 
-### Semaine 1 : audit rapide
+Commencez par relire les pages principales comme le ferait une personne qui ne vous connaît pas. Elle doit comprendre votre pratique, les publics reçus, les tarifs et la manière de prendre contact. Les informations pratiques doivent être identiques sur le site, la fiche d’établissement et les annuaires.
 
-- Vérifier clarté des pages clés.
-- Corriger incohérences d'informations pratiques.
-- Mesurer performance mobile.
+Vérifiez ensuite la lecture sur mobile et la rapidité du site. Si les contenus sont trop abstraits ou difficiles à parcourir, reprenez d’abord l’accueil et les pages consacrées à votre pratique avant d’ajouter de nouveaux articles.
 
-### Semaine 2 : refonte des contenus essentiels
-
-- Réécrire Accueil, Pratiques, Tarifs, Contact.
-- Uniformiser ton et structure Hn.
-- Ajouter preuves de sérieux utiles.
-
-### Semaine 3 : SEO local
-
-- Mettre à jour la fiche d'établissement.
-- Harmoniser nom/adresse/téléphone partout.
-- Ajouter données locales dans les pages.
-
-### Semaine 4 : publication éditoriale
-
-- Publier un article utile lié à une demande fréquente.
-- Créer 2 à 3 liens internes depuis les pages de service.
-- Suivre les pages qui génèrent des prises de contact.
+Le référencement local se travaille dans la continuité : une fiche d’établissement à jour, une adresse et un téléphone cohérents, des pages reliées entre elles et, lorsque vous avez quelque chose d’utile à expliquer, un contenu qui répond à une question réelle des patients.
 
 ## Questions fréquentes (FAQ)
 
@@ -211,6 +193,6 @@ Si vous souhaitez créer ou refondre votre site, commencez par un audit simple p
 
 À lire aussi :
 - [Refonte de site internet pour psychologue et psychomotricien](/blog/refonte-site-internet/)
-- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
-- [Création de site internet pour psychologue](/creation-site-internet-psychologue/) — offre et accompagnement
+- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) : guide pratique pour le référencement local
+- [Création de site internet pour psychologue](/creation-site-internet-psychologue/) : offre et accompagnement
 - [Création d'un site Internet](/blog/creation-site-internet/)

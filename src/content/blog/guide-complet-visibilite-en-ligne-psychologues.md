@@ -42,7 +42,7 @@ Un regard externe devient utile lorsque :
 - vous démarrez en libéral et voulez éviter de perdre du temps dans les mauvais réglages ;
 - vous voulez un site sobre, rapide et conforme sans gérer la technique.
 
-Dans ce cas, le <a href="/diagnostic-gratuit/" data-lead-source="guide-visibilite-section-diagnostic" data-analytics-event="lead_click_diagnostic" data-analytics-cta="diagnostic" data-analytics-location="guide_visibilite_section_diagnostic">diagnostic gratuit</a> sert à transformer la lecture en plan d’action : ce qui bloque, ce qui peut attendre, et ce qu’il serait pertinent de confier.
+Dans ce cas, le <a href="/diagnostic-gratuit/" data-lead-source="guide-visibilite-section-diagnostic" data-analytics-event="lead_click_diagnostic" data-analytics-cta="diagnostic" data-analytics-location="guide_visibilite_section_diagnostic">diagnostic gratuit</a> sert à distinguer ce qui bloque, ce qui peut attendre et ce qu’il serait pertinent de confier.
 
 ## Ce que recouvre la « visibilité en ligne » pour un cabinet
 

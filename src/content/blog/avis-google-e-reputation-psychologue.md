@@ -144,7 +144,7 @@ Cette discipline protège ce qui fait la valeur d'une consultation : le cadre, l
 
 ## Pour aller plus loin
 
-- [Guide complet de la visibilité en ligne pour psychologues](/blog/guide-complet-visibilite-en-ligne-psychologues/) — vue d'ensemble et plan d'action.
+- [Guide complet de la visibilité en ligne pour psychologues](/blog/guide-complet-visibilite-en-ligne-psychologues/) : vue d'ensemble et points de repère.
 - [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — étape par étape.
 - [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/) — structure, cadre déontologique, RGPD.
 - [Les promesses trop belles des offres « site psychologue »](/blog/site-internet-psychologue-promesses-trop-belles/) — repérer les modules problématiques.

@@ -39,7 +39,7 @@ Dans un cabinet, le patient perçoit rapidement certains repères : adresse, imm
 
 Ce n’est pas du marketing au mauvais sens du terme. C’est une manière de rendre votre cadre compréhensible pour des personnes qui ne pourront pas s’appuyer sur un lieu physique pour se représenter votre pratique.
 
-Si vous êtes encore au début de votre réflexion, commencez aussi par le guide général pour [s’installer en libéral comme psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/). Le 100 % visio est un cas particulier, mais il ne remplace pas les fondations administratives, fiscales et professionnelles — voir notamment [les démarches ARS / INPI](/blog/demarches-administratives-psychologue-liberal/) et [le cadre du local et de la visio](/blog/ouvrir-cabinet-psychologue-local/).
+Si vous êtes encore au début de votre réflexion, commencez aussi par le guide général pour [s’installer en libéral comme psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/). Le 100 % visio est un cas particulier, mais il ne remplace pas les fondations administratives, fiscales et professionnelles. Voir notamment [les démarches ARS / INPI](/blog/demarches-administratives-psychologue-liberal/) et [le cadre du local et de la visio](/blog/ouvrir-cabinet-psychologue-local/).
 
 ## La grande différence : vous perdez l’appui naturel du référencement local
 
@@ -233,23 +233,13 @@ Une stratégie plus réaliste consiste à construire un socle :
 
 Ce socle peut ensuite grandir. Mais il vaut mieux un dispositif sobre et cohérent qu’une présence partout, mal tenue, qui ne donne pas confiance.
 
-## Plan d’action pour les 30 premiers jours
+## Par où commencer
 
-### Semaine 1 : clarifier le cadre
+Commencez par préciser le cadre de la consultation : public reçu, limites de la visio, horaires, tarifs, règles d’annulation et outil utilisé. Vérifiez en même temps les démarches administratives et l’assurance.
 
-Définissez votre public prioritaire, vos limites de prise en charge en visio, vos horaires, vos tarifs, vos règles d’annulation et votre outil de consultation. Vérifiez aussi vos démarches administratives et votre assurance.
+Le site peut ensuite être préparé autour de quelques informations essentielles : votre approche, la consultation en visio, les tarifs et la manière de prendre contact. Il n’a pas besoin d’être très développé au départ, mais il doit être lisible sur mobile et cohérent avec votre outil de rendez-vous.
 
-### Semaine 2 : préparer le site
-
-Travaillez l’arborescence : accueil, visio, à propos, tarifs, contact, éventuellement une ou deux pages par public ou demande. C’est le bon moment pour vous faire accompagner si vous ne voulez pas perdre plusieurs semaines à improviser la structure, le design et le référencement.
-
-### Semaine 3 : publier les bases
-
-Mettez en ligne un site propre, rapide, lisible sur mobile, avec des informations cohérentes. Reliez-le à votre outil de rendez-vous ou à votre formulaire de contact.
-
-### Semaine 4 : installer les premiers signaux
-
-Sélectionnez les annuaires adaptés à la visio, informez votre réseau professionnel, ajoutez un ou deux contenus utiles, puis suivez les premiers contacts sans surinterpréter les chiffres. La visibilité se construit progressivement.
+Les annuaires et le réseau professionnel viennent en complément. Mieux vaut choisir les canaux que vous pourrez réellement tenir à jour, puis observer les demandes reçues sans tirer de conclusion trop vite.
 
 ## Questions fréquentes
 

@@ -117,7 +117,7 @@ Pour un psychologue en local, l’intérêt est double :
 
 Ce n’est pas une baguette magique : les données structurées **complètent** un site clair et une fiche complète. En revanche, les erreurs ou les blocs mal renseignés peuvent être ignorés, voire source de confusion. D’où l’intérêt d’une mise en place **propre et validée** (par exemple via les outils Google pour les enrichissements / la Search Console).
 
-Si vous ne souhaitez pas toucher au code ni au vocabulaire technique (schema.org, types `LocalBusiness` / `ProfessionalService`, etc.), c’est précisément le genre de chantier qu’il est pertinent de **confier à quelqu’un qui le fait au quotidien** — en gardant un contenu visible sobre et conforme à votre déontologie. Vous pouvez en parler lors d’un [diagnostic gratuit](/diagnostic-gratuit/) de votre visibilité locale.
+Si vous ne souhaitez pas toucher au code ni au vocabulaire technique (schema.org, types `LocalBusiness` / `ProfessionalService`, etc.), c’est précisément le genre de chantier qu’il est pertinent de **confier à quelqu’un qui le fait au quotidien**, tout en gardant un contenu visible sobre et conforme à votre déontologie. Vous pouvez en parler lors d’un [diagnostic gratuit](/diagnostic-gratuit/) de votre visibilité locale.
 
 ## Étape 3 : créer des pages locales sans tomber dans le contenu dupliqué
 
@@ -197,25 +197,13 @@ Chaque article doit relier naturellement :
 - votre expertise ;
 - un prochain pas clair (contact, prise de RDV, lecture complémentaire).
 
-## Plan d'action SEO local sur 30 jours
+## Par où commencer
 
-### Semaine 1
+Vérifiez d’abord la fiche Google Business Profile, la page de contact et la cohérence du nom, de l’adresse et du téléphone. Corrigez aussi les informations différentes ou anciennes qui subsistent dans les annuaires.
 
-- Créer ou corriger la fiche Google Business Profile.
-- Mettre à jour la page contact et les informations NAP.
-- Optimiser les balises clés de votre page locale principale.
+La page consacrée à votre ville doit apporter des informations réelles sur le cabinet et les modalités de consultation. Une courte FAQ peut être utile si elle répond à des questions effectivement posées par les patients.
 
-### Semaine 2
-
-- Publier ou améliorer la page "Psychologue + ville".
-- Ajouter une FAQ locale courte et utile.
-- Corriger les incohérences sur les annuaires prioritaires.
-
-### Semaines 3 et 4
-
-- Publier 1 à 2 contenus ciblant des intentions locales réelles.
-- Renforcer les preuves de confiance (mentions locales, partenaires, informations pratiques).
-- Suivre les performances et ajuster ce qui freine les prises de contact.
+Les contenus complémentaires viennent ensuite. Publiez lorsqu’un sujet mérite d’être expliqué, puis observez les visites et les prises de contact pour repérer ce qui reste peu clair.
 
 ## Comment mesurer si vous progressez vraiment
 
@@ -231,7 +219,7 @@ Suivez chaque mois des indicateurs simples :
 
 Pour un suivi utile, vous n'avez pas besoin de devenir technicien du web.
 
-L'idée est simplement de suivre trois choses :
+L'idée est simplement de suivre quelques repères :
 
 - combien de personnes vous trouvent sur Google ;
 - combien de personnes cliquent, appellent ou demandent un rendez-vous ;

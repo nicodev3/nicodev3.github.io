@@ -63,7 +63,7 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
     variant: 'independence',
   },
   'psychologue-premier-google-ville': {
-    beforeHeading: 'Plan d’action SEO local sur 30 jours',
+    beforeHeading: 'Par où commencer',
     variant: 'visibility',
   },
   'referencement-local-psychomotricien': {
@@ -107,7 +107,7 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
 		variant: 'site',
 	},
 	'installer-liberal-psychologue-par-ou-commencer': {
-		beforeHeading: 'Plan d’action sur 30 jours',
+		beforeHeading: 'Dans quel ordre avancer',
 		variant: 'site',
 	},
   'guide-complet-visibilite-en-ligne-psychologues': {

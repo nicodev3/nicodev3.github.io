@@ -148,7 +148,7 @@ La cohérence des informations (**nom, adresse, téléphone**) entre ces canaux 
 <div class="not-prose my-10 rounded-xl border border-primary/25 bg-primary-50 p-5 shadow-sm sm:p-6">
   <p class="type-eyebrow text-primary-700">Visibilité</p>
   <h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">Pas encore de site ? Faites d’abord le point sur votre présence en ligne.</h2>
-  <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">Fiche Google, profil Doctolib, cohérence des infos : je vous renvoie <strong class="text-foreground">trois priorités concrètes</strong>, avec ou sans projet de site.</p>
+  <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">Fiche Google, profil Doctolib, cohérence des informations : je vous indique ce qui mérite d’être revu, avec ou sans projet de site.</p>
   <div class="mt-5 flex flex-col gap-3 sm:flex-row">
     <a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold" data-lead-source="guide-installation-mid" data-analytics-event="lead_click_diagnostic" data-analytics-cta="diagnostic" data-analytics-location="guide_installation_mid">Diagnostic visibilité gratuit</a>
     <a href="/creation-site-internet-psychologue/" class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface" data-umami-event="lead_click_secondary_from_guide_installation_mid">Création de site psychologue</a>
