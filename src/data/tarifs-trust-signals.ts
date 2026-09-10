@@ -1,6 +1,6 @@
 export const TARIFS_TRUST_SIGNALS = [
-	'Votre site vous appartient',
-	'Paiement après validation',
+	'0 € de construction du site',
+	'29 € ou 49 € par mois',
 	'Résiliation à tout moment',
-	'Transfert possible ailleurs',
+	'Votre site vous appartient',
 ] as const;

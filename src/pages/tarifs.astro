@@ -8,9 +8,10 @@ import PageSpeedScores from '../components/PageSpeedScores.astro';
 import FaqSection from '../components/FaqSection.astro';
 import tarifsHeroImage from '../assets/images/tarifs-image.webp';
 import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
-import { ArrowRightLeft, BadgeCheck, CalendarClock, PackageCheck } from '@lucide/astro';
+import { PRICING_FAQ, PRICING_LEAD } from '../data/pricing';
+import { BadgeEuro, BadgeCheck, CalendarClock, Wallet } from '@lucide/astro';
 
-const tarifsHeroHighlightIcons = [BadgeCheck, PackageCheck, CalendarClock, ArrowRightLeft] as const;
+const tarifsHeroHighlightIcons = [BadgeEuro, Wallet, CalendarClock, BadgeCheck] as const;
 const tarifsHeroHighlights = TARIFS_TRUST_SIGNALS.map((label, index) => ({
 	Icon: tarifsHeroHighlightIcons[index],
 	label,
@@ -36,7 +37,7 @@ const platformCons = [
 ];
 
 const servicePros = [
-	'29-49€/mois tout inclus',
+	'0 € de construction, puis 29 ou 49 €/mois tout inclus',
 	'Le site vous appartient et peut être transféré ailleurs',
 	"Je m'occupe de tout pour vous",
 	'Échange direct avec le développeur qui réalise vraiment votre site',
@@ -48,19 +49,19 @@ const servicePros = [
 
 const tarifsFaqItems = [
 	{
+		id: PRICING_FAQ.id,
+		question: PRICING_FAQ.question,
+		answer: PRICING_FAQ.answer,
+	},
+	{
 		question: "Quels sont les tarifs Nicodev pour un site de psychologue ?",
 		answer:
-			"Chez Nicodev, le prix est présenté sous forme d'abonnement tout inclus : 29 €/mois pour l'offre Sérénité ou 49 €/mois pour l'offre Visibilité & Confiance. La création, l'hébergement, le nom de domaine et la maintenance sont intégrés au périmètre. Pour les fourchettes du marché (DIY, freelance, agence), voir le guide « combien coûte un site pour psychologue »."
+			"Aucun coût de base pour la construction : 0 € de frais de création. Ensuite un abonnement tout inclus : 29 €/mois pour l'offre Sérénité ou 49 €/mois pour l'offre Visibilité & Confiance. L'hébergement, le nom de domaine et la maintenance sont intégrés. Pour les fourchettes du marché (DIY, freelance, agence), voir le guide « combien coûte un site pour psychologue »."
 	},
 	{
 		question: "Que couvre l'abonnement site psychologue ?",
 		answer:
 			"L'abonnement couvre le socle du site : mise en ligne, hébergement, nom de domaine, CMS, bases SEO, fiche Google, maintenance, support et bouton de rendez-vous (Doctolib, Perfactive ou autre) lorsque vous en utilisez un. La formule à 49 €/mois ajoute une veille SEO d'expert (suivi, relecture et optimisation des contenus), 3 modifications simples par mois et une modernisation annuelle."
-	},
-	{
-		question: "Y a-t-il des frais d'installation pour l'abonnement ?",
-		answer:
-			"Non, aucun frais caché. La création de votre site est incluse dans l'abonnement. Vous commencez à payer seulement après la livraison de votre site."
 	},
 	{
 		id: 'faq-modifications',
@@ -81,7 +82,7 @@ const tarifsFaqItems = [
 	{
 		question: "Le site m'appartient-il vraiment ?",
 		answer:
-			"Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L'abonnement rémunère sa création puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d'accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs."
+			"Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L'abonnement rémunère d'abord la construction (sans facture séparée), puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d'accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs."
 	},
 	{
 		question: "Puis-je résilier l'abonnement à tout moment ?",
@@ -103,15 +104,15 @@ const tarifsFaqItems = [
 ---
 
 <Layout
-	title="Tarifs Nicodev : abonnement site psychologue dès 29 €/mois"
-	description="Abonnement site psychologue Nicodev : 29 ou 49 €/mois tout inclus (création, hébergement, domaine, maintenance). Formules et périmètre détaillés."
+	title="Tarifs Nicodev : 0 € de création, puis 29 ou 49 €/mois"
+	description="Aucun coût de base pour construire votre site psychologue. 0 € de frais de création, puis 29 € (Sérénité) ou 49 € (Visibilité) par mois, tout inclus."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero
-		title="Tarifs Nicodev : abonnement site psychologue"
-		subtitle="Deux formules dès 29 €/mois pour créer puis entretenir un site qui vous appartient, sans frais de création à avancer."
+		title="Tarifs : 0 € pour construire le site"
+		subtitle={PRICING_LEAD}
 		variant="light"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Tarifs' }]}
 		coverImage={tarifsHeroImage}
@@ -167,7 +168,7 @@ const tarifsFaqItems = [
 					Pourquoi un abonnement site psychologue mensuel ?
 				</h2>
 				<p class="mb-4 text-sm text-muted sm:text-base">
-					L'abonnement n'est pas la location d'un site ni un droit d'accès à une plateforme. Il permet de ne pas avancer le coût de sa création, puis regroupe tout ce qui le fait vivre : une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. Vous disposez ainsi d'un tarif prévisible, sans petites factures séparées ni charge mentale technique.
+					L'abonnement n'est pas la location d'un site ni un droit d'accès à une plateforme. Il n'y a pas de coût de base à payer pour la construction : 0 € de frais de création. L'abonnement mensuel regroupe ensuite tout ce qui fait vivre le site : une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. Vous disposez ainsi d'un tarif prévisible, sans petites factures séparées ni charge mentale technique.
 				</p>
 				<ul class="space-y-2 text-sm text-muted sm:text-base">
 					<li class="flex items-baseline gap-2">

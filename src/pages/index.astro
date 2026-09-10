@@ -16,6 +16,7 @@ import CtaSection from '../components/CtaSection.astro';
 import portraitImage from '../assets/images/nicodev.webp';
 import { INSTAGRAM_HREF, WHATSAPP_PHONE_E164 } from '../data/contact';
 import { homeFaqShortlist } from '../data/faq-home';
+import { compoundMonthlyPriceSpec } from '../data/pricing';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const siteRootHref = new URL('/', baseUrl).href;
@@ -44,7 +45,7 @@ const businessSchema = {
 	legalName: 'Nicolas Devaux — EI',
 	identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: '75103269900033' },
 	description:
-		'Création et référencement de sites internet pour psychologues, psychothérapeutes et psychomotriciens par un confrère développeur. Hébergement et maintenance inclus dès 29 EUR par mois.',
+		'Création et référencement de sites internet pour psychologues, psychothérapeutes et psychomotriciens par un confrère développeur. 0 EUR de frais de construction, puis 29 ou 49 EUR par mois tout inclus.',
 	url: siteRootHref,
 	telephone: `+${WHATSAPP_PHONE_E164}`,
 	address: {
@@ -67,24 +68,14 @@ const businessSchema = {
 		{
 			'@type': 'Offer',
 			name: 'Sérénité',
-			description: 'Création ou refonte du site, CMS, bases SEO, fiche Google, hébergement et maintenance inclus',
-			priceSpecification: {
-				'@type': 'UnitPriceSpecification',
-				price: '29',
-				priceCurrency: 'EUR',
-				unitText: 'MONTH'
-			}
+			description: 'Création ou refonte du site, CMS, bases SEO, fiche Google, hébergement et maintenance inclus. 0 EUR de frais de construction.',
+			priceSpecification: compoundMonthlyPriceSpec('29'),
 		},
 		{
 			'@type': 'Offer',
 			name: 'Visibilité & Confiance',
-			description: 'Veille SEO d’expert, relecture et optimisation des contenus, entretien dans la durée',
-			priceSpecification: {
-				'@type': 'UnitPriceSpecification',
-				price: '49',
-				priceCurrency: 'EUR',
-				unitText: 'MONTH'
-			}
+			description: 'Veille SEO d’expert, relecture et optimisation des contenus, entretien dans la durée. 0 EUR de frais de construction.',
+			priceSpecification: compoundMonthlyPriceSpec('49'),
 		}
 	]
 };
@@ -119,7 +110,7 @@ const faqSchema = {
 
 <Layout
 	title="Création de sites internet pour psychologues | Nicodev"
-	description="Psychologue, psychomotricien et psychothérapeute, je crée ou refais les sites de mes confrères en libéral : contenus, visibilité locale, hébergement dès 29 €/mois."
+	description="Psychologue, psychomotricien et psychothérapeute, je crée ou refais les sites de mes confrères en libéral : 0 € de construction, puis 29 € ou 49 €/mois tout inclus."
 	image={portraitImage}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />

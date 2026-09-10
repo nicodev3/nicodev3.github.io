@@ -1,6 +1,8 @@
 /**
  * FAQ affichée sur l’accueil — source unique pour le HTML et le JSON-LD FAQPage.
  */
+import { PRICING_FAQ } from './pricing';
+
 export interface HomeFaqItem {
 	id?: string;
 	question: string;
@@ -8,6 +10,11 @@ export interface HomeFaqItem {
 }
 
 export const homeFaqItems: HomeFaqItem[] = [
+	{
+		id: PRICING_FAQ.id,
+		question: PRICING_FAQ.question,
+		answer: PRICING_FAQ.answer,
+	},
 	{
 		id: 'faq-delai',
 		question:
@@ -62,7 +69,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 		id: 'faq-propriete',
 		question: 'Le site m’appartient-il vraiment ?',
 		answer:
-			'Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L’abonnement rémunère sa création puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d’accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs.',
+			'Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L’abonnement rémunère d’abord la construction (sans facture séparée, 0 € de frais de création), puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d’accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs.',
 	},
 	{
 		question: 'Est-ce adapté si je débute en libéral ?',
@@ -87,6 +94,7 @@ export const homeFaqItems: HomeFaqItem[] = [
  * La liste complète reste sur la page Tarifs.
  */
 const HOME_FAQ_SHORTLIST_IDS = [
+	'faq-cout-construction',
 	'faq-contenu',
 	'faq-doctolib-rdv',
 	'faq-site-existant',

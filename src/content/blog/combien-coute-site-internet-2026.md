@@ -42,7 +42,7 @@ Avant d'ouvrir un cabinet ou de refondre sa présence en ligne, beaucoup de psyc
 > | Option | Budget indicatif | Ce qu'il faut retenir |
 > | --- | --- | --- |
 > | **DIY** (Wix, WordPress…) | 50 à 375 € la 1ʳᵉ année + beaucoup de temps | Économique sur le papier, risque de rendu générique |
-> | **Abonnement tout inclus** (Nicodev) | 29 ou 49 €/mois | Création, hébergement, domaine, maintenance |
+> | **Abonnement tout inclus** (Nicodev) | 0 € de construction, puis 29 ou 49 €/mois | Création incluse, hébergement, domaine, maintenance |
 > | **Freelance / prestation classique** | 1 000 à 3 000 € au lancement | Bon rendu possible, maintenance souvent en plus |
 > | **Agence** | Souvent au-delà de 3 000 € | Pertinent surtout pour des besoins complexes |
 

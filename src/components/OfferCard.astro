@@ -16,6 +16,9 @@ export interface Props {
 	badgeText?: string;
 	/** Page d’où la carte est affichée (accueil, tarifs…) — utilisé pour la mesure. */
 	source?: string;
+	/** Frais de construction affichés au-dessus du prix mensuel (ex. « 0 € »). */
+	setupPrice?: string;
+	setupLabel?: string;
 }
 
 const {
@@ -31,6 +34,8 @@ const {
 	recommended = false,
 	badgeText,
 	source = 'inconnu',
+	setupPrice,
+	setupLabel = 'de construction du site',
 } = Astro.props;
 
 const shellClasses =
@@ -69,10 +74,30 @@ const analyticsOffer = name.toLocaleLowerCase('fr').includes('sérénité') ? 's
 	<div class="flex flex-1 flex-col">
 		<header class="mb-8">
 			<h3 class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">{name}</h3>
-			<p class="mt-2 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
-				{price}
-				<span class="ml-1 font-sans text-base font-normal tracking-normal text-muted">/mois</span>
-			</p>
+			{
+				setupPrice ? (
+					<p class="mt-4">
+						<span class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+							<span class="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+								{setupPrice}
+							</span>
+							<span class="font-sans text-sm font-medium text-muted sm:text-base">{setupLabel}</span>
+						</span>
+						<span class="mt-1 flex flex-wrap items-baseline gap-x-2">
+							<span class="font-sans text-sm font-medium text-muted">puis</span>
+							<span class="font-heading text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
+								{price}
+							</span>
+							<span class="font-sans text-base font-normal tracking-normal text-muted">/mois</span>
+						</span>
+					</p>
+				) : (
+					<p class="mt-2 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
+						{price}
+						<span class="ml-1 font-sans text-base font-normal tracking-normal text-muted">/mois</span>
+					</p>
+				)
+			}
 			<p class="mt-4 text-base text-muted">{description}</p>
 			{summary && (
 				<p class="mt-4 border-l-2 border-primary-foreground pl-3 text-sm font-semibold leading-relaxed text-foreground">
@@ -133,7 +158,9 @@ const analyticsOffer = name.toLocaleLowerCase('fr').includes('sérénité') ? 's
 					</a>
 				)
 			}
-			<p class="mt-0 text-center type-label-mono text-muted">Sans engagement • Site transférable</p>
+			<p class="mt-0 text-center type-label-mono text-muted">
+				{setupPrice ? `${setupPrice} de construction • Sans engagement` : 'Sans engagement • Site transférable'}
+			</p>
 		</div>
 	</div>
 </article>

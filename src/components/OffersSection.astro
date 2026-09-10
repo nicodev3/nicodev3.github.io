@@ -1,6 +1,16 @@
 ---
 import OfferCard from './OfferCard.astro';
 import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
+import {
+	PRICING_HEADLINE,
+	PRICING_LEAD,
+	SETUP_FEE_AMOUNT,
+	SETUP_FEE_LABEL,
+	SERENITE_MONTHLY,
+	VISIBILITE_MONTHLY,
+	SERENITE_MONTHLY_SPACED,
+	VISIBILITE_MONTHLY_SPACED,
+} from '../data/pricing';
 
 export interface Props {
 	background?: 'surface' | 'white' | 'background';
@@ -16,7 +26,7 @@ const hasStripePaymentLinks = Boolean(stripePaymentLinkSerenite && stripePayment
 const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-background' }[background];
 
 const serenityFeatures = [
-	'Création ou refonte du site et accompagnement pour clarifier les textes',
+	'Création ou refonte du site (0 € de frais de construction) et accompagnement pour clarifier les textes',
 	'Hébergement, nom de domaine et sauvegardes inclus*',
 	'Interface d’administration pour modifier le site et publier des articles',
 	'Bases de référencement (SEO), fiche Google et bouton de rendez-vous (Doctolib, Perfactive ou autre)',
@@ -41,31 +51,45 @@ const visibilityFeatures = [
 	<div class="shell-layout">
 		<header class="shell-prose mx-auto text-center">
 			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Créer votre site, puis le faire vivre selon vos besoins
+				{PRICING_HEADLINE}
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				Les deux formules comprennent la création, l’hébergement, un CMS (interface d’administration), les bases
-				de référencement (SEO) et la fiche Google. La seconde ajoute une veille SEO d’expert — c’est ce qui fait
-				vraiment la différence dans la durée.
+				{PRICING_LEAD} Les deux formules comprennent l’hébergement, un CMS, les bases SEO et la fiche Google. La
+				seconde ajoute une veille SEO d’expert — c’est ce qui fait vraiment la différence dans la durée.
 			</p>
 		</header>
 
 		<aside
-			class="mx-auto mt-8 max-w-4xl rounded-xl border border-primary/25 bg-white px-6 py-5 text-center shadow-sm sm:px-8"
-			aria-label="Propriété et liberté de transfert du site"
+			class="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-2"
+			aria-label="Coût de construction et propriété du site"
 		>
-			<p class="font-heading text-xl font-semibold text-foreground">Votre site, pas une location de plateforme</p>
-			<p class="mx-auto mt-2 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
-				Le site réalisé pour votre cabinet vous appartient. L’abonnement permet de ne pas avancer de frais de
-				création, puis couvre l’hébergement, la maintenance et le suivi. Si vous résiliez, je vous remets votre
-				nom de domaine et une copie exploitable du site pour le réhéberger où vous le souhaitez.
-			</p>
+			<div class="rounded-xl border border-primary/30 bg-white px-6 py-5 shadow-sm">
+				<p class="type-label-mono text-primary">Aucun coût de base</p>
+				<p class="mt-2 font-heading text-2xl font-semibold text-foreground">
+					{SETUP_FEE_AMOUNT}
+					<span class="ml-1 font-sans text-base font-normal text-muted">pour construire le site</span>
+				</p>
+				<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+					Pas de devis à plusieurs milliers d’euros, pas de facture de création. Ensuite uniquement{' '}
+					{SERENITE_MONTHLY_SPACED} ou {VISIBILITE_MONTHLY_SPACED} par mois, selon la formule.
+				</p>
+			</div>
+			<div class="rounded-xl border border-border bg-white px-6 py-5 shadow-sm">
+				<p class="type-label-mono text-primary">Votre site, pas une location</p>
+				<p class="mt-2 font-heading text-2xl font-semibold text-foreground">Il vous appartient</p>
+				<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+					L’abonnement couvre l’hébergement, la maintenance et le suivi. Si vous résiliez, je vous remets le
+					nom de domaine et une copie exploitable du site.
+				</p>
+			</div>
 		</aside>
 
 		<div class="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-10 pt-0 md:grid-cols-2 lg:gap-12">
 			<OfferCard
 				name="Sérénité"
-				price="29€"
+				price={SERENITE_MONTHLY}
+				setupPrice={SETUP_FEE_AMOUNT}
+				setupLabel={SETUP_FEE_LABEL}
 				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique — avec un espace pour modifier vos textes et publier des articles."
 				summary="Site + interface d’administration (CMS) + référencement (SEO) + fiche Google"
 				features={serenityFeatures}
@@ -78,7 +102,9 @@ const visibilityFeatures = [
 
 			<OfferCard
 				name="Visibilité & Confiance"
-				price="49€"
+				price={VISIBILITE_MONTHLY}
+				setupPrice={SETUP_FEE_AMOUNT}
+				setupLabel={SETUP_FEE_LABEL}
 				description="Pour confier la veille référencement (SEO) à un expert : suivi de visibilité, relecture et optimisation des contenus, sans que vous ayez à suivre Google."
 				summary="Veille référencement (SEO) d’expert + entretien"
 				features={visibilityFeatures}
@@ -98,15 +124,16 @@ const visibilityFeatures = [
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						Un site professionnel, un CMS (interface d’administration) et une fiche Google. Les bases sont
+						0 € de construction, puis un site professionnel, un CMS et une fiche Google. Les bases sont
 						posées ; vous publiez si vous le souhaitez.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						Un expert en référencement (SEO) surveille votre visibilité, relit et optimise vos contenus.
-						C’est le travail continu qui fait la différence, pas seulement un site bien livré. Voir la page{' '}
+						Même modèle : 0 € pour construire le site, puis un expert SEO surveille votre visibilité, relit et
+						optimise vos contenus. C’est le travail continu qui fait la différence, pas seulement un site bien
+						livré. Voir la page{' '}
 						<a
 							href="/referencement-site-psychologue/"
 							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
