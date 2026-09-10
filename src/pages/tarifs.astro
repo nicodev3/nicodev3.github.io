@@ -8,9 +8,10 @@ import PageSpeedScores from '../components/PageSpeedScores.astro';
 import FaqSection from '../components/FaqSection.astro';
 import tarifsHeroImage from '../assets/images/tarifs-image.webp';
 import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
-import { ArrowRightLeft, BadgeCheck, CalendarClock, PackageCheck } from '@lucide/astro';
+import { PRICING_FAQ, PRICING_LEAD } from '../data/pricing';
+import { BadgeEuro, BadgeCheck, CalendarClock, Wallet } from '@lucide/astro';
 
-const tarifsHeroHighlightIcons = [BadgeCheck, PackageCheck, CalendarClock, ArrowRightLeft] as const;
+const tarifsHeroHighlightIcons = [BadgeEuro, Wallet, CalendarClock, BadgeCheck] as const;
 const tarifsHeroHighlights = TARIFS_TRUST_SIGNALS.map((label, index) => ({
 	Icon: tarifsHeroHighlightIcons[index],
 	label,
@@ -36,7 +37,7 @@ const platformCons = [
 ];
 
 const servicePros = [
-	'29-49€/mois tout inclus',
+	'0 € de construction, puis 29 ou 49 €/mois tout inclus',
 	'Le site vous appartient et peut être transféré ailleurs',
 	"Je m'occupe de tout pour vous",
 	'Échange direct avec le développeur qui réalise vraiment votre site',
@@ -48,19 +49,24 @@ const servicePros = [
 
 const tarifsFaqItems = [
 	{
+		id: PRICING_FAQ.id,
+		question: PRICING_FAQ.question,
+		answer: PRICING_FAQ.answer,
+	},
+	{
 		question: "Quels sont les tarifs Nicodev pour un site de psychologue ?",
 		answer:
-			"Chez Nicodev, le prix est présenté sous forme d'abonnement tout inclus : 29 €/mois pour l'offre Sérénité ou 49 €/mois pour l'offre Visibilité & Confiance. La création, l'hébergement, le nom de domaine et la maintenance sont intégrés au périmètre. Pour les fourchettes du marché (DIY, freelance, agence), voir le guide « combien coûte un site pour psychologue »."
+			"Aucun coût de base pour la construction : 0 € de frais de création. Ensuite un abonnement tout inclus : 29 €/mois pour l'offre Sérénité ou 49 €/mois pour l'offre Visibilité & Confiance. L'hébergement, le nom de domaine et la maintenance sont intégrés. Pour les fourchettes du marché (DIY, freelance, agence), voir le guide « combien coûte un site pour psychologue »."
 	},
 	{
 		question: "Que couvre l'abonnement site psychologue ?",
 		answer:
-			"L'abonnement couvre le socle du site : mise en ligne, hébergement, nom de domaine, CMS, bases SEO, fiche Google, maintenance, support et bouton de rendez-vous (Doctolib, Perfactive ou autre) lorsque vous en utilisez un. La formule à 49 €/mois ajoute une veille SEO d'expert (suivi, relecture et optimisation des contenus), 3 modifications simples par mois et une modernisation annuelle."
+			"L'abonnement couvre le socle du site : mise en ligne, hébergement, nom de domaine, CMS, bases SEO, fiche Google, veille de visibilité (détection et correction des problèmes), maintenance, support et bouton de rendez-vous (Doctolib, Perfactive ou autre) lorsque vous en utilisez un. La formule à 49 €/mois ajoute un support prioritaire, un SEO expert avec davantage d'outils, une aide à la rédaction, 3 modifications simples par mois et une modernisation annuelle."
 	},
 	{
-		question: "Y a-t-il des frais d'installation pour l'abonnement ?",
+		question: "Quelle est la différence entre Sérénité (29 €) et Visibilité & Confiance (49 €) ?",
 		answer:
-			"Non, aucun frais caché. La création de votre site est incluse dans l'abonnement. Vous commencez à payer seulement après la livraison de votre site."
+			"Les deux formules incluent la création, l'hébergement, le CMS, les bases SEO, la fiche Google et une veille de visibilité : je surveille, je détecte les problèmes et je corrige. L'offre à 49 € n'ajoute pas cette veille — elle est déjà dans Sérénité. Elle ajoute un support prioritaire, un SEO expert avec plus d'outils (dont Ahrefs), une aide à la rédaction (relecture, reformulation, idées d'articles), 3 modifications simples par mois et une modernisation annuelle. Ce n'est pas une garantie de place dans Google."
 	},
 	{
 		id: 'faq-modifications',
@@ -81,7 +87,7 @@ const tarifsFaqItems = [
 	{
 		question: "Le site m'appartient-il vraiment ?",
 		answer:
-			"Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L'abonnement rémunère sa création puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d'accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs."
+			"Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L'abonnement rémunère d'abord la construction (sans facture séparée), puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d'accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs."
 	},
 	{
 		question: "Puis-je résilier l'abonnement à tout moment ?",
@@ -97,21 +103,21 @@ const tarifsFaqItems = [
 	{
 		question: "La visibilité sur Google est-elle incluse ?",
 		answer:
-			"Les bases SEO et la fiche Google sont prévues dans les deux offres : site rapide, structure claire, titres, descriptions, indexation et cohérence locale. L'offre Visibilité & Confiance ajoute le travail d'un expert SEO dans la durée : veille avec des outils professionnels (notamment Ahrefs), relecture et optimisation de vos contenus, corrections si un problème apparaît. Ce n'est pas une garantie de place dans Google : le référencement local dépend aussi de votre ville, de la concurrence et de la régularité des contenus. Hors périmètre : rédaction mensuelle à ma charge, rapport SEO, pages par ville, publicité."
+			"Oui, dans les deux offres : bases SEO, fiche Google, et veille de visibilité (je surveille, je détecte les problèmes et je corrige). L'offre Visibilité & Confiance va plus loin avec un SEO expert : davantage d'outils professionnels (notamment Ahrefs), relecture et aide à la rédaction, support prioritaire. Ce n'est pas une garantie de place dans Google : le référencement local dépend aussi de votre ville, de la concurrence et de la régularité des contenus. Hors périmètre : rédaction mensuelle à ma charge, rapport SEO, pages par ville, publicité."
 	}
 ];
 ---
 
 <Layout
-	title="Tarifs Nicodev : abonnement site psychologue dès 29 €/mois"
-	description="Abonnement site psychologue Nicodev : 29 ou 49 €/mois tout inclus (création, hébergement, domaine, maintenance). Formules et périmètre détaillés."
+	title="Tarifs Nicodev : 0 € de création, puis 29 ou 49 €/mois"
+	description="Aucun coût de base pour construire votre site psychologue. 0 € de frais de création, puis 29 € (Sérénité) ou 49 € (Visibilité) par mois, tout inclus."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 	<Hero
-		title="Tarifs Nicodev : abonnement site psychologue"
-		subtitle="Deux formules dès 29 €/mois pour créer puis entretenir un site qui vous appartient, sans frais de création à avancer."
+		title="Tarifs : 0 € pour construire le site"
+		subtitle={PRICING_LEAD}
 		variant="light"
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Tarifs' }]}
 		coverImage={tarifsHeroImage}
@@ -167,7 +173,7 @@ const tarifsFaqItems = [
 					Pourquoi un abonnement site psychologue mensuel ?
 				</h2>
 				<p class="mb-4 text-sm text-muted sm:text-base">
-					L'abonnement n'est pas la location d'un site ni un droit d'accès à une plateforme. Il permet de ne pas avancer le coût de sa création, puis regroupe tout ce qui le fait vivre : une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. Vous disposez ainsi d'un tarif prévisible, sans petites factures séparées ni charge mentale technique.
+					L'abonnement n'est pas la location d'un site ni un droit d'accès à une plateforme. Il n'y a pas de coût de base à payer pour la construction : 0 € de frais de création. L'abonnement mensuel regroupe ensuite tout ce qui fait vivre le site : une adresse, un hébergement, des mises à jour, un minimum de surveillance et quelqu'un qui sache intervenir quand votre cabinet évolue. Vous disposez ainsi d'un tarif prévisible, sans petites factures séparées ni charge mentale technique.
 				</p>
 				<ul class="space-y-2 text-sm text-muted sm:text-base">
 					<li class="flex items-baseline gap-2">
@@ -184,7 +190,7 @@ const tarifsFaqItems = [
 					</li>
 				</ul>
 				<p class="mt-4 text-sm text-muted sm:text-base">
-					La formule Sérénité pose les bases : CMS, SEO technique, fiche Google et 1 modification simple par mois. La formule Visibilité & Confiance ajoute une <strong class="text-foreground">veille SEO d'expert</strong> (suivi, relecture et optimisation des contenus). Pour comprendre le périmètre de création, voir la page <a href="/creation-site-internet-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">création de site internet pour psychologue</a>. Pour le volet Google, voir <a href="/referencement-site-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">référencement psychologue</a>. Pour les psychomotriciens&nbsp;: <a href="/site-internet-psychomotricien/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">site internet psychomotricien</a>.
+					La formule Sérénité pose les bases : CMS, SEO technique, fiche Google, veille de visibilité et 1 modification simple par mois. La formule Visibilité & Confiance ajoute un <strong class="text-foreground">support prioritaire</strong>, un <strong class="text-foreground">SEO expert</strong> (plus d'outils) et une <strong class="text-foreground">aide à la rédaction</strong>. Pour comprendre le périmètre de création, voir la page <a href="/creation-site-internet-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">création de site internet pour psychologue</a>. Pour le volet Google, voir <a href="/referencement-site-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">référencement psychologue</a>. Pour les psychomotriciens&nbsp;: <a href="/site-internet-psychomotricien/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">site internet psychomotricien</a>.
 				</p>
 			</div>
 		</div>

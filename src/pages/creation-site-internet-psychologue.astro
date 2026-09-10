@@ -23,10 +23,18 @@ const faqSchema = {
 	mainEntity: [
 		{
 			'@type': 'Question',
+			name: 'Y a-t-il un coût de base pour la construction du site ?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Non. 0 EUR de frais de création : vous ne recevez pas de facture pour construire le site. Vous payez uniquement 29 EUR ou 49 EUR par mois selon la formule, après la livraison.',
+			},
+		},
+		{
+			'@type': 'Question',
 			name: "Combien coûte la création d'un site internet pour psychologue ?",
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, CMS, bases SEO, fiche Google, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute une veille SEO d'expert : suivi, relecture et optimisation des contenus.",
+				text: "Aucun coût de base : 0 EUR de frais de création. Ensuite un abonnement tout inclus, 29 EUR/mois (Sérénité : création, hébergement, CMS, bases SEO, fiche Google, veille de visibilité) ou 49 EUR/mois (Visibilité & Confiance : + support prioritaire, SEO expert, aide à la rédaction).",
 			},
 		},
 		{
@@ -42,7 +50,7 @@ const faqSchema = {
 			name: 'Création site psychologue : combien ça coûte ?',
 			acceptedAnswer: {
 				'@type': 'Answer',
-				text: "L'offre fonctionne par abonnement mensuel tout inclus dès 29 EUR/mois (création, hébergement, nom de domaine, CMS, bases SEO, fiche Google, maintenance). L'offre Visibilité & Confiance à 49 EUR/mois ajoute une veille SEO d'expert : suivi, relecture et optimisation des contenus.",
+				text: "Aucun coût de base : 0 EUR de frais de création. Ensuite un abonnement tout inclus, 29 EUR/mois (Sérénité : création, hébergement, CMS, bases SEO, fiche Google, veille de visibilité) ou 49 EUR/mois (Visibilité & Confiance : + support prioritaire, SEO expert, aide à la rédaction).",
 			},
 		},
 		{
@@ -149,7 +157,7 @@ const serviceSchema = {
 	'@type': 'Service',
 	name: 'Création de site internet pour psychologue',
 	description:
-		'Création ou refonte de site internet pour psychologues, psychothérapeutes et psychomotriciens : contenu guidé, prise de rendez-vous, hébergement, maintenance et bases SEO inclus dès 29 EUR par mois.',
+		'Création ou refonte de site internet pour psychologues, psychothérapeutes et psychomotriciens : 0 EUR de frais de construction, puis 29 ou 49 EUR par mois tout inclus (contenu guidé, rendez-vous, hébergement, SEO).',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -189,7 +197,7 @@ const breadcrumbSchema = {
 
 <Layout
 	title="Création de site internet pour psychologue | Nicodev"
-	description="Création ou refonte de site internet pour psychologue : contenu guidé, prise de rendez-vous, hébergement, maintenance et bases SEO dès 29 €/mois."
+	description="Création ou refonte de site internet pour psychologue : 0 € de construction, puis 29 € ou 49 €/mois tout inclus (contenu guidé, rendez-vous, hébergement, SEO)."
 	image={psychologueImage}
 >
 	<Fragment slot="head">
@@ -258,8 +266,9 @@ const breadcrumbSchema = {
 				<blockquote>
 					<p><strong>En bref</strong></p>
 					<ul>
-						<li><strong>Offre Sérénité</strong>&nbsp;: 29&nbsp;EUR/mois — site vitrine, CMS, bases SEO, fiche Google, hébergement</li>
-						<li><strong>Offre Visibilité &amp; Confiance</strong>&nbsp;: 49&nbsp;EUR/mois — + veille SEO d’expert, entretien</li>
+						<li><strong>Coût de construction</strong>&nbsp;: 0&nbsp;€ — pas de facture pour créer le site</li>
+						<li><strong>Offre Sérénité</strong>&nbsp;: 29&nbsp;EUR/mois — site vitrine, CMS, bases SEO, fiche Google, veille de visibilité</li>
+						<li><strong>Offre Visibilité &amp; Confiance</strong>&nbsp;: 49&nbsp;EUR/mois — + support prioritaire, SEO expert, aide à la rédaction</li>
 						<li><strong>Délai</strong>&nbsp;: 2 à 3 semaines en moyenne</li>
 						<li><strong>Contenu</strong>&nbsp;: formulaire guidé, pas de rédaction seul·e obligatoire</li>
 						<li><strong>Propriété</strong>&nbsp;: votre site vous appartient et peut être transféré ailleurs</li>
@@ -434,36 +443,41 @@ const breadcrumbSchema = {
 
 				<h2>Combien coûte la création d’un site internet pour psychologue&nbsp;?</h2>
 				<p>
-					Chez Nicodev, la création fonctionne par <strong>abonnement mensuel tout inclus</strong>&nbsp;—
-					pas de devis opaque ni de facture de maintenance surprise six mois plus tard.
+					Chez Nicodev, <strong>il n’y a pas de coût de base</strong> pour construire le site&nbsp;: 0&nbsp;€ de frais de
+					création. Vous payez ensuite un <strong>abonnement mensuel tout inclus</strong> — pas de devis opaque ni de
+					facture de maintenance surprise six mois plus tard.
 				</p>
 				<div class="not-prose my-6 rounded-xl border border-primary/25 bg-surface p-5">
 					<p class="font-heading text-xl font-semibold text-foreground">Votre site vous appartient</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						L’abonnement finance la création sans coût initial à avancer, puis l’hébergement, la maintenance et le
-						suivi. Il ne vous enferme pas dans une plateforme&nbsp;: si vous résiliez, vous récupérez votre nom de
+						L’abonnement ne facture pas la construction (0&nbsp;€ de frais de création), puis couvre l’hébergement, la
+						maintenance et le suivi. Il ne vous enferme pas dans une plateforme&nbsp;: si vous résiliez, vous récupérez votre nom de
 						domaine et une copie exploitable du site pour le réhéberger ailleurs.
 					</p>
 				</div>
 				<div class="not-prose my-8 rounded-xl border border-border bg-surface p-6">
-					<h3 class="font-heading text-2xl font-semibold text-foreground">Prix et inclus&nbsp;: deux formules lisibles</h3>
+					<h3 class="font-heading text-2xl font-semibold text-foreground">Prix et inclus&nbsp;: 0&nbsp;€ de construction, puis l’abonnement</h3>
 					<div class="mt-5 grid gap-4 md:grid-cols-2">
 						<div class="rounded-lg border border-border bg-white p-5">
 							<p class="text-sm font-semibold uppercase tracking-wide text-muted">Sérénité</p>
-							<p class="mt-2 text-3xl font-semibold text-foreground">29&nbsp;EUR/mois</p>
+							<p class="mt-2 text-lg font-semibold text-foreground">0&nbsp;€ de construction</p>
+							<p class="mt-1 text-3xl font-semibold text-foreground">puis 29&nbsp;EUR/mois</p>
 							<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
 								<li>Création du site vitrine et CMS</li>
 								<li>Hébergement, nom de domaine et maintenance</li>
 								<li>Bases SEO, fiche Google et bouton de RDV (Doctolib, Perfactive ou autre)</li>
+								<li>Veille SEO : je surveille, je détecte les problèmes et je corrige</li>
 								<li>1 modification simple par mois</li>
 							</ul>
 						</div>
 						<div class="rounded-lg border border-primary/30 bg-white p-5">
 							<p class="text-sm font-semibold uppercase tracking-wide text-primary">Visibilité &amp; Confiance</p>
-							<p class="mt-2 text-3xl font-semibold text-foreground">49&nbsp;EUR/mois</p>
+							<p class="mt-2 text-lg font-semibold text-foreground">0&nbsp;€ de construction</p>
+							<p class="mt-1 text-3xl font-semibold text-foreground">puis 49&nbsp;EUR/mois</p>
 							<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
 								<li>Tout ce qui est inclus dans Sérénité</li>
-								<li>Veille SEO d’expert : suivi, relecture et optimisation des contenus</li>
+								<li>Support prioritaire et SEO expert (plus d’outils)</li>
+								<li>Aide à la rédaction : relecture, reformulation, idées de contenus</li>
 								<li>3 modifications simples par mois et modernisation annuelle</li>
 							</ul>
 						</div>
@@ -474,7 +488,7 @@ const breadcrumbSchema = {
 					</div>
 				</div>
 				<p>
-					Pas de frais de création en plus de l&apos;abonnement. Détail complet sur la page <a href="/tarifs/">Tarifs</a> et dans l&apos;article <a href="/blog/combien-coute-site-internet-2026/">combien coûte un site en 2026</a>.
+					Aucun coût de base&nbsp;: 0&nbsp;€ pour construire le site, puis uniquement l’abonnement. Détail complet sur la page <a href="/tarifs/">Tarifs</a> et dans l&apos;article <a href="/blog/combien-coute-site-internet-2026/">combien coûte un site en 2026</a>.
 				</p>
 
 				<h2>Déroulement typique</h2>
@@ -500,12 +514,13 @@ const breadcrumbSchema = {
 
 				<h2>Référencement et visibilité locale</h2>
 				<p>
-					Chaque site est livré avec les bases SEO et une fiche Google&nbsp;: titres, descriptions, performances mobiles, données structurées et plan de site. L’offre Visibilité &amp; Confiance ajoute une <strong>veille SEO d’expert</strong> (suivi, relecture et optimisation des contenus), sans garantir une place dans Google. La page{' '}
+					Chaque site est livré avec les bases SEO, une fiche Google et une veille de visibilité&nbsp;: titres, descriptions, performances mobiles, données structurées, plan de site, détection et correction des problèmes. L’offre Visibilité &amp; Confiance ajoute un <strong>support prioritaire</strong>, un <strong>SEO expert</strong> (plus d’outils) et une <strong>aide à la rédaction</strong>, sans garantir une place dans Google. La page{' '}
 					<a href="/referencement-site-psychologue/">référencement site psychologue</a> précise le cadre. Les articles <a href="/blog/google-business-profile-psychologue/">fiche Google Business Profile</a> et <a href="/blog/psychologue-premier-google-ville/">visibilité locale sur Google</a> restent les lectures les plus détaillées côté blog.
 				</p>
 
 				<h2>Questions fréquentes</h2>
-				<p><strong>Combien coûte la création d’un site internet pour psychologue&nbsp;?</strong> Abonnement tout inclus dès 29&nbsp;EUR/mois (Sérénité&nbsp;: CMS, bases SEO, fiche Google) ou 49&nbsp;EUR/mois (Visibilité &amp; Confiance&nbsp;: veille SEO d’expert). Détail sur <a href="/tarifs/">Tarifs</a>.</p>
+				<p><strong>Y a-t-il un coût de base pour la construction du site&nbsp;?</strong> Non. 0&nbsp;€ de frais de création&nbsp;: vous ne recevez pas de facture pour construire le site. Vous payez uniquement 29&nbsp;EUR ou 49&nbsp;EUR par mois selon la formule, après la livraison.</p>
+				<p><strong>Combien coûte la création d’un site internet pour psychologue&nbsp;?</strong> 0&nbsp;€ de construction, puis un abonnement tout inclus&nbsp;: 29&nbsp;EUR/mois (Sérénité&nbsp;: CMS, bases SEO, fiche Google, veille de visibilité) ou 49&nbsp;EUR/mois (Visibilité &amp; Confiance&nbsp;: support prioritaire, SEO expert, aide à la rédaction). Détail sur <a href="/tarifs/">Tarifs</a>.</p>
 				<p><strong>Que comprend la prestation&nbsp;?</strong> Arborescence adaptée, contenu guidé, design sobre, CMS, intégration RDV, bases SEO, fiche Google, hébergement, domaine et maintenance — le tout dans l’abonnement.</p>
 				<p><strong>Le site convient-il aussi aux psychothérapeutes et aux psychomotriciens&nbsp;?</strong> Oui&nbsp;: psychologues, psychothérapeutes (titre + RPPS) et psychomotriciens. Les psychopraticiens et praticiens sans titre de psychothérapeute ne font pas partie de l’offre. Page dédiée&nbsp;: <a href="/site-internet-psychomotricien/">psychomotriciens</a>.</p>
 				<p><strong>Combien de temps pour créer un site de psychologue&nbsp;?</strong> En général 2 à 3 semaines entre le premier échange et la mise en ligne, selon vos disponibilités pour compléter le formulaire.</p>
@@ -513,7 +528,7 @@ const breadcrumbSchema = {
 				<p><strong>Un site internet peut-il aider à trouver des patients&nbsp;?</strong> Oui, indirectement&nbsp;: un site cohérent avec votre fiche Google Business Profile améliore vos chances d’être trouvé localement, et aide les personnes à comprendre votre cadre avant de prendre contact. Aucune place dans Google ne peut en revanche être garantie.</p>
 				<p><strong>Faut-il un site si j’ai déjà Doctolib&nbsp;?</strong> Les deux jouent des rôles complémentaires&nbsp;: Doctolib réserve, le site explique et rassure. Voir le <a href="/blog/site-internet-psychologue-doctolib/">comparatif site internet vs Doctolib</a>.</p>
 				<p><strong>Quelles pages mettre sur un site de psychologue&nbsp;?</strong> Accueil, présentation de votre approche, consultations proposées, informations pratiques et contact — le détail s’adapte à votre cabinet libéral. Le guide <a href="/blog/site-internet-psychologues/">site internet pour psychologue</a> les passe en revue.</p>
-				<p><strong>Combien coûte un site internet pour psychologue&nbsp;?</strong> Un abonnement mensuel tout inclus (création, hébergement, nom de domaine, mises à jour) — détail sur la page <a href="/tarifs/">Tarifs</a> et dans l’article <a href="/blog/combien-coute-site-internet-2026/">combien coûte un site en 2026</a>.</p>
+				<p><strong>Combien coûte un site internet pour psychologue&nbsp;?</strong> Aucun coût de base pour la construction (0&nbsp;€), puis un abonnement mensuel tout inclus (hébergement, nom de domaine, mises à jour) — détail sur la page <a href="/tarifs/">Tarifs</a> et dans l’article <a href="/blog/combien-coute-site-internet-2026/">combien coûte un site en 2026</a>.</p>
 				<p><strong>Est-ce compatible avec la déontologie des psychologues&nbsp;?</strong> Oui&nbsp;: le code de déontologie encadre la manière de se présenter, il n’interdit pas d’avoir un site. Les contenus restent informatifs et sobres, sans affirmation de résultat.</p>
 				<p><strong>Faut-il rédiger tout le contenu soi-même&nbsp;?</strong> Non&nbsp;: vous répondez à un formulaire guidé&nbsp;; j’organise et reformule pour le web en respectant votre ton.</p>
 				<p><strong>Combien de temps avant d’être visible sur Google&nbsp;?</strong> Le site peut être indexé en quelques semaines&nbsp;; une présence locale stable demande souvent plusieurs mois de régularité (fiche Google + site cohérents). Voir le <a href="/blog/guide-complet-visibilite-en-ligne-psychologues/">guide visibilité</a>.</p>
