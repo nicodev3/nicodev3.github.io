@@ -30,15 +30,16 @@ const serenityFeatures = [
 	'Hébergement, nom de domaine et sauvegardes inclus*',
 	'Interface d’administration pour modifier le site et publier des articles',
 	'Bases de référencement (SEO), fiche Google et bouton de rendez-vous (Doctolib, Perfactive ou autre)',
+	'Veille SEO : je surveille votre visibilité, je détecte les problèmes et je corrige',
 	'Mentions légales, base RGPD (protection des données), 1 modification simple par mois',
 ];
 
 const visibilityFeatures = [
 	"Tout le contenu de l'offre Sérénité",
-	'Veille référencement (SEO) d’expert : je surveille votre visibilité, je détecte les problèmes et je corrige**',
-	'Relecture et optimisation de vos contenus pour le référencement (SEO)',
-	'3 modifications simples par mois, traitées en priorité',
-	'Modernisation annuelle du site',
+	'Support prioritaire : réponses plus rapides, modifications traitées en premier',
+	'SEO expert : plus d’outils professionnels (dont Ahrefs) pour aller plus loin que la veille de base**',
+	'Aide à la rédaction : relecture, reformulation et idées d’articles à publier',
+	'3 modifications simples par mois et modernisation annuelle du site',
 ];
 ---
 
@@ -54,8 +55,9 @@ const visibilityFeatures = [
 				{PRICING_HEADLINE}
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				{PRICING_LEAD} Les deux formules comprennent l’hébergement, un CMS, les bases SEO et la fiche Google. La
-				seconde ajoute une veille SEO d’expert — c’est ce qui fait vraiment la différence dans la durée.
+				{PRICING_LEAD} Les deux formules comprennent l’hébergement, un CMS, les bases SEO, la fiche Google et une
+				veille de visibilité. La formule à 49 € ajoute un accompagnement plus serré : support prioritaire, SEO
+				expert avec plus d’outils, et aide à la rédaction.
 			</p>
 		</header>
 
@@ -91,7 +93,7 @@ const visibilityFeatures = [
 				setupPrice={SETUP_FEE_AMOUNT}
 				setupLabel={SETUP_FEE_LABEL}
 				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique — avec un espace pour modifier vos textes et publier des articles."
-				summary="Site + interface d’administration (CMS) + référencement (SEO) + fiche Google"
+				summary="Site + CMS + SEO (bases et veille) + fiche Google"
 				features={serenityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
 				buttonHref="/devis/"
@@ -105,8 +107,8 @@ const visibilityFeatures = [
 				price={VISIBILITE_MONTHLY}
 				setupPrice={SETUP_FEE_AMOUNT}
 				setupLabel={SETUP_FEE_LABEL}
-				description="Pour confier la veille référencement (SEO) à un expert : suivi de visibilité, relecture et optimisation des contenus, sans que vous ayez à suivre Google."
-				summary="Veille référencement (SEO) d’expert + entretien"
+				description="Pour un accompagnement plus serré : support prioritaire, SEO expert avec plus d’outils, et aide à la rédaction — sans que vous ayez à gérer Google ni vos textes seul."
+				summary="Support prioritaire + SEO expert + aide à la rédaction"
 				features={visibilityFeatures}
 				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
 				buttonHref="/devis/"
@@ -124,16 +126,16 @@ const visibilityFeatures = [
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						0 € de construction, puis un site professionnel, un CMS et une fiche Google. Les bases sont
-						posées ; vous publiez si vous le souhaitez.
+						0 € de construction, puis un site professionnel, un CMS, une fiche Google et une veille de
+						visibilité : je surveille, je détecte les problèmes et je corrige. Vous publiez si vous le
+						souhaitez.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-[0.05em] text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						Même modèle : 0 € pour construire le site, puis un expert SEO surveille votre visibilité, relit et
-						optimise vos contenus. C’est le travail continu qui fait la différence, pas seulement un site bien
-						livré. Voir la page{' '}
+						Même base, avec un accompagnement plus poussé : support prioritaire, SEO expert (plus d’outils),
+						aide à la rédaction, davantage de modifications et une modernisation annuelle. Voir la page{' '}
 						<a
 							href="/referencement-site-psychologue/"
 							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
@@ -168,10 +170,10 @@ const visibilityFeatures = [
 			mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement.
 		</p>
 		<p class="mx-auto mt-2 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
-			** La veille référencement (SEO) s’appuie sur des outils professionnels, notamment Ahrefs : suivi de
-			visibilité, détection des problèmes, relecture et optimisation des contenus. C’est le travail d’un expert
-			dans la durée — pas une place garantie dans Google. Le résultat dépend aussi de votre ville, de la
-			concurrence locale et de la régularité des contenus.
+			** Le SEO expert de l’offre Visibilité &amp; Confiance s’appuie sur davantage d’outils professionnels,
+			notamment Ahrefs, en plus de la veille déjà incluse dès Sérénité. C’est un travail d’analyse et
+			d’optimisation plus poussé — pas une place garantie dans Google. Le résultat dépend aussi de votre ville, de
+			la concurrence locale et de la régularité des contenus.
 		</p>
 	</div>
 </section>

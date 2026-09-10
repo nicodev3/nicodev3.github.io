@@ -19,7 +19,7 @@ Pour un psychologue, c'est particulièrement important : la pratique n'est pas i
 
 Et surtout : un site n'a pas besoin de remplacer votre outil de rendez-vous. Il peut simplement y être relié. Doctolib, Maiia, Resalib, Calendly, Perfactive, SimplyBook, un agenda métier plus discret, un formulaire de contact ou même un simple bouton d'appel : le site reste votre point d'entrée, l'outil de rendez-vous reste votre outil logistique.
 
-Cette nuance change beaucoup de choses, notamment sur le budget. La page tarifs Doctolib pour les psychologues indique une offre agenda à **149 € TTC / mois / praticien**. À titre de comparaison, mes offres de site démarrent avec [l'offre Sérénité à 29 € / mois](/tarifs/#tarifs-offres), qui inclut déjà un lien ou un widget de prise de rendez-vous. [L'offre Visibilité & Confiance à 49 € / mois](/tarifs/#tarifs-offres) ajoute un entretien plus large et une surveillance de visibilité. Le site couvre alors l'essentiel de votre présence en ligne, tout en vous laissant libre du système de réservation utilisé.
+Cette nuance change beaucoup de choses, notamment sur le budget. La page tarifs Doctolib pour les psychologues indique une offre agenda à **149 € TTC / mois / praticien**. À titre de comparaison, mes offres de site démarrent avec [l'offre Sérénité à 29 € / mois](/tarifs/#tarifs-offres), qui inclut déjà un lien ou un widget de prise de rendez-vous, ainsi qu'une veille de visibilité. [L'offre Visibilité & Confiance à 49 € / mois](/tarifs/#tarifs-offres) ajoute un support prioritaire, un SEO expert avec plus d'outils et une aide à la rédaction. Le site couvre alors l'essentiel de votre présence en ligne, tout en vous laissant libre du système de réservation utilisé.
 
 ## Doctolib est utile, mais ce n'est pas un site
 
