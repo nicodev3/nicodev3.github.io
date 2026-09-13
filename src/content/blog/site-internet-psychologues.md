@@ -1,19 +1,20 @@
 ---
-title: "Site psychologue 2026 : SEO, IA, pages et RGPD"
-seoTitle: "Site internet psychologue : SEO moderne, IA et RGPD"
-description: "Contenu, technique, liens, référencement local et IA : les leviers d’un site de psychologue visible, rassurant et conforme au RGPD."
-pubDate: "2016-09-05"
-updatedDate: "2026-09-13"
-author: "Nicolas Devaux"
-image: "../../assets/images/blog/site-psychologue.webp"
-tags: ["psychologue", "site web cabinet", "référencement local cabinet", "cadre déontologique"]
+title: 'Site psychologue 2026 : SEO, IA, pages et RGPD'
+seoTitle: 'Site internet psychologue : SEO moderne, IA et RGPD'
+description: 'Contenu, technique, liens, référencement local et IA : les leviers d’un site de psychologue visible, rassurant et conforme au RGPD.'
+pubDate: '2016-09-05'
+updatedDate: '2026-09-13'
+author: 'Nicolas Devaux'
+image: '../../assets/images/blog/site-psychologue.webp'
+tags: ['psychologue', 'site web cabinet', 'référencement local cabinet', 'cadre déontologique']
 ---
 
-*Temps de lecture : 16 minutes*
+_Temps de lecture : 16 minutes_
 
 Vous êtes psychologue et vous voulez un site qui inspire confiance, soit bien référencé localement, et respecte votre cadre professionnel ?
 
 En 2026, un bon site ne se limite plus à "être en ligne". Il doit répondre à quatre objectifs concrets :
+
 - être trouvé par les bonnes personnes,
 - pouvoir être compris et cité par les moteurs de recherche et leurs réponses générées par l'IA,
 - être clair et rassurant,
@@ -28,6 +29,7 @@ Pour une présentation courte des prestations proposées ici (création, visibil
 Les patients comparent, lisent, puis décident. Avant même le premier appel, votre site joue déjà un rôle de cadre.
 
 Un annuaire ou un réseau social peut aider à la visibilité, mais ne remplace pas un site professionnel :
+
 - vous ne maîtrisez pas les règles d'un annuaire,
 - les réseaux sociaux mélangent facilement sphère perso et sphère pro,
 - votre site reste votre espace de référence (contenu, ton, informations, preuve de sérieux).
@@ -39,6 +41,7 @@ Si vous êtes en libéral, votre site sert d'abord à informer et orienter : pub
 ### Clarifier votre positionnement
 
 Dès la page d'accueil, la personne doit comprendre :
+
 - qui vous accompagnez (adultes, adolescents, parents, couples...),
 - pour quels motifs fréquents,
 - dans quel cadre (cabinet, visio, secteur géographique).
@@ -48,6 +51,7 @@ Une promesse floue fait fuir. Une proposition claire rassure.
 ### Structurer les pages essentielles
 
 Un socle minimal efficace :
+
 - **Accueil** : message clair + orientation vers les pages clés.
 - **À propos** : parcours, diplômes, posture, sans surpersonnalisation.
 - **Pratiques** : ce que vous proposez, pour qui, comment se déroule le suivi.
@@ -59,6 +63,7 @@ Si vous préférez déléguer cette structure plutôt que partir d'une page blan
 ### Ajouter des éléments de confiance
 
 Sans tomber dans l'autopromotion, vous pouvez renforcer la crédibilité avec :
+
 - titre et formation explicités,
 - cadre de travail et limites d'intervention,
 - informations pratiques vérifiables et cohérentes partout.
@@ -68,6 +73,7 @@ Sans tomber dans l'autopromotion, vous pouvez renforcer la crédibilité avec :
 Le référencement ne consiste plus à répéter "psychologue à Lyon" dix fois dans une page. Cette pratique rend le texte pénible à lire et ne suffit pas à prouver qu'un site mérite d'être proposé.
 
 Un moteur cherche aujourd'hui à déterminer :
+
 - si la page répond vraiment à la question posée,
 - si l'information semble fiable et à jour,
 - si le site fonctionne bien sur mobile,
@@ -84,6 +90,7 @@ Google, Bing et d'autres outils proposent désormais des réponses rédigées pa
 Cela change la forme de la visibilité, pas ses fondations. Pour être reprise dans une réponse, une page doit d'abord pouvoir être découverte, lue et jugée pertinente. Google précise d'ailleurs qu'il n'existe ni balise secrète ni fichier spécial obligatoire pour apparaître dans ses résultats générés par l'IA.
 
 Une page a davantage de chances d'être comprise et citée lorsqu'elle :
+
 - répond directement à une question dans un titre et le paragraphe qui suit,
 - apporte une information précise plutôt qu'un discours général,
 - indique qui écrit, avec quelle expérience et quand le contenu a été mis à jour,
@@ -100,6 +107,7 @@ Attention aux fausses promesses : aucune méthode ne garantit d'être cité par 
 Chaque page doit avoir un rôle clair. Une page sur les consultations pour adolescents ne devrait pas être une copie de la page d'accueil avec quelques mots remplacés.
 
 Privilégiez :
+
 - une question ou un besoin principal par page,
 - un vocabulaire naturel, proche de celui des patients,
 - des paragraphes courts et des titres explicites,
@@ -130,6 +138,7 @@ La vitesse et l'accessibilité ne garantissent pas à elles seules une première
 Wix et WordPress peuvent convenir à certains projets. Dire qu'ils empêchent tout bon référencement serait inexact. Ils permettent notamment de modifier les titres, les descriptions et une partie des réglages courants.
 
 La différence apparaît lorsqu'il faut intervenir plus finement :
+
 - supprimer uniquement le code inutile,
 - contrôler exactement le chargement des polices, images et scripts,
 - adapter les données structurées à l'activité,
@@ -149,6 +158,7 @@ Les liens entre vos propres pages aident les lecteurs à poursuivre leur recherc
 On parle parfois de **"jus SEO"** pour décrire la part de confiance ou de popularité transmise par un lien. L'image est pratique, mais tous les liens ne se valent pas. Un lien naturel depuis un site reconnu et en rapport avec la psychologie ou votre territoire est généralement plus utile que des dizaines de liens placés dans des annuaires sans intérêt.
 
 Concrètement :
+
 - reliez vos articles aux pages de prestations correspondantes,
 - utilisez des intitulés de liens qui décrivent la page de destination,
 - évitez les pages isolées qu'aucun autre contenu ne mentionne,
@@ -158,6 +168,7 @@ Concrètement :
 ### Quatrième levier : la réputation hors du site et le référencement local
 
 Le SEO se travaille aussi en dehors du code. Pour une activité de psychologue, la cohérence locale est particulièrement importante :
+
 - ville et zone d'intervention clairement indiquées,
 - même nom, adresse et téléphone sur le site et les annuaires pertinents,
 - fiche Google Business Profile complète et tenue à jour,
@@ -172,6 +183,7 @@ Voir le [guide complet pour créer et optimiser votre fiche Google Business Prof
 ### Optimiser les pages importantes sans les dénaturer
 
 Sur chaque page stratégique :
+
 - un titre affiché dans Google, appelé `title`, unique et descriptif,
 - une courte description qui donne envie de consulter la page,
 - un titre principal et des sous-titres bien ordonnés,
@@ -182,6 +194,7 @@ Sur chaque page stratégique :
 Le suivi compte également. Google Search Console permet de repérer les pages vues dans les recherches et les problèmes d'indexation. Bing Webmaster Tools propose aussi un rapport sur les pages citées dans certaines réponses générées par l'IA. Ces outils servent à observer et à corriger, pas à promettre une position.
 
 Références :
+
 - [Fonctionnalités d'IA et site web (Google Search Central)](https://developers.google.com/search/docs/appearance/ai-features)
 - [Expérience de page (Google Search Central)](https://developers.google.com/search/docs/appearance/page-experience)
 - [Rapport AI Performance de Bing Webmaster Tools](https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview)
@@ -191,6 +204,7 @@ Références :
 ### Informer sans promesse
 
 Votre site n'est pas une publicité agressive. L'objectif est de présenter votre pratique avec discernement :
+
 - éviter les promesses de résultats,
 - éviter les formulations culpabilisantes,
 - rester explicite sur le cadre et les limites.
@@ -200,6 +214,7 @@ Votre site n'est pas une publicité agressive. L'objectif est de présenter votr
 Un formulaire de contact doit demander le minimum utile. Le principe de minimisation des données s'applique : ne collecter que ce qui est nécessaire.
 
 Ressources :
+
 - [Principe de minimisation (CNIL)](https://www.cnil.fr/fr/definition/minimisation)
 - [Règles cookies et traceurs (CNIL)](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/lignes-directrices-modificatives-et-recommandation)
 
@@ -214,6 +229,7 @@ Ressource : [RGAA 4.1.2](https://accessibilite.numerique.gouv.fr/).
 ### Page "Pratiques"
 
 Expliquez simplement :
+
 - les situations accompagnées,
 - votre méthode de travail,
 - le déroulé d'un premier rendez-vous,
@@ -248,6 +264,7 @@ Pour aller plus loin : [contactez-moi](/contact/) et [tarifs](/tarifs/).
 Commencez par relire les pages principales comme le ferait une personne qui ne vous connaît pas. Elle doit comprendre votre pratique, les publics reçus, les tarifs et la manière de prendre contact. Listez ensuite les vraies questions entendues avant un premier rendez-vous : elles constituent souvent les meilleurs sujets à expliquer.
 
 Vérifiez ensuite :
+
 1. que les pages importantes apparaissent bien dans les moteurs ;
 2. que la lecture sur mobile est rapide et confortable ;
 3. que chaque page possède un titre clair et des liens vers les pages associées ;
@@ -301,6 +318,7 @@ Les réponses générées par l'IA renforcent ce besoin de clarté et de fiabili
 Si vous souhaitez créer ou refondre votre site, commencez par un contrôle du contenu, de la technique et de la présence locale, puis avancez par priorité. Si votre site existe déjà, l'article [Refonte de site internet pour psychologue et psychomotricien](/blog/refonte-site-internet/) vous aidera à identifier les points à revoir.
 
 À lire aussi :
+
 - [Refonte de site internet pour psychologue et psychomotricien](/blog/refonte-site-internet/)
 - [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) : guide pratique pour le référencement local
 - [Création de site internet pour psychologue](/creation-site-internet-psychologue/) : offre et accompagnement
