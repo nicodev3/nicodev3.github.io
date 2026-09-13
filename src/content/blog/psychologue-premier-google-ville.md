@@ -9,7 +9,7 @@ image: "../../assets/images/blog/psychologue-premier-google-ville.webp"
 tags: ["psychologue", "référencement local cabinet", "google business profile", "site web cabinet"]
 ---
 
-*Temps de lecture : 15 minutes*
+*Temps de lecture : 17 minutes*
 
 Bon je l'avoue directement : le titre de mon article est exagéré ! Il n'y a pas de recette miracle pour apparaître en premier sur Google dans sa ville. Ceux qui vous promettent le contraire sont des menteurs ou des incompétents. Ceci étant posé, voici comment se donner toutes les chances d'apparaitre sur le podium, et pourquoi pas en première position !
 
@@ -25,8 +25,9 @@ Quand une personne cherche un psychologue près de chez elle, Google n'affiche p
 2. Le **pack local** : une carte et, le plus souvent, **trois fiches Google Business Profile**. C'est le vrai « premier » visuel pour une recherche locale.
 3. Les **résultats naturels** (sites web) : dans les villes concurrentielles, les premières places organiques sont souvent prises par Doctolib, des annuaires ou des pages institutionnelles. Un site de cabinet indépendant a plus de chances d'y figurer tôt dans une ville moyenne que dans une très grande ville.
 4. Des **questions fréquentes** (« Autres questions posées ») sur les tarifs, le remboursement ou le choix d'un psychologue.
+5. **Parfois un résumé généré par l'IA de Google** (Aperçus IA / mode IA), surtout sur une question d'information, plus rarement sur « psychologue + ville ».
 
-Sur les recherches du type « psychologue + ville » ou « près de moi », c'est encore le pack local et Google Maps qui décident surtout qui est visible. Les résumés générés par l'IA de Google apparaissent davantage sur des questions d'information générale (santé, démarches) que sur une recherche de professionnel à proximité.
+Sur les recherches du type « psychologue + ville » ou « près de moi », le pack local et Google Maps restent le levier principal. Le détail de ce que l'IA change — dans Google et dans ChatGPT, Gemini ou Perplexity — est plus bas.
 
 Deux conséquences importantes :
 
@@ -229,20 +230,60 @@ Chaque article doit relier naturellement :
 
 Un article utile, daté et signé par un·e psychologue identifiable vaut mieux qu'une série de textes génériques produits pour « placer des mots-clés ».
 
+## Ce que l'IA et les LLM changent (Google, ChatGPT, Gemini…)
+
+Depuis juillet 2026, Google affiche en France des **Aperçus IA** (un résumé en haut de certains résultats) et un **mode IA** plus conversationnel. En parallèle, une partie des personnes pose déjà sa question à ChatGPT, Gemini, Perplexity ou un assistant du téléphone : « Comment choisir un psychologue à Lyon ? », « Un psy qui reçoit des adultes en TCC près de Nantes », « Première séance, ça se passe comment ? ».
+
+Ce n'est pas un nouveau bouton magique. Google le dit clairement : [aucune balise, aucun fichier spécial n'est exigé](https://developers.google.com/search/docs/appearance/ai-features) pour apparaître dans ces fonctionnalités. Il faut un site indexable, dont le contenu peut être affiché en extrait, et une présence cohérente. Les recettes vendues sous le nom de « GEO » (optimiser pour les IA génératives) recyclent le plus souvent… le bon SEO.
+
+### À quoi ressemble la page de résultats maintenant
+
+Trois cas de figure, à ne pas confondre :
+
+1. **Recherche locale d'un cabinet** (« psychologue + ville », « près de moi »). Le pack Maps reste le bloc décisif. L'IA n'efface pas la carte. Elle peut parfois *nommer* un ou deux professionnels en plus, mais elle ne remplace pas une fiche Google soignée.
+2. **Question d'information** (« comment se passe une première séance », « psychologue ou psychiatre », « Mon soutien psy »). Un résumé IA a plus de chances d'apparaître. Il cite surtout des sources qu'il juge claires et fiables — souvent des sites institutionnels (Ameli, Santé.fr) avant un site de cabinet.
+3. **Question posée à un assistant** (ChatGPT et équivalents). La personne n'est plus sur une page de dix liens bleus. Elle lit une réponse rédigée, parfois avec des sources, parfois sans. Votre cabinet n'apparaît que si le modèle *vous trouve* dans des pages qu'il peut citer : votre site, votre fiche, un annuaire, un article de presse locale.
+
+Conséquence pratique : « être premier sur Google » et « être cité par une IA » se recoupent, mais ce n'est pas le même écran. Dans le premier cas, on clique sur une fiche ou un site. Dans le second, on peut obtenir une réponse sans jamais visiter votre page. D'où l'intérêt que les faits essentiels (qui vous êtes, où, pour qui, comment prendre rendez-vous) soient **lisibles hors contexte**, dès les premières lignes.
+
+### Comment apparaître dans les réponses des LLM
+
+Les modèles croisent ce qu'ils ont pu lire. Ils privilégient ce qui est **explicite, cohérent et confirmé à plusieurs endroits**. Pour un psychologue, cela ressemble à ceci :
+
+- **Une identité unique partout.** Même nom, même ville, même titre, mêmes coordonnées sur le site, la fiche Google et deux ou trois annuaires sérieux. Si les sources se contredisent, l'IA hésite ou invente.
+- **Des phrases que l'on peut citer.** « Je reçois à [quartier / ville], sur rendez-vous, des adultes. Les consultations ont lieu au cabinet, et en visio dans tel cadre. » Une FAQ réelle vaut mieux qu'un texte lyrique que rien ne peut extraire.
+- **Une page à propos identifiable.** Titre de psychologue, numéro d'inscription, approche, publics. Les sujets de santé sont traités avec prudence par Google comme par les assistants : un site anonyme ou générique a peu de chances d'être repris.
+- **Du contenu qui répond à une question, pas à un mot-clé.** Les assistants sont alimentés par des questions longues. Les articles de l'étape 7 servent ici autant que le pack local.
+- **Des mentions hors de votre site.** Un lien depuis une structure locale, une page d'annuaire à jour, un article de territoire. Un modèle a besoin de sources *tierces* pour vous traiter comme un professionnel réel, pas seulement comme l'auteur de votre propre page.
+
+Ce qu'il ne faut pas faire :
+
+- produire une série de textes « pour ChatGPT », interchangeables d'un cabinet à l'autre ;
+- bourrer la page de listes de symptômes pour apparaître comme référence clinique — ce n'est ni efficace, ni aligné avec une communication mesurée ;
+- payer une prestation qui « garantit » d'être recommandé par une IA. Personne ne contrôle ces réponses, et elles varient d'une conversation à l'autre.
+
+Côté Google, le réglage par défaut dans la Search Console est d'**inclure** votre site dans les fonctionnalités d'IA générative. L'exclure vous fait disparaître de ces blocs, sans améliorer votre classement classique. Sauf raison précise, laissez l'inclusion active.
+
+### Ce que cela ne change pas pour un cabinet
+
+Le pack local, la fiche, le NAP et un site rassurant restent le cœur du sujet. L'IA ajoute une couche : être **compréhensible** par une machine qui résume, pas seulement par un algorithme qui classe des liens.
+
+Pour un psychologue, le cadre ne bouge pas non plus. Un assistant peut simplifier à l'excès une question de santé mentale. Votre site n'a pas à jouer les encyclopédies cliniques. Il a à dire clairement votre cadre, pour que la personne qui arrive — depuis Google, une IA ou un proche — sache si elle peut vous écrire.
+
 ## Par où commencer
 
 Vérifiez d’abord que votre activité est éligible à une fiche Google, puis la fiche elle-même, la page de contact et la cohérence du nom, de l’adresse et du téléphone. Corrigez aussi les informations différentes ou anciennes qui subsistent dans les annuaires.
 
 La page consacrée à votre ville doit apporter des informations réelles sur le cabinet et les modalités de consultation. Une courte FAQ peut être utile si elle répond à des questions effectivement posées.
 
-Les contenus complémentaires viennent ensuite. Publiez lorsqu’un sujet mérite d’être expliqué, puis observez les visites et les prises de contact pour repérer ce qui reste peu clair.
+Les contenus complémentaires viennent ensuite. Publiez lorsqu’un sujet mérite d’être expliqué, puis observez les visites et les prises de contact pour repérer ce qui reste peu clair. Inutile de commencer par « optimiser pour ChatGPT » : si la fiche, le site et le NAP sont clairs, les assistants s’appuient déjà sur ces mêmes informations.
 
 ## Comment mesurer si vous progressez vraiment
 
 Suivez chaque mois des indicateurs simples :
 
 - visibilité de la fiche (recherches, vues, clics d'itinéraire, appels) dans les statistiques Google Business Profile ;
-- impressions et clics des pages locales dans la Search Console ;
+- impressions et clics des pages locales dans la Search Console (y compris, quand le rapport est disponible, le trafic issu des fonctionnalités d'IA de Google) ;
 - nombre d'appels, formulaires, prises de rendez-vous issus du site ;
 - trafic organique sur les pages locales ;
 - taux de conversion visite → contact.
@@ -273,7 +314,8 @@ Si vos positions montent mais que les contacts ne progressent pas, le problème 
 4. Pages locales dupliquées d'une ville à l'autre.
 5. NAP incohérent entre les plateformes.
 6. Sollicitation d'avis patients, ou témoignages affichés sur le site.
-7. Absence de suivi (fiche + Search Console + contacts) et objectif court terme trop agressif (« premier en 10 jours ») au lieu d'un système durable.
+7. Textes génériques « pour l'IA », copiés d'un cabinet à l'autre, sans faits locaux ni identité claire.
+8. Absence de suivi (fiche + Search Console + contacts) et objectif court terme trop agressif (« premier en 10 jours ») au lieu d'un système durable.
 
 ## FAQ
 
@@ -293,13 +335,17 @@ Non. Ces canaux sont complémentaires : Google capte la demande locale, le site 
 
 Non, pas via Google Business Profile. Google réserve les fiches aux activités qui rencontrent leur clientèle en personne. Travaillez alors le référencement de votre site et des pages qui décrivent clairement votre cadre à distance.
 
+### Faut-il optimiser son site pour ChatGPT ?
+
+Pas avec une recette à part. Les assistants s'appuient sur les mêmes bases : un site clair, une identité vérifiable, des informations identiques partout, des réponses utiles à de vraies questions. Personne ne peut garantir d'être cité. Tester de temps en temps « psychologue à [votre ville] » dans un assistant permet de voir si votre nom, votre adresse et votre cadre sont justes — ou inventés.
+
 ### Peut-on faire du SEO local en respectant la déontologie ?
 
 Oui. Le SEO local consiste à mieux informer et mieux structurer votre présence, pas à promettre des résultats thérapeutiques, ni à solliciter des avis, ni à adopter un marketing agressif.
 
 ## Conclusion
 
-Apparaître en premier sur Google dans votre ville n'est pas une tactique isolée : c'est le résultat d'un écosystème cohérent. Commencez par vérifier votre éligibilité, consolidez votre fiche Google Business Profile, alignez votre site et vos signaux locaux, puis mesurez les contacts plutôt qu'une position unique.
+Apparaître en premier sur Google dans votre ville n'est pas une tactique isolée : c'est le résultat d'un écosystème cohérent. Commencez par vérifier votre éligibilité, consolidez votre fiche Google Business Profile, alignez votre site et vos signaux locaux. Les aperçus IA et les assistants conversationnels s'appuient sur les mêmes fondations : des faits clairs, une identité vérifiable, une présence cohérente. Mesurez les contacts plutôt qu'une position unique.
 
 C'est cette constance qui attire un trafic qualifié et, surtout, des prises de contact plus pertinentes.
 
@@ -311,6 +357,7 @@ Si vous voulez, je peux réaliser un diagnostic SEO local de votre situation act
 
 - [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
 - [Avis Google et e-réputation du psychologue](/blog/avis-google-e-reputation-psychologue/)
+- [Créer son site avec l'IA : une fausse bonne idée pour un psychologue ?](/blog/creer-site-avec-ia-psychologue/)
 - [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/)
 - [Référencement site psychologue](/referencement-site-psychologue/)
 - [Guide complet visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/)
