@@ -11,6 +11,8 @@ tags: ["psychologue", "référencement local cabinet", "google business profile"
 
 *Temps de lecture : 15 minutes*
 
+Bon je l'avoue directement : le titre de mon article est exagéré ! Il n'y a pas de recette miracle pour apparaître en premier sur Google dans sa ville. Ceux qui vous promettent le contraire sont des menteurs ou des incompétents. Ceci étant posé, voici comment se donner toutes les chances d'apparaitre sur le podium, et pourquoi pas en première position !
+
 Vous voulez apparaître en premier sur Google quand une personne tape « psychologue + votre ville » ? C'est une ambition compréhensible, mais il faut partir d'une réalité simple : en SEO local, il n'existe pas de bouton magique, et Google [ne vend pas un meilleur classement local](https://support.google.com/business/answer/7091).
 
 Ce qui fonctionne, c'est un système cohérent : **fiche Google Business Profile + site clair + signaux locaux fiables + régularité**. Cet article vous donne une méthode applicable dans n'importe quelle ville, pour attirer un trafic local qualifié — sans tricher, et sans traiter la relation thérapeutique comme un levier marketing.
