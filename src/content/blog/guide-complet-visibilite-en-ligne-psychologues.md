@@ -4,7 +4,7 @@ seoTitle: "Visibilité en ligne psychologues : guide SEO Nicodev"
 metaTitleSuffix: "Nicodev"
 description: "Guide visibilité en ligne pour psychologues : fiche Google, site, SEO local, Doctolib, budget et priorités d’action."
 pubDate: "2026-05-11"
-updatedDate: "2026-05-31"
+updatedDate: "2026-09-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
 tags: ["psychologue", "référencement local cabinet", "site web cabinet", "google business profile"]
@@ -74,9 +74,11 @@ Le sujet le plus sensible de votre présence en ligne : ce que le **code de déo
 
 ### 3. SEO local et « premier sur Google » dans sa ville
 
-Une fois la fiche en place, il faut comprendre ce que « bien classé » signifie réellement : pertinence, distance, réputation, cohérence des signaux locaux, pages du site alignées avec votre zone.
+Une fois la fiche en place, il faut comprendre ce que « bien classé » signifie réellement : pertinence, distance, réputation, cohérence des signaux locaux, pages du site alignées avec votre zone. Depuis juillet 2026 s’y ajoute ce que les Aperçus IA et les assistants changent — ou ne changent pas — pour un cabinet.
 
 → [Psychologue : comment apparaître en premier sur Google dans sa ville ?](/blog/psychologue-premier-google-ville/)
+
+→ [Aperçus IA de Google : ce que ça change pour un psychologue](/blog/apercus-ia-google-psychologue/)
 
 ### 4. Site internet dédié psychologues (structure, éthique, visibilité)
 

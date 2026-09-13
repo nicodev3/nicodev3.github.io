@@ -11,6 +11,7 @@ export const GUIDE_VISIBILITE_CLUSTER_IDS = [
   'google-business-profile-psychologue',
   'avis-google-e-reputation-psychologue',
   'psychologue-premier-google-ville',
+  'apercus-ia-google-psychologue',
   'site-internet-psychologues',
   'nom-de-domaine-hebergement',
   'combien-coute-site-internet-2026',

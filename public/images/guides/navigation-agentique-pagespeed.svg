@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="780" viewBox="0 0 1600 780" role="img" aria-labelledby="title desc">
+  <title id="title">Navigation agentique : site lisible ou site illisible pour une machine</title>
+  <desc id="desc">Comparaison pedagogique : a gauche une page stable avec des boutons nommes, a droite une page qui saute et un bouton image sans texte.</desc>
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 20px Arial, sans-serif; fill: #334155; }
+      .cardTitle { font: 700 26px Arial, sans-serif; fill: #0f172a; }
+      .text { font: 400 20px Arial, sans-serif; fill: #1e293b; }
+      .ok { font: 700 22px Arial, sans-serif; fill: #166534; }
+      .ko { font: 700 22px Arial, sans-serif; fill: #991b1b; }
+      .small { font: 400 18px Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="780" fill="#f8fafc" />
+  <text x="800" y="54" text-anchor="middle" class="title">Le test Navigation agentique ne dit pas si vous etes premier</text>
+  <text x="800" y="90" text-anchor="middle" class="subtitle">Il repond a une autre question : une machine peut-elle se servir de la page (RDV, formulaire, telephone) ?</text>
+
+  <rect x="80" y="130" width="700" height="540" rx="18" fill="#ffffff" stroke="#86efac" stroke-width="3" />
+  <text x="430" y="180" text-anchor="middle" class="ok">Page utilisable</text>
+  <text x="120" y="230" class="cardTitle">Bouton avec un vrai nom</text>
+  <rect x="120" y="250" width="280" height="48" rx="8" fill="#166534" />
+  <text x="260" y="282" text-anchor="middle" style="font: 700 20px Arial, sans-serif; fill: #ffffff;">Prendre rendez-vous</text>
+  <text x="120" y="340" class="text">Champ Votre telephone avec</text>
+  <text x="120" y="370" class="text">un libelle visible, pas seulement</text>
+  <text x="120" y="400" class="text">un fond gris.</text>
+  <text x="120" y="460" class="text">La page ne saute pas : pas de</text>
+  <text x="120" y="490" class="text">bandeau cookies qui pousse le</text>
+  <text x="120" y="520" class="text">bouton hors de portee.</text>
+  <text x="120" y="580" class="small">Ratio type : 2/2 sur les controles qui comptent.</text>
+  <text x="120" y="612" class="small">Ce n est pas une note sur 100.</text>
+
+  <rect x="820" y="130" width="700" height="540" rx="18" fill="#ffffff" stroke="#fca5a5" stroke-width="3" />
+  <text x="1170" y="180" text-anchor="middle" class="ko">Page presente, mais illisible</text>
+  <text x="860" y="230" class="cardTitle">Bouton-image sans texte</text>
+  <rect x="860" y="250" width="64" height="48" rx="8" fill="#334155" />
+  <text x="892" y="282" text-anchor="middle" style="font: 700 22px Arial, sans-serif; fill: #ffffff;">?</text>
+  <text x="940" y="282" class="text">L IA voit un carre, pas RDV.</text>
+  <text x="860" y="340" class="text">Formulaire sans nom de champ :</text>
+  <text x="860" y="370" class="text">trois cases vides, on ne sait pas</text>
+  <text x="860" y="400" class="text">s il s agit du nom, du mail ou</text>
+  <text x="860" y="430" class="text">du motif.</text>
+  <rect x="860" y="460" width="620" height="70" rx="8" fill="#fee2e2" />
+  <text x="880" y="492" class="text">La page saute (images sans taille,</text>
+  <text x="880" y="522" class="text">bandeau). L agent clique a cote.</text>
+  <text x="860" y="580" class="small">Le site peut deja apparaitre sur Google.</text>
+  <text x="860" y="612" class="small">Ce test ne le fait pas gagner des places.</text>
+</svg>

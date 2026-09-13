@@ -234,6 +234,8 @@ Un article utile, daté et signé par un·e psychologue identifiable vaut mieux 
 
 Depuis juillet 2026, Google affiche en France des **Aperçus IA** (un résumé en haut de certains résultats) et un **mode IA** plus conversationnel. En parallèle, une partie des personnes pose déjà sa question à ChatGPT, Gemini, Perplexity ou un assistant du téléphone : « Comment choisir un psychologue à Lyon ? », « Un psy qui reçoit des adultes en TCC près de Nantes », « Première séance, ça se passe comment ? ».
 
+Le détail — à quoi ressemble l’écran, ce que ça change pour un cabinet, et quoi vérifier sans devenir technicien — est dans [Aperçus IA de Google : ce que ça change pour un psychologue](/blog/apercus-ia-google-psychologue/). Les paragraphes ci-dessous restent le résumé utile dans ce guide local.
+
 Ce n'est pas un nouveau bouton magique. Google le dit clairement : [aucune balise, aucun fichier spécial n'est exigé](https://developers.google.com/search/docs/appearance/ai-features) pour apparaître dans ces fonctionnalités. Il faut un site indexable, dont le contenu peut être affiché en extrait, et une présence cohérente. Les recettes vendues sous le nom de « GEO » (optimiser pour les IA génératives) recyclent le plus souvent… le bon SEO.
 
 ### À quoi ressemble la page de résultats maintenant
@@ -357,6 +359,7 @@ Si vous voulez, je peux réaliser un diagnostic SEO local de votre situation act
 
 - [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
 - [Avis Google et e-réputation du psychologue](/blog/avis-google-e-reputation-psychologue/)
+- [Aperçus IA de Google : ce que ça change pour un psychologue](/blog/apercus-ia-google-psychologue/)
 - [Créer son site avec l'IA : une fausse bonne idée pour un psychologue ?](/blog/creer-site-avec-ia-psychologue/)
 - [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/)
 - [Référencement site psychologue](/referencement-site-psychologue/)

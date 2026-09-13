@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">Trois portes pour rester trouvable</title>
+  <desc id="desc">Trois portes : les robots qui lisent le site, les reponses de Google, les assistants qui utilisent la page (bouton, formulaire).</desc>
+  <defs>
+    <style>
+      .title { font: 700 40px Arial, sans-serif; fill: #0f172a; }
+      .cardTitle { font: 700 26px Arial, sans-serif; fill: #0f172a; }
+      .text { font: 400 20px Arial, sans-serif; fill: #1e293b; }
+      .small { font: 400 18px Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="720" fill="#f8fafc" />
+  <text x="800" y="58" text-anchor="middle" class="title">Trois portes, un meme site</text>
+
+  <rect x="70" y="100" width="460" height="520" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="3" />
+  <rect x="70" y="100" width="460" height="70" rx="18" fill="#e2e8f0" />
+  <rect x="70" y="140" width="460" height="30" fill="#e2e8f0" />
+  <text x="300" y="148" text-anchor="middle" class="cardTitle">Porte 1 - Lire</text>
+  <text x="100" y="220" class="text">Les robots qui viennent</text>
+  <text x="100" y="252" class="text">lire vos pages.</text>
+  <text x="100" y="304" class="text">Si le standard ne decroche</text>
+  <text x="100" y="336" class="text">pas, ou si la porte est</text>
+  <text x="100" y="368" class="text">verrouillee, ils passent</text>
+  <text x="100" y="400" class="text">leur chemin.</text>
+  <text x="100" y="460" class="small">Vitesse, interdictions,</text>
+  <text x="100" y="490" class="small">pages trop lourdes.</text>
+  <text x="100" y="540" class="small">A faire verifier, pas a</text>
+  <text x="100" y="570" class="small">regler soi-meme.</text>
+
+  <rect x="570" y="100" width="460" height="520" rx="18" fill="#ffffff" stroke="#818cf8" stroke-width="3" />
+  <rect x="570" y="100" width="460" height="70" rx="18" fill="#e0e7ff" />
+  <rect x="570" y="140" width="460" height="30" fill="#e0e7ff" />
+  <text x="800" y="148" text-anchor="middle" class="cardTitle">Porte 2 - Repondre</text>
+  <text x="600" y="220" class="text">Google (et parfois ChatGPT)</text>
+  <text x="600" y="252" class="text">redige une reponse.</text>
+  <text x="600" y="304" class="text">Il ne peut citer que ce</text>
+  <text x="600" y="336" class="text">qu il a le droit d afficher,</text>
+  <text x="600" y="368" class="text">et ce qui est clair des</text>
+  <text x="600" y="400" class="text">premieres lignes.</text>
+  <text x="600" y="460" class="small">Site trouvable, extraits</text>
+  <text x="600" y="490" class="small">autorises, faits utiles.</text>
+  <text x="600" y="540" class="small">Pas de fichier magique.</text>
+  <text x="600" y="570" class="small">Pas de recette etre 1er.</text>
+
+  <rect x="1070" y="100" width="460" height="520" rx="18" fill="#ffffff" stroke="#34d399" stroke-width="3" />
+  <rect x="1070" y="100" width="460" height="70" rx="18" fill="#d1fae5" />
+  <rect x="1070" y="140" width="460" height="30" fill="#d1fae5" />
+  <text x="1300" y="148" text-anchor="middle" class="cardTitle">Porte 3 - Agir</text>
+  <text x="1100" y="220" class="text">Un assistant essaie de</text>
+  <text x="1100" y="252" class="text">cliquer, d ecrire, de</text>
+  <text x="1100" y="284" class="text">prendre rendez-vous.</text>
+  <text x="1100" y="336" class="text">S il ne lit pas le bouton</text>
+  <text x="1100" y="368" class="text">ou si la page saute, il</text>
+  <text x="1100" y="400" class="text">rate la cible.</text>
+  <text x="1100" y="460" class="small">Noms clairs, formulaire</text>
+  <text x="1100" y="490" class="small">lisible, page stable.</text>
+  <text x="1100" y="540" class="small">Test PageSpeed :</text>
+  <text x="1100" y="570" class="small">Navigation agentique.</text>
+</svg>

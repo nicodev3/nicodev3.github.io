@@ -66,6 +66,10 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
     beforeHeading: 'Par où commencer',
     variant: 'visibility',
   },
+  'apercus-ia-google-psychologue': {
+    beforeHeading: 'Si vous ne faites qu’une chose',
+    variant: 'visibility',
+  },
   'referencement-local-psychomotricien': {
     beforeHeading: 'Une stratégie sobre',
     variant: 'psychomotricien',
