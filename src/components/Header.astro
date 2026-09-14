@@ -60,27 +60,55 @@ function navLinkIsActive(href: string): boolean {
 	data-site-header
 	class="site-header sticky top-0 z-50 flex h-20 items-center border-b border-border bg-surface"
 >
-	<nav class="shell-layout flex w-full items-center justify-between gap-4" aria-label="Navigation principale">
-		<a
-			href="/"
-			data-site-wordmark
-			class="site-header__brand shrink-0 transition-opacity hover:opacity-90"
-			aria-current={currentPath === '/' ? 'page' : undefined}
-			aria-label="nicodev. — retour à l’accueil"
-		>
-			<Image
-				src={nicodevLogo}
-				alt="nicodev."
-				class="h-10 w-auto object-contain"
-				width={280}
-				height={80}
-				loading="eager"
-				decoding="async"
-			/>
-		</a>
+	<nav class="shell-layout flex min-w-0 w-full items-center justify-between gap-4" aria-label="Navigation principale">
+		<div class="flex min-w-0 shrink-0 flex-col items-start gap-1">
+			<a
+				href="/"
+				data-site-wordmark
+				class="site-header__brand shrink-0 transition-opacity hover:opacity-90"
+				aria-current={currentPath === '/' ? 'page' : undefined}
+				aria-label="nicodev. — retour à l’accueil"
+			>
+				<Image
+					src={nicodevLogo}
+					alt="nicodev."
+					class="h-8 w-auto object-contain sm:h-10"
+					width={280}
+					height={80}
+					loading="eager"
+					decoding="async"
+				/>
+			</a>
+
+			<div
+				class="ml-0.5 flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[0.625rem] font-medium leading-none text-muted sm:text-[0.6875rem]"
+				role="group"
+				aria-label="Double expertise"
+			>
+				<span class="inline-flex h-4 items-center gap-1.5">
+					<span class="text-sm leading-none text-primary-700" aria-hidden="true">Ψ</span>
+					<span>Psychologue</span>
+				</span>
+				<span class="text-primary-300" aria-hidden="true">•</span>
+				<span class="inline-flex h-4 items-center gap-1.5">
+					<svg
+						class="h-3.5 w-3.5 text-primary-500"
+						viewBox="0 0 16 16"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+						aria-hidden="true"
+					>
+						<rect x="1.5" y="2" width="13" height="11.5" rx="1.5" />
+						<path d="M2 5.25h12M4 3.6h.01M6 3.6h.01" stroke-linecap="round" />
+					</svg>
+					<span>Créateur de sites web</span>
+				</span>
+			</div>
+		</div>
 
 		<div class="flex items-center gap-3 md:gap-6">
-			<div class="hidden md:flex md:items-center md:gap-6 lg:gap-8">
+			<div class="hidden xl:flex xl:items-center xl:gap-6 2xl:gap-8">
 				{links.map((link) => {
 					const active = navLinkIsActive(link.href);
 					return (
@@ -117,7 +145,7 @@ function navLinkIsActive(href: string): boolean {
 
 			<button
 				type="button"
-				class="mobile-nav-toggle md:hidden inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+				class="mobile-nav-toggle inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground xl:hidden"
 				aria-expanded="false"
 				aria-controls="mobile-nav-drawer"
 				data-mobile-nav-toggle
@@ -140,7 +168,7 @@ function navLinkIsActive(href: string): boolean {
 	-->
 	<div
 		id="mobile-nav-drawer"
-		class="mobile-nav-drawer md:hidden fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
+		class="mobile-nav-drawer fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none xl:hidden"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu de navigation"
