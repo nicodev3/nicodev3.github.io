@@ -95,8 +95,8 @@ const visibilityFeatures = [
 				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique — avec un espace pour modifier vos textes et publier des articles."
 				summary="Site + CMS + SEO (bases et veille) + fiche Google"
 				features={serenityFeatures}
-				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
-				buttonHref="/devis/"
+				buttonLabel="Demander un diagnostic gratuit"
+				buttonHref="/diagnostic-gratuit/"
 				subscribeHref={stripePaymentLinkSerenite}
 				subscribeLabel="Démarrer avec Sérénité"
 				source={source}
@@ -110,8 +110,8 @@ const visibilityFeatures = [
 				description="Pour un accompagnement plus serré : support prioritaire, SEO expert avec plus d’outils, et aide à la rédaction — sans que vous ayez à gérer Google ni vos textes seul."
 				summary="Support prioritaire + SEO expert + aide à la rédaction"
 				features={visibilityFeatures}
-				buttonLabel={hasStripePaymentLinks ? 'Échanger avant de choisir' : 'Demander un échange'}
-				buttonHref="/devis/"
+				buttonLabel="Demander un diagnostic gratuit"
+				buttonHref="/diagnostic-gratuit/"
 				subscribeHref={stripePaymentLinkVisibilite}
 				subscribeLabel="Démarrer avec Visibilité"
 				recommended={true}
@@ -159,8 +159,8 @@ const visibilityFeatures = [
 		{
 			hasStripePaymentLinks && (
 				<p class="mx-auto mt-8 max-w-2xl text-center text-sm text-muted">
-					Le paiement en ligne s’effectue sur une page sécurisée Stripe. Vous pouvez aussi commencer par un échange via le
-					formulaire de devis.
+					Le paiement en ligne s’effectue sur une page sécurisée Stripe. Si vous hésitez encore, commencez par un
+					diagnostic gratuit.
 				</p>
 			)
 		}

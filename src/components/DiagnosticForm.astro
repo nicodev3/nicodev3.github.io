@@ -23,9 +23,6 @@ const startEvent = 'lead_start_diagnostic';
 	id="diagnostic-form-wrapper"
 	class="bg-background rounded-lg shadow-lg border border-border p-6 md:p-8"
 >
-	<div class="mb-6">
-		<ContactWhatsAppOption variant="button" umamiEvent="lead_click_whatsapp_from_diagnostic" />
-	</div>
 	<form
 		id="diagnostic-form"
 		name="diagnostic"
@@ -47,54 +44,33 @@ const startEvent = 'lead_start_diagnostic';
 			<input id="diagnostic-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
 		</p>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<FormField id="diagnostic-firstName" name="firstName" label="Prénom *" type="text" autocomplete="given-name" required />
-			<FormField id="diagnostic-lastName" name="lastName" label="Nom *" type="text" autocomplete="family-name" required />
-		</div>
+		<FormField id="diagnostic-firstName" name="firstName" label="Prénom *" type="text" autocomplete="given-name" required />
 
 		<FormField id="diagnostic-email" name="email" label="Email *" type="email" autocomplete="email" required />
 
-		<FormField id="diagnostic-profession" name="profession" label="Votre profession *" required variant="select">
-			<option value="">Sélectionnez votre profession</option>
-			<option value="psychologue">Psychologue</option>
-			<option value="psychotherapeute">Psychothérapeute (titre + RPPS)</option>
-			<option value="psychomotricien">Psychomotricien</option>
-		</FormField>
-		<FormField id="diagnostic-city" name="city" label="Ville (ou zone) *" autocomplete="address-level2" required placeholder="Paris 15, Sceaux, ... " />
-
-		<FormField id="diagnostic-website" name="website" label="Site internet (si vous en avez un, ou une URL en projet)" type="text" placeholder="https://votre-site.fr — laissez vide si pas encore de site" />
+		<FormField
+			id="diagnostic-cityOrSite"
+			name="cityOrSite"
+			label="Ville ou site web *"
+			type="text"
+			autocomplete="address-level2"
+			required
+			placeholder="Paris 15, ou https://votre-site.fr"
+		/>
 
 		<FormField
 			id="diagnostic-visibilityStatus"
 			name="visibilityStatus"
-			label="Votre situation actuelle (visibilité) *"
+			label="Votre situation *"
 			required
 			variant="select"
 		>
 			<option value="">Sélectionnez votre situation</option>
-			<option value="pas-de-site">Je n'ai pas encore de site (installation ou réflexion)</option>
-			<option value="plateformes-seules">J'ai surtout une fiche Google et/ou Doctolib, sans site dédié</option>
-			<option value="site-peu-visibilite">J'ai un site mais il ne génère pas assez de demandes</option>
+			<option value="pas-de-site">Je n'ai pas encore de site</option>
+			<option value="plateformes-seules">J'ai surtout Google et/ou Doctolib</option>
+			<option value="site-peu-visibilite">J'ai un site, trop peu de demandes</option>
 			<option value="je-ne-sais-pas">Je ne sais pas encore</option>
 		</FormField>
-
-		<FormField id="diagnostic-mainObjective" name="mainObjective" label="Votre objectif principal *" required variant="select">
-			<option value="">Sélectionnez votre objectif</option>
-			<option value="preparer-installation">Préparer mon installation / ouverture de cabinet</option>
-			<option value="google-local">Être plus visible sur Google local</option>
-			<option value="confiance-contenu">Rassurer davantage (contenu + pages claires)</option>
-			<option value="mobile-vitesse">Avoir un site mobile rapide et agréable</option>
-			<option value="je-ne-sais-pas">Je ne sais pas encore</option>
-		</FormField>
-
-		<FormField
-			id="diagnostic-message"
-			name="message"
-			label="Votre contexte (quelques mots)"
-			variant="textarea"
-			placeholder="Votre message si vous souhaitez me préciser quelque chose"
-			rows={6}
-		/>
 
 		<button
 			type="submit"
@@ -104,13 +80,16 @@ const startEvent = 'lead_start_diagnostic';
 				<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
 				<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.4 0 0 5.4 0 12h4zm2 5.3A8 8 0 014 12H0c0 3 1.1 5.8 3 7.9l3-2.6z"></path>
 			</svg>
-			<span data-diagnostic-submit-text>Demander un diagnostic gratuit</span>
+			<span data-diagnostic-submit-text>Recevoir mon diagnostic</span>
 		</button>
 		<p id="diagnostic-form-feedback" class="hidden text-sm font-medium text-red-700" role="alert" aria-live="polite" tabindex="-1"></p>
 		<p class="text-center text-xs text-muted">
-			Sans engagement. Vous recevez un retour concret avec priorités d'action.
+			Moins de 2 minutes. Sans engagement. Retour sous 48&nbsp;h.
 		</p>
 	</form>
+	<div class="mt-8 border-t border-border pt-6">
+		<ContactWhatsAppOption variant="button" umamiEvent="lead_click_whatsapp_from_diagnostic" />
+	</div>
 </div>
 
 <script is:inline>

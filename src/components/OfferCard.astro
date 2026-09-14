@@ -45,7 +45,20 @@ const recommendedShell = recommended
 	? 'z-10 overflow-visible border-2 border-primary-foreground shadow-2xl md:scale-[1.05]'
 	: 'border border-border hover:border-primary-300/60';
 
-const articleClass = `${shellClasses} ${recommendedShell}`;
+const isDiagnosticHref = buttonHref.includes('/diagnostic-gratuit');
+const exchangeEventAttrs = isDiagnosticHref
+	? {
+			'data-analytics-event': 'lead_click_diagnostic',
+			'data-analytics-cta': 'diagnostic',
+			'data-analytics-location': `offres_${source}`,
+			'data-lead-source': `offres-${source}`,
+		}
+	: {
+			'data-umami-event': 'lead_click_devis_from_offers',
+			'data-umami-event-offer': name,
+			'data-umami-event-source': source,
+			'data-lead-source': `offres-${source}`,
+		};
 
 const primaryButtonClass = [
 	'flex w-full items-center justify-center rounded-xl px-5 py-4 text-center font-bold transition-[background-color,opacity,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background',
@@ -60,6 +73,7 @@ const outlineButtonClass = [
 const secondaryLinkClass =
 	'block text-center text-sm font-medium text-muted underline decoration-border underline-offset-4 transition-colors hover:text-foreground';
 const analyticsOffer = name.toLocaleLowerCase('fr').includes('sérénité') ? 'serenite' : 'visibilite';
+const articleClass = `${shellClasses} ${recommendedShell}`;
 ---
 
 <article class={articleClass}>
@@ -137,10 +151,7 @@ const analyticsOffer = name.toLocaleLowerCase('fr').includes('sérénité') ? 's
 						<a
 							href={buttonHref}
 							class={secondaryLinkClass}
-							data-umami-event="lead_click_devis_from_offers"
-							data-umami-event-offer={name}
-							data-umami-event-source={source}
-							data-lead-source={`offres-${source}`}
+							{...exchangeEventAttrs}
 						>
 							{buttonLabel}
 						</a>
@@ -149,10 +160,7 @@ const analyticsOffer = name.toLocaleLowerCase('fr').includes('sérénité') ? 's
 					<a
 						href={buttonHref}
 						class:list={!recommended ? outlineButtonClass : primaryButtonClass}
-						data-umami-event="lead_click_devis_from_offers"
-						data-umami-event-offer={name}
-						data-umami-event-source={source}
-						data-lead-source={`offres-${source}`}
+						{...exchangeEventAttrs}
 					>
 						{buttonLabel}
 					</a>

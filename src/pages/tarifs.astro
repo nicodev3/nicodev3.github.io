@@ -9,8 +9,10 @@ import FaqSection from '../components/FaqSection.astro';
 import tarifsHeroImage from '../assets/images/tarifs-image.webp';
 import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
 import { PRICING_FAQ, PRICING_LEAD } from '../data/pricing';
+import { maltTestimonials } from '../data/testimonials';
 import { BadgeEuro, BadgeCheck, CalendarClock, Wallet } from '@lucide/astro';
 
+const tarifsProof = maltTestimonials[2];
 const tarifsHeroHighlightIcons = [BadgeEuro, Wallet, CalendarClock, BadgeCheck] as const;
 const tarifsHeroHighlights = TARIFS_TRUST_SIGNALS.map((label, index) => ({
 	Icon: tarifsHeroHighlightIcons[index],
@@ -137,8 +139,62 @@ const tarifsFaqItems = [
 					</li>
 				))}
 			</ul>
+			<div class="mt-8">
+				<a
+					href="/diagnostic-gratuit/"
+					class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold"
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location="pricing_hero"
+					data-lead-source="pricing-hero"
+				>
+					Faire le point avant de choisir
+				</a>
+				<p class="mt-2 text-sm text-muted">Quatre questions. Sans engagement. Les tarifs sont juste en dessous.</p>
+			</div>
 		</Fragment>
 	</Hero>
+
+	<section class="border-b border-border bg-white py-12 md:py-16">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+			<h2 class="text-center font-heading text-2xl font-semibold text-foreground sm:text-3xl">
+				Ce que vous payez chaque mois
+			</h2>
+			<p class="mx-auto mt-3 max-w-2xl text-center text-muted">
+				Pas une location de site. L’abonnement couvre la construction (0&nbsp;€ de facture de création), puis l’hébergement, la maintenance et le suivi.
+			</p>
+			<ul class="mt-8 grid gap-4 sm:grid-cols-3">
+				<li class="rounded-xl border border-border bg-surface px-5 py-4 text-sm text-muted">
+					<strong class="block font-semibold text-foreground">Inclus dès 29&nbsp;€</strong>
+					Site, CMS, fiche Google, bases SEO, bouton de rendez-vous, 1 modification simple par mois.
+				</li>
+				<li class="rounded-xl border border-border bg-surface px-5 py-4 text-sm text-muted">
+					<strong class="block font-semibold text-foreground">Sans piège</strong>
+					Résiliation à tout moment. Le site et le nom de domaine vous appartiennent.
+				</li>
+				<li class="rounded-xl border border-border bg-surface px-5 py-4 text-sm text-muted">
+					<strong class="block font-semibold text-foreground">Un confrère</strong>
+					Psychologue et développeur : les textes et la technique restent dans le cadre de la profession.
+				</li>
+			</ul>
+			<blockquote class="mt-8 rounded-xl border border-border bg-surface px-6 py-5">
+				<p class="text-sm italic leading-relaxed text-muted">«&nbsp;{tarifsProof.quote}&nbsp;»</p>
+				<footer class="mt-3 text-sm font-medium text-foreground">{tarifsProof.author}</footer>
+			</blockquote>
+			<p class="mt-6 text-center">
+				<a
+					href="/diagnostic-gratuit/"
+					class="font-semibold text-primary underline underline-offset-4 hover:no-underline"
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location="pricing_reassurance"
+					data-lead-source="pricing-reassurance"
+				>
+					Incertain sur la formule&nbsp;? Demandez d’abord un diagnostic gratuit
+				</a>
+			</p>
+		</div>
+	</section>
 
 	<OffersSection background="white" />
 
@@ -365,10 +421,10 @@ const tarifsFaqItems = [
 	/>
 
 	<CtaSection
-		title="Prêt à créer votre site internet ?"
-		description="Discutons de votre projet et choisissons ensemble la formule qui correspond à vos besoins."
-		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/' }}
-		secondaryButton={{ text: 'Voir les tarifs', href: '/tarifs/#tarifs-offres' }}
+		title="Pas sûr de la formule ?"
+		description="Quatre questions suffisent pour un premier retour : site, fiche Google, et ce qui mérite d’être traité maintenant."
+		primaryButton={{ text: 'Demander un diagnostic gratuit', href: '/diagnostic-gratuit/', leadSource: 'pricing-final' }}
+		secondaryButton={{ text: 'Voir des sites réalisés', href: '/portfolio/' }}
 		background="white"
 	/>
 </Layout>

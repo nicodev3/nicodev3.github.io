@@ -17,69 +17,55 @@ const copies: Record<
     description: string;
     primary: string;
     primaryHref: string;
-    secondary: string;
-    secondaryHref: string;
   }
 > = {
   site: {
     eyebrow: 'Besoin d’un regard extérieur ?',
     title: 'Votre site doit être clair pour vos patients avant d’être sophistiqué.',
     description:
-      'Je peux examiner votre projet ou votre site actuel et vous indiquer les priorités utiles : structure, contenu, visibilité locale et points techniques.',
+      'Quatre questions suffisent : je vous indique les priorités utiles, structure, contenu et visibilité locale.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
-    secondary: 'Voir le portfolio',
-    secondaryHref: '/portfolio/',
   },
   visibility: {
     eyebrow: 'Passez de la méthode à votre situation',
     title: 'Quelles actions auraient réellement un effet pour votre cabinet ?',
     description:
-      'Le diagnostic gratuit permet de faire le point à partir de votre site, de votre fiche Google et de votre contexte local.',
-    primary: 'Recevoir mes 3 priorités',
+      'Un diagnostic court à partir de votre site, de votre fiche Google et de votre contexte local.',
+    primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
-    secondary: 'Découvrir l’accompagnement SEO',
-    secondaryHref: '/referencement-site-psychologue/',
   },
   refonte: {
     eyebrow: 'Avant de lancer la refonte',
     title: 'Identifiez ce qui mérite vraiment d’être changé.',
     description:
-      'Je peux analyser l’existant et distinguer les problèmes de contenu, de structure, de référencement ou de technique avant que vous engagiez un budget.',
-    primary: 'Faire analyser mon site',
+      'Je distingue les problèmes de contenu, de structure, de référencement ou de technique avant que vous engagiez un budget.',
+    primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
-    secondary: 'Voir les offres',
-    secondaryHref: '/tarifs/',
   },
   budget: {
     eyebrow: 'Vous préparez votre budget ?',
-    title: 'Obtenez un périmètre adapté à votre projet avant de comparer les prix.',
+    title: 'Faites le point avant de comparer les prix.',
     description:
-      'Expliquez-moi votre situation et vos objectifs. Je vous indiquerai les éléments réellement nécessaires et ceux qui peuvent attendre.',
-    primary: 'Faire le point gratuitement',
+      'Je vous indique les éléments réellement nécessaires et ceux qui peuvent attendre.',
+    primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
-    secondary: 'Consulter les tarifs',
-    secondaryHref: '/tarifs/',
   },
   independence: {
     eyebrow: 'Construire une présence durable',
     title: 'Votre site peut devenir le point central de votre visibilité.',
     description:
-      'Je peux vérifier comment articuler votre site, Google et vos plateformes de rendez-vous sans dépendre entièrement d’un service tiers.',
+      'Je vérifie comment articuler site, Google et rendez-vous, sans tout faire dépendre d’une plateforme.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
-    secondary: 'Voir la création de site',
-    secondaryHref: '/creation-site-internet-psychologue/',
   },
   psychomotricien: {
     eyebrow: 'Pour votre cabinet de psychomotricité',
     title: 'Vérifiez les priorités de votre visibilité locale.',
     description:
-      'Je peux examiner votre site, votre fiche Google et la cohérence de vos informations pour vous proposer trois actions adaptées à votre cabinet.',
+      'Quatre questions : site, fiche Google, cohérence des infos, et trois actions adaptées.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
-    secondary: 'Voir l’offre psychomotricien',
-    secondaryHref: '/site-internet-psychomotricien/',
   },
 };
 
@@ -99,7 +85,7 @@ const eventSource = articleId.replaceAll('-', '_');
     {copy.title}
   </h2>
   <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">{copy.description}</p>
-  <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+  <div class="mt-5">
     <a
       href={copy.primaryHref}
       class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
@@ -110,13 +96,7 @@ const eventSource = articleId.replaceAll('-', '_');
     >
       {copy.primary}
     </a>
-    <a
-      href={copy.secondaryHref}
-      class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface"
-      data-umami-event={`lead_click_secondary_from_article_${eventSource}_inline`}
-    >
-      {copy.secondary}
-    </a>
+    <p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
   </div>
 </aside>
 

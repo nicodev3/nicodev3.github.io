@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
 import DiagnosticForm from '../components/DiagnosticForm.astro';
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -16,72 +15,38 @@ const breadcrumbSchema = {
 
 <Layout
 	title="Diagnostic visibilité cabinet psychologue | Nicodev"
-	description="Diagnostic gratuit de visibilité pour psychologues : avec ou sans site, fiche Google, profils en ligne, priorités et formule adaptée."
+	description="Diagnostic gratuit de visibilité pour psychologues : 4 questions, retour sous 48 h sur votre fiche Google, vos profils et l’intérêt d’un site."
 >
 	<Fragment slot="head">
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 
-	<Hero
-		title="Diagnostic visibilité cabinet (avec ou sans site)"
-		subtitle="Fiche Google, profils en ligne, site actuel ou projet : un retour personnalisé pour savoir quoi prioriser avant de vous engager."
-		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Diagnostic gratuit' }]}
-	/>
+	<section class="border-b border-border bg-white pb-16 pt-8 md:pt-10">
+		<div class="mx-auto max-w-xl px-4 sm:px-6">
+			<nav class="mb-5 text-sm text-muted" aria-label="Fil d’Ariane">
+				<ol class="flex flex-wrap items-center gap-1.5">
+					<li><a href="/" class="underline-offset-4 hover:text-primary hover:underline">Accueil</a></li>
+					<li aria-hidden="true">/</li>
+					<li class="text-foreground">Diagnostic gratuit</li>
+				</ol>
+			</nav>
+			<h1 class="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+				Diagnostic visibilité, en 4 questions
+			</h1>
+			<p class="mt-3 text-base leading-relaxed text-muted sm:text-lg">
+				Avec ou sans site. Je vous dis quoi prioriser pour votre cabinet, sans engagement.
+			</p>
+			<p class="mt-2 text-sm text-muted">Moins de 2 minutes. Retour sous 48&nbsp;h.</p>
 
-	<section class="py-16 bg-surface-alt">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-				<div>
-					<p class="mb-6 rounded-lg border border-border bg-white p-4 text-sm leading-relaxed text-muted">
-						<strong class="text-foreground">Pas encore prêt à vous engager&nbsp;?</strong> Ce diagnostic gratuit suffit pour un premier retour.
-						<span class="mt-2 block">
-							<strong class="text-foreground">Budget ou périmètre déjà clairs&nbsp;?</strong> Préférez la{' '}
-							<a href="/devis/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">demande de devis</a>
-							. <strong class="text-foreground">Question ponctuelle&nbsp;?</strong>{' '}
-							<a href="/contact/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">Contact</a>.
-						</span>
-					</p>
-					<h2 class="text-3xl font-bold text-foreground mb-4">Demander un diagnostic gratuit</h2>
-					<p class="text-muted mb-8">
-						Expliquez votre situation : installation, site existant ou simple présence sur Google / Doctolib.
-						Vous recevez un retour utile pour prioriser les bonnes actions, que vous soyez psychologue,
-						psychothérapeute (titre + RPPS) ou psychomotricien.
-					</p>
-					<p class="text-sm text-muted mb-6">
-						Temps estimé : 4 à 6 minutes. Retour sous 48 h.
-					</p>
-					<DiagnosticForm />
-				</div>
-				<div class="space-y-6">
-					<div class="rounded-lg border border-border bg-white p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-3">Les points vérifiés</h3>
-						<ul class="space-y-2 text-muted">
-							<li>La clarté de votre positionnement et de vos informations essentielles.</li>
-							<li>Votre visibilité locale sur le site, la fiche Google et les profils en ligne.</li>
-							<li>Le parcours jusqu’à la prise de rendez-vous ou au contact.</li>
-							<li>Les principaux problèmes techniques ou d’indexation repérables.</li>
-							<li>Trois recommandations prioritaires adaptées à votre situation.</li>
-						</ul>
-					</div>
-					<div class="rounded-lg border border-border bg-white p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-3">Ce diagnostic n'est pas</h3>
-						<p class="text-muted">
-							Un audit technique exhaustif de plusieurs heures. L'objectif est de vous aider à prendre la bonne décision rapidement
-							avec une base claire.
-						</p>
-					</div>
-					<div class="rounded-lg border border-border bg-white p-6">
-						<h3 class="text-xl font-semibold text-foreground mb-3">Votre projet est déjà défini&nbsp;?</h3>
-						<p class="text-muted mb-4">
-							Si votre besoin est déjà cadré, vous pouvez passer directement à la demande de devis.
-						</p>
-						<a href="/devis/" data-umami-event="lead_click_cta_devis_from_diagnostic" class="inline-flex items-center rounded-lg border border-border px-4 py-2 text-foreground hover:bg-surface transition-colors">
-							Accéder à la page devis
-						</a>
-					</div>
-				</div>
+			<div class="mt-6">
+				<DiagnosticForm />
 			</div>
+
+			<ul class="mt-8 space-y-2 text-sm text-muted">
+				<li>Clarté de votre positionnement et de vos infos essentielles.</li>
+				<li>Visibilité locale : site, fiche Google, profils en ligne.</li>
+				<li>Trois recommandations adaptées à votre situation.</li>
+			</ul>
 		</div>
 	</section>
-
 </Layout>

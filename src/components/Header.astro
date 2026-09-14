@@ -107,8 +107,8 @@ function navLinkIsActive(href: string): boolean {
 			</div>
 		</div>
 
-		<div class="flex items-center gap-3 md:gap-6">
-			<div class="hidden xl:flex xl:items-center xl:gap-6 2xl:gap-8">
+		<div class="flex min-w-0 items-center gap-3 md:gap-4 xl:gap-6">
+			<div class="hidden md:flex md:min-w-0 md:items-center md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
 				{links.map((link) => {
 					const active = navLinkIsActive(link.href);
 					return (
@@ -116,7 +116,7 @@ function navLinkIsActive(href: string): boolean {
 							href={link.href}
 							data-main-nav
 							class:list={[
-								'site-nav-link text-base transition-colors',
+								'site-nav-link text-sm transition-colors xl:text-base',
 								active
 									? 'border-b-2 border-primary pb-1 font-bold text-primary'
 									: 'text-muted hover:text-primary',
@@ -137,15 +137,16 @@ function navLinkIsActive(href: string): boolean {
 					data-analytics-cta="diagnostic"
 					data-analytics-location="header"
 					data-lead-source="header"
-					class="btn-primary-solid inline-flex shrink-0 touch-manipulation items-center justify-center rounded-xl px-6 py-2 text-base font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+					class="btn-primary-solid hidden shrink-0 touch-manipulation items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground lg:inline-flex xl:px-6 xl:text-base"
 				>
-					{projectCta.label}
+					<span class="xl:hidden">Diagnostic gratuit</span>
+					<span class="hidden xl:inline">{projectCta.label}</span>
 				</a>
 			</div>
 
 			<button
 				type="button"
-				class="mobile-nav-toggle inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground xl:hidden"
+				class="mobile-nav-toggle inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground md:hidden"
 				aria-expanded="false"
 				aria-controls="mobile-nav-drawer"
 				data-mobile-nav-toggle
@@ -168,7 +169,7 @@ function navLinkIsActive(href: string): boolean {
 	-->
 	<div
 		id="mobile-nav-drawer"
-		class="mobile-nav-drawer fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none xl:hidden"
+		class="mobile-nav-drawer fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none md:hidden"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu de navigation"
