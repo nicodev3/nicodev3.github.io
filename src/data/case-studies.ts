@@ -1,5 +1,4 @@
 import type { ImageMetadata } from 'astro';
-import benedicteImage from '../assets/images/screenshots/benedictedonet-psyenligne.webp';
 import isabelleImage from '../assets/images/screenshots/joiecompassion.webp';
 import laureImage from '../assets/images/screenshots/montpellier-psychologue.webp';
 import pierreImage from '../assets/images/screenshots/pierre-dalarun.webp';
@@ -36,64 +35,6 @@ export type CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
-  {
-    slug: 'benedicte-donet',
-    person: 'Bénédicte Donet',
-    siteName: 'Psychologue en ligne',
-    profession: 'Psychologue',
-    location: 'Consultations en ligne',
-    externalUrl: 'https://www.benedictedonet-psyenligne.com/',
-    image: benedicteImage,
-    imageAlt: 'Page d’accueil du site de Bénédicte Donet, psychologue en ligne',
-    title: 'Rendre un site WordPress plus rapide, plus clair et plus simple à maintenir',
-    summary:
-      'Le site de Bénédicte présentait une activité riche, mais sa base WordPress était devenue difficile à maintenir et peu performante. La refonte devait améliorer la technique sans appauvrir la présentation de sa pratique.',
-    challenge:
-      'Plusieurs propositions cohabitent sur le site : consultations en ligne, psychotraumatologie, EMDR, sexualité, photothérapie et programmes. L’enjeu n’était donc pas seulement de moderniser l’apparence, mais de retrouver une structure fiable et une hiérarchie compréhensible.',
-    objectives: [
-      'Simplifier la maintenance et fiabiliser la base technique.',
-      'Améliorer les performances et le confort de navigation.',
-      'Hiérarchiser les différentes activités sans effacer leur singularité.',
-      'Créer des parcours plus directs vers les informations et la prise de rendez-vous.',
-      'Aider Google à mieux comprendre les pages consacrées à la psychologie en ligne, au trauma et à l’EMDR.',
-    ],
-    work: [
-      'Reprise de la structure du site et de la navigation.',
-      'Réorganisation des contenus autour des besoins des visiteurs.',
-      'Refonte visuelle et optimisation de l’affichage sur mobile.',
-      'Allègement technique du site WordPress et amélioration de ses performances.',
-      'Travail sur les textes et l’organisation des pages pour qu’elles puissent être trouvées dans Google.',
-    ],
-    resultsIntro:
-      'Pendant les trois premiers mois observés, le site a été affiché plus de 8 000 fois dans les résultats de Google et a reçu 251 visites depuis ces résultats. Les internautes le trouvent aussi en recherchant une spécialité, et pas seulement le nom de Bénédicte.',
-    metrics: [
-      { value: '8 083', label: 'affichages dans Google' },
-      { value: '251', label: 'visites reçues depuis Google' },
-      {
-        value: '20',
-        label: 'recherches sur lesquelles le site apparaît',
-        detail: 'estimation de l’outil Ahrefs',
-      },
-      {
-        value: '14',
-        label: 'recherches où le site figure parmi les 10 premiers',
-        detail: 'estimation de l’outil Ahrefs',
-      },
-    ],
-    dataPeriod: 'Juin à août 2026 ; estimations complémentaires relevées en août 2026',
-    dataSource:
-      'Chiffres fournis par Google et consultés dans Ahrefs ; estimations Ahrefs pour les recherches détectées',
-    interpretation: [
-      'Le site est notamment trouvé sur des recherches concernant la psychologie en ligne, la téléconsultation, l’EMDR et le psychotraumatisme.',
-      'Les nombres d’affichages et de visites sont mesurés directement par Google. Les nombres de recherches détectées restent des estimations d’Ahrefs.',
-      'Trois mois restent une période courte : ces chiffres montrent un démarrage, pas un résultat définitif.',
-    ],
-    testimonial: {
-      quote:
-        'Ce qui rend son accompagnement vraiment précieux, c’est sa double casquette de psychologue et de webdesigner — une combinaison rare qui change tout. Il apporte une écoute sensible et une vraie compréhension des besoins, en plus d’une expertise technique solide.',
-      author: 'Bénédicte Donet, psychologue',
-    },
-  },
   {
     slug: 'isabelle-leboeuf-joie-compassion',
     person: 'Isabelle Leboeuf',
