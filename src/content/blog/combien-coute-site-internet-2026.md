@@ -1,9 +1,9 @@
 ---
 title: "Combien coûte un site pour psychologue en 2026 ?"
-seoTitle: "Combien coûte un site pour psychologue ? Prix 2026"
-description: "Prix d’un site pour psychologue en 2026 : DIY, freelance, agence ou abonnement. Fourchettes réalistes pour budgéter la création d’un site de cabinet libéral."
+seoTitle: "Combien coûte un site pour psychologue ? 0 € puis 29 ou 49 €"
+description: "0 € de construction, puis 29 ou 49 €/mois tout inclus. Fourchettes 2026 : DIY, freelance, agence. Comparez avant de choisir."
 pubDate: "2026-02-22"
-updatedDate: "2026-07-26"
+updatedDate: "2026-09-21"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/cout-site-internet.webp"
 tags: ["psychologue", "site web cabinet", "installation en libéral"]
@@ -34,7 +34,8 @@ faq:
 
 *Temps de lecture : 9 minutes*
 
-> **Tarifs Nicodev :** pour les formules et prix à jour (abonnement tout inclus), voir directement la page [Tarifs](/tarifs/) ou la page [création site internet psychologue](/creation-site-internet-psychologue/). *L'article ci-dessous* décrit les **fourchettes du marché** pour situer un budget réaliste en libéral — sans remplacer un devis personnalisé.
+> **Chez Nicodev : 0 € pour construire le site, puis 29 ou 49 €/mois tout inclus.**  
+> Voir les [tarifs](/tarifs/) et la [création de site internet pour psychologue](/creation-site-internet-psychologue/). *L’article ci-dessous* décrit les **fourchettes du marché** pour situer un budget réaliste en libéral — sans remplacer un devis personnalisé.
 
 Avant d'ouvrir un cabinet ou de refondre sa présence en ligne, beaucoup de psychologues tapent **combien coûte un site pour psychologue** — autrement dit, quel **prix** prévoir pour la **création d’un site web** de cabinet, sans exploser le budget ni découvrir des frais cachés six mois plus tard.
 
@@ -321,7 +322,7 @@ En 2026, un site de psychologue peut rester simple, efficace et raisonnable en b
 
 > Pour un psychologue, un site vitrine clair et professionnel devrait en général rester dans un budget mesuré, surtout si le besoin technique est simple.
 
-Si vous cherchez une option simple pour votre cabinet, commencez par le [diagnostic gratuit](/diagnostic-gratuit/) ou consultez les [tarifs](/tarifs/). Le détail de ce qui est inclus est sur la page [création de site internet pour psychologue](/creation-site-internet-psychologue/). Pour la visibilité Google au-delà du site : [référencement site psychologue](/referencement-site-psychologue/).
+Si vous cherchez une option simple pour votre cabinet : [tarifs Nicodev](/tarifs/) (0 € puis 29 ou 49 €/mois) et [création de site internet pour psychologue](/creation-site-internet-psychologue/). Le [diagnostic gratuit](/diagnostic-gratuit/) permet de cadrer avant de choisir. Pour la visibilité Google au-delà du site : [référencement site psychologue](/referencement-site-psychologue/).
 
 ---
 

@@ -196,8 +196,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Création de site internet pour psychologue | Nicodev"
-	description="Création ou refonte de site internet pour psychologue : 0 € de construction, puis 29 € ou 49 €/mois tout inclus (contenu guidé, rendez-vous, hébergement, SEO)."
+	title="Création site psychologue : 0 € puis 29 ou 49 € | Nicodev"
+	description="Création de site internet pour psychologue et agence web spécialisée : 0 € de construction, puis 29 ou 49 €/mois. 2 à 3 semaines, sans engagement."
 	image={psychologueImage}
 >
 	<Fragment slot="head">
@@ -208,11 +208,57 @@ const breadcrumbSchema = {
 
 	<Hero
 		title="Création de site internet pour psychologue"
-		subtitle="Un site vitrine sobre pour présenter votre cadre, rassurer avant le premier contact et soutenir votre visibilité locale — conçu par un psychologue, psychomotricien et psychothérapeute devenu développeur web."
+		subtitle="0 € de construction, puis 29 ou 49 €/mois tout inclus. 2 à 3 semaines. Une agence web de confrère — pour psychologues, psychothérapeutes (RPPS) et psychomotriciens."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création de site internet pour psychologue' }]}
 		coverImage={psychologueImage}
 		coverImageAlt="Exemple de site sobre pour une psychologue en libéral"
-	/>
+	>
+		<Fragment slot="after">
+			<ul
+				class="mx-auto mt-6 flex max-w-3xl list-none flex-wrap justify-center gap-2 p-0 sm:gap-2.5"
+				aria-label="Points clés de l’offre"
+			>
+				<li>
+					<span class="inline-flex items-center rounded-full border border-border/90 bg-background/70 px-3 py-1.5 text-sm text-muted shadow-sm backdrop-blur-sm">
+						0&nbsp;€ de construction
+					</span>
+				</li>
+				<li>
+					<span class="inline-flex items-center rounded-full border border-border/90 bg-background/70 px-3 py-1.5 text-sm text-muted shadow-sm backdrop-blur-sm">
+						29 ou 49&nbsp;€/mois
+					</span>
+				</li>
+				<li>
+					<span class="inline-flex items-center rounded-full border border-border/90 bg-background/70 px-3 py-1.5 text-sm text-muted shadow-sm backdrop-blur-sm">
+						2 à 3 semaines
+					</span>
+				</li>
+				<li>
+					<span class="inline-flex items-center rounded-full border border-border/90 bg-background/70 px-3 py-1.5 text-sm text-muted shadow-sm backdrop-blur-sm">
+						Sans engagement
+					</span>
+				</li>
+			</ul>
+			<div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+				<a
+					href="/diagnostic-gratuit/"
+					class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold"
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location="creation_hero"
+					data-lead-source="creation-hero"
+				>
+					Demander un diagnostic gratuit
+				</a>
+				<a
+					href="/tarifs/"
+					class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-6 py-3 font-semibold text-foreground hover:bg-background"
+				>
+					Voir les tarifs
+				</a>
+			</div>
+		</Fragment>
+	</Hero>
 
 	<div class="border-b border-border bg-white py-3">
 		<div class="shell-layout flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
@@ -248,6 +294,105 @@ const breadcrumbSchema = {
 		</div>
 	</div>
 
+	<section class="section-y border-b border-border bg-surface" aria-labelledby="creation-offre-heading">
+		<div class="shell-layout">
+			<header class="mx-auto max-w-3xl text-center">
+				<p class="type-eyebrow mb-3 text-muted">L’offre</p>
+				<h2 id="creation-offre-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+					0&nbsp;€ de construction, puis 29 ou 49&nbsp;€ par mois
+				</h2>
+				<p class="mt-4 text-lg leading-relaxed text-muted">
+					Chercher une <strong class="font-medium text-foreground">agence web psychologue</strong> ou la{' '}
+					<strong class="font-medium text-foreground">création d’un site internet pour psychologue</strong>,
+					c’est souvent la même demande&nbsp;: un prestataire qui connaît le cadre, pas un catalogue multi-métiers.
+				</p>
+			</header>
+
+			<div class="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-2">
+				<div class="rounded-xl border border-border bg-white p-6 shadow-sm">
+					<p class="type-label-mono text-muted">Sérénité</p>
+					<p class="mt-2 text-3xl font-semibold text-foreground">29&nbsp;€/mois</p>
+					<p class="mt-1 text-sm text-muted">après 0&nbsp;€ de construction</p>
+					<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
+						<li>Site vitrine, CMS, hébergement et nom de domaine</li>
+						<li>Bases SEO, fiche Google, bouton de rendez-vous</li>
+						<li>Veille de visibilité&nbsp;: je détecte et je corrige</li>
+						<li>1 modification simple par mois</li>
+					</ul>
+				</div>
+				<div class="rounded-xl border border-primary/30 bg-white p-6 shadow-sm">
+					<p class="type-label-mono text-primary">Visibilité &amp; Confiance</p>
+					<p class="mt-2 text-3xl font-semibold text-foreground">49&nbsp;€/mois</p>
+					<p class="mt-1 text-sm text-muted">après 0&nbsp;€ de construction</p>
+					<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
+						<li>Tout ce qui est inclus dans Sérénité</li>
+						<li>Support prioritaire et SEO expert (plus d’outils)</li>
+						<li>Aide à la rédaction&nbsp;: relecture, reformulation, idées</li>
+						<li>3 modifications simples par mois et modernisation annuelle</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mx-auto mt-8 grid max-w-4xl gap-4 md:grid-cols-2">
+				<div class="rounded-xl border border-border bg-white p-5">
+					<h3 class="font-heading text-xl font-semibold text-foreground">C’est adapté si…</h3>
+					<ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+						<li>vous voulez présenter votre cabinet avec sobriété et justesse&nbsp;;</li>
+						<li>vous préférez déléguer l’hébergement, la maintenance et les réglages SEO&nbsp;;</li>
+						<li>vous avez besoin d’un site relié à Doctolib, Qare, Maiia ou à un formulaire simple&nbsp;;</li>
+						<li>vous cherchez un accompagnement qui comprend le cadre déontologique&nbsp;;</li>
+						<li>vous préférez un confrère plutôt qu’une agence multi-métiers.</li>
+					</ul>
+				</div>
+				<div class="rounded-xl border border-border bg-white p-5">
+					<h3 class="font-heading text-xl font-semibold text-foreground">Ce n’est pas inclus</h3>
+					<ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+						<li>aucune garantie de place dans Google&nbsp;;</li>
+						<li>pas de plateforme complexe ni d’espace patient&nbsp;;</li>
+						<li>pas de pages par ville en série&nbsp;;</li>
+						<li>hors offre&nbsp;: psychopraticiens et pratiques sans titre réglementé&nbsp;;</li>
+						<li>pas de discours publicitaire ni d’affirmations thérapeutiques.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mx-auto mt-8 max-w-4xl rounded-xl border border-border bg-white p-6">
+				<p class="font-heading text-lg font-semibold text-foreground">Preuves nommées</p>
+				<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+					Sites livrés notamment pour{' '}
+					<a href="/etudes-de-cas/pierre-dalarun/" class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary">Pierre Dalarun</a>
+					{' '}(psychothérapeute, Soudan), Angela Bassompierre (psychologue en visio),{' '}
+					<a href="/etudes-de-cas/isabelle-leboeuf-joie-compassion/" class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary">Isabelle Leboeuf</a>
+					{' '}(Seclin) et Florent Simon (Nancy). Délai habituel&nbsp;: 2 à 3 semaines. Le site, le nom de domaine et les contenus vous appartiennent.
+					Voir le <a href="/portfolio/" class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary">portfolio</a>.
+				</p>
+			</div>
+
+			<div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+				<a
+					href="/diagnostic-gratuit/"
+					class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold"
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location="creation_offer"
+					data-lead-source="creation-offer"
+				>
+					Demander un diagnostic gratuit
+				</a>
+				<a
+					href="/tarifs/"
+					class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-6 py-3 text-sm font-semibold text-foreground hover:bg-background"
+				>
+					Comparer les formules
+				</a>
+			</div>
+			<p class="mt-4 text-center text-sm text-muted">
+				Priorité visibilité locale&nbsp;? Voir{' '}
+				<a href="/referencement-site-psychologue/" class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary">référencement site psychologue</a>.
+			</p>
+		</div>
+	</section>
+
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">
 			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
@@ -263,50 +408,8 @@ const breadcrumbSchema = {
 					SEO. Elle tient compte de votre cadre professionnel sans transformer votre pratique en produit.
 				</p>
 
-				<blockquote>
-					<p><strong>En bref</strong></p>
-					<ul>
-						<li><strong>Coût de construction</strong>&nbsp;: 0&nbsp;€ — pas de facture pour créer le site</li>
-						<li><strong>Offre Sérénité</strong>&nbsp;: 29&nbsp;EUR/mois — site vitrine, CMS, bases SEO, fiche Google, veille de visibilité</li>
-						<li><strong>Offre Visibilité &amp; Confiance</strong>&nbsp;: 49&nbsp;EUR/mois — + support prioritaire, SEO expert, aide à la rédaction</li>
-						<li><strong>Délai</strong>&nbsp;: 2 à 3 semaines en moyenne</li>
-						<li><strong>Contenu</strong>&nbsp;: formulaire guidé, pas de rédaction seul·e obligatoire</li>
-						<li><strong>Propriété</strong>&nbsp;: votre site vous appartient et peut être transféré ailleurs</li>
-						<li><strong>Spécialisation</strong>&nbsp;: confrère du métier (psychologue, psychomotricien, psychothérapeute) et développeur web — cadre déontologique intégré</li>
-					</ul>
-					<p>
-						Comparer les formules sur les <a href="/tarifs/">tarifs</a>.
-						Priorité visibilité locale&nbsp;? Voir <a href="/referencement-site-psychologue/">référencement site psychologue</a>.
-						Vous vous installez&nbsp;? Le guide <a href="/blog/installer-liberal-psychologue-par-ou-commencer/">ouvrir un cabinet de psychologue</a>{' '}
-						place le site au bon moment dans le planning.
-					</p>
-				</blockquote>
-
 				<div class="not-prose my-8">
 					<DiagnosticLeadCta variant="installation-mid" />
-				</div>
-
-				<div class="not-prose my-8 grid gap-4 md:grid-cols-2">
-					<div class="rounded-xl border border-border bg-surface p-5">
-						<h2 class="font-heading text-xl font-semibold text-foreground">C’est adapté si…</h2>
-						<ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted">
-							<li>vous voulez présenter votre cabinet avec sobriété et justesse&nbsp;;</li>
-							<li>vous préférez déléguer l’hébergement, la maintenance et les réglages SEO&nbsp;;</li>
-							<li>vous avez besoin d’un site relié à Doctolib, Qare, Maiia ou à un formulaire simple&nbsp;;</li>
-							<li>vous cherchez un accompagnement qui comprend le cadre déontologique des psychologues (et titres réglementés proches)&nbsp;;</li>
-							<li>vous préférez travailler avec un confrère plutôt qu’avec une agence multi-métiers.</li>
-						</ul>
-					</div>
-					<div class="rounded-xl border border-border bg-white p-5">
-						<h2 class="font-heading text-xl font-semibold text-foreground">Ce n’est pas adapté si…</h2>
-						<ul class="mt-3 space-y-2 text-sm leading-relaxed text-muted">
-							<li>vous cherchez une garantie de place précise dans Google&nbsp;;</li>
-							<li>vous voulez une plateforme complexe sur mesure ou un espace patient&nbsp;;</li>
-							<li>vous préférez tout gérer vous-même, y compris technique et maintenance&nbsp;;</li>
-							<li>vous exercez hors titre de psychologue, de psychothérapeute (RPPS) ou de psychomotricien (ex.&nbsp;psychopraticien)&nbsp;;</li>
-							<li>vous attendez un discours publicitaire ou des affirmations thérapeutiques excessives.</li>
-						</ul>
-					</div>
 				</div>
 
 				<h2>Ce que comprend la création d’un site pour psychologue</h2>
@@ -343,7 +446,7 @@ const breadcrumbSchema = {
 
 				<h2>Site web, site internet, site vitrine&nbsp;: même besoin</h2>
 				<p>
-					Les recherches <strong>site web psychologue</strong>, <strong>site internet psychologue</strong> ou <strong>création site psychologue</strong> désignent en pratique la même attente&nbsp;: un lieu stable où vous contrôlez le message — approche, publics accompagnés, honoraires, accès au cabinet ou téléconsultation — alors que les annuaires et plateformes imposent leur mise en forme.
+					Les recherches <strong>création site psychologue</strong>, <strong>création site internet psychologue</strong>, <strong>site internet psychologue</strong> ou <strong>agence web psychologue</strong> désignent en pratique la même attente&nbsp;: un lieu stable où vous contrôlez le message — approche, publics accompagnés, honoraires, accès au cabinet ou téléconsultation — alors que les annuaires et plateformes imposent leur mise en forme.
 				</p>
 				<p>
 					Doctolib, Qare ou Maiia facilitent la prise de rendez-vous&nbsp;; ils ne remplacent pas un site qui explique <em>qui vous êtes</em> cliniquement et qui vous rend visible sur votre nom ou vos spécialités. Le <a href="/blog/site-internet-psychologue-doctolib/">comparatif site vs Doctolib</a> du blog détaille cette articulation&nbsp;; le <a href="/blog/guide-complet-visibilite-en-ligne-psychologues/">guide complet de la visibilité en ligne</a> pose le cadre global (fiche Google, SEO local, contenu).

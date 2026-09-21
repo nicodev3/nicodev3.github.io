@@ -121,9 +121,9 @@ const faqSchema = {
 const serviceSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'Service',
-	name: 'Référencement psychologue — SEO local et visibilité Google',
+	name: 'Référencement site psychologue — SEO local et visibilité Google',
 	description:
-		'Référencement psychologue : optimisation SEO de site, structure technique, Google Business Profile et attentes réalistes pour les cabinets libéraux.',
+		'Référencement d’un site de psychologue : bases SEO, fiche Google et veille dès 29 EUR/mois. L’offre à 49 EUR/mois ajoute le support prioritaire, le SEO expert et l’aide à la rédaction, sans garantie de place.',
 	provider: {
 		'@type': 'Person',
 		name: 'Nicolas Devaux',
@@ -136,11 +136,12 @@ const serviceSchema = {
 		audienceType: 'Psychologues et cabinets de psychologie en libéral',
 	},
 	offers: {
-		'@type': 'Offer',
+		'@type': 'AggregateOffer',
 		priceCurrency: 'EUR',
-		price: '49',
+		lowPrice: '29',
+		highPrice: '49',
+		offerCount: 2,
 		url: new URL('/tarifs/', baseUrl).href,
-		availability: 'https://schema.org/InStock',
 	},
 	url: pageUrl,
 };
@@ -161,8 +162,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Référencement psychologue : SEO local et visibilité Google"
-	description="Référencement psychologue : travaillez votre visibilité locale sur Google avec un site clair, une fiche optimisée et une stratégie SEO réaliste."
+	title="Référencement site psychologue | Dès 29 €/mois · Nicodev"
+	description="Référencement d’un site de psychologue : bases SEO, fiche Google et veille dès 29 €/mois. L’offre à 49 € ajoute le SEO expert. Sans garantie de place."
 	image={refOgWebp}
 >
 	<Fragment slot="head">
@@ -172,10 +173,31 @@ const breadcrumbSchema = {
 	</Fragment>
 
 	<Hero
-		title="Référencement psychologue : améliorer sa visibilité locale"
-		subtitle="Les bases techniques et éditoriales pour rendre un site de psychologue plus lisible sur Google — avec des attentes réalistes sur les délais."
+		title="Référencement site psychologue"
+		subtitle="Inclus dès 29 €/mois : bases SEO, fiche Google et veille. L’offre à 49 € ajoute le support prioritaire, le SEO expert et l’aide à la rédaction. Sans garantie de place."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Référencement site psychologue' }]}
-	/>
+	>
+		<Fragment slot="after">
+			<div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+				<a
+					href="/diagnostic-gratuit/"
+					class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold"
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location="referencement_hero"
+					data-lead-source="referencement-hero"
+				>
+					Demander un diagnostic gratuit
+				</a>
+				<a
+					href="/tarifs/"
+					class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-6 py-3 font-semibold text-foreground hover:bg-background"
+				>
+					Voir les tarifs
+				</a>
+			</div>
+		</Fragment>
+	</Hero>
 
 	<div class="border-b border-border bg-white py-3">
 		<div class="shell-layout flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
@@ -211,38 +233,75 @@ const breadcrumbSchema = {
 		</div>
 	</div>
 
+	<section class="section-y border-b border-border bg-surface" aria-labelledby="referencement-offre-heading">
+		<div class="shell-layout">
+			<header class="mx-auto max-w-3xl text-center">
+				<p class="type-eyebrow mb-3 text-muted">L’offre</p>
+				<h2 id="referencement-offre-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+					Inclus dès 29&nbsp;€, approfondi à 49&nbsp;€
+				</h2>
+				<p class="mt-4 text-lg leading-relaxed text-muted">
+					Le référencement d’un site de psychologue n’est pas un forfait opaque vendu en sus&nbsp;:
+					les fondations sont dans la création, dès Sérénité.
+				</p>
+			</header>
+			<div class="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-2">
+				<div class="rounded-xl border border-border bg-white p-6 shadow-sm">
+					<p class="type-label-mono text-muted">Dès 29&nbsp;€/mois — Sérénité</p>
+					<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
+						<li>Structure SEO du site (titres, performances, données structurées)</li>
+						<li>Fiche Google Business Profile</li>
+						<li>CMS pour publier</li>
+						<li>Veille de visibilité&nbsp;: je détecte et je corrige</li>
+					</ul>
+				</div>
+				<div class="rounded-xl border border-primary/30 bg-white p-6 shadow-sm">
+					<p class="type-label-mono text-primary">49&nbsp;€/mois — Visibilité &amp; Confiance</p>
+					<ul class="mt-4 space-y-2 text-sm leading-relaxed text-muted">
+						<li>Tout ce qui est inclus dès 29&nbsp;€</li>
+						<li>Support prioritaire</li>
+						<li>SEO expert (plus d’outils, dont Ahrefs)</li>
+						<li>Aide à la rédaction&nbsp;: relecture, reformulation, idées d’articles</li>
+					</ul>
+				</div>
+			</div>
+			<p class="mx-auto mt-6 max-w-3xl text-center text-sm text-muted">
+				Sans garantie de place dans Google. Hors périmètre&nbsp;: rédaction mensuelle à ma charge, pages par ville, publicité.
+			</p>
+			<div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+				<a
+					href="/diagnostic-gratuit/"
+					class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold"
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location="referencement_offer"
+					data-lead-source="referencement-offer"
+				>
+					Demander un diagnostic gratuit
+				</a>
+				<a
+					href="/tarifs/"
+					class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-6 py-3 text-sm font-semibold text-foreground hover:bg-background"
+				>
+					Voir la formule
+				</a>
+			</div>
+			<p class="mt-4 text-center text-sm text-muted">
+				Pas encore de site&nbsp;? Voir la{' '}
+				<a href="/creation-site-internet-psychologue/" class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary">création de site internet pour psychologue</a>.
+			</p>
+		</div>
+	</section>
+
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">
 			<div class="mx-auto max-w-[72ch] prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground">
 				<p>
-					Vous cherchez comment améliorer le <strong>référencement psychologue</strong> de votre site ou de votre fiche Google&nbsp;?
-					Cette page détaille ce que je mets en place concrètement&nbsp;: structure technique, contenu local,
+					Cette page détaille ensuite le mode d’emploi&nbsp;: structure technique, contenu local,
 					fiche Google Business Profile et attentes réalistes — pour rendre vos informations plus faciles à trouver,
-					sans discours de classement garanti.
+					sans discours de classement garanti. Les recherches «&nbsp;référencement psychologue&nbsp;» mélangent souvent
+					annuaires, service-public et offres commerciales&nbsp;: ici, il s’agit du <strong>référencement d’un site de psychologue</strong>.
 				</p>
-
-				<div class="not-prose my-8 rounded-xl border border-primary/20 bg-surface p-6">
-					<p class="type-eyebrow mb-3 text-muted">En pratique</p>
-					<h2 class="font-heading text-2xl font-semibold text-foreground">Un accompagnement SEO local pour site + fiche Google</h2>
-					<div class="mt-4 grid gap-4 md:grid-cols-3">
-						<div>
-							<p class="font-semibold text-foreground">Inclus dès 29&nbsp;EUR/mois</p>
-							<p class="mt-1 text-sm leading-relaxed text-muted">Structure SEO, fiche Google Business Profile, CMS pour publier, et veille de visibilité (détection et correction).</p>
-						</div>
-						<div>
-							<p class="font-semibold text-foreground">Formule à 49&nbsp;EUR/mois</p>
-							<p class="mt-1 text-sm leading-relaxed text-muted">Visibilité &amp; Confiance — support prioritaire, SEO expert (plus d’outils) et aide à la rédaction.</p>
-						</div>
-						<div>
-							<p class="font-semibold text-foreground">Objectif</p>
-							<p class="mt-1 text-sm leading-relaxed text-muted">Rendre votre cadre plus clair, plus cohérent et plus facilement accessible dans les recherches locales utiles.</p>
-						</div>
-					</div>
-					<div class="mt-5 flex flex-col gap-3 sm:flex-row">
-						<a href="/diagnostic-gratuit/" class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold" data-analytics-event="lead_click_diagnostic" data-analytics-cta="diagnostic" data-analytics-location="referencement_offer">Demander un diagnostic gratuit</a>
-						<a href="/tarifs/" class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-5 py-3 text-sm font-semibold text-foreground hover:bg-background">Voir la formule</a>
-					</div>
-				</div>
 
 				<h2>Référencement site psychologue&nbsp;: par où commencer&nbsp;?</h2>
 				<p>
