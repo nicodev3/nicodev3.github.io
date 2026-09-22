@@ -19,6 +19,8 @@ const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb, coverIm
 
 const hasCover = Boolean(coverImage);
 const coverIsAsset = typeof coverImage === 'object' && coverImage !== null && 'src' in coverImage && 'width' in coverImage;
+/** Couvertures floutées : qualité plus basse (décoratif) ; soft reste un peu plus nette. */
+const coverQuality = coverBlur === 'soft' ? 75 : 65;
 
 const sectionClass = [
 	hasCover ? 'hero-shell--with-cover border-b border-border' : '',
@@ -54,6 +56,9 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 					fetchpriority="high"
 					width={1600}
 					height={900}
+					widths={[640, 960, 1280, 1600]}
+					sizes="100vw"
+					quality={coverQuality}
 				/>
 			) : (
 				<img
