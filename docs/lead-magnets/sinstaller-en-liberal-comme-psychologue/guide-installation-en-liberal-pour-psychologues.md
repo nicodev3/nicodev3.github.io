@@ -147,7 +147,7 @@ Tu peux imaginer cette progression :
 2. Temps partagé plus équilibré
 3. Libéral à temps plein quand l’activité devient assez stable
 
-![Schéma de transition progressive : salariat principal, cumul salarié plus libéral, puis libéral à temps plein.](/images/guides/salariat-liberal.png)
+![Schéma de transition progressive : salariat principal, cumul salarié plus libéral, puis libéral à temps plein.](../../../src/assets/images/guides/schema-transition-salarie-cumul-liberal.svg)
 
 Analogie utile : mieux vaut construire une passerelle que sauter d’une rive à l’autre. Le cumul progressif joue ce rôle de passerelle.
 
@@ -552,7 +552,7 @@ Vérifie que le contrat vise bien ton activité professionnelle de psychologue. 
 
 ## Checklist visuelle de l’ordre des démarches
 
-![Checklist visuelle de l ordre des demarches : avant l ouverture, au demarrage, puis juste apres.](/images/guides/frise-checklist-demarches-installation.svg)
+![Checklist visuelle de l ordre des demarches : avant l ouverture, au demarrage, puis juste apres.](../../../src/assets/images/guides/frise-checklist-demarches-installation.svg)
 
 ### Avant l’ouverture
 
@@ -933,7 +933,7 @@ Quand tu hésites entre micro et réel, fais un mini comparatif sur une année 
 
 ## Tableau comparatif rapide
 
-![Tableau comparatif simple des criteres de choix entre micro-BNC et BNC reel.](/images/guides/bnc-vs-reel.png)
+![Tableau comparatif simple des criteres de choix entre micro-BNC et BNC reel.](../../../src/assets/images/guides/tableau-comparatif-micro-bnc-vs-bnc-reel.svg)
 
 ### Micro-BNC
 
@@ -1295,7 +1295,7 @@ La prévoyance complémentaire est souvent plus facile à comprendre quand tout 
 
 ## De tes honoraires à ton revenu net
 
-![Schéma simplifié des prélèvements : des honoraires encaissés au revenu net disponible.](/images/guides/honoraires-revenu.png)
+![Schéma simplifié des prélèvements : des honoraires encaissés au revenu net disponible.](../../../src/assets/images/guides/schema-honoraires-vers-revenu-net.svg)
 
 Tu peux visualiser la logique ainsi :
 
@@ -1637,7 +1637,7 @@ Le coût d’un cabinet n’est jamais seulement son loyer. Le vrai budget, c’
 
 ## Un cabinet type : ce qu’on veut y trouver
 
-![Plan schematique d un cabinet type de psychologue avec entree discrete, espace d attente, bureau de consultation, confidentialite acoustique et sanitaires.](/images/guides/plan-cabinet-type-psychologue.png)
+![Plan schematique d un cabinet type de psychologue avec entree discrete, espace d attente, bureau de consultation, confidentialite acoustique et sanitaires.](./images/plan-cabinet-type-psychologue.webp)
 *Illustration de reference du zonage d un cabinet type. A adapter a la configuration reelle du local.*
 
 Les éléments clés à avoir en tête sont :

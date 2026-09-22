@@ -45,7 +45,7 @@ Quand je me suis installé il y a plus de 15 ans, j’ai découvert tout ce que 
 
 En pratique, on enchaîne plutôt ainsi : clarifier le projet, sécuriser le titre (ARS / RPPS), déclarer l’activité, choisir statut et fiscalité, puis le lieu et la visibilité. Ce n’est pas une course.
 
-![Checklist des démarches pour ouvrir un cabinet de psychologue](/images/guides/frise-checklist-demarches-installation.svg)
+![Checklist des démarches pour ouvrir un cabinet de psychologue](../../assets/images/guides/frise-checklist-demarches-installation.svg)
 
 ## Les articles du parcours
 

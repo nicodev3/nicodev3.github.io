@@ -31,7 +31,7 @@ Cet article décrit ce que *voit* un patient, ce que ça change pour un cabinet,
 
 Ouvrez Google, comme le ferait quelqu’un qui hésite à prendre rendez-vous. Selon la question, l’écran mélange plusieurs blocs. Ils ne sont pas tous là à chaque fois, et l’ordre change.
 
-![Ce que l’on voit souvent sur Google : publicités, parfois un résumé IA, carte avec trois cabinets, puis les liens de sites.](/images/guides/ecran-google-apercus-ia.svg)
+![Ce que l’on voit souvent sur Google : publicités, parfois un résumé IA, carte avec trois cabinets, puis les liens de sites.](../../assets/images/guides/ecran-google-apercus-ia.svg)
 
 **Parfois des publicités**, clairement marquées « Annonce » ou « Sponsorisé ». Ce n’est pas le classement de votre site : c’est de la pub.
 
@@ -82,7 +82,7 @@ Personne ne peut vendre une place dans ces réponses. Elles varient d’une conv
 
 Pour ne pas tout mélanger, imaginez **trois portes**. Votre site est le cabinet. Les machines n’entrent pas toutes par la même.
 
-![Trois portes : les robots qui lisent, les réponses de Google, les assistants qui cliquent ou remplissent un formulaire.](/images/guides/trois-portes-visibilite-ia.svg)
+![Trois portes : les robots qui lisent, les réponses de Google, les assistants qui cliquent ou remplissent un formulaire.](../../assets/images/guides/trois-portes-visibilite-ia.svg)
 
 **Porte 1 — Lire.** Des robots viennent *lire* vos pages, comme un standard qui décroche. S’il ne décroche pas, ou si on leur a dit « interdiction d’entrer », ils n’emportent rien. C’est une question de vitesse, d’interdictions, de pages trop lourdes.
 
@@ -170,7 +170,7 @@ Ce n’est **pas** un facteur de classement Google. Ce n’est **pas** la preuve
 
 J’ai fait tourner le même test que PageSpeed Insights, sur téléphone et sur ordinateur, sur nicodev.fr (accueil, un article, la page de diagnostic) et sur des sites de cabinets. Voici ce que ça donne, en français courant.
 
-![Schéma : à gauche une page utilisable (bouton nommé, page stable) ; à droite un bouton-image sans texte et une page qui saute.](/images/guides/navigation-agentique-pagespeed.svg)
+![Schéma : à gauche une page utilisable (bouton nommé, page stable) ; à droite un bouton-image sans texte et une page qui saute.](../../assets/images/guides/navigation-agentique-pagespeed.svg)
 
 ### Est-ce que chaque bouton et chaque champ a un nom clair ?
 

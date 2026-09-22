@@ -208,7 +208,7 @@ Exemple concret : si tu dois t’arrêter plusieurs semaines alors que ton loyer
 
 ## De tes honoraires à ton revenu net
 
-![Schéma simplifié des prélèvements : des honoraires encaissés au revenu net disponible.](/images/guides/schema-honoraires-vers-revenu-net.svg)
+![Schéma simplifié des prélèvements : des honoraires encaissés au revenu net disponible.](../../assets/images/guides/schema-honoraires-vers-revenu-net.svg)
 
 Tu peux visualiser la logique ainsi :
 

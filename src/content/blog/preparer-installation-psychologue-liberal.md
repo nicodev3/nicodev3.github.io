@@ -141,7 +141,7 @@ Tu peux imaginer cette progression :
 2. Temps partagé plus équilibré
 3. Libéral à temps plein quand l’activité devient assez stable
 
-![Schéma de transition progressive : salariat principal, cumul salarié plus libéral, puis libéral à temps plein.](/images/guides/schema-transition-salarie-cumul-liberal.svg)
+![Schéma de transition progressive : salariat principal, cumul salarié plus libéral, puis libéral à temps plein.](../../assets/images/guides/schema-transition-salarie-cumul-liberal.svg)
 
 Analogie utile : mieux vaut construire une passerelle que sauter d’une rive à l’autre. Le cumul progressif joue ce rôle de passerelle.
 

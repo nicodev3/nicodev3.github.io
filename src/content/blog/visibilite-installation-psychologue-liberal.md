@@ -95,7 +95,7 @@ Quand une personne cherche un·e psychologue, elle cherche rarement « un·e psy
 
 C’est là que le **SEO local**, c’est-à-dire le référencement local, devient décisif.
 
-![Pyramide des leviers de visibilité : fiche Google, site, cohérence locale, réseau.](/images/guides/pyramide-leviers-visibilite.svg)
+![Pyramide des leviers de visibilité : fiche Google, site, cohérence locale, réseau.](../../assets/images/guides/pyramide-leviers-visibilite.svg)
 
 ### Google Business Profile
 

@@ -198,7 +198,7 @@ Le sujet assurances (multirisque, cyber) est repris dans [installer son cabinet]
 
 ## Checklist visuelle de l’ordre des démarches
 
-![Checklist visuelle de l’ordre des démarches : avant l’ouverture, au démarrage, puis juste après.](/images/guides/frise-checklist-demarches-installation.svg)
+![Checklist visuelle de l’ordre des démarches : avant l’ouverture, au démarrage, puis juste après.](../../assets/images/guides/frise-checklist-demarches-installation.svg)
 
 ### Avant l’ouverture
 

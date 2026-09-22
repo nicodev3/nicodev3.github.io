@@ -238,7 +238,7 @@ Tu peux te poser ces quatre questions :
 
 ## Tableau comparatif rapide
 
-![Tableau comparatif simple des critères de choix entre micro-BNC et BNC réel.](/images/guides/tableau-comparatif-micro-bnc-vs-bnc-reel.svg)
+![Tableau comparatif simple des critères de choix entre micro-BNC et BNC réel.](../../assets/images/guides/tableau-comparatif-micro-bnc-vs-bnc-reel.svg)
 
 ### Micro-BNC
 
