@@ -3,7 +3,7 @@ title: "Psychologue : faut-il un site internet en plus de Doctolib ?"
 seoTitle: "Site internet psychologue et Doctolib : faut-il les deux ?"
 description: "Doctolib, annuaires, fiche Google et site internet ne jouent pas le même rôle. Comprendre comment les combiner pour gagner en visibilité."
 pubDate: "2026-03-12"
-updatedDate: "2026-06-22"
+updatedDate: "2026-09-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-web-doctolib.webp"
 tags: ["psychologue", "site web cabinet", "référencement local cabinet", "doctolib"]
@@ -206,6 +206,18 @@ Il n'est pas nécessaire d'avoir un site compliqué. Pour un psychologue, un sit
 - un texte adapté à la déontologie de la profession.
 
 La simplicité est souvent plus convaincante qu'un site rempli d'effets ou de promesses.
+
+## Et pour la gestion du cabinet ?
+
+Site vitrine, prise de rendez-vous, gestion administrative : ce sont trois briques distinctes, et on les confond souvent. Une fois l'agenda en ligne réglé, il reste la facturation, le suivi des paiements et la comptabilité. Là aussi, il existe des alternatives à Doctolib, dont trois pensées pour les libéraux :
+
+[Milie](https://milie.app) cible les psychologues libéraux : agenda, facturation automatique, rapprochement des virements avec votre compte bancaire et relance des séances impayées. Beaucoup d'automatisation pour faciliter les tâches administratives du quotidien. Compatible facturation électronique via Pennylane. Données hébergées en France HDS, 14 jours d'essai sans carte bancaire. À partir de 19 €/mois pour les versions incluant la facturation.
+
+**Mon Cabinet Libéral** vise un public plus large (ostéopathes, diététiciens, psychologues…) : agenda partagé, comptabilité, rappels SMS, paiement par lien, partage de cabinet. Import gratuit des données Doctolib, à partir de 24 €/mois.
+
+**RDVLive** s'adresse aussi aux professions paramédicales : devis, listes d'attente, formulaires d'anamnèse, prise de rendez-vous autonome, génération de CERFA pour les PCO.
+
+Le bon choix dépend de votre pratique : exercice seul ou en cabinet partagé, part de patients pris en charge par des organismes, volume de séances. La plupart proposent un essai ou une démo, donc autant en tester deux avant de trancher. Votre site, lui, reste votre vitrine, quel que soit l'outil choisi en coulisses.
 
 ## Quand choisir Doctolib, un site, ou les deux ?
 
