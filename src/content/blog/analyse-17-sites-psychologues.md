@@ -4,7 +4,7 @@ seoTitle: "Sites de psychologues : 5 problèmes récurrents observés"
 description: "J’ai analysé 17 sites de psychologues libéraux. Architecture, plateformes, SEO, technique et ton : voici les difficultés qui reviennent le plus souvent."
 pubDate: "2026-09-01"
 author: "Nicolas Devaux"
-image: "../../assets/images/blog/analyse-sites-psychologues.webp"
+image: "../../assets/images/blog/analyse-sites-psychologues-carre.webp"
 tags: ["psychologue", "site web cabinet", "référencement local cabinet", "cadre déontologique"]
 faq:
   - question: "L’analyse de 17 sites est-elle représentative de tous les sites de psychologues ?"

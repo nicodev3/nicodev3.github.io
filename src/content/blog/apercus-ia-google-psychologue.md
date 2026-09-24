@@ -4,7 +4,7 @@ seoTitle: "Aperçus IA Google : visibilité d’un cabinet de psychologue"
 description: "Depuis juillet 2026, Google affiche parfois un résumé IA en France. Ce que voit un patient, ce que ça change pour un cabinet, et quoi vérifier sans devenir technicien."
 pubDate: "2026-09-13"
 author: "Nicolas Devaux"
-image: "../../assets/images/blog/apercus-ia-google.webp"
+image: "../../assets/images/blog/apercus-ia-google-carre.webp"
 tags: ["psychologue", "référencement local cabinet", "intelligence artificielle", "site web cabinet"]
 faq:
   - question: "Faut-il un fichier spécial pour apparaître dans les Aperçus IA de Google ?"
