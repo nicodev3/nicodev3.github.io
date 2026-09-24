@@ -26,6 +26,10 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
     beforeHeading: 'Comment décider de votre budget',
     variant: 'budget',
   },
+  'wix-wordpress-simplebo-psychologue': {
+    beforeHeading: 'Sérénité à 29 € et Visibilité à 49 €',
+    variant: 'budget',
+  },
   'comment-trouver-premiers-patients-psychologue': {
     beforeHeading: 'Une stratégie simple et régulière vaut mieux qu’une présence dispersée',
     variant: 'visibility',
