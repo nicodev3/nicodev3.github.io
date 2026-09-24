@@ -1,7 +1,7 @@
 ---
 title: "Premiers patients en libéral : cadre, RGPD et notes d’honoraires"
 seoTitle: "Cadre, RGPD et facturation du psychologue libéral"
-description: "Accueillir ses premiers patients en libéral : cadre du premier rendez-vous, agenda, dossier patient, RGPD, notes d’honoraires, secret professionnel, mutuelles et FIF PL."
+description: "Premiers patients en libéral : premier rendez-vous, dossier, RGPD, secret professionnel, notes d’honoraires et facturation."
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-internet.webp"

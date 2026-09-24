@@ -1,6 +1,6 @@
 ---
 title: "Comment trouver ses premiers patients quand on s’installe comme psychologue"
-seoTitle: "Comment trouver ses premiers patients quand on est psychologue ?"
+seoTitle: "Trouver ses premiers patients comme psychologue"
 description: "Site internet, réseau, fiche Google, annuaires et bouche-à-oreille : les leviers pour développer une première patientèle en libéral."
 pubDate: "2026-03-15"
 author: "Nicolas Devaux"

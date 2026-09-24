@@ -1,6 +1,6 @@
 ---
 title: "Le savoir-faire, vous l'avez — il est temps de le faire savoir"
-seoTitle: "Psychologues : votre savoir-faire mérite d'être visible en ligne"
+seoTitle: "Psychologues : rendre votre savoir-faire visible"
 description: "Les pseudo-thérapeutes ne manquent pas de visibilité. Les psychologues diplômés, si. Pourquoi un site professionnel dédié change la donne."
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"

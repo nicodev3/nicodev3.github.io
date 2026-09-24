@@ -1,6 +1,6 @@
 ---
 title: "TVA, CFE et charges du psychologue libéral"
-seoTitle: "TVA psychologue libéral : exonération, CFE et cotisations 2026"
+seoTitle: "TVA et charges du psychologue libéral en 2026"
 description: "TVA du psychologue libéral : exonération des actes de soin, franchise en base, CFE, URSSAF, CIPAV, notes d’honoraires, trésorerie et seuil de viabilité."
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"

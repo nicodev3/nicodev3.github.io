@@ -1,6 +1,6 @@
 ---
 title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
-seoTitle: "Salaire psychologue libéral 2026 : revenus nets et fourchettes"
+seoTitle: "Salaire psychologue libéral 2026 : revenus nets"
 description: "Salaire d'un psychologue libéral en 2026 : souvent 800–1 700 € nets en début d'activité et 1 800–3 200 € une fois le cabinet établi (après charges et CIPAV)."
 pubDate: "2026-06-02"
 updatedDate: "2026-08-16"

@@ -1,7 +1,7 @@
 ---
 title: "Démarches administratives pour s’installer psychologue en libéral"
 seoTitle: "RPPS, ARS, INPI : démarches psychologue libéral 2026"
-description: "Démarches pour s’installer psychologue en libéral : RPPS via l’ARS, guichet unique INPI, SIRET, code APE 86.93Y, ACRE, RC Pro, mention EI et check-list des pièces."
+description: "S’installer comme psychologue libéral : RPPS, ARS, INPI, SIRET, ACRE, RC Pro et pièces à préparer dans le bon ordre."
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-liberal-installation.webp"

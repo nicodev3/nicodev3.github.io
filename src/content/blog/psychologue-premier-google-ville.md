@@ -1,7 +1,7 @@
 ---
 title: "Psychologue : comment apparaître en premier sur Google dans sa ville ?"
-seoTitle: "Psychologue : apparaître sur Google dans sa ville (SEO local 2026)"
-description: "SEO local pour psychologues : pack Google, fiche Business Profile, site, NAP et cadre déontologique. Ce qui fonctionne vraiment, sans promesse de première place."
+seoTitle: "Psychologue : apparaître sur Google dans sa ville"
+description: "SEO local pour psychologues : fiche Google, site et informations cohérentes pour gagner en visibilité sans promesse de première place."
 pubDate: "2026-05-03"
 updatedDate: "2026-09-13"
 author: "Nicolas Devaux"

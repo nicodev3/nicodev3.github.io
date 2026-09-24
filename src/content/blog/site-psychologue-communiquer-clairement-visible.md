@@ -1,7 +1,7 @@
 ---
 title: "Psychologues : pourquoi reprendre la parole en ligne"
 seoTitle: "Psychologues : pourquoi mieux communiquer sur sa pratique"
-description: "Les pseudo-thérapeutes occupent largement l'espace numérique. Pourquoi et comment les psychologues peuvent rendre leur pratique et leur savoir-faire plus visibles."
+description: "Pourquoi les psychologues gagnent à mieux expliquer leur pratique en ligne, face à la confusion entre titres et approches."
 pubDate: "2026-08-21"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologues-reprendre-parole-en-ligne.webp"

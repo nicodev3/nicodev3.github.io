@@ -1,7 +1,7 @@
 ---
 title: "Visibilité d’un psychologue qui s’installe : site, Google et réseau"
 seoTitle: "Visibilité psychologue libéral : site internet et SEO local"
-description: "Visibilité d’un psychologue qui s’installe : déontologie, site internet, fiche Google, SEO local, annuaires, réseau de proximité, Mon soutien psy et délai de remplissage."
+description: "Psychologue en installation : site, fiche Google, SEO local et réseau de proximité pour bâtir une visibilité respectueuse de la déontologie."
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"

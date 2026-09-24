@@ -20,6 +20,7 @@ export type CaseStudy = {
   imageAlt: string;
   title: string;
   summary: string;
+  seoDescription: string;
   challenge: string;
   objectives: string[];
   work: string[];
@@ -47,6 +48,8 @@ export const caseStudies: CaseStudy[] = [
     title: 'Faire évoluer un ancien WordPress pour mieux diffuser le programme MOOD',
     summary:
       'Isabelle disposait d’un site WordPress construit avec un thème vieillissant. Peu visible dans les moteurs de recherche, il ne lui permettait pas de présenter et de diffuser son programme MOOD comme elle le souhaitait.',
+    seoDescription:
+      'Refonte du site WordPress d’Isabelle Leboeuf : navigation clarifiée, articles préservés et programme MOOD mieux mis en avant.',
     challenge:
       'Joie & Compassion s’adresse à deux publics : des personnes qui cherchent des ressources psychologiques et des professionnels intéressés par la thérapie fondée sur la compassion. Le site devait rendre ces parcours lisibles tout en donnant une vraie place au programme MOOD et aux formations.',
     objectives: [
@@ -101,6 +104,8 @@ export const caseStudies: CaseStudy[] = [
     title: 'Remplacer un site Wix peu visible par une présence en ligne structurée',
     summary:
       'Pierre possédait déjà un site réalisé avec Wix, mais celui-ci était très peu visible. La nouvelle version devait expliquer clairement son approche psychocorporelle et poser les bases de sa visibilité locale.',
+    seoDescription:
+      'Refonte du site de Pierre Dalarun : une présence plus claire pour présenter sa pratique psychocorporelle et développer sa visibilité locale.',
     challenge:
       'Avoir un site ne suffit pas si Google ne comprend pas clairement l’activité, les services proposés et le lieu d’exercice. Il fallait présenter les différentes pratiques, les consultations au cabinet et la possibilité de consulter en visio dans un ensemble facile à parcourir.',
     objectives: [
@@ -148,6 +153,8 @@ export const caseStudies: CaseStudy[] = [
     title: 'Construire progressivement une visibilité locale dans une ville concurrentielle',
     summary:
       'Lorsque Laure s’est installée à Montpellier, de nombreux psychologues étaient déjà présents et visibles. Nous avons amélioré la présence du site dans Google au fil du temps, en faisant évoluer ses pages avec sa pratique.',
+    seoDescription:
+      'Laure Meslé-Yaakoubi, psychologue à Montpellier : création d’un site et amélioration progressive de sa visibilité locale.',
     challenge:
       'Le site doit présenter plusieurs publics et services — adultes, enfants, adolescents, couples, familles, bilans et accompagnement parental — tout en indiquant clairement à Google que Laure exerce à Montpellier. Dans une ville où de nombreux psychologues sont déjà présents, cette visibilité se construit par étapes.',
     objectives: [

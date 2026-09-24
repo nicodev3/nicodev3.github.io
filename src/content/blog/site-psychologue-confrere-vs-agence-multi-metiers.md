@@ -1,6 +1,6 @@
 ---
 title: "Site psychologue : confrère développeur ou agence multi-métiers ?"
-seoTitle: "Site internet psychologue : pourquoi un confrère plutôt qu'une agence"
+seoTitle: "Site psychologue : confrère ou agence ? | Nicodev"
 description: "Pourquoi confier son site à un psychologue-développeur plutôt qu'à une agence multi-métiers : titres réglementés, ton juste, psychothérapeute ≠ psychopraticien."
 pubDate: "2026-08-06"
 author: "Nicolas Devaux"
