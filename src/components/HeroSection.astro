@@ -17,6 +17,12 @@ import portraitImage from '../assets/images/nicodev.webp';
 					libéral&nbsp;: les textes, la visibilité locale sur Google et toute la technique. Vous restez sur
 					votre pratique.
 				</p>
+				<p class="hero-home__proof text-pretty text-muted">
+					Développeur depuis 20&nbsp;ans, sites de psychologues depuis 2015, psychologue en exercice.
+					J’utilise l’IA pour aller plus vite&nbsp;: je relis le code, les textes et ce qui peut être dit.
+					Le site et le nom de domaine restent à vous. Si vous partez, vous partez avec une copie exploitable,
+					et le site n’est pas coupé.
+				</p>
 
 				<div class="hero-home__actions">
 					<a
@@ -45,8 +51,7 @@ import portraitImage from '../assets/images/nicodev.webp';
 				</p>
 
 				<p class="hero-home__trust text-sm text-muted">
-					<span class="text-foreground/85">Sites de psychologues réalisés depuis 2015</span>
-					<span class="mx-1.5 text-muted/45" aria-hidden="true">·</span>
+					<span class="text-foreground/85">Développeur depuis 20&nbsp;ans · sites de psychologues depuis 2015</span>
 					<a
 						href="#temoignages"
 						class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary-foreground hover:decoration-primary-foreground"
@@ -132,8 +137,16 @@ import portraitImage from '../assets/images/nicodev.webp';
 		line-height: 1.55;
 	}
 
+	.hero-home__proof {
+		margin-top: 1rem;
+		max-width: 42rem;
+		font-size: 0.95rem;
+		line-height: 1.55;
+	}
+
 	@media (min-width: 768px) {
-		.hero-home__lead {
+		.hero-home__lead,
+		.hero-home__proof {
 			margin-inline: 0;
 		}
 	}
@@ -173,6 +186,16 @@ import portraitImage from '../assets/images/nicodev.webp';
 
 	.hero-home__trust {
 		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.35rem;
+	}
+
+	@media (min-width: 768px) {
+		.hero-home__trust {
+			align-items: flex-start;
+		}
 	}
 
 	.hero-home__visual {
