@@ -2,11 +2,30 @@
 import { Image } from 'astro:assets';
 import { ArrowRight, ArrowUpRight, Quote } from '@lucide/astro';
 import { googleTestimonials } from '../data/testimonials';
+import melanieImage from '../assets/images/screenshots/melanie-aguillon.webp';
+import pierreImage from '../assets/images/screenshots/pierre-dalarun.webp';
 import angelaImage from '../assets/images/screenshots/angelabassompierre.webp';
-import isabelleImage from '../assets/images/screenshots/joiecompassion.webp';
-import audreyImage from '../assets/images/screenshots/psy-emdr-cotebasque.webp';
 
 const projects = [
+	{
+		title: 'Mélanie Aguillon',
+		meta: 'Création · Psychologue · 2026',
+		description:
+			'Présentation des consultations d’adultes au cabinet et en visio, avec deux adresses à Bourgoin-Jallieu.',
+		image: melanieImage,
+		imageAlt:
+			'Page d’accueil du site de Mélanie Aguillon, psychologue à Bourgoin-Jallieu',
+		href: 'https://melanie-aguillon.fr/',
+	},
+	{
+		title: 'Pierre Dalarun',
+		meta: 'Création · Psychothérapeute · 2026',
+		description:
+			'Présentation d’une approche psychocorporelle, des pratiques proposées et des consultations au cabinet ou en visio, à Soudan près de Châteaubriant.',
+		image: pierreImage,
+		imageAlt: 'Page d’accueil du site de Pierre Dalarun, psychothérapeute à Soudan',
+		href: 'https://pierredalarun.com/',
+	},
 	{
 		title: 'Angela Bassompierre',
 		meta: 'Création · Psychologue en ligne · 2026',
@@ -15,24 +34,6 @@ const projects = [
 		image: angelaImage,
 		imageAlt: 'Page d’accueil du site d’Angela Bassompierre, psychologue en ligne',
 		href: 'https://angelabassompierre.fr/',
-	},
-	{
-		title: 'Isabelle Leboeuf',
-		meta: 'Refonte · Joie & Compassion · 2026',
-		description:
-			'Refonte visuelle et optimisation SEO d’un site WordPress pour clarifier les parcours, mettre en avant le programme MOOD et mieux diffuser les ressources.',
-		image: isabelleImage,
-		imageAlt: 'Page d’accueil de Joie & Compassion, le site d’Isabelle Leboeuf',
-		href: 'https://joiecompassion.com/',
-	},
-	{
-		title: 'Audrey Larcebau',
-		meta: 'Refonte · Psychologue EMDR · 2026',
-		description:
-			'Refonte du site d’une psychologue sur la Côte basque, avec une présentation plus lisible de sa pratique et de ses modalités.',
-		image: audreyImage,
-		imageAlt: 'Page d’accueil du site d’Audrey Larcebau, psychologue EMDR sur la Côte basque',
-		href: 'https://psy-emdr-cotebasque.fr/',
 	},
 ] as const;
 
@@ -58,11 +59,10 @@ const projectsWithTestimonial = projects.map((project) => ({
 		<header class="mx-auto max-w-3xl text-center">
 			<p class="type-eyebrow mb-3 text-muted">Réalisations</p>
 			<h2 id="home-portfolio-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Quelques sites réalisés avec des psychologues
+				Quelques sites réalisés pour des psychologues et psychothérapeutes
 			</h2>
 			<p class="mt-4 text-lg leading-relaxed text-muted">
-				Chaque site part d’une pratique, d’un cadre et d’une situation différents. Voici trois projets récents
-				de création ou de refonte, avec l’avis publié par la praticienne lorsqu’il existe.
+				Chaque site part d’une pratique, d’un cadre et d’une situation différents.
 			</p>
 		</header>
 
