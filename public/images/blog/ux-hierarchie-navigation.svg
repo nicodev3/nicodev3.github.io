@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Exemple fictif d'une mauvaise hierarchie de l'information</title>
+  <desc id="desc">Comparaison entre une page longue ou toutes les rubriques ont le meme poids et un parcours organise qui conduit de la comprehension de la pratique vers les informations pratiques puis la prise de rendez-vous.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#342b27" flood-opacity=".16"/>
+    </filter>
+    <marker id="flow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3c7965"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="750" fill="#f3efe8"/>
+  <rect x="48" y="34" width="1104" height="56" rx="28" fill="#ded6ca"/>
+  <text x="600" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#4c4540">EXEMPLE FICTIF - HIERARCHIE DE L'INFORMATION</text>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="122" width="520" height="548" rx="20" fill="#fff"/>
+    <rect x="632" y="122" width="520" height="548" rx="20" fill="#fff"/>
+  </g>
+  <rect x="48" y="122" width="520" height="50" rx="20" fill="#b94b4b"/>
+  <rect x="48" y="152" width="520" height="20" fill="#b94b4b"/>
+  <text x="308" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#fff">TOUT AU MEME NIVEAU</text>
+  <rect x="632" y="122" width="520" height="50" rx="20" fill="#3c7965"/>
+  <rect x="632" y="152" width="520" height="20" fill="#3c7965"/>
+  <text x="892" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#fff">UN PARCOURS COMPREHENSIBLE</text>
+
+  <!-- Navigation encombree -->
+  <rect x="74" y="195" width="468" height="63" fill="#ece7de"/>
+  <text x="90" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">ACCUEIL</text>
+  <text x="137" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">A PROPOS</text>
+  <text x="194" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">APPROCHE</text>
+  <text x="253" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">PUBLICS</text>
+  <text x="302" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">OUTILS</text>
+  <text x="343" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">RESSOURCES</text>
+  <text x="411" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">TARIFS</text>
+  <text x="455" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">CONTACT</text>
+  <text x="493" y="217" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">LEGAL</text>
+  <text x="90" y="242" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">BLOG</text>
+  <text x="127" y="242" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">QUESTIONS FREQUENTES</text>
+  <text x="254" y="242" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#4a4541">RENDEZ-VOUS</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="74" y="276" width="468" height="52" fill="#d9cec3"/>
+    <text x="94" y="307" font-size="16" font-weight="700" fill="#514a44">Mon parcours</text>
+    <rect x="74" y="338" width="468" height="52" fill="#d9cec3"/>
+    <text x="94" y="369" font-size="16" font-weight="700" fill="#514a44">Mon approche</text>
+    <rect x="74" y="400" width="468" height="52" fill="#d9cec3"/>
+    <text x="94" y="431" font-size="16" font-weight="700" fill="#514a44">Pour quoi consulter ?</text>
+    <rect x="74" y="462" width="468" height="52" fill="#d9cec3"/>
+    <text x="94" y="493" font-size="16" font-weight="700" fill="#514a44">Tarifs</text>
+    <rect x="74" y="524" width="468" height="52" fill="#d9cec3"/>
+    <text x="94" y="555" font-size="16" font-weight="700" fill="#514a44">Prendre rendez-vous</text>
+    <rect x="74" y="586" width="468" height="52" fill="#d9cec3"/>
+    <text x="94" y="617" font-size="16" font-weight="700" fill="#514a44">Mentions legales et confidentialite</text>
+  </g>
+  <path d="M522 286 V628" stroke="#a64040" stroke-width="4" stroke-dasharray="8 7"/>
+  <text x="505" y="455" text-anchor="middle" transform="rotate(-90 505 455)" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#943838">MEME POIDS VISUEL</text>
+
+  <!-- Parcours hierarchise -->
+  <rect x="658" y="195" width="468" height="56" fill="#eef1ed"/>
+  <text x="684" y="229" font-family="Georgia, serif" font-size="20" fill="#32483f">Cabinet Horizon</text>
+  <text x="917" y="225" font-family="Arial, sans-serif" font-size="11" fill="#45544e">LA PRATIQUE</text>
+  <text x="1010" y="225" font-family="Arial, sans-serif" font-size="11" fill="#45544e">INFOS PRATIQUES</text>
+
+  <rect x="681" y="282" width="422" height="86" rx="12" fill="#dce9e3"/>
+  <circle cx="720" cy="325" r="22" fill="#3c7965"/>
+  <text x="720" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">1</text>
+  <text x="759" y="314" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#346451">COMPRENDRE</text>
+  <text x="759" y="341" font-family="Georgia, serif" font-size="21" fill="#30433b">Qui recoit le psychologue et comment travaille-t-il ?</text>
+
+  <path d="M892 375 V402" stroke="#3c7965" stroke-width="4" marker-end="url(#flow)"/>
+  <rect x="681" y="416" width="422" height="86" rx="12" fill="#e8e1d5"/>
+  <circle cx="720" cy="459" r="22" fill="#9a7957"/>
+  <text x="720" y="466" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">2</text>
+  <text x="759" y="448" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#806143">VERIFIER</text>
+  <text x="759" y="475" font-family="Georgia, serif" font-size="21" fill="#493c30">Lieu, modalites, duree et tarif des seances</text>
+
+  <path d="M892 509 V536" stroke="#3c7965" stroke-width="4" marker-end="url(#flow)"/>
+  <rect x="681" y="550" width="422" height="86" rx="12" fill="#3c7965"/>
+  <circle cx="720" cy="593" r="22" fill="#fff"/>
+  <text x="720" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#3c7965">3</text>
+  <text x="759" y="582" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#dce9e3">DECIDER</text>
+  <text x="759" y="609" font-family="Georgia, serif" font-size="22" fill="#fff">Prendre contact, sans pression</text>
+
+  <text x="600" y="716" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#5e5751">La hierarchie repond aux questions dans l'ordre ou elles se presentent.</text>
+</svg>

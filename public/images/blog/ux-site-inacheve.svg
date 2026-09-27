@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Exemple fictif d'un site publie avant d'etre termine</title>
+  <desc id="desc">Fausse capture d'ecran annotee montrant une rubrique en construction, un lien casse, une faute dans les tarifs, des mots colles, un paragraphe duplique et des boutons incoherents.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#342b27" flood-opacity=".16"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a64040"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="750" fill="#f3efe8"/>
+  <rect x="48" y="34" width="1104" height="56" rx="28" fill="#ded6ca"/>
+  <text x="600" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#4c4540">EXEMPLE FICTIF - FINITION</text>
+
+  <g filter="url(#shadow)">
+    <rect x="190" y="120" width="820" height="572" rx="18" fill="#fff"/>
+  </g>
+  <rect x="190" y="120" width="820" height="54" rx="18" fill="#384c43"/>
+  <rect x="190" y="154" width="820" height="20" fill="#384c43"/>
+  <circle cx="222" cy="147" r="7" fill="#d98278"/>
+  <circle cx="246" cy="147" r="7" fill="#e4c376"/>
+  <circle cx="270" cy="147" r="7" fill="#80b38a"/>
+  <rect x="315" y="136" width="466" height="23" rx="11.5" fill="#ecf0ed"/>
+  <text x="548" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6d756f">cabinet-horizon.exemple/outils</text>
+
+  <rect x="190" y="174" width="820" height="58" fill="#ede8df"/>
+  <text x="230" y="210" font-family="Georgia, serif" font-size="23" fill="#37463f">Cabinet Horizon</text>
+  <text x="594" y="207" font-family="Arial, sans-serif" font-size="12" fill="#4c514e">A PROPOS</text>
+  <text x="680" y="207" font-family="Arial, sans-serif" font-size="12" fill="#4c514e">OUTILS</text>
+  <text x="740" y="207" font-family="Arial, sans-serif" font-size="12" fill="#4c514e">TARIFS</text>
+  <text x="803" y="207" font-family="Arial, sans-serif" font-size="12" fill="#4c514e">RENDEZ-VOUS</text>
+
+  <rect x="220" y="258" width="450" height="164" fill="#f2eee7"/>
+  <text x="445" y="313" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#514b46">Mes formations et outils</text>
+  <text x="445" y="367" text-anchor="middle" font-family="Georgia, serif" font-size="41" font-style="italic" fill="#858078">en construction</text>
+  <rect x="700" y="258" width="278" height="164" fill="#f7f5f1" stroke="#ddd5ca" stroke-width="2" stroke-dasharray="8 7"/>
+  <path d="M804 311 l18 -18 18 18 25 -25 51 60 H762z" fill="#d8d2c9"/>
+  <text x="839" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#8a837a">image a venir</text>
+
+  <text x="228" y="469" font-family="Georgia, serif" font-size="26" fill="#3c3936">Tarifs</text>
+  <text x="230" y="508" font-family="Arial, sans-serif" font-size="16" fill="#3f3b38">Premiere consultation ............ 65 EUR</text>
+  <text x="230" y="541" font-family="Arial, sans-serif" font-size="16" fill="#3f3b38">Tarif etudtiants ..................... 50 EUR</text>
+  <text x="230" y="574" font-family="Arial, sans-serif" font-size="16" fill="#3f3b38">Consultationa distance .......... 60 EUR</text>
+  <text x="230" y="617" font-family="Arial, sans-serif" font-size="13" fill="#66605b">La premiere seance permet de faire connaissance et de preciser votre demande.</text>
+  <text x="230" y="640" font-family="Arial, sans-serif" font-size="13" fill="#66605b">La premiere seance permet de faire connaissance et de preciser votre demande.</text>
+
+  <rect x="714" y="472" width="226" height="45" rx="22" fill="#b86e69"/>
+  <text x="827" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">ME CONTACTER</text>
+  <rect x="714" y="535" width="226" height="45" fill="none" stroke="#3b6f5c" stroke-width="3"/>
+  <text x="827" y="563" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-style="italic" fill="#3b6f5c">Prendre un rendez vous</text>
+  <text x="714" y="620" font-family="Arial, sans-serif" font-size="14" text-decoration="underline" fill="#3b6f5c">Telecharger la brochure</text>
+  <text x="714" y="648" font-family="Arial, sans-serif" font-size="13" fill="#a64040">Erreur 404 - page introuvable</text>
+
+  <rect x="34" y="266" width="132" height="52" rx="10" fill="#fff" stroke="#a64040" stroke-width="2"/>
+  <text x="100" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#943838">Rubrique vide</text>
+  <text x="100" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#943838">laissee en ligne</text>
+  <path d="M166 292 C190 292 194 320 230 330" fill="none" stroke="#a64040" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1028" y="468" width="146" height="62" rx="10" fill="#fff" stroke="#a64040" stroke-width="2"/>
+  <text x="1101" y="491" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#943838">Boutons sans</text>
+  <text x="1101" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#943838">coherence</text>
+  <path d="M1028 500 C992 500 984 512 944 520" fill="none" stroke="#a64040" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="30" y="582" width="150" height="62" rx="10" fill="#fff" stroke="#a64040" stroke-width="2"/>
+  <text x="105" y="606" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#943838">Fautes, mots</text>
+  <text x="105" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#943838">colles, repetition</text>
+  <path d="M180 610 C204 600 197 570 226 557" fill="none" stroke="#a64040" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="600" y="725" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#5e5751">Isoles, ces details semblent mineurs. Ensemble, ils rendent l'inachevement visible.</text>
+</svg>

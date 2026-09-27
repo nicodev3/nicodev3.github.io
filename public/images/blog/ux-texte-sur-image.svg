@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Exemple fictif de texte difficile a lire sur une photographie</title>
+  <desc id="desc">Comparaison entre une mauvaise interface ou le texte blanc se perd sur une image claire et une version corrigee avec un fond uni et un contraste suffisant.</desc>
+  <defs>
+    <linearGradient id="photo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5dec2"/>
+      <stop offset=".46" stop-color="#fff8e9"/>
+      <stop offset=".47" stop-color="#98aa87"/>
+      <stop offset="1" stop-color="#5b493c"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#342b27" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="#f3efe8"/>
+  <rect x="48" y="34" width="1104" height="56" rx="28" fill="#ded6ca"/>
+  <text x="600" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#4c4540">EXEMPLE FICTIF - LISIBILITE</text>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="124" width="520" height="540" rx="20" fill="#fff"/>
+    <rect x="632" y="124" width="520" height="540" rx="20" fill="#fff"/>
+  </g>
+
+  <rect x="48" y="124" width="520" height="52" rx="20" fill="#b94b4b"/>
+  <rect x="48" y="156" width="520" height="20" fill="#b94b4b"/>
+  <text x="308" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">A EVITER</text>
+  <rect x="72" y="198" width="472" height="428" rx="10" fill="url(#photo)"/>
+  <circle cx="455" cy="279" r="76" fill="#fff2ca" opacity=".84"/>
+  <path d="M72 520 C160 420 230 590 330 480 S470 420 544 520 V626 H72Z" fill="#394f3b" opacity=".82"/>
+  <rect x="360" y="405" width="126" height="150" rx="10" fill="#806c5c" opacity=".76"/>
+  <text x="308" y="286" text-anchor="middle" font-family="Georgia, serif" font-size="41" fill="#fff">Cabinet Horizon</text>
+  <text x="308" y="336" text-anchor="middle" font-family="Georgia, serif" font-size="21" font-style="italic" fill="#fff">Un espace pour vous accueillir</text>
+  <text x="308" y="367" text-anchor="middle" font-family="Georgia, serif" font-size="21" font-style="italic" fill="#fff">avec ecoute et bienveillance</text>
+  <rect x="196" y="412" width="224" height="50" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="308" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">PRENDRE RENDEZ-VOUS</text>
+  <path d="M420 245 L527 202" stroke="#b94b4b" stroke-width="4"/>
+  <circle cx="420" cy="245" r="7" fill="#b94b4b"/>
+  <rect x="335" y="190" width="206" height="40" rx="20" fill="#fff"/>
+  <text x="438" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#9b3939">Contraste variable</text>
+
+  <rect x="632" y="124" width="520" height="52" rx="20" fill="#3c7965"/>
+  <rect x="632" y="156" width="520" height="20" fill="#3c7965"/>
+  <text x="892" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">VERSION LISIBLE</text>
+  <rect x="656" y="198" width="472" height="428" rx="10" fill="url(#photo)"/>
+  <circle cx="1039" cy="279" r="76" fill="#fff2ca" opacity=".84"/>
+  <path d="M656 520 C744 420 814 590 914 480 S1054 420 1128 520 V626 H656Z" fill="#394f3b" opacity=".82"/>
+  <rect x="656" y="198" width="472" height="428" rx="10" fill="#202724" opacity=".68"/>
+  <text x="704" y="293" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1.5" fill="#d7e8e0">PSYCHOLOGUE A VILLE-EXEMPLE</text>
+  <text x="704" y="354" font-family="Georgia, serif" font-size="43" fill="#fff">Cabinet Horizon</text>
+  <text x="704" y="402" font-family="Arial, sans-serif" font-size="21" fill="#fff">Des informations claires pour decider</text>
+  <text x="704" y="432" font-family="Arial, sans-serif" font-size="21" fill="#fff">sereinement d'un premier contact.</text>
+  <rect x="704" y="478" width="224" height="52" rx="8" fill="#f5f0e7"/>
+  <text x="816" y="511" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#2b5547">PRENDRE RENDEZ-VOUS</text>
+  <text x="892" y="705" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#5e5751">Le fond soutient le contenu au lieu de le masquer.</text>
+</svg>

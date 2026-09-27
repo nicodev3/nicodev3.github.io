@@ -1,7 +1,7 @@
 ---
 title: "Ce que révèle l’analyse de 17 sites de psychologues"
-seoTitle: "Sites de psychologues : 5 problèmes récurrents observés"
-description: "J’ai analysé 17 sites de psychologues libéraux. Architecture, plateformes, SEO, technique et ton : voici les difficultés qui reviennent le plus souvent."
+seoTitle: "Sites de psychologues : 6 problèmes récurrents observés"
+description: "J’ai analysé 17 sites de psychologues libéraux. Architecture, plateformes, SEO, technique, interface et ton : voici les difficultés qui reviennent le plus souvent."
 pubDate: "2026-09-01"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/analyse-sites-psychologues-carre.webp"
@@ -10,12 +10,12 @@ faq:
   - question: "L’analyse de 17 sites est-elle représentative de tous les sites de psychologues ?"
     answer: "Non. Il s’agit d’un échantillon exploratoire destiné à repérer des difficultés récurrentes, pas d’une étude statistique du marché. Les sites ont été observés à un moment donné et les résultats de recherche peuvent varier selon la ville et l’utilisateur."
   - question: "Quels problèmes reviennent le plus souvent sur les sites de psychologues ?"
-    answer: "Les difficultés les plus fréquentes concernent les éléments parasites des plateformes, une architecture dictée par les mots-clés, des traces techniques visibles, des sites trop uniformes et un ton parfois trop proche du marketing de conversion."
+    answer: "Les difficultés les plus fréquentes concernent les éléments parasites des plateformes, une architecture dictée par les mots-clés, des traces techniques visibles, des sites trop uniformes, une interface difficile à lire et un ton parfois trop proche du marketing de conversion."
   - question: "Que doit permettre un bon site de psychologue ?"
     answer: "Il doit permettre de comprendre rapidement le titre du professionnel, sa pratique, les personnes reçues, les modalités de consultation et la manière de prendre contact, avec un ton mesuré et une navigation simple."
 ---
 
-*Temps de lecture : 8 minutes*
+*Temps de lecture : 10 minutes*
 
 J’ai passé plusieurs heures à examiner **17 sites de psychologues en exercice libéral en France**. Certains ont été trouvés à partir d’un annuaire professionnel, d’autres parmi les premiers résultats de recherches locales comme « psychologue Paris » ou « psychologue Lyon ».
 
@@ -27,7 +27,7 @@ Cette observation reste exploratoire. Dix-sept sites ne constituent pas un écha
 
 ## Des outils très différents, mais un même point aveugle
 
-WordPress, Wix, WebSelf, Jimdo, Hostinger, IONOS, solutions d’agences spécialisées dans la santé, ou encore pages codées par un proche : les moyens utilisés par les psychologues pour être présents en ligne sont plus divers qu’on pourrait l’imaginer.
+WordPress, Wix, WebSelf, Jimdo, Hostinger, IONOS, Canva, solutions d’agences spécialisées dans la santé, ou encore pages codées par un proche : les moyens utilisés par les psychologues pour être présents en ligne sont plus divers qu’on pourrait l’imaginer.
 
 L’outil ne détermine pas, à lui seul, la qualité du résultat. Un site construit avec une plateforme grand public peut être clair et rassurant ; un site coûteux peut rester difficile à comprendre. Pourtant, beaucoup de pages observées semblent avoir été pensées comme des **vitrines à remplir**, et non à partir de la situation de la personne qui les consulte.
 
@@ -81,6 +81,38 @@ Ce doute pèse particulièrement lorsque la personne essaie déjà d’évaluer 
 
 La maintenance d’un site ne consiste donc pas seulement à installer des mises à jour. Elle sert aussi à vérifier régulièrement ce qu’un patient voit réellement.
 
+## Une mise en page qui se voit avant le contenu
+
+La structure peut être à peu près juste et la page rester pénible à lire. Sur certains sites de l’échantillon, la difficulté apparaît dès le premier écran. Ce n’est plus le menu ni le référencement : c’est la manière dont les informations ont été dessinées.
+
+Le texte est souvent posé directement sur une photographie. Une phrase d’accueil traverse l’image du cabinet, un titre de section passe sur une zone claire, des liens en écriture manuscrite se perdent en bas d’une photo. Quand le fond est sombre et uni, la phrase se lit. Dès que la luminosité change, il faut deviner les mots. La première chose qu’une personne devrait pouvoir lire sans effort est pourtant ce qui la situe : le titre du professionnel, le cadre proposé, la façon de prendre contact.
+
+![Comparaison fictive entre un texte blanc difficile à lire sur une photographie et une version corrigée avec un contraste suffisant](/images/blog/ux-texte-sur-image.svg)
+
+*Exemple fictif : une photographie peut rester présente sans servir de fond direct aux informations essentielles.*
+
+Ces pages ont été composées comme une affiche, pour une seule largeur d’écran. Sur un ordinateur, l’ensemble tient à peu près. Sur un téléphone, il ne se réorganise pas : la composition rétrécit, une large zone vide occupe le reste de l’écran, et le menu devient trop petit pour être utilisé. Les intitulés se cassent au milieu d’une expression. Dans les colonnes étroites, le texte justifié écarte les mots et crée des blancs qui ralentissent la lecture.
+
+![Comparaison fictive entre une page de bureau rétrécie sur téléphone et une interface réellement réorganisée pour mobile](/images/blog/ux-mobile-non-responsive.svg)
+
+*Exemple fictif : un affichage mobile utile réorganise le menu, le texte et l’action principale au lieu de réduire toute la page.*
+
+L’inachèvement est laissé en ligne. Une rubrique annoncée dans le menu, formations, outils ou ressources, n’affiche qu’une mention du type « en construction », sur un grand aplat vide. Pour quelqu’un qui hésite à écrire, cette zone ne ressemble pas à un chantier temporaire. Elle ressemble à un site qui n’est pas prêt, au moment où la personne essaie de savoir si le cadre, lui, l’est.
+
+La finition manque aussi là où elle devrait être la plus nette. Une faute dans la ligne des tarifs. Deux mots collés dans une liste. Un paragraphe affiché deux fois. Une police décorative pour les mentions légales. Un curseur dessiné qui désigne le lien de rendez-vous, comme dans un mode d’emploi. Chacun de ces signes est petit. Leur accumulation indique que la page n’a pas été relue comme le ferait quelqu’un qui la découvre.
+
+![Fausse capture annotée montrant une rubrique en construction, une image manquante, des fautes, du texte répété, un lien cassé et des boutons incohérents](/images/blog/ux-site-inacheve.svg)
+
+*Exemple fictif : les défauts de finition deviennent surtout visibles lorsqu’ils s’accumulent sur la même page.*
+
+Tout défile ensuite dans le même mouvement. Parcours, motifs de consultation, prix, coordonnées, mentions légales et politique de confidentialité ont le même poids visuel. Sans pages distinctes, il n’y a pas de hiérarchie. Les informations obligatoires, nécessaires, recouvrent celles qui permettent de se décider.
+
+![Comparaison fictive entre une longue page où toutes les rubriques ont le même poids et un parcours organisé en trois étapes](/images/blog/ux-hierarchie-navigation.svg)
+
+*Exemple fictif : comprendre la pratique, vérifier les modalités, puis décider de prendre contact.*
+
+Un texte peut être sincère et rester difficile à habiter. Le contraste, l’achèvement des rubriques et le comportement sur mobile font partie de l’accueil. Ils précèdent le contenu.
+
 ## Le paradoxe des solutions spécialisées dans la santé
 
 Les solutions clés en main conçues pour les professions de santé s’en sortent souvent mieux sur les fondamentaux. Les informations pratiques sont structurées, la prise de rendez-vous est intégrée, les mentions légales et les numéros professionnels sont visibles.
@@ -119,6 +151,7 @@ Cela conduit à quelques principes simples :
 4. **Éliminer les éléments parasites.** L’interface de la plateforme et les outils d’administration ne doivent pas s’interposer entre le praticien et le visiteur.
 5. **Respecter la singularité de la pratique.** Une base professionnelle peut être commune, mais le ton, les contenus et la hiérarchie doivent rester propres au psychologue.
 6. **Informer sans presser.** Le site facilite le choix ; il ne force pas la prise de rendez-vous.
+7. **Rendre le texte lisible avant de le décorer.** Une phrase importante ne se pose pas sur une photo si le contraste change avec l’image. Une rubrique vide ne reste pas en ligne. Le titre, le tarif et la prise de rendez-vous doivent rester lisibles sur un téléphone, sans zoom.
 
 C’est également pourquoi la [création d’un site pour psychologue](/creation-site-internet-psychologue/) ne peut pas se réduire au choix d’un thème graphique. Le travail porte sur l’architecture, la formulation, la technique, la visibilité locale et leur cohérence dans le temps.
 
