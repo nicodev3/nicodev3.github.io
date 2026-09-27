@@ -4,7 +4,9 @@ export type BlogInlineCtaVariant =
   | 'refonte'
   | 'budget'
   | 'independence'
-  | 'psychomotricien';
+  | 'psychomotricien'
+  | 'creation'
+  | 'viabilite';
 
 export interface BlogInlineCtaConfig {
   beforeHeading: string;
@@ -68,7 +70,7 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
   },
   'psychologue-premier-google-ville': {
     beforeHeading: 'Par où commencer',
-    variant: 'visibility',
+    variant: 'creation',
   },
   'apercus-ia-google-psychologue': {
     beforeHeading: 'Si vous ne faites qu’une chose',
@@ -84,7 +86,7 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
   },
   'salaire-psychologue-liberal': {
     beforeHeading: 'Comment augmenter son revenu sans « sur-vendre » sa pratique',
-    variant: 'site',
+    variant: 'viabilite',
   },
 	'visibilite-installation-psychologue-liberal': {
 		beforeHeading: 'Une stratégie simple de visibilité',
@@ -114,10 +116,10 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
 		beforeHeading: 'Le RGPD au cabinet',
 		variant: 'site',
 	},
-	'installer-liberal-psychologue-par-ou-commencer': {
-		beforeHeading: 'Dans quel ordre avancer',
-		variant: 'site',
-	},
+  'installer-liberal-psychologue-par-ou-commencer': {
+    beforeHeading: 'Dans quel ordre avancer',
+    variant: 'creation',
+  },
   'guide-complet-visibilite-en-ligne-psychologues': {
     beforeHeading: 'Par où commencer selon votre situation',
     variant: 'site',
@@ -136,7 +138,7 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
   },
   'site-internet-psychologues': {
     beforeHeading: 'Erreurs fréquentes à éviter',
-    variant: 'site',
+    variant: 'creation',
   },
   'site-internet-psychomotricien': {
     beforeHeading: 'Pour aller plus loin',

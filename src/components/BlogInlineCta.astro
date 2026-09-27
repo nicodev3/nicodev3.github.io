@@ -17,6 +17,7 @@ const copies: Record<
     description: string;
     primary: string;
     primaryHref: string;
+    trackDiagnostic?: boolean;
   }
 > = {
   site: {
@@ -26,6 +27,7 @@ const copies: Record<
       'Quatre questions suffisent : je vous indique les priorités utiles, structure, contenu et visibilité locale.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
+    trackDiagnostic: true,
   },
   visibility: {
     eyebrow: 'Passez de la méthode à votre situation',
@@ -34,6 +36,7 @@ const copies: Record<
       'Un diagnostic court à partir de votre site, de votre fiche Google et de votre contexte local.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
+    trackDiagnostic: true,
   },
   refonte: {
     eyebrow: 'Avant de lancer la refonte',
@@ -42,6 +45,7 @@ const copies: Record<
       'Je distingue les problèmes de contenu, de structure, de référencement ou de technique avant que vous engagiez un budget.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
+    trackDiagnostic: true,
   },
   budget: {
     eyebrow: 'Vous préparez votre budget ?',
@@ -50,6 +54,7 @@ const copies: Record<
       'Je vous indique les éléments réellement nécessaires et ceux qui peuvent attendre.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
+    trackDiagnostic: true,
   },
   independence: {
     eyebrow: 'Construire une présence durable',
@@ -58,6 +63,25 @@ const copies: Record<
       'Je vérifie comment articuler site, Google et rendez-vous, sans tout faire dépendre d’une plateforme.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
+    trackDiagnostic: true,
+  },
+  creation: {
+    eyebrow: 'La suite, si vous préparez votre visibilité',
+    title: 'Un site pour présenter votre cabinet.',
+    description:
+      'Création offerte, puis 29 ou 49 € par mois. La page détaille ce qui est inclus pour un psychologue en libéral.',
+    primary: 'Voir la création de site pour psychologue',
+    primaryHref: '/creation-site-internet-psychologue/',
+    trackDiagnostic: false,
+  },
+  viabilite: {
+    eyebrow: 'Passer des fourchettes à votre cas',
+    title: 'Combien de séances pour que le cabinet tienne ?',
+    description:
+      'L’outil calcule un seuil à partir de votre tarif, de vos charges et du rythme que vous visez.',
+    primary: 'Calculer le seuil de viabilité',
+    primaryHref: '/outils/seuil-viabilite-seances/',
+    trackDiagnostic: false,
   },
   psychomotricien: {
     eyebrow: 'Pour votre cabinet de psychomotricité',
@@ -66,6 +90,7 @@ const copies: Record<
       'Quatre questions : site, fiche Google, cohérence des infos, et trois actions adaptées.',
     primary: 'Demander un diagnostic gratuit',
     primaryHref: '/diagnostic-gratuit/',
+    trackDiagnostic: true,
   },
 };
 
@@ -90,13 +115,15 @@ const eventSource = articleId.replaceAll('-', '_');
       href={copy.primaryHref}
       class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
       data-lead-source={source}
-      data-analytics-event="lead_click_diagnostic"
-      data-analytics-cta="diagnostic"
+      data-analytics-event={copy.trackDiagnostic === false ? undefined : 'lead_click_diagnostic'}
+      data-analytics-cta={copy.trackDiagnostic === false ? undefined : 'diagnostic'}
       data-analytics-location={`article_${eventSource}_inline`}
     >
       {copy.primary}
     </a>
-    <p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
+    {copy.trackDiagnostic !== false && (
+      <p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
+    )}
   </div>
 </aside>
 

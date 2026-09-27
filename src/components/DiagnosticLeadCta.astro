@@ -27,6 +27,7 @@ const copies: Record<
 		description: string;
 		primary: string;
 		source: string;
+		href: string;
 	}
 > = {
 	'guide-visibilite-intro': {
@@ -36,6 +37,7 @@ const copies: Record<
 			'Quatre questions, retour sous 48 h : site ou projet, fiche Google, et les prochaines actions utiles.',
 		primary: 'Demander un diagnostic gratuit',
 		source: 'guide-visibilite-intro',
+		href: '/diagnostic-gratuit/',
 	},
 	'guide-visibilite-final': {
 		eyebrow: 'Vous avez la carte, passons à votre cas',
@@ -44,6 +46,7 @@ const copies: Record<
 			'Pas un audit de plusieurs heures : un premier retour concret, avec ou sans site.',
 		primary: 'Demander un diagnostic gratuit',
 		source: 'guide-visibilite-final',
+		href: '/diagnostic-gratuit/',
 	},
 	'installation-intro': {
 		eyebrow: 'Vous préparez votre installation ?',
@@ -52,6 +55,7 @@ const copies: Record<
 			'Fiche Google, Doctolib, cohérence des infos : je vous dis quoi traiter en premier.',
 		primary: 'Demander un diagnostic gratuit',
 		source: 'guide-installation-intro',
+		href: '/diagnostic-gratuit/',
 	},
 	'installation-mid': {
 		eyebrow: 'Étape visibilité',
@@ -60,6 +64,7 @@ const copies: Record<
 			'Quatre questions suffisent pour savoir si Google, une plateforme ou un site est le bon levier maintenant.',
 		primary: 'Demander un diagnostic gratuit',
 		source: 'guide-installation-mid',
+		href: '/diagnostic-gratuit/',
 	},
 	'installation-final': {
 		eyebrow: 'Le site professionnel',
@@ -68,22 +73,25 @@ const copies: Record<
 			'Je vous indique si un site est pertinent maintenant, ou si une fiche Google bien tenue suffit.',
 		primary: 'Demander un diagnostic gratuit',
 		source: 'guide-installation-final',
+		href: '/diagnostic-gratuit/',
 	},
 	'salaire-intro': {
-		eyebrow: 'Revenu et visibilité vont souvent ensemble',
-		title: 'Pour remplir l’agenda, encore faut-il être trouvable.',
+		eyebrow: 'Passer des fourchettes à votre cas',
+		title: 'Combien de séances pour que le cabinet tienne ?',
 		description:
-			'Le diagnostic gratuit fait le point sur votre fiche Google, vos profils et l’intérêt d’un site.',
-		primary: 'Demander un diagnostic gratuit',
+			'L’outil calcule un seuil à partir de votre tarif, de vos charges et du rythme que vous visez.',
+		primary: 'Calculer le seuil de viabilité',
 		source: 'article-salaire-intro',
+		href: '/outils/seuil-viabilite-seances/',
 	},
 	'salaire-final': {
-		eyebrow: 'Après les chiffres, la suite concrète',
-		title: 'Un diagnostic court pour savoir quel levier activer.',
+		eyebrow: 'Après les chiffres',
+		title: 'Estimez le nombre de séances qu’il vous faut.',
 		description:
-			'Site, fiche Google ou profils : je vous dis ce qui mérite d’être traité en premier.',
-		primary: 'Demander un diagnostic gratuit',
+			'Même logique que les fourchettes de cette page, appliquée à votre tarif et à vos charges.',
+		primary: 'Calculer le seuil de viabilité',
 		source: 'article-salaire-final',
+		href: '/outils/seuil-viabilite-seances/',
 	},
 	'mentions-legales': {
 		eyebrow: 'Prochaine étape',
@@ -92,6 +100,7 @@ const copies: Record<
 			'Quatre questions pour un bilan rapide de votre visibilité cabinet.',
 		primary: 'Demander un diagnostic gratuit',
 		source: 'outil-mentions-legales',
+		href: '/diagnostic-gratuit/',
 	},
 	'visibilite-tool': {
 		eyebrow: 'Aller plus loin',
@@ -100,6 +109,7 @@ const copies: Record<
 			'Ce questionnaire donne des pistes générales. Le diagnostic applique la même logique à votre cas.',
 		primary: 'Demander un diagnostic gratuit',
 		source: 'outil-visibilite-web',
+		href: '/diagnostic-gratuit/',
 	},
 };
 
@@ -125,15 +135,17 @@ const sourceEvent = copy.source.replaceAll('-', '_');
 	</p>
 	<div class="mt-5">
 		<a
-			href="/diagnostic-gratuit/"
+			href={copy.href}
 			class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
 			data-lead-source={copy.source}
-			data-analytics-event="lead_click_diagnostic"
-			data-analytics-cta="diagnostic"
+			data-analytics-event={copy.href === '/diagnostic-gratuit/' ? 'lead_click_diagnostic' : undefined}
+			data-analytics-cta={copy.href === '/diagnostic-gratuit/' ? 'diagnostic' : undefined}
 			data-analytics-location={sourceEvent}
 		>
 			{copy.primary}
 		</a>
-		<p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
+		{copy.href === '/diagnostic-gratuit/' && (
+			<p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
+		)}
 	</div>
 </aside>

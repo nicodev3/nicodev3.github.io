@@ -196,8 +196,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-	title="Création site psychologue : 0 € puis 29 ou 49 € | Nicodev"
-	description="Création de site internet pour psychologue et agence web spécialisée : 0 € de construction, puis 29 ou 49 €/mois. 2 à 3 semaines, sans engagement."
+	title="Création site internet psychologue | Nicodev"
+	description="Création de site internet pour psychologue : 0 € de construction, puis 29 ou 49 €/mois. 2 à 3 semaines, sans engagement."
 	image={psychologueImage}
 >
 	<Fragment slot="head">
@@ -208,12 +208,30 @@ const breadcrumbSchema = {
 
 	<Hero
 		title="Création de site internet pour psychologue"
-		subtitle="0 € de construction, puis 29 ou 49 €/mois tout inclus. 2 à 3 semaines. Un accompagnement de confrère — pour psychologues, psychothérapeutes (RPPS) et psychomotriciens."
+		subtitle="Création de site pour psychologue : 0 € de construction, puis 29 ou 49 €/mois. Pour psychologues, psychothérapeutes (RPPS) et psychomotriciens."
 		breadcrumb={[{ label: 'Accueil', href: '/' }, { label: 'Création de site internet pour psychologue' }]}
 		coverImage={psychologueImage}
 		coverImageAlt="Exemple de site sobre pour une psychologue en libéral"
 	>
 		<Fragment slot="after">
+			<div class="mt-2 flex flex-col gap-3 sm:flex-row sm:justify-center">
+				<a
+					href="/diagnostic-gratuit/"
+					class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold"
+					data-analytics-event="lead_click_diagnostic"
+					data-analytics-cta="diagnostic"
+					data-analytics-location="creation_hero"
+					data-lead-source="creation-hero"
+				>
+					Demander un diagnostic gratuit
+				</a>
+				<a
+					href="/tarifs/"
+					class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-6 py-3 font-semibold text-foreground hover:bg-background"
+				>
+					Voir les tarifs
+				</a>
+			</div>
 			<ul
 				class="mx-auto mt-6 flex max-w-3xl list-none flex-wrap justify-center gap-2 p-0 sm:gap-2.5"
 				aria-label="Points clés de l’offre"
@@ -239,24 +257,6 @@ const breadcrumbSchema = {
 					</span>
 				</li>
 			</ul>
-			<div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-				<a
-					href="/diagnostic-gratuit/"
-					class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold"
-					data-analytics-event="lead_click_diagnostic"
-					data-analytics-cta="diagnostic"
-					data-analytics-location="creation_hero"
-					data-lead-source="creation-hero"
-				>
-					Demander un diagnostic gratuit
-				</a>
-				<a
-					href="/tarifs/"
-					class="btn-outline-accent inline-flex items-center justify-center rounded-xl border-2 border-primary px-6 py-3 font-semibold text-foreground hover:bg-background"
-				>
-					Voir les tarifs
-				</a>
-			</div>
 		</Fragment>
 	</Hero>
 

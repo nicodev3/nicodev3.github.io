@@ -8,6 +8,7 @@ import BlogArticleToc from '../../components/BlogArticleToc.astro';
 import BlogPillarClusterLink from '../../components/BlogPillarClusterLink.astro';
 import GuideVisibilityConversionCta from '../../components/GuideVisibilityConversionCta.astro';
 import DiagnosticLeadCta from '../../components/DiagnosticLeadCta.astro';
+import EntryOfferNextStep from '../../components/EntryOfferNextStep.astro';
 import BlogInlineCta from '../../components/BlogInlineCta.astro';
 import { BLOG_INLINE_CTAS } from '../../data/blog-inline-ctas';
 import InstallationChapterNav from '../../components/InstallationChapterNav.astro';
@@ -35,6 +36,12 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const inlineCta = BLOG_INLINE_CTAS[entry.id];
+const entryOfferArticleIds = new Set([
+	'installer-liberal-psychologue-par-ou-commencer',
+	'installer-psychologue-liberal-100-visio',
+	'psychologue-premier-google-ville',
+]);
+const showEntryOffer = entryOfferArticleIds.has(entry.id);
 
 const allPosts = await getCollection('blog');
 
@@ -309,14 +316,11 @@ const installationHowToSchema = entry.data.installationGuideHub
 			{entry.data.installationGuideHub && (
 				<div class="mt-4">
 					<a
-						href="/diagnostic-gratuit/"
+						href="/creation-site-internet-psychologue/"
 						class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
-						data-lead-source="guide-installation-hero"
-						data-analytics-event="lead_click_diagnostic"
-						data-analytics-cta="diagnostic"
 						data-analytics-location="guide_installation_hero"
 					>
-						Demander un diagnostic gratuit
+						Voir la création de site pour psychologue
 					</a>
 				</div>
 			)}
@@ -341,8 +345,9 @@ const installationHowToSchema = entry.data.installationGuideHub
 				prose-img:rounded-lg prose-img:shadow-sm prose-img:mx-auto
 				prose-hr:border-border">
 				<BlogPillarClusterLink currentArticleId={entry.id} />
+				{showEntryOffer && <EntryOfferNextStep class="my-10" />}
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="intro" />}
-				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-intro" class="my-10" />}
+				{entry.data.installationGuideHub && !showEntryOffer && <DiagnosticLeadCta variant="installation-intro" class="my-10" />}
 				{entry.data.salaryGuideHub && <DiagnosticLeadCta variant="salaire-intro" class="my-10" />}
 				<BlogArticleToc items={tocItems} />
 				<Content />
@@ -360,56 +365,61 @@ const installationHowToSchema = entry.data.installationGuideHub
 					<GuidePdfCta class="my-10" compact={!entry.data.installationGuideHub} />
 				)}
 				{entry.data.guidePillarHub && <GuideVisibilityConversionCta variant="final" />}
-				{entry.data.installationGuideHub && <DiagnosticLeadCta variant="installation-final" class="my-10" />}
+				{entry.data.installationGuideHub && !showEntryOffer && <DiagnosticLeadCta variant="installation-final" class="my-10" />}
 				{entry.data.salaryGuideHub && <DiagnosticLeadCta variant="salaire-final" class="my-10" />}
 			</div>
 		</div>
 	</article>
 
-	<!-- Liens internes : diagnostic et tarifs (alignés avec le reste du site) -->
+	{!showEntryOffer && (
 	<section class="py-12 bg-surface border-t border-border">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-xl font-semibold text-foreground mb-4">
 				{entry.data.guidePillarHub
 					? 'Vous voulez transformer cette lecture en actions concrètes ?'
-					: entry.data.installationGuideHub || entry.data.salaryGuideHub
-						? 'Vous préparez votre installation ?'
+					: entry.data.salaryGuideHub
+						? 'Vous voulez appliquer ces fourchettes à votre cas ?'
 						: 'Un projet de site web ?'}
 			</h2>
 			<p class="text-muted mb-6">
-				Quatre questions, retour sous 48&nbsp;h : fiche Google, profils en ligne, et si un site est utile maintenant.
+				{entry.data.salaryGuideHub
+					? 'L’outil reprend votre tarif, vos charges et le rythme de séances que vous visez.'
+					: 'Quatre questions, retour sous 48 h : fiche Google, profils en ligne, et si un site est utile maintenant.'}
 			</p>
 			<div>
 				<a
-					href="/diagnostic-gratuit/"
+					href={entry.data.salaryGuideHub ? '/outils/seuil-viabilite-seances/' : '/diagnostic-gratuit/'}
 					class="btn-primary-solid inline-flex items-center rounded-lg px-5 py-3"
 					data-lead-source={
-						entry.data.guidePillarHub
-							? 'guide-visibilite-bottom'
-							: entry.data.salaryGuideHub
-								? 'article-salaire-bottom'
+						entry.data.salaryGuideHub
+							? 'article-salaire-bottom'
+							: entry.data.guidePillarHub
+								? 'guide-visibilite-bottom'
 								: entry.data.installationGuideHub
 									? 'guide-installation-bottom'
 									: undefined
 					}
-					data-analytics-event="lead_click_diagnostic"
-					data-analytics-cta="diagnostic"
+					data-analytics-event={entry.data.salaryGuideHub ? undefined : 'lead_click_diagnostic'}
+					data-analytics-cta={entry.data.salaryGuideHub ? undefined : 'diagnostic'}
 					data-analytics-location={
-						entry.data.guidePillarHub
-							? 'guide_visibilite_bottom'
-							: entry.data.salaryGuideHub
-								? 'article_salaire_bottom'
+						entry.data.salaryGuideHub
+							? 'article_salaire_bottom'
+							: entry.data.guidePillarHub
+								? 'guide_visibilite_bottom'
 								: entry.data.installationGuideHub
 									? 'guide_installation_bottom'
 									: 'blog_bottom'
 					}
 				>
-					Demander un diagnostic gratuit
+					{entry.data.salaryGuideHub ? 'Calculer le seuil de viabilité' : 'Demander un diagnostic gratuit'}
 				</a>
-				<p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
+				{!entry.data.salaryGuideHub && (
+					<p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
+				)}
 			</div>
 		</div>
 	</section>
+	)}
 
 	<!-- Articles similaires (sur la page pilier : tout le cluster) -->
 	{relatedPosts.length > 0 && (

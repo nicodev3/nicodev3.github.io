@@ -21,24 +21,23 @@ const breadcrumbSchema = {
 		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 	</Fragment>
 
-	<section class="border-b border-border bg-white pb-16 pt-8 md:pt-10">
+	<section class="border-b border-border bg-white pb-12 pt-6 md:pt-8">
 		<div class="mx-auto max-w-xl px-4 sm:px-6">
-			<nav class="mb-5 text-sm text-muted" aria-label="Fil d’Ariane">
+			<nav class="mb-3 text-sm text-muted" aria-label="Fil d’Ariane">
 				<ol class="flex flex-wrap items-center gap-1.5">
 					<li><a href="/" class="underline-offset-4 hover:text-primary hover:underline">Accueil</a></li>
 					<li aria-hidden="true">/</li>
 					<li class="text-foreground">Diagnostic gratuit</li>
 				</ol>
 			</nav>
-			<h1 class="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+			<h1 class="font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
 				Diagnostic visibilité, en 4 questions
 			</h1>
-			<p class="mt-3 text-base leading-relaxed text-muted sm:text-lg">
-				Avec ou sans site. Je vous dis quoi prioriser pour votre cabinet, sans engagement.
+			<p class="mt-2 text-base leading-relaxed text-muted">
+				Je vous dis quoi prioriser pour votre cabinet, avec ou sans site.
 			</p>
-			<p class="mt-2 text-sm text-muted">Moins de 2 minutes. Retour sous 48&nbsp;h.</p>
 
-			<div class="mt-6">
+			<div class="mt-4">
 				<DiagnosticForm />
 			</div>
 

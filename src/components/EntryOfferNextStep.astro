@@ -1,0 +1,32 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<aside
+	class:list={[
+		'not-prose rounded-xl border border-primary/25 bg-primary-50 p-5 shadow-sm sm:p-6',
+		className,
+	]}
+	aria-label="Création de site pour psychologue"
+>
+	<p class="type-eyebrow text-primary-700">La suite, si vous préparez votre visibilité</p>
+	<h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
+		Un site pour présenter votre cabinet
+	</h2>
+	<p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">
+		Création offerte, puis 29 ou 49&nbsp;€ par mois. La page détaille ce qui est inclus pour un psychologue en libéral.
+	</p>
+	<div class="mt-5">
+		<a
+			href="/creation-site-internet-psychologue/"
+			class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
+			data-analytics-location="entry_article_creation"
+		>
+			Voir la création de site pour psychologue
+		</a>
+	</div>
+</aside>

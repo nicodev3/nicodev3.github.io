@@ -44,20 +44,6 @@ const startEvent = 'lead_start_diagnostic';
 			<input id="diagnostic-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
 		</p>
 
-		<FormField id="diagnostic-firstName" name="firstName" label="Prénom *" type="text" autocomplete="given-name" required />
-
-		<FormField id="diagnostic-email" name="email" label="Email *" type="email" autocomplete="email" required />
-
-		<FormField
-			id="diagnostic-cityOrSite"
-			name="cityOrSite"
-			label="Ville ou site web *"
-			type="text"
-			autocomplete="address-level2"
-			required
-			placeholder="Paris 15, ou https://votre-site.fr"
-		/>
-
 		<FormField
 			id="diagnostic-visibilityStatus"
 			name="visibilityStatus"
@@ -71,6 +57,20 @@ const startEvent = 'lead_start_diagnostic';
 			<option value="site-peu-visibilite">J'ai un site, trop peu de demandes</option>
 			<option value="je-ne-sais-pas">Je ne sais pas encore</option>
 		</FormField>
+
+		<FormField
+			id="diagnostic-cityOrSite"
+			name="cityOrSite"
+			label="Ville ou site web *"
+			type="text"
+			autocomplete="address-level2"
+			required
+			placeholder="Paris 15, ou https://votre-site.fr"
+		/>
+
+		<FormField id="diagnostic-firstName" name="firstName" label="Prénom *" type="text" autocomplete="given-name" required />
+
+		<FormField id="diagnostic-email" name="email" label="Email *" type="email" autocomplete="email" required />
 
 		<button
 			type="submit"

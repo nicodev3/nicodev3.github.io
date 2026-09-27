@@ -1,9 +1,9 @@
 ---
-title: "Salaire psychologue libéral : combien gagne-t-on vraiment en 2026 ?"
-seoTitle: "Salaire psychologue libéral 2026 : revenus nets"
+title: "Salaire psychologue libéral : 800 à 3 200 € nets"
+seoTitle: "Salaire psychologue libéral : 800 à 3 200 € nets"
 description: "Salaire d'un psychologue libéral en 2026 : souvent 800–1 700 € nets en début d'activité et 1 800–3 200 € une fois le cabinet établi (après charges et CIPAV)."
 pubDate: "2026-06-02"
-updatedDate: "2026-08-16"
+updatedDate: "2026-09-27"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
 tags: ["psychologue", "installation en libéral"]
@@ -24,6 +24,8 @@ faq:
 *Temps de lecture : environ 14 minutes*
 
 **Réponse courte :** le **salaire d’un psychologue libéral** n’est pas un salaire fixe. En 2026, le revenu net mensuel se situe souvent entre **800 et 1 700 €** en début d’activité, et entre **1 800 et 3 200 €** une fois le cabinet établi — après cotisations CIPAV et impôts. Un agenda très rempli ou une activité mixte peut dépasser **3 500 €**, sans que ce soit la norme. Le loyer de cabinet, quand il existe, vient en plus et réduit d’autant le revenu disponible.
+
+Pour passer de ces fourchettes à votre tarif et à vos charges, calculez votre [seuil de viabilité](/outils/seuil-viabilite-seances/).
 
 > **En bref — salaire d’un psychologue libéral (fourchettes 2026)**
 >
@@ -407,7 +409,7 @@ Ordres de grandeur indicatifs (temps plein, nets mensuels) :
 
 Ces montants restent des ordres de grandeur : une même ancienneté peut donner un net différent en **CCN 66** et en **CCN 51**. La rémunération est plus prévisible qu’en libéral, mais le plafond est souvent plus bas et l’autonomie d’organisation moindre.
 
-Pour un projet de site ou de visibilité en ligne adapté aux psychologues, vous pouvez consulter la page [création de site web pour psychologue](/creation-site-internet-psychologue/), les [tarifs](/tarifs/) ou demander un [diagnostic gratuit](/diagnostic-gratuit/).
+Pour appliquer ces ordres de grandeur à votre tarif et à vos charges, utilisez l’outil [seuil de viabilité](/outils/seuil-viabilite-seances/).
 
 ---
 
