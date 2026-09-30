@@ -1,6 +1,6 @@
 ---
 title: "Salaire psychologue libéral : 800 à 3 200 € nets"
-seoTitle: "Salaire psychologue libéral : 800 à 3 200 € nets"
+seoTitle: "Salaire psychologue libéral 2026 : 800 à 3 200 € nets"
 description: "Salaire d'un psychologue libéral en 2026 : souvent 800–1 700 € nets en début d'activité et 1 800–3 200 € une fois le cabinet établi (après charges et CIPAV)."
 pubDate: "2026-06-02"
 updatedDate: "2026-09-27"
@@ -46,7 +46,7 @@ Cet article propose une lecture réaliste, avec exemples chiffrés — sans remp
 
 Le **salaire d’un psychologue libéral** n’est pas fixé par un barème national : c’est le revenu net après honoraires, cotisations et impôts. Les ordres de grandeur 2026 restent ceux du tableau ci-dessus — utiles pour cadrer un projet d’installation, pas pour garantir un résultat.
 
-## Salaire d’un psychologue : salarié, libéral et clinicien — ne pas confondre
+## Salaire d’un psychologue clinicien libéral ou salarié : ne pas confondre
 
 La requête « **salaire psychologue** » (sans le mot « libéral ») regroupe en réalité plusieurs situations très différentes. Avant d'estimer vos revenus, clarifiez de quel statut il s'agit :
 
