@@ -22,6 +22,7 @@ import joieCompassionImage from "../assets/images/screenshots/joiecompassion.web
 import angelaBassompierreImage from "../assets/images/screenshots/angelabassompierre.webp";
 import melanieAguillonImage from "../assets/images/screenshots/melanie-aguillon.webp";
 import pierreDalarunImage from "../assets/images/screenshots/pierre-dalarun.webp";
+import camillePerrinImage from "../assets/images/screenshots/camille-perrin-psychologue.webp";
 import { RefreshCw } from "@lucide/astro";
 
 const baseUrl = Astro.site ?? Astro.url.origin;
@@ -79,6 +80,18 @@ const breadcrumbSchema = {
 
 /** Année de conception par site (valeurs ci-dessous à ajuster selon vos archives). */
 const portfolioProjects: PortfolioProject[] = [
+  {
+    title: "Camille Perrin",
+    image: camillePerrinImage,
+    url: "https://camille-perrin-psychologue.fr/",
+    location: "Le Chesnay",
+    year: 2026,
+    profession: "psychologue",
+    description:
+      "Création d'un site vitrine pour consultations d'adultes et d'adolescents à partir de 16 ans, au cabinet au Chesnay (Versailles) et en visio.",
+    imageAlt:
+      "Site Camille Perrin — psychologue à Versailles et au Chesnay, consultations au cabinet et en visio",
+  },
   {
     title: "Mélanie Aguillon",
     image: melanieAguillonImage,
