@@ -4,6 +4,10 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
+import llmsMd, {
+  SITE_LLMS_DESCRIPTION,
+  SITE_LLMS_NAME,
+} from './src/integrations/llms-md.mjs';
 
 /** URLs exactes à retirer du sitemap (noindex ou hors prod). */
 const noindexUrlsExact = new Set([
@@ -41,6 +45,12 @@ export default defineConfig({
     sitemap({
       /** @param {string} page */
       filter: (page) => shouldIncludeInSitemap(page),
+    }),
+    // Parcours fs local : ne pas utiliser llms() (glob Windows → llms.txt vides).
+    llmsMd({
+      siteUrl: 'https://nicodev.fr',
+      name: SITE_LLMS_NAME,
+      description: SITE_LLMS_DESCRIPTION,
     }),
   ]
 });

@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# Wrangler local (pages dev)
+.wrangler/
+
 # tarteaucitron (copié depuis node_modules par le plugin Vite)
 public/tarteaucitron/
 

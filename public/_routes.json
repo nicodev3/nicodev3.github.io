@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": [
+    "/_astro/*",
+    "/fonts/*",
+    "/images/*",
+    "/brand/*",
+    "/favicon.svg",
+    "/*.png",
+    "/*.jpg",
+    "/*.jpeg",
+    "/*.webp",
+    "/*.avif",
+    "/*.gif",
+    "/*.svg",
+    "/*.ico",
+    "/*.xml",
+    "/*.txt",
+    "/*.js",
+    "/*.mjs",
+    "/*.css",
+    "/*.md",
+    "/*.woff",
+    "/*.woff2",
+    "/*.map"
+  ]
+}
