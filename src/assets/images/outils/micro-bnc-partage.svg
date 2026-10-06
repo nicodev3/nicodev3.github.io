@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Calculateur micro-BNC pour psychologues</title>
+  <desc id="desc">Visuel de partage du calculateur de recette nette apr&#232;s cotisations URSSAF.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8f6"/>
+      <stop offset="1" stop-color="#f6e9e4"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b35c44"/>
+      <stop offset="1" stop-color="#94442e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#3b0900" flood-opacity=".14"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <circle cx="1134" cy="72" r="164" fill="#ffdbd1" opacity=".72"/>
+  <circle cx="70" cy="603" r="126" fill="#dbc1ba" opacity=".42"/>
+  <path d="M0 502C142 450 247 482 360 630H0Z" fill="#94442e" opacity=".07"/>
+
+  <g transform="translate(72 58)">
+    <rect width="48" height="48" rx="12" fill="#b35c44"/>
+    <path fill="#fff8f6" d="M11 34V18.85c0-1.58-.68-2.4-2.1-2.4h-.52V14.8h7.57v3.3c1.88-2.55 4.2-3.82 6.9-3.82 2.4 0 4.2.67 5.4 2.1 1.2 1.35 1.8 3.37 1.8 6V34h-5.77V23.12c0-1.65-.3-2.85-.9-3.6-.6-.75-1.5-1.12-2.77-1.12-1.5 0-2.63.52-3.38 1.65-.75 1.05-1.12 2.62-1.12 4.65V34Z"/>
+    <circle cx="36.75" cy="31" r="3.38" fill="#3b0900"/>
+    <text x="64" y="35" fill="#191c1d" font-family="Noto Serif, Georgia, serif" font-size="32" font-weight="700">nicodev.</text>
+  </g>
+
+  <g transform="translate(72 164)">
+    <rect width="156" height="34" rx="17" fill="#ffdbd1"/>
+    <text x="78" y="23" text-anchor="middle" fill="#79301b" font-family="Arimo, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.4">OUTIL GRATUIT</text>
+
+    <text x="0" y="98" fill="#191c1d" font-family="Noto Serif, Georgia, serif" font-size="64" font-weight="700">Calculateur</text>
+    <text x="0" y="166" fill="#94442e" font-family="Noto Serif, Georgia, serif" font-size="64" font-weight="700">micro-BNC</text>
+    <text x="0" y="211" fill="#545f72" font-family="Arimo, Arial, sans-serif" font-size="25">pour psychologues en lib&#233;ral</text>
+
+    <g transform="translate(0 257)">
+      <circle cx="14" cy="14" r="14" fill="#b35c44"/>
+      <path d="m7.5 14 4.2 4.1 8.7-9" fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="42" y="21" fill="#3b0900" font-family="Arimo, Arial, sans-serif" font-size="20" font-weight="700">Estimez votre recette nette apr&#232;s URSSAF</text>
+    </g>
+  </g>
+
+  <g transform="translate(684 100)" filter="url(#shadow)">
+    <rect width="444" height="450" rx="30" fill="#fff"/>
+    <rect x="1" y="1" width="442" height="448" rx="29" fill="none" stroke="#dbc1ba" stroke-width="2"/>
+
+    <g transform="translate(34 31)">
+      <rect width="54" height="54" rx="15" fill="url(#accent)"/>
+      <text x="27" y="38" text-anchor="middle" fill="#fff" font-family="Arimo, Arial, sans-serif" font-size="32" font-weight="700">&#8364;</text>
+      <text x="72" y="23" fill="#545f72" font-family="Arimo, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">VOTRE ESTIMATION</text>
+      <text x="72" y="49" fill="#191c1d" font-family="Noto Serif, Georgia, serif" font-size="23" font-weight="700">Recette par mois</text>
+    </g>
+
+    <g transform="translate(34 118)">
+      <rect width="376" height="72" rx="14" fill="#f8f9fa" stroke="#dbc1ba"/>
+      <text x="20" y="26" fill="#545f72" font-family="Arimo, Arial, sans-serif" font-size="14">Tarif d'une s&#233;ance</text>
+      <text x="20" y="55" fill="#191c1d" font-family="Arimo, Arial, sans-serif" font-size="23" font-weight="700">60 &#8364;</text>
+      <text x="356" y="45" text-anchor="end" fill="#79301b" font-family="Arimo, Arial, sans-serif" font-size="17" font-weight="700">12 s&#233;ances / sem.</text>
+    </g>
+
+    <g transform="translate(34 215)">
+      <rect width="376" height="141" rx="18" fill="#fff8f6" stroke="#c46a52" stroke-width="2"/>
+      <text x="24" y="34" fill="#79301b" font-family="Arimo, Arial, sans-serif" font-size="16" font-weight="700">RECETTE NETTE ESTIM&#201;E</text>
+      <text x="24" y="93" fill="#3b0900" font-family="Noto Serif, Georgia, serif" font-size="51" font-weight="700">2 206 &#8364;</text>
+      <text x="211" y="92" fill="#545f72" font-family="Arimo, Arial, sans-serif" font-size="18">/ mois</text>
+      <text x="24" y="122" fill="#545f72" font-family="Arimo, Arial, sans-serif" font-size="14">Apr&#232;s cotisations sociales + CFP</text>
+    </g>
+
+    <g transform="translate(34 386)">
+      <path d="M0 0h376" stroke="#dbc1ba"/>
+      <circle cx="8" cy="25" r="7" fill="#b35c44"/>
+      <text x="24" y="31" fill="#545f72" font-family="Arimo, Arial, sans-serif" font-size="15">Calcul personnalisable en quelques secondes</text>
+    </g>
+  </g>
+
+  <text x="72" y="580" fill="#79301b" font-family="Arimo, Arial, sans-serif" font-size="18" font-weight="700">nicodev.fr/outils</text>
+  <text x="1128" y="580" text-anchor="end" fill="#545f72" font-family="Arimo, Arial, sans-serif" font-size="16">Simple &#8226; gratuit &#8226; sans inscription</text>
+</svg>
