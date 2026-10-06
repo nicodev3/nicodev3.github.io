@@ -2,40 +2,13 @@
 import { Image } from 'astro:assets';
 import { ArrowRight, ArrowUpRight, Quote } from '@lucide/astro';
 import { googleTestimonials } from '../data/testimonials';
-import melanieImage from '../assets/images/screenshots/melanie-aguillon.webp';
-import pierreImage from '../assets/images/screenshots/pierre-dalarun.webp';
-import angelaImage from '../assets/images/screenshots/angelabassompierre.webp';
+import {
+	formatPortfolioProjectMeta,
+	getRecentPortfolioProjects,
+} from '../data/portfolio-projects';
 
-const projects = [
-	{
-		title: 'Mélanie Aguillon',
-		meta: 'Création · Psychologue · 2026',
-		description:
-			'Présentation des consultations d’adultes au cabinet et en visio, avec deux adresses à Bourgoin-Jallieu.',
-		image: melanieImage,
-		imageAlt:
-			'Page d’accueil du site de Mélanie Aguillon, psychologue à Bourgoin-Jallieu',
-		href: 'https://melanie-aguillon.fr/',
-	},
-	{
-		title: 'Pierre Dalarun',
-		meta: 'Création · Psychothérapeute · 2026',
-		description:
-			'Présentation d’une approche psychocorporelle, des pratiques proposées et des consultations au cabinet ou en visio, à Soudan près de Châteaubriant.',
-		image: pierreImage,
-		imageAlt: 'Page d’accueil du site de Pierre Dalarun, psychothérapeute à Soudan',
-		href: 'https://pierredalarun.com/',
-	},
-	{
-		title: 'Angela Bassompierre',
-		meta: 'Création · Psychologue en ligne · 2026',
-		description:
-			'Présentation des consultations en ligne, de l’approche intégrative et des accompagnements proposés aux adolescents et aux adultes.',
-		image: angelaImage,
-		imageAlt: 'Page d’accueil du site d’Angela Bassompierre, psychologue en ligne',
-		href: 'https://angelabassompierre.fr/',
-	},
-] as const;
+/** Les 3 réalisations les plus récentes (ordre du tableau portfolio). */
+const projects = getRecentPortfolioProjects(3);
 
 /** Compare deux URL en ignorant le protocole, le `www.` et le slash final. */
 const normalizeSiteUrl = (value: string) =>
@@ -49,8 +22,15 @@ const findTestimonial = (projectHref: string) =>
 	googleTestimonials.find((t) => normalizeSiteUrl(t.websiteUrl) === normalizeSiteUrl(projectHref));
 
 const projectsWithTestimonial = projects.map((project) => ({
-	...project,
-	testimonial: findTestimonial(project.href),
+	title: project.title,
+	meta: formatPortfolioProjectMeta(project),
+	description:
+		project.description ??
+		`Site réalisé pour ${project.title} (${project.location}).`,
+	image: project.image,
+	imageAlt: project.imageAlt ?? `Page d’accueil du site de ${project.title}`,
+	href: project.url,
+	testimonial: findTestimonial(project.url),
 }));
 ---
 
