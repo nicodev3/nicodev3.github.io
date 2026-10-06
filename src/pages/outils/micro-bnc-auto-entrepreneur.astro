@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import microBncShareImage from "../../assets/images/outils/micro-bnc-partage.png";
 
 const contributionRates = {
   socialPlusCfp: 0.234,
@@ -37,6 +38,7 @@ const webApplicationSchema = {
 <Layout
   title="Calculateur micro-BNC psychologue | Outils Nicodev"
   description="Calculez votre recette nette en micro-BNC ou auto-entrepreneur selon votre tarif de séance, vos cotisations URSSAF et votre activité."
+  image={microBncShareImage}
 >
   <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(webApplicationSchema)} />
   <section class="section-y bg-slate-50">
