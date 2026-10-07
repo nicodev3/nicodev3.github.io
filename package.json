@@ -20,7 +20,8 @@
         "optimize-images": "node scripts/optimize-images.mjs",
         "optimize-images:webp": "node scripts/optimize-images.mjs --webp",
         "convert-screenshots-webp": "node scripts/convert-screenshots-webp.mjs",
-        "puppeteer:install-browser": "npx puppeteer browsers install chrome"
+        "puppeteer:install-browser": "npx puppeteer browsers install chrome",
+        "cgv:pdf": "node scripts/generate-cgv-pdf.mjs"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.10",
@@ -30,7 +31,7 @@
         "@lucide/astro": "^1.8.0",
         "@tailwindcss/typography": "^0.5.16",
         "@tailwindcss/vite": "^4.2.4",
-        "astro": "^7.3.5",
+        "astro": "^7.3.6",
         "astro-llms-md": "^3.0.2",
         "tailwindcss": "^4.2.4",
         "typescript": "^6.0.3"

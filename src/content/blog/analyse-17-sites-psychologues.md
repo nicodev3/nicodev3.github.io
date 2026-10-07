@@ -1,7 +1,7 @@
 ---
 title: "Ce que révèle l’analyse de 17 sites de psychologues"
-seoTitle: "Sites de psychologues : 6 problèmes récurrents observés"
-description: "J’ai analysé 17 sites de psychologues libéraux. Architecture, plateformes, SEO, technique, interface et ton : voici les difficultés qui reviennent le plus souvent."
+seoTitle: "Sites de psychologues : 7 problèmes récurrents observés"
+description: "J’ai analysé 17 sites de psychologues libéraux. Architecture, site en une page, plateformes, SEO, technique, interface et ton : voici les difficultés qui reviennent le plus souvent."
 pubDate: "2026-09-01"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/analyse-sites-psychologues-carre.webp"
@@ -10,12 +10,14 @@ faq:
   - question: "L’analyse de 17 sites est-elle représentative de tous les sites de psychologues ?"
     answer: "Non. Il s’agit d’un échantillon exploratoire destiné à repérer des difficultés récurrentes, pas d’une étude statistique du marché. Les sites ont été observés à un moment donné et les résultats de recherche peuvent varier selon la ville et l’utilisateur."
   - question: "Quels problèmes reviennent le plus souvent sur les sites de psychologues ?"
-    answer: "Les difficultés les plus fréquentes concernent les éléments parasites des plateformes, une architecture dictée par les mots-clés, des traces techniques visibles, des sites trop uniformes, une interface difficile à lire et un ton parfois trop proche du marketing de conversion."
+    answer: "Les difficultés les plus fréquentes concernent les éléments parasites des plateformes, une architecture dictée par les mots-clés ou réduite à une seule page, des traces techniques visibles, des sites trop uniformes, une interface difficile à lire et un ton parfois trop proche du marketing de conversion."
+  - question: "Un site en une seule page est-il mauvais pour le référencement ?"
+    answer: "Oui, en général. Google indexe des URL distinctes : une seule page ne peut cibler efficacement qu’un sujet principal. Les recherches locales et les motifs de consultation différents méritent des pages dédiées, avec un titre, un contenu et une intention clairs, plutôt qu’un long défilement unique."
   - question: "Que doit permettre un bon site de psychologue ?"
     answer: "Il doit permettre de comprendre rapidement le titre du professionnel, sa pratique, les personnes reçues, les modalités de consultation et la manière de prendre contact, avec un ton mesuré et une navigation simple."
 ---
 
-*Temps de lecture : 10 minutes*
+*Temps de lecture : 11 minutes*
 
 J’ai passé plusieurs heures à examiner **17 sites de psychologues en exercice libéral en France**. Certains ont été trouvés à partir d’un annuaire professionnel, d’autres parmi les premiers résultats de recherches locales comme « psychologue Paris » ou « psychologue Lyon ».
 
@@ -68,6 +70,20 @@ Le référencement ne devrait pas conduire à opposer les moteurs de recherche a
 - des articles qui approfondissent une question au lieu de dupliquer une page existante.
 
 Une personne qui traverse une période difficile n’a pas à résoudre un labyrinthe de sous-menus avant de trouver un numéro de téléphone. Le premier résultat compréhensible sera souvent plus utile que le site qui contient le plus grand nombre de mots-clés.
+
+## L’autre extrême : tout concentrer sur une seule page
+
+À l’opposé des sites trop découpés, plusieurs pages de l’échantillon tiennent sur **une seule URL**. Accueil, présentation, motifs de consultation, tarifs, contact et parfois mentions légales se succèdent dans un long défilement. L’intention est souvent bonne : simplifier la navigation, éviter de « perdre » le visiteur entre plusieurs menus.
+
+Pour le référencement, ce choix reste handicapant.
+
+Google indexe des adresses distinctes. Chaque URL peut être associée à un sujet principal, à un titre, à une description et à un contenu assez développé pour répondre à une recherche précise. Quand tout le cabinet tient sur une seule page, ces signaux se mélangent. Le moteur doit décider d’un seul positionnement pour des intentions très différentes : « psychologue » suivi d’une ville, consultation d’adolescents, thérapie de couple, burn-out, modalités en visio, etc.
+
+Une page unique peine à couvrir correctement plusieurs de ces recherches à la fois. Le titre principal ne peut viser qu’une requête dominante. Les sections plus bas dans le défilement pèsent moins que des pages dédiées, avec leur propre adresse et leur propre hiérarchie de titres. Les liens internes — qui aident Google à comprendre quels contenus sont liés — disparaissent presque entièrement : il n’y a plus rien à relier.
+
+Le partage et les éventuels liens externes souffrent du même effet. Une recommandation ou une citation pointe toujours vers la même adresse générique, même lorsque la personne cherchait une information précise. Sur un site structuré, cette entrée peut mener à la page qui correspond vraiment à la question posée.
+
+Cela ne signifie pas qu’il faille multiplier les pages artificiellement. L’équilibre utile se situe entre les deux extrêmes observés : assez de pages pour séparer les intentions réellement distinctes, pas assez pour diluer le même texte sous vingt variantes de mots-clés. Une page d’accueil, une présentation, des cadres de consultation différenciés lorsqu’ils le méritent, des informations pratiques et, le cas échéant, quelques articles ciblés suffisent souvent mieux qu’un site en une seule page ou qu’un labyrinthe SEO.
 
 ## Des vestiges techniques visibles par les visiteurs
 
@@ -146,7 +162,7 @@ Un site de psychologue n’est pas seulement une vitrine commerciale. Il constit
 Cela conduit à quelques principes simples :
 
 1. **Répondre d’abord aux questions humaines.** Qui recevez-vous ? Comment travaillez-vous ? Quelles sont vos modalités ?
-2. **Construire une navigation courte.** Les pages doivent avoir une fonction distincte et les informations pratiques rester accessibles rapidement.
+2. **Construire une navigation courte, mais pas une seule page.** Les pages doivent avoir une fonction distincte : une URL par intention claire aide à la fois le lecteur et le référencement. Les informations pratiques restent accessibles rapidement.
 3. **Écrire pour être compris avant d’écrire pour Google.** Le référencement vient soutenir un contenu utile, pas le remplacer.
 4. **Éliminer les éléments parasites.** L’interface de la plateforme et les outils d’administration ne doivent pas s’interposer entre le praticien et le visiteur.
 5. **Respecter la singularité de la pratique.** Une base professionnelle peut être commune, mais le ton, les contenus et la hiérarchie doivent rester propres au psychologue.
