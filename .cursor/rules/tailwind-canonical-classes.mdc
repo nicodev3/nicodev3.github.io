@@ -1,0 +1,32 @@
+---
+description: Utiliser les classes Tailwind v4 canoniques (évite suggestCanonicalClasses)
+globs: "**/*.{astro,html,css,tsx,jsx,vue,svelte,mdx}"
+alwaysApply: false
+---
+
+# Classes Tailwind canoniques
+
+Quand tu écris ou modifies des classes Tailwind, utilise toujours la forme **canonique** (Tailwind v4 + IntelliSense `suggestCanonicalClasses`). Ne laisse pas d’alias dépréciés.
+
+## Remplacements courants
+
+| Éviter | Préférer |
+|--------|----------|
+| `bg-gradient-to-*` | `bg-linear-to-*` |
+| `outline-none` | `outline-hidden` |
+| `flex-shrink-*` | `shrink-*` |
+| `flex-grow-*` | `grow-*` |
+| `overflow-ellipsis` | `text-ellipsis` |
+| `decoration-slice` / `decoration-clone` | `box-decoration-slice` / `box-decoration-clone` |
+| `shadow-sm` | `shadow-xs` |
+| `shadow` (échelle legacy) | `shadow-sm` |
+| `rounded-sm` | `rounded-xs` |
+| `rounded` (échelle legacy) | `rounded-sm` |
+| `blur-sm` | `blur-xs` |
+| `w-*` + `h-*` identiques | `size-*` |
+
+## Règles
+
+- Préférer d’emblée la forme canonique ; ne pas écrire l’alias puis “corriger” après coup.
+- Appliquer aussi dans les variantes (`hover:`, `focus-visible:`, `sm:`, etc.).
+- Ne pas “moderniser” massivement un fichier hors du périmètre de la tâche en cours.
