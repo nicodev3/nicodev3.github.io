@@ -45,7 +45,8 @@ export const BLOG_TAG_DESCRIPTIONS: Record<BlogTag, string> = {
   'cadre déontologique': 'Déontologie, RGPD, accessibilité et communication régulée.',
   doctolib: 'Doctolib, prise de rendez-vous et complémentarité avec le site.',
   'réseaux sociaux': 'Instagram et réseaux sociaux au service de la visibilité du cabinet.',
-  'intelligence artificielle': 'IA et assistants pour concevoir ou rédiger un site de cabinet.',
+  'intelligence artificielle':
+    'IA, assistants et GEO : concevoir un site, rédiger, ou rester visible dans les réponses génératives.',
 };
 
 export function sortBlogTags(tags: readonly string[]): BlogTag[] {

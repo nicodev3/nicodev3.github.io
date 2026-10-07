@@ -8,7 +8,7 @@ image: "../../assets/images/blog/cout-site-internet.webp"
 tags: ["psychologue", "site web cabinet"]
 faq:
   - question: "Wix, WordPress ou Simplébo : que paie un psychologue ?"
-    answer: "Au 24 septembre 2026, ces prix ne couvrent pas le même travail. Wix Light est affiché à 16,80 €/mois en paiement annuel : c’est l’outil, le site se fait soi-même. Un WordPress auto-hébergé se joue surtout sur l’hébergement (souvent 8 à 40 €/mois) et le temps passé. Simplébo Crédibilité affiche 60 € HT/mois plus 400 € HT de frais de lancement pour le pack site ; la fiche Google est une option à part sur leur configurateur. Chez Nicodev : 0 € de construction, puis 29 €/mois (Sérénité : création, bases SEO, fiche Google, veille) ou 49 €/mois (Visibilité & Confiance : la même base, plus un SEO expert et une aide à la rédaction)."
+    answer: "Au 24 septembre 2026, ces prix ne couvrent pas le même travail. Wix Light est affiché à 16,80 €/mois en paiement annuel : c’est l’outil, le site se fait soi-même. Un WordPress auto-hébergé se joue surtout sur l’hébergement (souvent 8 à 40 €/mois) et le temps passé. Simplébo Crédibilité affiche 60 € HT/mois plus 400 € HT de frais de lancement pour le pack site ; la fiche Google est une option à part sur leur configurateur. Chez Nicodev : 0 € de construction, puis 29 €/mois (Sérénité : création, bases SEO, fiche Google, veille) ou 49 €/mois (Visibilité & Confiance : la même base, plus un SEO expert, du GEO et une aide à la rédaction)."
   - question: "Faut-il payer Elementor ou Divi pour un site WordPress de psychologue ?"
     answer: "Non. WordPress fonctionne avec un thème gratuit. Elementor Pro coûte environ 60 $ par an pour un site, Divi 89 $ par an. Ce sont quelques euros par mois. Le poste qui change la facture, c’est l’hébergement, puis, si quelqu’un construit le site, le devis de création et la maintenance."
   - question: "Combien coûte Simplébo pour un psychologue la première année ?"
@@ -16,7 +16,7 @@ faq:
   - question: "Wix Light inclut-il le référencement et son suivi ?"
     answer: "Wix Light donne des outils pour régler soi-même les titres, les descriptions et le sitemap, et pour relier Google Search Console. Personne n’optimise le site à votre place, et aucun suivi de visibilité n’est inclus. Les statistiques internes du site sont plutôt dans le forfait supérieur. La fiche Google n’est pas dans l’abonnement."
   - question: "Un site à 29 ou 49 €/mois inclut-il la création ?"
-    answer: "Oui. 0 € de frais de construction, puis 29 €/mois (Sérénité, 348 € la première année) ou 49 €/mois (Visibilité & Confiance, 588 € la première année). Les deux incluent hébergement, nom de domaine, CMS, bases SEO, fiche Google et veille de visibilité. L’offre à 49 € ajoute un support prioritaire, un SEO expert, une aide à la rédaction, 3 modifications simples par mois et une modernisation annuelle. Sans engagement de durée."
+    answer: "Oui. 0 € de frais de construction, puis 29 €/mois (Sérénité, 348 € la première année) ou 49 €/mois (Visibilité & Confiance, 588 € la première année). Les deux incluent hébergement, nom de domaine, CMS, bases SEO, fiche Google et veille de visibilité. L’offre à 49 € ajoute un support prioritaire, un SEO expert et du GEO, une aide à la rédaction, 3 modifications simples par mois et une modernisation annuelle. Sans engagement de durée."
 ---
 
 *Temps de lecture : 9 minutes*
@@ -34,7 +34,7 @@ Cet article compare ces trois solutions pour un site vitrine (présentation, con
 > | **WordPress** par un freelance | création 1 000 à 3 000 €, plus les abonnements | la création si le devis la prévoit ; hébergement et maintenance souvent en plus |
 > | **Simplébo** Crédibilité, pack site | 1 344 € TTC | le pack site (chef de projet, hébergement) ; la fiche Google est une option à part sur le configurateur |
 > | **Sérénité** (Nicodev) | 348 € | création, hébergement, bases SEO, fiche Google, veille, 1 modification simple / mois |
-> | **Visibilité & Confiance** (Nicodev) | 588 € | tout Sérénité, plus SEO expert, aide à la rédaction, 3 modifications simples / mois |
+> | **Visibilité & Confiance** (Nicodev) | 588 € | tout Sérénité, plus SEO expert, GEO, aide à la rédaction, 3 modifications simples / mois |
 
 Les prix Simplébo ci-dessus sont le **prix payé** si vous ne récupérez pas la TVA (60 € HT deviennent 72 € TTC, 400 € HT deviennent 480 € TTC). Wix publie un prix affiché. Mes 29 € et 49 € sont le prix de l’abonnement. Le détail des postes est dans la section « Ce qui est inclus ».
 
@@ -58,7 +58,7 @@ Pour un cabinet, le travail utile tient en quelques postes : le site est constru
 | --- | --- | --- | --- | --- | --- |
 | Qui construit le site | vous | vous | un chef de projet | moi | moi |
 | Hébergement et domaine | inclus (domaine offert la 1ʳᵉ année) | à payer à part | inclus | inclus | inclus |
-| Réglages SEO | outils dans l’abonnement, à utiliser vous-même | extensions à installer vous-même | annoncés par Simplébo, détail au devis | bases posées par moi | bases posées + SEO expert |
+| Réglages SEO | outils dans l’abonnement, à utiliser vous-même | extensions à installer vous-même | annoncés par Simplébo, détail au devis | bases posées par moi | bases posées + SEO expert + GEO |
 | Suivi de la visibilité | non inclus dans l’abonnement | non inclus dans l’hébergement | non détaillé sur la page publique du pack site | inclus : je surveille et je corrige | inclus, avec plus d’outils |
 | Fiche Google | non incluse dans l’abonnement | non incluse | option séparée sur le configurateur public | incluse | incluse |
 | Après la mise en ligne | vous | vous, ou un freelance | selon le devis | 1 modification simple / mois | 3 / mois, aide à la rédaction |
@@ -71,7 +71,7 @@ Pour un cabinet, le travail utile tient en quelques postes : le site est constru
 
 **Sérénité** pose les bases SEO au moment de la création, crée ou reprend la fiche Google, et inclut une veille : je surveille la visibilité, je détecte les problèmes et je corrige. Une modification simple par mois est prévue.
 
-**Visibilité & Confiance** reprend cette base et ajoute le SEO expert (davantage d’outils, dont Ahrefs), l’aide à la rédaction, trois modifications simples par mois et une modernisation annuelle. Aucune des deux formules ne garantit une place dans Google.
+**Visibilité & Confiance** reprend cette base et ajoute le SEO expert et le GEO (davantage d’outils, dont Ahrefs ; citabilité Google et IA), l’aide à la rédaction, trois modifications simples par mois et une modernisation annuelle. Aucune des deux formules ne garantit une place dans Google ni une citation dans une IA.
 
 Le prix de Wix Light se compare donc au WordPress fait seul. Sérénité se compare à une prestation où le site, les bases SEO, la fiche Google et le suivi sont déjà dans le mois. Visibilité & Confiance se compare à cette même prestation, avec un travail SEO et éditorial plus poussé.
 
@@ -141,7 +141,7 @@ Les montants ci-dessous sont des factures. La colonne de droite rappelle le pér
 | WordPress, freelance | 1 000 à 3 000 € | hébergement, maintenance souvent en plus | le devis, plus les abonnements | création selon devis |
 | Simplébo Crédibilité | 480 € TTC | 72 € TTC | 1 344 € TTC | pack site ; fiche Google en option |
 | Sérénité | 0 € | 29 € | 348 € | création, bases SEO, fiche Google, veille |
-| Visibilité & Confiance | 0 € | 49 € | 588 € | Sérénité, plus SEO expert et aide à la rédaction |
+| Visibilité & Confiance | 0 € | 49 € | 588 € | Sérénité, plus SEO expert, GEO et aide à la rédaction |
 
 Sur le seul registre de l’outil utilisé seul, Wix Light et un WordPress auto-hébergé sont les factures les plus basses, parce que la création et le suivi restent au cabinet. Sur le registre d’un site construit par quelqu’un, les totaux publics de la première année sont 1 344 € TTC pour le pack site Simplébo Crédibilité, 348 € pour Sérénité et 588 € pour Visibilité & Confiance. Ces trois lignes ne couvrent pas les mêmes postes : la fiche Google est dans Sérénité et Visibilité & Confiance, et elle est une option séparée du pack site Simplébo. Le pack Performance, que Simplébo présente pour Google et les IA, est à 2 424 € TTC la première année, toujours pour le pack site.
 
@@ -151,7 +151,7 @@ Les deux formules partent de **0 € pour construire le site**. L’abonnement e
 
 **Sérénité, 29 €/mois.** La première année, **348 €**. Sur trois ans, **1 044 €**. Création ou refonte, hébergement, nom de domaine, sauvegardes, CMS, bases SEO, fiche Google, bouton de rendez-vous, veille de visibilité, mentions légales, base RGPD, et **une modification simple par mois** (texte, photo, tarif, horaires ou lien).
 
-**Visibilité & Confiance, 49 €/mois.** La première année, **588 €**. Sur trois ans, **1 764 €**. Tout Sérénité, plus un support prioritaire, un SEO expert (davantage d’outils, dont Ahrefs), une aide à la rédaction, **trois modifications simples par mois** et une modernisation annuelle du site. Ce n’est pas une garantie de place dans Google.
+**Visibilité & Confiance, 49 €/mois.** La première année, **588 €**. Sur trois ans, **1 764 €**. Tout Sérénité, plus un support prioritaire, un SEO expert et du GEO (davantage d’outils, dont Ahrefs ; citabilité Google et IA), une aide à la rédaction, **trois modifications simples par mois** et une modernisation annuelle du site. Ce n’est pas une garantie de place dans Google ni de citation dans une IA.
 
 Les deux couvrent le site construit, les textes cadrés avec vous, les bases SEO, la fiche Google et une veille. Wix Light et un WordPress seul laissent ces postes au cabinet : les outils existent, le travail n’est pas fait. Face à Simplébo, la fiche Google est dans les deux formules ; chez eux, elle est un produit à part du pack site.
 

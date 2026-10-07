@@ -286,6 +286,7 @@ Si vous voulez un regard extérieur sur votre fiche, votre site et ces points (s
 
 ## À lire aussi
 
+- [SEO et GEO pour psychologues : être trouvé sur Google et par les IA](/blog/seo-geo-psychologue/)
 - [Psychologue : comment apparaître en premier sur Google dans sa ville](/blog/psychologue-premier-google-ville/)
 - [Psychologue : créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/)
 - [Créer son site avec l’IA : une fausse bonne idée pour un psychologue ?](/blog/creer-site-avec-ia-psychologue/)

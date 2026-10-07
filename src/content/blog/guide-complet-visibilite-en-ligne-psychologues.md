@@ -78,6 +78,8 @@ Une fois la fiche en place, il faut comprendre ce que « bien classé » signifi
 
 → [Psychologue : comment apparaître en premier sur Google dans sa ville ?](/blog/psychologue-premier-google-ville/)
 
+→ [SEO et GEO pour psychologues : être trouvé sur Google et par les IA](/blog/seo-geo-psychologue/)
+
 → [Aperçus IA de Google : ce que ça change pour un psychologue](/blog/apercus-ia-google-psychologue/)
 
 ### 4. Site internet dédié psychologues (structure, éthique, visibilité)

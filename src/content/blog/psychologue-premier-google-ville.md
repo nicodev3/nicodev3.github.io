@@ -236,7 +236,7 @@ Depuis juillet 2026, Google affiche en France des **Aperçus IA** (un résumé e
 
 Le détail — à quoi ressemble l’écran, ce que ça change pour un cabinet, et quoi vérifier sans devenir technicien — est dans [Aperçus IA de Google : ce que ça change pour un psychologue](/blog/apercus-ia-google-psychologue/). Les paragraphes ci-dessous restent le résumé utile dans ce guide local.
 
-Ce n'est pas un nouveau bouton magique. Google le dit clairement : [aucune balise, aucun fichier spécial n'est exigé](https://developers.google.com/search/docs/appearance/ai-features) pour apparaître dans ces fonctionnalités. Il faut un site indexable, dont le contenu peut être affiché en extrait, et une présence cohérente. Les recettes vendues sous le nom de « GEO » (optimiser pour les IA génératives) recyclent le plus souvent… le bon SEO.
+Ce n'est pas un nouveau bouton magique. Google le dit clairement : [aucune balise, aucun fichier spécial n'est exigé](https://developers.google.com/search/docs/appearance/ai-features) pour apparaître dans ces fonctionnalités. Il faut un site indexable, dont le contenu peut être affiché en extrait, et une présence cohérente. Les recettes vendues sous le nom de « GEO » (optimiser pour les IA génératives) recyclent le plus souvent… le bon SEO. Le cadre utile — SEO + GEO pour un cabinet, sans promesse ChatGPT — est détaillé dans [SEO et GEO pour psychologues](/blog/seo-geo-psychologue/).
 
 ### À quoi ressemble la page de résultats maintenant
 

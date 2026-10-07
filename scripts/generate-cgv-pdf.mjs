@@ -106,7 +106,7 @@ const html = `<!DOCTYPE html>
       <strong>Offre « Sérénité » (29 € TTC / mois)</strong> : site professionnel, interface d'administration (CMS), bases SEO, fiche Google, veille de visibilité (détection et correction des problèmes), accompagnement à la rédaction initiale, hébergement et nom de domaine gérés, sécurité et sauvegardes, une modification simple de contenu par mois dans les conditions précisées sur le site.
     </li>
     <li>
-      <strong>Offre « Visibilité &amp; Confiance » (49 € TTC / mois)</strong> : inclut les éléments de l'offre Sérénité, avec un support prioritaire, un SEO expert (outils de suivi supplémentaires), une aide à la rédaction (relecture, reformulation, suggestions de contenus), trois modifications simples par mois et une modernisation annuelle, telles que décrites sur le site.
+      <strong>Offre « Visibilité &amp; Confiance » (49 € TTC / mois)</strong> : inclut les éléments de l'offre Sérénité, avec un support prioritaire, un SEO expert et du GEO (outils de suivi supplémentaires, citabilité pour Google et les IA, sans garantie de citation), une aide à la rédaction (relecture, reformulation, suggestions de contenus), trois modifications simples par mois et une modernisation annuelle, telles que décrites sur le site.
     </li>
   </ul>
   <p>Les prestations hors périmètre décrit (refonte structurelle majeure, création de fonctionnalités sur mesure non prévues au brief, etc.) font l'objet d'un devis séparé ou d'une facturation au temps passé dans les conditions de l'article 6.</p>
