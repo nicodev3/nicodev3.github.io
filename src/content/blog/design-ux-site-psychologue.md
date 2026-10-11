@@ -1,14 +1,16 @@
 ---
-title: "Créer son site de psychologue : les règles de design et d’UX"
-seoTitle: "Site de psychologue : design et règles UX à respecter"
-description: "Lisibilité, navigation, mobile, confiance : les règles de design et d’UX pour créer soi-même un site de psychologue professionnel."
+title: "Créer son site de psychologue : design, UX et référencement expliqués"
+seoTitle: "Créer un site de psychologue : design, UX et SEO"
+description: "Un guide simple pour créer son premier site de psychologue : design, expérience utilisateur (UX), référencement naturel (SEO), nom de domaine et version mobile."
 pubDate: "2026-10-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-fait-maison-psychologue.webp"
 tags: ["psychologue", "site web cabinet", "cadre déontologique"]
 faq:
   - question: "Quelles sont les règles de design essentielles pour un site de psychologue ?"
-    answer: "Le site doit permettre de comprendre rapidement qui consulte, pour qui, où et comment prendre contact. Une hiérarchie visuelle simple, une typographie lisible, un contraste suffisant, des pages cohérentes et une version mobile soignée sont les bases."
+    answer: "Le site doit permettre de comprendre rapidement qui vous êtes, qui vous recevez, où vous consultez et comment vous contacter. Des titres faciles à repérer, des textes lisibles, des couleurs assez contrastées et des pages adaptées au téléphone sont de bonnes bases."
+  - question: "Que signifie UX pour un site internet ?"
+    answer: "UX signifie expérience utilisateur. C’est la facilité avec laquelle une personne comprend le site, trouve l’information qu’elle cherche et réalise une action, comme appeler ou prendre rendez-vous."
   - question: "Un site builder peut-il créer automatiquement un site professionnel pour un psychologue ?"
     answer: "Les site builders comme Wix, Squarespace ou Webflow fournissent des modèles et des outils de mise en page, mais ils ne choisissent pas l’architecture, les informations prioritaires ni le parcours des visiteurs. Ces décisions restent à la charge du psychologue."
   - question: "Un site Wix garantit-il d’être visible sur Google ?"
@@ -21,13 +23,17 @@ faq:
     answer: "Pas systématiquement. Un site simple peut suffire si vos besoins sont limités et si vous avez du temps pour le maintenir. Un accompagnement devient utile quand plusieurs lieux, publics ou parcours doivent rester cohérents et faciles à comprendre sur tous les écrans."
 ---
 
-*Temps de lecture : 9 minutes*
+*Temps de lecture : 10 minutes*
 
-Un psychologue décide de créer son site. Il choisit un site builder — Wix, Squarespace, Webflow, WordPress.com ou un autre — puis sélectionne un modèle, ajoute une photo, quelques textes et un bouton de contact. Quelques soirées plus tard, le site est en ligne. Pourtant, le rendu paraît chargé, les informations essentielles sont difficiles à repérer et l’on ne sait pas immédiatement quoi améliorer.
+Un psychologue décide de créer son site. Il choisit un *site builder*, c’est-à-dire un outil en ligne pour fabriquer un site sans écrire de code : Wix, Squarespace, Webflow, WordPress.com ou un autre. Il sélectionne un modèle, ajoute une photo, quelques textes et un bouton de contact. Quelques soirées plus tard, le site est en ligne. Pourtant, le rendu paraît chargé, les informations essentielles sont difficiles à repérer et l’on ne sait pas immédiatement quoi améliorer.
 
 Cette déception est fréquente. Elle ne signifie pas que les site builders sont inutiles. Ces outils rendent la publication accessible et proposent des modèles, des blocs et des réglages visuels. Mais publier une page et concevoir un site clair sont deux travaux différents. **L’outil fournit des éléments ; il ne décide pas à votre place de ce qui doit compter, de l’ordre des informations ni de la manière dont une personne va s’orienter.**
 
-Pour un psychologue, le design n’est pas une couche décorative. C’est une façon d’aider les visiteurs à comprendre qui vous êtes, à vérifier que votre cadre leur correspond et à trouver la prochaine étape sans effort inutile.
+Le **design** ne désigne pas seulement les couleurs ou les jolies images. C’est la manière dont les éléments d’un site sont organisés et présentés : titres, textes, espaces, couleurs, photos et boutons. Un design réussi aide à comprendre l’information.
+
+L’**UX**, abréviation de *User Experience* (expérience utilisateur), désigne ce que vit une personne lorsqu’elle consulte votre site. Trouve-t-elle facilement les réponses à ses questions ? Comprend-elle où cliquer ? Peut-elle vous contacter sans chercher longtemps ? Si elle hésite ou se perd, l’expérience est compliquée, même si le site vous semble clair parce que vous le connaissez déjà.
+
+Le **SEO**, ou référencement naturel, regroupe les améliorations qui aident les moteurs de recherche comme Google à comprendre vos pages et à les proposer aux personnes qui cherchent un psychologue. Par exemple, si vous exercez à Rennes, votre site doit dire clairement que vous êtes psychologue à Rennes et expliquer les consultations que vous proposez. Design, UX et SEO se croisent : une page claire pour les visiteurs est plus facile à organiser autour d’un sujet précis, mais aucun choix visuel ni réglage ne garantit une place dans les résultats.
 
 ## Commencer par les questions des visiteurs
 
@@ -39,21 +45,23 @@ Avant de choisir une couleur ou un modèle, listez les questions auxquelles le s
 - combien coûte une séance, si cette information est communiquée ;
 - comment poser une question ou prendre rendez-vous.
 
-Un exercice utile consiste à demander à une personne extérieure de comprendre, depuis un téléphone, qui vous recevez et comment vous contacter. Observez où elle hésite et quelles informations lui manquent. Ce petit test révèle souvent plus qu’une discussion abstraite sur le « beau » ou le « moderne ».
+Un exercice utile consiste à demander à une personne extérieure de trouver ces informations sur votre site, depuis un téléphone. Ne lui expliquez pas où elles se trouvent. Observez où elle hésite et quelles informations lui manquent. C’est un petit test d’UX, et il révèle souvent davantage qu’une discussion abstraite sur le « beau » ou le « moderne ».
 
 ## Donner une hiérarchie visible aux informations
 
-Sur la page d’accueil, les éléments n’ont pas tous la même importance. Votre titre, votre pratique, les publics reçus, votre localisation et un accès clair aux informations pratiques doivent se repérer rapidement. Les actualités ou les explications longues peuvent venir ensuite.
+Sur la page d’accueil, les éléments n’ont pas tous la même importance. Votre titre, votre pratique, les publics reçus, votre localisation et un accès clair aux informations pratiques doivent se repérer rapidement. Les actualités ou les explications longues peuvent venir ensuite. C’est ce qu’on appelle la **hiérarchie visuelle** : la taille des titres, leur position et l’espace autour d’eux indiquent au lecteur ce qu’il doit regarder en premier.
 
-Cette hiérarchie se construit avec des titres explicites, des espaces, des tailles de texte et des contrastes cohérents. Si tout est en grand, en gras ou dans une couleur vive, rien ne ressort. Si les informations importantes sont enfouies au milieu de paragraphes, elles sont techniquement présentes mais difficiles à trouver.
+Cette hiérarchie se construit avec des titres explicites, des espaces et des tailles de texte cohérentes. Le **contraste**, c’est la différence de luminosité entre le texte et son arrière-plan. Un texte gris pâle sur fond blanc peut sembler délicat, mais il devient difficile à lire. Si tout est en grand, en gras ou dans une couleur vive, rien ne ressort. Si les informations importantes sont enfouies au milieu de paragraphes, elles sont présentes mais difficiles à trouver.
 
-Chaque page devrait aussi avoir une fonction identifiable. La page d’accueil présente votre pratique et oriente. Une page de présentation décrit votre parcours et votre approche. Une ou plusieurs pages de consultation détaillent les cadres ou motifs que vous souhaitez présenter. Une page pratique rassemble accès, tarifs ou contact. Cette organisation évite de faire tenir tout le contenu dans une longue page unique ou de multiplier des pages redondantes.
+Chaque page devrait aussi avoir une fonction identifiable. La page d’accueil présente votre pratique et oriente. Une page de présentation décrit votre parcours et votre approche. Une ou plusieurs pages de consultation détaillent les cadres ou motifs que vous souhaitez présenter. Une page pratique rassemble accès, tarifs ou contact. Cette organisation évite de faire tenir tout le contenu dans une longue page unique ou de multiplier des pages redondantes. Pour le SEO, elle donne aussi à chaque page un sujet principal, au lieu de demander à une seule page de répondre à toutes les recherches possibles.
 
 ## Un site publié n’est pas forcément visible sur Internet
 
-Un site builder permet de mettre un site en ligne ; il ne garantit pas que des patients le trouveront sur Google. Il n’existe pas de bouton « publier et apparaître en première page ». Le référencement dépend notamment des informations données par les pages, de leur utilité, de la qualité technique du site, de son adéquation avec les recherches locales et des autres sites qui répondent aux mêmes besoins. Cela demande du travail après la mise en ligne et parfois plusieurs mois avant de mesurer une évolution.
+Un site builder permet de mettre un site en ligne ; il ne garantit pas que des patients le trouveront sur Google. Il n’existe pas de bouton « publier et apparaître en première page ». Google doit comprendre le sujet du site et décider quelles pages sont utiles pour chaque recherche. Cela dépend des informations présentes sur les pages, de leur clarté, du bon fonctionnement du site, de la ville concernée et des autres sites qui répondent aux mêmes besoins. Ce travail continue après la mise en ligne et les résultats peuvent prendre plusieurs mois.
 
-Les outils de référencement proposés par les plateformes aident à régler certains éléments, comme les titres des pages ou les descriptions. Ils ne remplacent ni le choix des sujets et des pages, ni la rédaction, ni le travail de visibilité locale. Un site peut donc être bien présenté et rester peu visible ; à l’inverse, apparaître dans Google ne garantit pas que son design aide les visiteurs à comprendre votre pratique.
+Pour commencer, donnez à chaque page un titre qui décrit clairement son contenu. Sur la page d’accueil, indiquez naturellement votre titre professionnel, votre ville ou votre secteur et votre activité, si cela correspond à votre situation. Écrivez d’abord pour les personnes : répéter « psychologue à [ville] » dans chaque phrase rend le texte artificiel et n’est pas une stratégie durable.
+
+Les outils de référencement proposés par les plateformes aident à régler certains éléments, comme le titre et le petit résumé qui peuvent apparaître dans Google. Ils ne choisissent pas les sujets de vos pages, n’écrivent pas les textes à votre place et ne font pas connaître votre cabinet localement. Un site peut donc être bien présenté et rester peu visible ; à l’inverse, apparaître dans Google ne garantit pas que son design aide les visiteurs à comprendre votre pratique.
 
 Le nom de domaine compte aussi pour présenter une identité professionnelle. Avec la version gratuite de Wix, l’adresse reste de la forme `nomdusite.wixsite.com/adressedusite` : ce n’est pas un domaine personnalisé comme `cabinet-nom.fr`. Wix indique qu’il faut une formule de site permettant la connexion d’un domaine personnalisé, ainsi que posséder ou acheter ce domaine. [Les conditions exactes sont à vérifier sur l’aide Wix](https://support.wix.com/en/article/keeping-the-free-wix-url-4956247), car les formules peuvent évoluer. Un domaine personnalisé ne garantit pas un meilleur classement dans Google à lui seul, mais il est plus simple à retenir et à communiquer.
 
@@ -61,7 +69,7 @@ Un domaine à votre nom est plus facile à communiquer sur une carte, une fiche 
 
 ## Garder une navigation courte et prévisible
 
-Le menu principal doit reprendre les mots que les visiteurs comprennent : « Mon approche », « Consultations », « À propos », « Accès et contact ». Des intitulés originaux peuvent sembler plus personnels, mais ils ralentissent la compréhension s’ils ne disent pas où ils mènent.
+La **navigation**, c’est le menu et les liens qui permettent de passer d’une page à l’autre. Le menu principal doit reprendre les mots que les visiteurs comprennent : « Mon approche », « Consultations », « À propos », « Accès et contact ». Des intitulés originaux peuvent sembler plus personnels, mais ils ralentissent la compréhension s’ils ne disent pas où ils mènent.
 
 Si vous exercez dans plusieurs lieux ou proposez différents cadres de consultation, rendez ces choix accessibles depuis la navigation. Présentez les informations dans un ordre stable : titre et approche, personnes reçues, lieu et modalités, tarifs le cas échéant, puis moyen de vous contacter. La cohérence facilite la lecture sans effacer les particularités de votre pratique.
 
@@ -73,11 +81,11 @@ Une grande partie des visiteurs découvrira le site sur son téléphone. Il ne s
 
 Les problèmes fréquents sont concrets : texte minuscule, lignes trop longues, colonnes comprimées, titres coupés, images qui prennent tout l’écran, bouton de contact caché ou fenêtre qui recouvre le contenu. Avec un site builder, le rendu ordinateur peut être très différent du rendu mobile ; chaque page doit être inspectée dans les deux formats.
 
-La page doit également rester compréhensible lorsque l’on zoome ou que l’on utilise des outils d’assistance. Un contraste suffisant, des titres dans le bon ordre et des liens explicites aident tout le monde, y compris les personnes fatiguées, pressées ou peu à l’aise avec le numérique.
+La page doit également rester compréhensible lorsque l’on zoome ou que l’on utilise des outils d’assistance. Un contraste suffisant, des titres dans le bon ordre et des liens explicites aident tout le monde, y compris les personnes fatiguées, pressées ou peu à l’aise avec le numérique. Dans les réglages du site builder, vérifiez aussi la version mobile avec l’aperçu dédié : un modèle ne s’adapte pas toujours parfaitement tout seul.
 
 ## Choisir une identité visuelle sobre et cohérente
 
-Un site professionnel n’a pas besoin d’accumuler les effets pour paraître singulier. Deux ou trois couleurs bien choisies, une ou deux polices, un style d’image stable et des espacements réguliers suffisent souvent.
+Un site professionnel n’a pas besoin d’accumuler les effets pour paraître singulier. Deux ou trois couleurs bien choisies, une ou deux polices, un style d’image stable et des espacements réguliers suffisent souvent. Choisissez une couleur foncée pour les textes, un fond clair et une seule couleur d’accent pour les liens ou boutons. Gardez les mêmes choix sur toutes les pages : ainsi, le visiteur reconnaît les titres et les actions importantes.
 
 Cette cohérence doit aussi se retrouver entre vos pages. Gardez une structure de présentation stable et laissez la place à une photo ou à quelques paragraphes personnels là où cela aide à comprendre votre pratique. Cette continuité donne une impression de soin plus forte qu’un grand nombre d’éléments décoratifs.
 
@@ -93,11 +101,20 @@ Des paragraphes courts, des listes pour les informations pratiques et des titres
 
 ## Pourquoi l’outil ne fait pas le travail de design
 
-Les site builders — Wix, Squarespace, Webflow, WordPress.com et d’autres — donnent accès à des gabarits, des couleurs, des blocs et des réglages mobiles. Cela permet de construire soi-même un site fonctionnel. Mais il reste à faire les choix qui déterminent son utilité : quelles pages créer, quelles informations montrer d’abord, comment écrire les appels à l’action, quelles images utiliser, et comment tester l’ensemble sur téléphone. Avec WordPress.org, la logique est différente : le logiciel est libre, mais il faut aussi choisir et configurer l’hébergement et le thème, ou faire appel à un prestataire.
+Les site builders — Wix, Squarespace, Webflow, WordPress.com et d’autres — donnent accès à des modèles, des couleurs, des blocs et des réglages mobiles. Cela permet de construire soi-même un site fonctionnel. Mais il reste à faire les choix qui déterminent son utilité : quelles pages créer, quelles informations montrer d’abord, comment écrire les boutons, quelles images utiliser et comment tester l’ensemble sur téléphone. Avec WordPress.org, la logique est différente : il faut aussi choisir un hébergeur (l’entreprise qui garde les fichiers du site et le rend accessible sur Internet) et un thème (la base de sa présentation), ou faire appel à un prestataire.
 
 Créer son site ajoute une dimension de travail souvent sous-estimée : rédiger les contenus, choisir les images, apprendre les réglages et arbitrer entre ses propres préférences et ce qui aide vraiment le visiteur. On est à la fois la personne qui connaît sa pratique et celle qui doit prendre du recul sur la façon de la présenter. Sans regard extérieur, il est difficile de repérer les informations manquantes ou les choix visuels qui nuisent à la lecture.
 
-Le travail ne s’arrête pas à la mise en ligne. Un départ, une nouvelle adresse, un changement de tarif ou une indisponibilité doivent être répercutés partout. Les liens, formulaires, horaires et affichages mobiles méritent également d’être vérifiés de temps en temps. Un site est un outil vivant ; sa cohérence dépend aussi de la façon dont on l’entretient.
+Avant de publier, faites cette vérification simple :
+
+- en quelques secondes, comprend-on que vous êtes psychologue, où vous consultez et qui vous recevez ?
+- peut-on trouver les tarifs, les modalités et le contact sans fouiller ?
+- les textes sont-ils faciles à lire sur téléphone ?
+- chaque bouton mène-t-il bien à l’endroit annoncé ?
+- l’adresse du site est-elle un nom de domaine que vous pourrez garder et communiquer ?
+- avez-vous un plan pour être trouvé localement, au-delà de la simple mise en ligne ?
+
+Le travail ne s’arrête pas à la mise en ligne. Un changement d’adresse, de tarif ou de disponibilité doit être répercuté sur le site. Les liens, formulaires, horaires et affichages sur téléphone méritent également d’être vérifiés de temps en temps. Un site est un outil vivant ; il faut le tenir à jour.
 
 ## Faire soi-même, ou se faire accompagner ?
 
