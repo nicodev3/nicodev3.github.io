@@ -1,18 +1,18 @@
 ---
 title: "Créer son site de psychologue : design, UX et référencement expliqués"
 seoTitle: "Créer un site de psychologue : design, UX et SEO"
-description: "Un guide simple pour créer son premier site de psychologue : design, expérience utilisateur (UX), référencement naturel (SEO), nom de domaine et version mobile."
+description: "Les erreurs fréquentes de design, d’expérience utilisateur (UX) et de référencement sur les sites de psychologues créés soi-même avec un site builder."
 pubDate: "2026-10-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-fait-maison-psychologue.webp"
 tags: ["psychologue", "site web cabinet", "cadre déontologique"]
 faq:
   - question: "Quelles sont les règles de design essentielles pour un site de psychologue ?"
-    answer: "Le site doit permettre de comprendre rapidement qui vous êtes, qui vous recevez, où vous consultez et comment vous contacter. Des titres faciles à repérer, des textes lisibles, des couleurs assez contrastées et des pages adaptées au téléphone sont de bonnes bases."
+    answer: "Un site doit permettre de comprendre rapidement qui vous êtes, qui vous recevez, où vous consultez et comment vous contacter. Des titres faciles à repérer, des textes lisibles, des couleurs assez contrastées et des pages adaptées au téléphone sont de bonnes bases. Cet article présente des erreurs fréquentes et des repères pour les éviter."
   - question: "Que signifie UX pour un site internet ?"
     answer: "UX signifie expérience utilisateur. C’est la facilité avec laquelle une personne comprend le site, trouve l’information qu’elle cherche et réalise une action, comme appeler ou prendre rendez-vous."
   - question: "Un site builder peut-il créer automatiquement un site professionnel pour un psychologue ?"
-    answer: "Les site builders comme Wix, Squarespace ou Webflow fournissent des modèles et des outils de mise en page, mais ils ne choisissent pas l’architecture, les informations prioritaires ni le parcours des visiteurs. Ces décisions restent à la charge du psychologue."
+    answer: "Les site builders comme Wix, Squarespace ou Webflow fournissent des modèles et des outils de mise en page, mais ils ne choisissent pas l’architecture, les informations prioritaires ni le parcours des visiteurs. Ces décisions restent à la charge du psychologue, et les erreurs de hiérarchie ou de navigation sont fréquentes lorsqu’on débute."
   - question: "Un site Wix garantit-il d’être visible sur Google ?"
     answer: "Non. Wix permet de publier un site et propose des outils de référencement, mais aucun site builder ne garantit une place dans les résultats de Google. La visibilité dépend notamment du contenu, de la structure du site, de sa pertinence locale, de la concurrence et du temps."
   - question: "Un site Wix gratuit utilise-t-il mon propre nom de domaine ?"
@@ -25,7 +25,7 @@ faq:
 
 *Temps de lecture : 10 minutes*
 
-Un psychologue décide de créer son site. Il choisit un *site builder*, c’est-à-dire un outil en ligne pour fabriquer un site sans écrire de code : Wix, Squarespace, Webflow, WordPress.com ou un autre. Il sélectionne un modèle, ajoute une photo, quelques textes et un bouton de contact. Quelques soirées plus tard, le site est en ligne. Pourtant, le rendu paraît chargé, les informations essentielles sont difficiles à repérer et l’on ne sait pas immédiatement quoi améliorer.
+Quand un psychologue crée lui-même son site avec un *site builder* — Wix, Squarespace, Webflow, WordPress.com ou un autre —, le mettre en ligne peut sembler simple. Mais certains défauts apparaissent souvent après coup : un texte difficile à lire sur téléphone, une navigation confuse, des informations importantes peu visibles ou une page qui reste introuvable sur Google. Cet article examine ces erreurs courantes et explique pourquoi choisir un modèle ne suffit pas à concevoir un site clair.
 
 Cette déception est fréquente. Elle ne signifie pas que les site builders sont inutiles. Ces outils rendent la publication accessible et proposent des modèles, des blocs et des réglages visuels. Mais publier une page et concevoir un site clair sont deux travaux différents. **L’outil fournit des éléments ; il ne décide pas à votre place de ce qui doit compter, de l’ordre des informations ni de la manière dont une personne va s’orienter.**
 
