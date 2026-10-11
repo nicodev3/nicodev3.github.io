@@ -81,7 +81,7 @@ Une grande partie des visiteurs découvrira le site sur son téléphone. Il ne s
 
 Les problèmes fréquents sont concrets : texte minuscule, lignes trop longues, colonnes comprimées, titres coupés, images qui prennent tout l’écran, bouton de contact caché ou fenêtre qui recouvre le contenu. Avec un site builder, le rendu ordinateur peut être très différent du rendu mobile ; chaque page doit être inspectée dans les deux formats.
 
-![Trois exemples de problèmes sur téléphone : un titre coupé par le bord de l’écran, une page trop large qui impose un défilement horizontal, puis un texte trop petit et trop pâle.](../../assets/images/blog/erreurs-ux-mobile-psychologue.webp)
+![Photographie de trois vrais smartphones affichant des sites fictifs de psychologue : un titre coupé, une page trop large avec défilement horizontal et un texte minuscule et pâle.](../../assets/images/blog/erreurs-ux-mobile-psychologue.webp)
 
 *De gauche à droite : un titre qui dépasse, une page qui oblige à faire défiler l’écran sur le côté, et un texte trop petit et peu contrasté.*
 
