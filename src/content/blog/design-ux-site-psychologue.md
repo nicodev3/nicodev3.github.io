@@ -103,6 +103,8 @@ Des paragraphes courts, des listes pour les informations pratiques et des titres
 
 Les site builders — Wix, Squarespace, Webflow, WordPress.com et d’autres — donnent accès à des modèles, des couleurs, des blocs et des réglages mobiles. Cela permet de construire soi-même un site fonctionnel. Mais il reste à faire les choix qui déterminent son utilité : quelles pages créer, quelles informations montrer d’abord, comment écrire les boutons, quelles images utiliser et comment tester l’ensemble sur téléphone. Avec WordPress.org, la logique est différente : il faut aussi choisir un hébergeur (l’entreprise qui garde les fichiers du site et le rend accessible sur Internet) et un thème (la base de sa présentation), ou faire appel à un prestataire.
 
+Si vous préférez ne pas assembler seul tous ces éléments, je propose un accompagnement dédié aux psychologues. [Voir comment se déroule la création d’un site](/creation-site-internet-psychologue/).
+
 Créer son site ajoute une dimension de travail souvent sous-estimée : rédiger les contenus, choisir les images, apprendre les réglages et arbitrer entre ses propres préférences et ce qui aide vraiment le visiteur. On est à la fois la personne qui connaît sa pratique et celle qui doit prendre du recul sur la façon de la présenter. Sans regard extérieur, il est difficile de repérer les informations manquantes ou les choix visuels qui nuisent à la lecture.
 
 Avant de publier, faites cette vérification simple :
@@ -124,4 +126,6 @@ Un accompagnement devient utile quand le site doit soutenir une installation, pr
 
 L’objectif n’est pas de produire un site spectaculaire. C’est de permettre à une personne qui ne vous connaît pas de comprendre, sans effort superflu, qui vous êtes et comment entrer en contact avec vous. Mais il faut aussi penser à la suite : un site publiable n’est pas automatiquement trouvable, et une adresse gratuite sur une plateforme n’est pas votre propre domaine. Design, contenus, référencement et choix du nom de domaine se répondent ; les traiter ensemble demande davantage que de remplir un modèle. C’est précisément ce qui rend le projet exigeant : il faut faire des choix, les tester et parfois renoncer à des éléments auxquels on tenait.
 
-Pour aller plus loin, vous pouvez lire [l’analyse de 17 sites de psychologues](/blog/analyse-17-sites-psychologues/), l’article sur [les limites du site fait soi-même](/blog/faire-son-site-soi-meme-psychologue/) ou découvrir l’[accompagnement de création de site pour psychologue](/creation-site-internet-psychologue/).
+Si vous souhaitez comparer les formules et ce qu’elles comprennent, [consultez les tarifs](/tarifs/).
+
+Pour aller plus loin, vous pouvez lire [l’analyse de 17 sites de psychologues](/blog/analyse-17-sites-psychologues/) ou l’article sur [les limites du site fait soi-même](/blog/faire-son-site-soi-meme-psychologue/).
