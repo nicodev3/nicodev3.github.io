@@ -81,6 +81,10 @@ Une grande partie des visiteurs découvrira le site sur son téléphone. Il ne s
 
 Les problèmes fréquents sont concrets : texte minuscule, lignes trop longues, colonnes comprimées, titres coupés, images qui prennent tout l’écran, bouton de contact caché ou fenêtre qui recouvre le contenu. Avec un site builder, le rendu ordinateur peut être très différent du rendu mobile ; chaque page doit être inspectée dans les deux formats.
 
+![Trois exemples de problèmes sur téléphone : un titre coupé par le bord de l’écran, une page trop large qui impose un défilement horizontal, puis un texte trop petit et trop pâle.](../../assets/images/blog/erreurs-ux-mobile-psychologue.webp)
+
+*De gauche à droite : un titre qui dépasse, une page qui oblige à faire défiler l’écran sur le côté, et un texte trop petit et peu contrasté.*
+
 La page doit également rester compréhensible lorsque l’on zoome ou que l’on utilise des outils d’assistance. Un contraste suffisant, des titres dans le bon ordre et des liens explicites aident tout le monde, y compris les personnes fatiguées, pressées ou peu à l’aise avec le numérique. Dans les réglages du site builder, vérifiez aussi la version mobile avec l’aperçu dédié : un modèle ne s’adapte pas toujours parfaitement tout seul.
 
 ## Choisir une identité visuelle sobre et cohérente
