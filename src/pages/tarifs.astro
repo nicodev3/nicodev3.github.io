@@ -30,23 +30,19 @@ const breadcrumbSchema = {
 };
 
 const platformCons = [
-	'15-40€/mois d’abonnement, souvent avec la création et les réglages à votre charge',
-	'Vous devez tout faire vous-même',
-	'Mises en page génériques, peu personnalisées',
-	"Pas d'optimisation pour Google",
-	'Support limité, modifications à votre charge',
-	"Pas d'intégration du widget de prise de RDV"
+	'L’outil fournit une base ; vous choisissez la structure, préparez les textes et construisez les pages',
+	'Le temps de conception, les réglages et le suivi restent à votre charge',
+	'Selon la solution, il faut aussi prévoir abonnement ou hébergement, domaine, thèmes et extensions éventuels',
+	'Vous gardez la main sur le site et pouvez avancer à votre rythme',
 ];
 
 const servicePros = [
-	'0 € de construction, puis 29 ou 49 €/mois tout inclus',
-	'Le site vous appartient et peut être transféré ailleurs',
-	"Je m'occupe de tout pour vous",
-	'Échange direct avec le développeur qui réalise vraiment votre site',
-	'Base professionnelle + adaptation attentive à votre pratique',
-	'Bases SEO, fiche Google et CMS inclus dès 29 €/mois',
-	'Modifications de contenu selon la formule (1 ou 3 par mois)',
-	'Intégration du widget de prise de RDV incluse'
+	'Je cadre les pages et vous guide pour faire émerger les textes de votre pratique',
+	'Je réalise le site et prends en charge sa mise en ligne et son suivi technique',
+	'0 € de frais de construction, puis 29 ou 49 €/mois selon la formule',
+	'Hébergement, domaine, maintenance, bases SEO, fiche Google et bouton de rendez-vous inclus',
+	'Vous échangez directement avec le développeur qui réalise votre site',
+	'Le site et ses contenus vous appartiennent et peuvent être transférés ailleurs',
 ];
 
 const tarifsFaqItems = [
@@ -338,17 +334,20 @@ const tarifsFaqItems = [
 		</div>
 	</section>
 
-	<!-- Complément : comparaison avec les plateformes (les formules détaillées sont dans OffersSection ci-dessus) -->
+	<!-- Comparaison entre création en autonomie et prestation accompagnée -->
 	<section id="comparaison-plateformes" class="section-y scroll-mt-28 bg-white">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="bg-surface p-8 rounded-lg border border-border">
 				<h3 class="text-2xl font-bold text-center text-foreground mb-8">
-					Pourquoi choisir mes services plutôt qu'une plateforme ?
+					Créer votre site vous-même ou en déléguer la réalisation ?
 				</h3>
+				<p class="mx-auto mb-8 max-w-3xl text-center leading-relaxed text-muted">
+					Les site builders et les différentes versions de WordPress fournissent des outils pour créer un site. Ils peuvent convenir si vous souhaitez le construire et le faire évoluer vous-même. Avec Nicodev, vous déléguez la conception et la technique, avec un accompagnement adapté à votre pratique.
+				</p>
 
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
 					<div>
-						<h4 class="text-lg font-semibold text-foreground mb-4">Avec Wix, Squarespace, etc. :</h4>
+						<h4 class="text-lg font-semibold text-foreground mb-4">En autonomie (site builder, WordPress…) :</h4>
 						<ul class="space-y-3">
 							{platformCons.map((item) => (
 								<li class="flex items-start gap-3">
@@ -404,18 +403,12 @@ const tarifsFaqItems = [
 				</div>
 
 				<div class="bg-background p-6 rounded-lg border border-border">
-					<h4 class="font-semibold text-foreground mb-3">Ce que coûte vraiment un site qu'on gère soi-même :</h4>
+					<h4 class="font-semibold text-foreground mb-3">Le coût d’un site DIY, c’est aussi le temps que vous y consacrez</h4>
 					<p class="text-muted">
-						Générer un site ne prend plus des heures&nbsp;: avec une plateforme ou un assistant, une
-						première version sort en une soirée. Ce qui prend du temps, c'est l'après — décider quoi
-						écrire de sa pratique, tenir la fiche Google à jour, corriger ce qui casse, réindexer après
-						un changement d'adresse ou d'honoraires, et savoir si ce qui est en ligne est encore juste.
+						Le budget d’un site créé avec un outil dépend de la solution choisie : abonnement ou hébergement, nom de domaine et éventuelles options. À cela s’ajoute le temps pour choisir la structure, écrire les pages, régler le site, puis le tenir à jour. Avec WordPress auto-hébergé, il faut aussi choisir un hébergeur et suivre les mises à jour. Le périmètre et les coûts varient d’une solution à l’autre.
 					</p>
 					<p class="text-muted mt-3">
-						C'est ce poste-là que l'abonnement fait disparaître de votre charge mentale. Au-delà du prix,
-						il y a aussi la qualité de suivi&nbsp;: entre une logique industrielle et une approche
-						artisanale, la différence se joue souvent dans l’attention portée au détail, à votre ton et à
-						la cohérence du site.
+						Nicodev s’adresse aux personnes qui préfèrent déléguer ce travail. L’abonnement regroupe la réalisation du site et les services récurrents de la formule choisie, pour un budget mensuel connu. Si vous aimez créer et gérer votre site, une solution DIY peut tout à fait vous convenir.
 					</p>
 				</div>
 			</div>
