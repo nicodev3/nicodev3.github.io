@@ -11,7 +11,18 @@ import {
 	WHATSAPP_DISPLAY,
 	WHATSAPP_PHONE_E164
 } from '../data/contact';
+import PortfolioCarousel from '../components/PortfolioCarousel.astro';
+import { portfolioProjects } from '../data/portfolio-projects';
 import psychomotricienneImage from '../assets/images/psychomotricienne-2.webp';
+
+const isPsychomot = (profession: string) => profession.startsWith('psychomotricien');
+/** Pierre Dalarun est aussi psychomotricien : il est mis en avant juste après le site de psychomotricité. */
+const isDalarun = (p: { caseStudySlug?: string }) => p.caseStudySlug === 'pierre-dalarun';
+const carouselProjects = [
+	...portfolioProjects.filter((p) => isPsychomot(p.profession)),
+	...portfolioProjects.filter(isDalarun),
+	...portfolioProjects.filter((p) => !isPsychomot(p.profession) && !isDalarun(p)).slice(0, 6),
+];
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const pageUrl = new URL('/site-internet-psychomotricien/', baseUrl).href;
@@ -241,6 +252,13 @@ const breadcrumbSchema = {
 			</div>
 		</div>
 	</section>
+
+	<PortfolioCarousel
+		headingId="psychomotricien-realisations-heading"
+		title="Des sites réalisés pour des psychomotriciens"
+		description="Le site d’une psychomotricienne en Suisse romande, puis d’autres réalisations pour des psychologues et psychothérapeutes, avec la même méthode."
+		projects={carouselProjects}
+	/>
 
 	<section class="section-y border-b border-border bg-white">
 		<div class="shell-layout">

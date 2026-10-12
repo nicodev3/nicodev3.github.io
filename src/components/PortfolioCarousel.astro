@@ -1,0 +1,124 @@
+---
+import { Image } from 'astro:assets';
+import { ArrowUpRight, ChevronLeft, ChevronRight } from '@lucide/astro';
+import { formatPortfolioProjectMeta, type PortfolioProject } from '../data/portfolio-projects';
+
+interface Props {
+	projects: PortfolioProject[];
+	eyebrow?: string;
+	title: string;
+	description?: string;
+	headingId: string;
+}
+
+const { projects, eyebrow = 'Réalisations', title, description, headingId } = Astro.props;
+---
+
+<section
+	class="section-y border-b border-border bg-surface"
+	aria-labelledby={headingId}
+	data-portfolio-carousel
+>
+	<div class="shell-layout">
+		<header class="mx-auto max-w-3xl text-center">
+			<p class="type-eyebrow mb-3 text-muted">{eyebrow}</p>
+			<h2 id={headingId} class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">{title}</h2>
+			{description && <p class="mt-3 text-base leading-relaxed text-muted sm:text-lg">{description}</p>}
+		</header>
+
+		<div class="relative mt-10">
+			<ul
+				class="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+				data-carousel-track
+				tabindex="0"
+				aria-label="Sites réalisés"
+			>
+				{
+					projects.map((project) => (
+						<li class="w-[85%] shrink-0 snap-start sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]">
+							<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm">
+								<a
+									href={project.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="block overflow-hidden border-b border-border bg-surface"
+									aria-label={`Visiter le site de ${project.title} — nouvel onglet`}
+								>
+									<Image
+										src={project.image}
+										alt={project.imageAlt ?? `Page d’accueil du site de ${project.title}`}
+										widths={[420, 640, 840]}
+										sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 85vw"
+										class="aspect-[16/10] h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+										loading="lazy"
+										decoding="async"
+									/>
+								</a>
+								<div class="flex grow flex-col p-5">
+									<p class="type-label-mono text-muted">{formatPortfolioProjectMeta(project)}</p>
+									<h3 class="mt-2 font-heading text-lg font-semibold text-foreground">{project.title}</h3>
+									<p class="mt-1 text-sm text-muted">{project.location}</p>
+									{project.description && (
+										<p class="mt-3 grow text-sm leading-relaxed text-muted">{project.description}</p>
+									)}
+									<a
+										href={project.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+									>
+										Visiter le site
+										<ArrowUpRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+									</a>
+								</div>
+							</article>
+						</li>
+					))
+				}
+			</ul>
+
+			<div class="mt-4 flex items-center justify-center gap-3">
+				<button
+					type="button"
+					class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-foreground transition-colors hover:bg-background disabled:opacity-40"
+					data-carousel-prev
+					aria-label="Sites précédents"
+				>
+					<ChevronLeft class="h-5 w-5" stroke-width={1.75} aria-hidden="true" />
+				</button>
+				<button
+					type="button"
+					class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-foreground transition-colors hover:bg-background disabled:opacity-40"
+					data-carousel-next
+					aria-label="Sites suivants"
+				>
+					<ChevronRight class="h-5 w-5" stroke-width={1.75} aria-hidden="true" />
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.querySelectorAll<HTMLElement>('[data-portfolio-carousel]').forEach((root) => {
+		const track = root.querySelector<HTMLElement>('[data-carousel-track]');
+		const prev = root.querySelector<HTMLButtonElement>('[data-carousel-prev]');
+		const next = root.querySelector<HTMLButtonElement>('[data-carousel-next]');
+		if (!track || !prev || !next) return;
+
+		const step = () => {
+			const first = track.querySelector<HTMLElement>('li');
+			return first ? first.offsetWidth + 20 : track.clientWidth;
+		};
+		const update = () => {
+			prev.disabled = track.scrollLeft <= 4;
+			next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+		};
+
+		prev.addEventListener('click', () => track.scrollBy({ left: -step() }));
+		next.addEventListener('click', () => track.scrollBy({ left: step() }));
+		track.addEventListener('scroll', update, { passive: true });
+		window.addEventListener('resize', update);
+		update();
+	});
+</script>
