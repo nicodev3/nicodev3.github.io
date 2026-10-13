@@ -22,7 +22,7 @@ faq:
   - question: "Est-il possible d'ouvrir un cabinet de psychologue sans diplôme ?"
     answer: "Non. L’usage du titre de psychologue est protégé. Sans diplôme ouvrant droit au titre et sans enregistrement professionnel, tu ne peux pas ouvrir un cabinet de psychologue ni te présenter comme tel."
   - question: "Combien gagne un psy en libéral ?"
-    answer: "Il n’y a pas de salaire fixe. En début d’activité, le revenu net est souvent entre 800 et 1 700 € mensuels ; un cabinet établi se situe plus souvent entre 1 800 et 3 200 € nets, après charges et cotisations. Voir l’article dédié au salaire psychologue libéral."
+    answer: "Il n’y a pas de salaire fixe ni de fourchette nationale récente assez robuste. Le revenu disponible dépend du chiffre d’affaires, du régime social et fiscal, de l’impôt du foyer et des frais professionnels. Voir l’article dédié au calcul du revenu du psychologue libéral : /blog/salaire-psychologue-liberal/."
   - question: "Quelles sont les premières étapes pour ouvrir un cabinet de psychologue ?"
     answer: "Clarifier le projet clinique, vérifier le droit d’usage du titre, obtenir l’enregistrement professionnel (RPPS), déclarer l’activité indépendante, choisir le régime fiscal, assurer l’activité et préparer le lieu d’exercice."
   - question: "Peut-on ouvrir son cabinet de psychologue progressivement ?"

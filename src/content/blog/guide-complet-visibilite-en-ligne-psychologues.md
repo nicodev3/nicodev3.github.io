@@ -63,6 +63,7 @@ Chaque lien ci-dessous approfondit un point concret. L’ordre proposé suit une
 C’est le levier le plus direct pour apparaître dans les résultats Google Maps. Sans fiche correctement renseignée et vérifiée, vous êtes invisible pour une part importante des recherches « psychologue + ville ».
 
 → [Psychologue : comment créer et optimiser sa fiche Google Business Profile en 2026](/blog/google-business-profile-psychologue/)
+→ Pour le périmètre de la prestation et les tarifs : [référencement de site psychologue](/referencement-site-psychologue/).
 
 Si vous exercez exclusivement à distance, la logique change : une activité 100 % en ligne n’entre généralement pas dans le cadre d’une fiche Google Business Profile. Le guide [s’installer psychologue en libéral 100 % visio](/blog/installer-psychologue-liberal-100-visio/) détaille alors les priorités côté site, contenus et annuaires adaptés.
 

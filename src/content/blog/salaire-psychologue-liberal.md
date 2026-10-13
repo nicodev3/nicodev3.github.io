@@ -1,18 +1,18 @@
 ---
-title: "Salaire psychologue libéral : 800 à 3 200 € nets"
-seoTitle: "Salaire psychologue libéral 2026 : 800 à 3 200 € nets"
-description: "Salaire d'un psychologue libéral en 2026 : souvent 800–1 700 € nets en début d'activité et 1 800–3 200 € une fois le cabinet établi (après charges et CIPAV)."
+title: "Salaire psychologue libéral : calculer son revenu net"
+seoTitle: "Salaire psychologue libéral 2026 : calcul du revenu net"
+description: "Comment estimer le revenu d'un psychologue libéral en 2026 : cotisations micro-sociales, impôt, frais de cabinet et exemples de calcul selon votre situation."
 pubDate: "2026-06-02"
-updatedDate: "2026-09-27"
+updatedDate: "2026-10-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
 tags: ["psychologue", "installation en libéral"]
 salaryGuideHub: true
 faq:
   - question: "Quel est le salaire d'un psychologue libéral ?"
-    answer: "Il n'existe pas de salaire fixe officiel. En 2026, le revenu net mensuel se situe souvent entre 800 et 1 700 € en début d'activité, et entre 1 800 et 3 200 € pour un cabinet établi, après cotisations CIPAV, charges et impôts."
+    answer: "Il n'existe pas de salaire fixe officiel. Le revenu disponible dépend du chiffre d'affaires, des cotisations, de l'impôt et des frais du cabinet. En micro-entreprise relevant de la CIPAV, le taux social 2026 est de 23,2 % du chiffre d'affaires, auquel s'ajoute la contribution à la formation professionnelle."
   - question: "Quel est le salaire net d'un psychologue libéral ?"
-    answer: "Le salaire net correspond au revenu après cotisations CIPAV (environ 23 % du CA en micro-BNC) et impôt sur le revenu. À 2 700 € de CA mensuel en micro-BNC, comptez souvent environ 1 700 à 1 850 € nets — avant loyer de cabinet, que tout le monde ne paie pas. En cabinet établi, la fourchette courante se situe souvent entre 1 800 et 3 200 € nets par mois."
+    answer: "En micro-entreprise relevant de la CIPAV, les cotisations sociales représentent 23,2 % du chiffre d'affaires en 2026, plus la contribution à la formation professionnelle. L'impôt dépend du foyer fiscal ; le loyer et les autres frais restent à déduire pour obtenir le revenu disponible. Simulez votre situation avec l'Urssaf et impots.gouv.fr."
   - question: "Combien gagne un psychologue libéral débutant ?"
     answer: "Les débuts sont souvent irréguliers. Les premiers mois, le revenu peut rester faible, surtout si le cabinet coûte cher et que l'agenda n'est pas encore rempli. Beaucoup sécurisent cette phase par une sous-location progressive, un cumul salarié-libéral ou des charges fixes limitées."
   - question: "Micro-BNC ou réel : quel régime laisse le plus de revenu ?"
@@ -23,18 +23,20 @@ faq:
 
 *Temps de lecture : environ 14 minutes*
 
-**Réponse courte :** le **salaire d’un psychologue libéral** n’est pas un salaire fixe. En 2026, le revenu net mensuel se situe souvent entre **800 et 1 700 €** en début d’activité, et entre **1 800 et 3 200 €** une fois le cabinet établi — après cotisations CIPAV et impôts. Un agenda très rempli ou une activité mixte peut dépasser **3 500 €**, sans que ce soit la norme. Le loyer de cabinet, quand il existe, vient en plus et réduit d’autant le revenu disponible.
+**En bref :** un psychologue libéral n’a pas de salaire fixe. Son revenu disponible dépend du chiffre d’affaires, du régime social et fiscal, de l’impôt du foyer et des frais professionnels. En micro-entreprise relevant de la CIPAV, le taux de cotisations sociales est de **23,2 % du chiffre d’affaires en 2026**, auquel s’ajoute la contribution à la formation professionnelle ; l’impôt sur le revenu et le loyer ne sont pas inclus dans ce taux. Les fourchettes ci-dessous sont des repères de simulation, pas des moyennes nationales ni une promesse de revenu.
 
 Pour passer de ces fourchettes à votre tarif et à vos charges, calculez votre [seuil de viabilité](/outils/seuil-viabilite-seances/).
 
-> **En bref — salaire d’un psychologue libéral (fourchettes 2026)**
+> **Repères pour estimer le revenu disponible**
 >
 > | Situation | Revenu net mensuel estimé |
 > | --- | --- |
-> | Début d’activité (0–18 mois) | 800 à 1 700 € |
-> | Cabinet établi | 1 800 à 3 200 € |
-> | Agenda dense ou activité mixte | 3 500 € et plus (possible, pas la norme) |
-> | Exemple : 45 séances / mois × 60 € en micro-BNC (hors loyer) | ~1 700 à 1 850 € nets |
+> | Élément | À retenir |
+> | --- | --- |
+> | Cotisations micro-sociales CIPAV 2026 | 23,2 % du CA, plus CFP (0,2 %) |
+> | Impôt en micro-BNC | Calculé sur 66 % du CA, puis selon le foyer fiscal (abattement fiscal de 34 %) |
+> | Frais de cabinet | À déduire pour obtenir le revenu disponible ; non déductibles en micro |
+> | Exemple de calcul | 45 séances × 60 € = 2 700 € de CA, avant cotisations, impôt et frais |
 
 Avant de s’installer, beaucoup de psychologues recherchent « **salaire psychologue libéral** » pour savoir **combien gagne un psychologue libéral** une fois cotisations et impôts retirés. Le mot « salaire » est en partie trompeur : en libéral, vous encaissez des **honoraires**, puis vous payez surtout des **cotisations** et de l’**impôt**. Le **salaire net d’un psychologue libéral** dépend donc du tarif, de l’agenda et du régime fiscal.
 
@@ -53,7 +55,7 @@ La requête « **salaire psychologue** » (sans le mot « libéral ») regroupe 
 | Statut | Comment on est payé·e | Revenu net mensuel indicatif | Ce qu'il faut retenir |
 | --- | --- | --- | --- |
 | **Psychologue salarié** (hôpital, CMP, association, entreprise) | Fiche de paie, net après cotisations | ~1 800–2 300 € débutant ; ~2 400–2 800 € confirmé | Prévisible ; grille liée à la CCN (66, 51…) ou à la fonction publique |
-| **Psychologue libéral** (honoraires) | Facturation directe aux patients | ~800 à 3 500 €+ selon phase | Autonomie, aléa, plafond potentiel plus haut |
+| **Psychologue libéral** (honoraires) | Facturation directe aux patients | Dépend du CA, des cotisations, de l’impôt et des frais | Autonomie, aléa, plafond potentiel plus haut |
 | **Psychologue clinicien libéral** | Même logique que le libéral classique | Fourchettes proches du libéral | Le titre « clinicien » ne change pas le calcul des revenus |
 
 Quand on compare des chiffres trouvés en ligne, beaucoup d'articles mélangent le **salaire du psychologue salarié** et celui du **psychologue libéral**. Un salarié du secteur public à 2 400 € nets n'a pas la même équation qu'un libéral qui facture 3 000 € de CA mais paie 700 € de loyer et 700 € de cotisations. Côté salariat, le montant dépend aussi fortement de la **convention collective** applicable (par exemple **CCN 66**, **CCN 51** dans le médico-social, ou grille hospitalière) : coefficient, valeur du point, ancienneté et primes (Ségur, sujétions…) changent le net réel.
@@ -65,7 +67,7 @@ Le **salaire d’un psychologue clinicien libéral** suit la même mécanique qu
 Le **salaire net** dont parlent les psychologues en libéral, c'est surtout ce qui reste **après cotisations et impôts**. Voici la formule à retenir :
 
 1. **Chiffre d'affaires** = nombre de séances facturées × tarif
-2. **− Cotisations sociales** (CIPAV) : ~23,4 % du CA en micro-BNC, ou ~30–38 % du bénéfice au réel
+2. **− Cotisations sociales** : en micro-entreprise relevant de la CIPAV, 23,2 % du CA en 2026, plus CFP ; au réel, calcul selon les règles et tranches applicables
 3. **− Impôt sur le revenu** : selon votre foyer fiscal et votre régime
 4. **= Salaire net** (revenu professionnel après prélèvements)
 5. **Puis, le cas échéant** : − loyer / sous-location / outils de cabinet = **revenu disponible**
@@ -82,18 +84,18 @@ Le mode d’exercice n’est pas unique. Par exemple :
 
 Ces frais sont donc traités **à part**, pas comme un poste automatique du salaire. Pour le cadre 100 % en ligne, voir aussi [s’installer en libéral en visio](/blog/installer-psychologue-liberal-100-visio/).
 
-### Exemple rapide : salaire net avec 45 séances / mois à 60 €
+### Exemple rapide : chiffre d’affaires avec 45 séances / mois à 60 €
 
-**CA mensuel : 2 700 €** — calcul hors loyer de cabinet.
+**CA mensuel : 2 700 €** — avant cotisations, impôt et frais de cabinet.
 
 | Étape | Micro-BNC | Régime réel *(sans charges déductibles)* |
 | --- | --- | --- |
 | CA mensuel | 2 700 € | 2 700 € |
-| Cotisations sociales | − 632 € (23,4 % du CA) | − 840 à 920 € (~31–34 % du bénéfice) |
-| Impôt sur le revenu (ordre de grandeur) | − 210 à 370 € | − 280 à 450 € |
-| **Salaire net estimé** | **~1 700 à 1 850 €** | **~1 350 à 1 580 €** |
+| Cotisations sociales + CFP | − 632 € (23,4 % du CA) | À simuler selon le bénéfice et la situation |
+| Impôt sur le revenu | Variable selon le foyer (base micro-BNC : 66 % du CA) | Variable selon le foyer et le bénéfice imposable |
+| **Avant frais de cabinet** | **2 068 € avant impôt** | À simuler |
 
-Si vous louez un cabinet (par exemple **450 € / mois**), retirez ce montant du salaire net pour obtenir le revenu disponible — soit environ **1 250 à 1 400 €** en micro-BNC dans cet exemple. En **visio seule**, à **domicile** ou sans local fixe, le salaire net ci-dessus reste en pratique votre référence (hors petits frais d’outils).
+Si vous louez un cabinet (par exemple **450 € / mois**), retirez ce montant en plus, ainsi que l’impôt déterminé selon votre foyer, pour obtenir le revenu disponible. En micro, le loyer ne réduit ni le chiffre d’affaires déclaré ni l’abattement fiscal forfaitaire. En **visio seule** ou à **domicile**, le poste de loyer professionnel peut être absent, mais d’autres frais demeurent.
 
 Ce calcul explique pourquoi on ne peut pas répondre en une phrase à « **combien gagne un psychologue libéral** » : deux praticiens avec le même CA peuvent avoir un écart important selon le régime fiscal et, ensuite, selon qu’ils paient ou non un local.
 
@@ -170,7 +172,7 @@ Prenons un psychologue installé depuis quelques années :
 
 Ce n'est pas encore ce qu'il reste à vivre. Il faut distinguer **trois sorties d'argent différentes** :
 
-1. **Cotisations sociales** (URSSAF / CIPAV) : en micro, environ **23 % du CA** ; au réel, plutôt **30 à 38 % du bénéfice** (pas du CA).
+1. **Cotisations sociales** (URSSAF / CIPAV) : en micro-entreprise CIPAV, **23,2 % du CA en 2026** ; au réel, le calcul dépend du revenu et des tranches applicables.
 2. **Charges d'exploitation** (loyer, assurance, outils, supervision…) : payées en numéraire chaque mois ; **déductibles au réel**, **non déductibles en micro** (sauf cas très particuliers).
 3. **Impôt sur le revenu** : calculé sur une base imposable qui dépend du régime (abattement forfaitaire de **34 %** en micro-BNC, ou bénéfice après charges au réel).
 
@@ -182,18 +184,15 @@ Les chiffres publics agrégés sont rares et souvent datés, mais ils aident à 
 
 ### Début d'activité : souvent bien en dessous de la moyenne
 
-Plusieurs sources professionnelles et syndicales convergent vers une réalité difficile les **premières années** : un chiffre d'affaires annuel modeste tant que la patientèle se construit. À titre indicatif, des synthèses citent pour un libéral **débutant** environ **40 000 € de CA annuel** et un **bénéfice net** autour de **20 000 €** — soit de l'ordre de **1 600 à 1 700 € par mois** après charges, selon l'organisation et le régime.
+Les chiffres publics agrégés et récents sont rares, et les revenus dépendent fortement du volume de séances, des tarifs, du statut et des frais. Plutôt que de présenter une moyenne nationale non vérifiable, construisez plusieurs scénarios à partir de votre CA, de vos frais et de votre foyer fiscal avec les simulateurs officiels.
 
 Ce n'est pas une fatalité : c'est souvent la phase où l'on cumule avec un salariat, où l'on sous-loue un cabinet quelques demi-journées, ou où l'on accepte un agenda encore irrégulier.
 
 ### Activité installée : fourchettes plus confortables
 
-Une fois le cabinet stabilisé, beaucoup de praticiens se situent davantage autour de :
+Une fois l’activité stabilisée, le revenu peut progresser si l’agenda se remplit et si les frais restent maîtrisés. Il n’existe pas de fourchette nationale suffisamment robuste pour transformer cette observation en salaire « courant » : comparez des scénarios de CA et de charges adaptés à votre projet.
 
-- **2 500 à 3 500 € nets par mois** pour une activité « confortable » mais pas exceptionnelle en province ;
-- **au-delà de 4 000 € nets** pour des profils très remplis, des tarifs élevés, ou des activités mixtes (clinique + formation + bilans).
-
-À l'inverse, un **temps partiel assumé** (parentalité, autre emploi, santé) peut volontairement viser **1 200 à 2 000 € nets** : ce n'est pas un échec si le projet de vie le prévoit.
+À l'inverse, un temps partiel assumé (parentalité, autre emploi, santé) peut viser un chiffre d’affaires et un revenu disponible plus modestes, conformément au projet de vie.
 
 ### Salarié vs libéral : comparer ce qui est comparable
 
@@ -220,14 +219,14 @@ Un loyer élevé avec un agenda encore léger peut faire basculer un mois dans l
 
 ### Cotisations sociales et retraite (CIPAV)
 
-Les psychologues libéraux relèvent en principe de la **CIPAV**. Le point essentiel : le **taux affiché** et **l'assiette de calcul** changent selon le régime d'imposition.
+L’affiliation dépend du parcours et de la date de création de l’activité : vérifiez votre caisse auprès de l’Urssaf et de la CIPAV. Le taux **23,2 %** ci-dessous concerne spécifiquement le micro-social des professionnels relevant de la CIPAV ; il ne faut pas l’appliquer à tous les psychologues libéraux ni au régime réel. Le **taux affiché** et **l'assiette de calcul** changent selon le régime.
 
 | Régime | Assiette des cotisations | Taux / ordre de grandeur (2026) |
 | --- | --- | --- |
-| **Micro-BNC** | Chiffre d'affaires encaissé | **23,2 %** (+ **0,2 %** CFP ; versement libératoire IR en option : **+ 2,2 %**) |
+| **Micro-entreprise CIPAV** | Chiffre d'affaires encaissé | **23,2 %** (+ **0,2 %** CFP ; versement libératoire IR en option : **+ 2,2 %**) |
 | **Réel (déclaration contrôlée)** | Bénéfice (CA − charges déductibles) | Taux par branche ; **taux effectif souvent 30 à 38 % du bénéfice** selon le niveau de revenu |
 
-En **micro-BNC**, le prélèvement URSSAF est donc d'environ **un quart du CA**, pas 40 %. En revanche, **si vous louez un local**, ce loyer sort de votre poche **en plus**, sans réduire cette assiette — d'où l'impression d'un « taux global » plus élevé quand on cumule tout. En **visio** ou sans cabinet, ce poste disparaît souvent.
+En **micro-entreprise relevant de la CIPAV**, le prélèvement social est de **23,2 % du CA en 2026**, auquel s’ajoute la CFP de 0,2 %. En revanche, **si vous louez un local**, ce loyer sort de votre poche **en plus**, sans réduire cette assiette — d'où l'impression d'un « taux global » plus élevé quand on cumule tout. En **visio** ou sans cabinet, ce poste disparaît souvent.
 
 En **réel**, les cotisations sont plus élevées en pourcentage, mais calculées sur un **montant plus petit** si vous avez beaucoup de charges. C'est souvent plus intéressant lorsque les frais réels (loyer, supervision, matériel, comptable) dépassent l'abattement forfaitaire micro de **34 %** du CA.
 
@@ -251,19 +250,19 @@ Deux niveaux distincts :
 | **Forme juridique** | Cadre dans lequel vous exercez | **Entreprise individuelle** (souvent seul·e au départ) |
 | **Régime d'imposition** | Façon de calculer impôts et cotisations | **Micro-BNC** ou **réel simplifié / déclaration contrôlée** |
 
-On peut être en entreprise individuelle **et** en micro-BNC : c'est le cas le plus fréquent au démarrage. Passer au réel est une **option fiscale** (parfois obligatoire si vous dépassez le plafond de chiffre d'affaires micro-BNC, **77 700 €** de recettes en 2026 pour les prestations de services — seuil à vérifier chaque année).
+On peut être en entreprise individuelle **et** en micro-BNC : c'est le cas le plus fréquent au démarrage. Passer au réel est une **option fiscale** (parfois obligatoire si vous dépassez le plafond de chiffre d'affaires micro-BNC, **83 600 €** de recettes en 2026 pour les prestations de services — seuil à vérifier chaque année).
 
 ### Micro-BNC : ce qui est prélevé, et sur quoi
 
 | Poste | Base de calcul | Taux indicatif 2026 |
 | --- | --- | --- |
-| Cotisations sociales (CIPAV) | CA encaissé | **23,2 %** |
+| Cotisations sociales (micro-social CIPAV) | CA encaissé | **23,2 %** |
 | Contribution formation pro. (CFP) | CA encaissé | **0,2 %** (plancher annuel possible) |
 | Versement libératoire IR *(option)* | CA encaissé | **+ 2,2 %** si vous y optez |
 | Impôt sur le revenu *(sans versement libératoire)* | **66 % du CA** intégré au foyer (abattement 34 %) | Variable selon situation familiale |
 | Loyer, outils, supervision… | — | Payés **en plus**, non déductibles du CA micro |
 
-**Total cotisations + CFP** : environ **23,4 % du CA**, pas 40 %. Avec versement libératoire : environ **25,6 % du CA** pour la partie « prélèvements automatiques », **avant** loyer et **avant** impôt si vous n'avez pas opté pour le libératoire.
+**Total cotisations + CFP** : environ **23,4 % du CA**. Avec versement libératoire (si vous y êtes éligible et l’avez choisi), ajoutez **2,2 %** pour l’impôt forfaitaire. Ces taux concernent le micro-social ; ils ne s’appliquent pas aux professionnels au régime réel. Le loyer et les autres frais restent à part.
 
 ### Régime réel : autre logique
 
@@ -293,10 +292,10 @@ Hypothèses de charges de cabinet : **250 € / mois** (scénario A), **450 € 
 | CA | 1 250 € | 1 250 € |
 | Charges déductibles | — (payées quand même) | − 250 € |
 | Assiette cotisations | 1 250 € | **1 000 €** (bénéfice) |
-| Cotisations sociales (~23,4 % CA / ~33 % bénéfice) | **− 293 €** | **− 330 €** |
+| Cotisations sociales + CFP (micro : 23,4 % du CA) | **− 293 €** | À simuler selon le bénéfice |
 | Charges cabinet (loyer, etc.) | **− 250 €** | _(déjà déduites)_ |
 | Impôt sur le revenu (ordre de grandeur) | **− 50 à 120 €** | **− 40 à 100 €** |
-| **Revenu disponible estimé** | **~ 580 à 660 €** | **~ 620 à 700 €** |
+| **Solde avant impôt du foyer** | **~ 707 €** | À simuler |
 
 Difficile à vivre seul·e ; beaucoup cumulent, réduisent le loyer ou restent en micro avec très peu de charges.
 
@@ -309,12 +308,12 @@ Difficile à vivre seul·e ; beaucoup cumulent, réduisent le loyer ou restent e
 | CA | 2 700 € | 2 700 € |
 | Charges déductibles | — | − 450 € |
 | Assiette cotisations | 2 700 € | **2 250 €** |
-| Cotisations sociales | **− 632 €** (23,4 % du CA) | **− 700 à 765 €** (~31–34 % du bénéfice) |
+| Cotisations sociales + CFP | **− 632 €** (23,4 % du CA) | À simuler selon le bénéfice |
 | Charges cabinet | **− 450 €** | _(déjà déduites)_ |
 | Impôt sur le revenu (ordre de grandeur) | **− 210 à 370 €** | **− 160 à 300 €** |
-| **Revenu disponible estimé** | **~ 1 250 à 1 400 €** | **~ 1 300 à 1 480 €** |
+| **Solde avant impôt du foyer** | **~ 1 618 €** | À simuler |
 
-Ici, le **23 % du CA** en micro représente **632 €**, pas les **1 080 €** qu'un « taux global de 40 % » laisserait croire. L'écart vient surtout du **loyer** et de l'**impôt**, pas des cotisations URSSAF.
+Ici, les cotisations sociales et la CFP (**23,4 % du CA**) en micro représentent **632 €**, pas les **1 080 €** qu'un « taux global de 40 % » laisserait croire. L'écart vient surtout du **loyer** et de l'**impôt**, pas des cotisations sociales.
 
 ### Scénario C — Agenda rempli (grande ville)
 
@@ -325,12 +324,12 @@ Ici, le **23 % du CA** en micro représente **632 €**, pas les **1 080 €** q
 | CA                                      | 4 550 €               | 4 550 €               |
 | Charges déductibles                     | —                     | − 700 €               |
 | Assiette cotisations                    | 4 550 €               | **3 850 €**           |
-| Cotisations sociales                    | **− 1 065 €**         | **− 1 150 à 1 270 €** |
+| Cotisations sociales + CFP              | **− 1 064 €**         | À simuler selon le bénéfice |
 | Charges cabinet                         | **− 700 €**           | _(déjà déduites)_     |
-| Impôt sur le revenu (ordre de grandeur) | **− 550 à 900 €**     | **− 450 à 750 €**     |
-| **Revenu disponible estimé**            | **~ 1 900 à 2 240 €** | **~ 2 030 à 2 400 €** |
+| Impôt sur le revenu                     | À calculer selon le foyer | À calculer selon le foyer |
+| **Solde avant impôt du foyer**          | **~ 2 786 €**         | À simuler |
 
-Avec un loyer parisien plus élevé (900 € et plus), le **réel** devient souvent plus intéressant ; en micro, les charges non déductibles pèsent lourdement même si le taux URSSAF reste à **23 %**.
+Avec un loyer parisien plus élevé (900 € et plus), le **réel** devient souvent plus intéressant ; en micro, les charges non déductibles pèsent lourdement même si le taux social micro-social est de **23,2 % en 2026**.
 
 ### Comment lire ces tableaux
 
@@ -357,7 +356,7 @@ Le Code de déontologie des psychologues encadre la communication : l'objectif n
 ## Erreurs fréquentes quand on estime son futur salaire
 
 - **Confondre CA et net** : « Je facture 3 000 €, donc je gagne 3 000 € » — non.
-- **Appliquer un taux de 40 % « cotisations » en micro** : les cotisations CIPAV sont d'environ **23 % du CA** ; le reste, ce sont surtout le **loyer** et l'**impôt**, calculés autrement.
+- **Appliquer un taux de 40 % « cotisations » en micro** : les cotisations sociales micro-sociales CIPAV sont de **23,2 % du CA en 2026** ; le reste, ce sont surtout le **loyer** et l'**impôt**, calculés autrement.
 - **Comparer micro et réel sans distinguer l'assiette** : au réel, les cotisations portent sur le **bénéfice**, pas sur le CA brut.
 - **Oublier les mois creux** : août, vacances scolaires, déménagement, maladie.
 - **Comparer son début à un confrère installé depuis dix ans** sur les réseaux sociaux.
@@ -367,11 +366,11 @@ Le Code de déontologie des psychologues encadre la communication : l'objectif n
 
 ## Salaire d’un psychologue libéral : quelle fourchette viser ?
 
-| Phase                       | Ordre de grandeur de revenu net mensuel (après charges) |
+| Phase                       | Repère de calcul |
 | --------------------------- | ------------------------------------------------------- |
-| **0 à 18 mois**             | Souvent **800 à 1 700 €** (très variable)               |
-| **Cabinet établi**          | Souvent **1 800 à 3 200 €**                             |
-| **Activité dense ou mixte** | **3 500 € et plus** possible, pas la norme au départ    |
+| **0 à 18 mois**             | Agenda et revenus très variables selon le lancement     |
+| **Cabinet établi**          | À estimer depuis le CA, le régime et les charges réels  |
+| **Activité dense ou mixte** | CA potentiellement plus élevé, avec frais et temps de travail adaptés |
 
 Le **salaire d’un psychologue libéral** le plus honnête à retenir est donc une **fourchette** liée à votre tarif, votre volume, vos charges et votre régime — pas un chiffre unique affiché sur un forum.
 
@@ -381,11 +380,11 @@ Si vous préparez votre installation, avancez en parallèle sur trois plans : **
 
 ### Quel est le salaire d'un psychologue libéral ?
 
-Il n’existe pas de salaire fixe officiel. En 2026, le revenu net mensuel se situe souvent entre **800 et 1 700 €** en début d’activité, et entre **1 800 et 3 200 €** pour un cabinet établi, après cotisations CIPAV, charges et impôts.
+Il n’existe pas de salaire fixe officiel ni de fourchette nationale récente assez robuste. Estimez votre revenu disponible à partir du chiffre d’affaires, du régime, de l’impôt du foyer et des frais réellement supportés.
 
 ### Quel est le salaire net d'un psychologue libéral ?
 
-Le **salaire net**, c’est ce qui reste après cotisations CIPAV (~23 % du CA en micro) et impôt sur le revenu. Pour **2 700 €** de CA mensuel en micro-BNC, comptez souvent **1 700 à 1 850 € nets** — **avant** loyer de cabinet. Si vous louez un local (par exemple 450 €), le revenu disponible descend d’autant. En exercice **uniquement en visio**, à **domicile** ou sans local fixe, ce salaire net reste en général la bonne référence.
+En micro-entreprise relevant de la CIPAV, les cotisations sociales représentent **23,2 % du CA en 2026**, plus **0,2 % de CFP**. Sur **2 700 €** de CA, cela laisse environ **2 068 € avant impôt sur le revenu et frais professionnels**. Le loyer et les autres frais réduisent ensuite le revenu disponible ; l’impôt dépend de la composition et des revenus du foyer. Le barème 2026 porte sur les revenus de 2025 : utilisez le simulateur officiel pour votre cas.
 
 ### Combien gagne un psychologue libéral débutant ?
 
@@ -413,4 +412,4 @@ Pour appliquer ces ordres de grandeur à votre tarif et à vos charges, utilisez
 
 ---
 
-_Sources et références utiles (à recouper selon votre année) : simulateurs <a href="https://www.autoentrepreneur.urssaf.fr/portail/accueil/simulateur.html" target="_blank" rel="nofollow noopener noreferrer">URSSAF micro-entrepreneur</a> et <a href="https://www.impots.gouv.fr/simulateurs" target="_blank" rel="nofollow noopener noreferrer">impots.gouv.fr</a> ; informations retraite <a href="https://www.lassuranceretraite.fr/" target="_blank" rel="nofollow noopener noreferrer">CIPAV / Assurance retraite</a>. Les montants d'honoraires cités reflètent des pratiques libérales courantes observées en 2025-2026 et peuvent évoluer selon les zones._
+_Sources officielles consultées le 13 octobre 2026 : <a href="https://entreprendre.service-public.fr/vosdroits/F33339" target="_blank" rel="nofollow noopener noreferrer">Service-Public — taux micro-social 2026 (CIPAV)</a>, <a href="https://www.urssaf.fr/accueil/actualites/taux-cotisations-autoentrepeneur.html" target="_blank" rel="nofollow noopener noreferrer">Urssaf — évolution des taux en 2026</a>, <a href="https://www.impots.gouv.fr/particulier/questions/quoi-correspondent-le-taux-moyen-et-le-taux-marginal-dimposition-affiches-sur" target="_blank" rel="nofollow noopener noreferrer">impots.gouv.fr — barème 2026 des revenus 2025</a> et <a href="https://mon-entreprise.urssaf.fr/simulateurs" target="_blank" rel="nofollow noopener noreferrer">simulateur Urssaf</a>. L’affiliation, les frais déductibles et l’impôt dépendent de la situation individuelle ; validez votre calcul avec les outils officiels ou un professionnel._

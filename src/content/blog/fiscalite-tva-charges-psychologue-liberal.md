@@ -23,7 +23,7 @@ Cette étape compte parce qu’un cabinet peut sembler « bien démarrer » tout
 
 Le but de ce chapitre est de te donner une carte simple : ce que tu factures, ce que tu dois mettre de côté, ce qui est exonéré, ce qui est taxable, et comment transformer tes honoraires en revenu net soutenable.
 
-Il fait partie du [guide pour ouvrir un cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/). Les fourchettes de revenu net sont dans [salaire psychologue libéral](/blog/salaire-psychologue-liberal/). Le choix micro / réel est dans [statut juridique](/blog/statut-juridique-psychologue-liberal/). Ce texte n’est pas un conseil fiscal personnalisé.
+Il fait partie du [guide pour ouvrir un cabinet de psychologue](/blog/installer-liberal-psychologue-par-ou-commencer/). Pour estimer le revenu disponible à partir du chiffre d’affaires, des cotisations, de l’impôt et des frais, consulte [le calcul du revenu du psychologue libéral en 2026](/blog/salaire-psychologue-liberal/). Le choix micro / réel est dans [statut juridique](/blog/statut-juridique-psychologue-liberal/). Ce texte n’est pas un conseil fiscal personnalisé.
 
 ## Tes revenus sont des BNC, pas des salaires
 
