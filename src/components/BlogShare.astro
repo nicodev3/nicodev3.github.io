@@ -17,28 +17,28 @@ const links = [
 		href: `https://www.linkedin.com/sharing/share-offsite/?url=${encUrl}`,
 		icon: 'linkedin',
 		brandClass:
-			'border-[#0A66C2] bg-[#0A66C2] text-white hover:bg-[#004182] hover:border-[#004182] focus-visible:ring-[#0A66C2]',
+			'border-[#0A66C2] bg-[#0A66C2] text-white focus-visible:ring-[#0A66C2] hover:border-[#004182] hover:bg-[#004182]',
 	},
 	{
 		name: 'Facebook',
 		href: `https://www.facebook.com/sharer/sharer.php?u=${encUrl}`,
 		icon: 'facebook',
 		brandClass:
-			'border-[#1877F2] bg-[#1877F2] text-white hover:bg-[#166FE5] hover:border-[#166FE5] focus-visible:ring-[#1877F2]',
+			'border-[#1877F2] bg-[#1877F2] text-white focus-visible:ring-[#1877F2] hover:border-[#166FE5] hover:bg-[#166FE5]',
 	},
 	{
 		name: 'X',
 		href: `https://twitter.com/intent/tweet?url=${encUrl}&text=${encTitle}`,
 		icon: 'x',
 		brandClass:
-			'border-black bg-black text-white hover:bg-neutral-800 hover:border-neutral-800 focus-visible:ring-black',
+			'border-black bg-black text-white focus-visible:ring-black hover:border-neutral-800 hover:bg-neutral-800',
 	},
 	{
 		name: 'WhatsApp',
 		href: `https://wa.me/?text=${textWithUrl}`,
 		icon: 'whatsapp',
 		brandClass:
-			'border-[#25D366] bg-[#25D366] text-white hover:bg-[#20BD5A] hover:border-[#20BD5A] focus-visible:ring-[#128C7E]',
+			'border-[#25D366] bg-[#25D366] text-white focus-visible:ring-[#128C7E] hover:border-[#20BD5A] hover:bg-[#20BD5A]',
 	},
 ] as const;
 ---
@@ -56,7 +56,7 @@ const links = [
 						rel="noopener noreferrer"
 						aria-label={`Partager sur ${name} (nouvel onglet)`}
 						class:list={[
-							'inline-flex size-12 shrink-0 touch-manipulation items-center justify-center rounded-lg border shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:size-8',
+							'inline-flex size-12 shrink-0 touch-manipulation items-center justify-center rounded-lg border shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:size-10',
 							brandClass,
 						]}
 					>
@@ -111,6 +111,15 @@ const links = [
 		</div>
 	</div>
 </nav>
+
+<style>
+	@media (hover: none) {
+		.blog-share a:hover,
+		.blog-share button:hover {
+			filter: none;
+		}
+	}
+</style>
 
 <script>
 	function initCopyButtons(root: ParentNode) {

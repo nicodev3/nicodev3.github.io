@@ -67,6 +67,29 @@ body {
     @apply font-sans text-base;
 }
 
+.skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 100;
+    transform: translateY(calc(-100% - 1rem));
+    border-radius: var(--radius-sm);
+    background: var(--color-foreground);
+    color: var(--color-on-foreground);
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+#main-content:focus {
+    outline: none;
+}
+
 /* Conteneur horizontal unique (~1200px) + rythme vertical sections */
 .shell-layout {
     @apply mx-auto w-full max-w-[75rem] px-4 sm:px-6 lg:px-8;
@@ -241,6 +264,14 @@ footer .footer-animated-underline:focus-visible {
     background-color: var(--color-primary-900);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
+}
+
+@media (hover: none) {
+    .btn-primary-solid:hover,
+    .btn-outline-terracotta:hover,
+    .btn-outline-accent:hover {
+        transform: none;
+    }
 }
 
 .btn-primary-solid:active {

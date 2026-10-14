@@ -24,12 +24,12 @@ const {
       <div class="group relative flex shrink-0 items-center">
         <button
           type="button"
-          class="flex h-5 w-5 items-center justify-center rounded-full border border-border text-[11px] font-semibold text-muted transition-colors hover:border-primary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          class="flex size-11 items-center justify-center rounded-full border border-border text-[11px] font-semibold text-muted transition-colors hover:border-primary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:size-10"
           aria-label="Informations sur le score Google PageSpeed Insights"
         >
           i
         </button>
-        <div class="pointer-events-none absolute right-0 top-full z-10 mt-2 w-56 rounded-lg border border-border bg-white p-3 text-left text-[11px] leading-snug text-muted opacity-0 shadow-lg transition-opacity duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100 sm:w-64 sm:text-xs">
+        <div class="pointer-events-none absolute right-0 top-full z-10 mt-2 w-56 rounded-lg border border-border bg-white p-3 text-left text-[11px] leading-snug text-muted opacity-0 transition-opacity duration-150 group-focus-within:pointer-events-auto group-focus-within:opacity-100 sm:w-64 sm:text-xs">
           <p>
             Ce score evalue la rapidite, l'accessibilite, les bonnes pratiques et le SEO technique du site.
           </p>
@@ -52,3 +52,12 @@ const {
     </div>
   </div>
 </div>
+
+<style>
+  @media (hover: hover) {
+    .group:hover > div {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+</style>

@@ -387,6 +387,21 @@ function navLinkIsActive(href: string): boolean {
 		document.addEventListener(
 			'keydown',
 			(e) => {
+				if (isOpen() && e.key === 'Tab') {
+					const focusable = navDrawer.querySelectorAll<HTMLElement>(
+						'a[href]:not([tabindex="-1"]), button:not([disabled]):not([tabindex="-1"])',
+					);
+					const first = focusable[0];
+					const last = focusable[focusable.length - 1];
+					if (e.shiftKey && (document.activeElement === first || !navDrawer.contains(document.activeElement))) {
+						e.preventDefault();
+						last?.focus();
+					} else if (!e.shiftKey && (document.activeElement === last || !navDrawer.contains(document.activeElement))) {
+						e.preventDefault();
+						first?.focus();
+					}
+					return;
+				}
 				if (e.key === 'Escape' && isOpen()) {
 					e.preventDefault();
 					close();

@@ -18,7 +18,7 @@ const { title, description, href, image, imageAlt, pubDate, author, tags } = Ast
 const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 ---
 
-<article class="grid h-full min-h-0 grid-rows-[auto_minmax(0,1fr)] self-stretch overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow duration-300 hover:shadow-md">
+<article class="grid h-full min-h-0 grid-rows-[auto_minmax(0,1fr)] self-stretch overflow-hidden rounded-lg border border-border bg-background shadow-sm transition-shadow duration-300">
 	<div class="aspect-square min-h-0 bg-surface">
 		<Image
 			src={image}
@@ -76,3 +76,11 @@ const displayTitle = title.replace(/\s(?=[?!:;])/g, '\u202F');
 		</a>
 	</div>
 </article>
+
+<style>
+	@media (hover: hover) {
+		article:hover {
+			box-shadow: var(--shadow-md);
+		}
+	}
+</style>

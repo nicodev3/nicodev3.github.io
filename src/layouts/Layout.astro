@@ -130,6 +130,7 @@ const ahrefsAnalyticsKey =
       omitSiteChromeInPrint && "omit-site-chrome-in-print",
     ]}
   >
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <Header />
 
     <!-- Contenu `position:fixed` relatif au viewport (évite un ancêtre transform/filter qui casse fixed dans <main>) -->
@@ -137,7 +138,7 @@ const ahrefsAnalyticsKey =
 
     {showFloatingWhatsApp ? <FloatingWhatsApp /> : null}
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <slot />
     </main>
 
