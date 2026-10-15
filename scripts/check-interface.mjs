@@ -100,6 +100,48 @@ try {
     }), true, `${selector} needs a visible outline in forced colors`);
   }
   await cdp.detach();
+  await page.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true });
+  await page.goto(origin, { waitUntil: 'networkidle0' });
+  await page.evaluate(() => {
+    document.querySelector('#tarteaucitronRoot')?.remove();
+    document.querySelector('.hero-home__actions .btn-primary-solid').addEventListener('click', event => event.preventDefault());
+  });
+  const primarySelector = '.hero-home__actions .btn-primary-solid';
+  const initialBackground = await page.$eval(primarySelector, element => getComputedStyle(element).backgroundColor);
+  await page.tap(primarySelector);
+  await new Promise(resolve => setTimeout(resolve, 250));
+  assert.equal(await page.$eval(primarySelector, element => getComputedStyle(element).backgroundColor), initialBackground, 'Touch must not leave the hover color latched');
+  await page.click('[data-mobile-nav-toggle]');
+  await page.waitForFunction(() => document.querySelector('[data-mobile-nav-toggle]').getAttribute('aria-expanded') === 'true');
+  assert.equal(await page.$eval('[data-mobile-nav-drawer] nav', element => getComputedStyle(element).overscrollBehaviorY), 'contain');
+  await page.keyboard.press('Escape');
+  await page.setViewport({ width: 1280, height: 900, isMobile: false, hasTouch: false });
+  await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'no-preference' }]);
+  await page.goto(origin, { waitUntil: 'networkidle0' });
+  await page.evaluate(() => document.querySelector('#tarteaucitronRoot')?.remove());
+  const primary = await page.$(primarySelector);
+  await primary.evaluate(element => element.addEventListener('click', event => event.preventDefault()));
+  await primary.evaluate(element => element.scrollIntoView({ block: 'center' }));
+  const rect = await primary.boundingBox();
+  await page.mouse.move(rect.x + rect.width / 2, rect.y + rect.height / 2);
+  await page.mouse.down();
+  await new Promise(resolve => setTimeout(resolve, 200));
+  assert.equal(await primary.evaluate(element => getComputedStyle(element).scale), '0.96');
+  await page.mouse.up();
+  await primary.evaluate(element => { element.dataset.static = ''; });
+  await page.mouse.down();
+  await new Promise(resolve => setTimeout(resolve, 200));
+  assert.equal(await primary.evaluate(element => getComputedStyle(element).scale), 'none', 'Static opt-out must suppress press scaling');
+  await page.mouse.up();
+  await primary.evaluate(element => { delete element.dataset.static; });
+  await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
+  await page.mouse.down();
+  await new Promise(resolve => setTimeout(resolve, 200));
+  assert.equal(await primary.evaluate(element => getComputedStyle(element).scale), 'none', 'Reduced motion must suppress press scaling');
+  await page.mouse.up();
+  assert.equal(await page.$eval('.hero-home__actions a:nth-child(2) svg path', element => getComputedStyle(element).vectorEffect), 'non-scaling-stroke');
+  assert.equal(await page.$eval('.hero-home__portrait img', element => getComputedStyle(element).outlineOffset), '-1px');
+  console.log('PASS: touch hover, overlay scroll containment, press feedback, static opt-out, reduced motion and image/icon styling.');
   console.log('PASS: complete diagnostic journey at 100%/200% text, forced-colors focus, menu isolation and restoration.');
   console.log('PASS: narrow layouts, enlarged text, menu keyboard/focus, reduced motion and pagination targets. External requests mocked.');
 } finally {

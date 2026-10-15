@@ -201,7 +201,7 @@ function navLinkIsActive(href: string): boolean {
 			</button>
 		</div>
 
-		<nav class="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6" aria-label="Liens principaux">
+		<nav class="flex flex-1 flex-col gap-1 overflow-y-auto overscroll-contain px-4 py-6" aria-label="Liens principaux">
 			{links.map((link) => {
 				const active = navLinkIsActive(link.href);
 				return (

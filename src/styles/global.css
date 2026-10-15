@@ -300,31 +300,41 @@ footer .footer-animated-underline:focus-visible {
         transform 0.2s ease;
 }
 
-.btn-primary-solid:hover {
-    background-color: var(--color-primary-900);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
-}
-
-@media (hover: none) {
-    .btn-primary-solid:hover,
-    .btn-outline-terracotta:hover,
-    .btn-outline-accent:hover {
-        transform: none;
+@media (hover: hover) {
+    .btn-primary-solid:not(:disabled):not([aria-disabled="true"]):hover {
+        background-color: var(--color-primary-900);
+        box-shadow: var(--shadow-lg);
     }
 }
 
-.btn-primary-solid:active {
-    transform: translateY(0);
+.btn-primary-solid:not(:disabled):not([aria-disabled="true"]):active {
     box-shadow: var(--shadow-sm);
 }
 
-@media (prefers-reduced-motion: reduce) {
-
-    .btn-primary-solid:hover,
-    .btn-primary-solid:active {
-        transform: none;
+@media (prefers-reduced-motion: no-preference) {
+    .btn-primary-solid {
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 150ms ease-out, box-shadow 150ms ease-out, scale 150ms ease-out, transform 150ms ease-out;
     }
+
+    @media (hover: hover) {
+        .btn-primary-solid:not(:disabled):not([aria-disabled="true"]):hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    .btn-primary-solid:not(:disabled):not([aria-disabled="true"]):active {
+        transform: translateY(0);
+    }
+
+    .btn-primary-solid:not(:disabled):not([aria-disabled="true"]):not([data-static]):active {
+        scale: 0.96;
+    }
+}
+
+.content-image {
+    outline: 1px solid oklch(0 0 0 / 0.1);
+    outline-offset: -1px;
 }
 
 /* Outline terracotta (hero secondaire) — hover lisible sans opacity */
@@ -338,9 +348,16 @@ footer .footer-animated-underline:focus-visible {
         border-color 0.2s ease;
 }
 
-.btn-outline-terracotta:hover {
-    box-shadow: var(--shadow-sm);
-    transform: translateY(-1px);
+@media (hover: hover) {
+    .btn-outline-terracotta:hover {
+        box-shadow: var(--shadow-sm);
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .btn-outline-terracotta:hover {
+        transform: translateY(-1px);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -359,9 +376,16 @@ footer .footer-animated-underline:focus-visible {
         transform 0.2s ease;
 }
 
-.btn-outline-accent:hover {
-    box-shadow: var(--shadow-sm);
-    transform: translateY(-1px);
+@media (hover: hover) {
+    .btn-outline-accent:hover {
+        box-shadow: var(--shadow-sm);
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .btn-outline-accent:hover {
+        transform: translateY(-1px);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
