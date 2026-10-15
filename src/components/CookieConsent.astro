@@ -1,0 +1,36 @@
+---
+const measurementId = (import.meta.env.PUBLIC_GA4_MEASUREMENT_ID ?? import.meta.env.GA4_MEASUREMENT_ID ?? '').trim();
+const enabled = /^G-[A-Z0-9]+$/.test(measurementId);
+---
+
+{enabled && <script is:inline define:vars={{ measurementId }}>
+  // Defer the first-party library; initialize from onload, never from a missed window.load.
+  window.tarteaucitronForceLanguage = 'fr';
+  window.tarteaucitronForceExpire = 180;
+  const script = document.createElement('script');
+  script.src = '/tarteaucitron/1.35.1/tarteaucitron.min.js';
+  script.defer = true;
+  script.onload = function () {
+    const tac = window.tarteaucitron;
+    tac.user.gtagUa = measurementId;
+    tac.job = ['gtag'];
+    tac.init({
+      privacyUrl: '/politique-confidentialite/',
+      hashtag: '#tarteaucitron',
+      cookieName: 'tarteaucitron',
+      orientation: 'bottom',
+      showAlertSmall: false,
+      showIcon: true,
+      iconPosition: 'BottomLeft',
+      highPrivacy: true,
+      serviceDefaultState: 'wait',
+      DenyAllCta: true,
+      AcceptAllCta: true,
+      removeCredit: false,
+      googleConsentMode: true,
+      softConsentMode: true,
+    });
+  };
+  script.onerror = function () { console.error('Impossible de charger la gestion des cookies. GA4 reste désactivé.'); };
+  document.head.appendChild(script);
+</script>}

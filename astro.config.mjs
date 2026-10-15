@@ -4,6 +4,18 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
+import { cpSync, mkdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+
+// Versioned first-party assets: no CDN dependency and safe immutable caching.
+const consentAssets = () => {
+  const source = new URL('./node_modules/tarteaucitronjs/', import.meta.url);
+  const target = new URL('./public/tarteaucitron/1.35.1/', import.meta.url);
+  mkdirSync(target, { recursive: true });
+  for (const file of ['tarteaucitron.min.js', 'tarteaucitron.services.min.js', 'css', 'lang', 'LICENSE']) {
+    cpSync(fileURLToPath(new URL(file, source)), fileURLToPath(new URL(file, target)), { recursive: true });
+  }
+};
 import llmsMd, {
   SITE_LLMS_DESCRIPTION,
   SITE_LLMS_NAME,
@@ -42,6 +54,7 @@ export default defineConfig({
   },
 
   integrations: [
+    { name: 'local-consent-assets', hooks: { 'astro:config:setup': consentAssets } },
     sitemap({
       /** @param {string} page */
       filter: (page) => shouldIncludeInSitemap(page),
