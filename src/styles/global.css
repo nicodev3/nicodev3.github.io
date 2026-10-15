@@ -23,8 +23,12 @@
     --color-primary: var(--color-primary-500);
     --color-primary-hover: var(--color-primary-700);
     --color-primary-pressed: var(--color-primary-900);
-    /* Boutons pleins (primary-container Stitch) */
-    --color-primary-foreground: #b35c44;
+    /* Textes terracotta foncés et remplissage des boutons séparés. */
+    --color-primary-foreground: var(--color-primary-700);
+    --color-accent-solid: #b35c44;
+    --color-input-border: #9b8078;
+    --color-whatsapp: #087568;
+    --color-whatsapp-hover: #065f55;
     --color-neutral-0: #ffffff;
     --color-neutral-50: #f8f9fa;
     --color-neutral-600: #545f72;
@@ -64,6 +68,7 @@
 /* Styles globaux personnalisés */
 
 body {
+    overflow-wrap: anywhere;
     @apply font-sans text-base;
 }
 
@@ -97,6 +102,41 @@ body {
 
 .shell-prose {
     max-width: 72ch;
+}
+
+.article-prose {
+    max-width: 60ch;
+    margin-inline: auto;
+    overflow-wrap: break-word;
+}
+
+.article-table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin-block: 1.5em;
+}
+
+.article-table-scroll:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.article-prose .article-table-scroll table {
+    min-width: 36rem;
+    margin-block: 0;
+}
+
+@media (max-width: 48rem) {
+    .article-table-scroll::before {
+        content: 'Faites défiler le tableau →';
+        display: block;
+        position: sticky;
+        left: 0;
+        margin-bottom: 0.5rem;
+        color: var(--color-muted);
+        font: 500 0.875rem/1.5 var(--font-sans);
+    }
 }
 
 .section-y {
@@ -251,7 +291,7 @@ footer .footer-animated-underline:focus-visible {
 .btn-primary-solid {
     font-size: var(--text-base);
     font-weight: 600;
-    background-color: var(--color-primary-foreground);
+    background-color: var(--color-accent-solid);
     color: var(--color-on-primary);
     box-shadow: var(--shadow-md);
     transition:
@@ -387,4 +427,12 @@ footer .footer-animated-underline:focus-visible {
     body.omit-site-chrome-in-print {
         background: #fff !important;
     }
+}
+
+/* Keep keyboard focus visible when Windows replaces colors and removes shadows. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid Highlight !important;
+    outline-offset: 3px !important;
+  }
 }

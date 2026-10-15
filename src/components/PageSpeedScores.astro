@@ -17,7 +17,7 @@ const {
     class="rounded-lg border border-border bg-white px-2 py-3 shadow-sm sm:px-1.5"
     aria-label={title ? `Scores PageSpeed du site ${title}` : "Scores PageSpeed"}
   >
-    <div class="mb-3 flex items-center justify-between gap-2">
+    <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
       <p class="text-xs font-medium text-foreground sm:text-sm">
         Scores Google PageSpeed Insights
       </p>
@@ -29,7 +29,7 @@ const {
         >
           i
         </button>
-        <div class="pointer-events-none absolute right-0 top-full z-10 mt-2 w-56 rounded-lg border border-border bg-white p-3 text-left text-[11px] leading-snug text-muted opacity-0 transition-opacity duration-150 group-focus-within:pointer-events-auto group-focus-within:opacity-100 sm:w-64 sm:text-xs">
+        <div class="pointer-events-none absolute right-0 top-full z-10 mt-2 w-[min(14rem,60vw)] rounded-lg border border-border bg-white p-3 text-left text-[11px] leading-snug text-muted opacity-0 transition-opacity duration-150 group-focus-within:pointer-events-auto group-focus-within:opacity-100 sm:w-[min(16rem,60vw)] sm:text-xs">
           <p>
             Ce score evalue la rapidite, l'accessibilite, les bonnes pratiques et le SEO technique du site.
           </p>
@@ -43,7 +43,7 @@ const {
             <div class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-lime-500 text-sm font-semibold leading-none text-lime-700 sm:h-10 sm:w-10 sm:text-base">
               {score}
             </div>
-            <span class="whitespace-nowrap text-[10px] font-medium leading-snug text-foreground sm:text-[11px]">
+            <span class="text-[10px] font-medium leading-snug text-foreground sm:text-[11px]">
               {metric}
             </span>
           </div>

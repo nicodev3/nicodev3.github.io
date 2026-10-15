@@ -37,9 +37,9 @@ const serenityFeatures = [
 const visibilityFeatures = [
 	"Tout le contenu de l'offre Sérénité",
 	'Support prioritaire : réponses plus rapides, modifications traitées en premier',
-	'SEO expert + GEO : plus d’outils (dont Ahrefs), citabilité pour Google et les IA (Aperçus IA, assistants)**',
+	'Analyse et optimisation approfondies de votre visibilité dans Google et les réponses des assistants IA**',
 	'Aide à la rédaction : relecture, reformulation et idées d’articles à publier',
-	'3 modifications simples par mois et modernisation annuelle du site',
+	'3 modifications simples par mois au lieu d’une, et modernisation annuelle du site',
 ];
 ---
 
@@ -55,17 +55,17 @@ const visibilityFeatures = [
 				{PRICING_HEADLINE}
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				{PRICING_LEAD} Les deux formules comprennent l’hébergement, un CMS, les bases SEO, la fiche Google et une
-				veille de visibilité. La formule à 49 € ajoute un accompagnement plus serré : support prioritaire, SEO
-				expert et GEO (visibilité Google et IA), et aide à la rédaction.
+				{PRICING_LEAD} Les deux formules comprennent l’hébergement, un espace pour modifier vos textes et publier
+				des articles, les bases du référencement et la fiche Google. À 49 €, vous bénéficiez de trois modifications
+				par mois au lieu d’une, du support prioritaire, d’une aide à la rédaction et d’un travail de visibilité plus approfondi.
 			</p>
 		</header>
 
 		<aside
-			class="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-2"
+			class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2"
 			aria-label="Coût de construction et propriété du site"
 		>
-			<div class="rounded-xl border border-primary/30 bg-white px-6 py-5 shadow-sm">
+			<div class="rounded-xl border border-primary/30 bg-white px-4 py-5 shadow-sm sm:px-6">
 				<p class="type-label-mono text-primary">Aucun coût de base</p>
 				<p class="mt-2 font-heading text-2xl font-semibold text-foreground">
 					{SETUP_FEE_AMOUNT}
@@ -76,12 +76,12 @@ const visibilityFeatures = [
 					{SERENITE_MONTHLY_SPACED} ou {VISIBILITE_MONTHLY_SPACED} par mois, selon la formule.
 				</p>
 			</div>
-			<div class="rounded-xl border border-border bg-white px-6 py-5 shadow-sm">
+			<div class="rounded-xl border border-border bg-white px-4 py-5 shadow-sm sm:px-6">
 				<p class="type-label-mono text-primary">Votre site, pas une location</p>
 				<p class="mt-2 font-heading text-2xl font-semibold text-foreground">Il vous appartient</p>
 				<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-					L’abonnement couvre l’hébergement, la maintenance et le suivi. Si vous résiliez, le site n’est ni
-					mis hors ligne ni effacé&nbsp;: je vous remets le nom de domaine et une copie exploitable.
+					L’hébergement et le suivi s’arrêtent à la fin de la période déjà payée. Sur demande, je vous remets
+					une copie exploitable du site et transfère le nom de domaine pour permettre son réhébergement ailleurs.
 				</p>
 			</div>
 		</aside>
@@ -93,7 +93,7 @@ const visibilityFeatures = [
 				setupPrice={SETUP_FEE_AMOUNT}
 				setupLabel={SETUP_FEE_LABEL}
 				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique — avec un espace pour modifier vos textes et publier des articles."
-				summary="Site + CMS + SEO (bases et veille) + fiche Google"
+				summary="Site + hébergement + suivi technique + fiche Google"
 				features={serenityFeatures}
 				buttonLabel="Demander un diagnostic gratuit"
 				buttonHref="/diagnostic-gratuit/"
@@ -107,8 +107,8 @@ const visibilityFeatures = [
 				price={VISIBILITE_MONTHLY}
 				setupPrice={SETUP_FEE_AMOUNT}
 				setupLabel={SETUP_FEE_LABEL}
-				description="Pour un accompagnement plus serré : support prioritaire, SEO expert et GEO (Google + IA), et aide à la rédaction — sans que vous ayez à gérer Google ni vos textes seul."
-				summary="Support prioritaire + SEO expert + GEO + aide à la rédaction"
+				description="Pour faire évoluer votre site avec davantage de soutien : modifications plus fréquentes, aide à la rédaction et travail approfondi sur votre visibilité dans Google et les réponses des assistants IA."
+				summary="3 modifications par mois + support prioritaire + aide à la rédaction"
 				features={visibilityFeatures}
 				buttonLabel="Demander un diagnostic gratuit"
 				buttonHref="/diagnostic-gratuit/"
@@ -126,17 +126,15 @@ const visibilityFeatures = [
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-wider text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						0 € de construction, puis un site professionnel, un CMS, une fiche Google et une veille de
-						visibilité : je surveille, je détecte les problèmes et je corrige. Vous publiez si vous le
-						souhaitez.
+						Un site professionnel avec hébergement, fiche Google et suivi technique. Une modification simple
+						par mois est incluse ; vous pouvez aussi modifier vos textes et publier des articles vous-même.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-wider text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						Même base, avec un accompagnement plus poussé : support prioritaire, SEO expert et GEO (plus
-						d’outils, citabilité pour les IA), aide à la rédaction, davantage de modifications et une
-						modernisation annuelle. Voir la page{' '}
+						La même base, avec trois modifications simples par mois, le support prioritaire, une aide à la
+						rédaction et une modernisation annuelle. Le travail de visibilité est également plus approfondi. Voir la page{' '}
 						<a
 							href="/referencement-site-psychologue/"
 							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
@@ -171,11 +169,9 @@ const visibilityFeatures = [
 			mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement.
 		</p>
 		<p class="mx-auto mt-2 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
-			** Le SEO expert et le GEO de l’offre Visibilité &amp; Confiance s’appuient sur davantage d’outils
-			professionnels (notamment Ahrefs) et sur la citabilité du cabinet dans les réponses IA (Aperçus Google,
-			assistants), en plus de la veille déjà incluse dès Sérénité. C’est un travail d’analyse et d’optimisation
-			plus poussé — pas une place garantie dans Google ni une citation garantie dans ChatGPT. Le résultat dépend
-			aussi de votre ville, de la concurrence locale et de la régularité des contenus.
+			** Ce travail complète la veille déjà incluse dans Sérénité : analyse et optimisation du site pour les
+			recherches Google et les réponses des assistants IA. Il ne garantit ni une position dans Google ni une
+			citation dans une réponse IA. Les résultats dépendent aussi de votre ville, de la concurrence et des contenus publiés.
 		</p>
 	</div>
 </section>

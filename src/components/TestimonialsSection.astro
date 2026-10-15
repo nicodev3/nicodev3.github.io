@@ -147,6 +147,8 @@ const carouselTestimonials = [
 		const { signal } = ac;
 
 		const getScrollStep = () => track.clientWidth;
+		const scrollBehavior = (): ScrollBehavior =>
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
 
 		const getPageCount = () =>
 			Math.max(Math.ceil(track.scrollWidth / Math.max(getScrollStep(), 1)), 1);
@@ -157,7 +159,7 @@ const carouselTestimonials = [
 			const maxScroll = getMaxScroll();
 			const step = getScrollStep();
 			const target = Math.min(Math.max(0, pageIndex) * step, maxScroll);
-			track.scrollTo({ left: target, behavior: 'smooth' });
+			track.scrollTo({ left: target, behavior: scrollBehavior() });
 		}
 
 		function rebuildDots(pageCount: number, activePage: number) {
@@ -166,7 +168,7 @@ const carouselTestimonials = [
 				const btn = document.createElement('button');
 				btn.type = 'button';
 				btn.className =
-					'h-2.5 w-2.5 shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+					'h-6 w-6 p-1.5 [background-clip:content-box] shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
 					(i === activePage ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
 				btn.setAttribute('aria-label', `Afficher la série de témoignages ${i + 1} sur ${pageCount}`);
 				if (i === activePage) btn.setAttribute('aria-current', 'true');
@@ -211,7 +213,7 @@ const carouselTestimonials = [
 				Array.from(dotsEl.querySelectorAll('button')).forEach((btn, i) => {
 					const on = i === clampedPage;
 					btn.className =
-						'h-2.5 w-2.5 shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+						'h-6 w-6 p-1.5 [background-clip:content-box] shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
 						(on ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
 					if (on) btn.setAttribute('aria-current', 'true');
 					else btn.removeAttribute('aria-current');
@@ -248,7 +250,7 @@ const carouselTestimonials = [
 		prevBtn.addEventListener(
 			'click',
 			() => {
-				track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+				track.scrollBy({ left: -getScrollStep(), behavior: scrollBehavior() });
 			},
 			{ signal },
 		);
@@ -256,7 +258,7 @@ const carouselTestimonials = [
 		nextBtn.addEventListener(
 			'click',
 			() => {
-				track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+				track.scrollBy({ left: getScrollStep(), behavior: scrollBehavior() });
 			},
 			{ signal },
 		);
@@ -270,7 +272,7 @@ const carouselTestimonials = [
 				if (!(ae instanceof Node) || !track.contains(ae)) return;
 				e.preventDefault();
 				const dir = e.key === 'ArrowLeft' ? -1 : 1;
-				track.scrollBy({ left: dir * getScrollStep(), behavior: 'smooth' });
+				track.scrollBy({ left: dir * getScrollStep(), behavior: scrollBehavior() });
 			},
 			{ capture: true, signal },
 		);

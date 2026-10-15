@@ -4,6 +4,8 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
+import accessibleTables from './src/integrations/accessible-tables.mjs';
+import { satteri } from '@astrojs/markdown-satteri';
 import { cpSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
@@ -45,6 +47,7 @@ const shouldIncludeInSitemap = (page) => {
 export default defineConfig({
   site: 'https://nicodev.fr',
   trailingSlash: 'always',
+  markdown: { processor: satteri({ hastPlugins: [accessibleTables] }) },
   build: {
     inlineStylesheets: 'always',
   },

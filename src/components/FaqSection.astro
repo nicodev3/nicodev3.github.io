@@ -56,8 +56,8 @@ const headingAlignClass = headingAlign === 'center' ? 'text-center' : '';
 					]}
 					{...(index === 0 ? { open: true } : {})}
 				>
-					<summary class="faq-summary flex cursor-pointer list-none items-center justify-between gap-4 bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))] p-6 transition-colors hover:bg-[color-mix(in_srgb,var(--color-foreground)_6%,var(--color-background))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-inset">
-						<span class="font-heading text-left text-xl font-semibold leading-snug text-foreground">
+					<summary class="faq-summary flex cursor-pointer list-none items-center justify-between gap-4 bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))] p-4 sm:p-6 transition-colors hover:bg-[color-mix(in_srgb,var(--color-foreground)_6%,var(--color-background))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset">
+						<span class="min-w-0 font-heading text-left text-xl font-semibold leading-snug text-foreground">
 							{item.question}
 						</span>
 						<ChevronDown

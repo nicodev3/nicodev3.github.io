@@ -24,8 +24,8 @@ const { links = defaultLinks } = Astro.props;
 
 const projectCta = {
 	href: '/diagnostic-gratuit/',
-	label: 'Faire le point sur votre visibilité',
-	ariaLabel: 'Faire le point sur votre visibilité — diagnostic gratuit',
+	label: 'Demander un diagnostic gratuit',
+	ariaLabel: 'Demander un diagnostic gratuit',
 };
 
 /** Chemin sans slash final sauf racine. */
@@ -58,14 +58,14 @@ function navLinkIsActive(href: string): boolean {
 
 <header
 	data-site-header
-	class="site-header sticky top-0 z-50 flex h-20 items-center border-b border-border bg-surface"
+	class="site-header sticky top-0 z-50 flex min-h-20 items-center border-b border-border bg-surface py-3"
 >
-	<nav class="shell-layout flex min-w-0 w-full items-center justify-between gap-4" aria-label="Navigation principale">
-		<div class="flex min-w-0 shrink-0 flex-col items-start gap-1">
+	<nav class="shell-layout flex min-w-0 w-full items-center justify-between gap-2" aria-label="Navigation principale">
+		<div class="flex min-w-0 flex-col items-start gap-1">
 			<a
 				href="/"
 				data-site-wordmark
-				class="site-header__brand shrink-0 transition-opacity hover:opacity-90"
+				class="site-header__brand max-w-full transition-opacity hover:opacity-90"
 				aria-current={currentPath === '/' ? 'page' : undefined}
 				aria-label="nicodev. — retour à l’accueil"
 			>
@@ -81,7 +81,7 @@ function navLinkIsActive(href: string): boolean {
 			</a>
 
 			<div
-				class="ml-0.5 flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[0.625rem] font-medium leading-none text-muted sm:text-[0.6875rem]"
+				class="ml-0.5 flex flex-wrap items-center gap-1.5 text-[0.625rem] font-medium leading-none text-muted sm:text-[0.6875rem]"
 				role="group"
 				aria-label="Double expertise"
 			>
@@ -107,8 +107,8 @@ function navLinkIsActive(href: string): boolean {
 			</div>
 		</div>
 
-		<div class="flex min-w-0 items-center gap-3 md:gap-4 xl:gap-6">
-			<div class="hidden md:flex md:min-w-0 md:items-center md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+		<div class="flex shrink-0 items-center gap-3 md:gap-4 xl:gap-6">
+			<div class="site-nav-desktop min-w-0 items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
 				{links.map((link) => {
 					const active = navLinkIsActive(link.href);
 					return (
@@ -137,16 +137,16 @@ function navLinkIsActive(href: string): boolean {
 					data-analytics-cta="diagnostic"
 					data-analytics-location="header"
 					data-lead-source="header"
-					class="btn-primary-solid hidden shrink-0 touch-manipulation items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground lg:inline-flex xl:px-6 xl:text-base"
+					class="site-nav-cta btn-primary-solid shrink-0 touch-manipulation items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				>
-					<span class="xl:hidden">Diagnostic gratuit</span>
-					<span class="hidden xl:inline">{projectCta.label}</span>
+					<span class="site-nav-cta-short">Diagnostic gratuit</span>
+					<span class="site-nav-cta-long">{projectCta.label}</span>
 				</a>
 			</div>
 
 			<button
 				type="button"
-				class="mobile-nav-toggle inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground md:hidden"
+				class="mobile-nav-toggle inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
 				aria-expanded="false"
 				aria-controls="mobile-nav-drawer"
 				data-mobile-nav-toggle
@@ -169,7 +169,7 @@ function navLinkIsActive(href: string): boolean {
 	-->
 	<div
 		id="mobile-nav-drawer"
-		class="mobile-nav-drawer fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none md:hidden"
+		class="mobile-nav-drawer fixed inset-0 z-100 flex translate-x-full flex-col bg-white opacity-0 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none pointer-events-none"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu de navigation"
@@ -311,6 +311,29 @@ function navLinkIsActive(href: string): boolean {
 		const iconClose = navToggle.querySelector('.mobile-nav-icon-close');
 
 		let previouslyFocused: HTMLElement | null = null;
+		const backgroundState = new Map<HTMLElement, boolean>();
+		let previousOverflow = '';
+
+		function restoreBackground() {
+			backgroundState.forEach((wasInert, element) => { element.inert = wasInert; });
+			backgroundState.clear();
+			document.body.style.overflow = previousOverflow;
+		}
+
+		function isolateDrawer() {
+			// Isolate siblings at every level without making the drawer itself inert.
+			let branch: HTMLElement = navDrawer;
+			while (branch.parentElement) {
+				for (const sibling of branch.parentElement.children) {
+					if (sibling instanceof HTMLElement && sibling !== branch) {
+						backgroundState.set(sibling, sibling.inert);
+						sibling.inert = true;
+					}
+				}
+				if (branch.parentElement === document.body) break;
+				branch = branch.parentElement;
+			}
+		}
 
 		function isOpen() {
 			return navToggle.getAttribute('aria-expanded') === 'true';
@@ -319,6 +342,7 @@ function navLinkIsActive(href: string): boolean {
 		function open() {
 			previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
 			navDrawer.hidden = false;
+			previousOverflow = document.body.style.overflow;
 			document.body.style.overflow = 'hidden';
 			requestAnimationFrame(() => {
 				navDrawer.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
@@ -330,6 +354,7 @@ function navLinkIsActive(href: string): boolean {
 				iconOpen?.classList.add('hidden');
 				iconClose?.classList.remove('hidden');
 				navDrawer.querySelector<HTMLElement>('[data-mobile-nav-close]')?.focus();
+				isolateDrawer();
 			});
 		}
 
@@ -342,7 +367,7 @@ function navLinkIsActive(href: string): boolean {
 			if (sr) sr.textContent = 'Ouvrir le menu';
 			iconOpen?.classList.remove('hidden');
 			iconClose?.classList.add('hidden');
-			document.body.style.overflow = '';
+			restoreBackground();
 
 			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -383,6 +408,9 @@ function navLinkIsActive(href: string): boolean {
 		links.forEach((a) => a.addEventListener('click', close, { signal }));
 
 		wordmarkClose?.addEventListener('click', close, { signal });
+		window.addEventListener('resize', () => {
+			if (isOpen() && getComputedStyle(navToggle).display === 'none') close();
+		}, { signal });
 
 		document.addEventListener(
 			'keydown',
@@ -412,7 +440,7 @@ function navLinkIsActive(href: string): boolean {
 
 		mobileNavTeardown = () => {
 			ac.abort();
-			document.body.style.overflow = '';
+			if (backgroundState.size) restoreBackground();
 			mobileNavTeardown = undefined;
 		};
 	}
@@ -482,6 +510,21 @@ function navLinkIsActive(href: string): boolean {
 </script>
 
 <style is:global>
+	/* em units follow the header's font size, including enlarged browser text. */
+	.site-header { container: site-header / inline-size; }
+	.site-nav-desktop, .site-nav-cta, .site-nav-cta-long { display: none; }
+	@container site-header (min-width: 48em) {
+		.site-nav-desktop { display: flex; }
+		.mobile-nav-toggle { display: none; }
+	}
+	@container site-header (min-width: 64em) {
+		.site-nav-cta { display: inline-flex; }
+	}
+	@container site-header (min-width: 80em) {
+		.site-nav-cta-short { display: none; }
+		.site-nav-cta-long { display: inline; }
+	}
+
 	[data-site-header] a[data-header-diagnostic-cta] {
 		transition:
 			opacity 200ms ease,

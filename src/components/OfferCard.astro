@@ -39,7 +39,7 @@ const {
 } = Astro.props;
 
 const shellClasses =
-	'relative flex flex-col rounded-lg bg-white p-8 sm:p-10 transition-[border-color,box-shadow,transform] duration-200';
+	'relative flex min-w-0 flex-col rounded-lg bg-white p-4 [overflow-wrap:anywhere] sm:p-10 transition-[border-color,box-shadow,transform] duration-200';
 
 const recommendedShell = recommended
 	? 'z-10 overflow-visible border-2 border-primary-foreground shadow-2xl md:scale-[1.05]'
@@ -79,7 +79,7 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 <article class={articleClass}>
 	{
 		recommended && badgeText && (
-			<span class="type-label-mono absolute left-1/2 top-0 z-20 max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-primary-foreground px-6 py-1 text-center font-bold tracking-wider text-on-primary shadow-sm">
+			<span class="type-label-mono absolute left-1/2 top-0 z-20 max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-foreground px-6 py-1 text-center font-bold tracking-wider text-on-primary shadow-sm">
 				{badgeText}
 			</span>
 		)
@@ -92,21 +92,21 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 				setupPrice ? (
 					<p class="mt-4">
 						<span class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-							<span class="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+							<span class="font-heading text-2xl font-bold tabular-nums tracking-tight text-foreground sm:text-3xl">
 								{setupPrice}
 							</span>
 							<span class="font-sans text-sm font-medium text-muted sm:text-base">{setupLabel}</span>
 						</span>
 						<span class="mt-1 flex flex-wrap items-baseline gap-x-2">
 							<span class="font-sans text-sm font-medium text-muted">puis</span>
-							<span class="font-heading text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
+							<span class="font-heading text-4xl font-bold tabular-nums leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
 								{price}
 							</span>
 							<span class="font-sans text-base font-normal tracking-normal text-muted">/mois</span>
 						</span>
 					</p>
 				) : (
-					<p class="mt-2 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
+					<p class="mt-2 font-heading text-4xl font-bold tabular-nums leading-[1.08] tracking-tight text-foreground sm:text-[2.75rem]">
 						{price}
 						<span class="ml-1 font-sans text-base font-normal tracking-normal text-muted">/mois</span>
 					</p>
@@ -128,7 +128,7 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 						stroke-width={1.75}
 						aria-hidden="true"
 					/>
-					<span>{feature}</span>
+					<span class="min-w-0">{feature}</span>
 				</li>
 			))}
 		</ul>

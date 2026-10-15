@@ -38,8 +38,8 @@ const avatarLabel = isGoogle
 
 const sourceLabel = isMalt ? 'Avis malt.fr' : 'Avis Google';
 const sourceBadgeClass = isMalt
-	? 'border-[color-mix(in_srgb,#FC5757_35%,var(--color-border))] bg-[color-mix(in_srgb,#FC5757_8%,var(--color-background))] text-[#c73e3e]'
-	: 'border-[color-mix(in_srgb,#4285F4_35%,var(--color-border))] bg-[color-mix(in_srgb,#4285F4_8%,var(--color-background))] text-[#1a73e8]';
+	? 'border-[color-mix(in_srgb,#FC5757_35%,var(--color-border))] bg-[color-mix(in_srgb,#FC5757_8%,var(--color-background))] text-[#a52a2a]'
+	: 'border-[color-mix(in_srgb,#4285F4_35%,var(--color-border))] bg-[color-mix(in_srgb,#4285F4_8%,var(--color-background))] text-[#185abc]';
 
 const footerNote = isMalt
 	? 'Recommandation publiée sur malt.fr'
@@ -49,7 +49,7 @@ const starCount = typeof rating === 'number' ? Math.min(Math.max(Math.round(rati
 const showStars = true;
 ---
 
-<blockquote class="flex h-full flex-col rounded-lg border border-border bg-white p-8">
+<blockquote class="flex h-full flex-col rounded-lg border border-border bg-white p-4 sm:p-8">
 	<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
 		<span
 			class:list={[
@@ -62,7 +62,7 @@ const showStars = true;
 			</span>
 		{
 			showStars && (
-				<div class:list={['flex gap-0.5', !isGoogle && 'text-primary-foreground']} aria-hidden="true">
+				<div class:list={['flex flex-wrap gap-0.5', !isGoogle && 'text-primary-foreground']} aria-hidden="true">
 					{Array.from({ length: 5 }).map((_, i) => {
 						const filled = i < starCount;
 						return (
@@ -86,7 +86,7 @@ const showStars = true;
 		}
 	</div>
 	{quote ? <p class="mb-8 flex-grow text-base italic leading-relaxed text-muted">{quote}</p> : null}
-	<footer class="flex items-center gap-3">
+	<footer class="flex flex-wrap items-center gap-3">
 		<div
 			class:list={[
 				'flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm',

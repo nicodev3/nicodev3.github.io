@@ -43,12 +43,6 @@ const reassuranceText = isDevisMode
 ---
 
 <div id="contact-form-wrapper" class="bg-background rounded-lg border border-border p-6 md:p-8 shadow-sm">
-	<div class="mb-6">
-		<ContactWhatsAppOption
-			variant="button"
-			umamiEvent={isDevisMode ? 'lead_click_whatsapp_from_devis' : 'lead_click_whatsapp_from_contact'}
-		/>
-	</div>
 	<form
 		id="contact-form"
 		name={formName}
@@ -130,6 +124,12 @@ const reassuranceText = isDevisMode
 		<p id="contact-form-feedback" class="hidden text-sm font-medium text-red-700 dark:text-red-400" role="alert" aria-live="polite" tabindex="-1"></p>
 		<p class="text-center text-xs text-muted">{reassuranceText}</p>
 	</form>
+	<div class="mt-8 border-t border-border pt-6">
+		<ContactWhatsAppOption
+			variant="button"
+			umamiEvent={isDevisMode ? 'lead_click_whatsapp_from_devis' : 'lead_click_whatsapp_from_contact'}
+		/>
+	</div>
 </div>
 
 <script is:inline>
