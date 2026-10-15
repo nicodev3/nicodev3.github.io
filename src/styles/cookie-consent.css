@@ -7,14 +7,18 @@ html body #tarteaucitronRoot #tarteaucitronAlertBig {
   width: calc(100% - 40px);
   max-width: 860px;
   padding: 22px 24px 16px;
-  border: 1px solid var(--color-border);
+  border: 1px solid transparent;
   border-radius: 16px;
   background: var(--color-background);
-  box-shadow: 0 8px 32px rgb(25 28 29 / 12%);
+  box-shadow:
+    0 0 0 1px oklch(0 0 0 / 0.06),
+    0 1px 2px -1px oklch(0 0 0 / 0.06),
+    0 2px 4px 0 oklch(0 0 0 / 0.04);
   text-align: left;
   font-family: var(--font-sans);
   max-height: calc(100dvh - 40px);
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 html body #tarteaucitronRoot #tarteaucitronDisclaimerAlert {
@@ -45,11 +49,28 @@ html body #tarteaucitronRoot #tarteaucitronAlertBig button {
   color: white;
   font: 600 14px/1.4 var(--font-sans) !important;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 150ms ease-out, opacity 150ms ease-out;
 }
 
-html body #tarteaucitronRoot #tarteaucitronAlertBig button:hover {
+html body #tarteaucitronRoot #tarteaucitronAlertBig button:not(:disabled):active {
   background: var(--color-primary-700);
-  border-color: var(--color-primary-700);
+}
+
+@media (hover: hover) {
+  html body #tarteaucitronRoot #tarteaucitronAlertBig button:not(:disabled):hover {
+    background: var(--color-primary-700);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html body #tarteaucitronRoot #tarteaucitronAlertBig button {
+    transition: background-color 150ms ease-out, opacity 150ms ease-out, scale 150ms ease-out;
+  }
+
+  html body #tarteaucitronRoot #tarteaucitronAlertBig button:not(:disabled):not([data-static]):active {
+    scale: 0.96;
+  }
 }
 
 html body #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert,
@@ -57,6 +78,20 @@ html body #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPrivacyUrl {
   background: transparent;
   color: var(--color-link);
   border-color: transparent;
+}
+
+@media (hover: hover) {
+  html body #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert:hover,
+  html body #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPrivacyUrl:hover {
+    background: var(--color-primary-50);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+html body #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert:active,
+html body #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPrivacyUrl:active {
+  background: var(--color-primary-100);
 }
 
 html body #tarteaucitronRoot #tarteaucitronAlertBig button:focus-visible {
