@@ -1,12 +1,19 @@
 ---
 const measurementId = (import.meta.env.PUBLIC_GA4_MEASUREMENT_ID ?? import.meta.env.GA4_MEASUREMENT_ID ?? '').trim();
 const enabled = /^G-[A-Z0-9]+$/.test(measurementId);
+import '../styles/cookie-consent.css';
 ---
 
 {enabled && <script is:inline define:vars={{ measurementId }}>
   // Defer the first-party library; initialize from onload, never from a missed window.load.
   window.tarteaucitronForceLanguage = 'fr';
   window.tarteaucitronForceExpire = 180;
+  window.tarteaucitronCustomText = {
+    alertBigPrivacy: 'Avec votre accord, Google Analytics nous aide à améliorer ce site. Vous pouvez refuser ou changer d’avis à tout moment.',
+    acceptAll: 'Accepter',
+    denyAll: 'Refuser',
+    personalize: 'Choisir',
+  };
   const script = document.createElement('script');
   script.src = '/tarteaucitron/1.35.1/tarteaucitron.min.js';
   script.defer = true;
