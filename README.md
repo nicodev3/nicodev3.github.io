@@ -13,7 +13,7 @@ Site personnel moderne de Nicolas Devaux, développeur Web front-end, construit 
 
 ### Prérequis
 
-- Node.js 18+ 
+- Node.js 24.22.0
 - npm ou yarn
 
 ### Installation
