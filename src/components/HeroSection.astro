@@ -8,19 +8,21 @@ import portraitImage from '../assets/images/nicodev.webp';
 	<div class="shell-layout">
 		<div class="hero-home__grid">
 			<div class="hero-home__copy">
-				<p class="type-label-mono text-primary-foreground">Sites internet pour psychologues, psychothérapeutes et psychomotriciens</p>
-				<h1 class="hero-home__title text-balance text-foreground">
-					Un site internet qui présente votre pratique de psychologue avec justesse
-				</h1>
-				<p class="hero-home__lead text-pretty text-muted">
-					Psychologue en exercice et développeur web, je réalise votre site à partir de votre pratique, puis prends en charge
-					l’hébergement et le suivi technique. Vous validez les textes avant la mise en ligne.
-				</p>
+				<div class="hero-home__head">
+					<p class="type-label-mono text-primary-foreground">Sites internet pour psychologues, psychothérapeutes et psychomotriciens</p>
+					<h1 class="hero-home__title text-balance text-foreground">
+						Un site internet qui présente votre pratique de psychologue avec justesse
+					</h1>
+					<p class="hero-home__lead text-pretty text-muted">
+						Psychologue en exercice et développeur web, je réalise votre site à partir de votre pratique, puis prends en charge
+						l’hébergement et le suivi technique. Vous validez les textes avant la mise en ligne.
+					</p>
+				</div>
 
 				<div class="hero-home__actions">
 					<a
 						href="/diagnostic-gratuit/"
-						class="btn-primary-solid mb-5 inline-flex items-center justify-center rounded-xl px-8 py-4 font-bold"
+						class="btn-primary-solid inline-flex items-center justify-center rounded-xl px-8 py-4 font-bold"
 						data-analytics-event="lead_click_diagnostic"
 						data-analytics-cta="diagnostic"
 						data-analytics-location="home_hero"
@@ -30,7 +32,7 @@ import portraitImage from '../assets/images/nicodev.webp';
 					</a>
 					<a
 						href="/tarifs/"
-						class="mb-5 inline-flex items-center justify-center gap-2 px-2 py-4 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+						class="inline-flex items-center justify-center gap-2 px-2 py-4 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
 						data-umami-event="lead_click_tarifs_from_home_hero"
 					>
 						Voir les tarifs
@@ -38,42 +40,49 @@ import portraitImage from '../assets/images/nicodev.webp';
 					</a>
 				</div>
 
-				<p class="hero-home__price flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted sm:text-base">
-					<BadgeCheck class="h-4 w-4 shrink-0 text-primary-foreground" stroke-width={1.75} aria-hidden="true" />
-					<span>0&nbsp;€ de construction, puis 29&nbsp;€ ou 49&nbsp;€/mois</span>
-				</p>
-
-				<p class="hero-home__trust text-sm text-muted">
-					<span class="text-foreground/85">Développeur depuis 20&nbsp;ans · sites de psychologues depuis 2015</span>
-					<a
-						href="#temoignages"
-						class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary-foreground hover:decoration-primary-foreground"
-					>
-						Avis de collègues accompagnés
-					</a>
-				</p>
+				<div class="hero-home__meta">
+					<p class="hero-home__price flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted">
+						<BadgeCheck class="h-4 w-4 shrink-0 text-primary-foreground" stroke-width={1.75} aria-hidden="true" />
+						<span>0&nbsp;€ de construction, puis 29&nbsp;€ ou 49&nbsp;€/mois</span>
+					</p>
+					<p class="hero-home__trust text-sm text-muted">
+						<span class="text-foreground/85">Développeur depuis 20&nbsp;ans · sites de psychologues depuis 2015</span>
+						<a
+							href="#temoignages"
+							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary-foreground hover:decoration-primary-foreground"
+						>
+							Avis de collègues accompagnés
+						</a>
+					</p>
+				</div>
 			</div>
 
-			<div class="hero-home__visual">
+			<figure class="hero-home__visual">
 				<div class="hero-home__portrait">
 					<Image
 						src={portraitImage}
-						alt="Nicodev, Sites internet pour psychologues"
-						class="content-image h-full w-full object-cover"
-						width={640}
-						height={800}
+						alt=""
+						class="content-image h-full w-full object-cover object-[center_18%]"
+						width={320}
+						height={320}
 						loading="eager"
 						fetchpriority="high"
 						decoding="async"
 					/>
 				</div>
-				<aside class="hero-home__card" aria-label="Présentation">
-					<p class="font-heading text-xl font-semibold text-primary-foreground">Nicolas Devaux</p>
-					<p class="mt-1 text-sm leading-relaxed text-muted">
-						Psychologue, psychomotricien, psychothérapeute &amp; développeur web.
-					</p>
-				</aside>
-			</div>
+				<figcaption class="hero-home__identity">
+					<p class="font-heading text-lg font-semibold text-foreground">Nicolas Devaux</p>
+					<p class="mt-1 text-sm leading-snug text-muted">Psychologue et développeur web</p>
+					<a
+						href="/about/"
+						class="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors duration-150 hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+						data-umami-event="lead_click_about_from_home_hero"
+					>
+						Mon parcours
+						<ArrowRight class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+					</a>
+				</figcaption>
+			</figure>
 		</div>
 
 		<div class="hero-home__story mx-auto mt-12 max-w-3xl space-y-4 text-center text-base leading-relaxed text-muted sm:text-lg md:mt-16">
@@ -102,37 +111,46 @@ import portraitImage from '../assets/images/nicodev.webp';
 	.hero-home__grid {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
-		align-items: center;
-		gap: 2.5rem;
+		align-items: start;
+		gap: 2rem;
 	}
 
 	@media (min-width: 768px) {
 		.hero-home__grid {
-			grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+			grid-template-columns: minmax(0, 1fr) auto;
 			gap: 3rem;
 		}
 	}
 
 	@media (min-width: 1024px) {
 		.hero-home__grid {
-			gap: 4rem;
+			gap: 4.5rem;
 		}
 	}
 
 	.hero-home__copy {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
 		min-width: 0;
-		overflow-wrap: anywhere;
+		overflow-wrap: break-word;
 		text-align: center;
 	}
 
 	@media (min-width: 768px) {
 		.hero-home__copy {
-			text-align: left;
+			gap: 1.75rem;
+			text-align: start;
 		}
 	}
 
+	.hero-home__head {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
 	.hero-home__title {
-		margin-top: 0.75rem;
 		font-family: var(--font-heading), ui-serif, Georgia, serif;
 		font-size: clamp(2.125rem, 1.35vw + 1.65rem, 3.25rem);
 		font-weight: 600;
@@ -141,28 +159,26 @@ import portraitImage from '../assets/images/nicodev.webp';
 	}
 
 	.hero-home__lead {
-		margin-top: 1.25rem;
-		max-width: 42rem;
+		max-width: 38rem;
+		margin-inline: auto;
 		font-size: clamp(1rem, 0.25vw + 0.96rem, 1.125rem);
 		line-height: 1.55;
 	}
 
 	@media (min-width: 768px) {
 		.hero-home__title { line-height: 1.2; }
-	}
 
-	@media (min-width: 768px) {
 		.hero-home__lead {
+			max-width: 36rem;
 			margin-inline: 0;
 		}
 	}
 
 	.hero-home__actions {
-		margin-top: 1.75rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.75rem;
+		gap: 0.5rem;
 	}
 
 	@media (min-width: 640px) {
@@ -185,8 +201,21 @@ import portraitImage from '../assets/images/nicodev.webp';
 		text-align: center;
 	}
 
+	.hero-home__meta {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	@media (min-width: 768px) {
+		.hero-home__meta {
+			align-items: flex-start;
+			max-width: 36rem;
+		}
+	}
+
 	.hero-home__price {
-		margin-top: 1rem;
 		justify-content: center;
 	}
 
@@ -197,11 +226,10 @@ import portraitImage from '../assets/images/nicodev.webp';
 	}
 
 	.hero-home__trust {
-		margin-top: 1rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.35rem;
+		gap: 0.25rem;
 	}
 
 	@media (min-width: 768px) {
@@ -211,49 +239,43 @@ import portraitImage from '../assets/images/nicodev.webp';
 	}
 
 	.hero-home__visual {
-		position: relative;
-		width: 100%;
-		max-width: 28rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+		width: min(100%, 16rem);
 		margin-inline: auto;
+		min-width: 0;
 	}
 
 	@media (min-width: 768px) {
 		.hero-home__visual {
-			max-width: none;
+			width: 16rem;
 			margin-inline: 0;
+			margin-block-start: 2.25rem;
 		}
 	}
 
 	.hero-home__portrait {
-		aspect-ratio: 4 / 5;
+		width: 10.5rem;
+		aspect-ratio: 1 / 1;
+		flex-shrink: 0;
 		overflow: hidden;
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
-		box-shadow: var(--shadow-lg);
+		border-radius: 9999px;
+		background: var(--color-surface);
+		box-shadow:
+			0 1px 2px oklch(0 0 0 / 0.04),
+			0 8px 20px oklch(0 0 0 / 0.08);
 	}
 
-	.hero-home__card {
-		position: absolute;
-		bottom: -1.25rem;
-		left: -0.5rem;
-		max-width: min(16rem, 100%);
-		padding: 1.25rem 1.5rem;
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
-		background: var(--color-neutral-0);
-		box-shadow: var(--shadow-md);
-	}
-
-	@media (min-width: 640px) {
-		.hero-home__card {
-			left: -1.25rem;
-			max-width: 18rem;
-		}
+	.hero-home__identity {
+		width: 100%;
+		text-align: center;
 	}
 
 	@media (min-width: 768px) {
 		.hero-home__story {
-			text-align: left;
+			text-align: start;
 		}
 	}
 </style>
