@@ -14,7 +14,7 @@ _Temps de lecture : 11 minutes_
 
 Quand une personne cherche un psychologue, elle ne commence pas toujours par parcourir plusieurs sites. Elle regarde souvent la carte, vérifie l’adresse, les horaires, les photos du cabinet, puis décide si elle souhaite en savoir plus.
 
-Une fiche Google Business Profile — l’ancien Google My Business — peut donc être très utile. Elle permet de présenter votre cabinet dans Google Search et Google Maps, gratuitement. Elle ne garantit toutefois ni une première place ni davantage de consultations : elle vous rend surtout plus facile à trouver et donne des repères concrets avant une prise de contact.
+Une fiche Google Business Profile, l’ancien Google My Business, peut donc être très utile. Elle permet de présenter votre cabinet dans Google Search et Google Maps, gratuitement. Elle ne garantit toutefois ni une première place ni davantage de consultations : elle vous rend surtout plus facile à trouver et donne des repères concrets avant une prise de contact.
 
 Ce guide explique comment créer une fiche exacte, sobre et adaptée à l’exercice d’un psychologue en France.
 
@@ -81,7 +81,7 @@ Si un prestataire vous accompagne, ajoutez-le comme gestionnaire. Ne lui transme
 
 ### 3. Saisir un nom réel, pas une liste de mots-clés
 
-Utilisez le nom sous lequel votre activité est connue et présentée dans la réalité : par exemple « Marie Martin — Psychologue » si cette formulation figure sur votre plaque, votre site ou vos documents professionnels.
+Utilisez le nom sous lequel votre activité est connue et présentée dans la réalité : par exemple « Marie Martin, Psychologue » si cette formulation figure sur votre plaque, votre site ou vos documents professionnels.
 
 Évitez les noms comme « Psychologue TCC EMDR anxiété Lyon centre ». Ajouter des services et une ville uniquement pour gagner des positions contrevient aux règles de Google et peut entraîner une suspension.
 
@@ -274,7 +274,7 @@ Un contrôle mensuel suffit généralement. Regardez surtout les tendances :
 - demandent-elles un itinéraire ?
 - une modification récente a-t-elle créé une baisse inhabituelle ?
 
-Ces données mesurent des interactions avec Google, pas le nombre réel de nouveaux patients. Pour comprendre l’origine des prises de contact, une question simple lors du premier échange — « Comment avez-vous trouvé mes coordonnées ? » — reste souvent plus parlante.
+Ces données mesurent des interactions avec Google, pas le nombre réel de nouveaux patients. Pour comprendre l’origine des prises de contact, une question simple lors du premier échange, « Comment avez-vous trouvé mes coordonnées ? », reste souvent plus parlante.
 
 ## Questions fréquentes
 
@@ -322,20 +322,20 @@ Si vous souhaitez un regard extérieur sur votre fiche et sa cohérence avec vot
 
 ## Sources officielles consultées
 
-- [Google — Conditions d’éligibilité et de propriété d’une fiche](https://support.google.com/business/answer/13763036)
-- [Google — Présentation du service et exclusion des activités exclusivement en ligne](https://support.google.com/business/answer/7039811)
-- [Google — Règles relatives aux activités de zone desservie](https://support.google.com/business/answer/9157481)
-- [Google — Règles de représentation d’une activité](https://support.google.com/business/answer/3038177)
-- [Google — Ajouter ou revendiquer une fiche](https://support.google.com/business/answer/2911778)
-- [Google — Vérifier une activité](https://support.google.com/business/answer/7107242)
-- [Google — Améliorer son classement local](https://support.google.com/business/answer/7091)
-- [Google — Règles relatives aux avis et contenus](https://support.google.com/contributionpolicy/answer/7400114)
-- [CNCDP — Code de déontologie des psychologues de 2021](https://www.cncdp.fr/index.php/code-de-deontologie/code-de-deontologie-2021)
-- [Agence du Numérique en Santé — Bascule des psychologues d’ADELI vers le RPPS](https://esante.gouv.fr/offres-services/annuaire-sante/bascule-des-professionnels-adeli-dans-le-rpps)
+- [Google, Conditions d’éligibilité et de propriété d’une fiche](https://support.google.com/business/answer/13763036)
+- [Google, Présentation du service et exclusion des activités exclusivement en ligne](https://support.google.com/business/answer/7039811)
+- [Google, Règles relatives aux activités de zone desservie](https://support.google.com/business/answer/9157481)
+- [Google, Règles de représentation d’une activité](https://support.google.com/business/answer/3038177)
+- [Google, Ajouter ou revendiquer une fiche](https://support.google.com/business/answer/2911778)
+- [Google, Vérifier une activité](https://support.google.com/business/answer/7107242)
+- [Google, Améliorer son classement local](https://support.google.com/business/answer/7091)
+- [Google, Règles relatives aux avis et contenus](https://support.google.com/contributionpolicy/answer/7400114)
+- [CNCDP, Code de déontologie des psychologues de 2021](https://www.cncdp.fr/index.php/code-de-deontologie/code-de-deontologie-2021)
+- [Agence du Numérique en Santé, Bascule des psychologues d’ADELI vers le RPPS](https://esante.gouv.fr/offres-services/annuaire-sante/bascule-des-professionnels-adeli-dans-le-rpps)
 
 ## À lire aussi
 
-- [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/) — pages essentielles, SEO et cadre professionnel
-- [Avis Google et e-réputation du psychologue](/blog/avis-google-e-reputation-psychologue/) — répondre avec prudence
-- [Référencement site psychologue](/referencement-site-psychologue/) — prestation et attentes réalistes
-- [Création de site web pour psychologue](/creation-site-internet-psychologue/) — offre vitrine et accompagnement
+- [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/), pages essentielles, SEO et cadre professionnel
+- [Avis Google et e-réputation du psychologue](/blog/avis-google-e-reputation-psychologue/), répondre avec prudence
+- [Référencement site psychologue](/referencement-site-psychologue/), prestation et attentes réalistes
+- [Création de site web pour psychologue](/creation-site-internet-psychologue/), offre vitrine et accompagnement

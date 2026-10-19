@@ -191,7 +191,7 @@ Ils peuvent aider à diffuser de la psychoéducation, rendre ton ton professionn
 
 Ils peuvent aussi devenir très chronophages, peu ciblés et fatigants, surtout si tu essaies d’y être présent·e sans stratégie claire.
 
-Si tu les utilises, le plus cohérent est de privilégier du contenu de sensibilisation, de la vulgarisation, de la prévention, des repères simples sur la santé mentale — et non de la promotion directe insistante, des promesses, des contenus conçus pour faire réagir à tout prix.
+Si tu les utilises, le plus cohérent est de privilégier du contenu de sensibilisation, de la vulgarisation, de la prévention, des repères simples sur la santé mentale, et non de la promotion directe insistante, des promesses, des contenus conçus pour faire réagir à tout prix.
 
 > 💡 **Astuce.** Si les réseaux sociaux t’épuisent ou t’éloignent de ta pratique, ils ne sont probablement pas ton meilleur levier principal. Un bon site, une bonne fiche Google et un réseau local clair peuvent suffire largement. Voir aussi [Instagram et site internet](/blog/psychologue-instagram-site-internet/).
 

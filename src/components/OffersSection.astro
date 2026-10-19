@@ -1,5 +1,7 @@
 ---
+import { ArrowRight } from '@lucide/astro';
 import OfferCard from './OfferCard.astro';
+import EditionSurPageDemo from './EditionSurPageDemo.astro';
 import { TARIFS_TRUST_SIGNALS } from '../data/tarifs-trust-signals';
 import {
 	PRICING_HEADLINE,
@@ -14,11 +16,14 @@ import {
 
 export interface Props {
 	background?: 'surface' | 'white' | 'background';
-	/** Page hôte — distingue les clics accueil / tarifs dans la mesure d’audience. */
+	/** Page hôte, distingue les clics accueil / tarifs dans la mesure d’audience. */
 	source?: string;
+	/** Accueil : cartes et intro courtes, détail sur /tarifs/. */
+	variant?: 'full' | 'home';
 }
 
-const { background = 'surface', source = 'tarifs' } = Astro.props;
+const { background = 'surface', source = 'tarifs', variant = 'full' } = Astro.props;
+const isHome = variant === 'home';
 
 const stripePaymentLinkSerenite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_SERENITE?.trim();
 const stripePaymentLinkVisibilite = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_VISIBILITE?.trim();
@@ -28,7 +33,7 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 const serenityFeatures = [
 	'Création ou refonte du site (0 € de frais de construction) et accompagnement pour clarifier les textes',
 	'Hébergement, nom de domaine et sauvegardes inclus*',
-	'Interface d’administration pour modifier le site et publier des articles',
+	'Publier des articles',
 	'Bases de référencement (SEO), fiche Google et bouton de rendez-vous (Doctolib, Perfactive ou autre)',
 	'Veille SEO : je surveille votre visibilité, je détecte les problèmes et je corrige',
 	'Mentions légales, base RGPD (protection des données), 1 modification simple par mois',
@@ -36,6 +41,15 @@ const serenityFeatures = [
 
 const visibilityFeatures = [
 	"Tout le contenu de l'offre Sérénité",
+	{
+		text: 'Modifier textes et tarifs directement sur la page, sans panneau d’administration séparé',
+		badge: 'Nouveau',
+	},
+	{
+		text: 'Connexion aux agents IA via MCP',
+		detail: 'Utilisez l’IA pour modifier ou créer des contenus directement dans votre site.',
+		badge: 'Nouveau',
+	},
 	'Support prioritaire : réponses plus rapides, modifications traitées en premier',
 	'Analyse et optimisation approfondies de votre visibilité dans Google et les réponses des assistants IA**',
 	'Aide à la rédaction : relecture, reformulation et idées d’articles à publier',
@@ -55,12 +69,34 @@ const visibilityFeatures = [
 				{PRICING_HEADLINE}
 			</h2>
 			<p class="mt-4 text-base text-muted sm:text-lg">
-				{PRICING_LEAD} Les deux formules comprennent l’hébergement, un espace pour modifier vos textes et publier
-				des articles, les bases du référencement et la fiche Google. À 49 €, vous bénéficiez de trois modifications
-				par mois au lieu d’une, du support prioritaire, d’une aide à la rédaction et d’un travail de visibilité plus approfondi.
+				{
+					isHome ? (
+						<>
+							{PRICING_LEAD} Deux formules sans frais de construction, détail, démo et comparatif sur la page{' '}
+							<a
+								href="/tarifs/"
+								class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+							>
+								Tarifs
+							</a>
+							.
+						</>
+					) : (
+						<>
+							{PRICING_LEAD} Les deux formules comprennent l’hébergement, les bases du référencement et la fiche Google.
+							À 49 €, vous pouvez aussi modifier vos contenus directement sur la page, avec trois modifications simples
+							par mois au lieu d’une, le support prioritaire, une aide à la rédaction et un travail de visibilité plus
+							approfondi.
+						</>
+					)
+				}
 			</p>
 		</header>
 
+		{!isHome && <EditionSurPageDemo />}
+
+		{
+			!isHome && (
 		<aside
 			class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2"
 			aria-label="Coût de construction et propriété du site"
@@ -85,6 +121,8 @@ const visibilityFeatures = [
 				</p>
 			</div>
 		</aside>
+			)
+		}
 
 		<div class="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-10 pt-0 md:grid-cols-2 lg:gap-12">
 			<OfferCard
@@ -92,7 +130,7 @@ const visibilityFeatures = [
 				price={SERENITE_MONTHLY}
 				setupPrice={SETUP_FEE_AMOUNT}
 				setupLabel={SETUP_FEE_LABEL}
-				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique — avec un espace pour modifier vos textes et publier des articles."
+				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique."
 				summary="Site + hébergement + suivi technique + fiche Google"
 				features={serenityFeatures}
 				buttonLabel="Demander un diagnostic gratuit"
@@ -118,6 +156,37 @@ const visibilityFeatures = [
 			/>
 		</div>
 
+		{
+			isHome && (
+				<p class="mx-auto mt-8 max-w-2xl text-center text-sm text-muted">
+					{SETUP_FEE_AMOUNT} de construction · Site transférable ·{' '}
+					<a
+						href="/tarifs/"
+						class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+					>
+						Conditions détaillées
+					</a>
+				</p>
+			)
+		}
+
+		{
+			isHome && (
+				<div class="mt-8 text-center">
+					<a
+						href="/tarifs/"
+						class="inline-flex items-center gap-2 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+						data-umami-event="lead_click_tarifs_from_home_offers"
+					>
+						Voir le détail des offres
+						<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+					</a>
+				</div>
+			)
+		}
+
+		{
+			!isHome && (
 		<div class="mx-auto mt-10 max-w-4xl border-y border-border py-6">
 			<h3 class="text-center font-heading text-xl font-semibold text-foreground">Pour vous repérer</h3>
 			<div class="mt-5 grid gap-4 md:grid-cols-2">
@@ -125,14 +194,16 @@ const visibilityFeatures = [
 					<p class="text-sm font-semibold uppercase tracking-wider text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
 						Un site professionnel avec hébergement, fiche Google et suivi technique. Une modification simple
-						par mois est incluse ; vous pouvez aussi modifier vos textes et publier des articles vous-même.
+						par mois est incluse ; vous pouvez aussi publier des articles.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-wider text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						La même base, avec trois modifications simples par mois, le support prioritaire, une aide à la
-						rédaction et une modernisation annuelle. Le travail de visibilité est également plus approfondi. Voir la page{' '}
+						La même base, avec l’édition sur la page, la connexion aux agents IA (MCP) pour créer ou modifier
+						vos contenus, trois modifications simples par mois, le support prioritaire, une aide à la rédaction
+						et une modernisation annuelle. Le travail de
+						visibilité est également plus approfondi. Voir la page{' '}
 						<a
 							href="/referencement-site-psychologue/"
 							class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
@@ -143,6 +214,8 @@ const visibilityFeatures = [
 				</div>
 			</div>
 		</div>
+			)
+		}
 
 		<ul class="mx-auto mt-8 grid max-w-4xl gap-3 text-sm text-muted sm:grid-cols-2 lg:grid-cols-4">
 			{TARIFS_TRUST_SIGNALS.map((label) => (
@@ -162,14 +235,20 @@ const visibilityFeatures = [
 			)
 		}
 
-		<p class="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
-			* Un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable autour de 8 à 40 € par
-			mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement.
-		</p>
-		<p class="mx-auto mt-2 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
-			** Ce travail complète la veille déjà incluse dans Sérénité : analyse et optimisation du site pour les
-			recherches Google et les réponses des assistants IA. Il ne garantit ni une position dans Google ni une
-			citation dans une réponse IA. Les résultats dépendent aussi de votre ville, de la concurrence et des contenus publiés.
-		</p>
+		{
+			!isHome && (
+				<>
+					<p class="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
+						* Un nom de domaine coûte souvent autour de 10 à 30 € par an et un hébergement fiable autour de 8 à 40 € par
+						mois lorsqu'ils sont pris séparément. Ici, ils sont inclus dans l'abonnement.
+					</p>
+					<p class="mx-auto mt-2 max-w-3xl text-center text-xs leading-relaxed text-muted sm:text-sm">
+						** Ce travail complète la veille déjà incluse dans Sérénité : analyse et optimisation du site pour les
+						recherches Google et les réponses des assistants IA. Il ne garantit ni une position dans Google ni une
+						citation dans une réponse IA. Les résultats dépendent aussi de votre ville, de la concurrence et des contenus publiés.
+					</p>
+				</>
+			)
+		}
 	</div>
 </section>

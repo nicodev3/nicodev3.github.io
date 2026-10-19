@@ -159,7 +159,7 @@ Exemple concret : si tu vises 2 000 € pour vivre, avec 700 € de charges fixe
 
 > 💡 **Astuce.** Estimation rapide de ta recette nette après URSSAF (micro-BNC) : [calculateur micro-BNC](/outils/micro-bnc-auto-entrepreneur/). Pour le nombre de séances : [seuil de viabilité](/outils/seuil-viabilite-seances/).
 
-Ce seuil n’a de sens que si l’agenda peut se remplir. D’où l’intérêt, en parallèle, d’une [visibilité claire](/blog/visibilite-installation-psychologue-liberal/) — fiche Google, site, réseau local — plutôt que d’attendre que « ça vienne tout seul ».
+Ce seuil n’a de sens que si l’agenda peut se remplir. D’où l’intérêt, en parallèle, d’une [visibilité claire](/blog/visibilite-installation-psychologue-liberal/), fiche Google, site, réseau local, plutôt que d’attendre que « ça vienne tout seul ».
 
 ## La trésorerie de départ : le vrai point sensible
 

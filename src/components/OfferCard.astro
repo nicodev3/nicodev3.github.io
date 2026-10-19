@@ -1,12 +1,18 @@
 ---
 import { CircleCheck } from '@lucide/astro';
 
+export interface OfferFeatureItem {
+	text: string;
+	detail?: string;
+	badge?: string;
+}
+
 export interface Props {
 	name: string;
 	price: string;
 	description: string;
 	summary?: string;
-	features: string[];
+	features: (string | OfferFeatureItem)[];
 	buttonLabel: string;
 	buttonHref: string;
 	/** Lien Stripe Payment Link (test ou live). Si défini, bouton principal vers le paiement. */
@@ -14,7 +20,7 @@ export interface Props {
 	subscribeLabel?: string;
 	recommended?: boolean;
 	badgeText?: string;
-	/** Page d’où la carte est affichée (accueil, tarifs…) — utilisé pour la mesure. */
+	/** Page d’où la carte est affichée (accueil, tarifs…), utilisé pour la mesure. */
 	source?: string;
 	/** Frais de construction affichés au-dessus du prix mensuel (ex. « 0 € »). */
 	setupPrice?: string;
@@ -121,16 +127,34 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 		</header>
 
 		<ul class="mb-10 flex-grow space-y-4 text-base text-foreground">
-			{features.map((feature) => (
-				<li class="flex items-start gap-3">
-					<CircleCheck
-						class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
-						stroke-width={1.75}
-						aria-hidden="true"
-					/>
-					<span class="min-w-0">{feature}</span>
-				</li>
-			))}
+			{features.map((feature) => {
+				const featureText = typeof feature === 'string' ? feature : feature.text;
+				const featureDetail = typeof feature === 'string' ? undefined : feature.detail;
+				const featureBadge = typeof feature === 'string' ? undefined : feature.badge;
+
+				return (
+					<li class="flex items-start gap-3">
+						<CircleCheck
+							class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground"
+							stroke-width={1.75}
+							aria-hidden="true"
+						/>
+						<span class="min-w-0">
+							<span class="block">
+								{featureText}
+								{featureBadge && (
+									<span class="type-label-mono ml-2 inline-flex shrink-0 rounded-full bg-primary-foreground/10 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-primary-foreground">
+										{featureBadge}
+									</span>
+								)}
+							</span>
+							{featureDetail && (
+								<span class="mt-1 block text-sm leading-relaxed text-muted">{featureDetail}</span>
+							)}
+						</span>
+					</li>
+				);
+			})}
 		</ul>
 
 		<div class="mt-auto flex flex-col gap-3" data-suppress-whatsapp-when-visible>

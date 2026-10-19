@@ -1,9 +1,8 @@
 ---
-import { ArrowRight, HousePlus, RefreshCw, Search } from '@lucide/astro';
+import { ArrowRight } from '@lucide/astro';
 
 const situations = [
 	{
-		Icon: HousePlus,
 		title: 'Vous vous installez en libéral',
 		description:
 			'Le site pose un cadre et des repères dès l’ouverture du cabinet : votre approche, les personnes que vous recevez, vos modalités et la manière de prendre rendez-vous.',
@@ -11,7 +10,6 @@ const situations = [
 		linkLabel: 'Ouvrir un cabinet de psychologue',
 	},
 	{
-		Icon: RefreshCw,
 		title: 'Vous créez ou refaites votre site',
 		description:
 			'Vous partez de zéro, ou votre site actuel ne correspond plus à votre pratique. Je vous aide à clarifier les contenus et je prends en charge toute la réalisation.',
@@ -19,10 +17,9 @@ const situations = [
 		linkLabel: 'Voir la prestation de création',
 	},
 	{
-		Icon: Search,
 		title: 'Vous voulez être mieux trouvé',
 		description:
-			'Vous avez un site mais il n\'est pas visible... Le site, la fiche Google et les contenus sont travaillés ensemble pour rendre votre cabinet plus visible dans votre ville.',
+			'Le site présente votre pratique, Google et la fiche locale donnent des repères cohérents dans votre ville. Doctolib ou l’outil de votre choix peut continuer à gérer les rendez-vous, sans faire dépendre toute votre présence d’une seule plateforme.',
 		href: '/referencement-site-psychologue/',
 		linkLabel: 'Comprendre le référencement local',
 	},
@@ -44,11 +41,8 @@ const situations = [
 
 		<div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
 			{
-				situations.map(({ Icon, title, description, href, linkLabel }) => (
+				situations.map(({ title, description, href, linkLabel }) => (
 					<article class="flex h-full flex-col rounded-lg border border-border bg-white p-6 shadow-sm sm:p-8">
-						<div class="ui-icon-well mb-5" aria-hidden="true">
-							<Icon class="h-5 w-5" stroke-width={1.5} />
-						</div>
 						<h3 class="font-heading text-xl font-semibold text-foreground">{title}</h3>
 						<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
 						<a

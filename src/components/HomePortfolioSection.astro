@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { ArrowRight, ArrowUpRight, Quote } from '@lucide/astro';
-import { googleTestimonials } from '../data/testimonials';
+import { ArrowRight, ArrowUpRight } from '@lucide/astro';
 import {
 	formatPortfolioProjectMeta,
 	getRecentPortfolioProjects,
@@ -10,18 +9,7 @@ import {
 /** Les 3 réalisations les plus récentes (ordre du tableau portfolio). */
 const projects = getRecentPortfolioProjects(3);
 
-/** Compare deux URL en ignorant le protocole, le `www.` et le slash final. */
-const normalizeSiteUrl = (value: string) =>
-	value.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/+$/, '').toLowerCase();
-
-/**
- * Rattache l’avis Google publié par la praticienne à sa réalisation, quand il existe.
- * Aucun avis n’est inventé : une réalisation sans avis publié s’affiche simplement sans citation.
- */
-const findTestimonial = (projectHref: string) =>
-	googleTestimonials.find((t) => normalizeSiteUrl(t.websiteUrl) === normalizeSiteUrl(projectHref));
-
-const projectsWithTestimonial = projects.map((project) => ({
+const projectsForHome = projects.map((project) => ({
 	title: project.title,
 	meta: formatPortfolioProjectMeta(project),
 	description:
@@ -30,7 +18,6 @@ const projectsWithTestimonial = projects.map((project) => ({
 	image: project.image,
 	imageAlt: project.imageAlt ?? `Page d’accueil du site de ${project.title}`,
 	href: project.url,
-	testimonial: findTestimonial(project.url),
 }));
 ---
 
@@ -41,65 +28,102 @@ const projectsWithTestimonial = projects.map((project) => ({
 			<h2 id="home-portfolio-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
 				Quelques sites réalisés pour des psychologues et psychothérapeutes
 			</h2>
-			<p class="mt-4 text-lg leading-relaxed text-muted">
-				Chaque site part d’une pratique, d’un cadre et d’une situation différents.
+			<p class="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+				Des pratiques et des cadres différents, le détail sur la page{' '}
+				<a
+					href="/portfolio/"
+					class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+				>
+					Portfolio
+				</a>
+				.
 			</p>
 		</header>
 
-		<div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
-			{
-				projectsWithTestimonial.map(({ title, meta, description, image, imageAlt, href, testimonial }) => (
-					<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm">
-						<a
-							href={href}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="block overflow-hidden border-b border-border bg-surface"
-							aria-label={`Visiter le site de ${title} — nouvel onglet`}
-						>
-							<Image
-								src={image}
-								alt={imageAlt}
-								widths={[420, 640, 840]}
-								sizes="(min-width: 1024px) 30vw, (min-width: 640px) 70vw, 100vw"
-								class="content-image aspect-[16/10] h-full w-full object-cover object-top motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.02]"
-								loading="lazy"
-								decoding="async"
-							/>
-						</a>
-						<div class="flex grow flex-col p-6">
-							<p class="type-label-mono text-muted">{meta}</p>
-							<h3 class="mt-2 font-heading text-xl font-semibold text-foreground">{title}</h3>
-							<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
-							{testimonial && (
-								<figure class="mt-5 rounded-lg border border-border bg-surface p-4">
-									<Quote
-										class="h-4 w-4 text-primary-foreground"
-										stroke-width={1.75}
-										aria-hidden="true"
-									/>
-									<blockquote class="mt-2 text-sm leading-relaxed text-muted">
-										{testimonial.quote}
-									</blockquote>
-									<figcaption class="mt-3 text-sm font-medium text-foreground">
-										{testimonial.author}
-										<span class="block type-label-mono font-normal text-muted">Avis Google</span>
-									</figcaption>
-								</figure>
-							)}
+		<div class="relative mt-12 flex flex-col gap-4" data-home-portfolio-carousel>
+			<div
+				class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 lg:grid lg:grid-cols-3 lg:overflow-visible lg:snap-none lg:pb-0"
+				data-carousel-track
+				tabindex="0"
+				role="region"
+				aria-roledescription="carrousel"
+				aria-label="Réalisations, faites défiler horizontalement sur mobile"
+			>
+				{
+					projectsForHome.map(({ title, meta, description, image, imageAlt, href }) => (
+						<article class="group flex h-full w-full shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm sm:w-[85%] lg:w-auto lg:shrink">
 							<a
 								href={href}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+								class="block overflow-hidden border-b border-border bg-surface"
+								aria-label={`Visiter le site de ${title}, nouvel onglet`}
 							>
-								Visiter le site
-								<ArrowUpRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+								<Image
+									src={image}
+									alt={imageAlt}
+									widths={[420, 640, 840]}
+									sizes="(min-width: 1024px) 30vw, (min-width: 640px) 85vw, 100vw"
+									class="content-image aspect-[16/10] h-full w-full object-cover object-top motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.02]"
+									loading="lazy"
+									decoding="async"
+								/>
 							</a>
-						</div>
-					</article>
-				))
-			}
+							<div class="flex grow flex-col p-6">
+								<p class="type-label-mono text-muted">{meta}</p>
+								<h3 class="mt-2 font-heading text-xl font-semibold text-foreground">{title}</h3>
+								<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
+								<a
+									href={href}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+								>
+									Visiter le site
+									<ArrowUpRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+								</a>
+							</div>
+						</article>
+					))
+				}
+			</div>
+
+			<div
+				class="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 sm:gap-x-4 lg:hidden"
+				data-carousel-toolbar
+			>
+				<button
+					type="button"
+					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
+					aria-label="Réalisation précédente"
+					data-carousel-prev
+				>
+					<span aria-hidden="true">←</span>
+				</button>
+
+				<div class="flex min-w-0 flex-col items-center gap-2 justify-self-center">
+					<p class="text-base font-medium tabular-nums text-foreground sm:text-lg" aria-live="polite">
+						<span data-carousel-current>1</span>
+						<span class="text-muted" aria-hidden="true"> / </span>
+						<span data-carousel-total>{projectsForHome.length}</span>
+					</p>
+					<div class="flex flex-wrap justify-center gap-2" data-carousel-dots aria-label="Pagination du carrousel"></div>
+					<p
+						data-carousel-swipe-hint
+						class="hidden max-w-[16rem] text-center text-xs italic leading-snug text-muted motion-reduce:transition-none"
+						aria-hidden="true"
+					/>
+				</div>
+
+				<button
+					type="button"
+					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
+					aria-label="Réalisation suivante"
+					data-carousel-next
+				>
+					<span aria-hidden="true">→</span>
+				</button>
+			</div>
 		</div>
 
 		<div class="mt-10 text-center">
@@ -113,3 +137,198 @@ const projectsWithTestimonial = projects.map((project) => ({
 		</div>
 	</div>
 </section>
+
+<script>
+	let homePortfolioCarouselTeardown: (() => void) | undefined;
+
+	function setupHomePortfolioCarousel() {
+		homePortfolioCarouselTeardown?.();
+
+		const carouselRoot = document.querySelector('[data-home-portfolio-carousel]');
+		const carouselTrack = carouselRoot?.querySelector<HTMLElement>('[data-carousel-track]');
+		const prevButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-carousel-prev]');
+		const nextButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-carousel-next]');
+		const currentLabel = carouselRoot?.querySelector<HTMLElement>('[data-carousel-current]');
+		const totalLabel = carouselRoot?.querySelector<HTMLElement>('[data-carousel-total]');
+		const dotsContainer = carouselRoot?.querySelector<HTMLElement>('[data-carousel-dots]');
+		const swipeHint = carouselRoot?.querySelector<HTMLElement>('[data-carousel-swipe-hint]');
+
+		if (
+			!carouselRoot ||
+			!carouselTrack ||
+			!prevButton ||
+			!nextButton ||
+			!currentLabel ||
+			!totalLabel ||
+			!dotsContainer
+		) {
+			return;
+		}
+
+		const track = carouselTrack;
+		const dotsEl = dotsContainer;
+		const prevBtn = prevButton;
+		const nextBtn = nextButton;
+		const curLabel = currentLabel;
+		const totLabel = totalLabel;
+
+		const ac = new AbortController();
+		const { signal } = ac;
+
+		const isDesktopGrid = () => window.matchMedia('(min-width: 1024px)').matches;
+
+		const getScrollStep = () => {
+			const first = track.querySelector<HTMLElement>('article');
+			if (!first) return track.clientWidth;
+			const styles = getComputedStyle(track);
+			const gap = Number.parseFloat(styles.columnGap || styles.gap || '0') || 0;
+			return first.offsetWidth + gap;
+		};
+
+		const scrollBehavior = (): ScrollBehavior =>
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+
+		const getPageCount = () => {
+			if (isDesktopGrid()) return 1;
+			return Math.max(Math.ceil(track.scrollWidth / Math.max(getScrollStep(), 1)), 1);
+		};
+
+		const getMaxScroll = () => track.scrollWidth - track.clientWidth;
+
+		function scrollToPage(pageIndex: number) {
+			const maxScroll = getMaxScroll();
+			const step = getScrollStep();
+			const target = Math.min(Math.max(0, pageIndex) * step, maxScroll);
+			track.scrollTo({ left: target, behavior: scrollBehavior() });
+		}
+
+		function rebuildDots(pageCount: number, activePage: number) {
+			dotsEl.innerHTML = '';
+			for (let i = 0; i < pageCount; i++) {
+				const btn = document.createElement('button');
+				btn.type = 'button';
+				btn.className =
+					'h-6 w-6 p-1.5 [background-clip:content-box] shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+					(i === activePage ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
+				btn.setAttribute('aria-label', `Afficher la réalisation ${i + 1} sur ${pageCount}`);
+				if (i === activePage) btn.setAttribute('aria-current', 'true');
+				btn.addEventListener(
+					'click',
+					() => {
+						scrollToPage(i);
+					},
+					{ signal },
+				);
+				dotsEl.appendChild(btn);
+			}
+		}
+
+		let dotRebuildScheduled = false;
+		function scheduleDotRebuild() {
+			if (dotRebuildScheduled) return;
+			dotRebuildScheduled = true;
+			requestAnimationFrame(() => {
+				dotRebuildScheduled = false;
+				updateButtons(true);
+			});
+		}
+
+		function updateButtons(rebuildDotsMaybe = false) {
+			const scrollLeft = track.scrollLeft;
+			const maxScroll = getMaxScroll();
+			const step = Math.max(getScrollStep(), 1);
+			const pageCount = getPageCount();
+			const rawIndex = Math.round(scrollLeft / step);
+			const clampedPage = Math.min(Math.max(rawIndex, 0), pageCount - 1);
+			const needsRebuild = rebuildDotsMaybe || dotsEl.childElementCount !== pageCount;
+
+			prevBtn.disabled = isDesktopGrid() || scrollLeft <= 8;
+			nextBtn.disabled = isDesktopGrid() || scrollLeft >= maxScroll - 8;
+			curLabel.textContent = String(clampedPage + 1);
+			totLabel.textContent = String(pageCount);
+
+			if (needsRebuild) {
+				rebuildDots(pageCount, clampedPage);
+			} else {
+				Array.from(dotsEl.querySelectorAll('button')).forEach((btn, i) => {
+					const on = i === clampedPage;
+					btn.className =
+						'h-6 w-6 p-1.5 [background-clip:content-box] shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
+						(on ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
+					if (on) btn.setAttribute('aria-current', 'true');
+					else btn.removeAttribute('aria-current');
+				});
+			}
+		}
+
+		function setupSwipeHint() {
+			const hintMaybe = swipeHint;
+			if (!hintMaybe) return;
+			const swipeHintEl = hintMaybe;
+			const coarse = window.matchMedia('(pointer: coarse)').matches;
+			if (!coarse || sessionStorage.getItem('home-portfolio-carousel-swipe-dismissed')) return;
+
+			swipeHintEl.textContent = '← Glissez pour voir plus →';
+			swipeHintEl.classList.remove('hidden');
+			swipeHintEl.removeAttribute('aria-hidden');
+
+			function hideSwipeHint() {
+				swipeHintEl.classList.add('hidden');
+				swipeHintEl.setAttribute('aria-hidden', 'true');
+				sessionStorage.setItem('home-portfolio-carousel-swipe-dismissed', '1');
+			}
+
+			const onScrollDismiss = () => {
+				if (sessionStorage.getItem('home-portfolio-carousel-swipe-dismissed')) return;
+				if (track.scrollLeft > 12) hideSwipeHint();
+			};
+
+			track.addEventListener('scroll', onScrollDismiss, { passive: true, signal });
+			window.setTimeout(hideSwipeHint, 10000);
+		}
+
+		prevBtn.addEventListener(
+			'click',
+			() => {
+				track.scrollBy({ left: -getScrollStep(), behavior: scrollBehavior() });
+			},
+			{ signal },
+		);
+
+		nextBtn.addEventListener(
+			'click',
+			() => {
+				track.scrollBy({ left: getScrollStep(), behavior: scrollBehavior() });
+			},
+			{ signal },
+		);
+
+		carouselRoot.addEventListener(
+			'keydown',
+			(e: Event) => {
+				if (!(e instanceof KeyboardEvent)) return;
+				if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+				const ae = document.activeElement;
+				if (!(ae instanceof Node) || !track.contains(ae)) return;
+				e.preventDefault();
+				const dir = e.key === 'ArrowLeft' ? -1 : 1;
+				track.scrollBy({ left: dir * getScrollStep(), behavior: scrollBehavior() });
+			},
+			{ capture: true, signal },
+		);
+
+		track.addEventListener('scroll', () => updateButtons(false), { passive: true, signal });
+		window.addEventListener('resize', scheduleDotRebuild, { signal });
+
+		updateButtons(true);
+		setupSwipeHint();
+
+		homePortfolioCarouselTeardown = () => {
+			ac.abort();
+			homePortfolioCarouselTeardown = undefined;
+		};
+	}
+
+	setupHomePortfolioCarousel();
+	document.addEventListener('astro:after-swap', setupHomePortfolioCarousel);
+</script>

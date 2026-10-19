@@ -29,11 +29,11 @@ import portraitImage from '../assets/images/nicodev.webp';
 						Demander un diagnostic gratuit
 					</a>
 					<a
-						href="/creation-site-internet-psychologue/"
+						href="/tarifs/"
 						class="mb-5 inline-flex items-center justify-center gap-2 px-2 py-4 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
-						data-umami-event="lead_click_creation_from_home_hero"
+						data-umami-event="lead_click_tarifs_from_home_hero"
 					>
-						Voir l’offre de création
+						Voir les tarifs
 						<ArrowRight class="h-4 w-4" stroke-width={2} nonScalingStroke aria-hidden="true" />
 					</a>
 				</div>
@@ -58,7 +58,7 @@ import portraitImage from '../assets/images/nicodev.webp';
 				<div class="hero-home__portrait">
 					<Image
 						src={portraitImage}
-						alt="Nicodev — Sites internet pour psychologues"
+						alt="Nicodev, Sites internet pour psychologues"
 						class="content-image h-full w-full object-cover"
 						width={640}
 						height={800}
@@ -74,6 +74,21 @@ import portraitImage from '../assets/images/nicodev.webp';
 					</p>
 				</aside>
 			</div>
+		</div>
+
+		<div class="hero-home__story mx-auto mt-12 max-w-3xl space-y-4 text-center text-base leading-relaxed text-muted sm:text-lg md:mt-16">
+			<p>
+				Avant de vous écrire ou de prendre rendez-vous, beaucoup de personnes visitent votre site. Elles
+				cherchent une approche qui leur parle, un cadre rassurant et des repères clairs.
+			</p>
+			<p>
+				La plupart commencent sur Google. Un site lisible, une fiche Google cohérente et des contenus alignés
+				aident à être trouvé au bon moment.
+			</p>
+			<p>
+				Vous restez responsable de ce qui est dit sur votre pratique. Je prends en charge la structure, l’écriture
+				spécifique pour le référencement web et toute la réalisation technique, avec l’hébergement, le suivi et les mises à jour inclus dans l’abonnement.
+			</p>
 		</div>
 	</div>
 </section>
@@ -233,6 +248,12 @@ import portraitImage from '../assets/images/nicodev.webp';
 		.hero-home__card {
 			left: -1.25rem;
 			max-width: 18rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.hero-home__story {
+			text-align: left;
 		}
 	}
 </style>

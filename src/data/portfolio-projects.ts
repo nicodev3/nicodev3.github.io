@@ -65,7 +65,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		description:
 			"Création d'un site vitrine pour consultations d'adultes et d'adolescents à partir de 16 ans, au cabinet au Chesnay (Versailles) et en visio.",
 		imageAlt:
-			'Site Camille Perrin — psychologue à Versailles et au Chesnay, consultations au cabinet et en visio',
+			'Site Camille Perrin, psychologue à Versailles et au Chesnay, consultations au cabinet et en visio',
 	},
 	{
 		title: 'Mélanie Aguillon',
@@ -77,7 +77,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		description:
 			"Création d'un site vitrine pour consultations d'adultes au cabinet et en visio, avec deux adresses à Bourgoin-Jallieu.",
 		imageAlt:
-			'Site Mélanie Aguillon — psychologue à Bourgoin-Jallieu, consultations au cabinet et en visio',
+			'Site Mélanie Aguillon, psychologue à Bourgoin-Jallieu, consultations au cabinet et en visio',
 	},
 	{
 		title: 'Pierre Dalarun',
@@ -90,7 +90,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		description:
 			"Création d'un site vitrine pour présenter une approche psychocorporelle, les pratiques proposées et les consultations au cabinet ou en visio.",
 		imageAlt:
-			'Site Pierre Dalarun — psychothérapeute à Soudan près de Châteaubriant, consultations au cabinet et en visio',
+			'Site Pierre Dalarun, psychothérapeute à Soudan près de Châteaubriant, consultations au cabinet et en visio',
 	},
 	{
 		title: 'Angela Bassompierre',
@@ -102,7 +102,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		description:
 			"Création d'un site vitrine pour consultations psychologiques en ligne (approche intégrative, EFT, traumatismes).",
 		imageAlt:
-			'Site Angela Bassompierre — psychologue en ligne, consultations en visio pour adolescents et adultes',
+			'Site Angela Bassompierre, psychologue en ligne, consultations en visio pour adolescents et adultes',
 	},
 	{
 		title: 'Isabelle Leboeuf',
@@ -116,7 +116,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		description:
 			"Refonte visuelle et optimisation SEO d'un site WordPress (Joie & Compassion, TFC et programme MOOD).",
 		imageAlt:
-			'Site Joie & Compassion — refonte visuelle et SEO WordPress, Isabelle Leboeuf, thérapie fondée sur la compassion',
+			'Site Joie & Compassion, refonte visuelle et SEO WordPress, Isabelle Leboeuf, thérapie fondée sur la compassion',
 	},
 	{
 		title: 'Anne Dupuis-de Charrière',
@@ -126,7 +126,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		year: 2026,
 		profession: 'psychomotricienne',
 		imageAlt:
-			'Site vitrine psychomotricité Anne Dupuis-de Charrière à Morges — accueil et prise de contact',
+			'Site vitrine psychomotricité Anne Dupuis-de Charrière à Morges, accueil et prise de contact',
 	},
 	{
 		title: 'Florent Simon',
@@ -135,7 +135,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		location: 'Nancy',
 		year: 2015,
 		profession: 'psychologue',
-		imageAlt: 'Site vitrine psychologue Florent Simon à Nancy — accueil et prise de contact',
+		imageAlt: 'Site vitrine psychologue Florent Simon à Nancy, accueil et prise de contact',
 	},
 	{
 		title: 'Société Médicale Balint France',
@@ -145,7 +145,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		year: 2018,
 		profession: 'association',
 		imageAlt:
-			'Site de la Société Médicale Balint France — groupes Balint, formations et actualités',
+			'Site de la Société Médicale Balint France, groupes Balint, formations et actualités',
 	},
 	{
 		title: 'Sabine Lacas',
@@ -156,7 +156,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		profession: 'psychologue',
 		refonte2026: true,
 		imageAlt:
-			'Capture du site vitrine psychologue Sabine Lacas à Uzès — présentation et prise de contact',
+			'Capture du site vitrine psychologue Sabine Lacas à Uzès, présentation et prise de contact',
 	},
 	{
 		title: 'Marie-Josée Grasso',
@@ -167,7 +167,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		profession: 'psychologue',
 		refonte2026: true,
 		imageAlt:
-			'Site internet psychologue Marie-Josée Grasso à Sorgues — page d’accueil et informations cabinet',
+			'Site internet psychologue Marie-Josée Grasso à Sorgues, page d’accueil et informations cabinet',
 	},
 	{
 		title: 'Emma Rouche',
@@ -190,7 +190,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		refonte2026: true,
 		caseStudySlug: 'laure-mesle-yaakoubi',
 		imageAlt:
-			'Site web psychologue à Montpellier — Laure Meslé Yaakoubi, capture page d’accueil',
+			'Site web psychologue à Montpellier, Laure Meslé Yaakoubi, capture page d’accueil',
 	},
 	{
 		title: 'Séverine Reisser',
@@ -199,7 +199,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		location: 'Les Lilas',
 		year: 2019,
 		profession: 'psychologue',
-		imageAlt: 'Site internet psychologue aux Lilas (Île-de-France) — Séverine Reisser',
+		imageAlt: 'Site internet psychologue aux Lilas (Île-de-France), Séverine Reisser',
 	},
 	{
 		title: 'Delphine Cima',
@@ -208,7 +208,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		location: 'Manosque',
 		year: 2016,
 		profession: 'psychologue',
-		imageAlt: 'Site vitrine psychologue Delphine Cima à Manosque — contenus et contact',
+		imageAlt: 'Site vitrine psychologue Delphine Cima à Manosque, contenus et contact',
 	},
 	{
 		title: 'Marie-Claire Bruneau',
@@ -217,7 +217,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		location: 'Blois',
 		year: 2017,
 		profession: 'psychologue',
-		imageAlt: 'Site web psychologue Marie-Claire Bruneau à Blois — présentation du cabinet',
+		imageAlt: 'Site web psychologue Marie-Claire Bruneau à Blois, présentation du cabinet',
 	},
 	{
 		title: 'Emanuelle FALLIGAN',
@@ -226,7 +226,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		location: 'Sarrebourg',
 		year: 2016,
 		profession: 'psychologue',
-		imageAlt: 'Site internet psychologue Emanuelle Falligan à Sarrebourg — accueil',
+		imageAlt: 'Site internet psychologue Emanuelle Falligan à Sarrebourg, accueil',
 	},
 	{
 		title: 'Stéphanie REQUET-CATINEAN',
@@ -236,7 +236,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		year: 2016,
 		profession: 'psychologue',
 		imageAlt:
-			'Site vitrine psychologue à Andrézieux-Bouthéon (proximité bassin lyonnais) — Stéphanie Requet-Catinean',
+			'Site vitrine psychologue à Andrézieux-Bouthéon (proximité bassin lyonnais), Stéphanie Requet-Catinean',
 	},
 	{
 		title: 'Audrey Larcebau',
@@ -247,7 +247,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		profession: 'psychologue',
 		refonte2026: true,
 		imageAlt:
-			'Site psychologue EMDR Côte basque — Audrey Larcebau, refonte 2026, page d’accueil',
+			'Site psychologue EMDR Côte basque, Audrey Larcebau, refonte 2026, page d’accueil',
 	},
 ];
 

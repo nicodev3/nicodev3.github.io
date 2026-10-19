@@ -33,7 +33,7 @@ const tagDescription =
 
 const tagTitleCandidates = [
 	`${tagLabel} : articles site web et SEO cabinet | Nicodev`,
-	`Articles ${tagLabel} — site web et visibilité | Nicodev`,
+	`Articles ${tagLabel}, site web et visibilité | Nicodev`,
 	`${tagLabel} : blog site internet cabinet soin | Nicodev`,
 ];
 const tagSeoTitle =
@@ -64,7 +64,7 @@ const itemListSchema =
 		? {
 				'@context': 'https://schema.org',
 				'@type': 'ItemList',
-				name: `Articles — ${tagLabel}`,
+				name: `Articles, ${tagLabel}`,
 				numberOfItems: filteredPosts.length,
 				itemListElement: filteredPosts.map((post, index) => ({
 					'@type': 'ListItem',

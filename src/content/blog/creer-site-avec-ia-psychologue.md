@@ -17,7 +17,7 @@ Je ne suis pas là pour diaboliser ces outils. Ils peuvent faire gagner du temps
 
 ## Expert en psychologie, pas en développement web
 
-Dans votre cabinet, vous êtes compétent pour parler du cadre thérapeutique, des indications, des limites de votre pratique. Vous savez ce qu'il est raisonnable de promettre — et ce qui ne l'est pas.
+Dans votre cabinet, vous êtes compétent pour parler du cadre thérapeutique, des indications, des limites de votre pratique. Vous savez ce qu'il est raisonnable de promettre, et ce qui ne l'est pas.
 
 Sur un site internet, d'autres règles s'appliquent. Elles concernent la lisibilité, la hiérarchie de l'information, l'affichage sur mobile, la rapidité de chargement, la manière dont un visiteur trouve le numéro de téléphone ou le lien de prise de rendez-vous. Ce n'est pas du psychologie clinique ; c'est de l'**ergonomie**, du **design d'interface** et souvent un peu de technique.
 
@@ -31,7 +31,7 @@ Imaginez quelqu'un qui n'est pas médecin et qui souhaite interpréter des résu
 
 Un site professionnel, ce n'est pas la médecine. En revanche, la structure du raisonnement est comparable : **sans compétence pour contrôler la sortie, on ne sait pas ce qu'on met en ligne au nom de son activité**.
 
-L'IA est utile quand elle **accompagne** quelqu'un qui maîtrise déjà le sujet — le développeur qui relit le code, le juriste qui valide les mentions légales, le rédacteur web qui vérifie le fond et le ton. Ce n'est pas un substitut à cette présence humaine.
+L'IA est utile quand elle **accompagne** quelqu'un qui maîtrise déjà le sujet, le développeur qui relit le code, le juriste qui valide les mentions légales, le rédacteur web qui vérifie le fond et le ton. Ce n'est pas un substitut à cette présence humaine.
 
 ## Ce que l'IA ne remplace vraiment pas
 
@@ -45,7 +45,7 @@ Les patients cherchent des repères simples : qui vous êtes, pour quels motifs 
 
 ### Marketing et conversion (sans déraper)
 
-Le discours « agressif » ne convient généralement pas à notre champ. Pourtant, un site doit quand même **orienter** le visiteur vers une action claire : écrire, appeler, réserver. Trouver cet équilibre — informer sans sur-vendre — demande du jugement. Les modèles tendent à reproduire des formulations génériques ou trop incitatives.
+Le discours « agressif » ne convient généralement pas à notre champ. Pourtant, un site doit quand même **orienter** le visiteur vers une action claire : écrire, appeler, réserver. Trouver cet équilibre, informer sans sur-vendre, demande du jugement. Les modèles tendent à reproduire des formulations génériques ou trop incitatives.
 
 ### Référencement et contenu
 
@@ -55,7 +55,7 @@ Le référencement local repose sur une structure de pages, des titres pertinent
 
 C'est sans doute le point le plus sous-estimé. Les modèles de texte générés pour les politiques de confidentialité ou les mentions légales peuvent être **incomplets, obsolètes ou inadaptés** à votre situation réelle (hébergeur, formulaires, outils tiers, cookies). Ce n'est pas une opinion anti-IA : c'est une limite technique connue des systèmes de langage, qui ne « savent » pas votre stack exact ni les obligations qui en découlent.
 
-La responsabilité finale reste celle du professionnel qui publie le site. Mieux vaut des bases révisées par quelqu'un qui comprend ce qu'il intègre — ou par un juriste spécialisé pour les parties sensibles.
+La responsabilité finale reste celle du professionnel qui publie le site. Mieux vaut des bases révisées par quelqu'un qui comprend ce qu'il intègre, ou par un juriste spécialisé pour les parties sensibles.
 
 ## Un rôle réaliste pour l'IA
 
@@ -69,7 +69,7 @@ Elle ne remplace pas : la stratégie de contenu, les choix techniques, la valida
 
 Certains psychologues utilisent déjà ces outils pour leurs textes **après** les avoir adaptés à leur voix et à leur cadre. C'est un usage raisonnable, à condition de garder la main sur le résultat.
 
-## Pourquoi faire appel à un accompagnement — et pourquoi Nicodev
+## Pourquoi faire appel à un accompagnement, et pourquoi Nicodev
 
 Si vous souhaitez un site clair, adapté au métier et techniquement propre, plusieurs intérêts se croisent :
 
@@ -77,7 +77,7 @@ Si vous souhaitez un site clair, adapté au métier et techniquement propre, plu
 - **Éviter les pièges** : performance, accessibilité de base, formulaires et données personnelles traitées avec prudence.
 - **Avoir une structure pérenne** : un site que vous comprenez un minimum, et que vous pouvez faire évoluer sans tout jeter au premier changement d'outil.
 
-Nicodev existe précisément parce que je cumule deux casquettes : **psychologue** et **développeur web**. Je connais les attentes de sobriété, de cadre et de vocabulaire dans notre champ. Je connais aussi ce qu'il faut pour qu'un site soit lisible, rapide et cohérent avec une présence locale sur Google — sans promesses irréalistes. J'en dis plus long sur ces écueils commerciaux dans l'article [sites internet pour psychologues : attention aux promesses trop belles pour être vraies](/blog/site-internet-psychologue-promesses-trop-belles/).
+Nicodev existe précisément parce que je cumule deux casquettes : **psychologue** et **développeur web**. Je connais les attentes de sobriété, de cadre et de vocabulaire dans notre champ. Je connais aussi ce qu'il faut pour qu'un site soit lisible, rapide et cohérent avec une présence locale sur Google, sans promesses irréalistes. J'en dis plus long sur ces écueils commerciaux dans l'article [sites internet pour psychologues : attention aux promesses trop belles pour être vraies](/blog/site-internet-psychologue-promesses-trop-belles/).
 
 Pour le budget et ce qu'il est raisonnable d'en attendre, vous pouvez aussi vous appuyer sur [combien coûte un site internet en 2026 ?](/blog/combien-coute-site-internet-2026/). Ce que comprend concrètement la [création de site internet pour psychologue](/creation-site-internet-psychologue/) réalisée avec moi est détaillé sur la page dédiée.
 
@@ -93,4 +93,4 @@ Posez-vous simplement ces questions avant de publier :
 - est-ce que les textes juridiques correspondent à ma réalité (hébergement, outils, données) ?
 - est-ce que le parcours d'un patient stressé est vraiment clair sur téléphone comme sur ordinateur ?
 
-Si plusieurs réponses sont floues, ce n'est pas un échec personnel : c'est le signe qu'un regard extérieur compétent peut éviter des problèmes plus coûteux que le « gain » initial. L'IA peut rester dans la boîte à outils — à condition qu'elle n'y soit pas la seule.
+Si plusieurs réponses sont floues, ce n'est pas un échec personnel : c'est le signe qu'un regard extérieur compétent peut éviter des problèmes plus coûteux que le « gain » initial. L'IA peut rester dans la boîte à outils, à condition qu'elle n'y soit pas la seule.

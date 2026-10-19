@@ -45,7 +45,7 @@ Cette ouverture a des aspects précieux. Elle a rendu la santé mentale plus pr�
 
 Mais elle a aussi créé une confusion fondamentale : **la visibilité d'un discours ne dit rien, à elle seule, de sa validité**.
 
-Sur un écran, une vidéo produite par un psychologue et celle d'un praticien autoproclamé occupent le même espace. Le titre, la formation et les références n'apparaissent pas toujours. Ce que la plateforme mesure, ce sont les vues, les réactions, les partages et la régularité de publication — pas la qualité d'une formation en psychopathologie ni la pertinence d'une indication clinique.
+Sur un écran, une vidéo produite par un psychologue et celle d'un praticien autoproclamé occupent le même espace. Le titre, la formation et les références n'apparaissent pas toujours. Ce que la plateforme mesure, ce sont les vues, les réactions, les partages et la régularité de publication, pas la qualité d'une formation en psychopathologie ni la pertinence d'une indication clinique.
 
 Une analyse des 1 000 vidéos les plus vues sous le mot-dièse `#mentalhealth` sur TikTok a ainsi relevé que **33 % des vidéos contenant des conseils ou des informations comportaient des éléments trompeurs**. Ces contenus trompeurs obtenaient en moyenne davantage de vues et d'interactions que les contenus jugés fiables. Les références à la recherche scientifique étaient rares. Cette étude ne résume pas l'ensemble des réseaux sociaux, mais elle illustre clairement le décalage possible entre popularité et fiabilité. ([Étude publiée dans *Digital Health*](https://pubmed.ncbi.nlm.nih.gov/39839955/))
 
@@ -67,7 +67,7 @@ Il ne s'agit pas de penser que tout contenu publié par un psychologue serait n�
 
 ## Le silence des psychologues a désormais un effet public
 
-La discrétion professionnelle reste une qualité. L'invisibilité, en revanche, laisse un vide — et ce vide est rapidement occupé.
+La discrétion professionnelle reste une qualité. L'invisibilité, en revanche, laisse un vide, et ce vide est rapidement occupé.
 
 Lorsqu'un psychologue ne présente pas sa pratique, le public ne dispose pas de ses mots pour comprendre son travail. Lorsqu'une information rigoureuse reste dans les revues spécialisées, les colloques ou les échanges entre professionnels, elle ne vient pas équilibrer les explications plus séduisantes qui circulent déjà. Lorsqu'un cabinet n'est pas visible dans les résultats de recherche, une personne peut s'orienter vers l'interlocuteur dont la présence numérique est la plus travaillée, pas nécessairement vers celui dont le cadre correspond le mieux à sa situation.
 
@@ -108,7 +108,7 @@ Reprendre la parole ne signifie pas adopter les mêmes codes que ceux qui occupe
 
 Une parole professionnelle peut aborder la santé mentale sans diagnostiquer à distance. Elle peut transmettre des connaissances sans transformer une publication en consultation, citer ses sources sans rendre le propos illisible et présenter une activité sans utiliser de témoignages de patients ni exposer de situations cliniques. Elle permet enfin de faire connaître un cabinet sans réduire la relation à un argument commercial.
 
-Cette posture demande sans doute davantage de travail éditorial. Elle ne peut pas toujours produire la phrase la plus spectaculaire. Mais elle permet à la communication de rester cohérente avec la pratique — et c'est précisément ce qui peut inspirer confiance.
+Cette posture demande sans doute davantage de travail éditorial. Elle ne peut pas toujours produire la phrase la plus spectaculaire. Mais elle permet à la communication de rester cohérente avec la pratique, et c'est précisément ce qui peut inspirer confiance.
 
 ## Savoir-faire et le faire savoir
 

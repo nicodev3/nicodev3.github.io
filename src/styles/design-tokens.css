@@ -1,10 +1,10 @@
 /**
- * Tokens rayon & élévation — source Tailwind (@theme).
+ * Tokens rayon & élévation, source Tailwind (@theme).
  *
- * Rayons : trois valeurs sémantiques seulement —
- *   • contrôle (sm) : 8px — champs, chips compacts, focus rings
- *   • surface (md … 4xl) : 14px — cartes, boutons, panneaux, prose (aliases identiques)
- *   • pilule (full) : 9999px — avatars, badges capsule, pastilles
+ * Rayons : trois valeurs sémantiques seulement, 
+ *   • contrôle (sm) : 8px, champs, chips compacts, focus rings
+ *   • surface (md … 4xl) : 14px, cartes, boutons, panneaux, prose (aliases identiques)
+ *   • pilule (full) : 9999px, avatars, badges capsule, pastilles
  *
  * Ne pas introduire de 12px ni 16px côte à côte : tout « grande surface » passe par 14px.
  * Ombres : --shadow-sm | --shadow-md | --shadow-lg (utilitaires shadow-*).

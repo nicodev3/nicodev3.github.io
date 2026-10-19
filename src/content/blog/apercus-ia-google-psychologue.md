@@ -16,16 +16,16 @@ faq:
   - question: "Le test Navigation agentique de PageSpeed fait-il monter dans Google ?"
     answer: "Non. Ce n’est pas un facteur de classement, ni la preuve d’être cité dans les Aperçus IA. Le résultat est un ratio (par exemple 2/2), pas une note sur 100. Il indique si une machine peut se servir de la page : bouton de rendez-vous, formulaire, page qui ne saute pas."
   - question: "Faut-il optimiser son site pour apparaître dans ChatGPT ?"
-    answer: "Pas avec une recette à part, et personne ne peut le garantir. Les assistants s’appuient sur les mêmes bases qu’un patient : qui vous êtes, où, pour qui, comment prendre rendez-vous, écrit clairement. Tester de temps en temps « psychologue à [votre ville] » dans ChatGPT permet de voir si votre nom et votre cadre sont justes — ou inventés."
+    answer: "Pas avec une recette à part, et personne ne peut le garantir. Les assistants s’appuient sur les mêmes bases qu’un patient : qui vous êtes, où, pour qui, comment prendre rendez-vous, écrit clairement. Tester de temps en temps « psychologue à [votre ville] » dans ChatGPT permet de voir si votre nom et votre cadre sont justes, ou inventés."
 ---
 
 *Temps de lecture : 16 minutes*
 
 Depuis le 22 juillet 2026, une personne qui cherche un psychologue en France ne voit plus toujours la même page Google qu’il y a un an. Parfois, au-dessus des liens, un **texte rédigé par l’IA de Google** résume la question. D’autres personnes posent directement la même question à ChatGPT, Gemini ou Perplexity, sans jamais ouvrir une liste de sites.
 
-Le SEO, c’est simplement la façon dont on aide Google — et maintenant les IA — à vous trouver. Il n’y a pas de recette pour « apparaître dans ChatGPT » ni pour être le cabinet cité dans le résumé. Google le dit lui-même : [aucun fichier spécial, aucune balise magique n’est exigé](https://developers.google.com/search/docs/appearance/ai-features).
+Le SEO, c’est simplement la façon dont on aide Google, et maintenant les IA, à vous trouver. Il n’y a pas de recette pour « apparaître dans ChatGPT » ni pour être le cabinet cité dans le résumé. Google le dit lui-même : [aucun fichier spécial, aucune balise magique n’est exigé](https://developers.google.com/search/docs/appearance/ai-features).
 
-Cet article décrit ce que *voit* un patient, ce que ça change pour un cabinet, puis ce qui vaut la peine d’être vérifié — sans devenir technicien. Le cadre local (fiche Google, ville, carte) est déjà détaillé dans [Psychologue : comment apparaître en premier sur Google dans sa ville](/blog/psychologue-premier-google-ville/). Ici, on ne reprend pas cette méthode : on ajoute la couche IA.
+Cet article décrit ce que *voit* un patient, ce que ça change pour un cabinet, puis ce qui vaut la peine d’être vérifié, sans devenir technicien. Le cadre local (fiche Google, ville, carte) est déjà détaillé dans [Psychologue : comment apparaître en premier sur Google dans sa ville](/blog/psychologue-premier-google-ville/). Ici, on ne reprend pas cette méthode : on ajoute la couche IA.
 
 ## Ce que vous voyez maintenant sur Google
 
@@ -45,21 +45,21 @@ Ouvrez Google, comme le ferait quelqu’un qui hésite à prendre rendez-vous. S
 
 Le *mode IA* de Google, lui, n’est pas ce bandeau. C’est un autre écran, plus proche d’une conversation : on pose une question, on relance, on compare. Les liens vers des sites existent encore, mais la personne lit d’abord une réponse rédigée.
 
-Analogie simple : la carte, c’est la **plaque professionnelle** à l’entrée de l’immeuble. Le site, c’est la **salle d’attente**. Le résumé IA, c’est un voisin qui explique le quartier *avant* que l’on pousse la porte — parfois sans jamais entrer.
+Analogie simple : la carte, c’est la **plaque professionnelle** à l’entrée de l’immeuble. Le site, c’est la **salle d’attente**. Le résumé IA, c’est un voisin qui explique le quartier *avant* que l’on pousse la porte, parfois sans jamais entrer.
 
 ## « Psychologue à [ville] » n’est pas la même recherche que « comment se passe une première séance »
 
 Les deux questions semblent voisines. Sur Google, elles ne produisent pas le même écran.
 
-Quand quelqu’un tape **« psychologue Paris »** ou **« psychologue Nantes »**, ce que l’on voit surtout, en septembre 2026, c’est la carte et trois fiches, puis des questions (tarifs, séances remboursées), puis Doctolib et des annuaires. Sur ces recherches-là, le résumé IA n’était **pas** le bloc dominant. « Psychologue + ville » reste d’abord une affaire de **fiche Google** — à condition d’être éligible (vous recevez vraiment des personnes au cabinet). Le détail est dans le [guide de la fiche Google](/blog/google-business-profile-psychologue/).
+Quand quelqu’un tape **« psychologue Paris »** ou **« psychologue Nantes »**, ce que l’on voit surtout, en septembre 2026, c’est la carte et trois fiches, puis des questions (tarifs, séances remboursées), puis Doctolib et des annuaires. Sur ces recherches-là, le résumé IA n’était **pas** le bloc dominant. « Psychologue + ville » reste d’abord une affaire de **fiche Google**, à condition d’être éligible (vous recevez vraiment des personnes au cabinet). Le détail est dans le [guide de la fiche Google](/blog/google-business-profile-psychologue/).
 
 Quand quelqu’un tape **« comment choisir un psychologue »** (environ 350 recherches par mois en France) ou **« comment choisir son psychologue »**, Google affiche souvent un **Aperçu IA**, avec des liens vers des articles de sites spécialisés, de magazines santé, parfois d’un cabinet. La personne peut lire le résumé et s’arrêter là.
 
-**« Mon soutien psy »** (des dizaines de milliers de recherches par mois) déclenche aussi, en septembre 2026, un résumé IA. Les liens cités sont surtout institutionnels : Ameli, le site du gouvernement, Doctolib — pas le site d’un cabinet de quartier. C’est logique : la question porte sur un dispositif public, pas sur « qui me reçoit mardi à 18 h ».
+**« Mon soutien psy »** (des dizaines de milliers de recherches par mois) déclenche aussi, en septembre 2026, un résumé IA. Les liens cités sont surtout institutionnels : Ameli, le site du gouvernement, Doctolib, pas le site d’un cabinet de quartier. C’est logique : la question porte sur un dispositif public, pas sur « qui me reçoit mardi à 18 h ».
 
 **« Psychologue ou psychiatre »**, pourtant très cherché, n’affichait pas de résumé IA sur la capture de début septembre 2026 : plutôt des questions, puis des pages de Service-Public, de mutuelles, de médias. Google n’affiche pas le bandeau IA à chaque question d’information. Il le montre quand il juge que ça *ajoute* quelque chose à la page classique.
 
-Conséquence pour vous : soigner la fiche et la page « psychologue à [ville] » sert ceux qui cherchent un cabinet près de chez eux. Rédiger clairement *comment se passe une première séance chez vous*, *qui vous recevez*, *comment on prend rendez-vous*, sert ceux qui posent une question à Google ou à un assistant — y compris si votre nom n’est pas dans le résumé.
+Conséquence pour vous : soigner la fiche et la page « psychologue à [ville] » sert ceux qui cherchent un cabinet près de chez eux. Rédiger clairement *comment se passe une première séance chez vous*, *qui vous recevez*, *comment on prend rendez-vous*, sert ceux qui posent une question à Google ou à un assistant, y compris si votre nom n’est pas dans le résumé.
 
 ## Ce que ça change concrètement pour un cabinet
 
@@ -74,7 +74,7 @@ D’où une règle toute simple, plus utile qu’un fichier technique : **dès l
 
 Ce n’est pas du marketing agressif. C’est la même clarté que sur une plaque et dans une salle d’attente : on sait où l’on est.
 
-Les assistants du type ChatGPT, Gemini ou Perplexity fonctionnent de la même manière, en plus opaque. Ils croisent ce qu’ils peuvent lire. Si votre nom, votre ville et votre titre ne sont pas les mêmes sur le site, la fiche Google et un annuaire, ils hésitent — ou inventent. Tester de temps en temps « psychologue à [votre ville] » dans ChatGPT ne vous fera pas « apparaître ». Ça vous dira si ce qui est dit de vous est **juste**.
+Les assistants du type ChatGPT, Gemini ou Perplexity fonctionnent de la même manière, en plus opaque. Ils croisent ce qu’ils peuvent lire. Si votre nom, votre ville et votre titre ne sont pas les mêmes sur le site, la fiche Google et un annuaire, ils hésitent, ou inventent. Tester de temps en temps « psychologue à [votre ville] » dans ChatGPT ne vous fera pas « apparaître ». Ça vous dira si ce qui est dit de vous est **juste**.
 
 Personne ne peut vendre une place dans ces réponses. Elles varient d’une conversation à l’autre. Un site de cabinet que je suis n’apparaissait pas, à la date de cet article, dans les Aperçus IA recensés par un outil de suivi ; quelques citations existaient ailleurs (Gemini, Perplexity). C’est le niveau réaliste d’un professionnel, pas celui d’Ameli.
 
@@ -84,13 +84,13 @@ Pour ne pas tout mélanger, imaginez **trois portes**. Votre site est le cabinet
 
 ![Trois portes : les robots qui lisent, les réponses de Google, les assistants qui cliquent ou remplissent un formulaire.](../../assets/images/guides/trois-portes-visibilite-ia.svg)
 
-**Porte 1 — Lire.** Des robots viennent *lire* vos pages, comme un standard qui décroche. S’il ne décroche pas, ou si on leur a dit « interdiction d’entrer », ils n’emportent rien. C’est une question de vitesse, d’interdictions, de pages trop lourdes.
+**Porte 1, Lire.** Des robots viennent *lire* vos pages, comme un standard qui décroche. S’il ne décroche pas, ou si on leur a dit « interdiction d’entrer », ils n’emportent rien. C’est une question de vitesse, d’interdictions, de pages trop lourdes.
 
-**Porte 2 — Répondre.** Google (Aperçus IA, mode IA) rédige une réponse. Il ne peut s’appuyer que sur un site qu’il a déjà trouvé, et dont il a le droit d’afficher un extrait. Un texte clair l’aide. Un texte interchangeable d’un cabinet à l’autre ne lui donne rien à citer.
+**Porte 2, Répondre.** Google (Aperçus IA, mode IA) rédige une réponse. Il ne peut s’appuyer que sur un site qu’il a déjà trouvé, et dont il a le droit d’afficher un extrait. Un texte clair l’aide. Un texte interchangeable d’un cabinet à l’autre ne lui donne rien à citer.
 
-**Porte 3 — Agir.** Un assistant essaie d’*utiliser* la page : cliquer sur « Prendre rendez-vous », remplir un formulaire, trouver le téléphone. Si le bouton n’a pas de nom, ou si la page saute en chargeant, il clique à côté. C’est le test « Navigation agentique » de PageSpeed Insights (le test de vitesse de Google). Ce n’est **pas** une note pour être premier.
+**Porte 3, Agir.** Un assistant essaie d’*utiliser* la page : cliquer sur « Prendre rendez-vous », remplir un formulaire, trouver le téléphone. Si le bouton n’a pas de nom, ou si la page saute en chargeant, il clique à côté. C’est le test « Navigation agentique » de PageSpeed Insights (le test de vitesse de Google). Ce n’est **pas** une note pour être premier.
 
-Un site lent, tout en animations, sans vrais titres ni libellés, n’est pas prêt pour l’IA — même s’il apparaît déjà sur Google. Les mêmes bases aident le patient, Google et les assistants.
+Un site lent, tout en animations, sans vrais titres ni libellés, n’est pas prêt pour l’IA, même s’il apparaît déjà sur Google. Les mêmes bases aident le patient, Google et les assistants.
 
 ## Porte 1 : est-ce qu’une IA peut seulement lire votre site ?
 
@@ -110,7 +110,7 @@ Vous n’avez pas à éditer ce fichier. Demandez simplement : « Google est aut
 
 ### Seulement une partie des IA est bloquée
 
-Pour votre site, ça veut dire : ChatGPT peut passer, Claude non — ou l’inverse. Ce n’est pas un choix stratégique que vous avez fait. C’est souvent un réglage par défaut, une extension du site, ou Cloudflare qui traite les robots au cas par cas.
+Pour votre site, ça veut dire : ChatGPT peut passer, Claude non, ou l’inverse. Ce n’est pas un choix stratégique que vous avez fait. C’est souvent un réglage par défaut, une extension du site, ou Cloudflare qui traite les robots au cas par cas.
 
 ### Les consignes se contredisent
 
@@ -132,7 +132,7 @@ Pour votre site, ça veut dire : un détail qui concerne Bing, pas Google. Une l
 
 Deux consignes différentes, souvent mélangées.
 
-**Apprendre**, c’est photocopier vos textes pour améliorer le modèle, comme un étudiant qui garderait vos notes de cours. Vous pouvez limiter ça. Chez Google, une consigne séparée (nommée Google-Extended, à faire poser par quelqu’un) encadre l’usage de vos pages pour l’entraînement de Gemini — **sans** changer votre classement classique dans Google.
+**Apprendre**, c’est photocopier vos textes pour améliorer le modèle, comme un étudiant qui garderait vos notes de cours. Vous pouvez limiter ça. Chez Google, une consigne séparée (nommée Google-Extended, à faire poser par quelqu’un) encadre l’usage de vos pages pour l’entraînement de Gemini, **sans** changer votre classement classique dans Google.
 
 **Vous trouver**, c’est ouvrir l’annuaire le jour où quelqu’un demande « un psychologue à [ville] qui reçoit des adultes ». Si vous fermez cette porte-là, le résumé IA et les assistants de recherche n’ont plus rien à citer.
 
@@ -155,7 +155,7 @@ Google ajoute : pas besoin de créer un fichier « pour les machines », pas de 
 
 Un fichier nommé `llms.txt` circule dans les discussions techniques. Lighthouse (le moteur du test de vitesse Google) peut vérifier s’il existe. **Google Search dit que ce n’est pas requis** pour les Aperçus IA. En mai 2026, Ahrefs a mesuré que **97 %** de ces fichiers, sur 137 000 sites, ne recevaient **aucune** requête. Ce n’est pas un levier pour « être premier ». Si quelqu’un vous le vend comme tel, passez votre chemin.
 
-Ce qui aide vraiment, côté contenu, tient en quatre points — les mêmes que pour un patient :
+Ce qui aide vraiment, côté contenu, tient en quatre points, les mêmes que pour un patient :
 
 - une identité unique partout (nom, ville, titre, téléphone) ;
 - des phrases factuelles dès le début de page ;
@@ -182,7 +182,7 @@ Sur nicodev.fr, y compris la page avec formulaire, ces contrôles passaient. Ce 
 
 Google appelle ça le CLS : le *décalage visuel cumulé*. En clair : un bandeau cookies, une image sans taille réservée, ou une animation, **pousse** le bouton au moment où l’on (ou l’agent) clique. On clique à côté.
 
-Sur nicodev.fr, le décalage était nul (accueil, article, diagnostic), en mobile comme en desktop. Sur un site de cabinet au graphisme plus chargé, le décalage mesuré était de 0,17 — au-dessus du seuil « bon » (0,1). La page *saute*. Le site peut très bien apparaître sur Google. L’assistant, lui, rate le bouton.
+Sur nicodev.fr, le décalage était nul (accueil, article, diagnostic), en mobile comme en desktop. Sur un site de cabinet au graphisme plus chargé, le décalage mesuré était de 0,17, au-dessus du seuil « bon » (0,1). La page *saute*. Le site peut très bien apparaître sur Google. L’assistant, lui, rate le bouton.
 
 ### Le fichier llms.txt
 
@@ -198,7 +198,7 @@ Un site peut **passer** le test visuel (boutons nommés, page stable) et rester 
 
 On ne vise pas « 3/3 pour être visible ». On vise un site dont un humain *et* une machine comprennent : qui, où, pour qui, comment écrire.
 
-## Ce que vous pouvez faire vous-même — et ce qu’il vaut mieux faire faire
+## Ce que vous pouvez faire vous-même, et ce qu’il vaut mieux faire faire
 
 ### Vous-même, cette semaine
 
@@ -252,21 +252,21 @@ Souvent l’inverse. Des textes génériques et une page trop chargée donnent p
 
 ## Mini-glossaire
 
-**Aperçus IA** — Le résumé rédigé par Google, parfois affiché en haut des résultats, avec des liens vers des sites.
+**Aperçus IA**, Le résumé rédigé par Google, parfois affiché en haut des résultats, avec des liens vers des sites.
 
-**Mode IA** — L’écran plus conversationnel de Google, où l’on pose une question et l’on relance, au lieu de parcourir une liste de liens.
+**Mode IA**, L’écran plus conversationnel de Google, où l’on pose une question et l’on relance, au lieu de parcourir une liste de liens.
 
-**Fiche Google** — La page du cabinet sur Google et sur Maps (nom, adresse, téléphone, photos). Ce n’est pas votre site.
+**Fiche Google**, La page du cabinet sur Google et sur Maps (nom, adresse, téléphone, photos). Ce n’est pas votre site.
 
-**Fichier robots.txt** — Une courte liste, à l’entrée du site, qui dit aux robots ce qu’ils ont le droit de lire. On ne le rédige pas soi-même ; on fait vérifier qu’il n’enferme pas les IA de recherche sans le vouloir.
+**Fichier robots.txt**, Une courte liste, à l’entrée du site, qui dit aux robots ce qu’ils ont le droit de lire. On ne le rédige pas soi-même ; on fait vérifier qu’il n’enferme pas les IA de recherche sans le vouloir.
 
-**Extrait** — Le court passage que Google affiche sous un lien. S’il est interdit, la page a peu de chances d’alimenter un résumé IA.
+**Extrait**, Le court passage que Google affiche sous un lien. S’il est interdit, la page a peu de chances d’alimenter un résumé IA.
 
-**CLS** — Le décalage visuel cumulé : la page qui « saute » pendant le chargement. Un bandeau ou une image mal calée fait cliquer à côté — un humain comme un assistant.
+**CLS**, Le décalage visuel cumulé : la page qui « saute » pendant le chargement. Un bandeau ou une image mal calée fait cliquer à côté, un humain comme un assistant.
 
 ## Conclusion
 
-Les Aperçus IA et le mode IA n’effacent pas la fiche Google ni un site rassurant. Ils ajoutent une couche : on peut être résumé sans être visité. La réponse n’est pas un produit miracle. C’est un site que l’on peut *lire*, *citer* et *utiliser* — les trois portes.
+Les Aperçus IA et le mode IA n’effacent pas la fiche Google ni un site rassurant. Ils ajoutent une couche : on peut être résumé sans être visité. La réponse n’est pas un produit miracle. C’est un site que l’on peut *lire*, *citer* et *utiliser*, les trois portes.
 
 Si vous voulez un regard extérieur sur votre fiche, votre site et ces points (sans promesse d’apparaître dans une IA), vous pouvez partir d’un [diagnostic gratuit](/diagnostic-gratuit/) ou de la page [référencement site psychologue](/referencement-site-psychologue/).
 
@@ -274,13 +274,13 @@ Si vous voulez un regard extérieur sur votre fiche, votre site et ces points (s
 
 ## Sources consultées
 
-- [Google Search Central — AI features and your website](https://developers.google.com/search/docs/appearance/ai-features) (aucun fichier spécial requis ; page indexée + extraits autorisés)
-- [Search Console — Contrôle de l’IA générative dans la Recherche](https://support.google.com/webmasters/answer/16908024?hl=fr) (inclusion par défaut ; n’est pas un signal de classement classique ; déploiement mondial au 31 août 2026)
-- [Google — Google-Extended](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers) (entraînement / ancrage Gemini, sans effet sur le classement Search)
-- [Cloudflare — AI Crawl Control](https://developers.cloudflare.com/ai-crawl-control/)
-- [Chrome — Lighthouse, scoring Navigation agentique](https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring) (ratio, pas une note /100 ; catégorie expérimentale)
-- [Chrome — audit llms.txt](https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt) (optionnel ; un 404 est « non applicable »)
-- [Ahrefs — 97 % des fichiers llms.txt sans aucune requête](https://ahrefs.com/blog/llmstxt-study/) (mai 2026, 137 000 domaines)
+- [Google Search Central, AI features and your website](https://developers.google.com/search/docs/appearance/ai-features) (aucun fichier spécial requis ; page indexée + extraits autorisés)
+- [Search Console, Contrôle de l’IA générative dans la Recherche](https://support.google.com/webmasters/answer/16908024?hl=fr) (inclusion par défaut ; n’est pas un signal de classement classique ; déploiement mondial au 31 août 2026)
+- [Google, Google-Extended](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers) (entraînement / ancrage Gemini, sans effet sur le classement Search)
+- [Cloudflare, AI Crawl Control](https://developers.cloudflare.com/ai-crawl-control/)
+- [Chrome, Lighthouse, scoring Navigation agentique](https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring) (ratio, pas une note /100 ; catégorie expérimentale)
+- [Chrome, audit llms.txt](https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt) (optionnel ; un 404 est « non applicable »)
+- [Ahrefs, 97 % des fichiers llms.txt sans aucune requête](https://ahrefs.com/blog/llmstxt-study/) (mai 2026, 137 000 domaines)
 - Captures de résultats Google France, postérieures au 22 juillet 2026 : « psychologue paris » (12 sept. 2026), « psychologue nantes » (5 sept.), « comment choisir un psychologue » (2 août), « comment choisir son psychologue » (19 août), « psychologue ou psychiatre » (2 sept.), « mon soutien psy » (12 sept.)
 - Tests PageSpeed / Lighthouse (catégorie Navigation agentique), téléphone et ordinateur, septembre 2026 : nicodev.fr (accueil, article, diagnostic) et sites de cabinets (anonymisés)
 

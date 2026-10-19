@@ -1,5 +1,5 @@
 /**
- * Modèle tarifaire Nicodev — source unique pour les pages, FAQ et données structurées.
+ * Modèle tarifaire Nicodev, source unique pour les pages, FAQ et données structurées.
  * Message clé : 0 € de construction, puis 29 € ou 49 € / mois.
  */
 export const SETUP_FEE_AMOUNT = '0 €';

@@ -1,5 +1,5 @@
 /**
- * FAQ affichée sur l’accueil — source unique pour le HTML et le JSON-LD FAQPage.
+ * FAQ affichée sur l’accueil, source unique pour le HTML et le JSON-LD FAQPage.
  */
 import { PRICING_FAQ } from './pricing';
 
@@ -69,7 +69,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 		id: 'faq-propriete',
 		question: 'Le site m’appartient-il vraiment ?',
 		answer:
-			'Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L’abonnement rémunère d’abord la construction (sans facture séparée, 0 € de frais de création), puis les services continus — hébergement, maintenance, modifications et suivi — et non un droit d’accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs.',
+			'Oui. Le site réalisé pour votre cabinet, son nom de domaine et vos contenus vous appartiennent. L’abonnement rémunère d’abord la construction (sans facture séparée, 0 € de frais de création), puis les services continus, hébergement, maintenance, modifications et suivi, et non un droit d’accès à une plateforme. Vous pouvez demander une copie exploitable du site pour le faire héberger ailleurs.',
 	},
 	{
 		question: 'Est-ce adapté si je débute en libéral ?',
@@ -97,12 +97,8 @@ const HOME_FAQ_SHORTLIST_IDS = [
 	'faq-cout-construction',
 	'faq-contenu',
 	'faq-doctolib-rdv',
-	'faq-site-existant',
-	'faq-modifications',
 	'faq-propriete',
 	'faq-engagement',
-	'faq-sortie',
-	'faq-delai',
 ] as const;
 
 export const homeFaqShortlist: HomeFaqItem[] = HOME_FAQ_SHORTLIST_IDS.map((id) => {

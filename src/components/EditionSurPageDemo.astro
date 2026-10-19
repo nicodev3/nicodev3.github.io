@@ -1,0 +1,52 @@
+---
+/**
+ * Démo silencieuse : modifier un tarif directement sur la page (widget EmDash).
+ * Assets : public/media/edition-sur-page/
+ */
+const poster = '/media/edition-sur-page/edition-sur-page.webp';
+const webm = '/media/edition-sur-page/edition-sur-page.webm';
+const mp4 = '/media/edition-sur-page/edition-sur-page.mp4';
+---
+
+<figure class="edition-sur-page mx-auto mt-10 max-w-3xl">
+	<div class="overflow-hidden rounded-xl border border-border bg-surface shadow-sm">
+		<video
+			class="edition-sur-page__video block h-auto w-full"
+			width="1100"
+			height="650"
+			autoplay
+			muted
+			loop
+			playsinline
+			preload="metadata"
+			poster={poster}
+			aria-label="Démonstration : modification d’un tarif directement sur la page du site"
+		>
+			<source src={webm} type="video/webm" />
+			<source src={mp4} type="video/mp4" />
+		</video>
+		<img
+			class="edition-sur-page__poster hidden h-auto w-full"
+			src={poster}
+			alt="Barre d’édition en bas de page et tarifs du cabinet, prêts à être modifiés."
+			width="1100"
+			height="650"
+			loading="lazy"
+			decoding="async"
+		/>
+	</div>
+	<figcaption class="mt-3 text-center text-sm text-muted sm:text-base">
+		<strong class="font-semibold text-foreground">Modifiez vos contenus !</strong>, sans ouvrir un panneau d’administration séparé. Inclus à partir de la formule Visibilité &amp; Confiance.
+	</figcaption>
+</figure>
+
+<style>
+	@media (prefers-reduced-motion: reduce) {
+		.edition-sur-page__video {
+			display: none;
+		}
+		.edition-sur-page__poster {
+			display: block;
+		}
+	}
+</style>

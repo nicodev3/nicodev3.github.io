@@ -156,7 +156,7 @@ export const caseStudies: CaseStudy[] = [
     seoDescription:
       'Laure Meslé-Yaakoubi, psychologue à Montpellier : création d’un site et amélioration progressive de sa visibilité locale.',
     challenge:
-      'Le site doit présenter plusieurs publics et services — adultes, enfants, adolescents, couples, familles, bilans et accompagnement parental — tout en indiquant clairement à Google que Laure exerce à Montpellier. Dans une ville où de nombreux psychologues sont déjà présents, cette visibilité se construit par étapes.',
+      'Le site doit présenter plusieurs publics et services, adultes, enfants, adolescents, couples, familles, bilans et accompagnement parental, tout en indiquant clairement à Google que Laure exerce à Montpellier. Dans une ville où de nombreux psychologues sont déjà présents, cette visibilité se construit par étapes.',
     objectives: [
       'Installer un positionnement local clair à Montpellier.',
       'Structurer le site selon les publics et les motifs de consultation.',

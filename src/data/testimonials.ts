@@ -28,7 +28,7 @@ export const maltTestimonials = [
 	},
 	{
 		quote:
-			"Je recommande Nicolas Devaux pour ses qualités professionnelles, son écoute du projet et le soin apporté à l'esthétique et à la fonctionnalité du site. De nombreux compliments m'ont été adressés. Collaboration appréciée malgré mon ignorance en informatique, et excellent rapport qualité-prix — un vrai « artisan » du web.",
+			"Je recommande Nicolas Devaux pour ses qualités professionnelles, son écoute du projet et le soin apporté à l'esthétique et à la fonctionnalité du site. De nombreux compliments m'ont été adressés. Collaboration appréciée malgré mon ignorance en informatique, et excellent rapport qualité-prix, un vrai « artisan » du web.",
 		author: 'Anne-Françoise Lof, Psychologue et auteure',
 		short: 'Anne-Françoise L.',
 	},

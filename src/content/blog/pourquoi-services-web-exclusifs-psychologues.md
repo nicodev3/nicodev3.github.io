@@ -1,5 +1,5 @@
 ---
-title: "Le savoir-faire, vous l'avez — il est temps de le faire savoir"
+title: "Le savoir-faire, vous l'avez, il est temps de le faire savoir"
 seoTitle: "Psychologues : rendre votre savoir-faire visible"
 description: "Les pseudo-thérapeutes ne manquent pas de visibilité. Les psychologues diplômés, si. Pourquoi un site professionnel dédié change la donne."
 pubDate: "2026-05-05"
@@ -10,7 +10,7 @@ tags: ["psychologue", "site web cabinet", "cadre déontologique"]
 
 Le savoir-faire des psychologues n'est plus à démontrer : cinq années d'études, des stages, un titre protégé, une pratique encadrée. Pourtant, sur le web, ce sont les coachs en bien-être, les thérapeutes auto-proclamés et les vendeurs de solutions miracles qui occupent l'espace. Eux n'hésitent pas à communiquer. Les psychologues, souvent, si.
 
-Un site internet professionnel, c'est simplement le moyen de donner à votre savoir-faire la visibilité qu'il mérite — et de permettre à vos patients de vous trouver, vous, plutôt qu'un énième profil sans formation ni cadre.
+Un site internet professionnel, c'est simplement le moyen de donner à votre savoir-faire la visibilité qu'il mérite, et de permettre à vos patients de vous trouver, vous, plutôt qu'un énième profil sans formation ni cadre.
 
 Psychologue et développeur web, j'ai construit Nicodev autour de cette conviction : notre métier a tout pour être lisible en ligne, à condition d'être accompagné par quelqu'un qui le connaît de l'intérieur.
 
@@ -77,7 +77,7 @@ C'est aussi la raison pour laquelle je ne souhaite pas me disperser sur tous les
 
 ## Aussi pour psychothérapeutes (titre + RPPS) et psychomotriciens
 
-Comme je suis également psychomotricien de formation et psychothérapeute (titre réglementé), l'offre s'étend à ces deux cadres — selon la même logique : connaissance réelle du métier, respect du titre, communication claire pour le public.
+Comme je suis également psychomotricien de formation et psychothérapeute (titre réglementé), l'offre s'étend à ces deux cadres, selon la même logique : connaissance réelle du métier, respect du titre, communication claire pour le public.
 
 Cela ne transforme pas les psychologues en simple segment parmi d'autres. Les pages et le vocabulaire restent adaptés à chaque profession. Une page dédiée présente l'approche pour les [sites internet de psychomotriciens](/site-internet-psychomotricien/). Les psychopraticiens et « thérapeutes » hors titre restent hors offre.
 
@@ -93,8 +93,8 @@ Si vous êtes psychologue, psychothérapeute (titre + RPPS) ou psychomotricien e
 
 Pour aller plus loin sans attendre&nbsp;:
 
-- [Créer un site web pour psychologue](/creation-site-internet-psychologue/) — offre, déroulement et FAQ ;
-- [Pourquoi confier son site à un confrère plutôt qu'à une agence multi-métiers](/blog/site-psychologue-confrere-vs-agence-multi-metiers/) — l'argument confrère en détail ;
-- [Référencer le site d'un psychologue](/referencement-site-psychologue/) — visibilité locale et cohérence avec votre fiche Google ;
-- [Guide complet de la visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/) — plan d’ensemble (fiche, site, avis, contenu) ;
-- [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans votre installation.
+- [Créer un site web pour psychologue](/creation-site-internet-psychologue/), offre, déroulement et FAQ ;
+- [Pourquoi confier son site à un confrère plutôt qu'à une agence multi-métiers](/blog/site-psychologue-confrere-vs-agence-multi-metiers/), l'argument confrère en détail ;
+- [Référencer le site d'un psychologue](/referencement-site-psychologue/), visibilité locale et cohérence avec votre fiche Google ;
+- [Guide complet de la visibilité en ligne](/blog/guide-complet-visibilite-en-ligne-psychologues/), plan d’ensemble (fiche, site, avis, contenu) ;
+- [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/), où placer le site dans votre installation.

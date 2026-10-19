@@ -220,15 +220,15 @@ Exemple concret : une formation intéressante n’est pas forcément financée a
 
 Les règles évoluent. Voici une base de références à revérifier :
 
-- [Service-Public.fr](https://www.service-public.fr/) — entreprise individuelle, micro-entreprise, obligations administratives
-- [Guichet unique INPI](https://procedures.inpi.fr/) — formalités de création
-- [URSSAF](https://www.urssaf.fr/) — cotisations, ACRE, échéanciers
-- [CIPAV](https://www.lacipav.fr/) — retraite des professions libérales affiliées
-- [impots.gouv.fr](https://www.impots.gouv.fr/) — BNC, TVA, obligations fiscales
-- [CNIL](https://www.cnil.fr/) — RGPD et données de santé
-- [Ameli](https://www.ameli.fr/) — Mon soutien psy
-- [ANS / RPPS](https://esante.gouv.fr/) — identification des professionnels de santé
-- [Syndicat national des psychologues](https://psychologues.org/category/communique/) — prises de position professionnelles
+- [Service-Public.fr](https://www.service-public.fr/), entreprise individuelle, micro-entreprise, obligations administratives
+- [Guichet unique INPI](https://procedures.inpi.fr/), formalités de création
+- [URSSAF](https://www.urssaf.fr/), cotisations, ACRE, échéanciers
+- [CIPAV](https://www.lacipav.fr/), retraite des professions libérales affiliées
+- [impots.gouv.fr](https://www.impots.gouv.fr/), BNC, TVA, obligations fiscales
+- [CNIL](https://www.cnil.fr/), RGPD et données de santé
+- [Ameli](https://www.ameli.fr/), Mon soutien psy
+- [ANS / RPPS](https://esante.gouv.fr/), identification des professionnels de santé
+- [Syndicat national des psychologues](https://psychologues.org/category/communique/), prises de position professionnelles
 
 > ⚠️ **Attention.** Avant toute décision opérationnelle, valide chaque point avec les textes et organismes officiels en vigueur.
 

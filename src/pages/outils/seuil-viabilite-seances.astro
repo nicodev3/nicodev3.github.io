@@ -128,7 +128,7 @@ const webApplicationSchema = {
 
           <div class="flex flex-col gap-1.5 sm:col-span-2">
             <span class="text-sm font-semibold text-slate-800">
-              Semaines travaillées par an —
+              Semaines travaillées par an, 
               <span id="weeks-worked-display" class="text-teal-700">47</span>
               <span class="font-normal text-slate-600"> sem.</span>
             </span>
@@ -153,19 +153,19 @@ const webApplicationSchema = {
         <div class="mt-6 rounded-lg border border-teal-200 bg-teal-50 px-4 py-4">
           <p class="text-sm text-teal-950 sm:text-base">
             Chiffre d&apos;affaires mensuel cible (estimation) :
-            <strong id="target-gross" class="font-semibold">—</strong>
+            <strong id="target-gross" class="font-semibold">, </strong>
           </p>
           <p class="mt-2 text-sm text-teal-950 sm:text-base">
             Séances par mois (valeur exacte puis <strong>minimum entier</strong> au tarif indiqué) :
-            <strong id="sessions-month-exact" class="font-semibold">—</strong>
+            <strong id="sessions-month-exact" class="font-semibold">, </strong>
             →
-            <strong id="sessions-month-ceil" class="font-semibold">—</strong>
+            <strong id="sessions-month-ceil" class="font-semibold">, </strong>
           </p>
           <p class="mt-2 text-sm text-teal-950 sm:text-base">
             Séances par semaine (annuel ÷ semaines travaillées, même logique) :
-            <strong id="sessions-week-exact" class="font-semibold">—</strong>
+            <strong id="sessions-week-exact" class="font-semibold">, </strong>
             →
-            <strong id="sessions-week-ceil" class="font-semibold">—</strong>
+            <strong id="sessions-week-ceil" class="font-semibold">, </strong>
           </p>
           <p id="viability-error" class="mt-2 hidden text-sm font-semibold text-rose-800" role="alert" />
         </div>
@@ -181,19 +181,19 @@ const webApplicationSchema = {
             <tbody class="text-slate-800">
               <tr class="border-b border-slate-100">
                 <td class="px-3 py-2">Prélèvements sociaux estimés (sur le CA cible)</td>
-                <td class="px-3 py-2 font-medium" id="row-deductions">—</td>
+                <td class="px-3 py-2 font-medium" id="row-deductions">, </td>
               </tr>
               <tr class="border-b border-slate-100">
                 <td class="px-3 py-2">Reste après prélèvements − charges fixes</td>
-                <td class="px-3 py-2 font-medium" id="row-check-net">—</td>
+                <td class="px-3 py-2 font-medium" id="row-check-net">, </td>
               </tr>
               <tr class="border-b border-slate-100">
                 <td class="px-3 py-2">CA annuel indicatif (× 12)</td>
-                <td class="px-3 py-2 font-medium" id="row-annual-gross">—</td>
+                <td class="px-3 py-2 font-medium" id="row-annual-gross">, </td>
               </tr>
               <tr>
                 <td class="px-3 py-2">Rappel plafond micro-BNC (CA annuel)</td>
-                <td class="px-3 py-2 font-medium">77 000 EUR — <span id="row-ceiling-note">—</span></td>
+                <td class="px-3 py-2 font-medium">77 000 EUR, <span id="row-ceiling-note">, </span></td>
               </tr>
             </tbody>
           </table>
@@ -298,7 +298,7 @@ const webApplicationSchema = {
     };
 
     const fmtSessions = (n) => {
-      if (!Number.isFinite(n)) return "—";
+      if (!Number.isFinite(n)) return ", ";
       return n.toLocaleString("fr-FR", { maximumFractionDigits: 2, minimumFractionDigits: 0 });
     };
 
@@ -316,15 +316,15 @@ const webApplicationSchema = {
       if (!Number.isFinite(rate) || netFactor <= 0.01) {
         errorEl.textContent = "Taux incohérent : impossible de calculer un CA cible.";
         errorEl.classList.remove("hidden");
-        targetGrossEl.textContent = "—";
-        sessionsMonthExactEl.textContent = "—";
-        sessionsMonthCeilEl.textContent = "—";
-        sessionsWeekExactEl.textContent = "—";
-        sessionsWeekCeilEl.textContent = "—";
-        rowDeductions.textContent = "—";
-        rowCheckNet.textContent = "—";
-        rowAnnualGross.textContent = "—";
-        rowCeilingNote.textContent = "—";
+        targetGrossEl.textContent = ", ";
+        sessionsMonthExactEl.textContent = ", ";
+        sessionsMonthCeilEl.textContent = ", ";
+        sessionsWeekExactEl.textContent = ", ";
+        sessionsWeekCeilEl.textContent = ", ";
+        rowDeductions.textContent = ", ";
+        rowCheckNet.textContent = ", ";
+        rowAnnualGross.textContent = ", ";
+        rowCeilingNote.textContent = ", ";
         return;
       }
 

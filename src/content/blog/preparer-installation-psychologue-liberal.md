@@ -58,7 +58,7 @@ Exemple concret : si tu comptes sur 20 séances par semaine mais que tu n’en f
 
 ## Clarifier ta pratique avant d’ouvrir
 
-Avant de penser « statut » ou « cabinet », il est utile de clarifier ce que tu veux réellement proposer. Plus ton projet est lisible pour toi, plus il sera lisible pour les patients et les prescripteurs — y compris sur un futur [site internet](/blog/site-internet-psychologues/).
+Avant de penser « statut » ou « cabinet », il est utile de clarifier ce que tu veux réellement proposer. Plus ton projet est lisible pour toi, plus il sera lisible pour les patients et les prescripteurs, y compris sur un futur [site internet](/blog/site-internet-psychologues/).
 
 ### Quelle spécialité veux-tu développer ?
 
@@ -110,7 +110,7 @@ Si tu proposes surtout des accompagnements brefs, tu verras peut-être plus de n
 
 Analogie utile : les thérapies courtes ressemblent davantage à un flux, les thérapies longues à un ancrage. Les deux peuvent être très pertinents, mais ils ne structurent pas l’activité de la même manière.
 
-> 💡 **Astuce.** Tu n’as pas besoin d’avoir une identité professionnelle parfaite dès le début. En revanche, il est utile d’avoir une version simple, compréhensible et honnête de ta pratique. Tu pourras l’affiner ensuite — y compris sur ton site.
+> 💡 **Astuce.** Tu n’as pas besoin d’avoir une identité professionnelle parfaite dès le début. En revanche, il est utile d’avoir une version simple, compréhensible et honnête de ta pratique. Tu pourras l’affiner ensuite, y compris sur ton site.
 
 ## Commencer progressivement plutôt que tout quitter d’un coup
 
@@ -308,4 +308,4 @@ Si ces points sont suffisamment clairs, les démarches à venir seront plus simp
 - fixe une date de démarrage réaliste ;
 - prépare un budget de sécurité pour les premiers mois.
 
-Ces 3 lignes sur ta pratique te serviront aussi pour ta page d’accueil, ta fiche Google et tes premiers mails aux prescripteurs. Si tu veux un regard extérieur sur la façon dont tu apparais déjà en ligne — même sans site — le [diagnostic visibilité gratuit](/diagnostic-gratuit/) sert exactement à ça.
+Ces 3 lignes sur ta pratique te serviront aussi pour ta page d’accueil, ta fiche Google et tes premiers mails aux prescripteurs. Si tu veux un regard extérieur sur la façon dont tu apparais déjà en ligne, même sans site, le [diagnostic visibilité gratuit](/diagnostic-gratuit/) sert exactement à ça.

@@ -41,7 +41,7 @@ export const BLOG_INLINE_CTAS: Record<string, BlogInlineCtaConfig> = {
     variant: 'site',
   },
   'creer-site-avec-ia-psychologue': {
-    beforeHeading: 'Pourquoi faire appel à un accompagnement — et pourquoi Nicodev',
+    beforeHeading: 'Pourquoi faire appel à un accompagnement, et pourquoi Nicodev',
     variant: 'site',
   },
   'faire-son-site-soi-meme-psychologue': {

@@ -12,7 +12,7 @@ faq:
   - question: "Le GEO remplace-t-il le référencement local ?"
     answer: "Non. Pour « psychologue + ville », la fiche Google et la carte restent souvent décisives. Le GEO concerne surtout les questions d’information et les réponses des assistants. Les deux se complètent."
   - question: "Peut-on être sûr d’apparaître dans ChatGPT ?"
-    answer: "Non. Ces réponses changent d’une conversation à l’autre. On peut en revanche écrire clairement qui l’on est, où l’on reçoit et pour qui — puis vérifier de temps en temps ce que l’assistant dit de vous."
+    answer: "Non. Ces réponses changent d’une conversation à l’autre. On peut en revanche écrire clairement qui l’on est, où l’on reçoit et pour qui, puis vérifier de temps en temps ce que l’assistant dit de vous."
   - question: "Par où commencer si mon cabinet est peu visible ?"
     answer: "Fiche Google à jour si vous recevez au cabinet, page d’accueil qui dit clairement qui vous êtes, où, pour qui et comment prendre rendez-vous, textes concrets plutôt que génériques. Un diagnostic permet de prioriser sans tout refaire d’un coup."
   - question: "Pourquoi un site de psychologue devrait-il être pensé pour les IA ?"
@@ -23,9 +23,9 @@ faq:
 
 *Temps de lecture : 10 minutes*
 
-Être trouvé comme psychologue ne passe plus seulement par une liste de sites sur Google. Votre cabinet peut encore apparaître quand quelqu’un tape « psychologue + sa ville ». Il peut aussi être **résumé — ou complètement ignoré** — dans un texte rédigé par l’IA de Google. Ou n’exister tout simplement pas dans une réponse ChatGPT, Gemini ou Perplexity, alors qu’un discours plus flou, plus marketing, y occupe la place.
+Être trouvé comme psychologue ne passe plus seulement par une liste de sites sur Google. Votre cabinet peut encore apparaître quand quelqu’un tape « psychologue + sa ville ». Il peut aussi être **résumé, ou complètement ignoré**, dans un texte rédigé par l’IA de Google. Ou n’exister tout simplement pas dans une réponse ChatGPT, Gemini ou Perplexity, alors qu’un discours plus flou, plus marketing, y occupe la place.
 
-Deux sigles circulent aujourd’hui. Le **SEO** (*Search Engine Optimization*, en français : référencement naturel) désigne le travail pour être trouvé dans les moteurs de recherche comme Google. Le **GEO** (*Generative Engine Optimization*, optimisation pour les moteurs génératifs) désigne le travail pour rester compréhensible — et parfois cité — quand c’est une **intelligence artificielle** qui répond (résumé Google, ChatGPT, Gemini…). Derrière le jargon, l’idée est simple. Et au-delà de votre cabinet, c’est aussi la question de **quel discours professionnel** ces IA ont sous la main.
+Deux sigles circulent aujourd’hui. Le **SEO** (*Search Engine Optimization*, en français : référencement naturel) désigne le travail pour être trouvé dans les moteurs de recherche comme Google. Le **GEO** (*Generative Engine Optimization*, optimisation pour les moteurs génératifs) désigne le travail pour rester compréhensible, et parfois cité, quand c’est une **intelligence artificielle** qui répond (résumé Google, ChatGPT, Gemini…). Derrière le jargon, l’idée est simple. Et au-delà de votre cabinet, c’est aussi la question de **quel discours professionnel** ces IA ont sous la main.
 
 Pour le détail de ce que l’on voit concrètement sur Google, voir [Aperçus IA de Google : ce que ça change pour un psychologue](/blog/apercus-ia-google-psychologue/). Pour la méthode locale (fiche, ville, carte), voir [Psychologue : comment apparaître en premier sur Google dans sa ville](/blog/psychologue-premier-google-ville/).
 
@@ -44,18 +44,18 @@ Google [ne vend pas une meilleure place sur la carte](https://support.google.com
 
 ### GEO : l’optimisation pour les IA
 
-Le GEO ne remplace pas le SEO. Il pose une question simple : **si une IA résume ou recommande, a-t-elle assez d’informations justes sur votre cabinet pour ne pas inventer — et, parfois, pour vous citer ?**
+Le GEO ne remplace pas le SEO. Il pose une question simple : **si une IA résume ou recommande, a-t-elle assez d’informations justes sur votre cabinet pour ne pas inventer, et, parfois, pour vous citer ?**
 
 Cela concerne notamment :
 
 - les résumés IA que Google affiche parfois en haut des résultats ;
 - les assistants comme ChatGPT, Gemini ou Perplexity.
 
-Beaucoup d’offres « GEO » mettent surtout un mot neuf sur… un site bien écrit. L’intérêt n’est pas le sigle. C’est d’admettre qu’**une part croissante des recherches aboutit à une réponse rédigée** — et que votre site doit pouvoir y figurer correctement.
+Beaucoup d’offres « GEO » mettent surtout un mot neuf sur… un site bien écrit. L’intérêt n’est pas le sigle. C’est d’admettre qu’**une part croissante des recherches aboutit à une réponse rédigée**, et que votre site doit pouvoir y figurer correctement.
 
 ## Le SEO évolue : quelle place pour le GEO aujourd’hui et demain ?
 
-Pendant longtemps, le référencement se résumait surtout à ceci : apparaître dans une **liste de liens** (et, pour un cabinet, sur la **carte** Google). On travaillait la fiche, le site, les textes — et l’on espérait un clic.
+Pendant longtemps, le référencement se résumait surtout à ceci : apparaître dans une **liste de liens** (et, pour un cabinet, sur la **carte** Google). On travaillait la fiche, le site, les textes, et l’on espérait un clic.
 
 Ce modèle n’a pas disparu. Pour « psychologue + ville », la carte et les fiches restent souvent le premier écran. Mais le paysage a changé :
 
@@ -66,9 +66,9 @@ Le SEO évolue donc. Il ne s’agit plus seulement d’être bien classé dans u
 
 **Aujourd’hui**, le GEO ne remplace pas le SEO local : les deux coexistent. La fiche Google reste centrale pour être trouvé près de chez soi. Le GEO prend de la place surtout sur les questions d’information (« comment choisir un psychologue », « première séance », etc.) et dans les conversations avec les assistants.
 
-**Demain**, cette place devrait encore grandir. Les moteurs intègrent de plus en plus de réponses générées. Les assistants deviennent un réflexe pour une partie du public. Ignorer cette évolution, c’est préparer un site pour une recherche d’hier — tout en laissant d’autres discours occuper les réponses d’IA. Anticiper, ce n’est pas tout miser sur le GEO ; c’est **garder un SEO local solide, et écrire dès maintenant de façon claire pour les humains et pour les IA**.
+**Demain**, cette place devrait encore grandir. Les moteurs intègrent de plus en plus de réponses générées. Les assistants deviennent un réflexe pour une partie du public. Ignorer cette évolution, c’est préparer un site pour une recherche d’hier, tout en laissant d’autres discours occuper les réponses d’IA. Anticiper, ce n’est pas tout miser sur le GEO ; c’est **garder un SEO local solide, et écrire dès maintenant de façon claire pour les humains et pour les IA**.
 
-En pratique : le SEO reste le socle. Le GEO en devient la suite logique — déjà utile aujourd’hui, et de plus en plus incontournable.
+En pratique : le SEO reste le socle. Le GEO en devient la suite logique, déjà utile aujourd’hui, et de plus en plus incontournable.
 
 ## Pourquoi le discours des psychologues compte dans les réponses IA
 
@@ -77,10 +77,10 @@ Les IA ne connaissent pas le métier « toutes seules ». Elles s’appuient sur
 D’où l’intérêt, au-delà du seul cabinet :
 
 1. **Faire figurer le titre et le cadre.** Titre de psychologue, limites de la pratique, modalités réelles : autant d’éléments qu’une profession formée peut formuler correctement. S’ils sont absents, les réponses restent plus floues.
-2. **Ne pas laisser l’espace aux seuls discours les plus bruyants.** Sur les réseaux, la confusion des titres est déjà forte — voir [Psychologues : pourquoi reprendre la parole en ligne](/blog/site-psychologue-communiquer-clairement-visible/). Les réponses IA prolongent ce problème : ce qui n’est pas écrit clairement a peu de chances d’être repris.
+2. **Ne pas laisser l’espace aux seuls discours les plus bruyants.** Sur les réseaux, la confusion des titres est déjà forte, voir [Psychologues : pourquoi reprendre la parole en ligne](/blog/site-psychologue-communiquer-clairement-visible/). Les réponses IA prolongent ce problème : ce qui n’est pas écrit clairement a peu de chances d’être repris.
 3. **Rester présent là où les recherches se font.** Apparaître correctement dans une réponse d’IA, c’est aussi ne pas dépendre uniquement de la carte Google ou d’une plateforme tierce.
 
-Penser son site pour les IA, ce n’est pas « écrire pour ChatGPT ». C’est **écrire clairement** : qui vous êtes, où vous recevez, pour qui, comment on vous contacte — de façon qu’un humain *et* une IA puissent le comprendre.
+Penser son site pour les IA, ce n’est pas « écrire pour ChatGPT ». C’est **écrire clairement** : qui vous êtes, où vous recevez, pour qui, comment on vous contacte, de façon qu’un humain *et* une IA puissent le comprendre.
 
 ## Ce que ça change pour votre cabinet
 
@@ -90,7 +90,7 @@ Vous pouvez être bien placé dans les liens classiques et rester **invisible** 
 
 ### Se rendre identifiable face à la confusion des titres
 
-Sur le web, coachs, « thérapeutes » et formulations génériques occupent beaucoup d’espace. Un site anonyme (« un espace d’écoute bienveillant ») ne dit presque rien. Un site qui affiche clairement **titre de psychologue, ville, publics, cadre** renforce votre identité — et aide à ce que le discours de la profession soit représenté.
+Sur le web, coachs, « thérapeutes » et formulations génériques occupent beaucoup d’espace. Un site anonyme (« un espace d’écoute bienveillant ») ne dit presque rien. Un site qui affiche clairement **titre de psychologue, ville, publics, cadre** renforce votre identité, et aide à ce que le discours de la profession soit représenté.
 
 ### « Psychologue + ville » n’est pas la même chose qu’une question à ChatGPT
 
@@ -121,7 +121,7 @@ Comme une plaque professionnelle, lisible en trente secondes.
 
 ### 2. Dire la même chose partout
 
-Même nom, même adresse, même téléphone, même titre sur le site, la fiche Google et deux ou trois annuaires sérieux. Si les infos divergent, une IA peut hésiter — ou inventer.
+Même nom, même adresse, même téléphone, même titre sur le site, la fiche Google et deux ou trois annuaires sérieux. Si les infos divergent, une IA peut hésiter, ou inventer.
 
 ### 3. Écrire des phrases que l’on peut reprendre
 
@@ -133,9 +133,9 @@ Si vous êtes éligible : horaires, photos du lieu (sans personne identifiable),
 
 Le reste technique (vitesse du site, réglages, ce que Google et les assistants peuvent réellement lire) peut se confier. L’essentiel visible, c’est vous qui le relisez.
 
-## Ce qu’il vaut mieux éviter — et ce que j’inclus
+## Ce qu’il vaut mieux éviter, et ce que j’inclus
 
-**Signe sain :** on parle de fiche Google, de clarté du site, d’informations cohérentes, de textes réels — et on décrit ce qui est réaliste côté ChatGPT et résumés Google.
+**Signe sain :** on parle de fiche Google, de clarté du site, d’informations cohérentes, de textes réels, et on décrit ce qui est réaliste côté ChatGPT et résumés Google.
 
 **Signe douteux :** « pack GEO », « premier dans ChatGPT », recettes secrètes, textes génériques produits en série « pour les IA ».
 
@@ -152,7 +152,7 @@ Le reste technique (vitesse du site, réglages, ce que Google et les assistants 
 
 ### Quelle est la différence entre SEO et GEO ?
 
-Le SEO (*Search Engine Optimization*, référencement naturel), c’est être trouvé dans Google (carte, liens). Le GEO (*Generative Engine Optimization*, optimisation pour les moteurs génératifs), c’est être correctement compris — et parfois cité — quand une IA répond. Dans les deux cas : clarté, cohérence, faits.
+Le SEO (*Search Engine Optimization*, référencement naturel), c’est être trouvé dans Google (carte, liens). Le GEO (*Generative Engine Optimization*, optimisation pour les moteurs génératifs), c’est être correctement compris, et parfois cité, quand une IA répond. Dans les deux cas : clarté, cohérence, faits.
 
 ### Le GEO remplace-t-il le référencement local ?
 
@@ -164,7 +164,7 @@ Non. Les réponses changent. On peut écrire clairement et vérifier ce qui est 
 
 ### Pourquoi penser son site pour les IA ?
 
-Parce que les réponses des IA s’appuient sur ce qu’elles peuvent lire. Un site clair aide à être trouvé, et à ce que le discours des psychologues — titre, cadre, sobriété — soit représenté face à des contenus plus génériques.
+Parce que les réponses des IA s’appuient sur ce qu’elles peuvent lire. Un site clair aide à être trouvé, et à ce que le discours des psychologues, titre, cadre, sobriété, soit représenté face à des contenus plus génériques.
 
 ### Le GEO va-t-il remplacer le SEO ?
 
@@ -178,7 +178,7 @@ Fiche Google (si vous recevez au cabinet), quatre faits en haut du site, textes 
 
 Le SEO évolue. La liste de liens et la carte Google restent utiles ; les réponses rédigées par les IA prennent une place réelle, et elle devrait encore s’élargir. Le GEO sans fiche Google ignore encore la carte. Les deux se rejoignent sur une exigence simple : **un cabinet identifiable, cohérent, et rédigé pour être compris hors contexte**.
 
-Et au-delà du classement : **si les sites de psychologues ne sont pas clairs pour les IA, d’autres discours occuperont ces réponses**. Écrire clairement dès maintenant, c’est rester présent demain — et faire place au cadre professionnel là où les recherches se forment de plus en plus.
+Et au-delà du classement : **si les sites de psychologues ne sont pas clairs pour les IA, d’autres discours occuperont ces réponses**. Écrire clairement dès maintenant, c’est rester présent demain, et faire place au cadre professionnel là où les recherches se forment de plus en plus.
 
 Si vous voulez un regard sur votre fiche, votre site et cette double lecture Google / IA, vous pouvez partir d’un [diagnostic gratuit](/diagnostic-gratuit/) ou de la page [référencement site psychologue](/referencement-site-psychologue/).
 

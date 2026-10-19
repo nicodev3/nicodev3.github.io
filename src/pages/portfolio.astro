@@ -32,7 +32,7 @@ const breadcrumbSchema = {
   ],
 };
 
-/** Archives : conception d’origine avant 2019 sans refonte récente — masquées par défaut. */
+/** Archives : conception d’origine avant 2019 sans refonte récente, masquées par défaut. */
 const archiveTier = (p: PortfolioProject) => !p.refonte2026 && p.year < 2019;
 
 const projects = portfolioProjects.map((p) => ({
@@ -106,7 +106,7 @@ const portfolioHeroSubtitle =
                   src={project.image}
                   alt={
                     project.imageAlt ??
-                    `Site vitrine psychologue à ${project.location} — ${project.title}`
+                    `Site vitrine psychologue à ${project.location}, ${project.title}`
                   }
                   formats={["avif", "webp"]}
                   fallbackFormat="webp"

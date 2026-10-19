@@ -1,4 +1,4 @@
-/** URL `/blog/{slug}/` — guide pilier visibilité en ligne (cluster SEO). */
+/** URL `/blog/{slug}/`, guide pilier visibilité en ligne (cluster SEO). */
 export const GUIDE_VISIBILITE_PILLAR_SLUG = 'guide-complet-visibilite-en-ligne-psychologues';
 
 export const GUIDE_VISIBILITE_PILLAR_HREF = `/blog/${GUIDE_VISIBILITE_PILLAR_SLUG}/`;
@@ -21,7 +21,7 @@ export const GUIDE_VISIBILITE_CLUSTER_IDS = [
   'creation-site-internet',
 ] as const;
 
-/** URL `/blog/{slug}/` — guide pilier installation en libéral (cluster SEO). */
+/** URL `/blog/{slug}/`, guide pilier installation en libéral (cluster SEO). */
 export const GUIDE_INSTALLATION_PILLAR_SLUG = 'installer-liberal-psychologue-par-ou-commencer';
 
 export const GUIDE_INSTALLATION_PILLAR_HREF = `/blog/${GUIDE_INSTALLATION_PILLAR_SLUG}/`;

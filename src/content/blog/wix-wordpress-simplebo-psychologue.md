@@ -23,9 +23,9 @@ faq:
 
 Beaucoup de psychologues hésitent entre **Wix**, **WordPress** et **Simplébo** au moment de créer le site du cabinet. Le prix du mois ne suffit pas : il faut ajouter les frais de lancement, et vérifier si la construction, le référencement, la fiche Google et le suivi sont dans la prestation.
 
-Cet article compare ces trois solutions pour un site vitrine (présentation, consultations, infos pratiques, contact). Les fourchettes générales du marché — DIY, freelance, agence — sont dans le guide [combien coûte un site pour psychologue en 2026](/blog/combien-coute-site-internet-2026/). Ici, les montants sont ceux des offres nommées, relevés le **24 septembre 2026**, hors parrainage et promotions. Chaque prix est indiqué avec ce qu’il couvre : ce n’est pas un classement de prestations identiques.
+Cet article compare ces trois solutions pour un site vitrine (présentation, consultations, infos pratiques, contact). Les fourchettes générales du marché, DIY, freelance, agence, sont dans le guide [combien coûte un site pour psychologue en 2026](/blog/combien-coute-site-internet-2026/). Ici, les montants sont ceux des offres nommées, relevés le **24 septembre 2026**, hors parrainage et promotions. Chaque prix est indiqué avec ce qu’il couvre : ce n’est pas un classement de prestations identiques.
 
-> **En bref — prix payé la 1ʳᵉ année, et ce qu’il couvre**
+> **En bref, prix payé la 1ʳᵉ année, et ce qu’il couvre**
 >
 > | Option | 1ʳᵉ année | Ce que ce prix couvre |
 > | --- | --- | --- |
@@ -196,7 +196,7 @@ Les grilles bougent. Avant de choisir, revérifiez la page tarifs de chaque outi
 
 ## À lire aussi
 
-- [Combien coûte un site pour psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/) — fourchettes DIY, abonnement, freelance et agence
-- [Faire son site soi-même quand on est psychologue](/blog/faire-son-site-soi-meme-psychologue/) — limites de lecture, déontologie et RGPD
-- [Tarifs](/tarifs/) — Sérénité à 29 €/mois et Visibilité & Confiance à 49 €/mois
-- [Création de site internet pour psychologue](/creation-site-internet-psychologue/) — ce qui est inclus dans l’accompagnement
+- [Combien coûte un site pour psychologue en 2026 ?](/blog/combien-coute-site-internet-2026/), fourchettes DIY, abonnement, freelance et agence
+- [Faire son site soi-même quand on est psychologue](/blog/faire-son-site-soi-meme-psychologue/), limites de lecture, déontologie et RGPD
+- [Tarifs](/tarifs/), Sérénité à 29 €/mois et Visibilité & Confiance à 49 €/mois
+- [Création de site internet pour psychologue](/creation-site-internet-psychologue/), ce qui est inclus dans l’accompagnement

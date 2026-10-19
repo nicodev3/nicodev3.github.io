@@ -152,7 +152,7 @@ La règle issue du Code de commerce est la suivante : depuis le **15 mai 2022**,
 
 Cette dénomination doit figurer sur les **documents et correspondances à usage professionnel**.
 
-Exemple concret : tu peux écrire Claire Dupont EI ou Claire Dupont - Entrepreneur individuel sur tes factures, devis, documents contractuels ou supports administratifs — et sur les mentions légales de ton site. Le [générateur de mentions légales](/outils/generateur-mentions-legales/) t’aide à les poser proprement.
+Exemple concret : tu peux écrire Claire Dupont EI ou Claire Dupont - Entrepreneur individuel sur tes factures, devis, documents contractuels ou supports administratifs, et sur les mentions légales de ton site. Le [générateur de mentions légales](/outils/generateur-mentions-legales/) t’aide à les poser proprement.
 
 > ⚠️ **Attention.** En cas de manquement, une amende peut être encourue. Mieux vaut intégrer cette mention tout de suite dans tes modèles de documents plutôt que corriger partout plus tard.
 
@@ -233,7 +233,7 @@ Comme il n’est pas « dans la même case mentale » que l’INPI, il est souve
 
 ### Oublier la mention EI
 
-Ce petit détail semble mineur, mais il structure déjà la façon correcte de présenter ton activité — y compris en ligne.
+Ce petit détail semble mineur, mais il structure déjà la façon correcte de présenter ton activité, y compris en ligne.
 
 ### Découvrir trop tard le rythme des affiliations sociales
 

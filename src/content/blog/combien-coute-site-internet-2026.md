@@ -19,7 +19,7 @@ faq:
   - question: "Wix, WordPress ou Simplébo : combien ça coûte pour un psychologue ?"
     answer: "Les fourchettes de cet article regroupent les familles de budget. Les prix de Wix, d’un WordPress (seul ou avec un freelance) et de Simplébo, frais de lancement compris, sont dans le comparatif création et maintenance."
   - question: "Peut-on créer un site de psychologue gratuitement ?"
-    answer: "Des offres gratuites existent (sous-domaine, publicité, fonctionnalités limitées), mais un rendu professionnel crédible implique en pratique un nom de domaine, un hébergement ou un abonnement — et beaucoup de temps pour le contenu et la mise en page."
+    answer: "Des offres gratuites existent (sous-domaine, publicité, fonctionnalités limitées), mais un rendu professionnel crédible implique en pratique un nom de domaine, un hébergement ou un abonnement, et beaucoup de temps pour le contenu et la mise en page."
   - question: "Combien coûte la maintenance d'un site pour psychologue ?"
     answer: "En prestation classique, la maintenance technique se facture souvent 30 à 120 €/mois en plus de l'hébergement (8 à 40 €/mois). Certaines formules tout inclus (abonnement mensuel) regroupent hébergement, mises à jour et support dans un tarif unique."
   - question: "Faut-il payer la création en une fois ou par abonnement ?"
@@ -37,11 +37,11 @@ faq:
 *Temps de lecture : 9 minutes*
 
 > **Chez Nicodev : 0 € pour construire le site, puis 29 ou 49 €/mois tout inclus.**  
-> Voir les [tarifs](/tarifs/) et la [création de site internet pour psychologue](/creation-site-internet-psychologue/). *L’article ci-dessous* décrit les **fourchettes du marché** pour situer un budget réaliste en libéral — sans remplacer un devis personnalisé.
+> Voir les [tarifs](/tarifs/) et la [création de site internet pour psychologue](/creation-site-internet-psychologue/). *L’article ci-dessous* décrit les **fourchettes du marché** pour situer un budget réaliste en libéral, sans remplacer un devis personnalisé.
 
-Avant d'ouvrir un cabinet ou de refondre sa présence en ligne, beaucoup de psychologues tapent **combien coûte un site pour psychologue** — autrement dit, quel **prix** prévoir pour la **création d’un site web** de cabinet, sans exploser le budget ni découvrir des frais cachés six mois plus tard.
+Avant d'ouvrir un cabinet ou de refondre sa présence en ligne, beaucoup de psychologues tapent **combien coûte un site pour psychologue**, autrement dit, quel **prix** prévoir pour la **création d’un site web** de cabinet, sans exploser le budget ni découvrir des frais cachés six mois plus tard.
 
-> **En bref — prix site internet psychologue (2026)**  
+> **En bref, prix site internet psychologue (2026)**  
 > | Option | Budget indicatif | Ce qu'il faut retenir |
 > | --- | --- | --- |
 > | **DIY** (Wix, WordPress…) | 50 à 375 € la 1ʳᵉ année + beaucoup de temps | Économique sur le papier, risque de rendu générique |
@@ -89,7 +89,7 @@ Dans le guide [ouvrir un cabinet de psychologue](/blog/installer-liberal-psychol
 - **trop tard** : rester invisible hors bouche-à-oreille alors que l’agenda a besoin de se remplir ;
 - **bon rythme** : préparer la structure et les textes en parallèle, mettre en ligne quand vous êtes prêt·e à recevoir.
 
-Si vous hésitez encore entre fiche Google, Doctolib et site, le [diagnostic gratuit](/diagnostic-gratuit/) sert surtout à prioriser — pas à vous vendre une formule par défaut.
+Si vous hésitez encore entre fiche Google, Doctolib et site, le [diagnostic gratuit](/diagnostic-gratuit/) sert surtout à prioriser, pas à vous vendre une formule par défaut.
 
 ## Quel budget prévoir pour un site de psychologue ?
 
@@ -206,7 +206,7 @@ Dans ce guide, je me concentre volontairement sur les options adaptées à un be
 - **Création par un pro** (si vous sous-traitez) : 500 € à 2 000 € pour une mise en page sur mesure
 - **Si vous le faites vous-même** : coût limité à l'abonnement, mais beaucoup de temps passé
 
-Pour les prix nommés — Wix, WordPress (fait soi-même ou par un freelance) et Simplébo, frais de lancement compris — le comparatif [Wix, WordPress ou Simplébo](/blog/wix-wordpress-simplebo-psychologue/) les met à côté de l’offre à 29 €/mois. Les fourchettes de cette page restent celles des familles de budget.
+Pour les prix nommés, Wix, WordPress (fait soi-même ou par un freelance) et Simplébo, frais de lancement compris, le comparatif [Wix, WordPress ou Simplébo](/blog/wix-wordpress-simplebo-psychologue/) les met à côté de l’offre à 29 €/mois. Les fourchettes de cette page restent celles des familles de budget.
 
 Si vous le faites vous-même, c'est souvent la solution la moins chère au départ. Mais il faut garder en tête qu'un site construit seul n'est pas automatiquement bien présenté, bien organisé, ni vraiment visible.
 
@@ -314,15 +314,15 @@ Pour une vitrine standard en libéral : **50 à 500 €** la première année en
 
 ### Faut-il budgéter le site en même temps que l’installation en libéral ?
 
-Oui, au moins comme poste optionnel. Ce n’est pas obligatoire dès le jour 1, mais dès que vous voulez être trouvé hors bouche-à-oreille, le site devient un levier. Beaucoup le préparent en parallèle des démarches, sans le mettre en ligne trop tôt — voir le [guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/).
+Oui, au moins comme poste optionnel. Ce n’est pas obligatoire dès le jour 1, mais dès que vous voulez être trouvé hors bouche-à-oreille, le site devient un levier. Beaucoup le préparent en parallèle des démarches, sans le mettre en ligne trop tôt, voir le [guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/).
 
 ### Site pas cher vs site efficace : quelle différence ?
 
-Un site peu cher peut « exister » sans être trouvé, rassurant ou bien structuré pour un futur patient. Le coût utile, c'est celui d'un site qui remplit son rôle : présenter votre approche, inspirer confiance et faciliter le contact — voir le guide [site internet pour psychologue](/blog/site-internet-psychologues/).
+Un site peu cher peut « exister » sans être trouvé, rassurant ou bien structuré pour un futur patient. Le coût utile, c'est celui d'un site qui remplit son rôle : présenter votre approche, inspirer confiance et faciliter le contact, voir le guide [site internet pour psychologue](/blog/site-internet-psychologues/).
 
 ### Quel budget pour la création d’un site web de cabinet ?
 
-Si vous comparez des devis « création de site » sans ancrage métier, les fourchettes du marché restent proches de celles de cet article : **DIY à petit coût**, **abonnement mensuel tout inclus**, ou **1 000 à 3 000 €** en prestation ponctuelle pour une vitrine simple. Ce qui change pour un psychologue (ou un psychothérapeute, un psychomotricien), c’est surtout le **ton**, le **cadre déontologique** et la **lisibilité** pour les patients — pas le besoin d’une usine à fonctionnalités.
+Si vous comparez des devis « création de site » sans ancrage métier, les fourchettes du marché restent proches de celles de cet article : **DIY à petit coût**, **abonnement mensuel tout inclus**, ou **1 000 à 3 000 €** en prestation ponctuelle pour une vitrine simple. Ce qui change pour un psychologue (ou un psychothérapeute, un psychomotricien), c’est surtout le **ton**, le **cadre déontologique** et la **lisibilité** pour les patients, pas le besoin d’une usine à fonctionnalités.
 
 ## Conclusion
 
@@ -336,9 +336,9 @@ Si vous cherchez une option simple pour votre cabinet : [tarifs Nicodev](/tarifs
 
 ## À lire aussi
 
-- [Wix, WordPress ou Simplébo : le coût d’un site de psychologue](/blog/wix-wordpress-simplebo-psychologue/) — prix de création et de maintenance, frais de lancement compris
-- [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/) — où placer le site dans le planning
-- [Salaire psychologue libéral](/blog/salaire-psychologue-liberal/) — fourchettes de revenu pour cadrer le budget
-- [Faire son site soi-même quand on est psychologue](/blog/faire-son-site-soi-meme-psychologue/) — avantages et limites du DIY
-- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/) — guide pas-à-pas pour le référencement local
-- [Les psychologues et leur site internet](/blog/site-internet-psychologues/) — réflexion sur les bonnes pratiques
+- [Wix, WordPress ou Simplébo : le coût d’un site de psychologue](/blog/wix-wordpress-simplebo-psychologue/), prix de création et de maintenance, frais de lancement compris
+- [Ouvrir un cabinet de psychologue : guide d’installation](/blog/installer-liberal-psychologue-par-ou-commencer/), où placer le site dans le planning
+- [Salaire psychologue libéral](/blog/salaire-psychologue-liberal/), fourchettes de revenu pour cadrer le budget
+- [Faire son site soi-même quand on est psychologue](/blog/faire-son-site-soi-meme-psychologue/), avantages et limites du DIY
+- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/), guide pas-à-pas pour le référencement local
+- [Les psychologues et leur site internet](/blog/site-internet-psychologues/), réflexion sur les bonnes pratiques

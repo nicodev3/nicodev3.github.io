@@ -132,7 +132,7 @@ Quand on s’installe, il est naturel de surveiller son agenda et de se demander
 
 Ce qui compte surtout, au début, c’est de mettre en place des bases solides : une présence locale identifiable, des informations claires, un cadre lisible et des outils de contact simples. C’est souvent ainsi que le cabinet se remplit progressivement, sans agitation inutile.
 
-Si vous souhaitez créer un site sobre, professionnel et pensé pour votre visibilité locale, j’accompagne précisément ce type de projet chez Nicodev. Mon approche est simple : construire un site clair, fidèle à votre pratique, utile pour vos patients, et solide pour votre installation dans la durée. Pour comprendre comment [être trouvé par des patients sur Google](/referencement-site-psychologue/) — fiche Google, site et cohérence locale —, la page référencement détaille la méthode.
+Si vous souhaitez créer un site sobre, professionnel et pensé pour votre visibilité locale, j’accompagne précisément ce type de projet chez Nicodev. Mon approche est simple : construire un site clair, fidèle à votre pratique, utile pour vos patients, et solide pour votre installation dans la durée. Pour comprendre comment [être trouvé par des patients sur Google](/referencement-site-psychologue/), fiche Google, site et cohérence locale, la page référencement détaille la méthode.
 
 À lire aussi :
 

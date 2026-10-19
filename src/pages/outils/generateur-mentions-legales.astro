@@ -152,7 +152,7 @@ import DiagnosticLeadCta from "../../components/DiagnosticLeadCta.astro";
             <input
               id="ml-hebergeur"
               type="text"
-              placeholder="Ex. OVH SAS, 2 rue Kellermann, 59100 Roubaix — tél. 1007"
+              placeholder="Ex. OVH SAS, 2 rue Kellermann, 59100 Roubaix, tél. 1007"
               class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900"
             />
           </label>
@@ -182,8 +182,8 @@ import DiagnosticLeadCta from "../../components/DiagnosticLeadCta.astro";
               Contenus tiers intégrés au site (carte, vidéo embarquée…) ?
             </span>
             <select id="ml-cookies-tiers" class="rounded-lg border border-slate-300 px-3 py-2 text-slate-900">
-              <option value="non">Non — uniquement des liens sortants (ex. Doctolib)</option>
-              <option value="oui">Oui — iframe ou widget affiché sur le site</option>
+              <option value="non">Non, uniquement des liens sortants (ex. Doctolib)</option>
+              <option value="oui">Oui, iframe ou widget affiché sur le site</option>
             </select>
           </label>
         </div>
@@ -438,7 +438,7 @@ import DiagnosticLeadCta from "../../components/DiagnosticLeadCta.astro";
         );
       } else if (audience === "consentement") {
         paragraphs.push(
-          "Mesure d'audience soumise au consentement : le site utilise un outil de mesure d'audience déposant des cookies ou traceurs (par exemple Google Analytics). Finalité : établir des statistiques de fréquentation et comprendre l'usage du site. Base légale : votre consentement (article 82 de la loi Informatique et Libertés). Durée maximale de conservation des cookies de mesure d'audience : treize mois à compter de leur dépôt. Destinataire : l'éditeur du site et, le cas échéant, le prestataire d'analyse (par exemple Google LLC pour Google Analytics — consultez sa politique de confidentialité : policies.google.com/privacy).",
+          "Mesure d'audience soumise au consentement : le site utilise un outil de mesure d'audience déposant des cookies ou traceurs (par exemple Google Analytics). Finalité : établir des statistiques de fréquentation et comprendre l'usage du site. Base légale : votre consentement (article 82 de la loi Informatique et Libertés). Durée maximale de conservation des cookies de mesure d'audience : treize mois à compter de leur dépôt. Destinataire : l'éditeur du site et, le cas échéant, le prestataire d'analyse (par exemple Google LLC pour Google Analytics, consultez sa politique de confidentialité : policies.google.com/privacy).",
         );
       } else {
         paragraphs.push(
@@ -572,7 +572,7 @@ import DiagnosticLeadCta from "../../components/DiagnosticLeadCta.astro";
         paragraphes: [
           `Conformément aux articles 15 à 22 du RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et, lorsque les conditions légales sont réunies, d'un droit à la portabilité de vos données, ainsi que d'un droit d'opposition et de limitation du traitement. Vous pouvez également définir des directives relatives au sort de vos données après votre décès.`,
           `Ces droits s'exercent auprès de ${nom}, par courriel à l'adresse ${email} ou par courrier à l'adresse suivante : ${adresse}. Une réponse vous sera adressée dans un délai d'un mois à compter de la réception de la demande ; un justificatif d'identité pourra être demandé en cas de doute raisonnable sur l'identité du demandeur.`,
-          `Si vous estimez, après avoir contacté le cabinet, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la Commission nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — www.cnil.fr.`,
+          `Si vous estimez, après avoir contacté le cabinet, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la Commission nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, www.cnil.fr.`,
         ],
       });
 

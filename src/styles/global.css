@@ -10,7 +10,7 @@
     --font-heading: ui-serif, Georgia, Cambria, "Times New Roman", serif;
 
     /*
-     * Palette Stitch / Material 3 — terracotta (#94442e) + conteneur (#b35c44).
+     * Palette Stitch / Material 3, terracotta (#94442e) + conteneur (#b35c44).
      */
     --color-primary-50: #fff8f6;
     --color-primary-100: #ffdbd1;
@@ -159,7 +159,7 @@ body {
     color: var(--color-primary-foreground);
 }
 
-/* Ligne de section / chapô uppercase — sans 12px, tracking intentionnel (≈80‰) */
+/* Ligne de section / chapô uppercase, sans 12px, tracking intentionnel (≈80‰) */
 .type-eyebrow {
     font-family: var(--font-sans);
     font-size: var(--text-xs);
@@ -168,7 +168,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Labels techniques (design Stitch) — mono, caps, tracking */
+/* Labels techniques (design Stitch), mono, caps, tracking */
 .type-label-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
         monospace;
@@ -287,7 +287,7 @@ footer .footer-animated-underline:focus-visible {
     }
 }
 
-/* Bouton primaire plein — ombre type carte (~22 % alpha sur le teal) + hover explicite */
+/* Bouton primaire plein, ombre type carte (~22 % alpha sur le teal) + hover explicite */
 .btn-primary-solid {
     font-size: var(--text-base);
     font-weight: 600;
@@ -337,7 +337,7 @@ footer .footer-animated-underline:focus-visible {
     outline-offset: -1px;
 }
 
-/* Outline terracotta (hero secondaire) — hover lisible sans opacity */
+/* Outline terracotta (hero secondaire), hover lisible sans opacity */
 .btn-outline-terracotta {
     font-size: var(--text-base);
     font-weight: 600;
@@ -394,7 +394,7 @@ footer .footer-animated-underline:focus-visible {
     }
 }
 
-/* Header — bandeau fixe 80px (maquette Stitch). */
+/* Header, bandeau fixe 80px (maquette Stitch). */
 .site-header {
     transition: box-shadow 200ms ease;
 }
@@ -419,7 +419,7 @@ footer .footer-animated-underline:focus-visible {
     color: var(--color-primary-300);
 }
 
-/* Liens nav desktop — soulignement border-b (maquette Stitch). */
+/* Liens nav desktop, soulignement border-b (maquette Stitch). */
 .site-nav-link {
     display: inline-flex;
     align-items: center;

@@ -75,7 +75,7 @@ Le sujet le plus sensible de votre présence en ligne : ce que le **code de déo
 
 ### 3. SEO local et « premier sur Google » dans sa ville
 
-Une fois la fiche en place, il faut comprendre ce que « bien classé » signifie réellement : pertinence, distance, réputation, cohérence des signaux locaux, pages du site alignées avec votre zone. Depuis juillet 2026 s’y ajoute ce que les Aperçus IA et les assistants changent — ou ne changent pas — pour un cabinet.
+Une fois la fiche en place, il faut comprendre ce que « bien classé » signifie réellement : pertinence, distance, réputation, cohérence des signaux locaux, pages du site alignées avec votre zone. Depuis juillet 2026 s’y ajoute ce que les Aperçus IA et les assistants changent, ou ne changent pas, pour un cabinet.
 
 → [Psychologue : comment apparaître en premier sur Google dans sa ville ?](/blog/psychologue-premier-google-ville/)
 
@@ -139,13 +139,13 @@ Ces articles complètent le guide principal :
 
 - **Vous n’avez ni fiche Google ni site** : commencez par la [fiche Google Business Profile](/blog/google-business-profile-psychologue/), lisez tout de suite [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/) pour fixer le cadre déontologique, puis esquissez la structure du site avec [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/).
 - **Vous avez une fiche mais peu de contacts** : enchaînez [SEO local](/blog/psychologue-premier-google-ville/) et le comparatif [Site vs Doctolib](/blog/site-internet-psychologue-doctolib/).
-- **Vous refondez un site existant** : lisez [nom de domaine et hébergement](/blog/nom-de-domaine-hebergement/), [budget](/blog/combien-coute-site-internet-2026/) et [bases techniques](/blog/creation-site-internet/) avant de signer un devis. Profitez-en pour retirer toute section « témoignages » si vous en aviez une — voir [avis et e-réputation](/blog/avis-google-e-reputation-psychologue/).
+- **Vous refondez un site existant** : lisez [nom de domaine et hébergement](/blog/nom-de-domaine-hebergement/), [budget](/blog/combien-coute-site-internet-2026/) et [bases techniques](/blog/creation-site-internet/) avant de signer un devis. Profitez-en pour retirer toute section « témoignages » si vous en aviez une, voir [avis et e-réputation](/blog/avis-google-e-reputation-psychologue/).
 
 ## Erreurs fréquentes
 
 - **Négliger la fiche Google** tout en investissant dans un site très élaboré : vous perdez une partie du trafic local immédiat.
 - **Multiplier les adresses ou numéros** selon les annuaires : incohérence des données NAP (nom, adresse, téléphone) qui affaiblit le référencement local.
-- **Confondre visibilité et déontologie** : sur-promesse, avis fictifs, noms de fiche bourrés de mots-clés, témoignages patients publiés sur le site — autant de risques pour votre réputation et vos comptes Google / annuaires. Voir [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/).
+- **Confondre visibilité et déontologie** : sur-promesse, avis fictifs, noms de fiche bourrés de mots-clés, témoignages patients publiés sur le site, autant de risques pour votre réputation et vos comptes Google / annuaires. Voir [avis Google et e-réputation](/blog/avis-google-e-reputation-psychologue/).
 - **Sous-estimer le mobile** : une majorité de recherches se fait sur téléphone ; la lenteur ou une prise de rendez-vous confuse fait fuir.
 
 ## Checklist express

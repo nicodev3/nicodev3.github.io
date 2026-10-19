@@ -25,7 +25,7 @@ faq:
 
 *Temps de lecture : 10 minutes*
 
-Quand un psychologue crée lui-même son site avec un *site builder* — Wix, Squarespace, Webflow, WordPress.com ou un autre —, le mettre en ligne peut sembler simple. Mais certains défauts apparaissent souvent après coup : un texte difficile à lire sur téléphone, une navigation confuse, des informations importantes peu visibles ou une page qui reste introuvable sur Google. Cet article examine ces erreurs courantes et explique pourquoi choisir un modèle ne suffit pas à concevoir un site clair.
+Quand un psychologue crée lui-même son site avec un *site builder*, Wix, Squarespace, Webflow, WordPress.com ou un autre, le mettre en ligne peut sembler simple. Mais certains défauts apparaissent souvent après coup : un texte difficile à lire sur téléphone, une navigation confuse, des informations importantes peu visibles ou une page qui reste introuvable sur Google. Cet article examine ces erreurs courantes et explique pourquoi choisir un modèle ne suffit pas à concevoir un site clair.
 
 Cette déception est fréquente. Elle ne signifie pas que les site builders sont inutiles. Ces outils rendent la publication accessible et proposent des modèles, des blocs et des réglages visuels. Mais publier une page et concevoir un site clair sont deux travaux différents. **L’outil fournit des éléments ; il ne décide pas à votre place de ce qui doit compter, de l’ordre des informations ni de la manière dont une personne va s’orienter.**
 
@@ -105,7 +105,7 @@ Des paragraphes courts, des listes pour les informations pratiques et des titres
 
 ## Pourquoi l’outil ne fait pas le travail de design
 
-Les site builders — Wix, Squarespace, Webflow, WordPress.com et d’autres — donnent accès à des modèles, des couleurs, des blocs et des réglages mobiles. Cela permet de construire soi-même un site fonctionnel. Mais il reste à faire les choix qui déterminent son utilité : quelles pages créer, quelles informations montrer d’abord, comment écrire les boutons, quelles images utiliser et comment tester l’ensemble sur téléphone. Avec WordPress.org, la logique est différente : il faut aussi choisir un hébergeur (l’entreprise qui garde les fichiers du site et le rend accessible sur Internet) et un thème (la base de sa présentation), ou faire appel à un prestataire.
+Les site builders, Wix, Squarespace, Webflow, WordPress.com et d’autres, donnent accès à des modèles, des couleurs, des blocs et des réglages mobiles. Cela permet de construire soi-même un site fonctionnel. Mais il reste à faire les choix qui déterminent son utilité : quelles pages créer, quelles informations montrer d’abord, comment écrire les boutons, quelles images utiliser et comment tester l’ensemble sur téléphone. Avec WordPress.org, la logique est différente : il faut aussi choisir un hébergeur (l’entreprise qui garde les fichiers du site et le rend accessible sur Internet) et un thème (la base de sa présentation), ou faire appel à un prestataire.
 
 Si vous préférez ne pas assembler seul tous ces éléments, je propose un accompagnement dédié aux psychologues. [Voir comment se déroule la création d’un site](/creation-site-internet-psychologue/).
 

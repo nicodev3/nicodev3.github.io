@@ -79,7 +79,7 @@ Pour le référencement, ce choix reste handicapant.
 
 Google indexe des adresses distinctes. Chaque URL peut être associée à un sujet principal, à un titre, à une description et à un contenu assez développé pour répondre à une recherche précise. Quand tout le cabinet tient sur une seule page, ces signaux se mélangent. Le moteur doit décider d’un seul positionnement pour des intentions très différentes : « psychologue » suivi d’une ville, consultation d’adolescents, thérapie de couple, burn-out, modalités en visio, etc.
 
-Une page unique peine à couvrir correctement plusieurs de ces recherches à la fois. Le titre principal ne peut viser qu’une requête dominante. Les sections plus bas dans le défilement pèsent moins que des pages dédiées, avec leur propre adresse et leur propre hiérarchie de titres. Les liens internes — qui aident Google à comprendre quels contenus sont liés — disparaissent presque entièrement : il n’y a plus rien à relier.
+Une page unique peine à couvrir correctement plusieurs de ces recherches à la fois. Le titre principal ne peut viser qu’une requête dominante. Les sections plus bas dans le défilement pèsent moins que des pages dédiées, avec leur propre adresse et leur propre hiérarchie de titres. Les liens internes, qui aident Google à comprendre quels contenus sont liés, disparaissent presque entièrement : il n’y a plus rien à relier.
 
 Le partage et les éventuels liens externes souffrent du même effet. Une recommandation ou une citation pointe toujours vers la même adresse générique, même lorsque la personne cherchait une information précise. Sur un site structuré, cette entrée peut mener à la page qui correspond vraiment à la question posée.
 
@@ -87,7 +87,7 @@ Cela ne signifie pas qu’il faille multiplier les pages artificiellement. L’�
 
 ## Des vestiges techniques visibles par les visiteurs
 
-Sur l’un des sites les plus datés de l’échantillon, des liens liés à l’administration du site — « Connexion », « Déconnexion » ou « Modifier » — apparaissaient encore en bas des pages publiques.
+Sur l’un des sites les plus datés de l’échantillon, des liens liés à l’administration du site, « Connexion », « Déconnexion » ou « Modifier », apparaissaient encore en bas des pages publiques.
 
 Pour un développeur, ces liens sont immédiatement reconnaissables. Pour un visiteur, ils peuvent être déroutants : faut-il posséder un compte ? Le site est-il correctement sécurisé ? Est-il toujours maintenu ?
 
@@ -155,7 +155,7 @@ Cette question rejoint plus largement celle des [promesses trop belles dans les 
 
 ## Ce que ces observations changent concrètement
 
-Aucun de ces sites n’est imparfait parce que son créateur aurait volontairement négligé les patients. Les résultats observés sont souvent la conséquence logique d’un outil pensé pour un usage générique — vendre des produits, publier des articles, collecter des demandes — appliqué à une situation plus sensible.
+Aucun de ces sites n’est imparfait parce que son créateur aurait volontairement négligé les patients. Les résultats observés sont souvent la conséquence logique d’un outil pensé pour un usage générique, vendre des produits, publier des articles, collecter des demandes, appliqué à une situation plus sensible.
 
 Un site de psychologue n’est pas seulement une vitrine commerciale. Il constitue souvent le **premier contact, silencieux et à sens unique**, entre une personne qui hésite et un professionnel qu’elle ne connaît pas encore.
 

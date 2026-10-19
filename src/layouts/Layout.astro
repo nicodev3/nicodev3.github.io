@@ -38,7 +38,7 @@ const {
 const baseUrl = Astro.site ?? Astro.url.origin;
 const canonicalPath = normalizeCanonicalPath(Astro.url.pathname);
 const canonical = getCanonicalUrl(Astro.url.pathname, baseUrl);
-/* Pages tags : utiles à la navigation mais pauvres pour Google — noindex en gardant le maillage (follow). */
+/* Pages tags : utiles à la navigation mais pauvres pour Google, noindex en gardant le maillage (follow). */
 const isBlogTagPage = canonicalPath.startsWith("/blog/tag/");
 const robotsContent = isBlogTagPage
   ? "noindex, follow"

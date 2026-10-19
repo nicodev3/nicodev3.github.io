@@ -10,7 +10,7 @@ tags: ["psychologue", "site web cabinet", "cadre déontologique"]
 
 Quand un psychologue cherche à [créer un site internet](/creation-site-internet-psychologue/), deux options reviennent souvent : une plateforme ou une agence « pour les professionnels », ou un prestataire qui connaît déjà le métier. Les retours que j'entends de confrères sont constants : **ils préfèrent parler à quelqu'un qui exerce aussi**, plutôt qu'à une structure qui vend le même package à des dizaines de métiers.
 
-Ce n'est pas une question d'ego. C'est une question de **justesse** — pour le patient qui lit le site, et pour le titre que vous portez.
+Ce n'est pas une question d'ego. C'est une question de **justesse**, pour le patient qui lit le site, et pour le titre que vous portez.
 
 ## Ce que change un confrère derrière le clavier
 
@@ -24,7 +24,7 @@ Je suis **psychologue, psychomotricien et psychothérapeute**, et développeur w
 
 Beaucoup de prestataires web proposent le même modèle à des artisans, des avocats, des naturopathes, des « thérapeutes » et des psychologues. Sur le papier, c'est efficace. En pratique, **votre titre devient un segment parmi d'autres**.
 
-Le risque n'est pas seulement esthétique (design générique). C'est le **vocabulaire** et la **posture** : un ton calqué sur le bien-être ou le coaching peut diluer ce que signifie être psychologue — ou psychothérapeute au sens réglementaire du terme.
+Le risque n'est pas seulement esthétique (design générique). C'est le **vocabulaire** et la **posture** : un ton calqué sur le bien-être ou le coaching peut diluer ce que signifie être psychologue, ou psychothérapeute au sens réglementaire du terme.
 
 Les patients, eux, ont déjà du mal à s'y retrouver. Un site qui brouille encore les repères ne leur rend pas service.
 
@@ -44,13 +44,13 @@ Ce n'est pas une fermeture morale : c'est une **ligne de cohérence**. J'en parl
 - **Moins de traduction** : vous n'avez pas à former le prestataire à votre métier.
 - **Un ton aligné** : informatif, sobre, compatible avec le cadre déontologique.
 - **Une offre lisible** : le patient comprend à qui il s'adresse, sans mélange avec d'autres pratiques.
-- **La technique en plus** : structure, performance, bases SEO, hébergement — sans devoir gérer WordPress ou une usine à plugins.
+- **La technique en plus** : structure, performance, bases SEO, hébergement, sans devoir gérer WordPress ou une usine à plugins.
 
 Si vous comparez les budgets, l'article [combien coûte un site internet pour psychologue en 2026](/blog/combien-coute-site-internet-2026/) donne des fourchettes. Si vous hésitez encore entre Doctolib et un site, voir le [comparatif site vs Doctolib](/blog/site-internet-psychologue-doctolib/).
 
 ## Pour aller plus loin
 
-- [Création de site internet pour psychologue](/creation-site-internet-psychologue/) — offre, déroulement, FAQ
-- [Diagnostic gratuit](/diagnostic-gratuit/) — priorités sans engagement
-- [Site internet psychomotricien](/site-internet-psychomotricien/) — page dédiée
-- [Tarifs](/tarifs/) — formules Sérénité et Visibilité & Confiance
+- [Création de site internet pour psychologue](/creation-site-internet-psychologue/), offre, déroulement, FAQ
+- [Diagnostic gratuit](/diagnostic-gratuit/), priorités sans engagement
+- [Site internet psychomotricien](/site-internet-psychomotricien/), page dédiée
+- [Tarifs](/tarifs/), formules Sérénité et Visibilité & Confiance

@@ -113,7 +113,7 @@ const questionSets = {
         <p class="text-sm font-semibold uppercase tracking-[0.14em] text-teal-700">Outil 2</p>
         <h1 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Mini-diagnostic visibilité cabinet</h1>
         <p class="mt-4 text-slate-700">
-          Quelques questions pour <strong>prioriser</strong> votre présence en ligne — que vous ayez déjà un site
+          Quelques questions pour <strong>prioriser</strong> votre présence en ligne, que vous ayez déjà un site
           ou que vous soyez encore en installation avec seulement Google et une plateforme de rendez-vous.
         </p>
         <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950">
@@ -348,8 +348,8 @@ const questionSets = {
           const li = document.createElement("li");
           li.textContent =
             w.pts === 0
-              ? `${w.label} — à traiter en priorité si vous voulez renforcer la confiance en ligne.`
-              : `${w.label} — petits ajustements souvent rapides pour passer au niveau supérieur.`;
+              ? `${w.label}, à traiter en priorité si vous voulez renforcer la confiance en ligne.`
+              : `${w.label}, petits ajustements souvent rapides pour passer au niveau supérieur.`;
           prioritiesEl.appendChild(li);
         }
       }

@@ -1,5 +1,5 @@
 /**
- * Taxonomie blog — libellés stables, assez précis pour le SEO cabinet de soin.
+ * Taxonomie blog, libellés stables, assez précis pour le SEO cabinet de soin.
  * 2 à 4 tags par article ; pages /blog/tag/ indexées (taxonomie consolidée).
  */
 export const BLOG_TAGS = [
