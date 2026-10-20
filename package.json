@@ -24,7 +24,7 @@
         "cgv:pdf": "node scripts/generate-cgv-pdf.mjs"
     },
     "dependencies": {
-        "@astrojs/check": "^0.9.10",
+        "@astrojs/check": "^0.9.11",
         "@astrojs/markdown-satteri": "^0.4.4",
         "@astrojs/sitemap": "^3.7.4",
         "@fontsource-variable/lora": "^5.2.8",
@@ -32,7 +32,7 @@
         "@lucide/astro": "^1.8.0",
         "@tailwindcss/typography": "^0.5.16",
         "@tailwindcss/vite": "^4.2.4",
-        "astro": "^7.4.0",
+        "astro": "^7.4.1",
         "astro-llms-md": "^3.0.2",
         "tailwindcss": "^4.2.4",
         "tarteaucitronjs": "1.35.1",
