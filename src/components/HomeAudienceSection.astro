@@ -1,67 +1,68 @@
 ---
-import { ArrowRight } from '@lucide/astro';
+import { ArrowDown } from '@lucide/astro';
 
+/**
+ * Deux situations, une formule chacune ; la page détaillée est citée dans la description.
+ */
 const situations = [
 	{
-		title: 'Vous vous installez en libéral',
-		description:
-			'Le site pose un cadre et des repères dès l’ouverture du cabinet : votre approche, les personnes que vous recevez, vos modalités et la manière de prendre rendez-vous.',
-		href: '/blog/installer-liberal-psychologue-par-ou-commencer/',
-		linkLabel: 'Ouvrir un cabinet de psychologue',
+		title: 'Vous vous installez, créez ou refaites votre site',
+		before: 'Poser un cadre et des repères clairs, clarifier les contenus avec vous, puis prendre en charge toute la ',
+		moreLabel: 'réalisation',
+		moreHref: '/creation-site-internet-psychologue/',
+		after: '.',
+		offerHref: '#offre-serenite',
+		offerLabel: 'Formule Sérénité',
 	},
 	{
-		title: 'Vous créez ou refaites votre site',
-		description:
-			'Vous partez de zéro, ou votre site actuel ne correspond plus à votre pratique. Je vous aide à clarifier les contenus et je prends en charge toute la réalisation.',
-		href: '/creation-site-internet-psychologue/',
-		linkLabel: 'Voir la prestation de création',
-	},
-	{
-		title: 'Vous voulez être mieux trouvé',
-		description:
-			'Le site présente votre pratique, Google et la fiche locale donnent des repères cohérents dans votre ville. Doctolib ou l’outil de votre choix peut continuer à gérer les rendez-vous, sans faire dépendre toute votre présence d’une seule plateforme.',
-		href: '/referencement-site-psychologue/',
-		linkLabel: 'Comprendre le référencement local',
+		title: 'Vous voulez gagner en visibilité',
+		before: 'Un site et une fiche Google cohérents dans votre ville, à côté de Doctolib ou de votre outil de rendez-vous : voir le ',
+		moreLabel: 'référencement local',
+		moreHref: '/referencement-site-psychologue/',
+		after: '.',
+		offerHref: '#offre-visibilite',
+		offerLabel: 'Formule Visibilité & Confiance',
 	},
 ] as const;
 ---
 
-<section id="pour-qui" class="section-y scroll-mt-28 border-b border-border bg-surface" aria-labelledby="home-audience-heading">
+<section id="pour-qui" class="section-y scroll-mt-28" aria-labelledby="home-audience-heading">
 	<div class="shell-layout">
-		<header class="mx-auto mb-10 max-w-3xl text-center">
-			<p class="type-eyebrow mb-3 text-muted">Votre situation</p>
-			<h2 id="home-audience-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Un site adapté à l’étape où en est votre cabinet
-			</h2>
-			<p class="mt-4 text-lg leading-relaxed text-muted">
-				Installation, premier site, refonte ou visibilité locale&nbsp;: le point de départ change, mais le site
-				doit toujours permettre de comprendre votre pratique avant de vous contacter.
-			</p>
-		</header>
+		<div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-12">
+			<header>
+				<h2 id="home-audience-heading" class="text-balance font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+					Un site adapté à l’étape où en est votre cabinet
+				</h2>
+				<p class="mt-4 text-pretty text-base leading-relaxed text-muted">
+					Offre réservée aux <strong class="font-medium text-foreground">psychologues</strong>, aux
+					<strong class="font-medium text-foreground">psychothérapeutes</strong> (titre + RPPS) et aux{' '}
+					<a href="/site-internet-psychomotricien/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">psychomotriciens</a>.
+					Je ne réalise pas de sites pour d’autres professions.
+				</p>
+			</header>
 
-		<div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
-			{
-				situations.map(({ title, description, href, linkLabel }) => (
-					<article class="flex h-full flex-col rounded-lg border border-border bg-white p-6 shadow-sm sm:p-8">
-						<h3 class="font-heading text-xl font-semibold text-foreground">{title}</h3>
-						<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
-						<a
-							href={href}
-							class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
-						>
-							{linkLabel}
-							<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
-						</a>
-					</article>
-				))
-			}
+			<ul class="divide-y divide-border border-y border-border">
+				{
+					situations.map(({ title, before, moreLabel, moreHref, after, offerHref, offerLabel }) => (
+						<li class="py-5 sm:py-6">
+							<h3 class="text-balance font-heading text-xl font-semibold text-foreground">{title}</h3>
+							<p class="mt-1.5 text-pretty text-base leading-relaxed text-muted">
+								{before}<a
+									href={moreHref}
+									class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary"
+								>{moreLabel}</a>{after}
+							</p>
+							<a
+								href={offerHref}
+								class="mt-2 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+							>
+								{offerLabel}
+								<ArrowDown class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+							</a>
+						</li>
+					))
+				}
+			</ul>
 		</div>
-
-		<p class="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-muted">
-			Offre réservée aux <strong class="font-medium text-foreground">psychologues</strong>, aux{' '}
-			<strong class="font-medium text-foreground">psychothérapeutes</strong> (titre + RPPS) et aux{' '}
-			<a href="/site-internet-psychomotricien/" class="font-medium text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">psychomotriciens</a>.
-			Pas de sites pour psychopraticiens ni pour un catalogue multi-métiers.
-		</p>
 	</div>
 </section>

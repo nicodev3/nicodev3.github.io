@@ -5,8 +5,8 @@
 export const SETUP_FEE_AMOUNT = '0 €';
 export const SETUP_FEE_LABEL = 'de construction du site';
 
-export const SERENITE_MONTHLY = '29€';
-export const VISIBILITE_MONTHLY = '49€';
+export const SERENITE_MONTHLY = '29 €';
+export const VISIBILITE_MONTHLY = '49 €';
 export const SERENITE_MONTHLY_SPACED = '29 €';
 export const VISIBILITE_MONTHLY_SPACED = '49 €';
 

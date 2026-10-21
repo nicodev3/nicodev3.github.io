@@ -10,7 +10,13 @@ export interface OfferFeatureItem {
 export interface Props {
 	name: string;
 	price: string;
-	description: string;
+	description?: string;
+	/** Ligne courte « pour qui » sous le prix (accueil). */
+	audience?: string;
+	/** Masque le bouton de la carte quand la section porte un appel unique (accueil). */
+	showAction?: boolean;
+	/** Ancre de la carte (liens « cette formule » depuis l’accueil). */
+	anchorId?: string;
 	summary?: string;
 	features: (string | OfferFeatureItem)[];
 	buttonLabel: string;
@@ -31,6 +37,9 @@ const {
 	name,
 	price,
 	description,
+	audience,
+	showAction = true,
+	anchorId,
 	summary,
 	features,
 	buttonLabel,
@@ -49,7 +58,9 @@ const shellClasses =
 
 const recommendedShell = recommended
 	? 'z-10 overflow-visible border-2 border-primary-foreground shadow-2xl md:scale-[1.05]'
-	: 'border border-border hover:border-primary-300/60';
+	: showAction
+		? 'border border-border hover:border-primary-300/60'
+		: 'border border-border';
 
 const isDiagnosticHref = buttonHref.includes('/diagnostic-gratuit');
 const exchangeEventAttrs = isDiagnosticHref
@@ -82,7 +93,7 @@ const analyticsOffer = name.toLocaleLowerCase('fr').includes('sérénité') ? 's
 const articleClass = `${shellClasses} ${recommendedShell}`;
 ---
 
-<article class={articleClass}>
+<article id={anchorId} class:list={[articleClass, anchorId && 'scroll-mt-28']}>
 	{
 		recommended && badgeText && (
 			<span class="type-label-mono absolute left-1/2 top-0 z-20 max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-foreground px-6 py-1 text-center font-bold tracking-wider text-on-primary shadow-sm">
@@ -93,7 +104,7 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 
 	<div class="flex flex-1 flex-col">
 		<header class="mb-8">
-			<h3 class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">{name}</h3>
+			<h3 class="font-heading text-2xl font-semibold text-foreground">{name}</h3>
 			{
 				setupPrice ? (
 					<p class="mt-4">
@@ -118,7 +129,8 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 					</p>
 				)
 			}
-			<p class="mt-4 text-base text-muted">{description}</p>
+			{audience && <p class="mt-4 font-heading text-lg italic leading-snug text-foreground">{audience}</p>}
+			{description && <p class="mt-4 text-base text-muted">{description}</p>}
 			{summary && (
 				<p class="mt-4 border-l-2 border-primary-foreground pl-3 text-sm font-semibold leading-relaxed text-foreground">
 					{summary}
@@ -126,7 +138,7 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 			)}
 		</header>
 
-		<ul class="mb-10 flex-grow space-y-4 text-base text-foreground">
+		<ul class:list={['flex-grow space-y-4 text-base text-foreground', showAction ? 'mb-10' : 'mb-0']}>
 			{features.map((feature) => {
 				const featureText = typeof feature === 'string' ? feature : feature.text;
 				const featureDetail = typeof feature === 'string' ? undefined : feature.detail;
@@ -157,6 +169,7 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 			})}
 		</ul>
 
+		{showAction && (
 		<div class="mt-auto flex flex-col gap-3" data-suppress-whatsapp-when-visible>
 			{
 				subscribeHref ? (
@@ -194,5 +207,6 @@ const articleClass = `${shellClasses} ${recommendedShell}`;
 				{setupPrice ? `${setupPrice} de construction • Sans engagement` : 'Sans engagement • Site transférable'}
 			</p>
 		</div>
+		)}
 	</div>
 </article>

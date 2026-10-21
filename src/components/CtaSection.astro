@@ -1,5 +1,4 @@
 ---
-import contactBackground from '../assets/images/contact-accueil-background.webp';
 
 export interface CtaButton {
 	text: string;
@@ -14,7 +13,10 @@ export interface Props {
 	title: string;
 	description: string;
 	primaryButton: CtaButton;
-	secondaryButton: CtaButton;
+	/** Facultatif : un appel final peut ne porter qu’une seule action. */
+	secondaryButton?: CtaButton;
+	/** Ligne courte sous les boutons (ex. format et délai de réponse). */
+	note?: string;
 	background?: 'surface' | 'white' | 'background';
 	/** Bandeau terracotta plein (CTA final accueil, design Stitch). */
 	variant?: 'default' | 'accent-band';
@@ -27,6 +29,7 @@ const {
 	description,
 	primaryButton,
 	secondaryButton,
+	note,
 	background = 'surface',
 	variant = 'default',
 	anchorId,
@@ -38,7 +41,7 @@ const isAccentBand = variant === 'accent-band';
 const isDiagnosticHref = (href: string) =>
 	new URL(href, Astro.site ?? Astro.url).pathname.replace(/\/+$/, '') === '/diagnostic-gratuit';
 const primarySuppressHeaderDiag = isDiagnosticHref(primaryButton.href);
-const secondaryIsDiagnostic = isDiagnosticHref(secondaryButton.href);
+const secondaryIsDiagnostic = secondaryButton ? isDiagnosticHref(secondaryButton.href) : false;
 ---
 
 <section
@@ -48,21 +51,21 @@ const secondaryIsDiagnostic = isDiagnosticHref(secondaryButton.href);
 		isAccentBand ? 'cta-accent-band border-t border-primary-900/20' : ['border-t border-border', bgClass],
 		anchorId && 'scroll-mt-28',
 	]}
-	style={isAccentBand ? `background-image: url("${contactBackground.src}")` : undefined}
 >
 	<div class="shell-layout text-center">
+		{isAccentBand && <p class="psi-mark psi-mark--band" aria-hidden="true">Ψ</p>}
 		<h2
 			class:list={[
 				'mb-4 font-heading font-semibold tracking-tight',
-				isAccentBand ? 'text-3xl leading-tight text-on-primary sm:text-4xl md:text-5xl' : 'text-3xl sm:text-4xl text-foreground',
+				isAccentBand ? 'text-3xl leading-tight text-on-primary sm:text-4xl' : 'text-3xl sm:text-4xl text-foreground',
 			]}
 		>
 			{title}
 		</h2>
 		<p
 			class:list={[
-				'shell-prose mx-auto mb-8 text-lg sm:text-xl',
-				isAccentBand ? 'text-on-primary/90' : 'text-muted',
+				'shell-prose mx-auto mb-8 text-pretty text-lg sm:text-xl',
+				isAccentBand ? 'text-on-primary' : 'text-muted',
 			]}
 		>
 			{description}
@@ -90,6 +93,7 @@ const secondaryIsDiagnostic = isDiagnosticHref(secondaryButton.href);
 			>
 				{primaryButton.text}
 			</a>
+			{secondaryButton && (
 			<a
 				href={secondaryButton.href}
 				class:list={[
@@ -111,18 +115,27 @@ const secondaryIsDiagnostic = isDiagnosticHref(secondaryButton.href);
 			>
 				{secondaryButton.text}
 			</a>
+			)}
 		</div>
+		{note && (
+			<p class:list={['mt-4 text-sm', isAccentBand ? 'text-on-primary' : 'text-muted']}>{note}</p>
+		)}
 	</div>
 </section>
 
 {isAccentBand && (
 	<style>
+		/* Aplat terracotta : contraste stable (≈9:1) pour tout le texte blanc. */
 		.cta-accent-band {
 			background-color: var(--color-primary-foreground);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
 			color: var(--color-on-primary);
+		}
+
+		.psi-mark--band {
+			margin-bottom: 0.75rem;
+			color: var(--color-primary-100);
+			font-size: 2.5rem;
+			line-height: 1;
 		}
 	</style>
 )}

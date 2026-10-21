@@ -10,7 +10,7 @@ const waHref = WHATSAPP_HREF;
   href={waHref}
   target="_blank"
   rel="noopener noreferrer"
-  class="whatsapp-fab fixed z-30 flex size-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-2xl outline-none ring-offset-2 ring-offset-background transition-[transform,opacity,box-shadow] duration-200 motion-safe:hover:scale-110 focus-visible:ring-2 focus-visible:ring-whatsapp focus-visible:ring-offset-2"
+  class="whatsapp-fab fixed z-30 flex size-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-2xl outline-none ring-offset-2 ring-offset-background transition-[transform,opacity,box-shadow,visibility] duration-200 motion-safe:hover:scale-110 focus-visible:ring-2 focus-visible:ring-whatsapp focus-visible:ring-offset-2"
   aria-label="Écrire sur WhatsApp"
   data-analytics-event="lead_click_whatsapp"
   data-analytics-cta="whatsapp"
@@ -28,10 +28,12 @@ const waHref = WHATSAPP_HREF;
       0 8px 20px -6px rgba(15, 42, 42, 0.14);
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .whatsapp-fab:not([data-scrolled="true"]) {
-      animation: whatsapp-fab-intro 2s ease-out 1 both;
-    }
+  /* Rien ne flotte sur le premier écran : le bouton apparaît une fois l'introduction passée. */
+  .whatsapp-fab:not([data-scrolled="true"]) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(0.75rem) scale(0.92);
   }
 
   .whatsapp-fab[data-scrolled="true"] {
@@ -51,26 +53,6 @@ const waHref = WHATSAPP_HREF;
       opacity: 0;
       pointer-events: none;
       transform: translateY(0.75rem) scale(0.92);
-    }
-  }
-
-  @keyframes whatsapp-fab-intro {
-    0% {
-      box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.06),
-        0 8px 20px -6px rgba(15, 42, 42, 0.14),
-        0 0 0 0 color-mix(in srgb, var(--color-primary-foreground) 40%, transparent);
-    }
-    55% {
-      box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.06),
-        0 8px 20px -6px rgba(15, 42, 42, 0.14),
-        0 0 0 12px transparent;
-    }
-    100% {
-      box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.06),
-        0 8px 20px -6px rgba(15, 42, 42, 0.14);
     }
   }
 
@@ -102,7 +84,7 @@ const waHref = WHATSAPP_HREF;
     if (!(el instanceof HTMLElement) || el.dataset.bound === "true") return;
     el.dataset.bound = "true";
 
-    const threshold = 140;
+    const threshold = () => Math.max(140, window.innerHeight * 0.75);
     let ticking = false;
     const visiblePeers = new Set();
 
@@ -110,7 +92,7 @@ const waHref = WHATSAPP_HREF;
       const node = document.getElementById("whatsapp-fab");
       if (!node) return;
       node.dataset.scrolled =
-        window.scrollY > threshold ? "true" : "false";
+        window.scrollY > threshold() ? "true" : "false";
       node.dataset.peerVisible = visiblePeers.size > 0 ? "true" : "false";
       ticking = false;
     }

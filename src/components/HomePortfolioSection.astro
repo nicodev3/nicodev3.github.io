@@ -1,43 +1,60 @@
 ---
 import { Image } from 'astro:assets';
-import { ArrowRight, ArrowUpRight } from '@lucide/astro';
+import { ArrowLeft, ArrowRight, ArrowUpRight } from '@lucide/astro';
 import {
-	formatPortfolioProjectMeta,
 	getRecentPortfolioProjects,
+	portfolioProjects,
 } from '../data/portfolio-projects';
 
-/** Les 3 réalisations les plus récentes (ordre du tableau portfolio). */
-const projects = getRecentPortfolioProjects(3);
+/**
+ * Deux réalisations récentes (hors celle du hero), plus un site suivi depuis 2019 (dont l’autrice témoigne plus bas) :
+ * la page montre à la fois le travail actuel et la durée de l’accompagnement.
+ */
+const LONG_TERM_TITLE = 'Séverine Reisser';
+const longTerm = portfolioProjects.find((p) => p.title === LONG_TERM_TITLE);
+// La plus récente est montrée dans le hero à partir de 768 px (capture masquée sur mobile) :
+// elle ouvre donc le carrousel sur mobile uniquement.
+const [heroProject, ...others] = getRecentPortfolioProjects(4);
+const recent = others.filter((p) => p !== longTerm);
+const projects = longTerm ? [...recent.slice(0, 2), longTerm] : recent.slice(0, 3);
 
-const projectsForHome = projects.map((project) => ({
+const toCard = (project: (typeof projects)[number], mobileOnly = false) => ({
 	title: project.title,
-	meta: formatPortfolioProjectMeta(project),
+	// Lieu et année : une information propre à chaque projet (le métier est déjà dans le titre de section).
+	meta: `${project.location} · ${project.year}`,
 	description:
 		project.description ??
 		`Site réalisé pour ${project.title} (${project.location}).`,
 	image: project.image,
 	imageAlt: project.imageAlt ?? `Page d’accueil du site de ${project.title}`,
 	href: project.url,
-}));
+	mobileOnly,
+});
+
+const projectsForHome = [
+	...(heroProject && heroProject !== longTerm ? [toCard(heroProject, true)] : []),
+	...projects.map((project) => toCard(project)),
+];
 ---
 
-<section class="section-y border-b border-border bg-surface" aria-labelledby="home-portfolio-heading">
+<section class="section-y border-b border-border" aria-labelledby="home-portfolio-heading">
 	<div class="shell-layout">
-		<header class="mx-auto max-w-3xl text-center">
-			<p class="type-eyebrow mb-3 text-muted">Réalisations</p>
-			<h2 id="home-portfolio-heading" class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				Quelques sites réalisés pour des psychologues et psychothérapeutes
-			</h2>
-			<p class="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-				Des pratiques et des cadres différents, le détail sur la page{' '}
-				<a
-					href="/portfolio/"
-					class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
-				>
-					Portfolio
-				</a>
-				.
-			</p>
+		<header class="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
+			<div class="max-w-2xl">
+				<h2 id="home-portfolio-heading" class="text-balance font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+					Quelques sites réalisés pour des psychologues et psychothérapeutes
+				</h2>
+				<p class="mt-4 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+					Chaque site part de la pratique : l’approche, les personnes reçues, les modalités de consultation.
+				</p>
+			</div>
+			<a
+				href="/portfolio/"
+				class="inline-flex min-h-11 items-center gap-2 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+			>
+				Voir toutes les réalisations
+				<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+			</a>
 		</header>
 
 		<div class="relative mt-12 flex flex-col gap-4" data-home-portfolio-carousel>
@@ -47,11 +64,16 @@ const projectsForHome = projects.map((project) => ({
 				tabindex="0"
 				role="region"
 				aria-roledescription="carrousel"
-				aria-label="Réalisations, faites défiler horizontalement sur mobile"
+				aria-label="Réalisations"
 			>
 				{
-					projectsForHome.map(({ title, meta, description, image, imageAlt, href }) => (
-						<article class="group flex h-full w-full shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm sm:w-[85%] lg:w-auto lg:shrink">
+					projectsForHome.map(({ title, meta, description, image, imageAlt, href, mobileOnly }) => (
+						<article
+							class:list={[
+								'group h-full w-full shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm sm:w-[85%] lg:w-auto lg:shrink',
+								mobileOnly ? 'flex md:hidden' : 'flex',
+							]}
+						>
 							<a
 								href={href}
 								target="_blank"
@@ -72,12 +94,12 @@ const projectsForHome = projects.map((project) => ({
 							<div class="flex grow flex-col p-6">
 								<p class="type-label-mono text-muted">{meta}</p>
 								<h3 class="mt-2 font-heading text-xl font-semibold text-foreground">{title}</h3>
-								<p class="mt-3 grow text-base leading-relaxed text-muted">{description}</p>
+								<p class="mt-3 grow text-pretty text-base leading-relaxed text-muted">{description}</p>
 								<a
 									href={href}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+									class="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
 								>
 									Visiter le site
 									<ArrowUpRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
@@ -94,20 +116,20 @@ const projectsForHome = projects.map((project) => ({
 			>
 				<button
 					type="button"
-					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
+					class="inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full border border-border bg-white text-foreground transition-colors hover:border-primary-foreground hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground disabled:cursor-not-allowed disabled:opacity-40"
 					aria-label="Réalisation précédente"
 					data-carousel-prev
 				>
-					<span aria-hidden="true">←</span>
+					<ArrowLeft class="h-5 w-5" stroke-width={1.75} aria-hidden="true" />
 				</button>
 
 				<div class="flex min-w-0 flex-col items-center gap-2 justify-self-center">
 					<p class="text-base font-medium tabular-nums text-foreground sm:text-lg" aria-live="polite">
 						<span data-carousel-current>1</span>
 						<span class="text-muted" aria-hidden="true"> / </span>
-						<span data-carousel-total>{projectsForHome.length}</span>
+						<span data-carousel-total>{projectsForHome.filter((p) => !p.mobileOnly).length}</span>
 					</p>
-					<div class="flex flex-wrap justify-center gap-2" data-carousel-dots aria-label="Pagination du carrousel"></div>
+					<div class="flex flex-wrap justify-center gap-2" data-carousel-dots role="group" aria-label="Pagination du carrousel"></div>
 					<p
 						data-carousel-swipe-hint
 						class="hidden max-w-[16rem] text-center text-xs italic leading-snug text-muted motion-reduce:transition-none"
@@ -117,24 +139,15 @@ const projectsForHome = projects.map((project) => ({
 
 				<button
 					type="button"
-					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
+					class="inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full border border-border bg-white text-foreground transition-colors hover:border-primary-foreground hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground disabled:cursor-not-allowed disabled:opacity-40"
 					aria-label="Réalisation suivante"
 					data-carousel-next
 				>
-					<span aria-hidden="true">→</span>
+					<ArrowRight class="h-5 w-5" stroke-width={1.75} aria-hidden="true" />
 				</button>
 			</div>
 		</div>
 
-		<div class="mt-10 text-center">
-			<a
-				href="/portfolio/"
-				class="inline-flex items-center gap-2 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
-			>
-				Voir toutes les réalisations
-				<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
-			</a>
-		</div>
 	</div>
 </section>
 
@@ -190,7 +203,9 @@ const projectsForHome = projects.map((project) => ({
 
 		const getPageCount = () => {
 			if (isDesktopGrid()) return 1;
-			return Math.max(Math.ceil(track.scrollWidth / Math.max(getScrollStep(), 1)), 1);
+			// Une page par réalisation visible : chaque carte est un point d’accroche du défilement.
+			const visible = Array.from(track.querySelectorAll<HTMLElement>('article')).filter((a) => a.offsetParent !== null);
+			return Math.max(visible.length, 1);
 		};
 
 		const getMaxScroll = () => track.scrollWidth - track.clientWidth;
@@ -229,11 +244,25 @@ const projectsForHome = projects.map((project) => ({
 			dotRebuildScheduled = true;
 			requestAnimationFrame(() => {
 				dotRebuildScheduled = false;
-				updateButtons(true);
+				updateButtons(false);
 			});
 		}
 
+		// Les attributs de carrousel n’ont de sens que sous 1024 px ; au-delà, c’est une simple grille.
+		function syncCarouselSemantics() {
+			if (isDesktopGrid()) {
+				track.removeAttribute('role');
+				track.removeAttribute('aria-roledescription');
+				track.removeAttribute('tabindex');
+			} else {
+				track.setAttribute('role', 'region');
+				track.setAttribute('aria-roledescription', 'carrousel');
+				track.setAttribute('tabindex', '0');
+			}
+		}
+
 		function updateButtons(rebuildDotsMaybe = false) {
+			syncCarouselSemantics();
 			const scrollLeft = track.scrollLeft;
 			const maxScroll = getMaxScroll();
 			const step = Math.max(getScrollStep(), 1);

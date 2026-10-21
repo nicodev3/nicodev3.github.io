@@ -7,9 +7,26 @@ export interface HomeFaqItem {
 	id?: string;
 	question: string;
 	answer: string;
+	link?: { href: string; label: string };
 }
 
 export const homeFaqItems: HomeFaqItem[] = [
+	{
+		id: 'faq-ia',
+		question: 'Pourquoi ne pas faire mon site moi-même avec l’IA ?',
+		answer:
+			'C’est possible, et le résultat sera souvent correct. La suite compte autant : ce qu’il faut écrire de votre pratique, ce qu’il vaut mieux éviter de promettre, et qui s’occupe de l’hébergement, de la fiche Google et des mises à jour dans six mois. J’utilise moi aussi l’IA pour aller plus vite, puis je relis le code et les textes.',
+		link: {
+			href: '/blog/creer-site-avec-ia-psychologue/',
+			label: 'Créer son site avec l’IA quand on est psychologue',
+		},
+	},
+	{
+		id: 'faq-diagnostic',
+		question: 'Comment se passe le diagnostic gratuit ?',
+		answer:
+			'Vous répondez en ligne à 4 questions sur votre cabinet et votre présence actuelle. Je vous fais un retour sous 48 h ouvrées : clarté de vos informations essentielles, visibilité locale (site, fiche Google, profils en ligne) et trois recommandations adaptées à votre situation, avec ou sans site. C’est gratuit et sans engagement.',
+	},
 	{
 		id: PRICING_FAQ.id,
 		question: PRICING_FAQ.question,
@@ -26,20 +43,20 @@ export const homeFaqItems: HomeFaqItem[] = [
 		id: 'faq-modifications',
 		question: 'Que couvrent les modifications incluses dans les offres ?',
 		answer:
-			"L'offre Sérénité inclut 1 modification simple par mois (texte ou photo). L'offre Visibilité & Confiance inclut 3 modifications simples par mois, traitées en priorité (support prioritaire), ainsi qu'une modernisation du site tous les ans. Les changements de structure (refonte complète du design) restent hors périmètre.",
+			"L’offre Sérénité inclut 1 modification simple par mois (texte ou photo). L’offre Visibilité & Confiance inclut 3 modifications simples par mois, traitées en priorité (support prioritaire), ainsi qu’une modernisation du site tous les ans. Les changements de structure (refonte complète du design) restent hors périmètre.",
 	},
 	{
 		id: 'faq-contenu',
 		question:
-			"Je ne suis pas à l'aise pour écrire. Comment ça se passe pour le contenu ?",
+			"Je ne suis pas à l’aise pour écrire. Comment ça se passe pour le contenu ?",
 		answer:
-			'Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu\'il soit clair et rassurant.',
+			'Le formulaire vous pose des questions courtes et concrètes : vos spécialités, votre approche, tarifs, horaires, lieu... Vos futurs patients cherchent surtout à être rassurés et à comprendre comment vous travaillez. Pas besoin de rédiger des textes longs : vous répondez simplement, et je structure le contenu pour qu’il soit clair et rassurant.',
 	},
 	{
 		id: 'faq-performance-mobile',
 		question: 'Pourquoi dit-on que le site est rapide et léger ?',
 		answer:
-			'Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s\'affichent rapidement, même sur mobile ou avec une connexion limitée. C\'est agréable pour vos visiteurs et bien vu par les moteurs de recherche.',
+			'Le site est conçu sans systèmes lourds en arrière-plan. Les pages sont légères et s’affichent rapidement, même sur mobile ou avec une connexion limitée. C’est agréable pour vos visiteurs et bien vu par les moteurs de recherche.',
 	},
 	{
 		question: 'En quoi votre approche est-elle différente d’une offre standardisée ?',
@@ -51,7 +68,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 		question:
 			'Puis-je utiliser Doctolib, Qare ou un autre service de prise de rendez-vous ?',
 		answer:
-			'Oui. J\'intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile.',
+			'Oui. J’intègre le widget de prise de rendez-vous de votre plateforme (Doctolib, Qare, Maiia ou équivalent) directement sur le site. Les sites sont aussi optimisés pour le mobile.',
 	},
 	{
 		id: 'faq-site-existant',
@@ -79,13 +96,13 @@ export const homeFaqItems: HomeFaqItem[] = [
 	{
 		question: 'Puis-je changer d’offre plus tard ?',
 		answer:
-			'Oui, vous pouvez passer d\'un plan à l\'autre selon l\'évolution de votre activité.',
+			'Oui, vous pouvez passer d’un plan à l’autre selon l’évolution de votre activité.',
 	},
 	{
 		id: 'faq-sortie',
-		question: 'Que se passe-t-il si j’arrête l’abonnement ?',
+		question: 'Suis-je engagé, et que se passe-t-il si j’arrête l’abonnement ?',
 		answer:
-			'L’hébergement, la maintenance, les modifications et le suivi assurés par Nicodev s’arrêtent à la fin de la période déjà payée. Sur simple demande, je vous transfère le nom de domaine et vous remets une copie exploitable du site, avec ses contenus et les éléments nécessaires à son réhébergement. Vous pouvez donc poursuivre avec le prestataire de votre choix sans repartir de zéro.',
+			'Non, les offres sont sans engagement de durée : vous pouvez résilier à tout moment. L’hébergement, la maintenance, les modifications et le suivi assurés par Nicodev s’arrêtent à la fin de la période déjà payée. Sur simple demande, je vous transfère le nom de domaine et vous remets une copie exploitable du site, avec ses contenus et les éléments nécessaires à son réhébergement. Vous pouvez donc poursuivre avec le prestataire de votre choix sans repartir de zéro.',
 	},
 ];
 
@@ -94,11 +111,10 @@ export const homeFaqItems: HomeFaqItem[] = [
  * La liste complète reste sur la page Tarifs.
  */
 const HOME_FAQ_SHORTLIST_IDS = [
+	'faq-diagnostic',
 	'faq-cout-construction',
+	'faq-sortie',
 	'faq-contenu',
-	'faq-doctolib-rdv',
-	'faq-propriete',
-	'faq-engagement',
 ] as const;
 
 export const homeFaqShortlist: HomeFaqItem[] = HOME_FAQ_SHORTLIST_IDS.map((id) => {

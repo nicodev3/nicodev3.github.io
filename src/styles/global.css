@@ -30,9 +30,10 @@
     --color-whatsapp: #087568;
     --color-whatsapp-hover: #065f55;
     --color-neutral-0: #ffffff;
-    --color-neutral-50: #f8f9fa;
-    --color-neutral-600: #545f72;
-    --color-neutral-900: #191c1d;
+    /* Neutres chauds (blanc cassé, gris taupe) accordés à la terracotta. */
+    --color-neutral-50: #faf7f3;
+    --color-neutral-600: #5b534d;
+    --color-neutral-900: #1f1b18;
     /* Variables sémantiques (alias) */
     --color-on-primary: var(--color-neutral-0);
     --color-background: var(--color-neutral-50);
@@ -40,7 +41,7 @@
     --color-foreground: var(--color-neutral-900);
     --color-on-foreground: var(--color-neutral-50);
     --color-muted: var(--color-neutral-600);
-    --color-surface-alt: #f3f4f5;
+    --color-surface-alt: #f2ece5;
     --color-border: #dbc1ba;
     /* Liens textuels = terracotta (charte), pas de bleu hors-marque */
     --color-link: var(--color-primary-700);
@@ -72,6 +73,11 @@ body {
     @apply font-sans text-base;
 }
 
+::selection {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-900);
+}
+
 .skip-link {
     position: fixed;
     top: 0.75rem;
@@ -101,7 +107,7 @@ body {
 }
 
 .shell-prose {
-    max-width: 72ch;
+    max-width: 64ch;
 }
 
 .article-prose {
@@ -140,7 +146,7 @@ body {
 }
 
 .section-y {
-    @apply py-16 md:py-24;
+    @apply py-12 sm:py-16 md:py-24;
 }
 
 /*
@@ -160,6 +166,13 @@ body {
 }
 
 /* Ligne de section / chapô uppercase, sans 12px, tracking intentionnel (≈80‰) */
+/* Signe Ψ : repère de la double casquette psychologue / développeur. */
+.psi-mark {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--color-primary-foreground);
+}
+
 .type-eyebrow {
     font-family: var(--font-sans);
     font-size: var(--text-xs);
@@ -168,13 +181,12 @@ body {
     text-transform: uppercase;
 }
 
-/* Labels techniques (design Stitch), mono, caps, tracking */
+/* Petits libellés (métadonnées, mentions sous bouton) : sans, petites capitales, tracking léger */
 .type-label-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-        monospace;
+    font-family: var(--font-sans);
     font-size: var(--text-xs);
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
@@ -274,16 +286,33 @@ footer .footer-animated-underline:focus-visible {
     }
 }
 
-/* Scroll reveal : fade-in 0,4s sur les <section> directes de <main> (JS ajoute les classes) */
+/*
+ * Scroll reveal : les <section> directes de <main> partent d'un état déjà lisible
+ * (jamais invisibles, y compris après un saut d'ancre) puis se posent en ease-out.
+ */
 @media (prefers-reduced-motion: no-preference) {
     main>section.scroll-reveal {
-        opacity: 0;
-        transition: opacity 0.4s ease;
+        opacity: 0.4;
+        translate: 0 0.75rem;
+        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), translate 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    main>section.scroll-reveal:target {
+        opacity: 1;
+        translate: none;
     }
 
     main>section.scroll-reveal:first-of-type,
     main>section.scroll-reveal.scroll-reveal--visible {
         opacity: 1;
+        translate: none;
+    }
+}
+
+@media print {
+    main>section.scroll-reveal {
+        opacity: 1;
+        translate: none;
     }
 }
 

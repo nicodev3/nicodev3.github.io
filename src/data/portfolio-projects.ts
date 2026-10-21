@@ -199,6 +199,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		location: 'Les Lilas',
 		year: 2019,
 		profession: 'psychologue',
+		description: 'Site créé en 2019 et suivi depuis : évolutions et mises à jour au fil des années.',
 		imageAlt: 'Site internet psychologue aux Lilas (Île-de-France), Séverine Reisser',
 	},
 	{

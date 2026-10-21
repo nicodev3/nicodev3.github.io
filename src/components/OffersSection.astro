@@ -39,6 +39,19 @@ const serenityFeatures = [
 	'Mentions légales, base RGPD (protection des données), 1 modification simple par mois',
 ];
 
+/** Accueil : trois inclusions qui distinguent vraiment les formules, le détail reste sur /tarifs/. */
+const serenityHomeFeatures = [
+	'Création ou refonte du site, textes clarifiés avec vous',
+	'Hébergement, nom de domaine, fiche Google et bases de référencement inclus',
+	'1 modification simple par mois',
+];
+
+const visibilityHomeFeatures = [
+	'Tout Sérénité, avec 3 modifications simples par mois',
+	'Support prioritaire et aide à la rédaction de vos contenus',
+	'Suivi approfondi de votre visibilité dans Google et les assistants IA, modernisation annuelle du site',
+];
+
 const visibilityFeatures = [
 	"Tout le contenu de l'offre Sérénité",
 	{
@@ -65,21 +78,16 @@ const visibilityFeatures = [
 	<span id="offres" class="absolute -mt-28" aria-hidden="true"></span>
 	<div class="shell-layout">
 		<header class="shell-prose mx-auto text-center">
-			<h2 class="font-heading text-3xl font-semibold text-foreground sm:text-4xl">
-				{PRICING_HEADLINE}
+			<h2 class="text-balance font-heading text-3xl font-semibold text-foreground sm:text-4xl">
+				{isHome ? 'Deux formules, tout compris' : PRICING_HEADLINE}
 			</h2>
-			<p class="mt-4 text-base text-muted sm:text-lg">
+			<p class="mt-4 text-pretty text-base text-muted sm:text-lg">
 				{
 					isHome ? (
 						<>
-							{PRICING_LEAD} Deux formules sans frais de construction, détail, démo et comparatif sur la page{' '}
-							<a
-								href="/tarifs/"
-								class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
-							>
-								Tarifs
-							</a>
-							.
+							29&nbsp;€ ou 49&nbsp;€ par mois, soit 348&nbsp;€ ou 588&nbsp;€ par an, sans facture de construction.{' '}
+							<strong class="font-semibold text-foreground">Sans engagement de durée</strong>&nbsp;: vous pouvez résilier à
+							tout moment, avec effet à la fin du mois déjà payé, et le site et le nom de domaine vous sont remis.
 						</>
 					) : (
 						<>
@@ -124,15 +132,18 @@ const visibilityFeatures = [
 			)
 		}
 
-		<div class="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-10 pt-0 md:grid-cols-2 lg:gap-12">
+		<div class:list={['mx-auto mt-10 grid max-w-4xl grid-cols-1 pt-0 md:grid-cols-2', isHome ? 'gap-6 lg:gap-8' : 'gap-10 lg:gap-12']}>
 			<OfferCard
 				name="Sérénité"
 				price={SERENITE_MONTHLY}
-				setupPrice={SETUP_FEE_AMOUNT}
+				setupPrice={isHome ? undefined : SETUP_FEE_AMOUNT}
 				setupLabel={SETUP_FEE_LABEL}
-				description="Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique."
-				summary="Site + hébergement + suivi technique + fiche Google"
-				features={serenityFeatures}
+				description={isHome ? undefined : 'Pour créer ou refaire le site de votre cabinet, y placer votre bouton de rendez-vous (Doctolib, Perfactive ou autre) et déléguer la technique.'}
+				audience={isHome ? 'Si vous voulez un site juste et stable, que vous modifiez rarement.' : undefined}
+				anchorId="offre-serenite"
+				summary={isHome ? undefined : 'Site + hébergement + suivi technique + fiche Google'}
+				features={isHome ? serenityHomeFeatures : serenityFeatures}
+				showAction={!isHome}
 				buttonLabel="Demander un diagnostic gratuit"
 				buttonHref="/diagnostic-gratuit/"
 				subscribeHref={stripePaymentLinkSerenite}
@@ -143,11 +154,14 @@ const visibilityFeatures = [
 			<OfferCard
 				name="Visibilité & Confiance"
 				price={VISIBILITE_MONTHLY}
-				setupPrice={SETUP_FEE_AMOUNT}
+				setupPrice={isHome ? undefined : SETUP_FEE_AMOUNT}
 				setupLabel={SETUP_FEE_LABEL}
-				description="Pour faire évoluer votre site avec davantage de soutien : modifications plus fréquentes, aide à la rédaction et travail approfondi sur votre visibilité dans Google et les réponses des assistants IA."
-				summary="3 modifications par mois + support prioritaire + aide à la rédaction"
-				features={visibilityFeatures}
+				description={isHome ? undefined : 'Pour faire évoluer votre site avec davantage de soutien : modifications plus fréquentes, aide à la rédaction et travail approfondi sur votre visibilité dans Google et les réponses des assistants IA.'}
+				audience={isHome ? 'Si vous comptez publier, modifier souvent ou travailler votre visibilité.' : undefined}
+				anchorId="offre-visibilite"
+				summary={isHome ? undefined : '3 modifications par mois + support prioritaire + aide à la rédaction'}
+				features={isHome ? visibilityHomeFeatures : visibilityFeatures}
+				showAction={!isHome}
 				buttonLabel="Demander un diagnostic gratuit"
 				buttonHref="/diagnostic-gratuit/"
 				subscribeHref={stripePaymentLinkVisibilite}
@@ -158,27 +172,35 @@ const visibilityFeatures = [
 
 		{
 			isHome && (
-				<p class="mx-auto mt-8 max-w-2xl text-center text-sm text-muted">
-					{SETUP_FEE_AMOUNT} de construction · Site transférable ·{' '}
-					<a
-						href="/tarifs/"
-						class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
-					>
-						Conditions détaillées
-					</a>
+				<p class="mx-auto mt-6 max-w-2xl text-pretty text-center text-sm leading-relaxed text-muted">
+					Le suivi de visibilité ne garantit ni une position dans Google ni une citation par un assistant IA.
 				</p>
 			)
 		}
 
 		{
 			isHome && (
-				<div class="mt-8 text-center">
+				<div class="mx-auto mt-10 flex max-w-xl flex-col items-center gap-3 text-center" data-suppress-whatsapp-when-visible>
+					<p class="font-heading text-xl font-semibold text-foreground">Vous hésitez entre les deux&nbsp;?</p>
+					<p class="text-balance text-base text-muted">Le diagnostic gratuit vous aide à choisir, ou à décider qu’un site n’est pas encore utile.</p>
+					<a
+						href="/diagnostic-gratuit/"
+						class="btn-primary-solid mt-2 inline-flex items-center justify-center rounded-xl px-8 py-4 font-bold"
+						data-analytics-event="lead_click_diagnostic"
+						data-analytics-cta="diagnostic"
+						data-analytics-location={`offres_${source}`}
+						data-lead-source={`offres-${source}`}
+						data-suppress-header-diagnostic-when-visible
+					>
+						Demander un diagnostic gratuit
+					</a>
+					<p class="text-sm text-muted">4 questions en ligne · retour sous 48&nbsp;h ouvrées · sans engagement</p>
 					<a
 						href="/tarifs/"
-						class="inline-flex items-center gap-2 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
+						class="mt-2 inline-flex min-h-11 items-center gap-2 font-semibold text-foreground underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary"
 						data-umami-event="lead_click_tarifs_from_home_offers"
 					>
-						Voir le détail des offres
+						Comparer les offres en détail
 						<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
 					</a>
 				</div>
@@ -217,6 +239,8 @@ const visibilityFeatures = [
 			)
 		}
 
+		{
+			!isHome && (
 		<ul class="mx-auto mt-8 grid max-w-4xl gap-3 text-sm text-muted sm:grid-cols-2 lg:grid-cols-4">
 			{TARIFS_TRUST_SIGNALS.map((label) => (
 				<li class="flex items-start gap-2">
@@ -225,9 +249,11 @@ const visibilityFeatures = [
 				</li>
 			))}
 		</ul>
+			)
+		}
 
 		{
-			hasStripePaymentLinks && (
+			hasStripePaymentLinks && !isHome && (
 				<p class="mx-auto mt-8 max-w-2xl text-center text-sm text-muted">
 					Le paiement en ligne s’effectue sur une page sécurisée Stripe. Si vous hésitez encore, commencez par un
 					diagnostic gratuit.

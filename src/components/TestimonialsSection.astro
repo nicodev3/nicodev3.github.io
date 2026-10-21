@@ -1,294 +1,171 @@
 ---
-import TestimonialCard from './TestimonialCard.astro';
-import { maltTestimonials, MALT_PROFILE_URL, googleTestimonials } from '../data/testimonials';
+import { ArrowUpRight, Star } from '@lucide/astro';
+import { GOOGLE_REVIEWS_URL, googleTestimonials } from '../data/testimonials';
 
-/** Avis Google en premier, puis recommandations Malt. */
-const carouselTestimonials = [
-	...googleTestimonials.map((t) => ({ source: 'google' as const, ...t })),
-	...maltTestimonials.map((t) => ({ source: 'malt' as const, ...t })),
-];
+/**
+ * Trois avis Google, choisis pour ce qu’ils disent du travail avec un confrère :
+ * le premier est mis en avant, les deux suivants l’accompagnent.
+ * Les recommandations Malt ne sont pas affichées ici (pas de note publiée).
+ */
+const FEATURED = 'Stéphanie Requet-Catinean';
+const SUPPORTING = ['Séverine Reisser', 'Audrey Larcebau'];
+
+const pick = (short: string) => {
+	const found = googleTestimonials.find((t) => t.short === short);
+	if (!found) throw new Error(`Avis introuvable : « ${short} »`);
+	return found;
+};
+
+/** Extraits fidèles (passages coupés signalés par […]) pour les avis trop longs ; l’avis complet reste sur Google. */
+const EXCERPTS: Record<string, string> = {
+	'Séverine Reisser':
+		'J’ai confié la création de mes sites à Nicolas en 2019 et j’ai toujours été très satisfaite de notre collaboration depuis. Au delà de la partie technique, il a su me conseiller judicieusement autant sur le fond que sur la forme […]',
+};
+
+const featured = pick(FEATURED);
+const supporting = SUPPORTING.map(pick).map((t) => ({ ...t, excerpt: EXCERPTS[t.short] }));
+const roleOf = (author: string) => author.split(',')[1]?.trim() ?? 'Psychologue';
+const reviewCount = googleTestimonials.length;
+const allFiveStars = googleTestimonials.every((t) => t.rating === 5);
 ---
 
 <section
 	id="temoignages"
-	class="section-y scroll-mt-28 border-b border-border bg-[color-mix(in_srgb,var(--color-foreground)_4%,var(--color-background))]"
+	class="testimonials section-y scroll-mt-28 bg-foreground text-on-foreground"
+	aria-labelledby="temoignages-heading"
 >
 	<div class="shell-layout">
-		<div class="mb-16 text-center">
-			<h2 class="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-				Ce qu’en disent les psychologues accompagnés
-			</h2>
-		</div>
+		<div class="mx-auto max-w-5xl">
+			<div class="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
+				<h2 id="temoignages-heading" class="text-balance font-heading text-2xl font-semibold text-on-foreground sm:text-3xl">
+					Ce qu’en disent les psychologues accompagnés
+				</h2>
+				<p class="testimonials__source flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+					{allFiveStars && (
+						<span class="flex gap-0.5" aria-hidden="true">
+							{Array.from({ length: 5 }).map(() => (
+								<Star class="h-4 w-4 fill-current" stroke-width={0} />
+							))}
+						</span>
+					)}
+					<a
+						href={GOOGLE_REVIEWS_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="testimonials__link inline-flex min-h-11 items-center gap-1 underline underline-offset-4"
+					>
+						{reviewCount} avis Google{allFiveStars ? ', tous à 5/5' : ''}
+						<span class="sr-only">(nouvel onglet)</span>
+						<ArrowUpRight class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+					</a>
+				</p>
+			</div>
 
-		<div class="mb-10 text-center md:mb-12">
-			<p class="type-eyebrow mb-2 text-muted">Avis</p>
-			<p class="mx-auto max-w-2xl text-sm text-muted md:text-base">
-				Elles parlent notamment du langage commun, de la compréhension de leur pratique et de la prise en charge
-				de la technique. Avis publiés sur <strong class="font-medium text-foreground">Google</strong> et{' '}
-				<strong class="font-medium text-foreground">Malt</strong>.
-			</p>
-		</div>
+			<figure class="mt-10 md:mt-14">
+				<blockquote>
+					<p class="testimonials__featured text-pretty font-heading">
+						«&nbsp;{featured.quote}&nbsp;»
+					</p>
+				</blockquote>
+				<figcaption class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-base">
+					<span class="font-semibold text-on-foreground">{featured.short}</span>
+					<span class="testimonials__muted">{roleOf(featured.author)}</span>
+					{featured.websiteUrl && (
+						<a
+							href={featured.websiteUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="testimonials__link inline-flex min-h-11 items-center gap-1 underline underline-offset-4"
+						>
+							{featured.websiteLabel}
+							<span class="sr-only">(nouvel onglet)</span>
+							<ArrowUpRight class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+						</a>
+					)}
+				</figcaption>
+			</figure>
 
-		<div class="relative flex flex-col gap-4" data-testimonials-carousel-root>
-			<div
-				class="flex gap-6 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 rounded-lg"
-				data-testimonials-carousel-track
-				tabindex="0"
-				role="region"
-				aria-roledescription="carrousel"
-				aria-label="Témoignages, faites défiler horizontalement"
-			>
-				{carouselTestimonials.map((t) => (
-					<div class="snap-start shrink-0 w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]">
-						<TestimonialCard
-							source={t.source}
-							rating={t.source === 'google' ? t.rating : undefined}
-							quote={t.quote}
-							author={t.short}
-							websiteUrl={'websiteUrl' in t ? t.websiteUrl : undefined}
-							websiteLabel={'websiteLabel' in t ? t.websiteLabel : undefined}
-						/>
-					</div>
+			<div class="testimonials__supporting mt-12 grid gap-10 pt-10 md:mt-16 md:grid-cols-2 md:gap-14">
+				{supporting.map((t) => (
+					<figure class="flex flex-col">
+						<blockquote class="grow">
+							<p class="text-pretty text-base leading-relaxed text-on-foreground/90 sm:text-lg">
+								«&nbsp;{t.excerpt ?? t.quote}&nbsp;»
+							</p>
+							{t.excerpt && (
+								<a
+									href={GOOGLE_REVIEWS_URL}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="testimonials__link mt-1 inline-flex min-h-11 items-center gap-1 text-sm underline underline-offset-4"
+								>
+									Lire l’avis complet sur Google
+									<span class="sr-only">(nouvel onglet)</span>
+								</a>
+							)}
+						</blockquote>
+						<figcaption class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+							<span class="font-semibold text-on-foreground">{t.short}</span>
+							<span class="testimonials__muted">{roleOf(t.author)}</span>
+							{t.websiteUrl && (
+								<a
+									href={t.websiteUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="testimonials__link inline-flex min-h-11 items-center gap-1 underline underline-offset-4"
+								>
+									{t.websiteLabel}
+									<span class="sr-only">(nouvel onglet)</span>
+									<ArrowUpRight class="h-4 w-4 shrink-0" stroke-width={1.75} aria-hidden="true" />
+								</a>
+							)}
+						</figcaption>
+					</figure>
 				))}
 			</div>
-
-			<div
-				class="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 sm:gap-x-4"
-				data-testimonials-carousel-toolbar
-			>
-				<button
-					type="button"
-					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
-					aria-label="Témoignages précédents"
-					data-testimonials-carousel-prev
-				>
-					<span aria-hidden="true">←</span>
-				</button>
-
-				<div class="flex min-w-0 flex-col items-center gap-2 justify-self-center">
-					<p class="text-base font-medium tabular-nums text-foreground sm:text-lg" aria-live="polite">
-						<span data-testimonials-carousel-current>1</span>
-						<span class="text-muted" aria-hidden="true"> / </span>
-						<span data-testimonials-carousel-total>1</span>
-					</p>
-					<div
-						class="flex flex-wrap justify-center gap-2"
-						data-testimonials-carousel-dots
-						aria-label="Pagination des témoignages"
-					/>
-					<p
-						data-testimonials-carousel-swipe-hint
-						class="hidden max-w-[16rem] text-center text-xs italic leading-snug text-muted motion-reduce:transition-none"
-						aria-hidden="true"
-					/>
-				</div>
-
-				<button
-					type="button"
-					class="btn-primary-solid inline-flex h-11 w-11 shrink-0 touch-manipulation items-center justify-center rounded-full ring-2 ring-white disabled:cursor-not-allowed disabled:opacity-40"
-					aria-label="Témoignages suivants"
-					data-testimonials-carousel-next
-				>
-					<span aria-hidden="true">→</span>
-				</button>
-			</div>
-		</div>
-
-		<div class="mt-12 text-center">
-			<p>
-				<a
-					href={MALT_PROFILE_URL}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="font-bold text-primary-foreground underline underline-offset-4 decoration-primary-foreground/50 hover:decoration-primary-foreground"
-				>
-					Voir tous les avis sur Malt
-				</a>
-			</p>
 		</div>
 	</div>
 </section>
 
-<script>
-	let testimonialsCarouselTeardown: (() => void) | undefined;
-
-	function setupTestimonialsCarousel() {
-		testimonialsCarouselTeardown?.();
-
-		const carouselRoot = document.querySelector('[data-testimonials-carousel-root]');
-		const carouselTrack = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-track]');
-		const prevButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-testimonials-carousel-prev]');
-		const nextButton = carouselRoot?.querySelector<HTMLButtonElement>('[data-testimonials-carousel-next]');
-		const currentLabel = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-current]');
-		const totalLabel = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-total]');
-		const dotsContainer = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-dots]');
-		const swipeHint = carouselRoot?.querySelector<HTMLElement>('[data-testimonials-carousel-swipe-hint]');
-
-		if (
-			!carouselRoot ||
-			!carouselTrack ||
-			!prevButton ||
-			!nextButton ||
-			!currentLabel ||
-			!totalLabel ||
-			!dotsContainer
-		) {
-			return;
-		}
-
-		const track = carouselTrack;
-		const dotsEl = dotsContainer;
-		const prevBtn = prevButton;
-		const nextBtn = nextButton;
-		const curLabel = currentLabel;
-		const totLabel = totalLabel;
-
-		const ac = new AbortController();
-		const { signal } = ac;
-
-		const getScrollStep = () => track.clientWidth;
-		const scrollBehavior = (): ScrollBehavior =>
-			window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
-
-		const getPageCount = () =>
-			Math.max(Math.ceil(track.scrollWidth / Math.max(getScrollStep(), 1)), 1);
-
-		const getMaxScroll = () => track.scrollWidth - track.clientWidth;
-
-		function scrollToPage(pageIndex: number) {
-			const maxScroll = getMaxScroll();
-			const step = getScrollStep();
-			const target = Math.min(Math.max(0, pageIndex) * step, maxScroll);
-			track.scrollTo({ left: target, behavior: scrollBehavior() });
-		}
-
-		function rebuildDots(pageCount: number, activePage: number) {
-			dotsEl.innerHTML = '';
-			for (let i = 0; i < pageCount; i++) {
-				const btn = document.createElement('button');
-				btn.type = 'button';
-				btn.className =
-					'h-6 w-6 p-1.5 [background-clip:content-box] shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
-					(i === activePage ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
-				btn.setAttribute('aria-label', `Afficher la série de témoignages ${i + 1} sur ${pageCount}`);
-				if (i === activePage) btn.setAttribute('aria-current', 'true');
-				btn.addEventListener(
-					'click',
-					() => {
-						scrollToPage(i);
-					},
-					{ signal },
-				);
-				dotsEl.appendChild(btn);
-			}
-		}
-
-		let dotRebuildScheduled = false;
-		function scheduleDotRebuild() {
-			if (dotRebuildScheduled) return;
-			dotRebuildScheduled = true;
-			requestAnimationFrame(() => {
-				dotRebuildScheduled = false;
-				updateButtons(true);
-			});
-		}
-
-		function updateButtons(rebuildDotsMaybe = false) {
-			const scrollLeft = track.scrollLeft;
-			const maxScroll = getMaxScroll();
-			const step = Math.max(getScrollStep(), 1);
-			const pageCount = getPageCount();
-			const rawIndex = Math.round(scrollLeft / step);
-			const clampedPage = Math.min(Math.max(rawIndex, 0), pageCount - 1);
-			const needsRebuild = rebuildDotsMaybe || dotsEl.childElementCount !== pageCount;
-
-			prevBtn.disabled = scrollLeft <= 8;
-			nextBtn.disabled = scrollLeft >= maxScroll - 8;
-			curLabel.textContent = String(clampedPage + 1);
-			totLabel.textContent = String(pageCount);
-
-			if (needsRebuild) {
-				rebuildDots(pageCount, clampedPage);
-			} else {
-				Array.from(dotsEl.querySelectorAll('button')).forEach((btn, i) => {
-					const on = i === clampedPage;
-					btn.className =
-						'h-6 w-6 p-1.5 [background-clip:content-box] shrink-0 touch-manipulation rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground ' +
-						(on ? 'bg-primary-foreground scale-110' : 'bg-muted hover:bg-muted/80');
-					if (on) btn.setAttribute('aria-current', 'true');
-					else btn.removeAttribute('aria-current');
-				});
-			}
-		}
-
-		function setupSwipeHint() {
-			const hintMaybe = swipeHint;
-			if (!hintMaybe) return;
-			const swipeHintEl = hintMaybe;
-			const coarse = window.matchMedia('(pointer: coarse)').matches;
-			if (!coarse || sessionStorage.getItem('testimonials-carousel-swipe-dismissed')) return;
-
-			swipeHintEl.textContent = '← Glissez pour voir plus →';
-			swipeHintEl.classList.remove('hidden');
-			swipeHintEl.removeAttribute('aria-hidden');
-
-			function hideSwipeHint() {
-				swipeHintEl.classList.add('hidden');
-				swipeHintEl.setAttribute('aria-hidden', 'true');
-				sessionStorage.setItem('testimonials-carousel-swipe-dismissed', '1');
-			}
-
-			const onScrollDismiss = () => {
-				if (sessionStorage.getItem('testimonials-carousel-swipe-dismissed')) return;
-				if (track.scrollLeft > 12) hideSwipeHint();
-			};
-
-			track.addEventListener('scroll', onScrollDismiss, { passive: true, signal });
-			window.setTimeout(hideSwipeHint, 10000);
-		}
-
-		prevBtn.addEventListener(
-			'click',
-			() => {
-				track.scrollBy({ left: -getScrollStep(), behavior: scrollBehavior() });
-			},
-			{ signal },
-		);
-
-		nextBtn.addEventListener(
-			'click',
-			() => {
-				track.scrollBy({ left: getScrollStep(), behavior: scrollBehavior() });
-			},
-			{ signal },
-		);
-
-		carouselRoot.addEventListener(
-			'keydown',
-			(e: Event) => {
-				if (!(e instanceof KeyboardEvent)) return;
-				if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-				const ae = document.activeElement;
-				if (!(ae instanceof Node) || !track.contains(ae)) return;
-				e.preventDefault();
-				const dir = e.key === 'ArrowLeft' ? -1 : 1;
-				track.scrollBy({ left: dir * getScrollStep(), behavior: scrollBehavior() });
-			},
-			{ capture: true, signal },
-		);
-
-		track.addEventListener('scroll', () => updateButtons(false), { passive: true, signal });
-		window.addEventListener('resize', scheduleDotRebuild, { signal });
-
-		updateButtons(true);
-		setupSwipeHint();
-
-		testimonialsCarouselTeardown = () => {
-			ac.abort();
-			testimonialsCarouselTeardown = undefined;
-		};
+<style>
+	.testimonials__source {
+		color: color-mix(in srgb, var(--color-on-foreground) 78%, transparent);
 	}
 
-	setupTestimonialsCarousel();
-	document.addEventListener('astro:after-swap', setupTestimonialsCarousel);
-</script>
+	.testimonials__source svg {
+		color: var(--color-primary-300);
+	}
+
+	.testimonials__featured {
+		font-size: clamp(1.375rem, 1.6vw + 1rem, 2.375rem);
+		font-weight: 500;
+		line-height: 1.3;
+		letter-spacing: -0.01em;
+		max-width: 34ch;
+	}
+
+	.testimonials__muted {
+		color: color-mix(in srgb, var(--color-on-foreground) 72%, transparent);
+	}
+
+	/* primary-100 sur fond sombre : contraste AA pour le petit texte (primary-300 reste aux étoiles). */
+	.testimonials__link {
+		color: var(--color-primary-100);
+		text-decoration-color: color-mix(in srgb, var(--color-primary-100) 45%, transparent);
+		transition: text-decoration-color 160ms ease-out;
+	}
+
+	.testimonials__link:hover {
+		text-decoration-color: var(--color-primary-100);
+	}
+
+	.testimonials__link:focus-visible {
+		outline: 2px solid var(--color-primary-100);
+		outline-offset: 3px;
+		border-radius: var(--radius-sm);
+	}
+
+	.testimonials__supporting {
+		border-top: 1px solid color-mix(in srgb, var(--color-on-foreground) 18%, transparent);
+	}
+</style>

@@ -1,6 +1,9 @@
 /** Recommandations publiées sur malt.fr (profil création de sites pour psychologues). */
 export const MALT_PROFILE_URL = 'https://www.malt.fr/profile/nicolasdevaux1';
 
+/** Fiche d’établissement Google (lecture des avis ; ajouter /review pour en demander un). */
+export const GOOGLE_REVIEWS_URL = 'https://g.page/r/CUpeZarxtINyEBM';
+
 export const maltTestimonials = [
 	{
 		quote:

@@ -81,7 +81,7 @@ function navLinkIsActive(href: string): boolean {
 			</a>
 
 			<div
-				class="ml-0.5 flex flex-wrap items-center gap-1.5 text-[0.625rem] font-medium leading-none text-muted sm:text-[0.6875rem]"
+				class="ml-0.5 flex items-center gap-1.5 whitespace-nowrap text-xs font-medium leading-none text-muted"
 				role="group"
 				aria-label="Double expertise"
 			>
@@ -92,7 +92,7 @@ function navLinkIsActive(href: string): boolean {
 				<span class="text-primary-300" aria-hidden="true">•</span>
 				<span class="inline-flex h-4 items-center gap-1.5">
 					<svg
-						class="h-3.5 w-3.5 text-primary-500"
+						class="hidden h-3.5 w-3.5 text-primary-500 sm:block"
 						viewBox="0 0 16 16"
 						fill="none"
 						stroke="currentColor"
@@ -102,7 +102,8 @@ function navLinkIsActive(href: string): boolean {
 						<rect x="1.5" y="2" width="13" height="11.5" rx="1.5" />
 						<path d="M2 5.25h12M4 3.6h.01M6 3.6h.01" stroke-linecap="round" />
 					</svg>
-					<span>Créateur de sites web</span>
+					<span class="sm:hidden">Développeur</span>
+					<span class="hidden sm:inline">Développeur web</span>
 				</span>
 			</div>
 		</div>
@@ -143,6 +144,20 @@ function navLinkIsActive(href: string): boolean {
 					<span class="site-nav-cta-long">{projectCta.label}</span>
 				</a>
 			</div>
+
+			<a
+				href={projectCta.href}
+				data-header-diagnostic-cta
+				data-header-diagnostic-cta-mobile
+				aria-label={projectCta.ariaLabel}
+				data-analytics-event="lead_click_diagnostic"
+				data-analytics-cta="diagnostic"
+				data-analytics-location="header_mobile"
+				data-lead-source="header"
+				class="site-nav-cta-mobile btn-primary-solid min-h-11 shrink-0 touch-manipulation items-center justify-center rounded-xl px-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-foreground"
+			>
+				Diagnostic
+			</a>
 
 			<button
 				type="button"
@@ -449,15 +464,14 @@ function navLinkIsActive(href: string): boolean {
 		diagnosticPeerSuppressionTeardown?.();
 
 		const header = document.querySelector<HTMLElement>('[data-site-header]');
-		const desktopCta = header?.querySelector<HTMLElement>('a[data-header-diagnostic-cta]');
+		const headerCtas = header ? Array.from(header.querySelectorAll<HTMLElement>('a[data-header-diagnostic-cta]')) : [];
 		const peers = document.querySelectorAll<HTMLElement>('[data-suppress-header-diagnostic-when-visible]');
 
-		if (!header || !desktopCta || peers.length === 0) {
+		if (!header || headerCtas.length === 0 || peers.length === 0) {
 			return;
 		}
 
 		const headerEl = header;
-		const desktopCtaEl = desktopCta;
 
 		const visiblePeers = new Set<Element>();
 
@@ -465,10 +479,10 @@ function navLinkIsActive(href: string): boolean {
 			const suppressed = visiblePeers.size > 0;
 			if (suppressed) {
 				headerEl.setAttribute('data-diagnostic-peer-visible', 'true');
-				desktopCtaEl.setAttribute('tabindex', '-1');
+				headerCtas.forEach((cta) => cta.setAttribute('tabindex', '-1'));
 			} else {
 				headerEl.removeAttribute('data-diagnostic-peer-visible');
-				desktopCtaEl.removeAttribute('tabindex');
+				headerCtas.forEach((cta) => cta.removeAttribute('tabindex'));
 			}
 		}
 
@@ -492,7 +506,7 @@ function navLinkIsActive(href: string): boolean {
 			io.disconnect();
 			visiblePeers.clear();
 			headerEl.removeAttribute('data-diagnostic-peer-visible');
-			desktopCtaEl.removeAttribute('tabindex');
+			headerCtas.forEach((cta) => cta.removeAttribute('tabindex'));
 			diagnosticPeerSuppressionTeardown = undefined;
 		};
 	}
@@ -513,9 +527,15 @@ function navLinkIsActive(href: string): boolean {
 	/* em units follow the header's font size, including enlarged browser text. */
 	.site-header { container: site-header / inline-size; }
 	.site-nav-desktop, .site-nav-cta, .site-nav-cta-long { display: none; }
+	/* Mobile : un accès court au diagnostic à côté du menu (le tiroir garde la version longue). */
+	.site-nav-cta-mobile { display: none; }
+	/* En dessous (~368px), la place manque à côté de la signature : le tiroir garde l'accès. */
+	@container site-header (min-width: 23em) {
+		.site-nav-cta-mobile { display: inline-flex; }
+	}
 	@container site-header (min-width: 48em) {
 		.site-nav-desktop { display: flex; }
-		.mobile-nav-toggle { display: none; }
+		.mobile-nav-toggle, .site-nav-cta-mobile { display: none; }
 	}
 	@container site-header (min-width: 64em) {
 		.site-nav-cta { display: inline-flex; }
