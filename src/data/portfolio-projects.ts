@@ -17,6 +17,7 @@ import angelaBassompierreImage from '../assets/images/screenshots/angelabassompi
 import melanieAguillonImage from '../assets/images/screenshots/melanie-aguillon.webp';
 import pierreDalarunImage from '../assets/images/screenshots/pierre-dalarun.webp';
 import camillePerrinImage from '../assets/images/screenshots/camille-perrin-psychologue.webp';
+import stephanieMoyniezImage from '../assets/images/screenshots/stephanie-moyniez-psychologue.webp';
 
 export type PortfolioProfession =
 	| 'psychologue'
@@ -55,6 +56,18 @@ export type PortfolioProject = {
  * L’ordre du tableau fait foi pour la home (3 premiers) et la page portfolio.
  */
 export const portfolioProjects: PortfolioProject[] = [
+	{
+		title: 'Stéphanie Moyniez',
+		image: stephanieMoyniezImage,
+		url: 'https://stephanie-moyniez-psychologue.fr/',
+		location: 'Longuenesse',
+		year: 2026,
+		profession: 'psychologue',
+		description:
+			"Création d'un site vitrine pour présenter l'accompagnement psychologique de Stéphanie Moyniez à Longuenesse.",
+		imageAlt:
+			'Site de Stéphanie Moyniez, psychologue à Longuenesse, présentation du cabinet et des consultations',
+	},
 	{
 		title: 'Camille Perrin',
 		image: camillePerrinImage,
