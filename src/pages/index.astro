@@ -9,6 +9,7 @@ import HomePortfolioSection from '../components/HomePortfolioSection.astro';
 import FaqSection from '../components/FaqSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import portraitImage from '../assets/images/nicodev.webp';
+import nicodevLogo from '../assets/images/nicodev-logo.png';
 import { INSTAGRAM_HREF, WHATSAPP_PHONE_E164 } from '../data/contact';
 import { homeFaqShortlist } from '../data/faq-home';
 import { compoundMonthlyPriceSpec } from '../data/pricing';
@@ -18,13 +19,16 @@ const siteRootHref = new URL('/', baseUrl).href;
 
 const businessSchema = {
 	'@context': 'https://schema.org',
-	'@type': 'ProfessionalService',
+	'@type': ['Organization', 'ProfessionalService'],
+	'@id': new URL('/#organization', baseUrl).href,
 	name: 'Nicolas Devaux',
+	alternateName: 'Nicodev',
 	legalName: 'Nicolas Devaux, EI',
 	identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: '75103269900033' },
 	description:
 		'Création et référencement de sites internet pour psychologues, psychothérapeutes et psychomotriciens par un psychologue et développeur web. 0 EUR de frais de construction, puis 29 ou 49 EUR par mois tout inclus.',
 	url: siteRootHref,
+	logo: new URL(nicodevLogo.src, baseUrl).href,
 	telephone: `+${WHATSAPP_PHONE_E164}`,
 	address: {
 		'@type': 'PostalAddress',
@@ -64,6 +68,7 @@ const websiteSchema = {
 	name: 'Nicolas Devaux',
 	alternateName: 'Nicodev',
 	url: siteRootHref,
+	publisher: { '@id': businessSchema['@id'] },
 	description: 'Sites internet pour psychologues, psychothérapeutes et psychomotriciens, conçus par un psychologue et développeur web.'
 };
 
