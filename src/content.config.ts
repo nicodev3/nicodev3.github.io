@@ -14,6 +14,8 @@ const blog = defineCollection({
       updatedDate: z.string().optional(),
       author: z.string(),
       image: image().optional(),
+      imageAlt: z.string().optional(),
+      imageCaption: z.string().optional(),
       /** Si true : `image` sert à l’OG / schéma uniquement, pas d’illustration dans le corps. */
       hideArticleImage: z.boolean().optional(),
       tags: z

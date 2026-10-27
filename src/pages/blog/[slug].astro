@@ -61,15 +61,31 @@ const bodySplit =
 
 let leadHtml: string | null = null;
 let bodyHtml: string | null = null;
+let bodyAfterArticleImageHtml: string | null = null;
+let hasInlineArticleImage = false;
 
 if (bodySplit) {
 	const fileURL = entry.filePath
 		? pathToFileURL(join(process.cwd(), entry.filePath))
 		: undefined;
-	[leadHtml, bodyHtml] = await Promise.all([
-		renderBlogMarkdownHtml(bodySplit.lead, fileURL),
-		renderBlogMarkdownHtml(bodySplit.rest, fileURL),
-	]);
+	const articleImageMarker = '<!-- article-image -->';
+	const markerIndex = bodySplit.rest.indexOf(articleImageMarker);
+
+	if (markerIndex >= 0 && entry.data.image) {
+		hasInlineArticleImage = true;
+		const beforeImage = bodySplit.rest.slice(0, markerIndex);
+		const afterImage = bodySplit.rest.slice(markerIndex + articleImageMarker.length);
+		[leadHtml, bodyHtml, bodyAfterArticleImageHtml] = await Promise.all([
+			renderBlogMarkdownHtml(bodySplit.lead, fileURL),
+			renderBlogMarkdownHtml(beforeImage, fileURL),
+			renderBlogMarkdownHtml(afterImage, fileURL),
+		]);
+	} else {
+		[leadHtml, bodyHtml] = await Promise.all([
+			renderBlogMarkdownHtml(bodySplit.lead, fileURL),
+			renderBlogMarkdownHtml(bodySplit.rest, fileURL),
+		]);
+	}
 }
 const entryOfferArticleIds = new Set([
 	'installer-liberal-psychologue-par-ou-commencer',
@@ -121,7 +137,7 @@ const hideQuietBottomLeadSection =
 	!entry.data.salaryGuideHub;
 
 const showArticleCover = Boolean(entry.data.image) && entry.data.hideArticleImage !== true;
-const articleCoverAlt = `Illustration de l'article : ${entry.data.title}`;
+const articleCoverAlt = entry.data.imageAlt ?? `Illustration de l'article : ${entry.data.title}`;
 
 const baseUrl = Astro.site ?? Astro.url.origin;
 const siteOrigin = new URL('/', baseUrl).href;
@@ -397,6 +413,14 @@ const installationHowToSchema = entry.data.installationGuideHub
 				)}
 				<BlogArticleToc items={tocItems} />
 				{bodyHtml ? <Fragment set:html={bodyHtml} /> : <Content />}
+				{hasInlineArticleImage && entry.data.image && (
+					<BlogArticleCover
+						image={entry.data.image}
+						alt={articleCoverAlt}
+						caption={entry.data.imageCaption}
+					/>
+				)}
+				{bodyAfterArticleImageHtml && <Fragment set:html={bodyAfterArticleImageHtml} />}
 				{inlineCta && (
 					<BlogInlineCta
 						variant={inlineCta.variant}

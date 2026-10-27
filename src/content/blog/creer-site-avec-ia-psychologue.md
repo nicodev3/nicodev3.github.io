@@ -5,7 +5,9 @@ description: "Créer son site avec l’IA quand on est psychologue : design g�
 pubDate: "2026-04-11"
 updatedDate: "2026-10-27"
 author: "Nicolas Devaux"
-image: "../../assets/images/blog/site-psychologue.webp"
+image: "../../assets/images/blog/site-psychologue-relecture-editoriale.jpg"
+imageAlt: "Relecture d’une maquette de site web sobre, accompagnée de notes et d’un nuancier"
+imageCaption: "Une identité visuelle se construit à partir de choix précis : hiérarchie, mise en page, couleurs et contenu — pas en accumulant les codes graphiques associés à l’IA."
 tags: ["site web cabinet", "référencement local cabinet", "cadre déontologique", "intelligence artificielle"]
 articleTocDepth: 3
 quietBottomCta: true
@@ -59,6 +61,8 @@ On le reconnaît à des signes qui reviennent d'un cabinet à l'autre :
 - un fond en dégradé violet et bleu, ou des blocs qui apparaissent un par un au fil du défilement ;
 - des photos de galets, de feuilles ou de personnes souriantes, à la place de vous ou du cabinet ;
 - des phrases réutilisables chez un confrère ou une consœur : « un espace bienveillant », « à votre écoute », « je vous accompagne vers un mieux-être ».
+
+<!-- article-image -->
 
 Un patient qui ouvre deux sites de suite voit la même vitrine. Il n'y trouve ni la ville, ni les publics, ni le déroulé du premier entretien. Ces codes viennent des pages dont le modèle s'inspire : gabarits de sites de coachs, pages « bien-être », vitrines génériques. L'outil les reproduit. C'est à la personne qui publie de les refuser.
 
