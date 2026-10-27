@@ -102,11 +102,13 @@ Elle ne remplace pas : la stratégie de contenu, le **référencement** (SEO l
 
 Certains psychologues utilisent déjà ces outils pour leurs textes **après** les avoir adaptés à leur voix et à leur cadre. C'est un usage raisonnable, à condition de garder la main sur le résultat.
 
-## Pourquoi un accompagnement — et pourquoi Nicodev
+## Ce qu’un accompagnement change concrètement
 
-Je suis **psychologue** et **développeur web**. Cette double casquette sert surtout à relire avec vous ce qu’une IA ou un template a produit : sobriété visuelle, vocabulaire du champ, formulaires et mentions légales cohérents avec votre situation réelle.
+Faire appel à un professionnel ne consiste pas à remplacer un générateur par un autre outil. Il s’agit de prendre les décisions que l’IA laisse ouvertes : quelles informations montrer en premier, quels mots employer pour décrire votre pratique, quels services intégrer et ce qu’ils impliquent pour les données de vos patients.
 
-L’objectif n’est pas d’empiler les fonctionnalités, mais un site **compris et trouvable** — sur Google comme dans les réponses des assistants — sans compromettre ce que vous affichez au nom de votre pratique. Souvent, une structure simple, des textes ancrés dans votre pratique réelle, et une fiche Google alignée suffisent mieux qu’un site « généré » qui ne se référence pas.
+Chez Nicodev, je pars donc de votre situation réelle : votre ville, vos publics, votre façon de recevoir, votre prise de rendez-vous et les questions que vos patients se posent avant un premier contact. En tant que **psychologue et développeur web**, je peux travailler à la fois sur la justesse du contenu et sur ce qui se passe derrière l’écran : affichage mobile, formulaires, rapidité, mentions obligatoires et référencement local.
+
+Le résultat recherché n’est pas un site plus spectaculaire. C’est un site qui vous ressemble, que les patients comprennent rapidement et que les moteurs peuvent correctement associer à votre cabinet. L’IA peut participer au travail ; elle ne décide pas à votre place de ce qui mérite d’être publié.
 
 ## Aller plus loin
 
