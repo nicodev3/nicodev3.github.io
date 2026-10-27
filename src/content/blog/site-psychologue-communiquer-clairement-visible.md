@@ -5,7 +5,8 @@ description: "Pourquoi les psychologues gagnent à mieux expliquer leur pratique
 pubDate: "2026-08-21"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologues-reprendre-parole-en-ligne.webp"
-tags: ["psychologue", "psychomotricien", "site web cabinet", "réseaux sociaux"]
+tags: ["site web cabinet", "réseaux sociaux"]
+
 faq:
   - question: "Pourquoi les psychologues communiquent-ils peu sur leur pratique ?"
     answer: "La discrétion, la confidentialité, la prudence dans les formulations et une culture professionnelle longtemps appuyée sur les institutions et l'orientation entre confrères ont favorisé une communication mesurée. Cette retenue n'interdit cependant pas d'informer clairement le public."

@@ -5,7 +5,8 @@ description: "S’installer comme psychologue libéral : RPPS, ARS, INPI, SIRET,
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-liberal-installation.webp"
-tags: ["psychologue", "installation en libéral"]
+tags: ["installation en libéral"]
+
 faq:
   - question: "Faut-il un numéro RPPS pour s’installer psychologue en libéral ?"
     answer: "Oui. Depuis juin 2024, l’enregistrement se fait dans le RPPS via l’ARS (plus ADELI). Il est obligatoire pour tous les psychologues, quel que soit le mode d’exercice."

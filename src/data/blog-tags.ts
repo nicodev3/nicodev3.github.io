@@ -1,10 +1,9 @@
 /**
  * Taxonomie blog, libellés stables, assez précis pour le SEO cabinet de soin.
  * 2 à 4 tags par article ; pages /blog/tag/ indexées (taxonomie consolidée).
+ * Pas de tag « métier » (psychologue / psychomotricien) : le blog cible déjà ces publics.
  */
 export const BLOG_TAGS = [
-  'psychologue',
-  'psychomotricien',
   'site web cabinet',
   'référencement local cabinet',
   'google business profile',
@@ -19,8 +18,6 @@ export type BlogTag = (typeof BLOG_TAGS)[number];
 
 /** Ordre d’affichage (filtres blog, plan du site). */
 export const BLOG_TAG_ORDER: readonly BlogTag[] = [
-  'psychologue',
-  'psychomotricien',
   'site web cabinet',
   'référencement local cabinet',
   'google business profile',
@@ -32,8 +29,6 @@ export const BLOG_TAG_ORDER: readonly BlogTag[] = [
 ];
 
 export const BLOG_TAG_DESCRIPTIONS: Record<BlogTag, string> = {
-  psychologue: 'Articles pour psychologues libéraux : site, visibilité et cadre professionnel.',
-  psychomotricien: 'Articles pour psychomotriciens libéraux : site, SEO local et fiche Google.',
   'site web cabinet':
     'Création, refonte, budget, technique et contenus d’un site pour cabinet de soin.',
   'référencement local cabinet':

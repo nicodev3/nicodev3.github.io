@@ -6,8 +6,8 @@ pubDate: '2026-03-02'
 updatedDate: '2026-06-18'
 author: 'Nicolas Devaux'
 image: '../../assets/images/blog/seo-google-my-business.webp'
-tags:
-  ['psychologue', 'google business profile', 'référencement local cabinet', 'cadre déontologique']
+tags: ["référencement local cabinet", "google business profile", "cadre déontologique"]
+
 ---
 
 _Temps de lecture : 11 minutes_

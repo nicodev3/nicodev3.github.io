@@ -6,7 +6,8 @@ pubDate: "2026-06-02"
 updatedDate: "2026-10-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
-tags: ["psychologue", "installation en libéral"]
+tags: ["installation en libéral"]
+
 salaryGuideHub: true
 faq:
   - question: "Quel est le salaire d'un psychologue libéral ?"

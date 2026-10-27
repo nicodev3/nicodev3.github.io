@@ -6,7 +6,8 @@ pubDate: "2026-03-12"
 updatedDate: "2026-09-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-web-doctolib.webp"
-tags: ["psychologue", "site web cabinet", "référencement local cabinet", "doctolib"]
+tags: ["site web cabinet", "référencement local cabinet", "doctolib"]
+
 ---
 
 De nombreux psychologues se posent la même question au moment de s'installer, ou quand l'agenda commence à dépendre d'un seul canal : faut-il vraiment [créer un site internet pour psychologue](/creation-site-internet-psychologue/) si l'on a déjà Doctolib ?

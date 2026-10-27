@@ -121,3 +121,49 @@ export function slugifyTag(value: string): string {
 export function toTagHref(value: string): string {
   return `/blog/tag/${slugifyTag(value)}/`;
 }
+
+export type BlogTocItem = {
+  slug: string;
+  text: string;
+  children?: BlogTocItem[];
+};
+
+type BlogHeading = {
+  depth: number;
+  slug: string;
+  text: string;
+};
+
+/** Sommaire article : h2 seuls, ou h2 + h3 imbriqués si maxDepth === 3. */
+/**
+ * Sépare l’intro (avant le premier `##`) du corps de l’article.
+ * Permet d’afficher le sommaire après l’accroche, pas avant.
+ */
+export function splitBlogBodyBeforeFirstH2(markdown: string): { lead: string; rest: string } | null {
+  const match = markdown.match(/\n(?=##\s)/);
+  if (!match || match.index === undefined) return null;
+  const lead = markdown.slice(0, match.index).trim();
+  const rest = markdown.slice(match.index + 1).trimStart();
+  if (!lead || !rest) return null;
+  return { lead, rest };
+}
+
+export function buildBlogToc(headings: BlogHeading[], maxDepth: 2 | 3 = 2): BlogTocItem[] {
+  const items: BlogTocItem[] = [];
+  let currentH2: BlogTocItem | null = null;
+
+  for (const heading of headings) {
+    if (!heading.slug) continue;
+    if (heading.depth === 2) {
+      currentH2 = { slug: heading.slug, text: heading.text };
+      items.push(currentH2);
+      continue;
+    }
+    if (heading.depth === 3 && maxDepth === 3 && currentH2) {
+      if (!currentH2.children) currentH2.children = [];
+      currentH2.children.push({ slug: heading.slug, text: heading.text });
+    }
+  }
+
+  return items;
+}

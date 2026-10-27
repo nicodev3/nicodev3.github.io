@@ -7,6 +7,7 @@ updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-internet.webp"
 tags: ["site web cabinet"]
+
 ---
 
 Pour une **vision complète orientée cabinet** (structure des pages, SEO local, cadre déontologique, RGPD), voir le guide [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/). Si vous cherchez une prestation plutôt qu'un repère technique, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) détaille l'accompagnement, les pages incluses et la maintenance. L’article ci-dessous pose les **bases techniques communes** à tout site professionnel.

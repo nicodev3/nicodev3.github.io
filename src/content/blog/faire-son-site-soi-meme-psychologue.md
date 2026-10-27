@@ -6,7 +6,8 @@ pubDate: "2026-05-26"
 updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-fait-maison-psychologue.webp"
-tags: ["psychologue", "site web cabinet", "cadre déontologique", "référencement local cabinet"]
+tags: ["site web cabinet", "référencement local cabinet", "cadre déontologique"]
+
 ---
 
 *Temps de lecture : 10 minutes*

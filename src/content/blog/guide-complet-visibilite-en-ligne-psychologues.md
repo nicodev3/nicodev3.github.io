@@ -7,7 +7,8 @@ pubDate: "2026-05-11"
 updatedDate: "2026-09-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
-tags: ["psychologue", "référencement local cabinet", "site web cabinet", "google business profile"]
+tags: ["site web cabinet", "référencement local cabinet", "google business profile"]
+
 guidePillarHub: true
 ---
 

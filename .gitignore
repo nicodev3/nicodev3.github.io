@@ -26,6 +26,15 @@ pnpm-debug.log*
 # MCP (clé API Stitch — voir .cursor/mcp.example.json)
 .cursor/mcp.json
 
+# Impeccable (outil local : binaires, overlay live, critiques)
+.impeccable/
+**/skills/impeccable/
+.cursor/agents/
+.cursor/hooks.json
+.claude/agents/
+.claude/settings.local.json
+.codex/
+
 # Exports de référence Stitch (HTML / captures)
 .stitch-export/
 

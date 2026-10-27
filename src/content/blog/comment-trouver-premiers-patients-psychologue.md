@@ -5,7 +5,8 @@ description: "Site internet, réseau, fiche Google, annuaires et bouche-à-oreil
 pubDate: "2026-03-15"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/installation-psychologue-liberal.webp"
-tags: ["psychologue", "installation en libéral", "référencement local cabinet", "doctolib"]
+tags: ["référencement local cabinet", "installation en libéral", "doctolib"]
+
 ---
 
 *Temps de lecture : 10 minutes*

@@ -6,7 +6,8 @@ pubDate: "2016-09-05"
 updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
-tags: ["psychologue", "site web cabinet", "référencement local cabinet", "cadre déontologique"]
+tags: ["site web cabinet", "référencement local cabinet", "cadre déontologique"]
+
 ---
 
 *Temps de lecture : 12 minutes*

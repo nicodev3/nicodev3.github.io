@@ -5,7 +5,8 @@ description: "Statut juridique du psychologue libéral : entreprise individuelle
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/salaire-psychologue-liberal.webp"
-tags: ["psychologue", "installation en libéral"]
+tags: ["installation en libéral"]
+
 faq:
   - question: "Quel statut choisir pour s’installer psychologue en libéral ?"
     answer: "Le plus fréquent est l’entreprise individuelle. Ensuite, le choix porte surtout sur le régime : micro-BNC si les frais sont faibles, déclaration contrôlée (réel) si les charges dépassent environ 34 % du chiffre d’affaires."

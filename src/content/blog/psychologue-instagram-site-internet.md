@@ -6,7 +6,8 @@ pubDate: "2026-06-10"
 updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-instagram.webp"
-tags: ["psychologue", "réseaux sociaux", "site web cabinet", "référencement local cabinet"]
+tags: ["site web cabinet", "référencement local cabinet", "réseaux sociaux"]
+
 ---
 
 *Temps de lecture : 9 minutes*

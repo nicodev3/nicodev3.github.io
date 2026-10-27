@@ -5,7 +5,8 @@ description: "Psychologue en installation : site, fiche Google, SEO local et ré
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
-tags: ["psychologue", "installation en libéral", "référencement local cabinet", "site web cabinet"]
+tags: ["site web cabinet", "référencement local cabinet", "installation en libéral"]
+
 faq:
   - question: "Faut-il un site internet pour s’installer psychologue en libéral ?"
     answer: "Ce n’est pas une obligation légale, mais c’est souvent le socle le plus utile : présenter le cadre, rassurer avant le premier contact, être trouvé localement et ne pas dépendre uniquement d’une plateforme."

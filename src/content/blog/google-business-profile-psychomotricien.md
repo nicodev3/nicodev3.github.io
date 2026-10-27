@@ -5,7 +5,8 @@ description: "Fiche Google Business Profile pour psychomotricien : catégorie, a
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/seo-google-my-business.webp"
-tags: ["psychomotricien", "google business profile", "référencement local cabinet"]
+tags: ["référencement local cabinet", "google business profile"]
+
 ---
 
 *Temps de lecture : 7 minutes*

@@ -5,7 +5,8 @@ description: "TVA du psychologue libéral : exonération des actes de soin, fran
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/guide-tva-psychologues.webp"
-tags: ["psychologue", "installation en libéral"]
+tags: ["installation en libéral"]
+
 faq:
   - question: "Un psychologue libéral facture-t-il la TVA ?"
     answer: "Les actes cliniques de soins à la personne sont en principe exonérés de TVA (article 261 du CGI). Les activités annexes (formation, expertise, coaching entreprise) peuvent rester soumises à TVA. L’exonération dépend de la nature de la prestation, pas seulement du titre."

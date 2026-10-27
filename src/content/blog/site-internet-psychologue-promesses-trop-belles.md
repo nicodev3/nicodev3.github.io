@@ -6,7 +6,8 @@ pubDate: "2026-03-28"
 updatedDate: "2026-06-22"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue.webp"
-tags: ["psychologue", "site web cabinet", "référencement local cabinet", "doctolib"]
+tags: ["site web cabinet", "référencement local cabinet", "doctolib"]
+
 ---
 
 *Temps de lecture : 10 minutes*

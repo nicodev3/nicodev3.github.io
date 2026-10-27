@@ -5,7 +5,8 @@ description: "Premiers patients en libéral : premier rendez-vous, dossier, RGPD
 pubDate: "2026-08-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/creation-site-internet.webp"
-tags: ["psychologue", "installation en libéral", "cadre déontologique"]
+tags: ["installation en libéral", "cadre déontologique"]
+
 faq:
   - question: "Que dire dès le premier rendez-vous en libéral ?"
     answer: "Fréquence, durée, tarif, modalités d’annulation, confidentialité et prise de contact hors séance. Plus c’est dit tôt et simplement, moins tu recolles des malentendus plus tard."

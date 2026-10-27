@@ -5,7 +5,8 @@ description: "SEO et GEO pour psychologues : être trouvé sur Google et dans le
 pubDate: "2026-10-07"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/seo-geo-psychologue.webp"
-tags: ["psychologue", "référencement local cabinet", "intelligence artificielle", "site web cabinet"]
+tags: ["site web cabinet", "référencement local cabinet", "intelligence artificielle"]
+
 faq:
   - question: "Quelle est la différence entre SEO et GEO pour un psychologue ?"
     answer: "Le SEO (Search Engine Optimization, référencement naturel), c’est être trouvé dans Google (carte, liens). Le GEO (Generative Engine Optimization, optimisation pour les moteurs génératifs), c’est être correctement compris et éventuellement cité quand la réponse vient d’une IA (résumé Google, ChatGPT, Gemini…). Dans les deux cas, un site clair et des informations cohérentes font l’essentiel."

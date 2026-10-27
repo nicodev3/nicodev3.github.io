@@ -1,0 +1,26 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+	image: ImageMetadata;
+	alt: string;
+}
+
+const { image, alt } = Astro.props;
+---
+
+<figure class="not-prose my-10">
+	<Image
+		src={image}
+		alt={alt}
+		class="w-full h-auto rounded-lg shadow-sm"
+		loading="lazy"
+		decoding="async"
+		widths={[640, 768, 896, 1280]}
+		sizes="(min-width: 896px) 896px, 100vw"
+		width={1280}
+		height={720}
+		quality={80}
+	/>
+</figure>

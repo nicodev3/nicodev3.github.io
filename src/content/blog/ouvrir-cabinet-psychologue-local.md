@@ -6,7 +6,8 @@ pubDate: "2026-08-13"
 updatedDate: "2026-08-24"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
-tags: ["psychologue", "installation en libéral", "cadre déontologique"]
+tags: ["installation en libéral", "cadre déontologique"]
+
 faq:
   - question: "Faut-il un local pour exercer en libéral ?"
     answer: "Pas forcément un bail à temps plein. Beaucoup démarrent en sous-location à temps partagé. L’exercice à domicile est possible sous conditions, mais il pose des questions de confidentialité, de bail et parfois d’autorisation."

@@ -6,7 +6,8 @@ pubDate: "2026-02-22"
 updatedDate: "2026-09-24"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/cout-site-internet.webp"
-tags: ["psychologue", "site web cabinet", "installation en libéral"]
+tags: ["site web cabinet", "installation en libéral"]
+
 faq:
   - question: "Combien coûte un site pour psychologue ?"
     answer: "Selon la méthode : environ 50 à 375 € la première année en DIY, 29 ou 49 €/mois en abonnement tout inclus (Nicodev), ou 1 000 à 3 000 € en prestation classique (freelance/agence). Le coût réel dépend surtout du temps passé, de la maintenance et du niveau d'accompagnement."

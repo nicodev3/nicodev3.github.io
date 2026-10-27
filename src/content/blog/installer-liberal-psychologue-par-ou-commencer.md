@@ -6,7 +6,8 @@ pubDate: "2026-04-11"
 updatedDate: "2026-09-10"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-liberal-installation.webp"
-tags: ["psychologue", "installation en libéral", "référencement local cabinet", "site web cabinet"]
+tags: ["site web cabinet", "référencement local cabinet", "installation en libéral"]
+
 installationGuideHub: true
 faq:
   - question: "Comment ouvrir un cabinet de psychologue en 2026 ?"

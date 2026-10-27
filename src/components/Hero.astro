@@ -13,32 +13,52 @@ export interface Props {
 	coverImageAlt?: string;
 	/** Flou de l’image de couverture : « light » (blog index), « medium » (articles), « soft » (marketing, défaut). */
 	coverBlur?: 'light' | 'medium' | 'soft';
+	/** « read » : pas de dégradé/orbes ; fond page (articles longs discrets). */
+	tone?: 'default' | 'read';
+	/** Carte crème englobant titre, chapô, tags et partage (pages article blog). */
+	articleHeader?: boolean;
 }
 
-const { title, subtitle, variant = 'full', maxWidth = '7xl', breadcrumb, coverImage, coverImageAlt, coverBlur = 'soft' } = Astro.props;
+const {
+	title,
+	subtitle,
+	variant = 'full',
+	maxWidth = '7xl',
+	breadcrumb,
+	coverImage,
+	coverImageAlt,
+	coverBlur = 'soft',
+	tone = 'default',
+	articleHeader = false,
+} = Astro.props;
 
-const hasCover = Boolean(coverImage);
+const hasCover = Boolean(coverImage) && tone !== 'read';
+const isReadTone = tone === 'read';
 const coverIsAsset = typeof coverImage === 'object' && coverImage !== null && 'src' in coverImage && 'width' in coverImage;
 /** Couvertures floutées : qualité plus basse (décoratif) ; soft reste un peu plus nette. */
 const coverQuality = coverBlur === 'soft' ? 75 : 65;
 
 const sectionClass = [
 	hasCover ? 'hero-shell--with-cover border-b border-border' : '',
+	isReadTone ? 'hero-shell--read border-b border-border' : '',
 	hasCover && coverBlur !== 'soft' ? `hero-shell--cover-blur-${coverBlur}` : '',
-	variant === 'full'
-		? 'hero-shell hero-shell--full text-foreground py-16 md:py-20'
-		: 'hero-shell hero-shell--light text-foreground py-14 md:py-16',
+	isReadTone
+		? 'hero-shell hero-shell--full text-foreground py-12 md:py-14'
+		: variant === 'full'
+			? 'hero-shell hero-shell--full text-foreground py-16 md:py-20'
+			: 'hero-shell hero-shell--light text-foreground py-14 md:py-16',
 ]
 	.filter(Boolean)
 	.join(' ');
 
 const titleClass = variant === 'full'
-		? 'break-words text-pretty text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-foreground'
-		: 'break-words text-pretty text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-5';
+		? 'break-words text-balance text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-foreground'
+		: 'break-words text-balance text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-5';
 
+const usesHeaderCard = articleHeader || hasCover || isReadTone;
 const subtitleClass = variant === 'full'
-	? 'text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-muted tracking-wide'
-	: 'text-xl text-muted max-w-3xl mx-auto tracking-wide';
+	? `text-pretty text-xl md:text-2xl max-w-3xl mx-auto text-muted tracking-wide ${usesHeaderCard ? 'mb-5' : 'mb-8'}`
+	: `text-pretty text-xl text-muted max-w-3xl mx-auto tracking-wide ${usesHeaderCard ? 'mb-5' : ''}`;
 
 const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7xl' }[maxWidth];
 ---
@@ -75,13 +95,37 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 		</div>
 	)}
 	{hasCover && <div class="hero-layer hero-layer--scrim" aria-hidden="true"></div>}
-	<div class:list={['hero-layer hero-layer--wash', { 'hero-layer--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
-	<div class:list={['hero-layer hero-layer--grain', { 'hero-layer--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
-	<div class:list={['hero-orb hero-orb--left', { 'hero-orb--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
-	<div class:list={['hero-orb hero-orb--right', { 'hero-orb--hidden-when-cover': hasCover }]} aria-hidden="true"></div>
+	<div
+		class:list={[
+			'hero-layer hero-layer--wash',
+			{ 'hero-layer--hidden-when-cover': hasCover || isReadTone },
+		]}
+		aria-hidden="true"
+	/>
+	<div
+		class:list={[
+			'hero-layer hero-layer--grain',
+			{ 'hero-layer--hidden-when-cover': hasCover || isReadTone },
+		]}
+		aria-hidden="true"
+	/>
+	<div
+		class:list={['hero-orb hero-orb--left', { 'hero-orb--hidden-when-cover': hasCover || isReadTone }]}
+		aria-hidden="true"
+	/>
+	<div
+		class:list={['hero-orb hero-orb--right', { 'hero-orb--hidden-when-cover': hasCover || isReadTone }]}
+		aria-hidden="true"
+	/>
 
 	<div class={`${maxWidthClass} relative z-10 mx-auto px-4 sm:px-6 lg:px-8 ${variant === 'light' ? 'text-center' : ''}`}>
-		<div class:list={['text-center break-words', { 'hero-copy hero-copy--on-cover': hasCover }]}>
+		<div
+			class:list={[
+				'text-center break-words',
+				{ 'hero-copy hero-copy--on-cover': hasCover },
+				{ 'hero-copy hero-copy--article': (articleHeader || isReadTone) && !hasCover },
+			]}
+		>
 			{breadcrumb && breadcrumb.length > 0 && (
 				<nav aria-label="Fil d'Ariane" class="mb-6">
 					<ol class="flex flex-wrap justify-center gap-x-2 text-sm text-muted">
@@ -119,7 +163,9 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 					{subtitle}
 				</p>
 			)}
-			<slot name="after" />
+			<div class:list={[{ 'hero-copy__footer': usesHeaderCard }]}>
+				<slot name="after" />
+			</div>
 		</div>
 	</div>
 </section>
@@ -130,6 +176,37 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 		overflow: hidden;
 		isolation: isolate;
 		background-color: var(--color-surface);
+	}
+
+	.hero-shell--read {
+		background-color: var(--color-background);
+	}
+
+	.hero-copy--article {
+		margin-inline: auto;
+		width: 100%;
+		padding: clamp(1.35rem, 3.5vw, 2.25rem) clamp(1.15rem, 3vw, 1.75rem);
+		border-radius: var(--radius-lg);
+		background: color-mix(in srgb, var(--color-surface) 92%, var(--color-background));
+		border: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.hero-copy__footer {
+		margin-top: 0.25rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid color-mix(in srgb, var(--color-border) 75%, transparent);
+	}
+
+	.hero-copy--on-cover .hero-copy__footer {
+		margin-top: 0.5rem;
+		padding-top: 1rem;
+	}
+
+	.hero-copy--article :global(.blog-share > div),
+	.hero-copy--on-cover :global(.blog-share > div) {
+		border-top: none;
+		padding-top: 0;
 	}
 
 	.hero-shell--with-cover {
@@ -210,7 +287,7 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 		position: relative;
 		z-index: 2;
 		margin-inline: auto;
-		width: fit-content;
+		width: 100%;
 		max-width: 100%;
 		padding: clamp(1.35rem, 4vw, 2.75rem) clamp(1.15rem, 3.5vw, 2.25rem);
 		border-radius: var(--radius-lg);
@@ -279,6 +356,11 @@ const maxWidthClass = { '4xl': 'max-w-4xl', '6xl': 'max-w-6xl', '7xl': 'max-w-7x
 	/* La photo de couverture remplace le dégradé : on supprime le ::before. */
 	.hero-shell--with-cover.hero-shell--full::before,
 	.hero-shell--with-cover.hero-shell--light::before {
+		content: none;
+	}
+
+	.hero-shell--read.hero-shell--full::before,
+	.hero-shell--read.hero-shell--light::before {
 		content: none;
 	}
 

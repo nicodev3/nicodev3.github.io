@@ -5,7 +5,8 @@ description: "Avis Google et e-réputation du psychologue : cadre déontologique
 pubDate: "2026-05-18"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/avis_google_psychologue.webp"
-tags: ["psychologue", "google business profile", "cadre déontologique"]
+tags: ["google business profile", "cadre déontologique"]
+
 ---
 
 *Temps de lecture : 8 minutes*

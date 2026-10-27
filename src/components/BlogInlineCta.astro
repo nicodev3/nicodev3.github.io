@@ -5,9 +5,11 @@ interface Props {
   variant: BlogInlineCtaVariant;
   beforeHeading: string;
   articleId: string;
+  /** Style discret pour les articles Read (lien texte, pas d’encart primary). */
+  quiet?: boolean;
 }
 
-const { variant, beforeHeading, articleId } = Astro.props;
+const { variant, beforeHeading, articleId, quiet = false } = Astro.props;
 
 const copies: Record<
   BlogInlineCtaVariant,
@@ -94,26 +96,59 @@ const copies: Record<
   },
 };
 
-const copy = copies[variant];
+const baseCopy = copies[variant];
+const copy =
+  quiet && baseCopy.trackDiagnostic !== false
+    ? {
+        ...baseCopy,
+        eyebrow: 'Suite possible',
+        title: 'Un doute sur votre site ou votre visibilité ?',
+        description:
+          'Diagnostic court : structure, contenu, visibilité locale. Retour sous 48 h.',
+        primary: 'Demander un diagnostic gratuit →',
+      }
+    : baseCopy;
 const source = `article-${articleId}-inline`;
 const eventSource = articleId.replaceAll('-', '_');
 ---
 
 <aside
-  class="blog-inline-cta not-prose my-10 rounded-2xl border border-primary/25 bg-primary-50 p-5 shadow-sm sm:p-7"
+  class:list={[
+    'blog-inline-cta not-prose my-10 border p-5',
+    quiet
+      ? 'rounded-xl border-border bg-surface/60 sm:p-6'
+      : 'rounded-2xl border-primary/25 bg-primary-50 shadow-sm sm:p-7',
+  ]}
   data-blog-inline-cta
   data-before-heading={beforeHeading}
-  aria-label={copy.eyebrow}
+  aria-label={quiet ? copy.title : copy.eyebrow}
 >
-  <p class="type-eyebrow text-primary-700">{copy.eyebrow}</p>
-  <h2 class="mt-2 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
-    {copy.title}
-  </h2>
-  <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">{copy.description}</p>
-  <div class="mt-5">
+  {!quiet && <p class="type-eyebrow text-primary-700">{copy.eyebrow}</p>}
+  {
+    quiet ? (
+      <p class="text-balance text-lg font-medium leading-snug text-foreground">{copy.title}</p>
+    ) : (
+      <h2 class="mt-2 text-balance font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
+        {copy.title}
+      </h2>
+    )
+  }
+  <p
+    class:list={[
+      'max-w-3xl text-pretty leading-relaxed text-muted',
+      quiet ? 'mt-2 text-sm' : 'mt-3 text-base',
+    ]}
+  >
+    {copy.description}
+  </p>
+  <div class={quiet ? 'mt-3' : 'mt-5'}>
     <a
       href={copy.primaryHref}
-      class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold"
+      class:list={[
+        quiet
+          ? 'text-sm font-medium text-primary underline-offset-2 hover:underline'
+          : 'btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold',
+      ]}
       data-lead-source={source}
       data-analytics-event={copy.trackDiagnostic === false ? undefined : 'lead_click_diagnostic'}
       data-analytics-cta={copy.trackDiagnostic === false ? undefined : 'diagnostic'}
@@ -121,7 +156,7 @@ const eventSource = articleId.replaceAll('-', '_');
     >
       {copy.primary}
     </a>
-    {copy.trackDiagnostic !== false && (
+    {copy.trackDiagnostic !== false && !quiet && (
       <p class="mt-2 text-xs text-muted">Moins de 2 minutes. Sans engagement.</p>
     )}
   </div>
@@ -137,7 +172,7 @@ const eventSource = articleId.replaceAll('-', '_');
   document.querySelectorAll<HTMLElement>('[data-blog-inline-cta]').forEach((cta) => {
     const articleBody = cta.closest('.prose');
     const target = normalizeHeading(cta.dataset.beforeHeading);
-    const heading = Array.from(articleBody?.querySelectorAll(':scope > h2') ?? []).find(
+    const heading = Array.from(articleBody?.querySelectorAll('h2') ?? []).find(
       (item) => normalizeHeading(item.textContent) === target,
     );
 

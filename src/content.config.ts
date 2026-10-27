@@ -14,6 +14,8 @@ const blog = defineCollection({
       updatedDate: z.string().optional(),
       author: z.string(),
       image: image().optional(),
+      /** Si true : `image` sert à l’OG / schéma uniquement, pas d’illustration dans le corps. */
+      hideArticleImage: z.boolean().optional(),
       tags: z
         .array(z.enum([...BLOG_TAGS]))
         .max(4, 'Maximum 4 tags par article')
@@ -28,6 +30,10 @@ const blog = defineCollection({
       salaryGuideHub: z.boolean().optional(),
       /** Masque le sommaire automatique (h2) généré sur la page article. */
       hideArticleToc: z.boolean().optional(),
+      /** Profondeur du sommaire auto : 2 (défaut) ou 3 (h3 sous chaque h2). */
+      articleTocDepth: z.union([z.literal(2), z.literal(3)]).optional(),
+      /** Bandeau bas de page discret (lien texte, moins de mise en avant). */
+      quietBottomCta: z.boolean().optional(),
       /** Questions/réponses pour le schéma FAQPage (réponses en texte brut, sans Markdown). */
       faq: z
         .array(

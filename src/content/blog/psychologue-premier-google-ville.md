@@ -6,7 +6,8 @@ pubDate: "2026-05-03"
 updatedDate: "2026-09-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/psychologue-premier-google-ville.webp"
-tags: ["psychologue", "référencement local cabinet", "google business profile", "site web cabinet"]
+tags: ["site web cabinet", "référencement local cabinet", "google business profile"]
+
 ---
 
 *Temps de lecture : 17 minutes*

@@ -5,7 +5,8 @@ description: "Les erreurs fréquentes de design, d’expérience utilisateur (UX
 pubDate: "2026-10-11"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-fait-maison-psychologue.webp"
-tags: ["psychologue", "site web cabinet", "cadre déontologique"]
+tags: ["site web cabinet", "cadre déontologique"]
+
 faq:
   - question: "Quelles sont les règles de design essentielles pour un site de psychologue ?"
     answer: "Un site doit permettre de comprendre rapidement qui vous êtes, qui vous recevez, où vous consultez et comment vous contacter. Des titres faciles à repérer, des textes lisibles, des couleurs assez contrastées et des pages adaptées au téléphone sont de bonnes bases. Cet article présente des erreurs fréquentes et des repères pour les éviter."

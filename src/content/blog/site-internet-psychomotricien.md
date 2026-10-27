@@ -5,7 +5,8 @@ description: "Les pages utiles pour un site de psychomotricien, les informations
 pubDate: "2026-05-31"
 author: "Nicolas Devaux"
 image: "../../assets/images/psychomotricienne-2.webp"
-tags: ["psychomotricien", "site web cabinet", "référencement local cabinet"]
+tags: ["site web cabinet", "référencement local cabinet"]
+
 ---
 
 *Temps de lecture : 8 minutes*

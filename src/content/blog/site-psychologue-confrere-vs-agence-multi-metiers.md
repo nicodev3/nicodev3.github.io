@@ -5,7 +5,8 @@ description: "Pourquoi confier son site à un psychologue-développeur plutôt q
 pubDate: "2026-08-06"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologue-confrere-developpeur.webp"
-tags: ["psychologue", "site web cabinet", "cadre déontologique"]
+tags: ["site web cabinet", "cadre déontologique"]
+
 ---
 
 Quand un psychologue cherche à [créer un site internet](/creation-site-internet-psychologue/), deux options reviennent souvent : une plateforme ou une agence « pour les professionnels », ou un prestataire qui connaît déjà le métier. Les retours que j'entends de confrères sont constants : **ils préfèrent parler à quelqu'un qui exerce aussi**, plutôt qu'à une structure qui vend le même package à des dizaines de métiers.

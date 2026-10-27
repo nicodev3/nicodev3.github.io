@@ -5,7 +5,8 @@ description: "Aperçus IA de Google en France : ce que voit un patient et les po
 pubDate: "2026-09-13"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/apercus-ia-google-carre.webp"
-tags: ["psychologue", "référencement local cabinet", "intelligence artificielle", "site web cabinet"]
+tags: ["site web cabinet", "référencement local cabinet", "intelligence artificielle"]
+
 faq:
   - question: "Faut-il un fichier spécial pour apparaître dans les Aperçus IA de Google ?"
     answer: "Non. Google indique qu’aucun fichier ni balise spécial n’est exigé. Il faut un site que Google peut trouver, et le droit d’en afficher un extrait. Un fichier llms.txt n’est pas un levier pour « être premier » : une étude Ahrefs a montré que 97 % de ces fichiers ne reçoivent aucune requête."

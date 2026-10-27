@@ -6,7 +6,8 @@ pubDate: "2026-08-13"
 updatedDate: "2026-08-24"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/installation-psychologue-liberal.webp"
-tags: ["psychologue", "installation en libéral"]
+tags: ["installation en libéral"]
+
 faq:
   - question: "Que préparer avant les démarches ARS et INPI ?"
     answer: "Le projet clinique, pas les formulaires. Clarifie le public, le cadre (cabinet, visio, hybride), le rythme, un seuil de viabilité simple, puis seulement les démarches ARS et INPI."

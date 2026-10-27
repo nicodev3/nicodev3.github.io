@@ -7,6 +7,7 @@ updatedDate: "2024-08-20"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/nom-domaine-hebergement.webp"
 tags: ["site web cabinet"]
+
 ---
 
 Certains de mes clients, très souvent psychologues, et la plupart du temps néophytes dans le monde informatique, me demandent souvent quelles différences il y a entre **nom de domaine** et **hébergement**.

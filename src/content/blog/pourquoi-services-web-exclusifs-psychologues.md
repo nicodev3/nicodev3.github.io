@@ -5,7 +5,8 @@ description: "Les pseudo-thérapeutes ne manquent pas de visibilité. Les psycho
 pubDate: "2026-05-05"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/site-psychologues-cadre-legal-orientation.webp"
-tags: ["psychologue", "site web cabinet", "cadre déontologique"]
+tags: ["site web cabinet", "cadre déontologique"]
+
 ---
 
 Le savoir-faire des psychologues n'est plus à démontrer : cinq années d'études, des stages, un titre protégé, une pratique encadrée. Pourtant, sur le web, ce sont les coachs en bien-être, les thérapeutes auto-proclamés et les vendeurs de solutions miracles qui occupent l'espace. Eux n'hésitent pas à communiquer. Les psychologues, souvent, si.

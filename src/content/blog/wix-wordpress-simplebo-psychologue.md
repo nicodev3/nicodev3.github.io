@@ -5,7 +5,8 @@ description: "Création et maintenance d’un site de psychologue : Wix, WordPre
 pubDate: "2026-09-24"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/cout-site-internet.webp"
-tags: ["psychologue", "site web cabinet"]
+tags: ["site web cabinet"]
+
 faq:
   - question: "Wix, WordPress ou Simplébo : que paie un psychologue ?"
     answer: "Au 24 septembre 2026, ces prix ne couvrent pas le même travail. Wix Light est affiché à 16,80 €/mois en paiement annuel : c’est l’outil, le site se fait soi-même. Un WordPress auto-hébergé se joue surtout sur l’hébergement (souvent 8 à 40 €/mois) et le temps passé. Simplébo Crédibilité affiche 60 € HT/mois plus 400 € HT de frais de lancement pour le pack site ; la fiche Google est une option à part sur leur configurateur. Chez Nicodev : 0 € de construction, puis 29 €/mois (Sérénité : création, bases SEO, fiche Google, veille) ou 49 €/mois (Visibilité & Confiance : la même base, plus un SEO expert, du GEO et une aide à la rédaction)."

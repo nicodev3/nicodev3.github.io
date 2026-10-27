@@ -5,7 +5,8 @@ description: 'Exercer psychologue en 100 % visio : cadre clinique, outils, limit
 pubDate: '2026-06-25'
 author: 'Nicolas Devaux'
 image: '../../assets/images/blog/installation-psychologue-liberal.webp'
-tags: ['psychologue', 'installation en libéral', 'site web cabinet', 'cadre déontologique']
+tags: ["site web cabinet", "installation en libéral", "cadre déontologique"]
+
 faq:
   - question: 'Un psychologue 100 % en visio peut-il créer une fiche Google Business Profile ?'
     answer: 'Non, pas pour une activité exclusivement en ligne. Google réserve les fiches Business Profile aux activités qui rencontrent leur clientèle en personne. Une activité de psychologue exercée uniquement en visio doit donc travailler sa visibilité autrement, notamment avec un site professionnel, des contenus utiles et des annuaires adaptés.'

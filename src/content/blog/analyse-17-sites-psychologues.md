@@ -5,7 +5,8 @@ description: "J’ai analysé 17 sites de psychologues libéraux. Architecture, 
 pubDate: "2026-09-01"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/analyse-sites-psychologues-carre.webp"
-tags: ["psychologue", "site web cabinet", "référencement local cabinet", "cadre déontologique"]
+tags: ["site web cabinet", "référencement local cabinet", "cadre déontologique"]
+
 faq:
   - question: "L’analyse de 17 sites est-elle représentative de tous les sites de psychologues ?"
     answer: "Non. Il s’agit d’un échantillon exploratoire destiné à repérer des difficultés récurrentes, pas d’une étude statistique du marché. Les sites ont été observés à un moment donné et les résultats de recherche peuvent varier selon la ville et l’utilisateur."

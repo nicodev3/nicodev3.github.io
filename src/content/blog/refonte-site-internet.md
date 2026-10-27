@@ -7,7 +7,8 @@ pubDate: "2026-06-04"
 updatedDate: "2026-06-04"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/development.webp"
-tags: ["psychologue", "psychomotricien", "site web cabinet", "référencement local cabinet"]
+tags: ["site web cabinet", "référencement local cabinet"]
+
 ---
 
 *Temps de lecture : 6 minutes*
