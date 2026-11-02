@@ -18,6 +18,7 @@ import melanieAguillonImage from '../assets/images/screenshots/melanie-aguillon.
 import pierreDalarunImage from '../assets/images/screenshots/pierre-dalarun.webp';
 import camillePerrinImage from '../assets/images/screenshots/camille-perrin-psychologue.webp';
 import stephanieMoyniezImage from '../assets/images/screenshots/stephanie-moyniez-psychologue.webp';
+import marieMayauxImage from '../assets/images/screenshots/marie-mayaux-psychologue.webp';
 
 export type PortfolioProfession =
 	| 'psychologue'
@@ -56,6 +57,18 @@ export type PortfolioProject = {
  * L’ordre du tableau fait foi pour la home (3 premiers) et la page portfolio.
  */
 export const portfolioProjects: PortfolioProject[] = [
+	{
+		title: 'Marie Mayaux',
+		image: marieMayauxImage,
+		url: 'https://mariemayaux-psychologue.fr/',
+		location: 'Liverdun',
+		year: 2026,
+		profession: 'psychologue',
+		description:
+			"Création d'un site vitrine pour présenter les consultations pour enfants, adolescents, adultes et familles à Liverdun, et en visio pour les adultes.",
+		imageAlt:
+			'Site de Marie Mayaux, psychologue à Liverdun, présentation du cabinet et des consultations',
+	},
 	{
 		title: 'Stéphanie Moyniez',
 		image: stephanieMoyniezImage,
