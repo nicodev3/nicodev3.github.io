@@ -19,6 +19,7 @@ import pierreDalarunImage from '../assets/images/screenshots/pierre-dalarun.webp
 import camillePerrinImage from '../assets/images/screenshots/camille-perrin-psychologue.webp';
 import stephanieMoyniezImage from '../assets/images/screenshots/stephanie-moyniez-psychologue.webp';
 import marieMayauxImage from '../assets/images/screenshots/marie-mayaux-psychologue.webp';
+import fannyCimadomoImage from '../assets/images/screenshots/fcpsy.webp';
 
 export type PortfolioProfession =
 	| 'psychologue'
@@ -57,6 +58,18 @@ export type PortfolioProject = {
  * L’ordre du tableau fait foi pour la home (3 premiers) et la page portfolio.
  */
 export const portfolioProjects: PortfolioProject[] = [
+	{
+		title: 'Fanny Cimadomo',
+		image: fannyCimadomoImage,
+		url: 'https://fcpsy.fr/',
+		location: 'Chambéry',
+		year: 2026,
+		profession: 'psychologue',
+		description:
+			"Création d'un site vitrine pour présenter les consultations pour adultes à Chambéry, les approches intégrative, TCC et EMDR, et faciliter la prise de rendez-vous.",
+		imageAlt:
+			'Site de Fanny Cimadomo, psychologue à Chambéry, présentation du cabinet et des consultations pour adultes',
+	},
 	{
 		title: 'Marie Mayaux',
 		image: marieMayauxImage,
