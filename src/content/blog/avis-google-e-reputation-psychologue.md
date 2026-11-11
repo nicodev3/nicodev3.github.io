@@ -1,7 +1,7 @@
 ---
 title: "Avis Google et e-réputation du psychologue : déontologie, éthique, secret professionnel"
 seoTitle: "Avis Google psychologue : éthique et réputation | Nicodev"
-description: "Avis Google et e-réputation du psychologue : cadre déontologique, secret professionnel et repères éthiques pour gérer sa fiche."
+description: "Avis Google et e-réputation du psychologue : réflexion sur la sollicitation des patients, la confidentialité et le code de déontologie."
 pubDate: "2026-05-18"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/avis_google_psychologue.webp"
@@ -9,145 +9,136 @@ tags: ["google business profile", "cadre déontologique"]
 
 ---
 
-*Temps de lecture : 8 minutes*
+*Temps de lecture : 7 minutes*
 
-Les avis Google sont devenus un réflexe commercial : on les sollicite, on les affiche en page d'accueil, on en fait un argument de vente. Pour la plupart des activités, c'est sans risque. **Pour un psychologue, ce réflexe entre en tension avec la déontologie de la profession et parfois avec la loi.**
+Les avis Google font partie de la présence numérique d'un cabinet de psychologie. Ils peuvent être publiés spontanément, sollicités par un outil de prise de rendez-vous ou repris sur un site internet. Ces situations ne soulèvent pas les mêmes questions : qui est à l'initiative de la publication, dans quel objectif, et avec quelles conséquences pour la personne qui consulte ?
 
-Cet article s'appuie sur le [code de déontologie des psychologues (version 2021)](https://www.cncdp.fr/index.php/code-de-deontologie/code-de-deontologie-2021), tout en précisant **sa portée réelle**. Il défend une recommandation claire : **ne pas publier d'avis ou de témoignages de patients sur son site internet**, et adopter sur Google une posture défensive plutôt qu'active.
+Cet article propose une **lecture des pratiques numériques au regard du [code de déontologie des psychologues, version consolidée au 9 septembre 2021](https://www.codededeontologiedespsychologues.fr/2021/05/20/code-de-deontologie-des-psychologues-2021/)**. Il distingue ce que le texte énonce des questions que son application aux avis en ligne peut soulever. Il ne vise ni à juger les pratiques individuelles ni à qualifier juridiquement une situation particulière.
 
-## Éthique, déontologie, loi : trois plans à ne pas confondre
+## Un cadre de réflexion, sans règle spécifique aux avis Google
 
-Ces termes sont souvent employés comme synonymes, à tort.
+Le code de 2021 ne traite pas explicitement des avis Google ou des témoignages de patients. Il serait donc inexact de lui attribuer une interdiction formulée en ces termes. Il invite à apprécier les situations à partir de principes et de devoirs professionnels, avec discernement.
 
-- **L'éthique** est une **réflexion morale** sur ce qui fonde la pratique : valeurs, sens, manière d'être face à autrui. Singulière, en situation, elle excède toute codification.
-- **La déontologie** est l'ensemble des **devoirs codifiés** d'une profession. Pour les psychologues, c'est le code 2021, élaboré par une vingtaine d'organisations (CERéDéPsy) : un cadre normatif **sans force de loi**.
-- **La loi** est le droit positif : code pénal, RGPD, lois sur l'usage du titre. Sa violation expose à des sanctions juridiques.
+La réflexion déontologique et l'analyse juridique restent distinctes. Un rapprochement entre une pratique numérique et un article du code ne suffit pas à établir une infraction. Les questions de secret professionnel ou de protection des données peuvent aussi relever de textes légaux, dont l'application dépend de la situation. Une difficulté concrète peut nécessiter l'éclairage d'une organisation professionnelle ou d'un juriste.
 
-**Conséquence importante :** en France, il n'existe **pas d'ordre des psychologues**, et le [Syndicat national des psychologues](https://psychologues.org/la-deontologie/) décrit le code comme reconnu mais **« non légalisé »**. Dire qu'une pratique est « interdite par la déontologie » est donc imprécis : il vaut mieux parler de pratiques **déconseillées**, **en tension** avec le code, ou **peu compatibles** avec lui, sauf lorsqu'une **obligation légale** distincte s'applique. La plus pertinente ici est le **secret professionnel** (articles 226-13 et 226-14 du code pénal), repris à l'article 7 du code de déontologie et confirmé en 2023 par le ministère de la Santé.
+Pour les avis en ligne, trois situations méritent d'être examinées séparément : **demander un avis**, **recevoir un avis spontané** et **réutiliser ou commenter publiquement cet avis**.
 
-Le code lui-même formule cette articulation : *« le respect du présent code repose sur une réflexion éthique et une capacité de discernement »*. L'éthique anime l'application de la déontologie, sans s'y résumer.
+## Solliciter des avis patients pour améliorer son positionnement sur Google
 
-## Pourquoi les avis posent un problème spécifique aux psychologues
+Une demande d'avis peut prendre plusieurs formes : SMS après une consultation, courriel automatique, QR code dans la salle d'attente, lien dans une signature ou invitation orale en fin de séance. Lorsque son objectif est d'améliorer le positionnement du cabinet sur Google, elle introduit un intérêt de visibilité dans la relation avec la personne reçue.
 
-Un avis client classique n'engage ni déontologie ni secret professionnel : le client d'un coiffeur ou d'un restaurateur n'est pas dans une relation asymétrique, et l'avis ne touche pas à son intimité psychique. Pour un psychologue, trois éléments changent la donne :
+Le passage le plus directement pertinent est l'**article 14** du code de 2021 :
 
-1. **Asymétrie** de la relation thérapeutique : toute sollicitation d'avis repose sur ce déséquilibre.
-2. **Objet confidentiel** : un avis, même anodin (« j'ai été bien accueilli·e »), confirme publiquement qu'une personne a consulté, information protégée par le secret.
-3. **Identité publique** : un avis Google est signé d'un prénom, parfois d'une photo. La discrétion attendue d'un suivi psychologique disparaît.
+> « La·le psychologue n'use pas de sa position à des fins personnelles […] »
 
-## Ce que le code de déontologie 2021 éclaire
+Le **principe 3**, relatif à l'intégrité et à la probité, complète ce repère en excluant l'exploitation d'une relation professionnelle à des fins personnelles.
 
-Le code ne mentionne pas les avis en ligne, mais plusieurs articles donnent un cadre clair.
+**À la lumière de ces dispositions, solliciter des avis auprès de ses patients dans le but d'améliorer son référencement apparaît en tension avec le code de déontologie.** Cette lecture repose sur la finalité de la démarche : la relation clinique est mobilisée au bénéfice de la visibilité du cabinet. Il s'agit d'une application de ces dispositions aux usages numériques, et non d'une interdiction des avis Google expressément écrite dans le code.
 
-**Article 7, Secret professionnel (lien direct avec la loi).** *« Le secret professionnel couvre tout ce dont la·le psychologue a connaissance dans l'exercice de sa profession. »* Ici, le code **reprend une obligation pénale**. Répondre à un avis Google par *« merci pour votre confiance pendant ces six mois de suivi »* peut **contrevenir au secret professionnel**, risque pénal, pas seulement déontologique.
+La possibilité de refuser ne résout pas nécessairement la difficulté. Une personne peut ressentir une attente, souhaiter remercier le psychologue ou craindre de le décevoir, même si aucune pression n'est intentionnelle. Ces effets sont à envisager selon le contexte ; ils ne peuvent pas être présumés pour chaque patient.
 
-**Article 14, Ne pas user de sa position.** *« La·le psychologue n'use pas de sa position à des fins personnelles […] ou d'aliénation économique […] des personnes qu'elle·il rencontre. »* Solliciter un avis, même par une formule légère, instrumentalise la relation thérapeutique à des fins commerciales. Pratique difficile à justifier devant des pairs ou en cas de litige.
+Un retour sur l'accompagnement, recueilli dans le cadre du travail clinique, répond à un autre objectif qu'un témoignage public destiné au référencement. La finalité, le destinataire et les conditions de recueil permettent de distinguer ces démarches.
 
-**Article 23, Anonymat dans la publication.** *« Lorsque ces données sont utilisées à des fins de publication […], elles sont impérativement traitées dans le respect absolu de l'anonymat. »* Publier un témoignage, même partiellement anonymisé (« Marie, 34 ans »), est **peu compatible** avec un anonymat « absolu », formulation qui n'admet pas de degré.
+### La concurrence entre cabinets et la loyauté envers les confrères
 
-**Article 29, Loyauté entre pairs.** Une stratégie agressive de récolte d'avis pour surclasser un·e confrère local peut être **lue comme** du détournement de patientèle (lecture déontologique, pas qualification juridique automatique).
+La sollicitation d'avis à des fins de SEO local soulève aussi une question dans les rapports avec les autres psychologues libéraux. Chercher à recueillir davantage d'avis pour apparaître devant les cabinets voisins revient à mobiliser les patients dans une stratégie de concurrence pour la visibilité locale.
 
-**Articles 30 et 32, Image et publicité mesurée.** Le code n'interdit pas la publicité, mais demande qu'elle reste **mesurée**. Un mur d'avis dithyrambiques renvoie une image de service commercial qui s'en éloigne nettement.
+L'**[article 29 du code de 2021](https://www.codededeontologiedespsychologues.fr/2021/05/20/code-de-deontologie-des-psychologues-2021/)** apporte un repère complémentaire :
 
-## Pourquoi ne pas publier d'avis sur son site internet
+> « La·le psychologue agit en toute loyauté vis-à-vis de ses pairs. »
 
-La recommandation n'est pas une « interdiction légale du code », mais la pratique la plus cohérente avec le secret professionnel et avec les articles 14, 23 et 32.
+Cet article interdit également le détournement ou la tentative de détournement de clientèle ou de patientèle.
 
-**Le consentement ne suffit pas.** Il est obtenu dans une relation asymétrique (Principe 1 du code). Le secret professionnel engage le psychologue vis-à-vis de la loi, pas seulement vis-à-vis du patient : son accord ne lève pas, à lui seul, l'obligation. Et un témoignage publié reste indexé pendant des années, la personne peut le regretter bien après.
+**Utiliser la relation avec les patients pour rechercher un avantage de positionnement face aux confrères soulève donc un problème de loyauté entre pairs**, en plus des questions liées à la relation clinique. Une collecte organisée pour capter les demandes au détriment d'autres cabinets est à interroger au regard de cette exigence.
 
-**L'effet est faible.** Les patients potentiels savent qu'un témoignage est sélectionné par le praticien : sa valeur informative est limitée. Les éléments qui rassurent vraiment sont d'un autre ordre (titre, RPPS, parcours, approche, tarifs). L'absence de témoignages chez un psychologue n'est pas un signal négatif, c'est même devenu, pour beaucoup, un signe de sérieux.
+La concurrence pour la visibilité ne suffit toutefois pas, à elle seule, à caractériser un détournement de patientèle. L'article 29 ne permet pas de qualifier automatiquement toute démarche de référencement ou toute demande d'avis de pratique déloyale : l'objectif poursuivi, les moyens employés et le contexte doivent être examinés.
 
-**L'image collective compte.** Un site de psychologue qui adopte les codes marketing d'un service commercial, cinq étoiles en bandeau, citations en italique, photos de patients souriants, installe une confusion qui dessert l'ensemble de la profession (article 30).
+## Un avis spontané n'est pas une sollicitation du psychologue
 
-**Recommandation pratique :** aucune section « avis », « témoignages » ou « ils me font confiance » sur votre site, même discrète. Si un prestataire vous le propose, vous pouvez le refuser en vous appuyant sur ce cadre, voir aussi [les promesses trop belles des offres « site psychologue »](/blog/site-internet-psychologue-promesses-trop-belles/).
+Une personne peut prendre seule l'initiative de publier un avis. La présence de cet avis sur une fiche Google ne permet pas, à elle seule, de conclure que le psychologue l'a demandé ou encouragé.
 
-## Et la fiche Google Business Profile ?
+Cette publication peut toutefois rendre visible une démarche de consultation, notamment si le compte comporte un nom ou une photo. La personne n'en mesure pas nécessairement toute la portée au moment de rédiger son message : accès par des proches, association à son identité, persistance du contenu.
 
-C'est le cas le plus délicat : **vous ne contrôlez pas qui poste un avis**. Un patient peut décider seul de laisser une note. Vous ne pouvez ni l'empêcher ni le supprimer. Posture défensive recommandée :
+La question pour le psychologue porte alors sur sa propre intervention : répondre, reprendre le texte sur son site ou le partager sur un réseau social peut donner une autre portée à une publication initialement spontanée.
 
-### Ne jamais solliciter
+Si le sujet est abordé en séance, un échange peut permettre de préciser le caractère public d'un avis et de distinguer un retour adressé au praticien d'une publication accessible à tous, sans orienter la personne vers une note ou un commentaire attendu.
 
-Pas de SMS automatisé, pas de QR code en salle d'attente, pas de phrase glissée en fin de séance, pas de bouton « laissez un avis » sur le site, la signature mail ou Doctolib. La règle s'aligne sur l'article 14 et vaut aussi pour les patient·e·s qui « voudraient bien » : leur faciliter l'idée constitue déjà une sollicitation.
+## Republier des témoignages sur son site : un changement de contexte
 
-### Ne pas répondre avec un contenu identifiant
+Afficher un avis Google sur son site, manuellement ou par un module automatique, constitue un choix de communication du cabinet. Le fait que le commentaire soit déjà public ne dispense pas d'examiner les conséquences de cette nouvelle diffusion.
 
-Deux options prudentes :
+Deux repères du code éclairent cette question :
 
-- **Ne pas répondre.** Le silence n'engage à rien.
-- **Répondre par une formule neutre** qui ne confirme ni n'infirme un suivi : *« Bonjour, merci pour votre message. Pour toute demande, vous pouvez me joindre par téléphone ou via mon site. »*
+- **L'article 23** porte sur la préservation de la vie privée et l'anonymat lorsque des données de l'activité sont utilisées à des fins de publication ou de communication.
+- **L'article 32** prévoit une information du public « avec mesure », y compris en cas de publicité pour l'exercice libéral.
 
-À éviter absolument, même pour un avis positif :
+L'application de ces articles à un témoignage demande notamment d'examiner ce qui permettrait de reconnaître la personne et ce que le contenu laisse entendre sur l'accompagnement. Remplacer un nom par des initiales ne garantit pas l'anonymat : une profession, un événement ou une combinaison de détails peuvent suffire à identifier quelqu'un.
 
-- *« Merci pour votre confiance, à bientôt »* → confirme une relation.
-- *« Heureux que la thérapie vous ait aidée »* → divulgue le contenu.
-- *« Je me souviens bien de nos séances »* → atteinte grave au secret (risque pénal).
+L'accord donné par la personne est un élément à considérer, mais il ne suffit pas à résoudre toutes les questions de confidentialité, de réutilisation et de liberté du consentement dans la relation clinique. Une publication initiale sur Google ne vaut pas non plus, à elle seule, accord à sa reprise sur le site du cabinet.
 
-### Avis négatif ou diffamatoire
+**Ne pas reprendre de témoignages de patients sur son site constitue une option prudente**, qui évite d'organiser cette diffusion supplémentaire. La présence ou l'absence de témoignages ne permet cependant pas d'évaluer la qualité du travail clinique d'un professionnel.
 
-- **Critique factuelle** (*« attente longue »*) : silence, ou réponse purement logistique si vous êtes sûr·e de ne pas glisser vers la défense personnelle.
-- **Hostilité sans détail identifiable** (*« charlatan »*) : aucune réponse sur le fond. Toute argumentation vous expose au secret. Signalez l'avis à Google.
-- **Faux ou diffamatoire** : signalez à Google. En cas d'accusation grave, consultez un avocat (recours pour diffamation, article 29 de la loi du 29 juillet 1881).
+## Répondre à un avis sans exposer la relation clinique
 
-**Signaler un avis :** [business.google.com](https://business.google.com) → onglet *Avis* → trois points à droite → *Signaler comme inapproprié*. Délai variable, suppression non garantie. Les avis purement diffamatoires sont fréquemment retirés ; les avis négatifs mais factuels rarement.
+L'**article 7** du code rappelle le secret professionnel et renvoie aux conditions et limites prévues par le code pénal. Dans une réponse publique, l'enjeu est notamment de ne pas apporter d'informations issues des consultations ni de confirmer un suivi.
 
-## Construire la confiance autrement
+Une réponse telle que *« Nous avons travaillé ensemble pendant six mois »* rend publique une information sur la relation clinique. *« La thérapie vous a aidée à surmonter votre séparation »* ajoute des éléments sur son contenu. Le fait que l'auteur de l'avis ait lui-même évoqué des séances ne permet pas de considérer qu'une réponse détaillée serait sans conséquence.
 
-Si vous renoncez aux témoignages et adoptez une posture défensive sur les avis, d'autres leviers, **bien plus solides** qu'une étoile, restent disponibles.
+**Ne pas répondre est une possibilité.** Si une réponse est envisagée, elle peut se limiter à une information générale, sans commenter l'expérience relatée ni reconnaître la personne comme patiente. Par exemple :
 
-**Sur votre site :** titre et **numéro RPPS** affichés ; parcours et formation détaillés sobrement ; approche clinique expliquée sans jargon ; tarifs explicites et conditions (mutuelle, Mon Soutien Psy, annulation) ; coordonnées cohérentes avec votre fiche Google et les annuaires (voir [SEO local pour psychologues](/blog/psychologue-premier-google-ville/)) ; mentions légales et politique de confidentialité complètes.
+> « Pour toute question concernant le fonctionnement du cabinet, les coordonnées de contact figurent sur le site. »
 
-**Sur votre fiche Google :** fiche complète (adresse, horaires, photos sobres du cabinet), description factuelle, catégorie « Psychologue » correctement renseignée. Détails dans [créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/).
+Une telle formule reste à apprécier dans son contexte ; elle ne constitue pas une garantie juridique. La prudence porte aussi sur les réponses à un avis positif, où un remerciement personnalisé peut confirmer involontairement une relation de consultation.
 
-**Hors du web :** confrères et consœurs qui vous orientent (première source historique de patientèle, la plus alignée avec la déontologie) ; médecins généralistes, services hospitaliers, associations spécialisées ; annuaires professionnels (FFPP, SNP, annuaires départementaux).
+## Face à un avis négatif ou présumé faux
 
-## Cas particuliers
+Un avis défavorable peut être éprouvant pour le professionnel. La réponse publique appelle néanmoins les mêmes précautions de confidentialité : expliquer le déroulement des séances ou contester le récit à partir d'informations cliniques risque d'exposer la personne.
 
-**Doctolib, Maiia, Resalib.** Mêmes recommandations déontologiques que sur Google : ne pas solliciter, ne pas répondre avec un contenu identifiant, signaler les abus. Sur Doctolib, vérifiez les paramètres : certaines invitations automatiques à la notation sont désactivables. Comparatif site vs Doctolib : [autre guide](/blog/site-internet-psychologue-doctolib/).
+Lorsque le contenu semble enfreindre les règles de la plateforme, il est possible de le signaler au moyen de l'[outil de gestion des avis de Google](https://support.google.com/business/workflow/9945796?hl=fr). Google précise que [le retrait dépend du non-respect de ses règles](https://support.google.com/business/answer/4596773?hl=fr), et non du seul caractère négatif du commentaire. Un signalement ne garantit donc pas sa suppression.
 
-**Avis de proches ou collègues.** Ce n'est pas le secret professionnel qui est en cause, mais le Principe 3 du code (intégrité et probité) et les règles sur les **pratiques commerciales trompeuses** : un avis qui simule la voix d'un·e patient·e induit le public en erreur. À éviter, même bien intentionné.
+En cas de contenu menaçant, d'accusations graves ou de litige, conserver une trace du message et demander un conseil adapté permet d'examiner les suites possibles sans débattre publiquement du suivi. La qualification juridique d'un propos nécessite une analyse spécifique.
 
-**Carrousels « avis vérifiés » importés sur le site.** Pratique qui cumule les problèmes : republication de contenus identifiants, institutionnalisation des avis, contradiction avec l'article 23 (anonymat) et risque sur le secret professionnel. À refuser, signal typique d'une offre « toutes professions » mal adaptée aux psychologues.
+## Présenter son activité sans solliciter de témoignages
+
+La visibilité d'un cabinet peut aussi s'appuyer sur des informations utiles à la personne qui cherche un psychologue :
+
+- Le titre, les qualifications, le parcours et le numéro d'inscription au registre professionnel applicable.
+- Les publics reçus, les modalités de consultation et les limites de l'accompagnement proposé.
+- Les tarifs, les conditions de prise de rendez-vous et les possibilités de contact.
+- L'adresse, les horaires et les informations pratiques d'accès au cabinet.
+
+Ces éléments peuvent figurer sur le site et sur la fiche Google. Ils donnent des repères concrets sans demander aux personnes reçues de rendre publique leur expérience. Les guides consacrés au [référencement local des psychologues](/blog/psychologue-premier-google-ville/) et à la [fiche Google Business Profile](/blog/google-business-profile-psychologue/) développent ces aspects.
+
+Si un prestataire ou un outil propose une collecte automatique d'avis, il est utile d'en examiner le fonctionnement : qui reçoit l'invitation, à quel moment, au nom de qui et pour quel usage ? Les réglages disponibles et les messages envoyés méritent d'être vérifiés avant activation.
 
 ## Questions fréquentes
 
-**Le code m'interdit-il vraiment de demander des avis ?**  
-Pas au sens juridique strict (le code n'est pas une loi, pas d'ordre national). En revanche, l'article 14 **déconseille fortement** d'utiliser la relation thérapeutique à des fins personnelles ou commerciales. Si vous adhérez à une organisation signataire, votre syndicat peut aussi vous rappeler ces règles.
+**Le code interdit-il explicitement de demander des avis Google ?**
 
-**Suis-je obligé·e de répondre aux avis Google ?**  
-Non. Le silence est souvent la posture la plus prudente, notamment pour éviter tout glissement vers le secret professionnel.
+Le texte de 2021 ne nomme pas cette pratique. La sollicitation à des fins de référencement soulève toutefois la question de l'usage de la relation professionnelle au bénéfice du cabinet, examinée plus haut au regard de l'article 14 et du principe 3. Lorsqu'elle vise un avantage de visibilité face aux autres cabinets, elle interroge aussi la loyauté entre pairs prévue par l'article 29.
 
-**Un avis positif spontané est-il un risque ?**  
-Pour la personne, oui (elle s'expose). Pour vous, le risque ne se matérialise que si vous **réagissez** d'une manière qui confirme la relation. Sans réponse, ou avec une réponse neutre, l'exposition reste limitée.
+**Recevoir un avis positif spontané signifie-t-il un manquement ?**
 
-**Si un·e patient·e me demande où laisser un avis ?**  
-Expliquez brièvement le cadre : secret professionnel, préférence pour des retours en séance, pas de sollicitation de votre part. Si la personne publie quand même un avis spontané, vous n'êtes pas fautif·e tant que vous ne l'avez ni encouragé ni confirmé publiquement.
+La seule présence d'un avis ne permet pas de conclure à un manquement du psychologue. L'initiative de la publication, l'existence éventuelle d'une sollicitation et l'usage qui en est fait sont des éléments distincts à examiner.
 
-**Puis-je désactiver les avis sur ma fiche Google ?**  
-Non. La seule façon de ne pas en avoir est de ne pas avoir de fiche, ce qui n'est pas un choix gagnant en termes de visibilité.
+**Un témoignage anonyme résout-il la difficulté ?**
 
-**Un faux avis peut-il me nuire durablement ?**  
-Google retire la plupart des faux avis manifestes. Pour les cas ambigus, le recours est plus long. La meilleure protection reste **une fiche complète et un site sérieux** : un avis hostile pèse peu face à une présence professionnelle bien construite.
+L'absence de nom limite certaines possibilités d'identification, sans les exclure. Elle ne répond pas non plus, à elle seule, aux questions de finalité promotionnelle et de conditions du recueil.
 
-**J'ai déjà publié des témoignages, que faire ?**  
-Retirez-les, sans drame ni annonce. Reconstruisez un bandeau de confiance avec des éléments factuels (RPPS, formations, approche, conditions de consultation).
+**Que faire si des témoignages sont déjà affichés sur le site ?**
 
-## En résumé
+Il est possible de réexaminer leur provenance, leur contenu et les conditions de leur publication. Suspendre leur affichage pendant cette analyse est une mesure de précaution envisageable. Des informations factuelles sur le cabinet peuvent prendre leur place.
 
-1. **Pas de témoignages ni d'avis republiés sur votre site**, alignement avec le code et le secret professionnel.
-2. **Pas de sollicitation d'avis** (SMS, mail, QR code, phrase en séance), article 14.
-3. **Pas de réponse identifiante** aux avis Google, silence ou formule logistique, pour respecter le **secret professionnel** (obligation légale).
-4. **Signaler à Google** les avis manifestement abusifs ; recours juridique si diffamation grave.
-5. **Construire la confiance autrement** : titre, RPPS, parcours, approche, mentions légales, cohérence des informations.
+## Pour poursuivre la réflexion
 
-Cette discipline protège ce qui fait la valeur d'une consultation : le cadre, la confidentialité, la qualité du lien thérapeutique. Aucun avis cinq étoiles ne les remplacera.
+L'examen des avis en ligne conduit à distinguer la parole spontanée d'une personne, les démarches de collecte initiées par le cabinet et les usages publics des témoignages. **La finalité de la démarche, la liberté de la personne et la confidentialité** constituent des points d'attention, à apprécier dans chaque situation.
 
-*Cet article ne constitue pas un avis juridique. En cas de doute sur une situation concrète, consultez votre organisation professionnelle ou un avocat.*
+Le code de 2021 prend déjà en compte certains usages numériques, notamment la communication à distance et la téléconsultation à l'article 24. Les avis publics, leur sollicitation, le référencement local et la réutilisation de témoignages restent toutefois à examiner à partir de dispositions plus générales.
 
-## Pour aller plus loin
+**En 2026, une prise en compte plus explicite de ces pratiques numériques dans le code de déontologie ne permettrait-elle pas de mieux accompagner les psychologues ?** Préciser les enjeux de confidentialité, de sollicitation des patients et de loyauté entre confrères pourrait offrir des repères communs, tout en préservant la place du discernement dans chaque situation.
 
-- [Guide complet de la visibilité en ligne pour psychologues](/blog/guide-complet-visibilite-en-ligne-psychologues/) : vue d'ensemble et points de repère.
-- [Créer et optimiser sa fiche Google Business Profile](/blog/google-business-profile-psychologue/), étape par étape.
-- [Site internet pour psychologue en 2026](/blog/site-internet-psychologues/), structure, cadre déontologique, RGPD.
-- [Les promesses trop belles des offres « site psychologue »](/blog/site-internet-psychologue-promesses-trop-belles/), repérer les modules problématiques.
+- [Code de déontologie des psychologues, version consolidée au 9 septembre 2021](https://www.codededeontologiedespsychologues.fr/2021/05/20/code-de-deontologie-des-psychologues-2021/) : texte de référence, notamment principes 2 et 3, articles 7, 14, 23, 29 et 32.
+- [Guide de la visibilité en ligne pour psychologues](/blog/guide-complet-visibilite-en-ligne-psychologues/) : présentation des différents supports numériques.
+- [Site internet pour psychologue](/blog/site-internet-psychologues/) : informations à présenter et organisation du site.
 
-Pour un regard externe sur votre site ou votre fiche Google sous l'angle déontologique (et plus largement éthique), vous pouvez demander un [diagnostic gratuit](/diagnostic-gratuit/) ou consulter la page [création de site pour psychologue](/creation-site-internet-psychologue/). Et pour replacer la gestion des avis dans une stratégie d'ensemble, voir la page [référencement pour psychologue](/referencement-site-psychologue/) : visibilité locale sur Google sans entorse au cadre.
+*Cet article propose des repères de réflexion déontologique. Il ne constitue pas un avis juridique ni une appréciation d'une situation individuelle.*
