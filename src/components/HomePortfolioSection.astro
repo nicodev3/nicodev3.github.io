@@ -12,13 +12,17 @@ import {
  */
 const LONG_TERM_TITLE = 'Séverine Reisser';
 const longTerm = portfolioProjects.find((p) => p.title === LONG_TERM_TITLE);
-// La plus récente est montrée dans le hero à partir de 768 px (capture masquée sur mobile) :
-// elle ouvre donc le carrousel sur mobile uniquement.
-const [heroProject, ...others] = getRecentPortfolioProjects(4);
+const [, ...others] = getRecentPortfolioProjects(4);
 const recent = others.filter((p) => p !== longTerm);
 const projects = longTerm ? [...recent.slice(0, 2), longTerm] : recent.slice(0, 3);
 
-const toCard = (project: (typeof projects)[number], mobileOnly = false) => ({
+const MOBILE_PROJECT_TITLES = ['Marie Mayaux', 'Camille Perrin', 'Mélanie Aguillon'];
+const mobileProjects = MOBILE_PROJECT_TITLES.flatMap((title) => {
+	const project = portfolioProjects.find((candidate) => candidate.title === title);
+	return project ? [project] : [];
+});
+
+const toCard = (project: (typeof projects)[number], mobileOnly: boolean) => ({
 	title: project.title,
 	// Lieu et année : une information propre à chaque projet (le métier est déjà dans le titre de section).
 	meta: `${project.location} · ${project.year}`,
@@ -32,8 +36,8 @@ const toCard = (project: (typeof projects)[number], mobileOnly = false) => ({
 });
 
 const projectsForHome = [
-	...(heroProject && heroProject !== longTerm ? [toCard(heroProject, true)] : []),
-	...projects.map((project) => toCard(project)),
+	...mobileProjects.map((project) => toCard(project, true)),
+	...projects.map((project) => toCard(project, false)),
 ];
 ---
 
@@ -71,7 +75,7 @@ const projectsForHome = [
 						<article
 							class:list={[
 								'group h-full w-full shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm sm:w-[85%] lg:w-auto lg:shrink',
-								mobileOnly ? 'flex md:hidden' : 'flex',
+								mobileOnly ? 'flex md:hidden' : 'hidden md:flex',
 							]}
 						>
 							<a
@@ -191,7 +195,9 @@ const projectsForHome = [
 		const isDesktopGrid = () => window.matchMedia('(min-width: 1024px)').matches;
 
 		const getScrollStep = () => {
-			const first = track.querySelector<HTMLElement>('article');
+			const first = Array.from(track.querySelectorAll<HTMLElement>('article')).find(
+				(article) => article.offsetParent !== null,
+			);
 			if (!first) return track.clientWidth;
 			const styles = getComputedStyle(track);
 			const gap = Number.parseFloat(styles.columnGap || styles.gap || '0') || 0;
