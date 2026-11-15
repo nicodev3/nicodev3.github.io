@@ -1,0 +1,613 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const toolUrl = "https://nicodev.fr/outils/matrice-act/";
+const webApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Matrice ACT interactive",
+  description:
+    "Matrice ACT interactive et gratuite : présentation pas à pas, remplissage libre et visualisation de la boucle de l'évitement.",
+  url: toolUrl,
+  applicationCategory: "HealthApplication",
+  operatingSystem: "Tous",
+  browserRequirements: "JavaScript activé",
+  isAccessibleForFree: true,
+  inLanguage: "fr-FR",
+  dateModified: "2026-11-15",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "EUR",
+  },
+  provider: {
+    "@type": "Person",
+    name: "Nicolas Devaux",
+    url: "https://nicodev.fr/about/",
+  },
+};
+---
+
+<Layout
+  title="Matrice ACT interactive en ligne | Outils Nicodev"
+  description="Matrice ACT interactive et gratuite pour psychologues et patients : présentation pas à pas, puis boucle de l'évitement. Rien n'est envoyé sur un serveur."
+>
+  <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(webApplicationSchema)} />
+  <section class="section-y bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <nav
+        class="text-sm text-slate-600"
+        aria-label="Fil d'Ariane"
+      >
+        <a
+          href="/outils/"
+          class="font-medium text-teal-700 underline decoration-teal-300 underline-offset-2 hover:text-teal-900"
+          >Outils</a
+        >
+        <span
+          class="mx-1.5 text-slate-400"
+          aria-hidden="true"
+          >/</span
+        >
+        <span class="text-slate-800">Matrice ACT</span>
+      </nav>
+
+      <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-teal-700">Outil 5</p>
+        <h1 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">Matrice ACT interactive</h1>
+        <p class="mt-4 max-w-3xl text-slate-700">
+          Un outil pour présenter et remplir la <strong>matrice ACT</strong> à l&apos;écran, en séance ou seul. Il
+          s&apos;adresse aux psychologues qui utilisent la thérapie d&apos;acceptation et d&apos;engagement, et aux
+          personnes qui veulent y voir plus clair entre ce qui compte pour elles et ce qu&apos;elles font pour
+          ne plus ressentir ce qui est pénible.
+        </p>
+        <ul class="mt-4 max-w-3xl list-disc space-y-1 pl-5 text-slate-700">
+          <li>
+            <strong>Pas à pas</strong> : la matrice se dessine depuis une feuille blanche, une étape à la fois.
+          </li>
+          <li><strong>Matrice complète</strong> : tout est affiché et modifiable librement.</li>
+          <li>
+            <strong>Est-ce que ça marche ?</strong> : trois questions par action, et la boucle se dessine avec vos
+            mots.
+          </li>
+        </ul>
+        <p class="mt-4 max-w-3xl text-slate-700">
+          Pour une première approche, le{' '}
+          <a
+            href="/outils/film-matrice-act/"
+            class="font-semibold text-teal-800 underline underline-offset-2 hover:text-teal-900"
+            >film d&apos;une minute et demie</a
+          >{' '}
+          raconte la matrice à travers l&apos;histoire d&apos;un étudiant.
+        </p>
+      </div>
+
+      <div class="act-tool mt-8">
+          <div class="tool-head">
+            <h2 class="tool-title">Votre matrice</h2>
+            <div class="modes" role="group" aria-label="Mode d'utilisation">
+              <button type="button" id="ma-mode-steps" aria-pressed="false">Pas à pas</button>
+              <button type="button" id="ma-mode-full" aria-pressed="true">Matrice complète</button>
+            </div>
+          </div>
+
+          <div class="banner" id="ma-banner" hidden>
+            <p>Cette matrice est un exemple fictif. Effacez-la pour commencer la vôtre.</p>
+            <button type="button" class="btn primary" id="ma-clear-example">Commencer une matrice vide</button>
+          </div>
+
+          <section id="ma-board">
+            <div class="presenter" id="ma-presenter" hidden>
+              <div class="ptext">
+                <p class="note" id="ma-p-count"></p>
+                <p id="ma-p-text" aria-live="polite"></p>
+              </div>
+              <div class="pctl">
+                <div class="modes small" role="group" aria-label="À qui s'adressent les textes">
+                  <button type="button" id="ma-tone-pro" aria-pressed="true">Je présente à un patient</button>
+                  <button type="button" id="ma-tone-solo" aria-pressed="false">Je la fais seul</button>
+                </div>
+                <div class="bar">
+                  <button type="button" class="btn" id="ma-p-prev">Étape précédente</button>
+                  <button type="button" class="btn primary" id="ma-p-next">Étape suivante</button>
+                </div>
+              </div>
+            </div>
+            <div class="matrix" id="ma-matrix">
+              <span class="line vline"></span><span class="line hline"></span>
+              <span class="tag vx top">Ce que je fais</span>
+              <span class="tag vx bottom">Ce que je vis à l'intérieur</span>
+              <span class="tag hx away">← M'éloigner</span>
+              <span class="tag hx toward">M'approcher →</span>
+              <div class="center">Je remarque</div>
+            </div>
+          </section>
+
+          <section class="loop-sec" id="ma-loop" aria-labelledby="ma-loop-title">
+            <h2 id="ma-loop-title">Est-ce que ça marche ?</h2>
+            <p>Chercher à s'éloigner d'un ressenti pénible est normal, tout le monde le fait. Il n'y a pas de bonne ou de mauvaise réponse : il s'agit de remarquer ce que chaque action du cadre 3 produit pour vous.</p>
+            <p class="note" id="ma-loop-empty">Notez au moins un élément dans le cadre 2 et une action dans le cadre 3 pour voir la boucle.</p>
+            <div class="ev-rows" id="ma-loop-rows"></div>
+            <div id="ma-loop-fig"></div>
+            <p class="say" id="ma-loop-say" aria-live="polite"></p>
+            <p class="note" id="ma-loop-sum"></p>
+          </section>
+
+          <div class="bar">
+            <button type="button" class="btn" id="ma-copy">Copier la matrice en texte</button>
+            <button type="button" class="btn" id="ma-reset">Tout effacer</button>
+            <span class="note" id="ma-status" role="status"></span>
+          </div>
+          <div class="copybox" id="ma-copybox">
+            <label class="note" for="ma-copytext">La copie automatique n'a pas fonctionné. Sélectionnez ce texte et copiez-le.</label>
+            <textarea id="ma-copytext" readonly></textarea>
+          </div>
+          <p class="note">Rien n'est envoyé sur un serveur. Ce que vous écrivez reste dans ce navigateur. Les questions en gras sont modifiables.</p>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 class="text-2xl font-bold text-slate-900">Comment utiliser la matrice ACT</h2>
+        <p class="mt-3 max-w-3xl text-slate-700">
+          La matrice tient en deux lignes. La ligne verticale sépare ce que je fais, en haut, de ce que je vis
+          à l&apos;intérieur, en bas. La ligne horizontale sépare ce qui m&apos;éloigne d&apos;un vécu pénible, à
+          gauche, de ce qui me rapproche de ce qui compte, à droite. On remplit ensuite quatre cadres, dans cet
+          ordre : qui ou quoi est important, ce qui se met en travers à l&apos;intérieur, ce que je fais pour
+          m&apos;en éloigner, ce que je pourrais faire pour aller vers ce qui compte. Le cercle au centre, tracé
+          en dernier, désigne la personne qui remarque tout cela.
+        </p>
+        <h2 class="mt-8 text-2xl font-bold text-slate-900">Confidentialité</h2>
+        <p class="mt-3 max-w-3xl text-slate-700">
+          Ce que vous écrivez reste dans votre navigateur. Rien n&apos;est envoyé sur un serveur et aucun compte
+          n&apos;est nécessaire. Pour repartir de zéro, utilisez le bouton « Tout effacer ».
+        </p>
+        <h2 class="mt-8 text-2xl font-bold text-slate-900">Origine et limites</h2>
+        <p class="mt-3 max-w-3xl text-slate-700">
+          La matrice ACT a été conçue par Kevin Polk, Jerold Hambright et Mark Webster. Cette version
+          interactive en adapte la présentation et certaines formulations. Elle sert de support à la réflexion
+          et ne remplace pas un accompagnement par un professionnel.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+.act-tool {
+  --paper: #f4f7f6; --surface: #ffffff; --ink: #16302d; --muted: #5a6f6c; --line: #c9d6d3;
+  --accent: #0d9488; --accent-ink: #ffffff; --accent-soft: #dff3f0; --away: #8a5a2b; --away-soft: #f6ecdf;
+  --display: var(--font-sans); --body: var(--font-sans);
+  display: flex; flex-direction: column; gap: 16px; padding: 20px 16px; border-radius: 16px;
+  background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.45;
+}
+.act-tool *, .act-tool *::before, .act-tool *::after { box-sizing: border-box; }
+.act-tool .tool-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.act-tool .tool-title, .act-tool .loop-sec h2 { font-weight: 700; }
+.act-tool .node h3, .act-tool .mid h3 { font-weight: 700; }
+.act-tool .btn, .act-tool .modes button, .act-tool .chip, .act-tool .seg button, .act-tool .del, .act-tool .link, .act-tool .ev-name { cursor: pointer; }
+.act-tool .tool-title { font-family: var(--display); font-size: 1.6rem; margin: 0; text-wrap: balance; }
+.act-tool button, .act-tool input, .act-tool textarea { font: inherit; color: inherit; }
+.act-tool button { cursor: pointer; }
+.act-tool :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.act-tool .modes { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); padding: 3px; }
+.act-tool .modes button { border: 0; background: transparent; padding: 8px 16px; border-radius: 999px; color: var(--muted); }
+.act-tool .modes button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.act-tool .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.act-tool .btn { border: 1px solid var(--line); background: var(--surface); padding: 8px 14px; border-radius: 8px; }
+.act-tool .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.act-tool .note { color: var(--muted); font-size: 0.9rem; margin: 0; }
+.act-tool .banner { background: var(--accent-soft); border-radius: 8px; padding: 10px 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.act-tool .banner p { margin: 0; }
+.act-tool .presenter { background: var(--accent-soft); border-radius: 12px; padding: 14px 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.act-tool .presenter p { margin: 0; }
+.act-tool .ptext { flex: 1 1 320px; display: flex; flex-direction: column; gap: 4px; }
+.act-tool #ma-p-text { font-size: 1.05rem; }
+.act-tool .pctl { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+.act-tool .modes.small button { padding: 5px 12px; font-size: 0.88rem; }
+.act-tool .matrix { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 1fr 1fr; grid-template-areas: "q2 q3" "q1 q0"; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; margin: 16px 0; }
+.act-tool .q { padding: 26px 16px; display: flex; flex-direction: column; gap: 10px; min-height: 240px; }
+.act-tool .q0 { grid-area: q0; }
+.act-tool .q1 { grid-area: q1; }
+.act-tool .q2 { grid-area: q2; }
+.act-tool .q3 { grid-area: q3; }
+.act-tool .q.hid { visibility: hidden; }
+.act-tool .line { position: absolute; background: var(--ink); pointer-events: none; }
+.act-tool .vline { left: 50%; top: 0; bottom: 0; width: 2px; margin-left: -1px; transform: scaleY(0); transform-origin: top; }
+.act-tool .hline { top: 50%; left: 0; right: 0; height: 2px; margin-top: -1px; transform: scaleX(0); transform-origin: left; }
+.act-tool .s1 .vline { transform: scaleY(1); }
+.act-tool .s2 .hline { transform: scaleX(1); }
+.act-tool .tag { position: absolute; background: var(--surface); padding: 2px 10px; border-radius: 999px; font-family: var(--display); font-weight: 700; font-size: 0.95rem; white-space: nowrap; pointer-events: none; opacity: 0; }
+.act-tool .vx { left: 50%; transform: translate(-50%, -50%); border: 1px solid var(--line); }
+.act-tool .vx.top { top: 0; }
+.act-tool .vx.bottom { top: 100%; }
+.act-tool .hx { top: 50%; transform: translateY(-50%); }
+.act-tool .hx.away { left: 10px; color: var(--away); }
+.act-tool .hx.toward { right: 10px; color: var(--accent); }
+.act-tool .s1 .vx, .act-tool .st .hx.toward, .act-tool .sa .hx.away { opacity: 1; }
+.act-tool .q.current { background: var(--accent-soft); }
+.act-tool .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--muted); }
+.act-tool .num { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--ink); color: var(--surface); font-weight: 700; font-size: 0.85rem; flex: none; }
+.act-tool .qlabel { border: 1px solid transparent; border-radius: 6px; background: transparent; font-family: var(--display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; padding: 4px 6px; margin: 0 -6px; resize: none; width: calc(100% + 12px); overflow: hidden; }
+.act-tool .qlabel:hover, .act-tool .qlabel:focus { border-color: var(--line); background: var(--surface); }
+.act-tool ul.items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.act-tool ul.items li { display: flex; align-items: flex-start; gap: 6px; background: var(--accent-soft); border-radius: 8px; padding: 2px 4px 2px 10px; }
+.act-tool .away-side ul.items li { background: var(--away-soft); }
+.act-tool .itext { flex: 1; border: 0; background: transparent; padding: 6px 0; resize: none; overflow: hidden; min-width: 0; }
+.act-tool .del { border: 0; background: transparent; color: var(--muted); padding: 6px 8px; border-radius: 6px; font-size: 1.1rem; line-height: 1; }
+.act-tool .add { display: flex; gap: 6px; margin-top: auto; }
+.act-tool .add input { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; background: var(--surface); }
+.act-tool .add button { flex: none; }
+.act-tool .ideas { display: flex; flex-direction: column; gap: 6px; }
+.act-tool .link { border: 0; background: none; color: var(--accent); text-decoration: underline; padding: 0; text-align: left; font-size: 0.92rem; align-self: flex-start; }
+.act-tool .ideas-h { margin: 4px 0 0; font-size: 0.82rem; font-weight: 700; color: var(--muted); }
+.act-tool .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.act-tool .chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 4px 11px; font-size: 0.9rem; }
+.act-tool .chip:hover { border-color: var(--accent); }
+.act-tool .center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 96px; height: 96px; border-radius: 50%; border: 2px solid var(--ink); background: var(--surface); color: var(--ink); display: grid; place-items: center; text-align: center; font-family: var(--display); font-size: 0.9rem; font-weight: 700; line-height: 1.15; pointer-events: none; opacity: 0; }
+.act-tool .s3 .center { opacity: 1; }
+.act-tool .q1, .act-tool .q2 { padding-right: 58px; }
+.act-tool .q0, .act-tool .q3 { padding-left: 58px; }
+.act-tool .loop-sec { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.act-tool .loop-sec h2 { font-family: var(--display); font-size: 1.35rem; margin: 0; text-wrap: balance; }
+.act-tool .loop-sec p { margin: 0; max-width: 70ch; }
+.act-tool .ev-rows { display: flex; flex-direction: column; gap: 10px; }
+.act-tool .ev-row { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.act-tool .ev-row.sel { border-color: var(--away); box-shadow: inset 4px 0 0 var(--away); }
+.act-tool .ev-name { font-weight: 700; background: none; border: 0; text-align: left; padding: 0; font-size: 1.05rem; }
+.act-tool .ev-q { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; justify-content: space-between; }
+.act-tool .ev-q > span { flex: 1 1 220px; }
+.act-tool .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.act-tool .seg button { border: 0; border-left: 1px solid var(--line); background: var(--surface); padding: 6px 12px; font-size: 0.92rem; }
+.act-tool .seg button:first-child { border-left: 0; }
+.act-tool .seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); font-weight: 700; }
+.act-tool .ring { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); grid-template-areas: "a ab b" "da mid bc" "d cd c"; gap: 10px; align-items: center; }
+.act-tool .node { border: 2px solid var(--line); border-radius: 10px; padding: 12px; background: var(--paper); min-height: 96px; }
+.act-tool .node h3 { font-family: var(--body); font-size: 0.82rem; color: var(--muted); margin: 0 0 4px; }
+.act-tool .node p { font-weight: 700; overflow-wrap: anywhere; }
+.act-tool .node.todo p { color: var(--muted); font-weight: 400; }
+.act-tool .na { grid-area: a; }
+.act-tool .nb { grid-area: b; }
+.act-tool .nc { grid-area: c; }
+.act-tool .nd { grid-area: d; }
+.act-tool .arrow { font-size: 1.5rem; font-weight: 700; color: var(--away); text-align: center; }
+.act-tool .arrow.off { color: var(--line); }
+.act-tool .ab { grid-area: ab; }
+.act-tool .bc { grid-area: bc; }
+.act-tool .cd { grid-area: cd; }
+.act-tool .da { grid-area: da; }
+.act-tool .ab::before { content: "→"; }
+.act-tool .bc::before { content: "↓"; }
+.act-tool .cd::before { content: "←"; }
+.act-tool .da::before { content: "↑"; }
+.act-tool .mid { grid-area: mid; text-align: center; border: 2px dashed var(--accent); border-radius: 10px; padding: 12px; background: var(--accent-soft); }
+.act-tool .mid h3 { font-family: var(--body); font-size: 0.82rem; color: var(--muted); margin: 0 0 4px; }
+.act-tool .mid p { margin: 0 auto; }
+.act-tool .say { font-size: 1.08rem; font-weight: 700; }
+@keyframes pulse { 0%, 20% { border-color: var(--away); background: var(--away-soft); } 26%, 100% { border-color: var(--line); background: var(--paper); } }
+.act-tool .guide { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 14px; max-width: 640px; }
+.act-tool .guide h2 { font-family: var(--display); font-size: 1.4rem; margin: 0; text-wrap: balance; }
+.act-tool .guide .hint { margin: 0; color: var(--muted); }
+.act-tool .steps { display: flex; gap: 6px; }
+.act-tool .steps span { height: 6px; flex: 1; border-radius: 3px; background: var(--line); }
+.act-tool .steps span.done { background: var(--accent); }
+.act-tool .nav { display: flex; justify-content: space-between; gap: 8px; }
+.act-tool .copybox { display: none; flex-direction: column; gap: 8px; }
+.act-tool .copybox.show { display: flex; }
+.act-tool .copybox textarea { width: 100%; min-height: 180px; border: 1px solid var(--line); border-radius: 8px; padding: 10px; background: var(--surface); }
+.act-tool [hidden] { display: none !important; }
+@media (max-width: 720px) {
+.act-tool .matrix { grid-template-columns: 1fr; grid-template-areas: "q0" "q1" "q2" "q3"; }
+.act-tool .q { padding: 16px; min-height: 0; border-left: 0 !important; border-top: 1px solid var(--line) !important; }
+.act-tool .q0 { border-top: 0 !important; }
+.act-tool .center, .act-tool .line, .act-tool .tag { display: none; }
+.act-tool .q.hid { display: none; }
+.act-tool .ring { grid-template-columns: minmax(0, 1fr); grid-template-areas: "a" "ab" "b" "bc" "c" "cd" "d" "da" "mid"; }
+.act-tool .ab::before, .act-tool .bc::before, .act-tool .cd::before { content: "↓"; }
+.act-tool .da::before { content: "↺ retour au début"; font-size: 1rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+.act-tool .q { transition: background-color .2s; }
+.act-tool .line { transition: transform .8s ease; }
+.act-tool .tag, .act-tool .center { transition: opacity .4s ease .6s; }
+.act-tool .ring.turning .node { animation: pulse 6s infinite; }
+.act-tool .ring.turning .nb { animation-delay: 1.5s; }
+.act-tool .ring.turning .nc { animation-delay: 3s; }
+.act-tool .ring.turning .nd { animation-delay: 4.5s; }
+}
+</style>
+
+<script is:inline>
+(function () {
+  var KEY = "matrice-act-v2";
+  var META = [
+    { side: "toward", where: "Ce que je vis à l'intérieur", sub: "Personnes, activités, qualités que vous voulez incarner",
+      label: "Qui ou quoi est important pour vous ?",
+      hint: "Des personnes, des activités, des qualités que vous voulez incarner. Il n'y a pas de bonne réponse.",
+      ph: "Par exemple : mes enfants" },
+    { side: "away", where: "Ce que je vis à l'intérieur", sub: "Pensées, émotions, sensations du corps, souvenirs",
+      label: "Qu'est-ce qui se met en travers, à l'intérieur ?",
+      hint: "Les pensées, les émotions, les sensations du corps ou les souvenirs difficiles qui apparaissent quand vous allez vers ce qui compte.",
+      ph: "Par exemple : la peur d'être jugé" },
+    { side: "away", where: "Ce que je fais · s'éloigner", sub: "Ce que vous faites, visible ou non : éviter, vous distraire, ruminer",
+      label: "Que faites-vous pour vous éloigner de ces expériences intérieures ?",
+      hint: "Ce que vous faites pour éviter, calmer ou faire taire ces ressentis, que cela se voie ou non : annuler, vous distraire, ruminer.",
+      ph: "Par exemple : je reporte l'appel" },
+    { side: "toward", where: "Ce que je fais · s'approcher", sub: "Des actions concrètes, même petites",
+      label: "Que pourriez-vous faire pour aller vers ce qui compte ?",
+      hint: "Des actions concrètes, même petites, que vous pourriez faire cette semaine.",
+      ph: "Par exemple : appeler une amie jeudi" }
+  ];
+  var EXAMPLE = [
+    ["Mes enfants", "Mon métier de soignante", "Mes amies"],
+    ["« Je n'y arriverai pas »", "Boule au ventre le dimanche soir", "Peur d'être jugée"],
+    ["Je reporte les appels", "Je reste tard sur mon téléphone", "J'annule les sorties"],
+    ["Appeler Claire cette semaine", "Dîner sans écran avec les enfants mardi"]
+  ];
+  var state = load() || { labels: META.map(function (m) { return m.label; }), items: EXAMPLE.map(function (a) { return a.slice(); }), example: true };
+  if (!state.evals) state.evals = state.example ? [{ s: "oui", l: "oui", v: "eloigne" }, { s: "peu", l: "oui", v: "eloigne" }, { s: "oui", l: "parfois", v: "eloigne" }] : [];
+  while (state.evals.length < state.items[2].length) state.evals.push({});
+  state.evals.length = state.items[2].length;
+  var mode = "full", tone = "pro", sel = 0;
+  // Présentation : 0 feuille blanche, 1 axe vertical, 2 ligne horizontale sans libellé, 3 cadre 1,
+  // 4 « M'approcher », 5 cadre 2, 6 « M'éloigner », 7 cadre 3, 8 cadre 4, 9 cercle au centre.
+  var LAST = 9, QS = [3, 5, 7, 8];
+  var pres = LAST;
+  var SCRIPT = {
+    pro: {
+      0: "Une feuille blanche. Passez à l'étape suivante pour tracer le premier axe.",
+      1: "Premier axe. En haut, ce que je fais : mes actions, qu'elles se voient ou non. En bas, ce que je vis à l'intérieur : pensées, émotions, sensations du corps, souvenirs.",
+      2: "Une deuxième ligne, horizontale. Nous verrons à quoi elle sert après la première question.",
+      4: "Tout ce que je fais pour aller vers ces personnes et ces choses importantes, c'est m'approcher. Nous le plaçons à droite.",
+      6: "Tout ce que je fais pour ne plus ressentir ou penser cela, c'est m'éloigner. Nous le plaçons à gauche.",
+      9: "Pour finir, un cercle au centre. C'est vous, qui remarquez tout ce que nous venons de noter dans les quatre parties."
+    },
+    solo: {
+      0: "Vous allez construire votre matrice, une étape à la fois. Prenez votre temps.",
+      1: "Premier axe. En haut, ce que vous faites : vos actions, qu'elles se voient ou non. En bas, ce que vous vivez à l'intérieur : pensées, émotions, sensations du corps, souvenirs.",
+      2: "Une deuxième ligne, horizontale. Vous verrez à quoi elle sert après la première question.",
+      4: "Tout ce que vous faites pour aller vers ces personnes et ces choses importantes, c'est vous approcher. Cela se place à droite.",
+      6: "Tout ce que vous faites pour ne plus ressentir ou penser cela, c'est vous éloigner. Cela se place à gauche.",
+      9: "Pour finir, un cercle au centre. C'est vous, qui remarquez tout ce que vous venez de noter dans les quatre parties."
+    }
+  };
+  var $ = function (id) { return document.getElementById("ma-" + id); };
+
+  function load() {
+    try { var s = JSON.parse(localStorage.getItem(KEY)); if (s && s.items && s.items.length === 4) return s; } catch (e) {}
+    return null;
+  }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  function fit(t) { t.style.height = "auto"; t.style.height = t.scrollHeight + "px"; }
+  function touch() { state.example = false; save(); }
+
+  function itemNode(q, i) {
+    var li = document.createElement("li");
+    var t = document.createElement("textarea");
+    t.className = "itext"; t.rows = 1; t.value = state.items[q][i];
+    t.id = "ma-" + "item-" + q + "-" + i; t.setAttribute("aria-label", "Élément " + (i + 1));
+    t.addEventListener("input", function () { state.items[q][i] = t.value; fit(t); touch(); $("banner").hidden = true; renderLoop(); });
+    t.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); t.blur(); } });
+    var d = document.createElement("button");
+    d.type = "button"; d.className = "del"; d.textContent = "×"; d.setAttribute("aria-label", "Supprimer « " + state.items[q][i] + " »");
+    d.addEventListener("click", function () { state.items[q].splice(i, 1); if (q === 2) state.evals.splice(i, 1); touch(); render(); });
+    li.appendChild(t); li.appendChild(d);
+    return li;
+  }
+  function add(q, value) {
+    var v = value.trim(); if (!v) return false;
+    state.items[q].push(v); if (q === 2) state.evals.push({}); touch(); return true;
+  }
+
+  var ideasOpen = false;
+  var IDEAS = [
+    ["Domaines de vie", ["Ma famille", "Mon couple", "Mes enfants", "Mes amis", "Mon travail", "Mes études, ma formation", "Mes loisirs", "Ma santé", "Ma vie spirituelle", "Ma vie citoyenne"]],
+    ["Ce que je veux faire vivre", ["Prendre soin", "Tenir parole", "Oser", "Apprendre", "Créer", "Dire vrai", "Transmettre", "Persévérer", "Rire", "Être libre"]]
+  ];
+  function ideasNode(getInput) {
+    var box = document.createElement("div"); box.className = "ideas";
+    var t = document.createElement("button");
+    t.type = "button"; t.className = "link"; t.textContent = ideasOpen ? "Masquer les idées" : "Besoin d'idées ?";
+    t.setAttribute("aria-expanded", String(ideasOpen));
+    t.addEventListener("click", function () { ideasOpen = !ideasOpen; render(); });
+    box.appendChild(t);
+    if (!ideasOpen) return box;
+    var n = document.createElement("p"); n.className = "note"; n.textContent = "Choisissez une idée, puis précisez-la avec vos mots avant de l'ajouter.";
+    box.appendChild(n);
+    IDEAS.forEach(function (g) {
+      var h = document.createElement("p"); h.className = "ideas-h"; h.textContent = g[0];
+      var c = document.createElement("div"); c.className = "chips";
+      g[1].forEach(function (txt) {
+        var b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = txt;
+        b.addEventListener("click", function () { var i = getInput(); i.value = txt; i.focus(); });
+        c.appendChild(b);
+      });
+      box.appendChild(h); box.appendChild(c);
+    });
+    return box;
+  }
+
+  function renderBoard() {
+    var m = $("matrix");
+    Array.prototype.slice.call(m.querySelectorAll(".q")).forEach(function (n) { n.remove(); });
+    META.forEach(function (meta, q) {
+      var sec = document.createElement("section");
+      sec.className = "q q" + q + " " + (meta.side === "away" ? "away-side" : "toward-side") + (mode === "steps" && pres === QS[q] ? " current" : "") + (pres < QS[q] ? " hid" : "");
+      var eb = document.createElement("div"); eb.className = "eyebrow";
+      eb.innerHTML = '<span class="num">' + (q + 1) + "</span>";
+      eb.appendChild(document.createTextNode(meta.where));
+      var lab = document.createElement("textarea");
+      lab.className = "qlabel"; lab.rows = 1; lab.id = "ma-" + "label-" + q; lab.value = state.labels[q];
+      lab.setAttribute("aria-label", "Question du quadrant " + (q + 1));
+      lab.addEventListener("input", function () { state.labels[q] = lab.value; fit(lab); save(); });
+      var ul = document.createElement("ul"); ul.className = "items";
+      state.items[q].forEach(function (_, i) { ul.appendChild(itemNode(q, i)); });
+      var form = document.createElement("form"); form.className = "add";
+      var inp = document.createElement("input");
+      inp.type = "text"; inp.id = "ma-" + "add-" + q; inp.placeholder = meta.ph; inp.autocomplete = "off";
+      inp.setAttribute("aria-label", "Ajouter au quadrant " + (q + 1));
+      var b = document.createElement("button"); b.type = "submit"; b.className = "btn"; b.textContent = "Ajouter";
+      form.appendChild(inp); form.appendChild(b);
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (add(q, inp.value)) { render(); $("add-" + q).focus(); }
+      });
+      var sub = document.createElement("p"); sub.className = "note"; sub.textContent = meta.sub;
+      sec.appendChild(eb); sec.appendChild(lab); sec.appendChild(sub);
+      if (q === 0) sec.appendChild(ideasNode(function () { return inp; }));
+      sec.appendChild(ul); sec.appendChild(form);
+      m.appendChild(sec);
+    });
+    Array.prototype.slice.call(m.querySelectorAll("textarea")).forEach(fit);
+  }
+
+  var QUESTIONS = [
+    { key: "s", text: "Sur le moment, est-ce que ça soulage ?", opts: [["oui", "Oui"], ["peu", "Un peu"], ["non", "Non"]] },
+    { key: "l", text: "Ensuite, est-ce que le ressenti revient ?", opts: [["oui", "Oui"], ["parfois", "Parfois"], ["non", "Non"]] },
+    { key: "v", text: "Par rapport à ce qui compte pour vous, cette action…", opts: [["rapproche", "Me rapproche"], ["rien", "Ni l'un ni l'autre"], ["eloigne", "M'éloigne"]] }
+  ];
+  function few(list) { return list.length ? list.slice(0, 3).join(" · ") + (list.length > 3 ? " …" : "") : ""; }
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  function node(cls, title, text, todo) {
+    var n = el("div", "node " + cls + (todo ? " todo" : ""));
+    n.appendChild(el("h3", "", title)); n.appendChild(el("p", "", text));
+    return n;
+  }
+  function sayFor(e) {
+    if (!e.s || !e.l || !e.v) return "Répondez aux trois questions pour voir ce que cette action produit.";
+    var relief = e.s !== "non", back = e.l !== "non", t;
+    if (relief && back) t = "D'après vos réponses, cette action soulage sur le moment, puis le ressenti revient : la boucle recommence.";
+    else if (!relief && back) t = "D'après vos réponses, cette action ne soulage pas vraiment, et le ressenti revient quand même.";
+    else if (relief) t = "D'après vos réponses, cette action soulage et le ressenti ne revient pas : ici, la boucle s'arrête.";
+    else t = "D'après vos réponses, cette action ne soulage pas, mais le ressenti ne revient pas ensuite.";
+    if (e.v === "eloigne") t += " Pendant ce temps, elle vous éloigne de ce qui compte pour vous.";
+    else if (e.v === "rapproche") t += " Et elle vous rapproche de ce qui compte : elle a peut-être aussi sa place dans le cadre 4.";
+    else t += " Elle ne vous rapproche ni ne vous éloigne de ce qui compte.";
+    return t;
+  }
+  function renderLoop(focusId) {
+    var acts = state.items[2], inner = state.items[1], ready = acts.length > 0 && inner.length > 0;
+    $("loop").hidden = mode === "steps";
+    $("loop-empty").hidden = ready;
+    var rows = $("loop-rows"), fig = $("loop-fig");
+    rows.innerHTML = ""; fig.innerHTML = ""; $("loop-say").textContent = ""; $("loop-sum").textContent = "";
+    if (!ready) return;
+    if (sel >= acts.length) sel = 0;
+    acts.forEach(function (a, i) {
+      var row = el("div", "ev-row" + (i === sel ? " sel" : ""));
+      var name = el("button", "ev-name", a); name.type = "button"; name.id = "ma-" + "ev-name-" + i;
+      name.setAttribute("aria-pressed", String(i === sel));
+      name.addEventListener("click", function () { sel = i; renderLoop("ev-name-" + i); });
+      row.appendChild(name);
+      QUESTIONS.forEach(function (qn) {
+        var line = el("div", "ev-q"); line.appendChild(el("span", "", qn.text));
+        var seg = el("div", "seg"); seg.setAttribute("role", "group"); seg.setAttribute("aria-label", qn.text);
+        qn.opts.forEach(function (o) {
+          var b = el("button", "", o[1]); b.type = "button"; b.id = "ma-" + "ev-" + i + "-" + qn.key + "-" + o[0];
+          b.setAttribute("aria-pressed", String(state.evals[i][qn.key] === o[0]));
+          b.addEventListener("click", function () { state.evals[i][qn.key] = o[0]; sel = i; touch(); $("banner").hidden = true; renderLoop(b.id.slice(3)); });
+          seg.appendChild(b);
+        });
+        line.appendChild(seg); row.appendChild(line);
+      });
+      rows.appendChild(row);
+    });
+    var e = state.evals[sel];
+    var S = { oui: "Ça soulage.", peu: "Ça soulage un peu.", non: "Ça ne soulage pas." };
+    var L = { oui: "Le ressenti revient.", parfois: "Le ressenti revient parfois.", non: "Le ressenti ne revient pas." };
+    var V = { rapproche: "Cette action m'en rapproche.", rien: "Cette action n'y change rien.", eloigne: "Cette action m'en éloigne." };
+    var closed = e.l === "oui" || e.l === "parfois";
+    var ring = el("div", "ring" + (closed && e.s ? " turning" : ""));
+    ring.appendChild(node("na", "1. Ce qui apparaît à l'intérieur", few(inner)));
+    ring.appendChild(el("div", "arrow ab"));
+    ring.appendChild(node("nb", "2. Ce que je fais pour m'en éloigner", acts[sel]));
+    ring.appendChild(el("div", "arrow bc"));
+    ring.appendChild(node("nc", "3. Sur le moment", e.s ? S[e.s] : "À répondre ci-dessus", !e.s));
+    ring.appendChild(el("div", "arrow cd"));
+    ring.appendChild(node("nd", "4. Ensuite", e.l ? L[e.l] : "À répondre ci-dessus", !e.l));
+    ring.appendChild(el("div", "arrow da" + (closed ? "" : " off")));
+    var mid = el("div", "mid");
+    mid.appendChild(el("h3", "", "Ce qui compte pour moi"));
+    mid.appendChild(el("p", "", few(state.items[0]) || "Cadre 1 à remplir"));
+    if (e.v) { var v = el("p", "", V[e.v]); v.style.fontWeight = "700"; mid.appendChild(v); }
+    ring.appendChild(mid);
+    fig.appendChild(ring);
+    $("loop-say").textContent = sayFor(e);
+    var done = state.evals.filter(function (x) { return x.s && x.l && x.v; });
+    if (done.length > 1) {
+      var n = function (f) { return done.filter(f).length; };
+      $("loop-sum").textContent = "Sur " + done.length + " actions évaluées : " + n(function (x) { return x.s !== "non"; }) + " soulagent sur le moment, " +
+        n(function (x) { return x.l !== "non"; }) + " voient le ressenti revenir, " + n(function (x) { return x.v === "eloigne"; }) + " vous éloignent de ce qui compte.";
+    }
+    if (focusId && $(focusId)) $(focusId).focus();
+  }
+  function evalText() {
+    var lab = { oui: "oui", peu: "un peu", non: "non", parfois: "parfois", rapproche: "me rapproche", rien: "ni l'un ni l'autre", eloigne: "m'éloigne" };
+    var lines = state.items[2].map(function (a, i) {
+      var e = state.evals[i]; if (!e.s && !e.l && !e.v) return null;
+      return "  - " + a + " : soulage sur le moment : " + (lab[e.s] || "?") + " ; le ressenti revient : " + (lab[e.l] || "?") + " ; par rapport à ce qui compte : " + (lab[e.v] || "?");
+    }).filter(Boolean);
+    return lines.length ? "\n\nEst-ce que ça marche ?\n" + lines.join("\n") : "";
+  }
+
+  function render() {
+    var steps = mode === "steps";
+    $("mode-steps").setAttribute("aria-pressed", String(steps));
+    $("mode-full").setAttribute("aria-pressed", String(!steps));
+    $("banner").hidden = !state.example || steps;
+    $("matrix").className = "matrix" + (pres >= 1 ? " s1" : "") + (pres >= 2 ? " s2" : "") + (pres >= 4 ? " st" : "") + (pres >= 6 ? " sa" : "") + (pres >= LAST ? " s3" : "");
+    $("presenter").hidden = !steps;
+    if (steps) {
+      var qi = QS.indexOf(pres);
+      $("p-count").textContent = "Étape " + (pres + 1) + " sur " + (LAST + 1);
+      $("p-text").textContent = qi < 0 ? SCRIPT[tone][pres] : tone === "pro" ? "Cadre " + (qi + 1) + ". " + state.labels[qi] : state.labels[qi] + " " + META[qi].hint;
+      $("p-prev").disabled = pres === 0;
+      $("p-next").textContent = pres === LAST ? "Voir la matrice complète" : "Étape suivante";
+      $("tone-pro").setAttribute("aria-pressed", String(tone === "pro"));
+      $("tone-solo").setAttribute("aria-pressed", String(tone === "solo"));
+    }
+    renderBoard();
+    renderLoop();
+  }
+  function focusStage() {
+    var qi = QS.indexOf(pres);
+    if (qi >= 0) { $("add-" + qi).focus(); } else { $("p-next").focus(); }
+  }
+
+  $("mode-steps").addEventListener("click", function () {
+    mode = "steps"; pres = 0;
+    if (state.example) { state.items = [[], [], [], []]; state.evals = []; state.example = false; save(); }
+    render(); $("p-next").focus();
+  });
+  $("mode-full").addEventListener("click", function () { mode = "full"; pres = LAST; render(); });
+  $("p-next").addEventListener("click", function () {
+    if (pres < LAST) { pres++; render(); focusStage(); } else { mode = "full"; render(); }
+  });
+  $("p-prev").addEventListener("click", function () { if (pres > 0) { pres--; render(); } });
+  $("tone-pro").addEventListener("click", function () { tone = "pro"; render(); });
+  $("tone-solo").addEventListener("click", function () { tone = "solo"; render(); });
+  function empty() {
+    state.items = [[], [], [], []]; state.evals = []; state.example = false; save(); render();
+    $("status").textContent = "Matrice vide.";
+  }
+  $("clear-example").addEventListener("click", empty);
+  $("reset").addEventListener("click", empty);
+
+  function asText() {
+    return ["Ma matrice ACT", ""].concat(META.map(function (_, q) {
+      var lines = state.items[q].length ? state.items[q].map(function (s) { return "  - " + s; }) : ["  (rien pour l'instant)"];
+      return [(q + 1) + ". " + state.labels[q]].concat(lines).join("\n");
+    })).join("\n\n").replace("Ma matrice ACT\n\n\n\n", "Ma matrice ACT\n\n");
+  }
+  $("copy").addEventListener("click", function () {
+    var txt = asText() + evalText();
+    function fallback() { $("copytext").value = txt; $("copybox").classList.add("show"); $("copytext").select(); }
+    try {
+      navigator.clipboard.writeText(txt).then(function () {
+        $("status").textContent = "Matrice copiée. Collez-la dans un message ou un document.";
+        $("copybox").classList.remove("show");
+      }, fallback);
+    } catch (e) { fallback(); }
+  });
+
+  render();
+})();
+</script>

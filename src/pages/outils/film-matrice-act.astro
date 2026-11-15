@@ -1,0 +1,475 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Film : comprendre la matrice ACT | Outils Nicodev"
+  description="Un film sous-titré d'une minute et demie pour expliquer la matrice ACT à un patient, à travers l'histoire d'un étudiant qui remet son travail à plus tard."
+>
+  <section class="section-y bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <nav
+        class="text-sm text-slate-600"
+        aria-label="Fil d'Ariane"
+      >
+        <a
+          href="/outils/"
+          class="font-medium text-teal-700 underline decoration-teal-300 underline-offset-2 hover:text-teal-900"
+          >Outils</a
+        >
+        <span
+          class="mx-1.5 text-slate-400"
+          aria-hidden="true"
+          >/</span
+        >
+        <span class="text-slate-800">Film : la matrice ACT</span>
+      </nav>
+
+      <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-teal-700">Outil 6</p>
+        <h1 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">
+          Comprendre la matrice ACT en une minute et demie
+        </h1>
+        <p class="mt-4 max-w-3xl text-slate-700">
+          Léo est étudiant infirmier. Lundi, il a un dossier à rendre, et chaque fois qu&apos;il l&apos;ouvre,
+          il finit sur son téléphone. Ce court film muet, sous-titré, suit son histoire et construit sa matrice
+          ACT sous vos yeux. Léo est un personnage fictif.
+        </p>
+        <p class="mt-4 max-w-3xl text-slate-700">
+          Il peut se regarder seul ou servir de support en séance : la liste des plans, sous le film, permet de
+          s&apos;arrêter sur un moment précis, par exemple la boucle.
+        </p>
+      </div>
+
+      <div class="act-film mt-8">
+          <div class="stage">
+            <svg id="lf-film" viewBox="0 0 1280 720" role="img" aria-label="Léo, étudiant, à son bureau la nuit. Sa matrice ACT s'écrit à côté de lui au fil du récit.">
+              <defs>
+                <linearGradient id="lf-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2c4a"/><stop offset="1" stop-color="#121c33"/></linearGradient>
+                <linearGradient id="lf-cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf87" stop-opacity=".55"/><stop offset="1" stop-color="#ffcf87" stop-opacity="0"/></linearGradient>
+                <radialGradient id="lf-gScreen"><stop offset="0" stop-color="#bff5ee" stop-opacity=".9"/><stop offset="1" stop-color="#19b3a3" stop-opacity="0"/></radialGradient>
+                <radialGradient id="lf-gPhone"><stop offset="0" stop-color="#cfe9ff" stop-opacity=".95"/><stop offset="1" stop-color="#6fb7ff" stop-opacity="0"/></radialGradient>
+                <radialGradient id="lf-gStar"><stop offset="0" stop-color="#fff3d6"/><stop offset=".35" stop-color="#ffcf87" stop-opacity=".8"/><stop offset="1" stop-color="#ffcf87" stop-opacity="0"/></radialGradient>
+                <radialGradient id="lf-gVig" cx=".5" cy=".5" r=".72"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".62"/></radialGradient>
+                <filter id="lf-goo" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="11" result="b"/>
+                  <feColorMatrix in="b" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 24 -10"/>
+                </filter>
+                <filter id="lf-soft"><feGaussianBlur stdDeviation="6"/></filter>
+                <clipPath id="lf-clip"><rect id="lf-clipR" x="-60" y="-60" width="1400" height="840"/></clipPath>
+              </defs>
+
+              <rect width="1280" height="720" fill="#0b1220"/>
+
+              <g clip-path="url(#lf-clip)">
+                <g id="lf-room">
+                  <rect x="-200" y="-200" width="1680" height="1120" fill="url(#lf-wall)"/>
+                  <rect x="-200" y="612" width="1680" height="308" fill="#0d1526"/>
+                  <rect x="-200" y="606" width="1680" height="8" fill="#253557"/>
+
+                  <g>
+                    <rect id="lf-sky" x="118" y="108" width="216" height="226" rx="6" fill="#f0a070"/>
+                    <g id="lf-stars" fill="#fff" opacity="0">
+                      <circle cx="160" cy="150" r="2"/><circle cx="210" cy="200" r="1.6"/><circle cx="300" cy="140" r="1.8"/><circle cx="180" cy="270" r="1.5"/><circle cx="290" cy="250" r="2"/>
+                    </g>
+                    <circle id="lf-moon" cx="266" cy="176" r="24" fill="#f6f0d8" opacity="0"/>
+                    <path d="M118 221 H334 M226 108 V334" stroke="#31466f" stroke-width="8"/>
+                    <rect x="118" y="108" width="216" height="226" rx="6" fill="none" stroke="#31466f" stroke-width="10"/>
+                    <rect x="104" y="334" width="244" height="14" rx="4" fill="#31466f"/>
+                  </g>
+
+                  <g>
+                    <circle cx="1080" cy="150" r="50" fill="#f3f1ea" stroke="#31466f" stroke-width="8"/>
+                    <path id="lf-hHour" d="M1080 150 V124" stroke="#16223a" stroke-width="7" stroke-linecap="round"/>
+                    <path id="lf-hMin" d="M1080 150 V112" stroke="#16223a" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="1080" cy="150" r="5" fill="#16223a"/>
+                  </g>
+
+                  <path d="M352 318 L436 318 L520 560 L290 560 Z" fill="url(#lf-cone)"/>
+                  <path d="M394 560 V330" stroke="#3a4d78" stroke-width="8" stroke-linecap="round"/>
+                  <path d="M350 322 L438 322 L420 268 L368 268 Z" fill="#ffcf87"/>
+                  <rect x="362" y="552" width="64" height="10" rx="4" fill="#3a4d78"/>
+
+                  <g id="lf-body">
+                    <ellipse cx="640" cy="462" rx="66" ry="26" fill="#0f8377"/>
+                    <path d="M546 620 Q546 478 602 456 Q640 444 678 456 Q734 478 734 620 Z" fill="#19b3a3"/>
+                    <path d="M626 470 V512 M654 470 V512" stroke="#e9fffb" stroke-width="4" stroke-linecap="round"/>
+                    <rect x="622" y="412" width="36" height="52" rx="12" fill="#e8b98f"/>
+                  </g>
+                  <path id="lf-arm" d="M712 482 Q735 560 690 585" fill="none" stroke="#19b3a3" stroke-width="36" stroke-linecap="round"/>
+                  <g id="lf-hand">
+                    <g transform="rotate(-8)">
+                      <rect x="-17" y="-40" width="34" height="62" rx="7" fill="#0c1424" stroke="#2c3a58" stroke-width="2"/>
+                      <rect id="lf-phoneScr" x="-13" y="-35" width="26" height="50" rx="4" fill="#cfe9ff" opacity="0"/>
+                    </g>
+                    <circle cx="2" cy="10" r="17" fill="#f1c7a3"/>
+                  </g>
+                  <g id="lf-head">
+                    <circle cx="570" cy="358" r="13" fill="#f1c7a3"/><circle cx="710" cy="358" r="13" fill="#f1c7a3"/>
+                    <ellipse cx="640" cy="350" rx="70" ry="78" fill="#f1c7a3"/>
+                    <path d="M567 346 Q556 258 640 254 Q726 258 713 346 Q704 304 664 298 Q652 314 622 302 Q588 298 567 346 Z" fill="#2a1f1a"/>
+                    <circle cx="598" cy="384" r="12" fill="#e88f7a" opacity=".35"/><circle cx="682" cy="384" r="12" fill="#e88f7a" opacity=".35"/>
+                    <ellipse id="lf-eyeL" cx="612" cy="362" rx="7" ry="9" fill="#2a1f1a"/>
+                    <ellipse id="lf-eyeR" cx="668" cy="362" rx="7" ry="9" fill="#2a1f1a"/>
+                    <path id="lf-browL" d="M598 338 H626" stroke="#2a1f1a" stroke-width="5" stroke-linecap="round"/>
+                    <path id="lf-browR" d="M654 338 H682" stroke="#2a1f1a" stroke-width="5" stroke-linecap="round"/>
+                    <path id="lf-mouth" d="M618 398 Q640 409 662 398" fill="none" stroke="#2a1f1a" stroke-width="5" stroke-linecap="round"/>
+                  </g>
+                  <circle id="lf-phoneGlow" cx="772" cy="392" r="170" fill="url(#lf-gPhone)" opacity="0" style="mix-blend-mode:screen"/>
+                  <g id="lf-bubbles" fill="#cfe9ff"></g>
+
+                  <ellipse id="lf-screenGlow" cx="640" cy="440" rx="150" ry="120" fill="url(#lf-gScreen)" opacity=".3" style="mix-blend-mode:screen"/>
+                  <rect x="560" y="468" width="160" height="96" rx="9" fill="#2b3a5a" stroke="#3d5182" stroke-width="3"/>
+                  <circle id="lf-lidDot" cx="640" cy="514" r="9" fill="#bff5ee"/>
+                  <rect x="536" y="556" width="208" height="10" rx="4" fill="#3d5182"/>
+                  <rect x="250" y="562" width="780" height="24" rx="6" fill="#7a5338"/>
+                  <rect x="250" y="582" width="780" height="6" fill="#5c3d28"/>
+                  <rect x="316" y="588" width="648" height="124" fill="#3f2a1b"/>
+                  <rect x="292" y="588" width="24" height="124" fill="#5c3d28"/><rect x="964" y="588" width="24" height="124" fill="#5c3d28"/>
+                  <g>
+                    <rect x="846" y="520" width="44" height="42" rx="6" fill="#f3f1ea"/>
+                    <path d="M890 530 q18 0 18 12 t-18 12" fill="none" stroke="#f3f1ea" stroke-width="6"/>
+                    <path id="lf-steam" d="M858 508 q-8 -12 0 -24 q8 -12 0 -24 M878 508 q-8 -12 0 -24 q8 -12 0 -24" fill="none" stroke="#f3f1ea" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+                  </g>
+
+                  <g id="lf-doc" opacity="0">
+                    <path d="M-98 30 L-126 62 L-98 56 Z" fill="#f3f1ea"/>
+                    <rect id="lf-docBox" x="-100" y="-66" width="200" height="132" rx="12" fill="#f3f1ea" stroke="#f3f1ea" stroke-width="5"/>
+                    <text x="-80" y="-28" font-size="24" font-weight="700" fill="#16223a">Dossier</text>
+                    <text id="lf-docDue" x="-80" y="2" font-size="19" fill="#16223a">à rendre lundi</text>
+                    <rect x="-80" y="22" width="120" height="12" rx="6" fill="#c9d2e3"/>
+                    <rect id="lf-docBar" x="-80" y="22" width="0" height="12" rx="6" fill="#19b3a3"/>
+                    <text id="lf-docPct" x="50" y="34" font-size="16" font-weight="700" fill="#16223a">0 %</text>
+                  </g>
+
+                  <g id="lf-cloud" opacity="0"><g filter="url(#lf-goo)" id="lf-blobs"></g></g>
+                </g>
+              </g>
+              <rect id="lf-frame" x="0" y="0" width="1280" height="720" fill="none" stroke="#f3f1ea" stroke-width="4" opacity="0"/>
+
+              <!-- la matrice -->
+              <g id="lf-matrix" opacity="0">
+                <path class="ln" data-at="9.6" d="M965 70 V560" stroke="#f3f1ea" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path class="ln" data-at="11.6" d="M700 315 H1230" stroke="#f3f1ea" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <text class="ma ap" data-at="10.3" x="965" y="52" text-anchor="middle">Ce que je fais</text>
+                <text class="ma ap" data-at="10.9" x="965" y="590" text-anchor="middle">Ce que je vis à l'intérieur</text>
+                <text class="ma tw ap" data-at="15.4" x="1228" y="303" text-anchor="end">M'approcher →</text>
+                <text class="ma aw ap" data-at="35.5" x="702" y="303">← M'éloigner</text>
+
+                <text class="mt ap" data-at="13.2" x="1012" y="362">Ce qui compte pour moi</text>
+                <text class="mi tw ap" data-at="13.7" x="1012" y="398">Soigner les autres</text>
+                <text class="mi tw ap" data-at="14.3" x="1012" y="430">Apprendre</text>
+                <text class="mi tw ap" data-at="14.9" x="1012" y="462">Ma famille</text>
+
+                <text class="mt ap" data-at="23.5" x="716" y="362">Ce qui surgit à l'intérieur</text>
+                <text class="mi aw ap" data-at="24" x="716" y="398">« Je vais rater »</text>
+                <text class="mi aw ap" data-at="25" x="716" y="430">Boule au ventre</text>
+                <text class="mi aw ap" data-at="26" x="716" y="462">Honte du retard</text>
+
+                <text class="mt ap" data-at="31.5" x="716" y="116">Pour ne plus le sentir</text>
+                <text class="mi aw ap" data-at="32" x="716" y="152">Je range mon bureau</text>
+                <text class="mi aw ap" data-at="33" x="716" y="184">Je lance une série</text>
+                <text class="mi aw ap" data-at="34" x="716" y="216">Je me dis « demain »</text>
+
+                <text class="mt ap" data-at="69" x="1012" y="116">Un pas vers ce qui compte</text>
+                <text class="mi tw ap" data-at="69.6" x="1012" y="152">Dossier : 10 minutes</text>
+                <text class="mi tw ap" data-at="71" x="1012" y="184">Écrire à un ami</text>
+
+                <g class="ap" data-at="61.2">
+                  <circle cx="965" cy="315" r="42" fill="#0b1220" stroke="#f3f1ea" stroke-width="4"/>
+                  <text x="965" y="310" text-anchor="middle" font-size="15" font-weight="700" fill="#f3f1ea">Je</text>
+                  <text x="965" y="329" text-anchor="middle" font-size="15" font-weight="700" fill="#f3f1ea">remarque</text>
+                </g>
+              </g>
+
+              <!-- la boucle -->
+              <g id="lf-ring" opacity="0">
+                <circle cx="520" cy="370" r="235" fill="none" stroke="#f3f1ea" stroke-opacity=".28" stroke-width="5" stroke-dasharray="3 13" stroke-linecap="round"/>
+                <circle id="lf-trail" cx="520" cy="370" r="235" fill="none" stroke="#d79be0" stroke-width="9" stroke-linecap="round"/>
+                <g id="lf-dot"><circle r="26" fill="#d79be0" opacity=".35" filter="url(#lf-soft)"/><circle r="12" fill="#fff"/></g>
+                <text id="lf-lab0" x="520" y="106" text-anchor="middle" font-size="27" font-weight="700" fill="#f3f1ea">Ça surgit</text>
+                <text id="lf-lab1" x="752" y="512" font-size="27" font-weight="700" fill="#f3f1ea">Je m'éloigne</text>
+                <text id="lf-lab2" x="288" y="512" text-anchor="end" font-size="27" font-weight="700" fill="#f3f1ea">Ça soulage</text>
+                <text id="lf-lap" x="64" y="88" font-size="30" font-weight="700" fill="#d79be0"></text>
+              </g>
+              <g id="lf-star" opacity="0">
+                <circle r="120" fill="url(#lf-gStar)"/>
+                <path id="lf-spark" d="M0 -34 L9 -9 L34 0 L9 9 L0 34 L-9 9 L-34 0 L-9 -9 Z" fill="#fff8e6"/>
+                <text y="78" text-anchor="middle" font-size="25" font-weight="700" fill="#ffcf87">Ce qui compte</text>
+                <text y="106" text-anchor="middle" font-size="18" fill="#f3f1ea">Soigner · Apprendre · Ma famille</text>
+              </g>
+              <g id="lf-ask" opacity="0" text-anchor="middle" fill="#f3f1ea" style="font-family: var(--display)">
+                <text x="965" y="250" font-size="44" font-weight="700">Et vous ?</text>
+                <text x="965" y="312" font-size="30">Qui ou quoi est important</text>
+                <text x="965" y="352" font-size="30">pour vous ?</text>
+              </g>
+
+              <rect width="1280" height="720" fill="url(#lf-gVig)" pointer-events="none"/>
+            </svg>
+            <p class="sub" id="lf-sub" aria-live="polite"></p>
+          </div>
+          <div class="bar" aria-hidden="true"><span id="lf-prog"></span></div>
+
+          <div class="controls">
+            <button type="button" class="primary" id="lf-play">Lire le film</button>
+            <button type="button" id="lf-restart">Revenir au début</button>
+            <a class="btn" href="/outils/matrice-act/">Faire ma propre matrice</a>
+          </div>
+          <div class="chips" id="lf-chips" role="group" aria-label="Aller à un plan du film"></div>
+          <p class="note">Film muet avec sous-titres, 1 min 28. Le dessin et l'animation sont faits en code, sans image importée.</p>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 class="text-2xl font-bold text-slate-900">Et ensuite ?</h2>
+        <p class="mt-3 max-w-3xl text-slate-700">
+          Le film montre le principe. Pour l&apos;appliquer à votre situation, la{' '}
+          <a
+            href="/outils/matrice-act/"
+            class="font-semibold text-teal-800 underline underline-offset-2 hover:text-teal-900"
+            >matrice ACT interactive</a
+          >{' '}
+          vous guide pas à pas, puis vous aide à voir si ce que vous faites pour vous soulager fonctionne
+          vraiment pour vous.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+.act-film {
+  --night: #0b1220; --panel: #131d31; --text: #f3f1ea; --muted: #9aa6bd; --teal: #19b3a3; --warm: #ffcf87;
+  --display: var(--font-sans); --body: var(--font-sans);
+  display: flex; flex-direction: column; gap: 14px; padding: 16px; border-radius: 16px;
+  background: var(--night); color: var(--text); font-family: var(--body); font-size: 17px; line-height: 1.45;
+}
+.act-film *, .act-film *::before, .act-film *::after { box-sizing: border-box; }
+.act-film .stage { position: relative; border-radius: 14px 14px 0 0; overflow: hidden; background: #000; box-shadow: 0 20px 60px rgba(0, 0, 0, .5); }
+.act-film .stage svg { display: block; width: 100%; height: auto; }
+.act-film .sub { position: absolute; left: 6%; right: 6%; bottom: 5%; margin: 0; text-align: center; font-family: var(--display); font-weight: 500; font-size: clamp(13px, 2.4vw, 28px); line-height: 1.25; color: var(--text); text-shadow: 0 2px 12px rgba(0, 0, 0, .95), 0 0 2px rgba(0, 0, 0, .95); text-wrap: balance; pointer-events: none; }
+.act-film .bar { height: 4px; background: #24304a; margin-top: -14px; border-radius: 0 0 14px 14px; overflow: hidden; }
+.act-film .bar span { display: block; height: 100%; width: 0; background: var(--teal); }
+.act-film .controls, .act-film .chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.act-film button, .act-film a.btn { font: inherit; cursor: pointer; border: 1px solid #2c3a58; background: var(--panel); color: var(--text); padding: 9px 16px; border-radius: 8px; text-decoration: none; display: inline-block; }
+.act-film button.primary { background: var(--teal); border-color: var(--teal); color: #05211e; font-weight: 700; }
+.act-film .chip { border-radius: 999px; padding: 5px 12px; font-size: 0.9rem; color: var(--muted); }
+.act-film .chip[aria-current="true"] { background: var(--text); color: var(--night); border-color: var(--text); font-weight: 700; }
+.act-film :focus-visible { outline: 3px solid var(--warm); outline-offset: 2px; }
+.act-film .note { color: var(--muted); font-size: 0.9rem; margin: 0; }
+.act-film svg text { font-family: var(--body); }
+.act-film .mt { font-size: 16px; font-weight: 700; fill: #9aa6bd; }
+.act-film .mi { font-size: 21px; font-weight: 700; }
+.act-film .ma { font-size: 18px; font-weight: 700; fill: #f3f1ea; }
+.act-film .tw { fill: #5fe0d2; }
+.act-film .aw { fill: #e2b6ea; }
+</style>
+
+<script is:inline>
+(function () {
+  var T = 88, NS = "http://www.w3.org/2000/svg", ORB0 = 46.5, ORB1 = 58;
+  var $ = function (id) { return document.getElementById("lf-" + id); };
+  function clamp(x, a, b) { return Math.min(b === undefined ? 1 : b, Math.max(a === undefined ? 0 : a, x)); }
+  function ease(x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+  function seg(t, a, b) { return ease(clamp((t - a) / (b - a))); }
+  function lerp(a, b, k) { return a + (b - a) * k; }
+  function kf(t, keys) {
+    if (t <= keys[0][0]) return keys[0][1];
+    for (var i = 1; i < keys.length; i++) {
+      if (t <= keys[i][0]) { var a = keys[i - 1], b = keys[i]; return lerp(a[1], b[1], ease((t - a[0]) / (b[0] - a[0]))); }
+    }
+    return keys[keys.length - 1][1];
+  }
+  function mix(c1, c2, k) { return c1.map(function (v, i) { return lerp(v, c2[i], k); }); }
+  function rgb(c) { return "rgb(" + c.map(Math.round).join(",") + ")"; }
+  function set(id, name, v) { $(id).setAttribute(name, v); }
+
+  var BLOBS = [[-52, 12, 40, 1.1, 0], [-8, -20, 52, .9, 1.3], [44, 4, 44, 1.3, 2.1], [4, 30, 46, .8, 3.4], [-30, 44, 30, 1.5, .7], [36, 46, 28, 1.2, 4.2]];
+  var blobs = BLOBS.map(function (b, i) {
+    var c = document.createElementNS(NS, "circle");
+    c.setAttribute("r", b[2]); c.setAttribute("fill", i % 2 ? "#7b4a80" : "#653a6b");
+    $("blobs").appendChild(c); return c;
+  });
+  var bubbles = [0, 1, 2].map(function () {
+    var r = document.createElementNS(NS, "rect");
+    r.setAttribute("width", 34); r.setAttribute("height", 16); r.setAttribute("rx", 8);
+    $("bubbles").appendChild(r); return r;
+  });
+  var appear = Array.prototype.map.call(document.querySelectorAll("#lf-matrix .ap"), function (el) { return { el: el, at: +el.getAttribute("data-at") }; });
+  var lines = Array.prototype.map.call(document.querySelectorAll("#lf-matrix .ln"), function (el) {
+    var len = el.getTotalLength(); el.setAttribute("stroke-dasharray", len);
+    return { el: el, at: +el.getAttribute("data-at"), len: len };
+  });
+
+  var PLANS = [[0, "Léo"], [8, "Les deux lignes"], [17, "Ce qui surgit"], [28, "S'éloigner"], [40, "La boucle"], [58.5, "Remarquer"], [68.5, "Un pas"], [80, "Et vous ?"]];
+  var SUBS = [
+    [0.6, 3.6, "Voici Léo, étudiant infirmier."],
+    [3.9, 8, "Ce qui compte pour lui : soigner, apprendre, sa famille."],
+    [9.4, 12.6, "Deux lignes. En haut, ce que Léo fait. En bas, ce qu'il vit."],
+    [13, 17, "Aller vers ce qui compte, c'est s'approcher."],
+    [18, 22.8, "Lundi, un dossier à rendre. Dès qu'il l'ouvre, quelque chose surgit."],
+    [23.2, 28, "Une pensée, une boule au ventre, de la honte."],
+    [29, 33.5, "Alors Léo fait ce qui soulage, sur le moment."],
+    [34, 40, "Tout ce qu'il fait pour ne plus sentir cela, c'est s'éloigner."],
+    [41.4, 46, "Puis le dossier revient. La boule au ventre aussi, plus forte."],
+    [47, 52, "Soulagé, puis rattrapé. Soulagé, puis rattrapé."],
+    [52.3, 58, "Et pendant que la boucle tourne, ce qui compte s'éloigne."],
+    [60.4, 64.4, "Léo fait un pas de côté : il remarque ce qui se passe."],
+    [64.7, 68.4, "La boule au ventre est là. Et lui, il la regarde."],
+    [69, 73.5, "Il choisit un petit geste vers ce qui compte."],
+    [74, 80, "La boule au ventre est encore là. Il avance avec elle."]
+  ];
+
+  function orbit(t) {
+    var tau = t - ORB0, laps = .1 * tau + .018 * tau * tau, p = (1 / 3 + laps) % 1;
+    var c = p < 1 / 3 ? lerp(.3, 1.4, ease(p * 3)) : p < 2 / 3 ? lerp(1.4, .3, ease((p - 1 / 3) * 3)) : .3;
+    return { laps: laps, p: p, c: c, ph: seg(p, .34, .46) * (1 - seg(p, .9, 1)), w: clamp((c - .3) / 1.1) * 1.25,
+      d: p < 1 / 3 ? lerp(.2, 1, seg(p, 0, .08)) : lerp(1, .2, seg(p, .36, .48)), alert: p < .4 };
+  }
+  var END = orbit(ORB1);
+  function params(t) {
+    if (t >= ORB0 && t < ORB1) return orbit(t);
+    if (t >= ORB1) {
+      return { laps: END.laps, p: END.p, c: lerp(END.c, .55, seg(t, 59, 63)), ph: lerp(END.ph, 0, seg(t, 58.3, 59.3)),
+        w: lerp(lerp(END.w, .4, seg(t, 59, 63)), .12, seg(t, 68.5, 72)), d: lerp(END.d, 1, seg(t, 59.6, 61)), alert: t < 60 && END.alert };
+    }
+    return { laps: 0, p: 1 / 3,
+      c: kf(t, [[19, 0], [22, 1], [29.5, 1], [31.2, .3], [41, .3], [43.5, 1.4]]),
+      ph: kf(t, [[29, 0], [30.2, 1], [40.3, 1], [41.3, 0]]),
+      w: kf(t, [[19.5, 0], [22, 1], [29.6, 1], [31, .1], [41, .1], [43.5, 1.25]]),
+      d: kf(t, [[18, 0], [18.8, 1], [29.6, 1], [30.6, .2], [41, .2], [41.8, 1]]),
+      alert: t > 41.6 };
+  }
+
+  var shown = null;
+  function render(t) {
+    var P = params(t), w1 = clamp(P.w);
+    var n1 = seg(t, 30.5, 38), n2 = seg(t, 68, 79);
+    var split = kf(t, [[8, 0], [9.6, 1], [40, 1], [41.5, 0], [58.4, 0], [60, 1]]);
+    var z = kf(t, [[45.5, 0], [47.3, 1], [57.4, 1], [59, 0]]);
+    var aside = seg(t, 61.5, 64.5);
+
+    // décor
+    set("sky", "fill", rgb(mix(mix([240, 160, 112], [14, 22, 48], n1), [246, 190, 160], n2)));
+    set("moon", "opacity", n1 * (1 - n2)); set("stars", "opacity", n1 * (1 - n2));
+    var ang = t * 6 + 720 * n1 + (t > ORB0 ? (Math.min(t, ORB1) - ORB0) * 200 : 0) + 900 * n2;
+    set("hMin", "transform", "rotate(" + ang + " 1080 150)");
+    set("hHour", "transform", "rotate(" + (40 + ang / 12) + " 1080 150)");
+    set("steam", "opacity", .3 + .2 * Math.sin(t * 2.2));
+
+    // Léo
+    var typing = (t < 18.4 || (t > 69.8 && t < 86)) ? Math.sin(t * 36) * 1.3 : 0;
+    var breath = t > 61.2 && t < 64.4 ? Math.sin((t - 61.2) / 3.2 * Math.PI) : 0;
+    set("body", "transform", "translate(0 " + (6 * w1 + typing - 5 * breath) + ")");
+    set("head", "transform", "translate(" + 7 * P.ph + " " + (7 * w1 + typing * .4 - 7 * breath) + ") rotate(" + (6 * P.ph - 2 * w1) + " 640 420)");
+    var blink = ((t % 3.4) < .13 || breath > .45) ? .12 : 1, ex = 5 * P.ph - 4 * aside * (1 - seg(t, 68, 70)), ey = 2.5 * w1;
+    set("eyeL", "transform", "translate(" + ex + " " + ey + ") translate(612 362) scale(1 " + blink + ") translate(-612 -362)");
+    set("eyeR", "transform", "translate(" + ex + " " + ey + ") translate(668 362) scale(1 " + blink + ") translate(-668 -362)");
+    set("browL", "transform", "translate(0 " + (-3 * w1) + ") rotate(" + (-15 * w1) + " 612 338)");
+    set("browR", "transform", "translate(0 " + (-3 * w1) + ") rotate(" + (15 * w1) + " 668 338)");
+    set("mouth", "d", "M618 398 Q640 " + (398 + lerp(11, -11, w1)) + " 662 398");
+    var hx = lerp(690, 772, P.ph), hy = lerp(590, 392, P.ph);
+    set("arm", "d", "M712 484 Q" + lerp(735, 796, P.ph) + " " + lerp(565, 508, P.ph) + " " + hx + " " + (hy + 12));
+    set("hand", "transform", "translate(" + hx + " " + hy + ")");
+    set("phoneScr", "opacity", P.ph);
+    set("phoneGlow", "opacity", .6 * P.ph);
+    bubbles.forEach(function (b, i) {
+      var u = ((t * .45 + i / 3) % 1);
+      b.setAttribute("x", 800 + i * 14 + Math.sin(u * 6 + i) * 8); b.setAttribute("y", 372 - u * 120);
+      b.setAttribute("opacity", P.ph > .8 ? (1 - u) * .8 : 0);
+    });
+
+    // écran et dossier
+    var work = seg(t, 70.5, 79);
+    set("screenGlow", "opacity", .15 + .45 * P.d);
+    set("lidDot", "opacity", .25 + .75 * P.d);
+    var pulse = P.alert ? .035 * Math.sin(t * 9) : 0;
+    set("doc", "opacity", clamp(P.d * 1.3));
+    set("doc", "transform", "translate(905 " + lerp(390, 352, P.d) + ") rotate(4) scale(" + (.86 + .14 * P.d + pulse) + ")");
+    set("docBox", "stroke", P.alert ? "#e2574c" : work > 0 ? "#19b3a3" : "#f3f1ea");
+    set("docDue", "fill", P.alert ? "#c0392b" : "#16223a");
+    set("docBar", "width", 120 * .12 * work);
+    $("docPct").textContent = Math.round(12 * work) + " %";
+
+    // nuage
+    var cs = P.c, jit = cs > 1.1 ? Math.sin(t * 31) * 2.2 : 0;
+    var clx = lerp(640 + jit, 500, aside), cly = lerp(lerp(150, 204, clamp(cs / 1.4)), 440, aside);
+    set("cloud", "opacity", clamp(cs * 2.2) * lerp(lerp(.4, 1, clamp((cs - .3) / .5)), .92, aside));
+    set("cloud", "transform", "translate(" + clx + " " + cly + ") scale(" + Math.max(.01, cs) + ")");
+    blobs.forEach(function (c, i) {
+      var b = BLOBS[i];
+      c.setAttribute("cx", b[0] + Math.sin(t * b[3] + b[4]) * 9);
+      c.setAttribute("cy", b[1] + Math.cos(t * b[3] * .8 + b[4]) * 7);
+    });
+
+    // caméra : plein cadre, vignette à gauche, ou médaillon
+    var s = lerp(lerp(1, .52, split), .4, z), cx = lerp(lerp(640, 335, split), 520, z), cy = lerp(lerp(400, 330, split), 370, z);
+    var hw = lerp(lerp(720, 305, split), 165, z), hh = lerp(lerp(460, 182, split), 165, z), rx = lerp(lerp(0, 18, split), 165, z);
+    set("room", "transform", "translate(" + cx + " " + cy + ") scale(" + s + ") translate(-640 -400)");
+    ["clipR", "frame"].forEach(function (id) {
+      set(id, "x", cx - hw); set(id, "y", cy - hh); set(id, "width", 2 * hw); set(id, "height", 2 * hh); set(id, "rx", rx);
+    });
+    set("frame", "opacity", Math.max(split, z));
+
+    // matrice
+    set("matrix", "opacity", kf(t, [[8.8, 0], [9.6, 1], [40, 1], [41, 0], [59.2, 0], [60.2, 1], [80, 1], [81, .06]]));
+    appear.forEach(function (x) { x.el.setAttribute("opacity", seg(t, x.at, x.at + .6)); });
+    lines.forEach(function (x) { x.el.setAttribute("stroke-dashoffset", x.len * (1 - seg(t, x.at, x.at + 1.2))); });
+
+    // boucle
+    var ro = kf(t, [[46.7, 0], [47.6, 1], [57.2, 1], [58.2, 0]]);
+    set("ring", "opacity", ro);
+    var phi = -90 + 360 * (P.p - 1 / 6), rad = phi * Math.PI / 180;
+    set("dot", "transform", "translate(" + (520 + 235 * Math.cos(rad)) + " " + (370 + 235 * Math.sin(rad)) + ")");
+    var tailDeg = 40 + clamp((t - ORB0) * 7, 0, 70), C = 2 * Math.PI * 235;
+    set("trail", "stroke-dasharray", (C * tailDeg / 360) + " " + C);
+    set("trail", "transform", "rotate(" + (phi - tailDeg) + " 520 370)");
+    var active = Math.floor(P.p * 3);
+    [0, 1, 2].forEach(function (i) { set("lab" + i, "opacity", i === active ? 1 : .4); set("lab" + i, "fill", i === active ? "#e9c4ef" : "#f3f1ea"); });
+    $("lap").textContent = "Tour " + (Math.floor(P.laps) + 1);
+
+    // ce qui compte
+    var so = kf(t, [[3.8, 0], [4.6, 1], [12.6, 1], [13.8, 0], [47.2, 0], [48.2, 1], [56.5, .42], [57.6, 0], [80.6, 0], [82, 1]]);
+    var sx = kf(t, [[12.4, 935], [13.8, 1110], [47, 1110], [47.1, 1010], [48.5, 1010], [57, 1180], [80, 1180], [80.1, 965]]);
+    var sy = kf(t, [[12.4, 240], [13.8, 410], [47, 410], [47.1, 250], [48.5, 250], [57, 160], [80, 160], [80.1, 470]]);
+    var sc = kf(t, [[12.4, 1], [13.8, .45], [47, .45], [47.1, 1], [48.5, 1], [57, .62], [80, .62], [80.1, 1]]);
+    set("star", "opacity", so);
+    set("star", "transform", "translate(" + sx + " " + sy + ") scale(" + sc + ")");
+    set("spark", "transform", "rotate(" + t * 24 + ") scale(" + (1 + .08 * Math.sin(t * 5)) + ")");
+    set("ask", "opacity", seg(t, 81.2, 82.4));
+
+    // sous-titres, progression, plans
+    var txt = "";
+    SUBS.forEach(function (x) { if (t >= x[0] && t < x[1]) txt = x[2]; });
+    if (txt !== shown) { shown = txt; $("sub").textContent = txt; }
+    $("prog").style.width = (100 * t / T) + "%";
+    var plan = 0;
+    PLANS.forEach(function (p, i) { if (t >= p[0]) plan = i; });
+    chips.forEach(function (b, i) { b.setAttribute("aria-current", String(i === plan)); });
+  }
+
+  var t = 26.6, fresh = true, playing = false, last = 0;
+  var chips = PLANS.map(function (p, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.id = "lf-" + "chip-" + i; b.textContent = (i + 1) + ". " + p[1];
+    b.addEventListener("click", function () { t = p[0]; fresh = false; render(t); label(); });
+    $("chips").appendChild(b);
+    return b;
+  });
+  function label() { $("play").textContent = playing ? "Pause" : fresh ? "Lire le film" : t >= T ? "Revoir le film" : "Reprendre"; }
+  function frame(now) {
+    if (!playing) return;
+    t += Math.min(.1, (now - last) / 1000); last = now;
+    if (t >= T) { t = T; playing = false; label(); }
+    render(t);
+    if (playing) requestAnimationFrame(frame);
+  }
+  $("play").addEventListener("click", function () {
+    if (playing) { playing = false; label(); return; }
+    if (fresh || t >= T) t = 0;
+    fresh = false; playing = true; last = performance.now(); label(); requestAnimationFrame(frame);
+  });
+  $("restart").addEventListener("click", function () { t = 0; fresh = false; render(t); label(); });
+  window.filmSeek = function (x) { t = x; render(t); };
+  render(t); label();
+})();
+</script>
