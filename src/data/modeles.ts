@@ -1,5 +1,7 @@
 import type { ImageMetadata } from 'astro';
 import terracottaImage from '../assets/images/screenshots/modele-terracotta.webp';
+import saugeImage from '../assets/images/screenshots/modele-sauge.webp';
+import ardoiseImage from '../assets/images/screenshots/modele-ardoise.webp';
 
 /**
  * Modèles de site proposés aux psychologues : chacun est une démo publique (non indexée)
@@ -38,6 +40,38 @@ export const modeles: readonly Modele[] = [
     image: terracottaImage,
     imageAlt:
       'Démonstration du modèle Terracotta : photo d’un cabinet, portrait d’une psychologue, titre et boutons de rendez-vous',
+  },
+  {
+    slug: 'sauge',
+    nom: 'Sauge',
+    ambiance: 'Calme & végétal',
+    description:
+      'Un haut de page vert profond avec une photo d’ambiance et un portrait en arche, puis des grilles à filets pour les motifs de consultation, dans un registre serein et lisible.',
+    points: [
+      'Vert forêt, titres en serif, filets fins plutôt que des cartes ombrées',
+      'Portrait en arche et badge « titre + numéro d’inscription » dès le premier écran',
+      'Pratiques illustrées, motifs en grille, encart Mon soutien psy en bande sombre',
+    ],
+    demoUrl: 'https://sauge.nicodev.fr/',
+    image: saugeImage,
+    imageAlt:
+      'Démonstration du modèle Sauge : bande verte avec photo d’un cabinet végétal, portrait en arche d’une psychologue, titre et boutons de rendez-vous',
+  },
+  {
+    slug: 'ardoise',
+    nom: 'Ardoise',
+    ambiance: 'Sobre & professionnel',
+    description:
+      'Un site net et lisible, en ardoise et gris-lavande, où le praticien, son titre et ses motifs de consultation se parcourent comme un index.',
+    points: [
+      'Ardoise et gris-lavande, une seule police sans empattement',
+      'Portrait rectangulaire et badge d’inscription dès le premier écran',
+      'Pratiques et motifs en lignes d’index, adresse du cabinet sur une plaque sombre à côté de la carte',
+    ],
+    demoUrl: 'https://ardoise.nicodev.fr/',
+    image: ardoiseImage,
+    imageAlt:
+      'Démonstration du modèle Ardoise : bande gris-lavande, portrait d’une psychologue avec un cadre décalé, titre et boutons de rendez-vous',
   },
 ];
 
