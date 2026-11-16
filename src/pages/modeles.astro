@@ -1,0 +1,148 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PortfolioHero from "../components/PortfolioHero.astro";
+import CtaSection from "../components/CtaSection.astro";
+import { Picture } from "astro:assets";
+import { modeles } from "../data/modeles";
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: new URL("/", baseUrl).toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Modèles",
+      item: new URL("/modeles/", baseUrl).toString(),
+    },
+  ],
+};
+---
+
+<Layout
+  title="Modèles de site internet pour psychologue | Nicodev"
+  description="Choisissez le point de départ de votre site de psychologue : des modèles à parcourir en démonstration, adaptés ensuite à votre pratique."
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  </Fragment>
+
+  <PortfolioHero
+    showFilters={false}
+    eyebrow="Modèles"
+    title="Des modèles de site pour psychologues"
+    subtitle="Parcourez chaque démonstration comme le ferait un patient, puis choisissez celui qui vous ressemble. Il sert de point de départ : couleurs, textes et photos sont adaptés à votre pratique."
+    breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Modèles" }]}
+  />
+
+  <section id="modeles" class="bg-white py-12 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2
+        class="mb-4 text-2xl font-bold leading-tight text-foreground sm:mb-6 sm:text-3xl"
+      >
+        Choisir un modèle
+      </h2>
+      <p class="mb-8 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
+        Chaque démonstration est un cabinet fictif : le praticien, ses
+        coordonnées et ses numéros d’inscription ne sont pas réels. Le site
+        livré reprend votre contenu, que vous validez avant la mise en ligne.
+      </p>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+        {
+          modeles.map((modele) => (
+            <article class="group flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-shadow duration-200 focus-within:shadow-md hover:shadow-md">
+              <a
+                href={`/modeles/${modele.slug}/`}
+                class="relative block aspect-16/10 w-full overflow-hidden bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                aria-label={`Voir le modèle ${modele.nom}`}
+                tabindex="-1"
+              >
+                <Picture
+                  src={modele.image}
+                  alt={modele.imageAlt}
+                  formats={["avif", "webp"]}
+                  fallbackFormat="webp"
+                  widths={[400, 680, 1056]}
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  loading="lazy"
+                  decoding="async"
+                  pictureAttributes={{ class: "block h-full w-full" }}
+                  class="h-full w-full object-cover object-top"
+                />
+              </a>
+              <div class="flex grow flex-col border-t border-border p-5 sm:p-6">
+                <h3 class="mb-1 text-lg font-semibold text-foreground sm:text-xl">
+                  {modele.nom}
+                </h3>
+                <p class="mb-3 text-sm font-medium text-primary">
+                  {modele.ambiance}
+                </p>
+                <p class="mb-4 text-sm leading-relaxed text-muted">
+                  {modele.description}
+                </p>
+                <div class="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-1">
+                  <a
+                    href={`/modeles/${modele.slug}/`}
+                    class="inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-primary transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    data-umami-event="modele_voir_click"
+                    data-umami-event-modele={modele.slug}
+                  >
+                    Voir le modèle <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface py-12 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-6 text-2xl font-bold text-foreground sm:text-3xl">
+        Ce qui ne change pas d’un modèle à l’autre
+      </h2>
+      <ul class="grid gap-4 text-sm leading-relaxed text-muted sm:grid-cols-2 sm:text-base">
+        <li>
+          Les mêmes pages : accueil, tarifs, à propos, motifs de consultation,
+          pratiques, contact et mentions légales.
+        </li>
+        <li>
+          Vos informations professionnelles, votre contenu et vos photos à la
+          place de ceux de la démonstration.
+        </li>
+        <li>
+          Un site qui vous appartient, avec hébergement, nom de domaine et
+          maintenance inclus dans l’abonnement.
+        </li>
+        <li>
+          Un tarif inchangé : 0&nbsp;€ de construction, puis 29&nbsp;€ ou
+          49&nbsp;€ par mois selon la formule.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Un modèle vous plaît ?"
+    description="Un diagnostic gratuit permet de faire le point sur votre situation et de choisir le point de départ le plus adapté."
+    primaryButton={{
+      text: "Demander un diagnostic gratuit",
+      href: "/diagnostic-gratuit/",
+    }}
+    secondaryButton={{ text: "Voir les tarifs", href: "/tarifs/" }}
+  />
+</Layout>

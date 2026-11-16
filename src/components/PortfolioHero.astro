@@ -15,6 +15,8 @@ export interface Props {
   coverImage?: string | ImageMetadata;
   coverImageAlt?: string;
   coverBlur?: 'light' | 'medium' | 'soft';
+  /** Boutons de filtre du portfolio (Récents & refontes / Tout l’historique). */
+  showFilters?: boolean;
 }
 
 const {
@@ -25,6 +27,7 @@ const {
   coverImage,
   coverImageAlt,
   coverBlur = 'soft',
+  showFilters = true,
 } = Astro.props;
 
 const hasCover = Boolean(coverImage);
@@ -158,6 +161,7 @@ const coverQuality = coverBlur === 'soft' ? 75 : 65;
       )
     }
 
+    {showFilters && (
     <div
       class="portfolio-filter-cluster mb-8 flex flex-wrap gap-2 md:gap-2.5"
       role="toolbar"
@@ -181,6 +185,7 @@ const coverQuality = coverBlur === 'soft' ? 75 : 65;
         Tout l’historique
       </button>
     </div>
+    )}
 
     <div class="h-px w-full bg-border" aria-hidden="true"></div>
   </div>

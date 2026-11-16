@@ -1,0 +1,160 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PortfolioHero from "../../components/PortfolioHero.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import { Picture } from "astro:assets";
+import { modeles, type Modele } from "../../data/modeles";
+
+export function getStaticPaths() {
+  return modeles.map((modele) => ({
+    params: { slug: modele.slug },
+    props: { modele },
+  }));
+}
+
+interface Props {
+  modele: Modele;
+}
+
+const { modele } = Astro.props;
+const baseUrl = Astro.site ?? Astro.url.origin;
+const demoHost = new URL(modele.demoUrl).hostname;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: new URL("/", baseUrl).toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Modèles",
+      item: new URL("/modeles/", baseUrl).toString(),
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: modele.nom,
+      item: new URL(`/modeles/${modele.slug}/`, baseUrl).toString(),
+    },
+  ],
+};
+---
+
+<Layout
+  title={`Modèle ${modele.nom} : site de psychologue | Nicodev`}
+  description={`Parcourez le modèle ${modele.nom} en démonstration : ${modele.ambiance.toLowerCase()}, pensé pour le site d’un psychologue en libéral.`}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  </Fragment>
+
+  <PortfolioHero
+    showFilters={false}
+    eyebrow={`Modèle · ${modele.ambiance}`}
+    title={`Modèle ${modele.nom}`}
+    subtitle={modele.description}
+    breadcrumb={[
+      { label: "Accueil", href: "/" },
+      { label: "Modèles", href: "/modeles/" },
+      { label: modele.nom },
+    ]}
+  />
+
+  <section class="bg-white py-10 sm:py-14">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div
+        class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p class="max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+          Parcourez la démonstration comme un patient : menu, pages, pratiques.
+          Le cabinet, le praticien et ses numéros d’inscription sont fictifs.
+        </p>
+        <a
+          href={modele.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-on-primary transition-colors hover:bg-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          data-umami-event="modele_demo_click"
+          data-umami-event-modele={modele.slug}
+          data-umami-event-emplacement="plein-ecran"
+        >
+          Ouvrir la démonstration en plein écran
+          <span class="sr-only"> (nouvel onglet)</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <!-- Ordinateur et tablette : démonstration navigable dans un cadre. -->
+      <div
+        class="hidden overflow-hidden rounded-lg border border-border bg-white shadow-md md:block"
+      >
+        <div
+          class="flex items-center gap-2 border-b border-border bg-surface px-4 py-2 text-xs text-muted"
+        >
+          <span>{demoHost}</span>
+        </div>
+        <iframe
+          src={modele.demoUrl}
+          title={`Démonstration du modèle ${modele.nom}`}
+          class="block h-[44rem] w-full"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      </div>
+
+      <!-- Téléphone : une capture et le lien, un site dans un cadre se lit mal. -->
+      <div class="md:hidden">
+        <Picture
+          src={modele.image}
+          alt={modele.imageAlt}
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          widths={[400, 680, 1056]}
+          sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          pictureAttributes={{ class: "block w-full" }}
+          class="w-full rounded-lg border border-border"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface py-12 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-6 text-2xl font-bold text-foreground sm:text-3xl">
+        Ce qui caractérise ce modèle
+      </h2>
+      <ul class="grid gap-4 text-sm leading-relaxed text-muted sm:text-base md:grid-cols-3">
+        {modele.points.map((point) => <li>{point}</li>)}
+      </ul>
+      <p class="mt-8 text-sm text-muted">
+        <a
+          href="/modeles/"
+          class="font-semibold text-primary hover:text-primary-900"
+        >
+          ← Voir tous les modèles
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <CtaSection
+    title={`Le modèle ${modele.nom} vous convient ?`}
+    description="Un diagnostic gratuit permet de faire le point, puis de l’adapter à votre pratique : vos textes, vos couleurs, vos photos."
+    primaryButton={{
+      text: "Demander un diagnostic gratuit",
+      href: "/diagnostic-gratuit/",
+    }}
+    secondaryButton={{ text: "Voir les tarifs", href: "/tarifs/" }}
+  />
+</Layout>
