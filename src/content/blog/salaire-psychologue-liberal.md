@@ -1,7 +1,7 @@
 ---
 title: "Salaire psychologue libéral : calculer son revenu net"
-seoTitle: "Salaire psychologue libéral 2026 : calcul du revenu net"
-description: "Comment estimer le revenu d'un psychologue libéral en 2026 : cotisations micro-sociales, impôt, frais de cabinet et exemples de calcul selon votre situation."
+seoTitle: "Salaire psychologue libéral 2026 : revenu net et exemples"
+description: "Du chiffre d’affaires au revenu net : cotisations CIPAV, impôt et frais de cabinet, avec des exemples chiffrés pour un psychologue libéral en 2026."
 pubDate: "2026-06-02"
 updatedDate: "2026-10-13"
 author: "Nicolas Devaux"

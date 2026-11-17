@@ -1,7 +1,7 @@
 ---
 title: "Ce que révèle l’analyse de 17 sites de psychologues"
 seoTitle: "Sites de psychologues : 7 problèmes récurrents observés"
-description: "J’ai analysé 17 sites de psychologues libéraux. Architecture, site en une page, plateformes, SEO, technique, interface et ton : voici les difficultés qui reviennent le plus souvent."
+description: "J’ai analysé 17 sites de psychologues libéraux : architecture, plateformes, SEO, technique, interface, ton. Voici les difficultés les plus fréquentes."
 pubDate: "2026-09-01"
 author: "Nicolas Devaux"
 image: "../../assets/images/blog/analyse-sites-psychologues-carre.webp"

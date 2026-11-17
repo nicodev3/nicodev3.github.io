@@ -34,12 +34,15 @@ export const BLOG_TAG_DESCRIPTIONS: Record<BlogTag, string> = {
   'référencement local cabinet':
     'Visibilité Google locale, SEO et cohérence des signaux pour cabinets libéraux.',
   'google business profile':
-    'Fiche Google Business Profile, avis et présence sur Maps.',
+    'Fiche Google Business Profile, avis et présence sur Maps : les bonnes pratiques pour un cabinet.',
   'installation en libéral':
-    'S’installer, budget, revenus et premiers patients en libéral.',
-  'cadre déontologique': 'Déontologie, RGPD, accessibilité et communication régulée.',
-  doctolib: 'Doctolib, prise de rendez-vous et complémentarité avec le site.',
-  'réseaux sociaux': 'Instagram et réseaux sociaux au service de la visibilité du cabinet.',
+    'S’installer en libéral : statut, budget, revenus et premiers patients, étape par étape.',
+  'cadre déontologique':
+    'Déontologie, RGPD, accessibilité et communication régulée : les repères pour un site de cabinet.',
+  doctolib:
+    'Doctolib, prise de rendez-vous et complémentarité avec le site : comment combiner les deux.',
+  'réseaux sociaux':
+    'Instagram et réseaux sociaux au service de la visibilité du cabinet, sans sortir du cadre.',
   'intelligence artificielle':
     'IA, assistants et GEO : concevoir un site, rédiger, ou rester visible dans les réponses génératives.',
 };
