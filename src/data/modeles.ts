@@ -2,6 +2,7 @@ import type { ImageMetadata } from 'astro';
 import terracottaImage from '../assets/images/screenshots/modele-terracotta.webp';
 import saugeImage from '../assets/images/screenshots/modele-sauge.webp';
 import ardoiseImage from '../assets/images/screenshots/modele-ardoise.webp';
+import opaleImage from '../assets/images/screenshots/modele-opale.webp';
 
 /**
  * Modèles de site proposés aux psychologues : chacun est une démo publique (non indexée)
@@ -72,6 +73,22 @@ export const modeles: readonly Modele[] = [
     image: ardoiseImage,
     imageAlt:
       'Démonstration du modèle Ardoise : bande gris-lavande, portrait d’une psychologue avec un cadre décalé, titre et boutons de rendez-vous',
+  },
+  {
+    slug: 'opale',
+    nom: 'Opale',
+    ambiance: 'Lumineux & épuré',
+    description:
+      'Un site très aéré sur fond blanc, avec des touches de bleu ciel et de lilas, un portrait rond et des illustrations au trait, pour un premier contact léger et rassurant.',
+    points: [
+      'Blanc, bleu ciel et lilas très pâles, indigo pour les actions, titres en serif léger',
+      'Portrait rond et badge « titre + numéro d’inscription » dès le premier écran',
+      'Pratiques illustrées au trait, boutons et navigation en pastille, motifs sur une bande lilas',
+    ],
+    demoUrl: 'https://opale.nicodev.fr/',
+    image: opaleImage,
+    imageAlt:
+      'Démonstration du modèle Opale : fond blanc lavé de lilas, portrait rond d’une psychologue, titre en serif léger et boutons de rendez-vous en pastille',
   },
 ];
 
