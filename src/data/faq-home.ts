@@ -37,7 +37,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 		question:
 			'Combien de temps faut-il pour lancer le site ?',
 		answer:
-			'En général deux à trois semaines selon vos disponibilités et le temps nécessaire pour compléter le formulaire de contenu ; cela peut être un peu plus rapide lorsque les éléments sont fournis vite.',
+			'Cinq jours maximum, que vous choisissiez un modèle ou un design entièrement personnalisé.',
 	},
 	{
 		id: 'faq-modifications',
