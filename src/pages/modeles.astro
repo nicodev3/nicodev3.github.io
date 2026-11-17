@@ -29,7 +29,7 @@ const breadcrumbSchema = {
 
 <Layout
   title="Modèles de site internet pour psychologue | Nicodev"
-  description="Choisissez le point de départ de votre site de psychologue : des modèles à parcourir en démonstration, adaptés ensuite à votre pratique."
+  description="Choisissez le point de départ de votre site de psychologue : des modèles à parcourir en démonstration, ou un design entièrement personnalisé."
 >
   <Fragment slot="head">
     <script
@@ -42,7 +42,7 @@ const breadcrumbSchema = {
     showFilters={false}
     eyebrow="Modèles"
     title="Des modèles de site pour psychologues"
-    subtitle="Parcourez chaque démonstration comme le ferait un patient, puis choisissez celui qui vous ressemble. Il sert de point de départ : couleurs, textes et photos sont adaptés à votre pratique."
+    subtitle="Parcourez chaque démonstration comme le ferait un patient, puis choisissez celui qui vous ressemble : couleurs, textes et photos sont adaptés à votre pratique. Vous pouvez aussi demander un design entièrement personnalisé."
     breadcrumb={[{ label: "Accueil", href: "/" }, { label: "Modèles" }]}
   />
 
@@ -136,9 +136,23 @@ const breadcrumbSchema = {
     </div>
   </section>
 
+  <section class="bg-white py-12 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-4 text-2xl font-bold text-foreground sm:text-3xl">
+        Ou un design entièrement personnalisé
+      </h2>
+      <p class="max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
+        Aucun modèle ne vous ressemble ? Le design peut être dessiné pour votre
+        cabinet : identité, couleurs, mise en page et visuels, sur le même
+        socle technique que les modèles. Délai et tarif sont à préciser
+        ensemble lors du diagnostic gratuit.
+      </p>
+    </div>
+  </section>
+
   <CtaSection
-    title="Un modèle vous plaît ?"
-    description="Un diagnostic gratuit permet de faire le point sur votre situation et de choisir le point de départ le plus adapté."
+    title="Un modèle vous plaît, ou envie d’un design à vous ?"
+    description="Un diagnostic gratuit permet de faire le point sur votre situation et de choisir entre un modèle et un design personnalisé."
     primaryButton={{
       text: "Demander un diagnostic gratuit",
       href: "/diagnostic-gratuit/",
