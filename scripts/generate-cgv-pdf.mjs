@@ -83,7 +83,7 @@ const html = `<!DOCTYPE html>
   <header>
     <div class="brand">Nicolas Devaux — Nicodev</div>
     <h1>Conditions Générales de Vente</h1>
-    <p class="meta">Dernière mise à jour : 1er septembre 2026 · ${siteUrl}/cgv/</p>
+    <p class="meta">Dernière mise à jour : 17 novembre 2026 · ${siteUrl}/cgv/</p>
   </header>
 
   <h2>Article 1 – Objet et champ d'application</h2>
@@ -109,6 +109,7 @@ const html = `<!DOCTYPE html>
       <strong>Offre « Visibilité &amp; Confiance » (49 € TTC / mois)</strong> : inclut les éléments de l'offre Sérénité, avec un support prioritaire, un SEO expert et du GEO (outils de suivi supplémentaires, citabilité pour Google et les IA, sans garantie de citation), une aide à la rédaction (relecture, reformulation, suggestions de contenus), trois modifications simples par mois et une modernisation annuelle, telles que décrites sur le site.
     </li>
   </ul>
+  <p>Dans chacune de ces formules, le client choisit soit l'un des modèles de site présentés sur la page Modèles du site, adapté à sa pratique, soit un design entièrement personnalisé. Le tarif de l'abonnement est le même dans les deux cas.</p>
   <p>Les prestations hors périmètre décrit (refonte structurelle majeure, création de fonctionnalités sur mesure non prévues au brief, etc.) font l'objet d'un devis séparé ou d'une facturation au temps passé dans les conditions de l'article 6.</p>
 
   <h2>Article 4 – Tarifs et modalités de paiement</h2>
@@ -124,7 +125,7 @@ const html = `<!DOCTYPE html>
 
   <h2>Article 5 – Délais et livraison</h2>
   <p>
-    Le délai indicatif de mise en ligne est en général de <strong>deux à trois semaines</strong> à compter de la validation du brief et de la réception des contenus nécessaires ; ce délai peut être plus court lorsque les éléments sont fournis rapidement. Le livrable consiste en un site en ligne, fonctionnel et accessible. Des retards indépendants de la volonté du prestataire (force majeure, retard du client dans la fourniture des éléments) ne donnent pas lieu à pénalités.
+    Le délai de mise en ligne est de <strong>cinq jours maximum</strong> à compter de la validation du brief et de la réception des contenus nécessaires, que le client choisisse un modèle ou un design entièrement personnalisé. Le livrable consiste en un site en ligne, fonctionnel et accessible. Des retards indépendants de la volonté du prestataire (force majeure, retard du client dans la fourniture des éléments) ne donnent pas lieu à pénalités.
   </p>
 
   <h2>Article 6 – Corrections initiales et modifications dans le temps</h2>
@@ -132,7 +133,7 @@ const html = `<!DOCTYPE html>
     La livraison inclut un cycle de corrections (aller-retour) portant sur les ajustements de textes, sections et style prévus dans le brief initial. Toute demande nettement hors de ce cadre ou ultérieure hors du périmètre des offres est facturée dans les conditions de l'article 4.
   </p>
   <p>
-    Les modifications de contenu incluses dans les abonnements sont celles décrites sur le site pour chaque formule (ex. textes, coordonnées, tarifs, photo, widget de rendez-vous pour l'offre concernée). Les changements de structure lourds (nouvelles pages majeures, refonte complète du design) restent hors périmètre sauf devis accepté.
+    Les modifications de contenu incluses dans les abonnements sont celles décrites sur le site pour chaque formule (ex. textes, coordonnées, tarifs, photo, widget de rendez-vous pour l'offre concernée). Les changements de structure lourds (nouvelles pages majeures, refonte complète du design) demandés après la livraison restent hors périmètre sauf devis accepté.
   </p>
 
   <h2>Article 7 – Durée et résiliation</h2>
