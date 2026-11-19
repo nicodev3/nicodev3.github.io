@@ -17,6 +17,7 @@ import angelaBassompierreImage from '../assets/images/screenshots/angelabassompi
 import melanieAguillonImage from '../assets/images/screenshots/melanie-aguillon.webp';
 import pierreDalarunImage from '../assets/images/screenshots/pierre-dalarun.webp';
 import camillePerrinImage from '../assets/images/screenshots/camille-perrin-psychologue.webp';
+import murielleMoutinImage from '../assets/images/screenshots/murielle-moutin-psychologue.webp';
 import stephanieMoyniezImage from '../assets/images/screenshots/stephanie-moyniez-psychologue.webp';
 import marieMayauxImage from '../assets/images/screenshots/marie-mayaux-psychologue.webp';
 import fannyCimadomoImage from '../assets/images/screenshots/fcpsy.webp';
@@ -58,6 +59,17 @@ export type PortfolioProject = {
  * L’ordre du tableau fait foi pour la home (3 premiers) et la page portfolio.
  */
 export const portfolioProjects: PortfolioProject[] = [
+	{
+		title: 'Murielle Moutin',
+		image: murielleMoutinImage,
+		url: 'https://murielle-moutin-psychologue.fr/',
+		location: 'La Cadière-d’Azur',
+		year: 2026,
+		profession: 'psychologue',
+		description:
+			'Création d’un site vitrine présentant les bilans psychométriques (WISC-V) et attentionnels pour les enfants et adolescents de 6 à 16 ans.',
+		imageAlt: 'Page d’accueil du site de Murielle Moutin, psychologue à La Cadière-d’Azur',
+	},
 	{
 		title: 'Fanny Cimadomo',
 		image: fannyCimadomoImage,
