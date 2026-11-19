@@ -91,7 +91,7 @@ const portfolioHeroSubtitle =
 
       <!-- Projects Grid -->
       <div
-        class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8"
+        class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
       >
         {
           projects.map((project) => (
@@ -111,7 +111,7 @@ const portfolioHeroSubtitle =
                   formats={["avif", "webp"]}
                   fallbackFormat="webp"
                   widths={[400, 680, 1056]}
-                  sizes="(max-width: 767px) 100vw, 50vw"
+                  sizes="(min-width: 72rem) 21.33rem, (min-width: 64rem) calc((100vw - 8rem) / 3), (min-width: 48rem) calc((100vw - 4.5rem) / 2), calc(100vw - 2rem)"
                   loading="lazy"
                   decoding="async"
                   width={1280}
