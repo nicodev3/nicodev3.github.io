@@ -88,7 +88,7 @@ Concrètement, l’enjeu n’est pas de “vendre des séances”. L’enjeu est
 
 Un site bien pensé ne garantit jamais un agenda rempli. En revanche, il peut améliorer fortement votre lisibilité, votre crédibilité et vos chances d’être trouvé sur des recherches pertinentes. Pour une activité sans adresse physique exploitable dans Google Maps, cette différence compte beaucoup.
 
-Si vous souhaitez déléguer ce travail, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) présente l’accompagnement : structure, contenus, design, hébergement, maintenance et bases SEO adaptées au métier.
+Si vous souhaitez déléguer ce travail, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) présente l’accompagnement : structure, contenus, design, hébergement, maintenance et référencement Google optimisé, adaptés au métier.
 
 ## Quelles pages prévoir pour un psychologue 100 % visio ?
 

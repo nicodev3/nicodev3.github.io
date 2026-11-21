@@ -16,7 +16,7 @@ Quand on s'installe en libéral, ou quand on souhaite améliorer sa présence en
 
 Dans ce contexte, les offres "clé en main" peuvent sembler rassurantes. Elles promettent souvent un site rapide à lancer, un accompagnement simple, et parfois une meilleure visibilité sur Google.
 
-Si votre recherche porte surtout sur une prestation concrète, la page à consulter est celle dédiée à la [création de site internet pour psychologue](/creation-site-internet-psychologue/) : elle présente le périmètre, les formules, l'hébergement, la maintenance et les bases SEO incluses. L'article ci-dessous sert plutôt de grille de vigilance pour comparer les offres et éviter les promesses trop floues.
+Si votre recherche porte surtout sur une prestation concrète, la page à consulter est celle dédiée à la [création de site internet pour psychologue](/creation-site-internet-psychologue/) : elle présente le périmètre, les formules, l'hébergement, la maintenance et le référencement Google inclus. L'article ci-dessous sert plutôt de grille de vigilance pour comparer les offres et éviter les promesses trop floues.
 
 Le problème n'est pas qu'il existe des offres standardisées. Certaines peuvent être utiles. Le problème, c'est qu'on ne comprend pas toujours ce que l'on achète réellement. Entre la conception du site, le référencement psychologue, l'hébergement, la maintenance ou le simple droit d'utiliser la plateforme, beaucoup d'éléments sont mélangés dans un discours assez flou.
 

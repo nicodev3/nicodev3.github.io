@@ -83,7 +83,7 @@ const html = `<!DOCTYPE html>
   <header>
     <div class="brand">Nicolas Devaux — Nicodev</div>
     <h1>Conditions Générales de Vente</h1>
-    <p class="meta">Dernière mise à jour : 17 novembre 2026 · ${siteUrl}/cgv/</p>
+    <p class="meta">Dernière mise à jour : 21 novembre 2026 · ${siteUrl}/cgv/</p>
   </header>
 
   <h2>Article 1 – Objet et champ d'application</h2>
@@ -103,14 +103,14 @@ const html = `<!DOCTYPE html>
   <p>Le prestataire propose deux formules d'abonnement mensuel (détails et périmètre à jour sur la page Tarifs du site) :</p>
   <ul>
     <li>
-      <strong>Offre « Sérénité » (29 € TTC / mois)</strong> : site professionnel, interface d'administration (CMS), bases SEO, fiche Google, veille de visibilité (détection et correction des problèmes), accompagnement à la rédaction initiale, hébergement et nom de domaine gérés, sécurité et sauvegardes, une modification simple de contenu par mois dans les conditions précisées sur le site.
+      <strong>Offre « Sérénité » (29 € TTC / mois)</strong> : site professionnel, interface d'administration (CMS), référencement Google optimisé, fiche Google, veille de visibilité (détection et correction des problèmes), accompagnement à la rédaction initiale, hébergement et nom de domaine gérés, sécurité et sauvegardes, des modifications de contenu à volonté dans les conditions précisées à l'article 6.
     </li>
     <li>
-      <strong>Offre « Visibilité &amp; Confiance » (49 € TTC / mois)</strong> : inclut les éléments de l'offre Sérénité, avec un support prioritaire, un SEO expert et du GEO (outils de suivi supplémentaires, citabilité pour Google et les IA, sans garantie de citation), une aide à la rédaction (relecture, reformulation, suggestions de contenus), trois modifications simples par mois et une modernisation annuelle, telles que décrites sur le site.
+      <strong>Offre « Visibilité &amp; Confiance » (49 € TTC / mois)</strong> : inclut les éléments de l'offre Sérénité, avec un support prioritaire, un SEO expert et du GEO (outils de suivi supplémentaires, citabilité pour Google et les IA, sans garantie de citation), une aide à la rédaction (relecture, reformulation, suggestions de contenus), le traitement prioritaire des modifications de contenu et une modernisation annuelle, telles que décrites sur le site.
     </li>
   </ul>
   <p>Dans chacune de ces formules, le client choisit soit l'un des modèles de site présentés sur la page Modèles du site, adapté à sa pratique, soit un design entièrement personnalisé. Le tarif de l'abonnement est le même dans les deux cas.</p>
-  <p>Les prestations hors périmètre décrit (refonte structurelle majeure, création de fonctionnalités sur mesure non prévues au brief, etc.) font l'objet d'un devis séparé ou d'une facturation au temps passé dans les conditions de l'article 6.</p>
+  <p>Les prestations hors périmètre décrit (refonte complète du design, création de fonctionnalités sur mesure non prévues au brief) font l'objet d'un devis séparé, dans les conditions de l'article 6.</p>
 
   <h2>Article 4 – Tarifs et modalités de paiement</h2>
   <p>
@@ -120,7 +120,7 @@ const html = `<!DOCTYPE html>
     La création et la mise en ligne initiale du site sont <strong>incluses dans l'abonnement</strong>. Sauf convention écrite contraire, la facturation de l'abonnement prend effet après la livraison du site conformément aux modalités communiquées lors de la souscription (aucun frais d'installation distinct de ces formules n'est facturé dans le cadre standard décrit sur le site).
   </p>
   <p>
-    L'abonnement est facturé mensuellement. Les prestations complémentaires ou les dépassements de périmètre sont facturés sur la base de <strong>50 € TTC / heure</strong> ou sur devis accepté par le client.
+    L'abonnement est facturé mensuellement. Les prestations hors abonnement décrites aux articles 3 et 6 ne sont réalisées qu'après acceptation par le client d'un devis préalable.
   </p>
 
   <h2>Article 5 – Délais et livraison</h2>
@@ -130,10 +130,10 @@ const html = `<!DOCTYPE html>
 
   <h2>Article 6 – Corrections initiales et modifications dans le temps</h2>
   <p>
-    La livraison inclut un cycle de corrections (aller-retour) portant sur les ajustements de textes, sections et style prévus dans le brief initial. Toute demande nettement hors de ce cadre ou ultérieure hors du périmètre des offres est facturée dans les conditions de l'article 4.
+    La livraison inclut un cycle de corrections (aller-retour) portant sur les ajustements de textes, sections et style prévus dans le brief initial. Toute demande ultérieure hors du périmètre des offres fait l'objet d'un devis préalable, dans les conditions de l'article 4.
   </p>
   <p>
-    Les modifications de contenu incluses dans les abonnements sont celles décrites sur le site pour chaque formule (ex. textes, coordonnées, tarifs, photo, widget de rendez-vous pour l'offre concernée). Les changements de structure lourds (nouvelles pages majeures, refonte complète du design) demandés après la livraison restent hors périmètre sauf devis accepté.
+    Les deux abonnements incluent, sans frais supplémentaires, des modifications de contenu à volonté (textes, coordonnées, tarifs, horaires, photos, lien ou widget de rendez-vous) ainsi que l'ajout de nouvelles pages. Seule une refonte complète du design demandée après la livraison reste hors périmètre et fait l'objet d'un devis accepté.
   </p>
 
   <h2>Article 7 – Durée et résiliation</h2>

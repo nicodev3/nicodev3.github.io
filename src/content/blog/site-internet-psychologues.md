@@ -56,7 +56,7 @@ Un socle minimal efficace :
 - **Tarifs** : transparence sur les honoraires, durée, modalités de règlement.
 - **Contact** : téléphone, email, formulaire sobre, accès et disponibilités.
 
-Si vous préférez déléguer cette structure plutôt que partir d'une page blanche, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) détaille le périmètre : arborescence, contenu guidé, design, hébergement, maintenance et bases SEO.
+Si vous préférez déléguer cette structure plutôt que partir d'une page blanche, la page [création de site internet pour psychologue](/creation-site-internet-psychologue/) détaille le périmètre : arborescence, contenu guidé, design, hébergement, maintenance et référencement Google optimisé.
 
 ### Ajouter des éléments de confiance
 

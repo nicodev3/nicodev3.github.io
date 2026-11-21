@@ -219,7 +219,7 @@ Si tu veux rester sobre et efficace, une base solide peut ressembler à ceci :
 <div class="not-prose my-10 rounded-xl border border-primary/25 bg-primary-50 p-5 shadow-sm sm:p-6">
   <p class="type-eyebrow text-primary-700">Priorité si tu t’installes</p>
   <h2 class="mt-3 font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">Déléguer le site, garder la clinique.</h2>
-  <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">Structure, design, mise en ligne et bases SEO locales : je m’en charge avec une approche adaptée aux psychologues. Tu peux aussi commencer par un diagnostic si tu ne sais pas encore si un site est le bon levier maintenant.</p>
+  <p class="mt-3 max-w-3xl text-base leading-relaxed text-muted">Structure, design, mise en ligne et référencement local optimisé : je m’en charge avec une approche adaptée aux psychologues. Tu peux aussi commencer par un diagnostic si tu ne sais pas encore si un site est le bon levier maintenant.</p>
   <div class="mt-5 flex flex-col gap-3 sm:flex-row">
     <a href="/tarifs/" class="btn-outline-accent inline-flex items-center justify-center rounded-lg border-2 border-primary bg-white px-5 py-3 font-semibold text-foreground hover:bg-surface" data-umami-event="lead_click_tarifs_from_guide_installation_visibilite">Voir les tarifs</a>
     <a href="/devis/" class="btn-primary-solid inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold" data-lead-source="guide-installation-visibilite-devis" data-umami-event="lead_click_devis_from_guide_installation_visibilite">Demander un devis</a>

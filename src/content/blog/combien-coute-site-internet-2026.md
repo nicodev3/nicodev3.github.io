@@ -28,7 +28,7 @@ faq:
   - question: "Quel budget prévoir pour un site + référencement local ?"
     answer: "Au-delà du site, un accompagnement SEO local peut ajouter 150 à 600 €/mois selon l'intensité. Pour un cabinet standard, commencer avec un site sobre, une fiche Google complète et une cohérence NAP suffit souvent avant d'investir dans du SEO mensuel lourd."
   - question: "Un site à 29 €/mois est-il suffisant pour un psychologue ?"
-    answer: "Pour un site vitrine sobre (présentation, consultations, infos pratiques, contact, CMS, bases SEO, fiche Google et veille de visibilité), oui. L'offre à 49 €/mois ajoute un support prioritaire, un SEO expert et du GEO avec plus d'outils et une aide à la rédaction, sans garantir une place dans Google ni une citation dans une IA."
+    answer: "Pour un site vitrine sobre (présentation, consultations, infos pratiques, contact, CMS, référencement Google optimisé, fiche Google et veille de visibilité), oui. L'offre à 49 €/mois ajoute un support prioritaire, un SEO expert et du GEO avec plus d'outils et une aide à la rédaction, sans garantir une place dans Google ni une citation dans une IA."
   - question: "Quel budget prévoir pour la création d'un site web de cabinet ?"
     answer: "Pour un site vitrine standard en libéral, comptez souvent 50 à 500 € la première année en DIY, 29 à 49 €/mois en abonnement tout inclus, ou 1 000 à 3 000 € en prestation classique. Le bon budget dépend du temps que vous acceptez de consacrer après la mise en ligne."
   - question: "Faut-il budgéter le site en même temps que l'installation en libéral ?"
@@ -78,7 +78,7 @@ En pratique, le **coût d’un site pour psychologue** se répartit en trois gra
 
 Ces chiffres sont des **ordres de grandeur** pour un site vitrine standard (présentation, consultations, infos pratiques, contact). Ils ne couvrent pas un e-commerce, un blog très volumineux ou une stratégie SEO mensuelle intensive.
 
-Pour le détail de ce que comprend une offre d'accompagnement (structure, formulaire guidé, hébergement, bases SEO), la page [création site internet psychologue](/creation-site-internet-psychologue/) complète ce guide tarifaire.
+Pour le détail de ce que comprend une offre d'accompagnement (structure, formulaire guidé, hébergement, référencement Google optimisé), la page [création site internet psychologue](/creation-site-internet-psychologue/) complète ce guide tarifaire.
 
 ## Budgéter le site dans un projet d’installation
 
@@ -228,7 +228,7 @@ Entre le "tout seul" et la prestation classique, il existe une option plus simpl
 
 **Dans mes offres**, vous pouvez avoir :
 
-- un **offre Sérénité à 29 € / mois** (site, CMS, bases SEO, fiche Google, veille de visibilité),
+- un **offre Sérénité à 29 € / mois** (site, CMS, référencement Google optimisé, fiche Google, veille de visibilité),
 - un **offre Visibilité & Confiance à 49 € / mois** (support prioritaire, SEO expert et GEO, aide à la rédaction).
 
 Concrètement, cela permet de rester dans un budget accessible tout en évitant :
@@ -260,7 +260,7 @@ Le vrai coût ici, c'est surtout votre temps, avec un risque supplémentaire : i
 - offre Sérénité : **29 € / mois**
 - offre Visibilité & Confiance : **49 € / mois**
 
-Selon la formule choisie, vous bénéficiez d'un cadre professionnel avec hébergement, CMS, bases SEO, fiche Google et veille de visibilité. L'offre à 49 €/mois ajoute un support prioritaire, un SEO expert et du GEO (plus d'outils) et une aide à la rédaction.
+Selon la formule choisie, vous bénéficiez d'un cadre professionnel avec hébergement, CMS, référencement Google optimisé, fiche Google et veille de visibilité. L'offre à 49 €/mois ajoute un support prioritaire, un SEO expert et du GEO (plus d'outils) et une aide à la rédaction.
 Vous gardez un budget prévisible, sans devoir apprendre toute la partie technique, ni porter seul la qualité finale du rendu.
 
 Le détail des deux formules est disponible sur la page [tarifs](/tarifs/). Pour voir comment l'accompagnement se déroule concrètement, ouvrez aussi la page [création site internet psychologue](/creation-site-internet-psychologue/).

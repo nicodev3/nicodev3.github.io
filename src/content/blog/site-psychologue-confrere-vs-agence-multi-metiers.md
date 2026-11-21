@@ -45,7 +45,7 @@ Ce n'est pas une fermeture morale : c'est une **ligne de cohérence**. J'en parl
 - **Moins de traduction** : vous n'avez pas à former le prestataire à votre métier.
 - **Un ton aligné** : informatif, sobre, compatible avec le cadre déontologique.
 - **Une offre lisible** : le patient comprend à qui il s'adresse, sans mélange avec d'autres pratiques.
-- **La technique en plus** : structure, performance, bases SEO, hébergement, sans devoir gérer WordPress ou une usine à plugins.
+- **La technique en plus** : structure, performance, référencement Google optimisé, hébergement, sans devoir gérer WordPress ou une usine à plugins.
 
 Si vous comparez les budgets, l'article [combien coûte un site internet pour psychologue en 2026](/blog/combien-coute-site-internet-2026/) donne des fourchettes. Si vous hésitez encore entre Doctolib et un site, voir le [comparatif site vs Doctolib](/blog/site-internet-psychologue-doctolib/).
 

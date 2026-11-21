@@ -40,7 +40,7 @@ const servicePros = [
 	'Je cadre les pages et vous guide pour faire émerger les textes de votre pratique',
 	'Je réalise le site et prends en charge sa mise en ligne et son suivi technique',
 	'0 € de frais de construction, puis 29 ou 49 €/mois selon la formule',
-	'Hébergement, domaine, maintenance, bases SEO, fiche Google et bouton de rendez-vous inclus',
+	'Hébergement, domaine, maintenance, référencement Google optimisé, fiche Google et bouton de rendez-vous inclus',
 	'Vous échangez directement avec le développeur qui réalise votre site',
 	'Le site et ses contenus vous appartiennent et peuvent être transférés ailleurs',
 ];
@@ -59,18 +59,18 @@ const tarifsFaqItems = [
 	{
 		question: "Que couvre l'abonnement site psychologue ?",
 		answer:
-			"Les deux formules comprennent la création du site, l'hébergement, le nom de domaine, un espace pour modifier vos textes et publier des articles, les bases du référencement, la fiche Google, une veille de visibilité, la maintenance et le support. Le bouton de rendez-vous est intégré si vous utilisez un outil compatible. À 49 €/mois, vous bénéficiez de 3 modifications simples par mois au lieu d'une, du support prioritaire, d'une aide à la rédaction, d'une modernisation annuelle et d'un travail de visibilité plus approfondi."
+			"Les deux formules comprennent la création du site, l'hébergement, le nom de domaine, un espace pour modifier vos textes et publier des articles, l’optimisation du site pour Google, la fiche Google, une veille de visibilité, la maintenance et le support. Le bouton de rendez-vous est intégré si vous utilisez un outil compatible. Les modifications de contenu sont à volonté dans les deux formules. À 49 €/mois, vous bénéficiez en plus du support prioritaire, d'une aide à la rédaction, d'une modernisation annuelle et d'un travail de visibilité plus approfondi."
 	},
 	{
 		question: "Quelle est la différence entre Sérénité (29 €) et Visibilité & Confiance (49 €) ?",
 		answer:
-			"Sérénité comprend le site, son hébergement, les bases du référencement, la fiche Google, une veille de visibilité et 1 modification simple par mois. Visibilité & Confiance porte ce nombre à 3 et ajoute le support prioritaire, une aide à la rédaction, une modernisation annuelle et des analyses et optimisations plus approfondies pour Google et les réponses des assistants IA. Ce travail ne garantit ni une position dans Google ni une citation dans une réponse IA."
+			"Sérénité comprend le site, son hébergement, l’optimisation du site pour Google, la fiche Google, une veille de visibilité et les modifications de contenu à volonté. Visibilité & Confiance ajoute l'édition directement sur la page, le support prioritaire, une aide à la rédaction, une modernisation annuelle et des analyses et optimisations plus approfondies pour Google et les réponses des assistants IA. Ce travail ne garantit ni une position dans Google ni une citation dans une réponse IA."
 	},
 	{
 		id: 'faq-modifications',
 		question: "Que signifient les modifications de contenu incluses ?",
 		answer:
-			"L'offre Sérénité inclut 1 modification simple par mois (texte, photo, tarif, horaires ou lien RDV). L'offre Visibilité & Confiance inclut 3 modifications simples par mois, traitées en priorité, plus une modernisation annuelle du site. Les changements de structure importants (nouvelles pages majeures, refonte du design) restent hors périmètre. Au-delà du quota, vous pouvez publier via le CMS ou demander un devis."
+			"Dans les deux offres, les modifications de contenu sont à volonté : texte, photo, tarif, horaires ou lien RDV. Avec Visibilité & Confiance, elles sont traitées en priorité (support prioritaire) et le site est modernisé chaque année. L'ajout de nouvelles pages est inclus, sans frais. Seule une refonte complète du design reste hors abonnement et fait l'objet d'un devis."
 	},
 	{
 		question: 'Le bouton de prise de rendez-vous est-il inclus dans Sérénité ?',
@@ -101,7 +101,7 @@ const tarifsFaqItems = [
 	{
 		question: "La visibilité sur Google est-elle incluse ?",
 		answer:
-			"Les deux offres comprennent les bases du référencement, la fiche Google et une veille pour détecter et corriger les problèmes de visibilité. Visibilité & Confiance ajoute des analyses et optimisations plus approfondies pour Google et les réponses des assistants IA. Aucune position ni citation n'est garantie : les résultats dépendent aussi de votre ville, de la concurrence et des contenus publiés. La rédaction mensuelle d'articles à ma charge, les rapports SEO, les pages par ville et la publicité restent hors périmètre."
+			"Les deux offres comprennent l’optimisation du site pour Google, la fiche Google et une veille pour détecter et corriger les problèmes de visibilité. Visibilité & Confiance ajoute des analyses et optimisations plus approfondies pour Google et les réponses des assistants IA. Aucune position ni citation n'est garantie : les résultats dépendent aussi de votre ville, de la concurrence et des contenus publiés. La rédaction mensuelle d'articles à ma charge, les rapports SEO, les pages par ville et la publicité restent hors périmètre."
 	}
 ];
 ---
@@ -169,7 +169,7 @@ const tarifsFaqItems = [
 			<ul class="mt-8 grid gap-4 sm:grid-cols-3">
 				<li class="rounded-xl border border-border bg-surface px-5 py-4 text-sm text-muted">
 					<strong class="block font-semibold text-foreground">Inclus dès 29&nbsp;€</strong>
-					Site, CMS, fiche Google, bases SEO, bouton de rendez-vous, 1 modification simple par mois.
+					Site, CMS, fiche Google, référencement Google optimisé, bouton de rendez-vous, modifications de contenu à volonté.
 				</li>
 				<li class="rounded-xl border border-border bg-surface px-5 py-4 text-sm text-muted">
 					<strong class="block font-semibold text-foreground">Sans piège</strong>
@@ -253,7 +253,7 @@ const tarifsFaqItems = [
 					</li>
 				</ul>
 				<p class="mt-4 text-sm text-muted sm:text-base">
-					Sérénité comprend un espace pour gérer vos contenus, les bases du référencement, la fiche Google, une veille de visibilité et 1 modification simple par mois. Visibilité &amp; Confiance comprend <strong class="text-foreground">3 modifications par mois</strong>, le <strong class="text-foreground">support prioritaire</strong>, une <strong class="text-foreground">aide à la rédaction</strong>, une modernisation annuelle et un travail de visibilité plus approfondi. Pour le détail de la réalisation, consultez la page <a href="/creation-site-internet-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">création de site internet pour psychologue</a>. Pour Google, consultez la page <a href="/referencement-site-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">référencement psychologue</a>. Pour les psychomotriciens&nbsp;: <a href="/site-internet-psychomotricien/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">site internet psychomotricien</a>.
+					Sérénité comprend un espace pour gérer vos contenus, l’optimisation du site pour Google, la fiche Google, une veille de visibilité et les <strong class="text-foreground">modifications de contenu à volonté</strong>. Visibilité &amp; Confiance ajoute l'édition directement sur la page, le <strong class="text-foreground">support prioritaire</strong>, une <strong class="text-foreground">aide à la rédaction</strong>, une modernisation annuelle et un travail de visibilité plus approfondi. Pour le détail de la réalisation, consultez la page <a href="/creation-site-internet-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">création de site internet pour psychologue</a>. Pour Google, consultez la page <a href="/referencement-site-psychologue/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">référencement psychologue</a>. Pour les psychomotriciens&nbsp;: <a href="/site-internet-psychomotricien/" class="font-semibold text-primary underline underline-offset-4 hover:no-underline">site internet psychomotricien</a>.
 				</p>
 			</div>
 		</div>
@@ -282,7 +282,7 @@ const tarifsFaqItems = [
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					<BulletList
 						items={[
-							"<strong>Visibilité :</strong> Bases SEO et fiche Google dès la création, pour les recherches psychologue ou psychomotricien",
+							"<strong>Visibilité :</strong> Référencement optimisé et fiche Google dès la création, pour les recherches psychologue ou psychomotricien",
 							"<strong>Perception :</strong> Design rassurant, navigation intuitive, accessibilité",
 							"<strong>Technique :</strong> Sécurité RGPD, performance, CMS, conformité aux standards"
 						]}
@@ -291,7 +291,7 @@ const tarifsFaqItems = [
 						items={[
 							"<strong>Contenu :</strong> Présentation de vos spécialités ; vous pouvez publier des articles via le CMS",
 							"<strong>Services :</strong> Intégration du widget ou lien de prise de RDV (Doctolib, Qare, Maiia, Calendly...)",
-							"<strong>Accompagnement :</strong> Modifications de contenu selon la formule (1 ou 3 par mois)"
+							"<strong>Accompagnement :</strong> Modifications de contenu à volonté"
 						]}
 					/>
 				</div>

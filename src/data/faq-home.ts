@@ -43,7 +43,7 @@ export const homeFaqItems: HomeFaqItem[] = [
 		id: 'faq-modifications',
 		question: 'Que couvrent les modifications incluses dans les offres ?',
 		answer:
-			"L’offre Sérénité inclut 1 modification simple par mois (texte ou photo). L’offre Visibilité & Confiance inclut 3 modifications simples par mois, traitées en priorité (support prioritaire), ainsi qu’une modernisation du site tous les ans. Les changements de structure (refonte complète du design) restent hors périmètre.",
+			"Dans les deux offres, les modifications de contenu sont à volonté : textes, photos, tarifs, horaires, lien de rendez-vous. Avec Visibilité & Confiance, elles sont traitées en priorité (support prioritaire) et le site est modernisé tous les ans. L’ajout de nouvelles pages est inclus, sans frais. Seule une refonte complète du design reste hors abonnement, sur devis.",
 	},
 	{
 		id: 'faq-contenu',

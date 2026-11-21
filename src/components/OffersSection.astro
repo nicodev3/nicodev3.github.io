@@ -32,22 +32,24 @@ const bgClass = { surface: 'bg-surface', white: 'bg-white', background: 'bg-back
 
 const serenityFeatures = [
 	'Création ou refonte du site (0 € de frais de construction) et accompagnement pour clarifier les textes',
-	'Hébergement, nom de domaine et sauvegardes inclus*',
-	'Publier des articles',
-	'Bases de référencement (SEO), fiche Google et bouton de rendez-vous (Doctolib, Perfactive ou autre)',
+	'Hébergement, nom de domaine, sauvegardes et site sécurisé inclus*',
+	'Interface d’administration pour ajouter, modifier ou supprimer vos contenus et publier des articles en autonomie',
+	'Référencement Google optimisé (titre et description de chaque page, informations du cabinet lisibles par les moteurs, référencement local), fiche Google et bouton de rendez-vous (Doctolib, Perfactive ou autre)',
 	'Veille SEO : je surveille votre visibilité, je détecte les problèmes et je corrige',
-	'Mentions légales, base RGPD (protection des données), 1 modification simple par mois',
+	'Mentions légales, base RGPD (protection des données)',
+	'Modifications à volonté, nouvelles pages et photos comprises, sans frais',
+	'Support illimité sur WhatsApp',
 ];
 
 /** Accueil : trois inclusions qui distinguent vraiment les formules, le détail reste sur /tarifs/. */
 const serenityHomeFeatures = [
 	'Création ou refonte du site, textes clarifiés avec vous',
-	'Hébergement, nom de domaine, fiche Google et bases de référencement inclus',
-	'1 modification simple par mois',
+	'Hébergement, nom de domaine, fiche Google et référencement Google optimisé inclus',
+	'Modifications de contenu à volonté',
 ];
 
 const visibilityHomeFeatures = [
-	'Tout Sérénité, avec 3 modifications simples par mois',
+	'Tout Sérénité, avec l’édition de vos contenus directement sur la page',
 	'Support prioritaire et aide à la rédaction de vos contenus',
 	'Suivi approfondi de votre visibilité dans Google et les assistants IA, modernisation annuelle du site',
 ];
@@ -63,10 +65,10 @@ const visibilityFeatures = [
 		detail: 'Utilisez l’IA pour modifier ou créer des contenus directement dans votre site.',
 		badge: 'Nouveau',
 	},
-	'Support prioritaire : réponses plus rapides, modifications traitées en premier',
+	'Support WhatsApp prioritaire : réponses plus rapides, modifications traitées en premier',
 	'Analyse et optimisation approfondies de votre visibilité dans Google et les réponses des assistants IA**',
 	'Aide à la rédaction : relecture, reformulation et idées d’articles à publier',
-	'3 modifications simples par mois au lieu d’une, et modernisation annuelle du site',
+	'Modernisation annuelle du site',
 ];
 ---
 
@@ -91,10 +93,9 @@ const visibilityFeatures = [
 						</>
 					) : (
 						<>
-							{PRICING_LEAD} Les deux formules comprennent l’hébergement, les bases du référencement et la fiche Google.
-							À 49 €, vous pouvez aussi modifier vos contenus directement sur la page, avec trois modifications simples
-							par mois au lieu d’une, le support prioritaire, une aide à la rédaction et un travail de visibilité plus
-							approfondi.
+							{PRICING_LEAD} Les deux formules comprennent l’hébergement, l’optimisation du site pour Google, la fiche Google et
+							les modifications de contenu à volonté. À 49 €, vous pouvez aussi modifier vos contenus directement sur la
+							page, avec le support prioritaire, une aide à la rédaction et un travail de visibilité plus approfondi.
 						</>
 					)
 				}
@@ -159,7 +160,7 @@ const visibilityFeatures = [
 				description={isHome ? undefined : 'Pour faire évoluer votre site avec davantage de soutien : modifications plus fréquentes, aide à la rédaction et travail approfondi sur votre visibilité dans Google et les réponses des assistants IA.'}
 				audience={isHome ? 'Si vous comptez publier, modifier souvent ou travailler votre visibilité.' : undefined}
 				anchorId="offre-visibilite"
-				summary={isHome ? undefined : '3 modifications par mois + support prioritaire + aide à la rédaction'}
+				summary={isHome ? undefined : 'Édition sur la page + support prioritaire + aide à la rédaction'}
 				features={isHome ? visibilityHomeFeatures : visibilityFeatures}
 				showAction={!isHome}
 				buttonLabel="Demander un diagnostic gratuit"
@@ -215,15 +216,15 @@ const visibilityFeatures = [
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-wider text-primary">Sérénité</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-						Un site professionnel avec hébergement, fiche Google et suivi technique. Une modification simple
-						par mois est incluse ; vous pouvez aussi publier des articles.
+						Un site professionnel avec hébergement, fiche Google et suivi technique. Les modifications de contenu
+						sont à volonté ; vous pouvez aussi publier des articles.
 					</p>
 				</div>
 				<div>
 					<p class="text-sm font-semibold uppercase tracking-wider text-primary">Visibilité &amp; Confiance</p>
 					<p class="mt-2 text-sm leading-relaxed text-muted sm:text-base">
 						La même base, avec l’édition sur la page, la connexion aux agents IA (MCP) pour créer ou modifier
-						vos contenus, trois modifications simples par mois, le support prioritaire, une aide à la rédaction
+						vos contenus, le support prioritaire, une aide à la rédaction
 						et une modernisation annuelle. Le travail de
 						visibilité est également plus approfondi. Voir la page{' '}
 						<a
