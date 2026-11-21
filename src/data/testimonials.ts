@@ -4,6 +4,9 @@ export const MALT_PROFILE_URL = 'https://www.malt.fr/profile/nicolasdevaux1';
 /** Fiche d’établissement Google (lecture des avis ; ajouter /review pour en demander un). */
 export const GOOGLE_REVIEWS_URL = 'https://g.page/r/CUpeZarxtINyEBM';
 
+/** Ouvre directement le formulaire « Écrire un avis » de la fiche Google. */
+export const GOOGLE_WRITE_REVIEW_URL = `${GOOGLE_REVIEWS_URL}/review`;
+
 export const maltTestimonials = [
 	{
 		quote:

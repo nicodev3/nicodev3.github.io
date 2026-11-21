@@ -34,6 +34,8 @@ const noindexUrlsExact = new Set([
 const shouldIncludeInSitemap = (page) => {
   const pathname = new URL(page).pathname;
   if (pathname.startsWith('/merci')) return false;
+  // Pages privées envoyées aux clients après la mise en ligne (noindex).
+  if (pathname.startsWith('/ton-site/')) return false;
   if (pathname.startsWith('/dev/')) return false;
   // Pages tags en noindex, follow (voir Layout.astro) : hors sitemap.
   if (pathname.startsWith('/blog/tag/')) return false;

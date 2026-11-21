@@ -1,0 +1,286 @@
+---
+/**
+ * Page privée envoyée à un client après la mise en ligne de son site :
+ * récapitulatif, formule conseillée et abonnement Stripe, puis demande d'avis Google.
+ * noindex + hors sitemap (astro.config.mjs), aucun lien depuis le reste du site.
+ */
+import { Image } from 'astro:assets';
+import { ArrowUpRight, CircleCheck, MessageCircle, Star } from '@lucide/astro';
+import Layout from '../../layouts/Layout.astro';
+import { clientHandovers, type ClientHandover, type Formule } from '../../data/ton-site';
+import { portfolioProjects, type PortfolioProject } from '../../data/portfolio-projects';
+import { SERENITE_MONTHLY, VISIBILITE_MONTHLY } from '../../data/pricing';
+import { GOOGLE_WRITE_REVIEW_URL } from '../../data/testimonials';
+import { WHATSAPP_DISPLAY, WHATSAPP_HREF } from '../../data/contact';
+
+export function getStaticPaths() {
+	return clientHandovers.map((handover) => {
+		const project = portfolioProjects.find((p) => p.title === handover.projet);
+		if (!project) {
+			throw new Error(`ton-site : aucune réalisation « ${handover.projet} » dans portfolio-projects.ts`);
+		}
+		return { params: { slug: handover.slug }, props: { handover, project } };
+	});
+}
+
+interface Props {
+	handover: ClientHandover;
+	project: PortfolioProject;
+}
+
+const { handover, project } = Astro.props;
+const siteHost = new URL(project.url).hostname.replace(/^www\./, '');
+
+const stripeLinks: Record<Formule, string | undefined> = {
+	serenite: import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_SERENITE?.trim(),
+	visibilite: import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_VISIBILITE?.trim(),
+};
+
+/** Le slug identifie le client dans le tableau de bord Stripe (client_reference_id). */
+const withClientReference = (href: string | undefined) => {
+	if (!href) return undefined;
+	const url = new URL(href);
+	url.searchParams.set('client_reference_id', handover.slug);
+	return url.toString();
+};
+
+/** Socle commun aux deux formules (mêmes engagements que /tarifs/ et les CGV). */
+const socle = [
+	'Hébergement, nom de domaine, sauvegardes et site sécurisé',
+	'Mises à jour, sécurité et surveillance régulière des performances du site',
+	'Ta fiche Google et ton bouton de rendez-vous suivis',
+	'Nouvelles pages et changements de photos inclus, sans frais',
+	'Mentions légales et RGPD tenus à jour',
+	'Un site optimisé pour Google : titre et description travaillés pour chaque page, informations du cabinet lisibles par les moteurs (adresse, spécialité, questions fréquentes) et référencement local',
+];
+
+const formuleDetails: Record<Formule, { name: string; price: string; features: string[] }> = {
+	serenite: {
+		name: 'Sérénité',
+		price: SERENITE_MONTHLY,
+		features: [
+			...socle,
+			'Une veille de ta visibilité dans Google : je détecte les problèmes et je les corrige',
+			'Un accès à ton interface d’administration pour ajouter, modifier ou supprimer tes contenus et publier des articles en autonomie',
+			'Support illimité sur WhatsApp',
+		],
+	},
+	visibilite: {
+		name: 'Visibilité & Confiance',
+		price: VISIBILITE_MONTHLY,
+		features: [
+			...socle,
+			'Un suivi approfondi de ta visibilité dans Google et dans les assistants IA',
+			'Un accès à ton interface d’administration, l’édition directement sur la page et la connexion aux assistants IA pour créer ou modifier tes contenus',
+			'Support illimité et prioritaire sur WhatsApp, avec une aide à la rédaction de tes articles',
+			'Une modernisation du site chaque année',
+		],
+	},
+};
+
+/** Seule la formule du client est affichée, avec son propre lien de paiement. */
+const formule = formuleDetails[handover.formule];
+const paymentHref = withClientReference(stripeLinks[handover.formule]);
+---
+
+<Layout
+	title={`Ton site est en ligne, ${handover.prenom} | Nicodev`}
+	description={`Récapitulatif de la mise en ligne de ${siteHost} et démarrage de l’abonnement.`}
+	noindex={true}
+	showFloatingWhatsApp={false}
+>
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-16">
+			<div class="min-w-0">
+				<p class="type-label-mono text-primary-foreground">Pour {handover.prenom}</p>
+				<h1 class="mt-3 text-balance font-heading text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
+					Ton site est en ligne
+				</h1>
+				<p class="mt-3 text-3xl leading-none sm:text-4xl" aria-hidden="true">🎉🚀🥂✨</p>
+				<p class="mt-5 text-pretty text-lg leading-relaxed text-muted">
+					<a
+						href={project.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-semibold text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+					>{siteHost}</a> est accessible à tous. Cette page récapitule ce qui a été fait et te permet de démarrer ton
+					abonnement.
+				</p>
+				{handover.mot && <p class="mt-4 text-pretty text-lg leading-relaxed text-foreground">{handover.mot}</p>}
+				<a
+					href={project.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="mt-6 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+				>
+					Voir ton site
+					<ArrowUpRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+				</a>
+			</div>
+			<a
+				href={project.url}
+				target="_blank"
+				rel="noopener noreferrer"
+				class:list={['group relative block min-w-0', handover.captureMobile && 'pb-8 pr-6 sm:pb-12 sm:pr-10']}
+				aria-label={`Ouvrir ${siteHost} dans un nouvel onglet`}
+			>
+				<span class="block overflow-hidden rounded-xl border border-border bg-surface shadow-md">
+					<Image
+						src={project.image}
+						alt={project.imageAlt ?? `Page d’accueil de ${siteHost}`}
+						widths={[480, 720, 960]}
+						sizes="(min-width: 768px) 50vw, 100vw"
+						class="aspect-[16/10] h-full w-full object-cover object-top"
+						loading="eager"
+					/>
+				</span>
+				{
+					handover.captureMobile && (
+						<span class="absolute bottom-0 right-0 block w-[24%] min-w-[5.5rem] max-w-[9.5rem] overflow-hidden rounded-[1.1rem] border-[5px] border-foreground bg-foreground shadow-xl motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:-translate-y-1">
+							<Image
+								src={handover.captureMobile}
+								alt=""
+								widths={[180, 300]}
+								sizes="9.5rem"
+								class="aspect-[390/844] h-full w-full rounded-[0.7rem] object-cover object-top"
+								loading="eager"
+							/>
+						</span>
+					)
+				}
+			</a>
+		</div>
+	</section>
+
+	<section class="section-y border-b border-border bg-surface" aria-labelledby="realise-heading">
+		<div class="shell-layout">
+			<div class="max-w-3xl">
+			<h2 id="realise-heading" class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">Ce qui a été fait</h2>
+			<ul class="mt-6 space-y-4">
+				{
+					handover.realise.map((item) => (
+						<li class="flex items-start gap-3 text-base leading-relaxed text-foreground sm:text-lg">
+							<CircleCheck class="mt-1 h-5 w-5 shrink-0 text-primary-foreground" stroke-width={1.75} aria-hidden="true" />
+							<span>{item}</span>
+						</li>
+					))
+				}
+			</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-y border-b border-border bg-white" aria-labelledby="formule-heading">
+		<div class="shell-layout">
+			<div class="grid max-w-5xl items-start gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
+				<header>
+					<h2 id="formule-heading" class="text-balance font-heading text-2xl font-semibold text-foreground sm:text-3xl">
+						Et maintenant&nbsp;? Place au suivi de ton site
+					</h2>
+					<p class="mt-4 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+						Il n’y a pas de coût de départ pour la construction de ton site&nbsp;: tout passe par l’abonnement
+						mensuel. Il couvre l’hébergement, le nom de domaine, la maintenance, la surveillance régulière des
+						performances du site et l’optimisation de ta fiche Google. Il est sans engagement&nbsp;: tu peux résilier quand tu veux, il suffit
+						de me le dire.
+					</p>
+					<p class="mt-4 text-sm leading-relaxed text-muted">
+						Le paiement se fait sur une page sécurisée Stripe. Le prélèvement a lieu chaque mois, à la date de ta
+						souscription. Les conditions détaillées sont dans les{' '}
+						<a href="/cgv/" class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary">CGV</a>.
+					</p>
+				</header>
+
+				<article class="flex min-w-0 flex-col rounded-xl border-2 border-primary-foreground bg-white p-6 shadow-lg sm:p-8">
+					<p class="type-label-mono text-primary-foreground">Ta formule</p>
+					<h3 class="mt-2 font-heading text-2xl font-semibold text-foreground">{formule.name}</h3>
+					<p class="mt-2 font-heading text-4xl font-bold tabular-nums tracking-tight text-foreground">
+						{formule.price}
+						<span class="ml-1 font-sans text-base font-normal tracking-normal text-muted">/mois</span>
+					</p>
+					<ul class="mt-6 space-y-3 text-base text-foreground">
+						{
+							formule.features.map((feature) => (
+								<li class="flex items-start gap-3">
+									<CircleCheck class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground" stroke-width={1.75} aria-hidden="true" />
+									<span>{feature}</span>
+								</li>
+							))
+						}
+					</ul>
+					<div class="mt-8">
+						{
+							paymentHref ? (
+								<a
+									href={paymentHref}
+									rel="noopener noreferrer"
+									class="btn-primary-solid inline-flex min-h-12 w-full items-center justify-center rounded-xl px-6 py-3 text-center font-bold"
+									data-analytics-event="stripe_payment_link_click"
+									data-analytics-cta="stripe"
+									data-analytics-offer={handover.formule}
+									data-analytics-location="ton-site"
+								>
+									Démarrer mon abonnement
+								</a>
+							) : (
+								<p class="text-sm text-muted">Lien de paiement indisponible : écris-moi et je te l’envoie.</p>
+							)
+						}
+						<p class="mt-4 text-pretty text-sm leading-relaxed text-muted">
+							<strong class="font-semibold text-foreground">Ton site t’appartient.</strong> Si tu arrêtes, je te transfère
+							le nom de domaine et je te remets une copie complète du site, sans frais.
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-y border-b border-border bg-surface" aria-labelledby="avis-heading">
+		<div class="shell-layout">
+			<div class="mx-auto max-w-2xl rounded-2xl border-2 border-primary-foreground/30 bg-white px-6 py-10 text-center shadow-lg sm:px-12">
+				<p class="flex justify-center gap-1.5 text-[#f4b400]" aria-hidden="true">
+					{[1, 2, 3, 4, 5].map(() => <Star class="h-7 w-7 sm:h-8 sm:w-8" fill="currentColor" stroke-width={1.25} />)}
+				</p>
+				<h2 id="avis-heading" class="mt-5 text-balance font-heading text-2xl font-semibold text-foreground sm:text-3xl">
+					Tu es {handover.accord === 'feminin' ? 'satisfaite' : 'satisfait'} de mon travail&nbsp;?
+				</h2>
+				<p class="mx-auto mt-4 max-w-lg text-pretty text-base leading-relaxed text-muted sm:text-lg">
+					Un commentaire de ta part sur ma fiche Google serait pour moi la plus belle des récompenses. Ce n’est
+					vraiment pas une obligation, mais si tu as une minute, ça me ferait très plaisir.
+				</p>
+				<a
+					href={GOOGLE_WRITE_REVIEW_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-primary-solid mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-8 py-3 font-bold"
+					data-umami-event="ton_site_google_review"
+				>
+					<Star class="h-5 w-5" stroke-width={1.75} aria-hidden="true" />
+					Laisser un avis sur Google
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-y bg-white" aria-labelledby="ensuite-heading">
+		<div class="shell-layout">
+			<div class="max-w-2xl">
+				<h2 id="ensuite-heading" class="font-heading text-2xl font-semibold text-foreground">Une question, une modification&nbsp;?</h2>
+				<p class="mt-4 text-pretty text-base leading-relaxed text-muted">
+					Pour une modification ou une question, écris-moi sur WhatsApp. Je m’occupe de la technique,
+					tu n’as rien à surveiller.
+				</p>
+				<a
+					href={WHATSAPP_HREF}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="mt-4 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+					data-umami-event="ton_site_whatsapp"
+				>
+					<MessageCircle class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+					WhatsApp · {WHATSAPP_DISPLAY}
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>
