@@ -4,7 +4,7 @@
  * récapitulatif, formule conseillée et abonnement Stripe, puis demande d'avis Google.
  * noindex + hors sitemap (astro.config.mjs), aucun lien depuis le reste du site.
  */
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { ArrowUpRight, CircleCheck, MessageCircle, Star } from '@lucide/astro';
 import Layout from '../../layouts/Layout.astro';
 import { clientHandovers, type ClientHandover, type Formule } from '../../data/ton-site';
@@ -30,6 +30,17 @@ interface Props {
 
 const { handover, project } = Astro.props;
 const siteHost = new URL(project.url).hostname.replace(/^www\./, '');
+
+/** Aperçu de partage (WhatsApp, mail, réseaux) : la capture du site du client, au format 1200×630 en JPEG. */
+const ogImage = await getImage({
+	src: project.image,
+	width: 1200,
+	height: 630,
+	fit: 'cover',
+	position: 'top',
+	format: 'jpg',
+	quality: 80,
+});
 
 const stripeLinks: Record<Formule, string | undefined> = {
 	serenite: import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_SERENITE?.trim(),
@@ -86,6 +97,7 @@ const paymentHref = withClientReference(stripeLinks[handover.formule]);
 <Layout
 	title={`Ton site est en ligne, ${handover.prenom} | Nicodev`}
 	description={`Récapitulatif de la mise en ligne de ${siteHost} et démarrage de l’abonnement.`}
+	image={ogImage.src}
 	noindex={true}
 	showFloatingWhatsApp={false}
 >
