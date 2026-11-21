@@ -10,6 +10,12 @@ export const VISIBILITE_MONTHLY = '49 €';
 export const SERENITE_MONTHLY_SPACED = '29 €';
 export const VISIBILITE_MONTHLY_SPACED = '49 €';
 
+/**
+ * Offre « Essentiel », réservée aux clients dont le site a été réalisé avant les formules actuelles.
+ * Non publique : utilisée uniquement par la page cachée /offre-anciens-clients/ (hors sitemap, noindex).
+ */
+export const ESSENTIEL_MONTHLY = '12 €';
+
 /** Titre de section / promesse scannable */
 export const PRICING_HEADLINE = '0 € de construction, puis 29 € ou 49 € par mois';
 

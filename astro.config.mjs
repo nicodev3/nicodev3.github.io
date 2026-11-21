@@ -36,6 +36,8 @@ const shouldIncludeInSitemap = (page) => {
   if (pathname.startsWith('/merci')) return false;
   // Pages privées envoyées aux clients après la mise en ligne (noindex).
   if (pathname.startsWith('/ton-site/')) return false;
+  // Offre cachée réservée aux anciens clients (noindex).
+  if (pathname.startsWith('/offre-anciens-clients')) return false;
   if (pathname.startsWith('/dev/')) return false;
   // Pages tags en noindex, follow (voir Layout.astro) : hors sitemap.
   if (pathname.startsWith('/blog/tag/')) return false;

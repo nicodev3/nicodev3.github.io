@@ -110,6 +110,7 @@ const html = `<!DOCTYPE html>
     </li>
   </ul>
   <p>Dans chacune de ces formules, le client choisit soit l'un des modèles de site présentés sur la page Modèles du site, adapté à sa pratique, soit un design entièrement personnalisé. Le tarif de l'abonnement est le même dans les deux cas.</p>
+  <p>Le prestataire peut en outre proposer, sur invitation, des offres réservées à certains clients, notamment ceux dont le site a été réalisé avant la mise en place des formules ci-dessus. Le prix et le périmètre de ces offres sont précisés sur la page de souscription communiquée au client ; elles sont soumises aux présentes CGV pour tout le reste.</p>
   <p>Les prestations hors périmètre décrit (refonte complète du design, création de fonctionnalités sur mesure non prévues au brief) font l'objet d'un devis séparé, dans les conditions de l'article 6.</p>
 
   <h2>Article 4 – Tarifs et modalités de paiement</h2>

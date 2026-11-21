@@ -1,0 +1,174 @@
+---
+/**
+ * Offre « Essentiel » (12 €/mois), réservée aux clients dont le site a été réalisé avant les formules actuelles.
+ * Page cachée : noindex, hors sitemap (astro.config.mjs), aucun lien depuis le reste du site.
+ * Envoyer le lien avec ?client=<identifiant> pour retrouver le client dans Stripe (client_reference_id).
+ */
+import { ArrowUpRight, CircleCheck, MessageCircle } from '@lucide/astro';
+import Layout from '../layouts/Layout.astro';
+import { ESSENTIEL_MONTHLY, SERENITE_MONTHLY } from '../data/pricing';
+import { WHATSAPP_DISPLAY, WHATSAPP_HREF } from '../data/contact';
+
+const stripeLinkEssentiel = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_ESSENTIEL?.trim();
+
+const inclus = [
+	'Hébergement de ton site et site sécurisé',
+	'Ton nom de domaine : si tu le souhaites, je le récupère et je m’en occupe, renouvellement annuel compris. Tu en restes le propriétaire légal, je n’en suis que le gestionnaire',
+	'Mises à jour, sécurité et sauvegardes',
+	'Surveillance régulière : je vérifie que ton site reste en ligne et rapide',
+	'Modifications à volonté : textes, photos, tarifs, horaires, coordonnées, lien de rendez-vous',
+	'Ajout de nouvelles pages, sans frais',
+	'Support illimité sur WhatsApp',
+];
+---
+
+<Layout
+	title="Offre réservée aux anciens clients | Nicodev"
+	description="Formule Essentiel à 12 € par mois, réservée aux clients dont j’ai réalisé le site avant 2026."
+	noindex={true}
+	showFloatingWhatsApp={false}
+>
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="max-w-2xl">
+				<p class="type-label-mono text-primary-foreground">Réservé aux anciens clients</p>
+				<h1 class="mt-3 text-balance font-heading text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
+					Ton site, toujours entre de bonnes mains
+				</h1>
+				<p class="mt-5 text-pretty text-lg leading-relaxed text-muted">
+					Depuis la création de ton site, je m’en occupe sans rien te facturer. Pour continuer à le faire
+					sérieusement, je te propose une formule simple, réservée aux personnes qui m’ont fait confiance avant
+					mes offres actuelles.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-y border-b border-border bg-surface" aria-labelledby="essentiel-heading">
+		<div class="shell-layout">
+			<div class="grid max-w-5xl items-start gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
+				<header>
+					<h2 id="essentiel-heading" class="text-balance font-heading text-2xl font-semibold text-foreground sm:text-3xl">
+						La formule Essentiel
+					</h2>
+					<p class="mt-4 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+						Tout est compris : ton site reste en ligne, à jour et sécurisé, et tu me demandes les changements
+						dont tu as besoin, quand tu en as besoin. Sans engagement : tu peux résilier quand tu veux, il suffit
+						de me le dire.
+					</p>
+					<p class="mt-4 text-sm leading-relaxed text-muted">
+						Le paiement se fait chaque mois sur une page sécurisée Stripe. Les conditions générales sont dans les{' '}
+						<a href="/cgv/" class="font-medium text-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary">CGV</a>.
+					</p>
+				</header>
+
+				<article class="flex min-w-0 flex-col rounded-xl border-2 border-primary-foreground bg-white p-6 shadow-lg sm:p-8">
+					<p class="type-label-mono text-primary-foreground">Tarif ancien client</p>
+					<h3 class="mt-2 font-heading text-2xl font-semibold text-foreground">Essentiel</h3>
+					<p class="mt-2 font-heading text-4xl font-bold tabular-nums tracking-tight text-foreground">
+						{ESSENTIEL_MONTHLY}
+						<span class="ml-1 font-sans text-base font-normal tracking-normal text-muted">/mois</span>
+					</p>
+					<p class="mt-2 text-sm text-muted">
+						au lieu de <s class="tabular-nums">{SERENITE_MONTHLY}</s>&nbsp;par mois pour les nouveaux clients
+					</p>
+					<ul class="mt-6 space-y-3 text-base text-foreground">
+						{
+							inclus.map((item) => (
+								<li class="flex items-start gap-3">
+									<CircleCheck class="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground" stroke-width={1.75} aria-hidden="true" />
+									<span>{item}</span>
+								</li>
+							))
+						}
+					</ul>
+					<div class="mt-8">
+						{
+							stripeLinkEssentiel ? (
+								<a
+									href={stripeLinkEssentiel}
+									rel="noopener noreferrer"
+									class="btn-primary-solid inline-flex min-h-12 w-full items-center justify-center rounded-xl px-6 py-3 text-center font-bold"
+									data-essentiel-payment-link
+									data-analytics-event="stripe_payment_link_click"
+									data-analytics-cta="stripe"
+									data-analytics-offer="essentiel"
+									data-analytics-location="offre-anciens-clients"
+								>
+									Démarrer mon abonnement
+								</a>
+							) : (
+								<p class="text-sm text-muted">Lien de paiement indisponible : écris-moi et je te l’envoie.</p>
+							)
+						}
+						<p class="mt-4 text-pretty text-sm leading-relaxed text-muted">
+							<strong class="font-semibold text-foreground">Ton site t’appartient.</strong> Si tu arrêtes, je te
+							transfère le nom de domaine et je te remets une copie complète du site, sans frais.
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-y bg-white" aria-labelledby="autres-choix-heading">
+		<div class="shell-layout">
+			<h2 id="autres-choix-heading" class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">
+				Les autres possibilités
+			</h2>
+			<div class="mt-8 grid max-w-4xl gap-10 md:grid-cols-2">
+				<div>
+					<h3 class="font-heading text-xl font-semibold text-foreground">Un site refait à neuf</h3>
+					<p class="mt-3 text-pretty text-base leading-relaxed text-muted">
+						Si ton site commence à dater, la formule Sérénité ({SERENITE_MONTHLY} par mois) comprend sa refonte
+						complète, sans coût de départ, puis le suivi de ta visibilité dans Google et ta fiche Google.
+					</p>
+					<a
+						href="/tarifs/"
+						class="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+						data-umami-event="anciens_clients_voir_serenite"
+					>
+						Voir la formule Sérénité
+						<ArrowUpRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+					</a>
+				</div>
+				<div>
+					<h3 class="font-heading text-xl font-semibold text-foreground">Une question, ou envie d’arrêter&nbsp;?</h3>
+					<p class="mt-3 text-pretty text-base leading-relaxed text-muted">
+						Écris-moi. Si tu préfères gérer ton site ailleurs, je te remets tout ce qu’il faut pour le faire
+						héberger chez le prestataire de ton choix, sans frais.
+					</p>
+					<a
+						href={WHATSAPP_HREF}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+						data-umami-event="anciens_clients_whatsapp"
+					>
+						<MessageCircle class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+						WhatsApp · {WHATSAPP_DISPLAY}
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	/**
+	 * Le lien envoyé au client peut porter ?client=<identifiant> : on le transmet à Stripe
+	 * (client_reference_id) pour savoir qui a souscrit. Caractères autorisés par Stripe uniquement.
+	 */
+	function attachClientReference() {
+		const client = new URLSearchParams(window.location.search).get('client');
+		if (!client || !/^[A-Za-z0-9_-]{1,200}$/.test(client)) return;
+		document.querySelectorAll<HTMLAnchorElement>('[data-essentiel-payment-link]').forEach((link) => {
+			const url = new URL(link.href);
+			url.searchParams.set('client_reference_id', client);
+			link.href = url.toString();
+		});
+	}
+
+	attachClientReference();
+	document.addEventListener('astro:after-swap', attachClientReference);
+</script>
