@@ -4,9 +4,9 @@
  * Page cachée : noindex, hors sitemap (astro.config.mjs), aucun lien depuis le reste du site.
  * Envoyer le lien avec ?client=<identifiant> pour retrouver le client dans Stripe (client_reference_id).
  */
-import { ArrowUpRight, CircleCheck, MessageCircle } from '@lucide/astro';
+import { ArrowRight, ArrowUpRight, CircleCheck, MessageCircle } from '@lucide/astro';
 import Layout from '../layouts/Layout.astro';
-import { ESSENTIEL_MONTHLY, SERENITE_MONTHLY } from '../data/pricing';
+import { ESSENTIEL_MONTHLY, RECUPERATION_SITE_PRICE, SERENITE_MONTHLY } from '../data/pricing';
 import { WHATSAPP_DISPLAY, WHATSAPP_HREF } from '../data/contact';
 
 const stripeLinkEssentiel = import.meta.env.PUBLIC_STRIPE_PAYMENT_LINK_ESSENTIEL?.trim();
@@ -36,9 +36,10 @@ const inclus = [
 					Ton site, toujours entre de bonnes mains
 				</h1>
 				<p class="mt-5 text-pretty text-lg leading-relaxed text-muted">
-					Depuis la création de ton site, je m’en occupe sans rien te facturer. Pour continuer à le faire
-					sérieusement, je te propose une formule simple, réservée aux personnes qui m’ont fait confiance avant
-					mes offres actuelles.
+					Au début, je te facturais l’hébergement de ton site chaque année. Je suis ensuite passé à un
+					hébergement gratuit et je ne t’ai plus rien facturé. Aujourd’hui, l’hébergement et la maintenance de
+					ton site ont de nouveau un coût pour moi. C’est pourquoi je te propose une formule simple, réservée aux
+					personnes qui m’ont fait confiance avant mes offres actuelles.
 				</p>
 			</div>
 		</div>
@@ -136,8 +137,16 @@ const inclus = [
 					<h3 class="font-heading text-xl font-semibold text-foreground">Une question, ou envie d’arrêter&nbsp;?</h3>
 					<p class="mt-3 text-pretty text-base leading-relaxed text-muted">
 						Écris-moi. Si tu préfères gérer ton site ailleurs, je te remets tout ce qu’il faut pour le faire
-						héberger chez le prestataire de ton choix, sans frais.
+						héberger chez le prestataire de ton choix, pour un forfait unique de {RECUPERATION_SITE_PRICE}.
 					</p>
+					<a
+						href="/offre-anciens-clients/recuperer-ton-site/"
+						class="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+						data-umami-event="anciens_clients_voir_procedure"
+					>
+						Voir comment récupérer ton site
+						<ArrowRight class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+					</a>
 					<a
 						href={WHATSAPP_HREF}
 						target="_blank"

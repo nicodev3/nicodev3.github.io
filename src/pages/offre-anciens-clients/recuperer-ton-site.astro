@@ -1,0 +1,117 @@
+---
+/**
+ * Procédure pour un ancien client qui ne prend pas la formule Essentiel et veut faire héberger son site ailleurs.
+ * Page cachée : noindex, hors sitemap (préfixe /offre-anciens-clients), liée seulement depuis l'offre.
+ */
+import { ArrowLeft, MessageCircle } from '@lucide/astro';
+import Layout from '../../layouts/Layout.astro';
+import { WHATSAPP_DISPLAY, WHATSAPP_HREF } from '../../data/contact';
+import { RECUPERATION_SITE_PRICE } from '../../data/pricing';
+
+const etapes = [
+	{
+		titre: 'Tu me préviens',
+		texte:
+			'Écris-moi sur WhatsApp pour me dire que tu ne prends pas la formule Essentiel. Si tu le sais déjà, dis-moi qui va reprendre ton site : un autre prestataire, un proche, ou toi-même.',
+	},
+	{
+		titre: 'Je te remets une copie complète de ton site',
+		texte:
+			'Tu reçois les fichiers du site prêts à être mis en ligne, avec les textes et les images. Tu n’as pas besoin de compétences techniques pour les transmettre à la personne qui reprend ton site.',
+	},
+	{
+		titre: 'Ton site est mis en ligne chez ton nouvel hébergeur',
+		texte:
+			'La personne qui reprend ton site l’installe chez l’hébergeur de son choix. Si ton site a un formulaire de contact ou des statistiques de visite, elle devra les reconnecter : ces fonctions dépendent de mon hébergement actuel.',
+	},
+	{
+		titre: 'Ton nom de domaine suit ton site',
+		texte:
+			'Si ton nom de domaine est enregistré chez toi (OVH, Gandi, Ionos…), il suffit de modifier ses réglages pour qu’il pointe vers le nouvel hébergement : je t’indique ce qu’il faut changer. Si c’est moi qui le gère, je te donne son code de transfert pour le déplacer chez le bureau d’enregistrement de ton choix. Les éventuels frais de ce nouveau bureau d’enregistrement sont à ta charge.',
+	},
+	{
+		titre: 'On vérifie ensemble, puis je retire le site de mon hébergement',
+		texte:
+			'Une fois ton site en ligne à sa nouvelle adresse et ton nom de domaine bien relié, je vérifie avec toi que tout fonctionne. Je supprime ensuite ma copie hébergée.',
+	},
+];
+---
+
+<Layout
+	title="Récupérer ton site pour l’héberger ailleurs | Nicodev"
+	description="Les étapes pour récupérer ton site et ton nom de domaine si tu ne prends pas la formule Essentiel."
+	noindex={true}
+	showFloatingWhatsApp={false}
+>
+	<section class="section-y border-b border-border bg-white">
+		<div class="shell-layout">
+			<div class="max-w-2xl">
+				<a
+					href="/offre-anciens-clients/"
+					class="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+				>
+					<ArrowLeft class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+					Retour à la formule Essentiel
+				</a>
+				<h1 class="mt-4 text-balance font-heading text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
+					Récupérer ton site pour l’héberger ailleurs
+				</h1>
+				<p class="mt-5 text-pretty text-lg leading-relaxed text-muted">
+					Ton site et ton nom de domaine t’appartiennent. Si tu ne prends pas la formule Essentiel, je t’aide à
+					les déplacer, sans coupure.
+				</p>
+				<p class="mt-4 rounded-xl border border-border bg-surface px-5 py-4 text-pretty text-base leading-relaxed text-foreground">
+					<strong class="font-semibold">Forfait unique de {RECUPERATION_SITE_PRICE}.</strong> Il couvre la préparation de la
+					copie de ton site, l’accompagnement pour ton nom de domaine et la vérification finale.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-y border-b border-border bg-surface" aria-labelledby="etapes-heading">
+		<div class="shell-layout">
+			<div class="max-w-2xl">
+				<h2 id="etapes-heading" class="font-heading text-2xl font-semibold text-foreground sm:text-3xl">Les étapes</h2>
+				<ol class="mt-8 space-y-8">
+					{
+						etapes.map((etape, index) => (
+							<li class="flex gap-4">
+								<span
+									class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-foreground font-bold text-on-primary"
+									aria-hidden="true"
+								>
+									{index + 1}
+								</span>
+								<div class="min-w-0">
+									<h3 class="font-heading text-xl font-semibold text-foreground">{etape.titre}</h3>
+									<p class="mt-2 text-pretty text-base leading-relaxed text-muted">{etape.texte}</p>
+								</div>
+							</li>
+						))
+					}
+				</ol>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-y bg-white" aria-labelledby="contact-heading">
+		<div class="shell-layout">
+			<div class="max-w-2xl">
+				<h2 id="contact-heading" class="font-heading text-2xl font-semibold text-foreground">On commence&nbsp;?</h2>
+				<p class="mt-4 text-pretty text-base leading-relaxed text-muted">
+					Écris-moi, je te réponds avec la suite pour ton site en particulier.
+				</p>
+				<a
+					href={WHATSAPP_HREF}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="mt-4 inline-flex min-h-11 items-center gap-2 font-semibold text-primary-foreground underline decoration-primary/40 underline-offset-4 hover:text-primary"
+					data-umami-event="anciens_clients_recuperer_whatsapp"
+				>
+					<MessageCircle class="h-4 w-4" stroke-width={1.75} aria-hidden="true" />
+					WhatsApp · {WHATSAPP_DISPLAY}
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

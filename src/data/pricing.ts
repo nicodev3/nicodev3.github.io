@@ -16,6 +16,9 @@ export const VISIBILITE_MONTHLY_SPACED = '49 €';
  */
 export const ESSENTIEL_MONTHLY = '12 €';
 
+/** Forfait pour un ancien client qui ne prend pas Essentiel et récupère son site (page cachée). */
+export const RECUPERATION_SITE_PRICE = '80 €';
+
 /** Titre de section / promesse scannable */
 export const PRICING_HEADLINE = '0 € de construction, puis 29 € ou 49 € par mois';
 
