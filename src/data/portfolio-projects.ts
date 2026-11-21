@@ -21,6 +21,7 @@ import murielleMoutinImage from '../assets/images/screenshots/murielle-moutin-ps
 import stephanieMoyniezImage from '../assets/images/screenshots/stephanie-moyniez-psychologue.webp';
 import marieMayauxImage from '../assets/images/screenshots/marie-mayaux-psychologue.webp';
 import fannyCimadomoImage from '../assets/images/screenshots/fcpsy.webp';
+import marinaMartinImage from '../assets/images/screenshots/marina-martin-psychologue.webp';
 
 export type PortfolioProfession =
 	| 'psychologue'
@@ -59,6 +60,18 @@ export type PortfolioProject = {
  * L’ordre du tableau fait foi pour la home (3 premiers) et la page portfolio.
  */
 export const portfolioProjects: PortfolioProject[] = [
+	{
+		title: 'Marina Martin',
+		image: marinaMartinImage,
+		url: 'https://marina-martin-psychologue.fr/',
+		location: 'Templeuve-en-Pévèle',
+		year: 2026,
+		profession: 'psychologue',
+		description:
+			"Création d'un site vitrine pour présenter les consultations pour enfants, adolescents, adultes et familles à l'Espace Santé du Zécart, et les bilans psychologiques.",
+		imageAlt:
+			'Site de Marina Martin, psychologue à Templeuve-en-Pévèle, présentation du cabinet et des consultations',
+	},
 	{
 		title: 'Murielle Moutin',
 		image: murielleMoutinImage,

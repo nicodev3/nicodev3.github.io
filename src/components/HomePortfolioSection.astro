@@ -16,7 +16,7 @@ const [, ...others] = getRecentPortfolioProjects(4);
 const recent = others.filter((p) => p !== longTerm);
 const projects = longTerm ? [...recent.slice(0, 2), longTerm] : recent.slice(0, 3);
 
-const MOBILE_PROJECT_TITLES = ['Marie Mayaux', 'Camille Perrin', 'Mélanie Aguillon'];
+const MOBILE_PROJECT_TITLES = ['Marina Martin', 'Marie Mayaux', 'Camille Perrin'];
 const mobileProjects = MOBILE_PROJECT_TITLES.flatMap((title) => {
 	const project = portfolioProjects.find((candidate) => candidate.title === title);
 	return project ? [project] : [];
